@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryList from '../../components/StoryList.astro';
+import { deskKeys, desks, type Desk } from '../../lib/categories';
+export function getStaticPaths() {
+  return deskKeys.map((desk) => ({ params: { desk } }));
+}
+const desk = Astro.params.desk as Desk;
+const stories = (
+  await getCollection('stories', ({ data }) => !data.draft && data.category === desk)
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title={desks[desk].title}>
+  <p class="eyebrow">Editorial desk</p>
+  <h1>{desks[desk].title}</h1>
+  <p class="lede">{desks[desk].description}</p>
+  {stories.length ? (
+    <StoryList stories={stories} />
+  ) : (
+    <div class="empty-state">
+      <h2>No published stories yet.</h2>
+      <p>We will publish here when a development clears the evidence and editorial gates.</p>
+    </div>
+  )}
+</BaseLayout>

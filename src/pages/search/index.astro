@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Search">
+  <p class="eyebrow">Explore the publication</p>
+  <h1>Find the evidence.</h1>
+  <p class="lede">Search articles, methodology and editorial desks.</p>
+  <div id="search"></div>
+  <noscript>
+    <p>
+      Search needs JavaScript. Browse <a href="/categories/">editorial desks</a> or the{' '}
+      <a href="/pulse/">edition archive</a>.
+    </p>
+  </noscript>
+</BaseLayout>
+<script is:inline type="module">
+  await import('/pagefind/pagefind-ui.js');
+  new window.PagefindUI({ element: '#search', showSubResults: true });
+</script>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
