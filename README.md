@@ -2,7 +2,7 @@
 
 Evidence-led intelligence for people building and evaluating healthcare and pharmaceutical AI.
 
-The initial site is deliberately empty: no source-publication articles or historical decisions were imported. There is no configured public deployment or active editorial scheduler yet.
+The initial site is deliberately empty: no source-publication articles or historical decisions were imported. The dedicated Firebase target is configured; live deployment acceptance is still pending.
 
 ## Develop
 
@@ -27,7 +27,7 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 
 The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the initial language. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
-Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the safe orchestration state machine, target skills and disabled deployment workflow are prepared as a separate reviewable change. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
+Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the orchestration state machine and target skills are implemented. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
 
 ## Reuse and licensing
 
@@ -35,4 +35,4 @@ Astro/tooling configuration and editorial CSS are adapted from GadDev/daily-ai-p
 
 ## Operations status
 
-Deployment is inactive until dedicated target variables/WIF and HEALTHTECH_DEPLOY_ENABLED are configured and verified. The scheduled task is not created. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.
+Production deployment is gated by `HEALTHTECH_DEPLOY_ENABLED`. PR previews are separately gated by `HEALTHTECH_PREVIEW_ENABLED`. See [the deployment guide](docs/DEPLOYMENT.md) for identities, workflow behavior and acceptance steps. Scheduled-task activation is managed separately from deployment. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.

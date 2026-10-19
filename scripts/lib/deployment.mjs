@@ -24,3 +24,23 @@ export function deploymentConfig(env) {
     throw new Error('WIF provider must belong to target project number 293427463899.');
   return { project, site: site.origin };
 }
+
+export function previewDeploymentConfig(env) {
+  if (env.FIREBASE_SITE_ID !== 'healthtech-ai-pulse')
+    throw new Error('Preview site must be the adopted healthtech-ai-pulse site.');
+  const result = deploymentConfig({
+    ...env,
+    FIREBASE_SITE_URL: `https://${env.FIREBASE_SITE_ID}.web.app`,
+  });
+  if (
+    env.FIREBASE_SERVICE_ACCOUNT !==
+    'healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com'
+  )
+    throw new Error('Preview operations require the dedicated preview service account.');
+  if (
+    env.FIREBASE_WIF_PROVIDER !==
+    'projects/293427463899/locations/global/workloadIdentityPools/github/providers/github'
+  )
+    throw new Error('Unexpected preview WIF provider.');
+  return result;
+}

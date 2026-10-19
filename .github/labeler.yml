@@ -1,0 +1,57 @@
+'ci/cd':
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '.github/dependabot.yml'
+          - '.github/labeler.yml'
+          - '.github/labels.json'
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'package.json'
+          - 'package-lock.json'
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'docs/**/*.md'
+          - '.agents/**'
+          - '*.md'
+          - '.github/**/*.md'
+'area: content':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/content/**'
+          - 'docs/editorial/**'
+          - 'public/images/stories/**'
+'area: frontend':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/components/**'
+          - 'src/layouts/**'
+          - 'src/pages/**'
+          - 'src/styles/**'
+          - 'src/lib/**'
+          - 'src/content.config.ts'
+'area: infrastructure':
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/**'
+          - 'infra/**'
+          - 'scripts/**'
+          - 'firebase*.json'
+          - 'astro.config.mjs'
+          - 'package.json'
+          - 'package-lock.json'
+          - 'tsconfig.json'
+          - 'playwright.config.ts'
+design:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/styles/**'
+          - 'public/icon.svg'
+          - 'docs/design/**'
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'tests/**'
+          - 'playwright.config.ts'

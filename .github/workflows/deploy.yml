@@ -43,6 +43,10 @@ jobs:
           test -f dist/robots.txt
           test -f dist/sitemap-index.xml
           test -f dist/pagefind/pagefind.js
+      - name: Install pinned Firebase CLI
+        run: |
+          npm install --prefix "$RUNNER_TEMP/production-cli" \
+            --no-audit --no-fund firebase-tools@15.30.2
       - name: Skip superseded production runs
         id: current
         shell: bash
@@ -63,7 +67,9 @@ jobs:
           create_credentials_file: true
       - name: Deploy target Hosting site
         if: steps.current.outputs.eligible == 'true'
-        run: npx --yes firebase-tools@15.30.2 deploy --only hosting --project "$FIREBASE_PROJECT_ID" --non-interactive
+        run: |
+          "$RUNNER_TEMP/production-cli/node_modules/.bin/firebase" deploy \
+            --only hosting --project "$FIREBASE_PROJECT_ID" --non-interactive
       - name: Smoke check production
         if: steps.current.outputs.eligible == 'true'
         run: |

@@ -3,9 +3,11 @@ export default defineConfig({
   testDir: './tests/e2e',
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 1 : 0,
-  reporter: 'list',
+  reporter: process.env.CI ? [['list'], ['html', { open: 'never' }]] : 'list',
   use: {
     baseURL: 'http://127.0.0.1:4321/',
+    screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
     launchOptions: { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH || undefined },
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
