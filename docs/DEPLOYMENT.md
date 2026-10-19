@@ -119,6 +119,18 @@ Preview channels expire after seven days. They are publicly accessible; `noindex
 
 For a production rollback, use an approved previous release in Firebase Hosting or revert the reviewed source change through a PR and let main redeploy. Confirm endpoints afterward. A rollback has not yet been exercised for this project.
 
+
+### Disposable preview acceptance pilot
+
+Pilot branch: `test/preview-lifecycle-pilot`. This checklist records only observed live results; the pilot PR can be closed without merging after cleanup is verified.
+
+| Check | Status | Evidence |
+| --- | --- | --- |
+| Initial preview, expected revision, endpoints and noindex header | Pending | No live run recorded yet |
+| Refresh the same PR channel after a new commit | Pending | No live run recorded yet |
+| Manual preview fallback | Pending | No live run recorded yet |
+| Close-event channel deletion | Pending | No live run recorded yet |
+
 ## Local checks
 
 Use Node `22.22.3`, `npm ci`, `npm run verify`, and `npm run test:e2e` with Chromium installed. `npm test` includes artifact provenance, manual request, cleanup routing and preview identity rejection cases. Local tests do not establish live cloud permissions or Hosting availability.
