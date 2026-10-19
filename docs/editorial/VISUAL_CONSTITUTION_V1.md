@@ -8,6 +8,10 @@ Build the brief from the story ID, two or three supported context sentences, one
 
 Use Quiet Laboratory's photorealistic editorial direction. Choose a story-relevant setting or still life, soft light, restrained colours and generous negative space. The shared palette is white `#FFFFFF`, ink `#424242`, teals `#51796E` and `#344F51`, pale sage `#E8EFEC`, mist `#D1E0E2`, with rose `#D4A298` and caramel `#BC8A5F` as sparing accents. Keep small text in ink or dark teal. Avoid generic lab stock imagery. Generated photographs must be captioned as illustrative wherever a reader could mistake them for documentation of the study, people or institution.
 
+Prefer a specific, supported workplace detail over a staged laboratory scene: an unbranded workstation, an empty form or a device in context when the story supports it. Use natural or softly diffused light, neutral whites and restrained teal in the scene. Avoid broad coloured washes, glowing interfaces and synthetic gradient backdrops. Leave room for the intended crop without inserting headline text into the image.
+
+A generated photograph is an editorial illustration of context. It must not resemble documentary evidence of the reported study, identifiable investigators, a named institution, real patients or clinical results. Avoid readable records, identifying screens and brand marks. Caption it as illustrative at every placement where that distinction might otherwise be lost. Alt text describes visible content without claiming that the depicted scene occurred. If no truthful photographic idea survives the crop and implication review, use `illustration.mode: none`.
+
 Reject unsupported medical implications before judging aesthetics. In particular:
 
 - Do not invent anatomy, scans, molecular mechanisms, study results, patient outcomes or clinical endorsements.
@@ -19,7 +23,7 @@ Compare with approved HealthTech artwork when available. Do not import source ar
 
 ## Review order and authority
 
-Reject unsupported medical implications and prohibited content before considering aesthetics. Then inspect the actual crop, contrast and reduced-size legibility. Attractive artwork cannot compensate for a misleading clinical implication. Do not treat a high model confidence score as visual or scientific validation.
+Reject unsupported medical implications and prohibited content before considering aesthetics. Then inspect the actual crop, contrast and reduced-size legibility. At each intended size, check whether the image or its juxtaposition with the headline implies a treatment outcome, measured benefit or actual study scene; verify that the illustrative caption remains legible on desktop and mobile. Review the crop in the real article and listing placements. Attractive artwork cannot compensate for a misleading clinical implication. Do not treat a high model confidence score as visual or scientific validation.
 
 Use the real HealthTech renderer and approved target references when available; source-publication layouts and artwork are not target production evidence. One candidate is sufficient under the target contract. No golden-reference archive, multi-candidate competition or numerical aesthetic scoring is required or implied here.
 

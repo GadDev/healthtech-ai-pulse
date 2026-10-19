@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  story: CollectionEntry<'stories'>;
+  compact?: boolean;
+}
+const { story, compact = false } = Astro.props;
+const evidence = story.data.evidence;
+const fields = [
+  ['Study design', evidence.study_design],
+  ['Setting', evidence.validation_setting],
+  ['Clinical utility', evidence.clinical_utility.replaceAll('-', ' ')],
+  ['Key limit', evidence.limitations[0]],
+];
+---
+
+<aside
+  class:list={['evidence-summary', { 'evidence-summary--compact': compact }]}
+  aria-label="Evidence at a glance"
+>
+  <p class="eyebrow">Evidence at a glance</p>
+  <dl>
+    {fields.map(([label, value]) => (
+      <div>
+        <dt>{label}</dt>
+        <dd>{value}</dd>
+      </div>
+    ))}
+  </dl>
+  <a class="text-link" href={`/stories/${story.id}/#sources`}>
+    Read sources <span aria-hidden="true">↗</span>
+  </a>
+</aside>
