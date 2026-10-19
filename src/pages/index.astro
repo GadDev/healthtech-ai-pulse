@@ -6,28 +6,71 @@ import { desks, deskKeys } from '../lib/categories';
 const stories = (await getCollection('stories', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+const [lead, ...remaining] = stories;
 ---
 
 <BaseLayout>
-  <section class="hero">
-    <p class="eyebrow">
-      <span class="signal-mark" aria-hidden="true"></span> Healthcare · AI · Pharma
-    </p>
-    <h1>Progress deserves a closer look.</h1>
+  <div class="edition-line">
+    <span>HealthTech AI Pulse</span>
+    <span>Evidence-led healthcare AI news</span>
+  </div>
+  <section class="home-intro" aria-labelledby="home-title">
+    <p class="eyebrow">Independent perspective · International evidence</p>
+    <h1 id="home-title">
+      Progress deserves
+      <br />a closer look.
+    </h1>
     <p class="lede">What changed. What the evidence supports. What to investigate next.</p>
-    <p class="fineprint">
-      Independent intelligence for people building and evaluating healthcare AI. European
-      perspective, international evidence.
-    </p>
   </section>
-  <section aria-labelledby="latest">
-    <div class="section-top">
-      <h2 id="latest">The latest signals</h2>
-      <a href="/methodology/">How we assess evidence →</a>
-    </div>
-    {stories.length ? (
-      <StoryList stories={stories} />
-    ) : (
+  {lead ? (
+    <section class="lead-section" aria-labelledby="lead-title">
+      <div class="section-top">
+        <h2 id="lead-title">The latest signal</h2>
+        <a href="/pulse/">
+          Browse editions <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <article class="lead-story">
+        <div class="lead-story__copy">
+          <p class="story-kicker">
+            <a href={`/desks/${lead.data.category}/`}>{desks[lead.data.category].title}</a>
+            <span aria-hidden="true">·</span>
+            <time datetime={lead.data.date.toISOString().slice(0, 10)}>
+              {lead.data.date.toLocaleDateString('en-GB', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'UTC',
+              })}
+            </time>
+          </p>
+          <h3>
+            <a href={`/stories/${lead.id}/`}>{lead.data.title}</a>
+          </h3>
+          <p class="lead-story__description">{lead.data.description}</p>
+          <a class="text-link" href={`/stories/${lead.id}/`}>
+            Read the analysis <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        {lead.data.illustration.mode === 'generated' && (
+          <figure class="editorial-image lead-story__image">
+            <img
+              src={lead.data.illustration.image}
+              alt={lead.data.illustration.alt}
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+            />
+            <figcaption>Illustrative image · not the reported study site</figcaption>
+          </figure>
+        )}
+      </article>
+    </section>
+  ) : (
+    <section aria-labelledby="latest">
+      <div class="section-top">
+        <h2 id="latest">The latest signals</h2>
+      </div>
       <div class="empty-state">
         <h2>The first edition is taking shape.</h2>
         <p>
@@ -36,22 +79,49 @@ const stories = (await getCollection('stories', ({ data }) => !data.draft)).sort
           promise.
         </p>
       </div>
-    )}
-  </section>
-  <section aria-labelledby="desks">
+    </section>
+  )}
+  {remaining.length > 0 && (
+    <section aria-labelledby="more-stories">
+      <div class="section-top">
+        <h2 id="more-stories">More signals</h2>
+      </div>
+      <StoryList stories={remaining} />
+    </section>
+  )}
+  <section aria-labelledby="desks" class="desks-section">
     <div class="section-top">
-      <h2 id="desks">Five desks. One evidence standard.</h2>
+      <h2 id="desks">Explore the five desks</h2>
+      <a href="/categories/">
+        All categories <span aria-hidden="true">↗</span>
+      </a>
     </div>
     <div class="desk-grid">
       {deskKeys.map((key, i) => (
         <article class="desk-tile">
-          <span class="story-meta">0{i + 1}</span>
+          <span class="desk-number">0{i + 1}</span>
           <h3>
-            <a href={`/desks/${key}/`}>{desks[key].title}</a>
+            <a href={`/desks/${key}/`}>
+              {desks[key].title}
+              <span aria-hidden="true"> ↗</span>
+            </a>
           </h3>
           <p>{desks[key].description}</p>
         </article>
       ))}
     </div>
   </section>
+  <aside class="method-note">
+    <div>
+      <p class="eyebrow">How we work</p>
+      <h2>Read the evidence behind the headline.</h2>
+    </div>
+    <p>
+      Every briefing shows its sources, study setting and limits so you can judge what the findings
+      support.
+    </p>
+    <a class="text-link" href="/methodology/">
+      Our methodology <span aria-hidden="true">→</span>
+    </a>
+  </aside>
 </BaseLayout>

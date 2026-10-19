@@ -20,7 +20,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width" />
     <title>{title === 'HealthTech AI Pulse' ? title : `${title} · HealthTech AI Pulse`}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f3ebdd" />
+    <meta name="theme-color" content="#ffffff" />
     {!configured && <meta name="robots" content="noindex, follow" />}
     {configured && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -38,12 +38,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <nav aria-label="Main navigation">
           {[
             ['/', 'Latest'],
-            ['/categories/', 'Desks'],
+            ['/categories/', 'Categories'],
             ['/pulse/', 'Editions'],
             ['/methodology/', 'Methodology'],
             ['/search/', 'Search'],
           ].map(([href, label]) => (
-            <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>
+            <a
+              href={href}
+              aria-current={
+                Astro.url.pathname === href ||
+                (href === '/categories/' && Astro.url.pathname.startsWith('/desks/'))
+                  ? 'page'
+                  : undefined
+              }
+            >
               {label}
             </a>
           ))}

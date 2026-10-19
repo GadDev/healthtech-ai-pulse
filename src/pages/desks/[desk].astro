@@ -13,15 +13,33 @@ const stories = (
 ---
 
 <BaseLayout title={desks[desk].title}>
-  <p class="eyebrow">Editorial desk</p>
-  <h1>{desks[desk].title}</h1>
-  <p class="lede">{desks[desk].description}</p>
-  {stories.length ? (
-    <StoryList stories={stories} />
-  ) : (
-    <div class="empty-state">
-      <h2>No published stories yet.</h2>
-      <p>We will publish here when a development clears the evidence and editorial gates.</p>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/categories/">Categories</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page">{desks[desk].title}</span>
+  </nav>
+  <header class="page-intro desk-intro">
+    <p class="eyebrow">Editorial desk</p>
+    <h1>{desks[desk].title}</h1>
+    <p class="lede">{desks[desk].description}</p>
+  </header>
+  <section aria-labelledby="desk-stories" class="desk-stories">
+    <div class="section-top">
+      <h2 id="desk-stories">{stories.length ? 'Latest in this desk' : 'From this desk'}</h2>
+      <a href="/methodology/">
+        How we assess evidence <span aria-hidden="true">↗</span>
+      </a>
     </div>
-  )}
+    {stories.length ? (
+      <StoryList stories={stories} showImage />
+    ) : (
+      <div class="empty-state">
+        <h2>No published stories yet.</h2>
+        <p>We will publish here when a development clears the evidence and editorial gates.</p>
+      </div>
+    )}
+  </section>
+  <nav class="back-link" aria-label="Other categories">
+    <a href="/categories/">← Browse all categories</a>
+  </nav>
 </BaseLayout>
