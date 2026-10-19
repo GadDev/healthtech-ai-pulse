@@ -48,15 +48,14 @@ const fields = [
 </aside>
 <style>
   .evidence-card {
-    background: var(--surface);
-    border-top: 3px solid var(--terracotta);
-    padding: 1.5rem;
-    margin: 2rem 0;
-    max-width: 80ch;
+    background: var(--surface-alt);
+    border-top: 3px solid var(--teal-dark);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    margin: 2.25rem 0;
     overflow-wrap: anywhere;
   }
   .evidence-card h2 {
-    font: 400 1.8rem var(--font-deck);
+    font: 400 clamp(1.6rem, 3vw, 2rem)/1.15 var(--font-deck);
     margin-top: 0;
   }
   .evidence-card dl {
@@ -73,6 +72,7 @@ const fields = [
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    color: var(--teal-dark);
   }
   .evidence-card dd {
     margin: 0.4rem 0 0;
