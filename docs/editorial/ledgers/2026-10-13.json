@@ -52,7 +52,8 @@
       "Partial bounded discovery across five desks, not exhaustive surveillance. Europe PMC first-page retrieval is capped at 100; PMC deposit/index dates can differ from first article publication. Completed research cutoff remains null.",
       "No complete CTIS/ClinicalTrials.gov results sweep, national EU device-authority rotation, regional-language database sweep or 30-day corrections/watch search. No patient data accessed.",
       "Web search publisher extraction sometimes failed/redirected. Selected papers were accessible through ordinary public HTTP HTML; accepted RARE-PHENIX PDF was publicly accessible. No authenticated or restricted-source access claimed.",
-      "Only selected sources received full evidence review; other records retain their declared access and promotion conditions. Model review is not independent clinical or human editorial approval."
+      "Only selected sources received full evidence review; other records retain their declared access and promotion conditions. Model review is not independent clinical or human editorial approval.",
+      "Europe PMC web landing for PMID 42869550 returned HTTP 403 in a later URL check. Its abstract was inspected through the already retrieved Europe PMC core API record; no full-text BMJ access claimed."
     ],
     "completed_at": null
   },
@@ -62,11 +63,7 @@
       "decision": "selected",
       "title": "Epilepsy AI pilot tests patient feedback, with detector gains confined to replay",
       "desk": "clinical-ai",
-      "topics": [
-        "evaluation",
-        "implementation",
-        "medical-devices"
-      ],
+      "topics": ["evaluation", "implementation", "medical-devices"],
       "entities": [],
       "event_date": "2026-10-13",
       "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
@@ -114,7 +111,7 @@
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
-        "publication_status": "not-started"
+        "publication_status": "new-confirmed"
       },
       "reason": "Select a bounded feasibility and evaluation-method story; never recast replay performance as fewer seizures or live adaptive-care efficacy.",
       "promote_when": [],
@@ -124,9 +121,7 @@
           "id": "feedback-detector-replay",
           "type": "model-performance",
           "supported_statement": "An inpatient conversational-EEG pilot involved 13 patients; replayed detector fine-tuning using patient push-button labels reduced false alarms in the study.",
-          "source_ids": [
-            "primary"
-          ],
+          "source_ids": ["primary"],
           "locators": [
             "Results: Patient-in-the-loop model fine-tuning; Figure 5a–b.",
             "Discussion: Limitations of our results; Ethical considerations; Methods: Platform implementation."
@@ -138,11 +133,11 @@
             "Sensitivity did not improve; remaining false alarms may still burden patients."
           ],
           "verification": {
-            "status": "not-started",
-            "checked_at": null,
-            "checked_by": null,
-            "supported_scope": "Prospective interaction and offline replay are separately identified.",
-            "reason": "Research checkpoint; downstream publication verification not yet performed."
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T20:04:45.703Z",
+            "checked_by": "Codex (model review; no human or independent clinical approval)",
+            "supported_scope": "Single-site feasibility with offline pseudoprospective detector evaluation; no clinical benefit claim.",
+            "reason": "Rechecked extracted full primary methods/results/limitations and source status before drafting; material claims use the stated locators."
           },
           "study": {
             "design": "Prospective interface use, followed by offline pseudoprospective rolling detector fine-tuning.",
@@ -202,11 +197,11 @@
         "weighted_total": 81.3
       },
       "publication_verification": {
-        "status": "not-started",
-        "checked_at": null,
-        "checked_by": null,
-        "supported_scope": "No publication claim cleared at research checkpoint.",
-        "reason": "Research checkpoint; downstream publication verification not yet performed."
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-19T20:04:45.703Z",
+        "checked_by": "Codex (model review; no human or independent clinical approval)",
+        "supported_scope": "Single-site feasibility with offline pseudoprospective detector evaluation; no clinical benefit claim.",
+        "reason": "Rechecked extracted full primary methods/results/limitations and source status before drafting; material claims use the stated locators."
       },
       "decision_history": [
         {
@@ -245,10 +240,7 @@
       "decision": "watch",
       "title": "LLM clinical-trial reporting review needs full synthesis inspection",
       "desk": "safety-policy",
-      "topics": [
-        "evaluation",
-        "clinical-trials"
-      ],
+      "topics": ["evaluation", "clinical-trials"],
       "entities": [],
       "event_date": "2026-10-13",
       "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
@@ -337,13 +329,42 @@
   ],
   "exclusions": [],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Retrospective seven-day run. Research ledger first; Selected claim scope must be reverified before drafting.",
-    "story_ids": [],
+    "mode": "publication",
+    "reason": "Retrospective backfill. One verified, bounded text-led article; imagery explicitly none because an invented study/device scene would add no evidence. No MUST KNOW designation.",
+    "story_ids": ["2026-10-13-epilepsy-feedback-replay"],
     "withheld_selected": [],
     "must_know_story_id": null,
-    "issue_path": null,
-    "checks": []
+    "issue_path": "src/content/pulse/2026-10-13.md",
+    "checks": [
+      {
+        "command": "Primary evidence and cross-date publication preflight",
+        "status": "passed",
+        "tested_revision": "26aa43d5135fec020d1c4822a4b5c740524d8366 plus exact dated source bytes in this checkpoint",
+        "execution": "Model review of inspected primary evidence; not independent clinical validation.",
+        "evidence": "Claim locators, units, limitations, funding/COI and archive identities reviewed. Text-led mode explicit. Research gaps and no completed cutoff preserved."
+      },
+      {
+        "command": "npm ci --no-audit --no-fund; npm run verify",
+        "status": "passed",
+        "tested_revision": "Combined rehearsal Git tree 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403 on base 26aa43d5135fec020d1c4822a4b5c740524d8366",
+        "execution": "Local Node.js 24.19.0. Seven-date working tree, not each final remote PR head.",
+        "evidence": "Clean install; lint, formatting, schema/content/editorial/illustration validation, 131 tests, Astro check (zero errors/warnings), production build and Pagefind passed. Source bytes: 2026-10-13-epilepsy-feedback-replay: ba0bf4dee8296f312110a1b68b353034116b3c029e3e17110ae5ec19a3e292fe"
+      },
+      {
+        "command": "PLAYWRIGHT_EXECUTABLE_PATH=/tmp/healthtech-chromium ASTRO_PREVIEW_BACKGROUND=1 npm run test:e2e",
+        "status": "passed",
+        "tested_revision": "Same new public article/issue bytes as combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403; new ledger-only files do not change public pages.",
+        "execution": "Local Chromium 133 via existing executable; Node.js 24.19.0. Exact final remote head still requires PR CI.",
+        "evidence": "19 browser tests passed. 2026-10-13-epilepsy-feedback-replay: ba0bf4dee8296f312110a1b68b353034116b3c029e3e17110ae5ec19a3e292fe"
+      },
+      {
+        "command": "New article/issue responsive and accessibility inspection",
+        "status": "passed",
+        "tested_revision": "Built public bytes from combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403",
+        "execution": "Local static build served over HTTP; Playwright plus axe WCAG 2/2.1 A/AA checks.",
+        "evidence": "16 route/viewport combinations: both new articles and issues at 320,375,960,1280px; HTTP 200, one H1, no horizontal overflow, zero serious/critical axe findings. Representative article mobile/desktop screenshots visually inspected; not a complete manual accessibility audit."
+      }
+    ]
   },
   "attempts": [
     {
@@ -365,7 +386,12 @@
       "started_at": "2026-10-19T20:03:09.363Z",
       "completed_at": null,
       "phases": [
-        "ownership-acquired"
+        "ownership-acquired",
+        "publication-verification",
+        "drafts-prepared",
+        "publication-finalised",
+        "local-combined-rehearsal-passed",
+        "source-page-responsive-review-passed"
       ],
       "outcome": "in-progress"
     }
@@ -373,8 +399,8 @@
   "active_run": {
     "owner_token": "backfill-2026-10-13-2026-10-19T20:03:09.362Z",
     "acquired_at": "2026-10-19T20:03:09.363Z",
-    "heartbeat_at": "2026-10-19T20:03:09.363Z",
-    "expires_at": "2026-10-19T22:03:09.363Z"
+    "heartbeat_at": "2026-10-19T20:10:56.251Z",
+    "expires_at": "2026-10-19T22:10:56.251Z"
   },
   "human_overrides": []
 }
