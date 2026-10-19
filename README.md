@@ -20,13 +20,14 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 ## Project contracts
 
 - [CONSTITUTION.md](CONSTITUTION.md): mission and accountability.
+- [docs/CONTENT_MODEL.md](docs/CONTENT_MODEL.md): implemented schemas and publication mappings.
 - [EDITORIAL.md](EDITORIAL.md): claim-specific evidence, scope and publication policy.
 - [TECHSTACK.md](TECHSTACK.md): architecture, reuse and operations.
 - [ROADMAP.md](ROADMAP.md): PR boundaries and readiness gates.
 
 The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the initial language. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
-Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and automated editorial preparation follow as separate reviewable changes.
+Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; automated editorial preparation remains a separate reviewable change. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
 
 ## Reuse and licensing
 

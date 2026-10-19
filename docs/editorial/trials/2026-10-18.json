@@ -1,0 +1,145 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-18",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "f6d11569a8bc57d5e30d5c17d3ba656ed316f07a",
+  "kind": "controlled-trial",
+  "research": {
+    "window_start": "2026-10-18T19:10:03.979803+00:00",
+    "window_end": "2026-10-18T19:10:03.979803+00:00",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "Inspect adopted EMA AI medicines-lifecycle reflection paper landing page",
+        "source": "https://www.ema.europa.eu/en/scientific-guidelines/use-artificial-intelligence-ai-medicinal-product-lifecycle",
+        "accessed_at": "2026-10-18T19:10:03.979803+00:00",
+        "outcome": "Adopted status; first published 2024-09-30. Rejected as current news."
+      }
+    ],
+    "coverage_gaps": [
+      "One source-inspection trial only; no complete daily research window or five-desk sweep.",
+      "Full PDF and comprehensive subsequent regulatory changes not audited."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [],
+  "exclusions": [
+    {
+      "id": "2026-10-18-ema-ai-lifecycle-context",
+      "decision": "rejected",
+      "title": "EMA medicines-lifecycle AI reflection paper: historical context",
+      "desk": "safety-policy",
+      "topics": [
+        "regulation",
+        "governance",
+        "drug-discovery"
+      ],
+      "entities": [
+        "European Medicines Agency"
+      ],
+      "event_date": null,
+      "event_date_reason": "Exact adoption date not established from the landing page; publication date is not silently substituted.",
+      "source_publication_date": "2024-09-30",
+      "source_date_reason": "Official page first-publication metadata",
+      "discovered_at": "2026-10-18T19:10:03.979803+00:00",
+      "what_changed": "No new October 2026 development was established. The page lists an adopted reflection paper first published in 2024.",
+      "why_now": "A controlled policy/source-inspection trial, not a current-news discovery.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.ema.europa.eu/en/scientific-guidelines/use-artificial-intelligence-ai-medicinal-product-lifecycle",
+      "sources": [
+        {
+          "id": "ema-record",
+          "url": "https://www.ema.europa.eu/en/scientific-guidelines/use-artificial-intelligence-ai-medicinal-product-lifecycle",
+          "canonical_url": "https://www.ema.europa.eu/en/scientific-guidelines/use-artificial-intelligence-ai-medicinal-product-lifecycle",
+          "publisher": "European Medicines Agency",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2024-09-30",
+          "date_reason": "Official first-publication field",
+          "inspected_at": "2026-10-18T19:10:03.979803+00:00",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing authority"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ema-ai-medicinal-product-lifecycle-reflection",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "EMA/CHMP/CVMP/83833/2023"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "AI across the medicines lifecycle",
+        "non_ai_exception": null,
+        "reader_consequence": "Useful policy context, not a new action."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Target has no published stories or ledgers. This trial is not comprehensive surveillance.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as current news: historical context without a verified material current delta.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-18T19:10:03.979803+00:00",
+        "checked_by": "Codex (model source inspection)",
+        "supported_scope": "Official landing-page status, publication metadata and medicines-lifecycle scope only.",
+        "reason": "PDF methods, all subsequent updates and exact adoption/effective dates were not audited."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-18T19:10:03.979803+00:00",
+          "reason": "No verified new event; retain as context-only."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "ledger-only",
+    "reason": "Controlled trial: no selected story; old contextual source is not current news.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "controlled-ema-context-2026-10-18",
+      "started_at": "2026-10-18T19:10:03.979803+00:00",
+      "completed_at": "2026-10-18T19:10:03.979803+00:00",
+      "phases": [
+        "source-inspection",
+        "deduplication",
+        "decision",
+        "ledger-only"
+      ],
+      "outcome": "Controlled trial only; no publication or human approval claimed."
+    },
+    {
+      "run_id": "remote-handoff-2026-10-19",
+      "started_at": "2026-10-19T07:15:15.157941+00:00",
+      "completed_at": "2026-10-19T07:15:15.157941+00:00",
+      "phases": [
+        "remote-contract-ref-reconciled"
+      ],
+      "outcome": "Referenced the real remote commit with the identical foundation tree; original source inspection and decisions retained unchanged."
+    }
+  ],
+  "active_run": null,
+  "human_overrides": []
+}

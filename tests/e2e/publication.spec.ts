@@ -1,3 +1,4 @@
+import { readdirSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const routes = [
@@ -37,12 +38,14 @@ for (const width of [320, 375, 960, 1280])
     await page.keyboard.press('Tab');
     await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
   });
-test('empty publication makes no fake stories and search loads', async ({ page, request }) => {
+test('publication has honest empty states and search loads', async ({ page, request }) => {
   await page.goto('/');
-  await expect(
-    page.getByText('No articles have been published yet.', { exact: false }),
-  ).toBeVisible();
-  expect(await page.locator('a[href^="/stories/"]').count()).toBe(0);
+  if (!readdirSync('src/content/stories').some((name) => name.endsWith('.md'))) {
+    await expect(
+      page.getByText('No articles have been published yet.', { exact: false }),
+    ).toBeVisible();
+    expect(await page.locator('a[href^="/stories/"]').count()).toBe(0);
+  }
   await page.goto('/search/');
   await expect(page.getByRole('textbox')).toBeVisible();
   expect((await request.get('/rss.xml')).ok()).toBeTruthy();

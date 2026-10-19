@@ -1,0 +1,84 @@
+---
+interface Props {
+  evidence: {
+    publication_status: string;
+    study_design: string;
+    validation_setting: string;
+    clinical_utility: string;
+    independent_validation: string;
+    access_level: string;
+    limitations: string[];
+    funding: string;
+    conflicts_of_interest: string;
+  };
+}
+const { evidence } = Astro.props;
+const display = (value: string) => value.replaceAll('-', ' ');
+const fields = [
+  ['Source / publication', evidence.publication_status],
+  ['Study design', evidence.study_design],
+  ['Validation setting', evidence.validation_setting],
+  ['Clinical utility', evidence.clinical_utility],
+  ['Independent evidence', evidence.independent_validation],
+  ['Source access', evidence.access_level],
+];
+---
+
+<aside class="evidence-card" aria-labelledby="evidence-title">
+  <h2 id="evidence-title">Evidence at a glance</h2>
+  <dl>
+    {fields.map(([label, value]) => (
+      <div>
+        <dt>{label}</dt>
+        <dd>{display(value)}</dd>
+      </div>
+    ))}
+  </dl>
+  <p>
+    <strong>Limits:</strong> {evidence.limitations.join(' ')}
+  </p>
+  <p class="fineprint">
+    <strong>Funding:</strong> {evidence.funding}
+    <br />
+    <strong>Conflicts of interest:</strong> {evidence.conflicts_of_interest}
+  </p>
+  <p>
+    <a href="/methodology/">How we assess evidence</a>
+  </p>
+</aside>
+<style>
+  .evidence-card {
+    background: var(--surface);
+    border-top: 3px solid var(--terracotta);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    max-width: 80ch;
+    overflow-wrap: anywhere;
+  }
+  .evidence-card h2 {
+    font: 400 1.8rem var(--font-deck);
+    margin-top: 0;
+  }
+  .evidence-card dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 1rem;
+  }
+  .evidence-card dl div {
+    border-top: 1px solid var(--line);
+    padding-top: 0.75rem;
+  }
+  .evidence-card dt {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .evidence-card dd {
+    margin: 0.4rem 0 0;
+    line-height: 1.5;
+  }
+  .evidence-card p {
+    line-height: 1.65;
+  }
+</style>
