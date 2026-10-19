@@ -93,16 +93,8 @@
       "decision": "selected",
       "title": "Oncology AI pilot exposes a missing-data trap at the EHR handoff",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "interoperability",
-        "safety",
-        "evaluation"
-      ],
-      "entities": [
-        "Netherlands Cancer Institute",
-        "kaiko.ai"
-      ],
+      "topics": ["implementation", "interoperability", "safety", "evaluation"],
+      "entities": ["Netherlands Cancer Institute", "kaiko.ai"],
       "event_date": "2026-10-17",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
       "source_publication_date": "2026-10-17",
@@ -188,7 +180,7 @@
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
-        "publication_status": "not-started"
+        "publication_status": "new-confirmed"
       },
       "reason": "Select the bounded workflow and integration finding; its practical consequence is end-to-end validation, not clinical adoption approval.",
       "promote_when": [],
@@ -198,10 +190,7 @@
           "id": "workflow-usability",
           "type": "workflow",
           "supported_statement": "Participants reported lower workload and incomplete summaries in a small uncontrolled oncology workflow pilot.",
-          "source_ids": [
-            "manuscript",
-            "supplement"
-          ],
+          "source_ids": ["manuscript", "supplement"],
           "locators": [
             "Manuscript Results and Figures 1/3; Supplementary Figure 1 and Tables 1/2."
           ],
@@ -210,11 +199,11 @@
             "Self-report and selection prevent causal or population-wide conclusions."
           ],
           "verification": {
-            "status": "not-started",
-            "checked_at": null,
-            "checked_by": null,
-            "supported_scope": "Reported local usability findings only.",
-            "reason": "Research extraction complete; separate publication verification pending."
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T12:20:43.651Z",
+            "checked_by": "Codex (model evidence review; no independent human approval)",
+            "supported_scope": "Subjective usability in the studied setting, with the stated units and comparator.",
+            "reason": "Checked Manuscript Results and Figures 1/3; Supplementary Figure 1 and Tables 1/2. No extrapolation beyond the stated scope."
           },
           "study": {
             "design": "Prospective non-randomised pre/post usability study.",
@@ -291,22 +280,16 @@
           "id": "ehr-handoff-discrepancies",
           "type": "safety",
           "supported_statement": "Two reported cases converted missing allergy information into a negative statement during downstream EHR processing; original summaries retained an unknown state.",
-          "source_ids": [
-            "manuscript"
-          ],
-          "locators": [
-            "Page 4, Table 1a, cases 1/2; Data analysis safety paragraph."
-          ],
+          "source_ids": ["manuscript"],
+          "locators": ["Page 4, Table 1a, cases 1/2; Data analysis safety paragraph."],
           "evidence_scope": "Observed handoff discrepancies, not demonstrated patient harm or an estimated error rate.",
-          "limitations": [
-            "Spontaneous participant reports; no systematic audit of all outputs."
-          ],
+          "limitations": ["Spontaneous participant reports; no systematic audit of all outputs."],
           "verification": {
-            "status": "not-started",
-            "checked_at": null,
-            "checked_by": null,
-            "supported_scope": "Table-level handoff observation only.",
-            "reason": "Research extraction complete; separate publication verification pending."
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T12:20:43.651Z",
+            "checked_by": "Codex (model evidence review; no independent human approval)",
+            "supported_scope": "Observed handoff discrepancies, not demonstrated patient harm or an estimated error rate.",
+            "reason": "Checked Page 4, Table 1a, cases 1/2; Data analysis safety paragraph. No extrapolation beyond the stated scope."
           },
           "safety": {
             "report_type": "Participant-reported discrepancies reviewed retrospectively within a prospective usability study.",
@@ -332,11 +315,11 @@
         }
       },
       "publication_verification": {
-        "status": "not-started",
-        "checked_at": null,
-        "checked_by": null,
-        "supported_scope": "Only the source access and research classification recorded here.",
-        "reason": "Research extraction complete; separate publication verification pending."
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-19T12:20:43.651Z",
+        "checked_by": "Codex (model evidence review; no independent human approval)",
+        "supported_scope": "Accepted manuscript and supplement support local usability and reported downstream discrepancies only; no causal patient-benefit, clinical-safety or incidence claim.",
+        "reason": "Inspected the publisher-linked accepted manuscript and supplement, visually checked Table 1a, compared the earlier conference abstract and searched the DOI for notices. Use journal definitions; retain study limitations and source-access observations."
       },
       "decision_history": [
         {
@@ -376,11 +359,7 @@
       "decision": "watch",
       "title": "Retrospective rTMS policy-learning result needs methods review",
       "desk": "clinical-ai",
-      "topics": [
-        "decision-support",
-        "patient-outcomes",
-        "evaluation"
-      ],
+      "topics": ["decision-support", "patient-outcomes", "evaluation"],
       "entities": [],
       "event_date": "2026-10-19",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -458,11 +437,7 @@
       "decision": "watch",
       "title": "MediSyn publication needs artifact and reuse verification",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-models",
-        "medical-imaging",
-        "research-tools"
-      ],
+      "topics": ["biomedical-models", "medical-imaging", "research-tools"],
       "entities": [],
       "event_date": "2026-10-16",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -540,11 +515,7 @@
       "decision": "watch",
       "title": "Clinical extraction framework: journal/preprint delta unresolved",
       "desk": "biomedical-foundations",
-      "topics": [
-        "evaluation",
-        "research-tools",
-        "reproducibility"
-      ],
+      "topics": ["evaluation", "research-tools", "reproducibility"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Underlying event date not established; source publication date is not substituted.",
@@ -635,11 +606,7 @@
       "decision": "watch",
       "title": "FDA GenAI discussion paper reaches its advertised feedback date",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "governance",
-        "medical-devices"
-      ],
+      "topics": ["regulation", "governance", "medical-devices"],
       "entities": [],
       "event_date": "2026-10-19",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -729,10 +696,7 @@
       "decision": "watch",
       "title": "ISM9528 pain-candidate claims lack a verified new evidence package",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "preclinical-evidence"
-      ],
+      "topics": ["drug-discovery", "preclinical-evidence"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Underlying event date not established; source publication date is not substituted.",
@@ -825,10 +789,7 @@
       "decision": "rejected",
       "title": "AMA agentic governance guide predates the initial window",
       "desk": "safety-policy",
-      "topics": [
-        "governance",
-        "implementation"
-      ],
+      "topics": ["governance", "implementation"],
       "entities": [],
       "event_date": "2026-10-13",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -903,10 +864,7 @@
       "decision": "rejected",
       "title": "Aortic-stenosis paper has April publication, October collection date",
       "desk": "clinical-ai",
-      "topics": [
-        "medical-imaging",
-        "evaluation"
-      ],
+      "topics": ["medical-imaging", "evaluation"],
       "entities": [],
       "event_date": "2026-04-02",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -981,9 +939,7 @@
       "decision": "rejected",
       "title": "AI drug-discovery market forecast lacks a verified operating change",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery"
-      ],
+      "topics": ["drug-discovery"],
       "entities": [],
       "event_date": "2026-10-16",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -1055,12 +1011,12 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Research checkpoint; one selected story awaits separate publication verification and artwork. No public approval.",
-    "story_ids": [],
+    "mode": "publication",
+    "reason": "One verified briefing survives; five watch items and three exclusions remain outside public content. Generated artwork is required before this batch can pass preflight. English only; optional French not requested. No MUST KNOW designation or human overrides.",
+    "story_ids": ["2026-10-19-oncology-ai-ehr-handoff"],
     "withheld_selected": [],
     "must_know_story_id": null,
-    "issue_path": null,
+    "issue_path": "src/content/pulse/2026-10-19.md",
     "checks": []
   },
   "attempts": [
@@ -1082,7 +1038,11 @@
       "started_at": "2026-10-19T12:18:27.660Z",
       "completed_at": null,
       "phases": [
-        "ownership-acquired"
+        "ownership-acquired",
+        "research-persisted",
+        "publication-source-verification",
+        "article-drafted",
+        "issue-assembled"
       ],
       "outcome": "in-progress"
     }
@@ -1090,8 +1050,8 @@
   "active_run": {
     "owner_token": "manual-healthtech-2026-10-19-12h17-codex",
     "acquired_at": "2026-10-19T12:18:27.660Z",
-    "heartbeat_at": "2026-10-19T12:18:27.660Z",
-    "expires_at": "2026-10-19T14:18:27.660Z"
+    "heartbeat_at": "2026-10-19T12:26:18.349Z",
+    "expires_at": "2026-10-19T14:26:18.349Z"
   },
   "human_overrides": []
 }
