@@ -5,7 +5,7 @@ description: Prepare one HealthTech AI Pulse daily draft PR from its normalized 
 
 # Prepare a daily publication
 
-Operate only in GadDev/healthtech-ai-pulse. Read current target CONSTITUTION.md, EDITORIAL.md, docs/CONTENT_MODEL.md, docs/editorial/ORCHESTRATOR.md, ledger.schema.json, topics.yml, source schemas, validators and CI before work. Missing contracts block publication; do not use Daily AI Pulse contracts as a fallback.
+Operate only in GadDev/healthtech-ai-pulse. Read current target docs/CONSTITUTION.md, docs/EDITORIAL.md, docs/CONTENT_MODEL.md, docs/DAILY_ISSUE.md, docs/editorial/ORCHESTRATOR.md, docs/editorial/PR_PREPARATION_V1.md, docs/editorial/EDITORIAL_SCHEMA_V1.md, docs/editorial/DECISION_ENGINE_V1.md, ledger.schema.json, TOPICS_V1.yml, source schemas, validators and CI before work. Missing contracts block publication; do not use Daily AI Pulse contracts as a fallback.
 
 Use the ledger as the handoff. Preserve research decisions and their evidence/scoring; publication verification, supported scope and withholding are separate. A narrowed article claim must remain within inspected source support. Recheck source status, access, contradictions, date precision and deduplication across merged and open daily ledgers. Never draft watch/rejected records implicitly. Human promotion must be auditable in a selected record and never bypass source gates.
 
@@ -23,7 +23,7 @@ Persist research first. Checkpoint all related files in one tree/commit/ref upda
 
 Use current conditional evidence fields, true reviewer identity/type/time, source locators and per-claim verification. No anonymous approval, guessed metric or invented independence. Map each selected item exactly once to drafted or withheld. Default capacity is two stories. If none survive, finalise ledger-only with no issue, MUST KNOW or manufactured artwork.
 
-English is required; French is not configured. mode=none is valid imagery. Generated mode invokes the target illustration skill after final article bytes and paths are fixed. Missing declared imagery withholds the story.
+English is required; French publication is not configured. For an explicitly requested translation handoff, invoke ../healthtech-ai-pulse-translate-fr/SKILL.md after committing final English bytes; keep its reviewed packages outside public content. Do not add translation work to a scheduled batch implicitly. mode=none is valid imagery. Generated mode invokes the target illustration skill after final article bytes and paths are fixed. Missing declared imagery withholds the story.
 
 Run npm run editorial:check with the explicit dated ledger, npm run illustration:check with that ledger, npm run verify and prescribed browser checks when execution is available. Inspect source support separately. If execution is unavailable report not-run and use draft CI for executable checks; do not bypass evidence/deduplication gates. A valid ledger-only draft can expose source failures, while an invalid ledger blocks any PR.
 

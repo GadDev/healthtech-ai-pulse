@@ -1,52 +1,85 @@
-name: Deploy HealthTech AI Pulse
+name: Deploy HealthTech Pulse to Firebase Hosting
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   id-token: write
+
 concurrency:
-  group: healthtech-hosting-production
+  group: firebase-hosting-production
   cancel-in-progress: false
+
 jobs:
   deploy:
-    # Remains inactive until dedicated target infrastructure is verified.
+    name: Build, verify and deploy Firebase Hosting
     if: github.ref == 'refs/heads/main' && vars.HEALTHTECH_DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    environment: production
+    environment:
+      name: production
+      url: ${{ vars.FIREBASE_SITE_URL }}
     env:
       FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
       FIREBASE_SITE_URL: ${{ vars.FIREBASE_SITE_URL }}
       SITE_URL: ${{ vars.FIREBASE_SITE_URL }}
-      FIREBASE_WIF_PROVIDER: ${{ vars.FIREBASE_WIF_PROVIDER }}
-      FIREBASE_SERVICE_ACCOUNT: ${{ vars.FIREBASE_SERVICE_ACCOUNT }}
+
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Verify deployment configuration
+        env:
+          FIREBASE_WIF_PROVIDER: ${{ vars.FIREBASE_WIF_PROVIDER }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ vars.FIREBASE_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          : "${FIREBASE_PROJECT_ID:?Missing FIREBASE_PROJECT_ID}"
+          : "${FIREBASE_SITE_URL:?Missing FIREBASE_SITE_URL}"
+          : "${FIREBASE_WIF_PROVIDER:?Missing FIREBASE_WIF_PROVIDER}"
+          : "${FIREBASE_SERVICE_ACCOUNT:?Missing FIREBASE_SERVICE_ACCOUNT}"
+          test "$FIREBASE_WIF_PROVIDER" = "projects/293427463899/locations/global/workloadIdentityPools/github/providers/github"
+          test "$FIREBASE_PROJECT_ID" = "healthtech-ai-pulse"
+          test "$FIREBASE_SITE_URL" = "https://healthtech-ai-pulse.web.app"
+          test "$FIREBASE_SERVICE_ACCOUNT" = "healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: 22.22.3
           cache: npm
-      - run: npm ci
-      - name: Check isolated target configuration
-        run: npm run deploy:check
-      - run: npm run verify
-      - name: Browser publication gate
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check isolated target and default project alias
+        env:
+          FIREBASE_WIF_PROVIDER: ${{ vars.FIREBASE_WIF_PROVIDER }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ vars.FIREBASE_SERVICE_ACCOUNT }}
         run: |
-          npx playwright install --with-deps chromium
-          npm run test:e2e
-      - name: Check static artifacts
+          npm run deploy:check
+          node --input-type=module -e 'import { readFileSync } from "node:fs"; if (JSON.parse(readFileSync(".firebaserc", "utf8")).projects?.default !== process.env.FIREBASE_PROJECT_ID) throw new Error("Unexpected default Firebase project");'
+
+      - name: Validate content and build site
+        run: npm run verify
+
+      - name: Check static publication artifacts
+        shell: bash
         run: |
-          test -f dist/index.html
-          test -f dist/rss.xml
-          test -f dist/robots.txt
-          test -f dist/sitemap-index.xml
-          test -f dist/pagefind/pagefind.js
+          for artifact in dist/index.html dist/rss.xml dist/robots.txt dist/sitemap-index.xml dist/pagefind/pagefind.js; do
+            test -f "$artifact" || { echo "::error::Missing $artifact"; exit 1; }
+          done
+
       - name: Skip superseded production runs
         id: current
         shell: bash
         run: |
+          set -euo pipefail
           latest="$(git ls-remote origin refs/heads/main | cut -f1)"
           if test "$latest" = "$GITHUB_SHA"; then
             echo "eligible=true" >> "$GITHUB_OUTPUT"
@@ -54,19 +87,26 @@ jobs:
             echo "eligible=false" >> "$GITHUB_OUTPUT"
             echo "::notice::This revision was superseded on main; production deployment skipped."
           fi
-      - uses: google-github-actions/auth@v3
+
+      - name: Authenticate to Google Cloud using GitHub OIDC
         if: steps.current.outputs.eligible == 'true'
+        uses: google-github-actions/auth@v3
         with:
           project_id: ${{ vars.FIREBASE_PROJECT_ID }}
           workload_identity_provider: ${{ vars.FIREBASE_WIF_PROVIDER }}
           service_account: ${{ vars.FIREBASE_SERVICE_ACCOUNT }}
           create_credentials_file: true
-      - name: Deploy target Hosting site
+
+      - name: Deploy static assets to Firebase Hosting
         if: steps.current.outputs.eligible == 'true'
         run: npx --yes firebase-tools@15.30.2 deploy --only hosting --project "$FIREBASE_PROJECT_ID" --non-interactive
-      - name: Smoke check production
+
+      - name: Verify live Hosting endpoints
         if: steps.current.outputs.eligible == 'true'
+        shell: bash
         run: |
-          for path in / /rss.xml /robots.txt /sitemap-index.xml; do
-            curl --fail --silent --show-error --location --retry 3 "$FIREBASE_SITE_URL$path" -o /dev/null
+          for path in "/" "/robots.txt" "/rss.xml" "/sitemap-index.xml"; do
+            curl --fail --silent --show-error --location \
+              --retry 5 --retry-delay 3 --retry-all-errors \
+              "${FIREBASE_SITE_URL}${path}" -o /dev/null
           done

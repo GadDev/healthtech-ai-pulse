@@ -2,7 +2,7 @@
 
 Evidence-led intelligence for people building and evaluating healthcare and pharmaceutical AI.
 
-The initial site is deliberately empty: no source-publication articles or historical decisions were imported. There is no configured public deployment or active editorial scheduler yet.
+The initial site is deliberately empty: no source-publication articles or historical decisions were imported. The dedicated Firebase target is configured; live deployment acceptance is still pending.
 
 ## Develop
 
@@ -19,15 +19,18 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 
 ## Project contracts
 
-- [CONSTITUTION.md](CONSTITUTION.md): mission and accountability.
+- [CONSTITUTION.md](docs/CONSTITUTION.md): mission and accountability.
 - [docs/CONTENT_MODEL.md](docs/CONTENT_MODEL.md): implemented schemas and publication mappings.
-- [EDITORIAL.md](EDITORIAL.md): claim-specific evidence, scope and publication policy.
-- [TECHSTACK.md](TECHSTACK.md): architecture, reuse and operations.
-- [ROADMAP.md](ROADMAP.md): PR boundaries and readiness gates.
+- [docs/DAILY_ISSUE.md](docs/DAILY_ISSUE.md): edition format, ordering and ledger-only days.
+- [Editorial schema](docs/editorial/EDITORIAL_SCHEMA_V1.md), [decision engine](docs/editorial/DECISION_ENGINE_V1.md) and [PR preparation](docs/editorial/PR_PREPARATION_V1.md): research-to-publication contracts.
+- [Visual constitution](docs/editorial/VISUAL_CONSTITUTION_V1.md) and [topics](docs/editorial/TOPICS_V1.yml): artwork rules and controlled vocabulary.
+- [EDITORIAL.md](docs/EDITORIAL.md): claim-specific evidence, scope and publication policy.
+- [TECHSTACK.md](docs/TECHSTACK.md): architecture, reuse and operations.
+- [ROADMAP.md](docs/ROADMAP.md): PR boundaries and readiness gates.
 
-The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the initial language. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
+The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the public language. The repository’s `healthtech-ai-pulse-translate-fr` skill prepares reviewed French translation packages; French publication routes are not implemented. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
-Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the safe orchestration state machine, target skills and disabled deployment workflow are prepared as a separate reviewable change. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
+Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the orchestration state machine and target skills are implemented. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
 
 ## Reuse and licensing
 
@@ -35,4 +38,4 @@ Astro/tooling configuration and editorial CSS are adapted from GadDev/daily-ai-p
 
 ## Operations status
 
-Deployment is inactive until dedicated target variables/WIF and HEALTHTECH_DEPLOY_ENABLED are configured and verified. The scheduled task is not created. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.
+Production deployment is gated by `HEALTHTECH_DEPLOY_ENABLED`. PR previews are separately gated by `HEALTHTECH_PREVIEW_ENABLED`. See [the deployment guide](docs/DEPLOYMENT.md) for identities, workflow behavior and acceptance steps. Scheduled-task activation is managed separately from deployment. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](docs/TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.

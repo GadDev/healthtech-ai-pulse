@@ -1,12 +1,14 @@
 # Content and evidence contracts
 
-Version: healthtech-1.0. [EDITORIAL.md](../EDITORIAL.md) owns editorial policy. This file documents the implemented storage and validation boundaries.
+Version: healthtech-1.0. [EDITORIAL.md](EDITORIAL.md) owns editorial policy. This file documents the implemented storage and validation boundaries.
 
 ## One shared schema
 
+Read [the editorial schema guide](editorial/EDITORIAL_SCHEMA_V1.md) for the record map, [the decision engine](editorial/DECISION_ENGINE_V1.md) for classification and [PR preparation](editorial/PR_PREPARATION_V1.md) for the publication handoff. These describe the implemented target contracts under the editorial policy.
+
 `src/lib/editorial-schema.mjs` defines strict Zod schemas for ledgers, candidate records, claims, evidence summaries, stories and image reviews. Astro uses the same story schema as executable editorial validation. `npm run schema:generate` derives `docs/editorial/ledger.schema.json`; `npm run schema:check` prevents drift. The JSON schema checks structure; executable checks add scoring, selection, cross-file and publication rules. Neither establishes scientific truth.
 
-`docs/editorial/topics.yml` owns the controlled topics. Desk IDs are defined once in the shared schema and checked against the vocabulary. Stories use exactly one primary desk and controlled tags. No historical source-publication content is imported.
+`docs/editorial/TOPICS_V1.yml` owns the controlled topics. Desk IDs are defined once in the shared schema and checked against the vocabulary. Stories use exactly one primary desk and controlled tags. No historical source-publication content is imported.
 
 ## Files and identity
 
@@ -46,15 +48,17 @@ Scores are recomputed from 0–4 inputs at 30/30/25/10/5 weights. Selection thre
 
 Zero selected, or every selected item withheld, means `publication.mode: ledger-only`, no story IDs, no issue path and no MUST KNOW. In-progress checkpoints can be persisted for recovery but cannot pass final `verify`. A final ledger-only record may truthfully retain source conflicts or failures. Explicit validator paths must exist, and all dated ledgers are checked so an older invalid batch cannot hide behind a newer valid one.
 
-Article `draft` defaults to true. Public routes use non-draft stories only; issue references reject missing/private stories. A prepared publication PR may contain `draft: false` article metadata, but remains a draft GitHub PR and does not deploy before human merge. Source mappings, evidence, category, tags, claim IDs, type and depth must agree with its selected candidate. Issues contain unique nonempty sections and exactly the batch's surviving references; featured and MUST KNOW are optional and distinct.
+Article `draft` defaults to true. Public routes use non-draft stories only; issue references reject missing/private stories. A prepared publication PR may contain `draft: false` article metadata, but remains a draft GitHub PR and does not deploy before human merge. Source mappings, evidence, category, tags, claim IDs, type and depth must agree with its selected candidate. Issues contain unique nonempty sections and exactly the batch's surviving references; featured and MUST KNOW are optional and distinct. [DAILY_ISSUE.md](DAILY_ISSUE.md) defines edition fields, routes, ordering and empty-day behavior.
 
 ## Optional imagery and translations
 
-`illustration.mode: none` is valid and renders a text-led article. Generated mode requires an asset, alt text and a review path. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
+`illustration.mode: none` is valid and renders a text-led article. Generated mode requires an asset, alt text and a review path. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact docs/EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
 
-Validation checks WebP header, byte hash, source/policy identity, review schema and generation key. The human/model visual review must separately assess crop and unsupported medical implications. Binary-safe Git operations are mandatory. A missing declared generated asset fails validation; it is not silently changed to none.
+Validation checks WebP header, byte hash, source/policy identity, review schema and generation key. The shared identity helper is also used by `illustration:decision`, which compares the supplied brief/reference fingerprints before reporting generation/reuse eligibility. `illustration:contact-sheet` produces optional visual comparison PNGs without changing production assets or review records. The human/model visual review must separately assess crop and unsupported medical implications. Binary-safe Git operations are mandatory. A missing declared generated asset fails validation; it is not silently changed to none.
 
-English is the sole required locale. No French collection, translation approval or placeholder is generated in this implementation.
+English is the sole required locale. The repository includes `healthtech-ai-pulse-translate-fr` for explicitly requested, source-matched French translation packages under `docs/editorial/translations/fr/`. Its reviewed article and companion report remain outside public content; a successful linguistic review is not clinical validation. No French collection, route, runtime translation schema or stale-copy suppression is implemented. No placeholders or historical translation approvals are imported.
+
+For operating details, see [the illustration guide](editorial/ILLUSTRATION_SYSTEM_V1.md) and [ledger lifecycle guidance](editorial/ledgers/README.md).
 
 ## Controlled trial and validation coverage
 

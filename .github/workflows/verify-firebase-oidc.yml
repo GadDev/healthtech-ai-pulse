@@ -3,9 +3,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  id-token: write
 jobs:
-  verify:
-    name: Verify ${{ matrix.environment }} identity
+  oidc:
+    name: Verify keyless Google Cloud authentication (${{ matrix.environment }})
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -24,9 +25,6 @@ jobs:
             account_variable: PREVIEW_FIREBASE_SERVICE_ACCOUNT
             expected_account: healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com
     environment: ${{ matrix.environment }}
-    permissions:
-      contents: read
-      id-token: write
     env:
       FIREBASE_PROJECT_ID: ${{ vars[matrix.project_variable] }}
       FIREBASE_SITE_URL: ${{ matrix.environment == 'production' && vars.FIREBASE_SITE_URL || format('https://{0}.web.app', vars.PREVIEW_FIREBASE_SITE_ID) }}
@@ -34,22 +32,24 @@ jobs:
       FIREBASE_SERVICE_ACCOUNT: ${{ vars[matrix.account_variable] }}
       EXPECTED_SERVICE_ACCOUNT: ${{ matrix.expected_account }}
     steps:
-      - uses: actions/checkout@v7
+      - name: Check out repository
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - uses: actions/setup-node@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: 22.22.3
           package-manager-cache: false
-      - name: Validate target and environment configuration
+      - name: Verify required environment variables and isolated target
         shell: bash
         run: |
           set -euo pipefail
           node scripts/validate-deployment.mjs
           test "$FIREBASE_SERVICE_ACCOUNT" = "$EXPECTED_SERVICE_ACCOUNT"
           test "$FIREBASE_WIF_PROVIDER" = "projects/293427463899/locations/global/workloadIdentityPools/github/providers/github"
-      - name: Exchange GitHub OIDC for a short-lived read-only token
+      - name: Authenticate using GitHub OIDC
         id: auth
         uses: google-github-actions/auth@v3
         with:
@@ -61,6 +61,17 @@ jobs:
           access_token_scopes: https://www.googleapis.com/auth/firebase.hosting.readonly
           create_credentials_file: false
           export_environment_variables: false
+      - name: Verify token was issued
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        shell: bash
+        run: |
+          if [ -z "$GOOGLE_ACCESS_TOKEN" ]; then
+            echo "::error::Google Cloud access token was not issued"
+            exit 1
+          fi
+          echo "PASS: GitHub OIDC exchanged for a short-lived Google Cloud access token."
+
       - name: Verify authenticated Hosting read
         env:
           GOOGLE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}

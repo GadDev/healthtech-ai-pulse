@@ -1,6 +1,6 @@
 # HealthTech AI Pulse — Scheduled editorial orchestrator
 
-Status: target orchestration instructions prepared for review. Local dependencies exist; remote adoption, authenticated adapter/write trial, browser acceptance and isolated hosted deployment are not yet verified. Activate only after ROADMAP.md readiness gates pass. The instruction body from “Run” onward is the full proposed task prompt; scheduling is separate.
+Status: target orchestration instructions prepared for review. Local dependencies exist; remote adoption, authenticated adapter/write trial, browser acceptance and isolated hosted deployment are not yet verified. Activate only after docs/ROADMAP.md readiness gates pass. The instruction body from “Run” onward is the full proposed task prompt; scheduling is separate.
 
 ---
 
@@ -14,12 +14,17 @@ SOURCE OF TRUTH AND PREREQUISITES
 
 Resolve the target repository's current default branch and its commit. Read, at that same commit:
 
-- CONSTITUTION.md
-- EDITORIAL.md
-- TECHSTACK.md
+- docs/CONSTITUTION.md
+- docs/EDITORIAL.md
+- docs/TECHSTACK.md
 - docs/CONTENT_MODEL.md
+- docs/editorial/EDITORIAL_SCHEMA_V1.md
+- docs/editorial/DECISION_ENGINE_V1.md
+- docs/editorial/PR_PREPARATION_V1.md
+- docs/editorial/VISUAL_CONSTITUTION_V1.md
+- docs/DAILY_ISSUE.md
 - docs/editorial/ledger.schema.json
-- docs/editorial/topics.yml
+- docs/editorial/TOPICS_V1.yml
 - docs/editorial/ORCHESTRATOR.md
 - .agents/skills/healthtech-ai-pulse-pr-preparation/SKILL.md
 - .agents/skills/healthtech-ai-pulse-illustration/SKILL.md
@@ -31,7 +36,7 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - package.json
 - .github/workflows/ci.yml
 
-Read referenced target dependencies recursively when required by these contracts. There is no runtime editorial dependency on GadDev/daily-ai-pulse, its cloud identities, external installed Pulse skills, policies or task. Do not substitute those for missing target files. No translation skill is required for English-only healthtech-1.0. If the adopted target later requires translations, read its actual locale contract/skill and validate the change before using it.
+Read referenced target dependencies recursively when required by these contracts. There is no runtime editorial dependency on GadDev/daily-ai-pulse, its cloud identities, external installed Pulse skills, policies or task. Do not substitute those for missing target files. No translation skill is required for English-only healthtech-1.0. The target `.agents/skills/healthtech-ai-pulse-translate-fr/SKILL.md` supports explicitly requested, reviewed French packages outside public collections; its presence does not activate translation in scheduled runs. If the adopted target later requires published translations, read its actual locale contract/skill and validate the integration before using it.
 
 If the repository, required contracts, supported source browsing, GitHub reads/writes or safe ownership mechanism is unavailable, stop publication preparation. Report the exact missing prerequisite. Preserve already gathered evidence as a checkpoint when possible; do not fabricate a ledger that supposedly passed unreadable contracts. A valid, classified ledger prepared under readable contracts may still be saved when a later publication source fails.
 

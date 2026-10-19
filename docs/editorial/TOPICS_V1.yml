@@ -1,4 +1,4 @@
-# Proposed controlled vocabulary. Adopt and validate in PR 2.
+# Controlled HealthTech vocabulary; contract version healthtech-1.0.
 version: healthtech-1.0
 desks:
   clinical-ai: Clinical AI
