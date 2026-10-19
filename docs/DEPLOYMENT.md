@@ -9,7 +9,7 @@ The reference is `GadDev/daily-ai-pulse` at `6269d2b7dbc01046cfcdaf7f204b8b6b14d
 | Workflow                   | Behavior                                                                                                                                              |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ci.yml`                   | Healthcare validation/build and browser/accessibility checks; one-day static artifact with run, attempt, PR, head, base and tested revision metadata. |
-| `deploy.yml`               | Verified main revision to production; skip superseded revisions; pinned CLI installed before authentication.                                          |
+| `deploy.yml`               | Verified main revision to production; skip superseded revisions; the same pinned CLI command and endpoint retry policy as the reference.              |
 | `verify-firebase-oidc.yml` | Manual, read-only authentication check for both environments.                                                                                         |
 | `automatic-preview.yml`    | After successful PR CI, resolve and recheck the exact artifact using trusted main code, then deploy `pr-N`.                                           |
 | `preview.yml`              | Manual fallback: build a selected same-repository PR head without cloud credentials, then deploy its static artifact using trusted main code.         |
@@ -22,6 +22,14 @@ Draft PRs are eligible for previews. Fork PRs are not. Automatic previews test t
 Templates, CODEOWNERS, dependency updates, labels and browser failure reports are included. The existing shared role file `infra/iam/hosting-deployer-role.yaml` remains canonical: its six permissions match the source preview role, so a second role YAML is unnecessary. A YAML file describes the role; merging it does not change cloud IAM.
 
 Healthcare validators remain authoritative. Source translation scripts are deferred because HealthTech currently has English-only schemas and routes. Source illustration export/contact-sheet helpers assume different ledger contracts; HealthTech retains its optional-image mappings and validation. These are intentional adaptations, not compatible files to copy blindly.
+
+## Deliberate differences from the reference
+
+The CI job IDs/names (`validate` / **Verify project**, `browser` / **Browser smoke and accessibility**), concurrency key, named steps, artifact packaging and screenshot uploads follow Daily AI Pulse. The preview resolver requires those same job names. HealthTech retains 15-minute job limits and checks every changed ledger; its actual editorial, rendered-evidence, orchestration and preview tests replace source-only translation/illustration-export tests. No unsupported translation commands are added.
+
+Production follows the reference's configuration → Node → install → verify → artifact check → OIDC → pinned `npx firebase-tools@15.30.2 deploy` → endpoint checks sequence. HealthTech adds its existing enable flag, superseded-main guard, exact provider check and default-project alias validation. The additional production browser job was removed; the browser suite runs in PR CI as in the reference. `.firebaserc` points to `healthtech-ai-pulse`; explicit `--project` remains in deployment commands.
+
+The OIDC workflow was already present on HealthTech main before this PR. Its job structure, named steps and explicit token-issued check now follow the source. It retains HealthTech's two-environment matrix and authenticated read-only Hosting check because both service accounts trust environment-specific subjects. The provider/account checks and narrow token scope remain in place.
 
 ## Environments and identities
 

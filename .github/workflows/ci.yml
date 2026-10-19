@@ -1,30 +1,66 @@
 name: CI
+
 on: [pull_request]
+
 permissions:
   contents: read
+
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
-  verify:
-    name: Verify publication
+  validate:
+    name: Verify project
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v7
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: 22.22.3
           cache: npm
-      - run: npm ci
-      - run: npm run verify
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint, format-check, content-check, type-check, and build
+        run: npm run verify
+
+      # HealthTech's verify command includes all unit regressions. These named
+      # steps map the reference's editorial/illustration checks to our contracts.
+      - name: Editorial and illustration validator regressions
+        run: node --test tests/editorial.test.mjs
+
+      - name: Rendered healthcare evidence regressions
+        run: node --test tests/rendered-evidence.test.mjs
+
+      - name: Orchestration and isolated deployment regressions
+        run: node --test tests/orchestration.test.mjs tests/preview-deployment.test.mjs
+
+      - name: Automatic preview routing regressions
+        run: node --test tests/automatic-preview.test.mjs tests/manual-preview.test.mjs
+
+      - name: Preview cleanup regressions
+        run: node --test tests/preview-cleanup.test.mjs
+
       - name: Validate every changed ledger
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.sha }} HEAD -- ':(glob)docs/editorial/ledgers/*.json' ':(glob)docs/editorial/trials/*.json' | while IFS= read -r ledger; do
+          set -euo pipefail
+          git diff --name-only --diff-filter=AM "$BASE_SHA" HEAD -- ':(glob)docs/editorial/ledgers/*.json' ':(glob)docs/editorial/trials/*.json' | while IFS= read -r ledger; do
             test -z "$ledger" || npm run editorial:check -- "$ledger"
           done
+
       - name: Package static preview artifact
         if: >-
           github.event.pull_request.base.ref == 'main' &&
@@ -78,27 +114,45 @@ jobs:
           retention-days: 1
 
   browser:
-    name: Browser and accessibility
+    name: Browser smoke and accessibility
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v7
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: 22.22.3
           cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
-      - name: Upload Playwright failure evidence
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright suite
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: playwright-report-${{ github.run_id }}-${{ github.run_attempt }}
+          name: playwright-report
           path: |
             playwright-report/
             test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload publication UX screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: publication-ux-screenshots
+          path: test-results/**/*.png
           if-no-files-found: ignore
           retention-days: 7

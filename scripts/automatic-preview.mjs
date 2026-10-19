@@ -76,7 +76,7 @@ export async function resolveRequest(api, event, now = Date.now()) {
   const jobs = await api(`/actions/runs/${run.id}/attempts/${run.run_attempt}/jobs?per_page=100`);
   if (
     jobs.total_count > 100 ||
-    !['Verify publication', 'Browser and accessibility'].every((name) =>
+    !['Verify project', 'Browser smoke and accessibility'].every((name) =>
       jobs.jobs?.some((job) => job.name === name && job.conclusion === 'success'),
     )
   ) {

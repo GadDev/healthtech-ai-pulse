@@ -44,8 +44,8 @@ function fixture() {
     jobs: {
       total_count: 2,
       jobs: [
-        { name: 'Verify publication', conclusion: 'success' },
-        { name: 'Browser and accessibility', conclusion: 'success' },
+        { name: 'Verify project', conclusion: 'success' },
+        { name: 'Browser smoke and accessibility', conclusion: 'success' },
       ],
     },
     artifacts: {
