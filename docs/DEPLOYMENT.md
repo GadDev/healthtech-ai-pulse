@@ -121,7 +121,7 @@ For a production rollback, use an approved previous release in Firebase Hosting 
 
 ### Disposable preview acceptance pilot
 
-Pilot branch: `test/preview-lifecycle-pilot`. This checklist records only observed live results; the pilot PR can be closed without merging after cleanup is verified.
+Pilot branch: `test/preview-lifecycle-pilot`. Initial CI passed before previews were enabled. A fresh CI run is requested after activation to exercise automatic publishing. This checklist records only observed live results; the pilot PR can be closed without merging after cleanup is verified.
 
 | Check                                                            | Status  | Evidence                 |
 | ---------------------------------------------------------------- | ------- | ------------------------ |
