@@ -2,6 +2,11 @@ name: Diagnose Firebase Hosting version creation
 
 on:
   workflow_dispatch:
+    inputs:
+      include_email_scope:
+        description: Compare with the additional service-account email OAuth scope
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -46,13 +51,14 @@ jobs:
           service_account: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
           token_format: access_token
           access_token_lifetime: 300s
-          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+          access_token_scopes: ${{ inputs.include_email_scope && 'https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email' || 'https://www.googleapis.com/auth/cloud-platform' }}
           create_credentials_file: false
           export_environment_variables: false
 
       - name: Compare Hosting requests and remove test versions
         env:
           GOOGLE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          INCLUDE_EMAIL_SCOPE: ${{ inputs.include_email_scope }}
         shell: bash
         run: |
           node --input-type=module <<'NODE'
@@ -122,6 +128,7 @@ jobs:
             '## Production OIDC Hosting diagnostic',
             '',
             `Service account: ${process.env.FIREBASE_SERVICE_ACCOUNT}`,
+            `Additional userinfo.email scope requested: ${process.env.INCLUDE_EMAIL_SCOPE}`,
             '',
             '| Request | Version creation | Cleanup |',
             '| --- | --- | --- |',
