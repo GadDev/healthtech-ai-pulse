@@ -239,19 +239,25 @@ test('CI reports exact-head required-job results and never treats stale green as
 });
 test('deployment rejects missing, cross-project and non-HTTPS configuration', () => {
   const env = {
-    FIREBASE_PROJECT_ID: 'healthtech-ai-pulse-test',
-    FIREBASE_SITE_URL: 'https://healthtech-ai-pulse-test.web.app',
+    FIREBASE_PROJECT_ID: 'healthtech-ai-pulse',
+    FIREBASE_SITE_URL: 'https://healthtech-ai-pulse.web.app',
     FIREBASE_WIF_PROVIDER:
-      'projects/123/locations/global/workloadIdentityPools/test/providers/test',
-    FIREBASE_SERVICE_ACCOUNT: 'deployer@healthtech-ai-pulse-test.iam.gserviceaccount.com',
+      'projects/293427463899/locations/global/workloadIdentityPools/test/providers/test',
+    FIREBASE_SERVICE_ACCOUNT: 'deployer@healthtech-ai-pulse.iam.gserviceaccount.com',
   };
   assert.equal(deploymentConfig(env).project, env.FIREBASE_PROJECT_ID);
   for (const patch of [
     { FIREBASE_PROJECT_ID: '' },
     { FIREBASE_PROJECT_ID: 'other-publication' },
-    { FIREBASE_SITE_URL: 'http://healthtech-ai-pulse-test.web.app' },
+    { FIREBASE_PROJECT_ID: 'healthtech-ai-pulse-test' },
+    { FIREBASE_SITE_URL: 'http://healthtech-ai-pulse.web.app' },
+    { FIREBASE_SITE_URL: 'https://healthtech-ai-pulse-test.web.app' },
     { FIREBASE_SERVICE_ACCOUNT: 'deployer@different-project.iam.gserviceaccount.com' },
     { FIREBASE_WIF_PROVIDER: 'not-a-provider' },
+    {
+      FIREBASE_WIF_PROVIDER:
+        'projects/123/locations/global/workloadIdentityPools/test/providers/test',
+    },
   ])
     assert.throws(() => deploymentConfig({ ...env, ...patch }));
 });
