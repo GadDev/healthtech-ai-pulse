@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const editions = (await getCollection('pulse')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title="Edition archive">
+  <p class="eyebrow">The archive</p>
+  <h1>Evidence, edition by edition.</h1>
+  {editions.length ? (
+    editions.map((edition) => (
+      <article class="story-row">
+        <h2>
+          <a href={`/pulse/${edition.id}/`}>{edition.data.title}</a>
+        </h2>
+        <p>{edition.data.summary}</p>
+      </article>
+    ))
+  ) : (
+    <div class="empty-state">
+      <h2>No editions published yet.</h2>
+      <p>
+        An edition appears only when at least one verified story is ready. Research-only days do not
+        become empty issues.
+      </p>
+    </div>
+  )}
+</BaseLayout>

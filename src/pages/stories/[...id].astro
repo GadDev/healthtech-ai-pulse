@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { desks } from '../../lib/categories';
+export async function getStaticPaths() {
+  return (await getCollection('stories', ({ data }) => !data.draft)).map((story) => ({
+    params: { id: story.id },
+    props: { story },
+  }));
+}
+const { story } = Astro.props;
+const { Content } = await render(story);
+---
+
+<BaseLayout title={story.data.title} description={story.data.description}>
+  <article data-pagefind-body>
+    <p class="eyebrow">{desks[story.data.category].title}</p>
+    <h1>{story.data.title}</h1>
+    <p class="lede">{story.data.description}</p>
+    <p class="story-meta">
+      Published {story.data.date.toISOString().slice(0, 10)}
+      {story.data.updatedAt && ` · Updated ${story.data.updatedAt.toISOString().slice(0, 10)}`}
+    </p>
+    {story.data.illustration.mode === 'generated' && (
+      <img
+        class="story-hero"
+        src={story.data.illustration.image}
+        alt={story.data.illustration.alt}
+      />
+    )}
+    <div class="prose">
+      <Content />
+      <h2>Sources</h2>
+      <ul>
+        {story.data.sources.map((source) => (
+          <li>
+            <a href={source.url}>{source.label}</a>
+          </li>
+        ))}
+      </ul>
+      {story.data.corrections.length > 0 && (
+        <section aria-label="Corrections">
+          <h2>Corrections</h2>
+          {story.data.corrections.map((correction) => (
+            <p>
+              <time datetime={correction.date.toISOString()}>
+                {correction.date.toISOString().slice(0, 10)}
+              </time>{' '}
+              — {correction.note}
+            </p>
+          ))}
+        </section>
+      )}
+    </div>
+  </article>
+</BaseLayout>

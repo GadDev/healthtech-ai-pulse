@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import '../styles/publication.css';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'HealthTech AI Pulse',
+  description = 'What changed. What the evidence supports. What to investigate next.',
+} = Astro.props;
+const configured = Boolean(import.meta.env.SITE_URL);
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title === 'HealthTech AI Pulse' ? title : `${title} · HealthTech AI Pulse`}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f3ebdd" />
+    {!configured && <meta name="robots" content="noindex, follow" />}
+    {configured && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="HealthTech AI Pulse" href="/rss.xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="site-header">
+      <div class="masthead">
+        <a class="brand" href="/">
+          HealthTech <span>AI Pulse</span>
+        </a>
+        <nav aria-label="Main navigation">
+          {[
+            ['/', 'Latest'],
+            ['/categories/', 'Desks'],
+            ['/pulse/', 'Editions'],
+            ['/methodology/', 'Methodology'],
+            ['/search/', 'Search'],
+          ].map(([href, label]) => (
+            <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="publication-main">
+      <slot />
+    </main>
+    <footer class="publication-footer">
+      <p class="footer-wordmark">HealthTech AI Pulse</p>
+      <p>Evidence-led intelligence for people building and evaluating healthcare AI.</p>
+      <nav aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/methodology/">Evidence & corrections</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/rss.xml">RSS</a>
+        <a href="https://github.com/GadDev/healthtech-ai-pulse">GitHub</a>
+      </nav>
+      <p class="fineprint">
+        Research and industry intelligence. No personalised medical advice. Publication follows
+        human review.
+      </p>
+    </footer>
+  </body>
+</html>

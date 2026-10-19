@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { desks, deskKeys } from '../../lib/categories';
+---
+
+<BaseLayout title="Editorial desks">
+  <p class="eyebrow">Coverage</p>
+  <h1>Follow the question, not the hype.</h1>
+  <p class="lede">
+    Five ways into healthcare AI. No quota to fill, no story duplicated across desks.
+  </p>
+  <div class="desk-grid">
+    {deskKeys.map((key) => (
+      <section class="desk-tile">
+        <h2>
+          <a href={`/desks/${key}/`}>{desks[key].title}</a>
+        </h2>
+        <p>{desks[key].description}</p>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

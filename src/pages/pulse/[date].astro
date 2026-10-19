@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+export async function getStaticPaths() {
+  return (await getCollection('pulse')).map((edition) => ({
+    params: { date: edition.id },
+    props: { edition },
+  }));
+}
+const { edition } = Astro.props;
+const stories = new Map(
+  (await getCollection('stories', ({ data }) => !data.draft)).map((story) => [story.id, story]),
+);
+---
+
+<BaseLayout title={edition.data.title}>
+  <p class="eyebrow">Daily edition · {edition.id}</p>
+  <h1>{edition.data.title}</h1>
+  <p class="lede">{edition.data.summary}</p>
+  {edition.data.sections.map((section) => (
+    <section>
+      <h2>{section.label}</h2>
+      <ul>
+        {section.stories.map((id) => {
+          const story = stories.get(id);
+          if (!story) throw new Error(`Missing public story: ${id}`);
+          return (
+            <li>
+              <a href={`/stories/${id}/`}>{story.data.title}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { desks } from '../lib/categories';
+interface Props {
+  stories: CollectionEntry<'stories'>[];
+}
+const { stories } = Astro.props;
+---
+
+{stories.map((story) => (
+  <article class="story-row">
+    <p class="story-meta">
+      {desks[story.data.category].title} · {story.data.date.toISOString().slice(0, 10)}
+    </p>
+    <h2>
+      <a href={`/stories/${story.id}/`}>{story.data.title}</a>
+    </h2>
+    <p>{story.data.description}</p>
+  </article>
+))}

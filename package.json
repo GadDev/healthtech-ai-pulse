@@ -1,0 +1,37 @@
+{
+  "name": "healthtech-ai-pulse",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.3 <23"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "content:check": "node scripts/validate-content.mjs",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "npm run check && astro build && pagefind --site dist",
+    "verify": "npm run lint && npm run format:check && npm run content:check && npm run build",
+    "test:e2e": "playwright test",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.10",
+    "@astrojs/mdx": "^8.0.3",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "^7.3.8",
+    "typescript": "6.0.3",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "eslint": "10.12.0",
+    "pagefind": "1.5.2",
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.1"
+  }
+}
