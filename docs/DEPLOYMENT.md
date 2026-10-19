@@ -123,12 +123,14 @@ For a production rollback, use an approved previous release in Firebase Hosting 
 
 Pilot branch: `test/preview-lifecycle-pilot`. Initial CI passed before previews were enabled. A fresh CI run is requested after activation to exercise automatic publishing. This checklist records only observed live results; the pilot PR can be closed without merging after cleanup is verified.
 
-| Check                                                            | Status  | Evidence                 |
-| ---------------------------------------------------------------- | ------- | ------------------------ |
-| Initial preview, expected revision, endpoints and noindex header | Pending | No live run recorded yet |
-| Refresh the same PR channel after a new commit                   | Pending | No live run recorded yet |
-| Manual preview fallback                                          | Pending | No live run recorded yet |
-| Close-event channel deletion                                     | Pending | No live run recorded yet |
+| Check                                                            | Status  | Evidence                                                                                            |
+| ---------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------- |
+| Initial preview, expected revision, endpoints and noindex header | Passed  | [Automatic run 39248159149](https://github.com/GadDev/healthtech-ai-pulse/actions/runs/39248159149) |
+| Refresh the same PR channel after a new commit                   | Pending | This evidence commit requests the refresh trial                                                     |
+| Manual preview fallback                                          | Pending | No live run recorded yet                                                                            |
+| Close-event channel deletion                                     | Pending | No live run recorded yet                                                                            |
+
+Initial preview: `pr-14`, PR head `938f3bab52c40cd928dd937105ba7d8a6882885b`, tested merge `808fb43311af4d8da025db3d2b6ae1b1d350ed11`. The workflow verified `/`, `/robots.txt`, `/rss.xml`, `/sitemap-index.xml` and `X-Robots-Tag: noindex`.
 
 ## Local checks
 
