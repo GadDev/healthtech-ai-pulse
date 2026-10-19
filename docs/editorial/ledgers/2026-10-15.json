@@ -1,0 +1,226 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-15",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "26aa43d5135fec020d1c4822a4b5c740524d8366",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-15T00:00:00+02:00",
+    "window_end": "2026-10-16T00:00:00+02:00",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "FIRST_PDATE:[2026-10-15 TO 2026-10-15] AND (\"artificial intelligence\" OR \"large language model\" OR \"machine learning\")",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=FIRST_PDATE%3A%5B2026-10-15+TO+2026-10-15%5D+AND+%28%22artificial+intelligence%22+OR+%22large+language+model%22+OR+%22machine+learning%22%29&format=json&resultType=core&pageSize=100",
+        "accessed_at": "2026-10-19T19:57:37.902995+00:00",
+        "outcome": "237 hits; first 100 records retrieved. Bounded title/selected-abstract screening; no exhaustive corpus or full-paper review claimed."
+      },
+      {
+        "query": "healthcare artificial intelligence October 12 13 14 2026 study hospital FDA; healthcare artificial intelligence October 15 16 2026 study trial; AI drug discovery October 2026 12 18 Nature biomedical",
+        "source": "Web search systems 1 and 2; shared seven-day discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Cross-window clinical/operations/pharma/policy discovery reviewed during this run. Result dates checked individually; query wording does not establish complete daily coverage."
+      },
+      {
+        "query": "site.fda.gov OR site.ema.europa.eu OR site.gov.uk artificial intelligence after:2026-10-11 before:2026-10-19; site.fiercehealthcare.com OR site.medtechdive.com OR site.firstwordhealthtech.com OR site.lifesciencedaily.news AI after:2026-10-11 before:2026-10-19",
+        "source": "Web search; specialist leads and authority discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Shared authority/outlet discovery; no new official action selected for this day. FDA discussion paper predates window; MHRA leads point to 6 October. These are not completed registry or direct-site sweeps."
+      },
+      {
+        "query": "Inspect https://www.nature.com/articles/s41746-026-03275-0",
+        "source": "Primary records, lawful publisher content and Europe PMC indexed abstracts at declared access levels",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Actual source review/extraction checkpoint, not source publication time. Selected language and epilepsy full HTML methods/results/limitations/funding inspected. RARE-PHENIX accepted PDF text and page 4 inspected, with February abstract comparison. Other records remain limited to documented access. No access-control bypass."
+      },
+      {
+        "query": "All-state target PRs, canonical branches, all main daily ledgers/stories/issues and cross-date identity comparison",
+        "source": "GadDev/healthtech-ai-pulse",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable."
+      },
+      {
+        "query": "Exact DOI correction/retraction and preprint searches: 10.1038/s44528-026-00042-1; 10.1038/s41591-026-04680-4; 10.1038/s41746-026-03275-0; RARE-PHENIX preprint",
+        "source": "Web search and publisher records; arXiv 2602.20324",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "No notice found for selected papers in inspected records. RARE-PHENIX v1 dated 23 February identified and retained on watch. Not a complete corrections/retraction or version-ancestry audit."
+      }
+    ],
+    "coverage_gaps": [
+      "Retrospective work executed now; exact historical local-calendar window is an assignment, not a historical publication/execution claim. Date-only metadata does not establish the exact publication hour.",
+      "Partial bounded discovery across five desks, not exhaustive surveillance. Europe PMC first-page retrieval is capped at 100; PMC deposit/index dates can differ from first article publication. Completed research cutoff remains null.",
+      "No complete CTIS/ClinicalTrials.gov results sweep, national EU device-authority rotation, regional-language database sweep or 30-day corrections/watch search. No patient data accessed.",
+      "Web search publisher extraction sometimes failed/redirected. Selected papers were accessible through ordinary public HTTP HTML; accepted RARE-PHENIX PDF was publicly accessible. No authenticated or restricted-source access claimed.",
+      "Only selected sources received full evidence review; other records retain their declared access and promotion conditions. Model review is not independent clinical or human editorial approval."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-10-15-rare-phenix-journal-status",
+      "decision": "watch",
+      "title": "RARE-PHENIX journal report needs a substantive delta from its February preprint",
+      "desk": "biomedical-foundations",
+      "topics": [
+        "biomedical-models",
+        "evaluation",
+        "research-tools"
+      ],
+      "entities": [],
+      "event_date": "2026-10-15",
+      "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
+      "source_publication_date": "2026-10-15",
+      "source_date_reason": "Inspected calendar-date metadata; retrospective assignment, not a historical execution time.",
+      "discovered_at": "2026-10-19T20:01:40.162Z",
+      "what_changed": "Peer-reviewed accepted report published; no novel core-cohort result established in this run.",
+      "why_now": "Retrospective assessment on 19 October for 2026-10-15. Dated source falls in this historical window; scope and novelty limits retained.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03275-0",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://www.nature.com/articles/s41746-026-03275-0",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03275-0",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-15",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        },
+        {
+          "id": "manuscript",
+          "url": "https://www.nature.com/articles/s41746-026-03275-0_reference.pdf",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03275-0_reference.pdf",
+          "publisher": "npj Digital Medicine accepted manuscript",
+          "role": "supporting",
+          "source_type": "original-research",
+          "publication_date": "2026-10-15",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        },
+        {
+          "id": "preprint",
+          "url": "https://arxiv.org/abs/2602.20324",
+          "canonical_url": "https://arxiv.org/abs/2602.20324",
+          "publisher": "arXiv",
+          "role": "context",
+          "source_type": "preprint",
+          "publication_date": "2026-02-23",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "rare-phenix-journal-status",
+        "doi": "10.1038/s41746-026-03275-0",
+        "pmid": null,
+        "preprint": "arXiv:2602.20324v1",
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Evaluation, implementation or governance of healthcare AI.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect the underlying evidence and applicability before local evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: full accepted manuscript and February preprint abstract inspected. Core 2,671-patient development and 16,357-note validation already appear in February; do not announce them as newly achieved in October. New comparisons/downstream analysis need full-version comparison.",
+      "promote_when": [
+        "Compare complete February v1 and accepted manuscript, including downstream disease-ranking analysis, and identify a substantive new evaluation consequence.",
+        "Inspect versioned repository/model cards and licenses; public RareDis-only weights must not be labelled the full UDN-trained model."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": {
+        "significance": 2,
+        "claim_support": 2,
+        "relevance": 3,
+        "material_change": 2,
+        "durability": 3,
+        "rationales": {
+          "significance": "Narrow practical evaluation lead.",
+          "claim_support": "Source inspected only to the declared access level; critical questions remain.",
+          "relevance": "Relevant to healthcare AI builders and evaluators.",
+          "material_change": "Publication or posting is dated; substantive novelty still needs assessment.",
+          "durability": "Reusable evaluation question."
+        },
+        "weighted_total": 57.5
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No publication claim cleared at research checkpoint.",
+        "reason": "Research checkpoint; downstream publication verification not yet performed."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T20:01:40.162Z",
+          "reason": "Watch: full accepted manuscript and February preprint abstract inspected. Core 2,671-patient development and 16,357-note validation already appear in February; do not announce them as newly achieved in October. New comparisons/downstream analysis need full-version comparison."
+        }
+      ]
+    }
+  ],
+  "exclusions": [],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "Retrospective seven-day run. Research ledger first; No selected story in bounded review; do not manufacture content.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "research-2026-10-15-cdf50a57-b4d8-4a4d-aed5-9fe164de45aa",
+      "started_at": "2026-10-19T19:57:37.902995+00:00",
+      "completed_at": "2026-10-19T20:01:40.162Z",
+      "phases": [
+        "current-contracts-read",
+        "all-state-identity-check",
+        "bounded-discovery",
+        "primary-evidence-review",
+        "cross-date-deduplication",
+        "classification"
+      ],
+      "outcome": "Partial research classified; no completed cutoff claimed."
+    },
+    {
+      "run_id": "backfill-2026-10-15-2026-10-19T20:04:09.257Z",
+      "started_at": "2026-10-19T20:04:09.257Z",
+      "completed_at": null,
+      "phases": [
+        "ownership-acquired"
+      ],
+      "outcome": "in-progress"
+    }
+  ],
+  "active_run": {
+    "owner_token": "backfill-2026-10-15-2026-10-19T20:04:09.257Z",
+    "acquired_at": "2026-10-19T20:04:09.257Z",
+    "heartbeat_at": "2026-10-19T20:04:09.257Z",
+    "expires_at": "2026-10-19T22:04:09.257Z"
+  },
+  "human_overrides": []
+}
