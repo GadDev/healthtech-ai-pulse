@@ -1,15 +1,19 @@
 :root {
-  --canvas: #f3ebdd;
-  --surface: #f8f3ea;
-  --surface-alt: #eee4d5;
-  --ink: #171715;
-  --muted: #67625b;
+  --canvas: #ffffff;
+  --surface: #e8efec;
+  --surface-alt: #e8efec;
+  --ink: #424242;
+  --muted: #4b5553;
   --ink-muted: var(--muted);
-  --line: #d9cfc0;
-  --terracotta: #8a4b35;
-  --font-deck: Georgia, 'Times New Roman', serif;
-  --accent: #1d2528;
-  --accent-soft: #d8e0dd;
+  --line: #d1e0e2;
+  --terracotta: #344f51;
+  --teal: #51796e;
+  --teal-dark: #344f51;
+  --rose: #d4a298;
+  --caramel: #bc8a5f;
+  --font-deck: 'Iowan Old Style', 'Baskerville', 'Palatino Linotype', Georgia, serif;
+  --accent: #344f51;
+  --accent-soft: #e8efec;
   font-family:
     Inter,
     ui-sans-serif,

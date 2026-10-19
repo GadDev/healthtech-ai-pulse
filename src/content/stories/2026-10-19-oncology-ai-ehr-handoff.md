@@ -51,7 +51,7 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-19-oncology-ai-ehr-handoff.webp
-  alt: Layered paper forms cross a narrow bridge, with one open space preserved through the handoff.
+  alt: An illustrative clinical workspace with a blank paper form, keyboard and a person pointing to an empty field.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-19-oncology-ai-ehr-handoff.json
 ---
 
