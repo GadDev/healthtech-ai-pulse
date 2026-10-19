@@ -4,9 +4,11 @@ Version: healthtech-1.0. [EDITORIAL.md](EDITORIAL.md) owns editorial policy. Thi
 
 ## One shared schema
 
+Read [the editorial schema guide](editorial/EDITORIAL_SCHEMA_V1.md) for the record map, [the decision engine](editorial/DECISION_ENGINE_V1.md) for classification and [PR preparation](editorial/PR_PREPARATION_V1.md) for the publication handoff. These describe the implemented target contracts under the editorial policy.
+
 `src/lib/editorial-schema.mjs` defines strict Zod schemas for ledgers, candidate records, claims, evidence summaries, stories and image reviews. Astro uses the same story schema as executable editorial validation. `npm run schema:generate` derives `docs/editorial/ledger.schema.json`; `npm run schema:check` prevents drift. The JSON schema checks structure; executable checks add scoring, selection, cross-file and publication rules. Neither establishes scientific truth.
 
-`docs/editorial/topics.yml` owns the controlled topics. Desk IDs are defined once in the shared schema and checked against the vocabulary. Stories use exactly one primary desk and controlled tags. No historical source-publication content is imported.
+`docs/editorial/TOPICS_V1.yml` owns the controlled topics. Desk IDs are defined once in the shared schema and checked against the vocabulary. Stories use exactly one primary desk and controlled tags. No historical source-publication content is imported.
 
 ## Files and identity
 

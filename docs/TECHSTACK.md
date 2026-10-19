@@ -22,7 +22,7 @@ Canonical paths after implementation:
 | docs/TECHSTACK.md                                          | Architecture and hosting operations                               |
 | docs/CONTENT_MODEL.md                                      | Content and ledger field semantics and cross-file mapping         |
 | docs/editorial/ledger.schema.json                          | Structural machine validation, version healthtech-1.0             |
-| docs/editorial/topics.yml                                  | Controlled vocabulary, version healthtech-1.0                     |
+| docs/editorial/TOPICS_V1.yml                               | Controlled vocabulary, version healthtech-1.0                     |
 | docs/editorial/ORCHESTRATOR.md                             | Canonical scheduled-run instructions                              |
 | .agents/skills/healthtech-ai-pulse-pr-preparation/SKILL.md | Operational procedure referencing the policies                    |
 | .agents/skills/healthtech-ai-pulse-illustration/SKILL.md   | Asset creation/reuse and medical visual restrictions              |

@@ -203,7 +203,7 @@ export function validateIllustration(root, story, bytes) {
 export function checkEditorial(root = process.cwd(), explicit, { allowInProgress = false } = {}) {
   checkContent(root);
   const vocabulary = new Set(
-    Object.keys(parse(readFileSync(`${root}/docs/editorial/topics.yml`, 'utf8')).topics),
+    Object.keys(parse(readFileSync(`${root}/docs/editorial/TOPICS_V1.yml`, 'utf8')).topics),
   );
   const directories = ['docs/editorial/ledgers', 'docs/editorial/trials'];
   if (explicit && !existsSync(inside(root, explicit)))

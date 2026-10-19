@@ -96,7 +96,7 @@ function tempPublication() {
   ])
     mkdirSync(join(root, dir), { recursive: true });
   writeFileSync(
-    join(root, 'docs/editorial/topics.yml'),
+    join(root, 'docs/editorial/TOPICS_V1.yml'),
     stringify({ topics: { 'research-tools': 'Synthetic' } }),
   );
   const { ledger, story } = fixture();

@@ -5,7 +5,7 @@ description: Prepare, reuse and review optional HealthTech AI Pulse editorial ar
 
 # Optional editorial illustration
 
-Read target docs/EDITORIAL.md, docs/CONTENT_MODEL.md, [the illustration guide](../../../docs/editorial/ILLUSTRATION_SYSTEM_V1.md) and the story/ledger first. Never change research classifications. mode=none is a valid explicit choice and needs no generation. A declared generated image requires the complete review and asset; do not silently change mode after a generation failure.
+Read target docs/EDITORIAL.md, docs/CONTENT_MODEL.md, [the visual constitution](../../../docs/editorial/VISUAL_CONSTITUTION_V1.md), [the illustration guide](../../../docs/editorial/ILLUSTRATION_SYSTEM_V1.md) and the story/ledger first. Never change research classifications. mode=none is a valid explicit choice and needs no generation. A declared generated image requires the complete review and asset; do not silently change mode after a generation failure.
 
 Generate only for a verified, selected, factually stable story. Use a brief containing the actual story ID, verified context, one metaphor, placement and crop. Prefer calm geometry/material forms with warm paper, dark ink and restrained terracotta. It is artwork for the existing website, not a screenshot or labelled diagram. No invented charts, statistics, logos, unsupported anatomy, scans, mechanisms, molecular evidence or patient outcomes. Use abstraction when factual depiction would imply knowledge the evidence does not support.
 

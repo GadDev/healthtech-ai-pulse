@@ -18,9 +18,13 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - docs/EDITORIAL.md
 - docs/TECHSTACK.md
 - docs/CONTENT_MODEL.md
+- docs/editorial/EDITORIAL_SCHEMA_V1.md
+- docs/editorial/DECISION_ENGINE_V1.md
+- docs/editorial/PR_PREPARATION_V1.md
+- docs/editorial/VISUAL_CONSTITUTION_V1.md
 - docs/DAILY_ISSUE.md
 - docs/editorial/ledger.schema.json
-- docs/editorial/topics.yml
+- docs/editorial/TOPICS_V1.yml
 - docs/editorial/ORCHESTRATOR.md
 - .agents/skills/healthtech-ai-pulse-pr-preparation/SKILL.md
 - .agents/skills/healthtech-ai-pulse-illustration/SKILL.md

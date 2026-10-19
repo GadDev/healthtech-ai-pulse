@@ -10,18 +10,7 @@ Start with one candidate. Record the actual candidate count; the source publicat
 
 ## Compose from verified context
 
-Build the brief from the story ID, two or three supported context sentences, one visual idea, intended placement and crop. Use the actual HealthTech article renderer and stylesheet for composition: `src/pages/stories/[...id].astro` and `src/styles/publication.css`. Do not claim that source reference-layout pages or additional image placements exist here.
-
-Prefer a restrained editorial illustration with a scientific or architectural sensibility: one physical/spatial metaphor, deliberate geometry, subtle material texture, readable silhouette and generous negative space. Technical lines may support the image; they should not turn it into a bare flowchart, wireframe or diagram. Use the publication's warm canvas `#F3EBDD`, paper `#FAF6EE`, ink `#171B1A`, muted gray `#575D5B` and restrained terracotta `#8A4B35`.
-
-Reject unsupported medical implications before judging aesthetics. In particular:
-
-- Do not invent anatomy, scans, molecular mechanisms, study results, patient outcomes or clinical endorsements.
-- Do not use generated charts or numbers as factual evidence. Data graphics require source data and a reproducible method under editorial policy.
-- Do not generate words, labels, logos, headlines, UI, screenshots, watermarks, borders or frames. The website supplies its own text.
-- Avoid generic robots, glowing brains, neon and stock AI imagery. Use abstraction when a literal depiction would imply more than the evidence establishes.
-
-Compare with approved HealthTech artwork when available. Do not import source artwork, approvals or a supposed target reference archive. Record honestly when no target comparison is available.
+Read [the visual constitution](VISUAL_CONSTITUTION_V1.md) before preparing a brief or reviewing a candidate. Record the actual story ID, two or three supported context sentences, one visual idea, intended placement and crop. Inspect the current HealthTech renderer and stylesheet; do not assume source-publication layouts or image placements have been implemented here.
 
 ## Review the actual asset
 
@@ -61,4 +50,4 @@ npm run verify
 
 Replace the date with the actual batch date. Report command execution separately from source/visual inspection. No generated-image production acceptance is claimed by this guide.
 
-Adapted from `GadDev/daily-ai-pulse` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`: `VISUAL_CONSTITUTION_V1.md`, `ILLUSTRATION_SYSTEM_V1.md` and `ILLUSTRATION_GENERATION_IDENTITY_V1.md`. Their useful guidance is consolidated here; their historical approvals and incompatible contracts are excluded.
+Adapted from `GadDev/daily-ai-pulse` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`: `VISUAL_CONSTITUTION_V1.md`, `ILLUSTRATION_SYSTEM_V1.md` and `ILLUSTRATION_GENERATION_IDENTITY_V1.md`. Visual authoring rules are in the target visual constitution; production and identity guidance are consolidated here; their historical approvals and incompatible contracts are excluded.

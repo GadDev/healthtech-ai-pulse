@@ -2,7 +2,7 @@
 
 Store each daily research/publication record at `docs/editorial/ledgers/YYYY-MM-DD.json`; its filename must equal `editorial_date`. The ledger preserves decisions that public articles cannot show: selection, watch/rejection, deduplication, evidence, downstream withholding, attempts and recovery state.
 
-Read [the editorial policy](../../EDITORIAL.md), [content model](../../CONTENT_MODEL.md), [daily issue contract](../../DAILY_ISSUE.md), [schema](../ledger.schema.json), [topics](../topics.yml) and [orchestrator](../ORCHESTRATOR.md). These target contracts define the fields; do not copy the source publication's example ledger or scoring rubric.
+Read [the editorial policy](../../EDITORIAL.md), [content model](../../CONTENT_MODEL.md), [daily issue contract](../../DAILY_ISSUE.md), [schema guide](../EDITORIAL_SCHEMA_V1.md) and [machine schema](../ledger.schema.json), [topics](../TOPICS_V1.yml) and [orchestrator](../ORCHESTRATOR.md). These target contracts define the fields; do not copy the source publication's example ledger or scoring rubric.
 
 ## Preserve research and publication separately
 
