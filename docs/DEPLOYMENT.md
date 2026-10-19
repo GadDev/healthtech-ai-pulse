@@ -119,17 +119,16 @@ Preview channels expire after seven days. They are publicly accessible; `noindex
 
 For a production rollback, use an approved previous release in Firebase Hosting or revert the reviewed source change through a PR and let main redeploy. Confirm endpoints afterward. A rollback has not yet been exercised for this project.
 
-
 ### Disposable preview acceptance pilot
 
 Pilot branch: `test/preview-lifecycle-pilot`. This checklist records only observed live results; the pilot PR can be closed without merging after cleanup is verified.
 
-| Check | Status | Evidence |
-| --- | --- | --- |
+| Check                                                            | Status  | Evidence                 |
+| ---------------------------------------------------------------- | ------- | ------------------------ |
 | Initial preview, expected revision, endpoints and noindex header | Pending | No live run recorded yet |
-| Refresh the same PR channel after a new commit | Pending | No live run recorded yet |
-| Manual preview fallback | Pending | No live run recorded yet |
-| Close-event channel deletion | Pending | No live run recorded yet |
+| Refresh the same PR channel after a new commit                   | Pending | No live run recorded yet |
+| Manual preview fallback                                          | Pending | No live run recorded yet |
+| Close-event channel deletion                                     | Pending | No live run recorded yet |
 
 ## Local checks
 
