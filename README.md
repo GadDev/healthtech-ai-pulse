@@ -15,7 +15,9 @@ npm ci
 npm run dev
 ```
 
-`npm run verify` runs lint, formatting, content integrity, Astro checks, build and Pagefind. `npm run test:e2e` checks public routes, accessibility, narrow navigation and search; install Chromium with `npx playwright install chromium` first.
+`npm run verify` runs Oxlint, Oxfmt formatting checks, content integrity, Astro checks, build and Pagefind. `npm run test:e2e` checks public routes, accessibility, narrow navigation and search; install Chromium with `npx playwright install chromium` first.
+
+`npm run lint:fix` applies safe lint fixes; `npm run format` formats supported source, content and configuration files, including Astro. Oxfmt settings live in `.oxfmtrc.json`; Oxlint rules live in `.oxlintrc.json`. Generated output, the npm lockfile and the generated ledger schema are excluded from formatting. Astro type and template diagnostics remain covered by `npm run check`.
 
 Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured local builds use localhost, omit canonical links and disallow indexing. No cloud credentials or source Firebase identities are included.
 

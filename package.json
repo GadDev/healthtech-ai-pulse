@@ -10,9 +10,9 @@
     "dev": "astro dev",
     "check": "astro check",
     "content:check": "node scripts/validate-content.mjs",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "lint": "oxlint --deny-warnings .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
     "build": "npm run check && astro build && pagefind --site dist",
     "verify": "npm run lint && npm run format:check && npm run schema:check && npm run content:check && npm run editorial:check && npm run illustration:check && npm test && npm run build",
     "test:e2e": "playwright test",
@@ -26,7 +26,8 @@
     "orchestration:trial": "node --test tests/orchestration.test.mjs",
     "illustration:decision": "node scripts/resolve-illustration-generation.mjs",
     "illustration:contact-sheet": "node scripts/build-illustration-contact-sheet.mjs",
-    "illustration:contact-sheet:test": "node --test tests/browser/illustration-contact-sheet.test.mjs"
+    "illustration:contact-sheet:test": "node --test tests/browser/illustration-contact-sheet.test.mjs",
+    "lint:fix": "oxlint --fix --deny-warnings ."
   },
   "dependencies": {
     "@astrojs/check": "0.9.10",
@@ -37,11 +38,11 @@
     "yaml": "2.9.1"
   },
   "devDependencies": {
+    "@astrojs/compiler-rs": "0.5.1",
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.64.0",
-    "eslint": "10.12.0",
-    "pagefind": "1.5.2",
-    "prettier": "3.9.9",
-    "prettier-plugin-astro": "1.1.1"
+    "oxfmt": "0.74.0",
+    "oxlint": "1.89.0",
+    "pagefind": "1.5.2"
   }
 }

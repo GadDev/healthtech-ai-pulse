@@ -1,7 +1,0 @@
-package-lock.json
-node_modules/
-dist/
-.astro/
-playwright-report/
-test-results/
-docs/editorial/ledger.schema.json
