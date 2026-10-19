@@ -1,0 +1,319 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-17",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "26aa43d5135fec020d1c4822a4b5c740524d8366",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-17T00:00:00+02:00",
+    "window_end": "2026-10-18T00:00:00+02:00",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "FIRST_PDATE:[2026-10-17 TO 2026-10-17] AND (\"artificial intelligence\" OR \"large language model\" OR \"machine learning\")",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=FIRST_PDATE%3A%5B2026-10-17+TO+2026-10-17%5D+AND+%28%22artificial+intelligence%22+OR+%22large+language+model%22+OR+%22machine+learning%22%29&format=json&resultType=core&pageSize=100",
+        "accessed_at": "2026-10-19T19:57:37.091525+00:00",
+        "outcome": "5 hits; first 5 records retrieved. Bounded title/selected-abstract screening; no exhaustive corpus or full-paper review claimed."
+      },
+      {
+        "query": "healthcare artificial intelligence October 12 13 14 2026 study hospital FDA; healthcare artificial intelligence October 15 16 2026 study trial; AI drug discovery October 2026 12 18 Nature biomedical",
+        "source": "Web search systems 1 and 2; shared seven-day discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Cross-window clinical/operations/pharma/policy discovery reviewed during this run. Result dates checked individually; query wording does not establish complete daily coverage."
+      },
+      {
+        "query": "site.fda.gov OR site.ema.europa.eu OR site.gov.uk artificial intelligence after:2026-10-11 before:2026-10-19; site.fiercehealthcare.com OR site.medtechdive.com OR site.firstwordhealthtech.com OR site.lifesciencedaily.news AI after:2026-10-11 before:2026-10-19",
+        "source": "Web search; specialist leads and authority discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Shared authority/outlet discovery; no new official action selected for this day. FDA discussion paper predates window; MHRA leads point to 6 October. These are not completed registry or direct-site sweeps."
+      },
+      {
+        "query": "Inspect https://www.nature.com/articles/s41746-026-03396-6; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+        "source": "Primary records, lawful publisher content and Europe PMC indexed abstracts at declared access levels",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Actual source review/extraction checkpoint, not source publication time. Selected language and epilepsy full HTML methods/results/limitations/funding inspected. RARE-PHENIX accepted PDF text and page 4 inspected, with February abstract comparison. Other records remain limited to documented access. No access-control bypass."
+      },
+      {
+        "query": "All-state target PRs, canonical branches, all main daily ledgers/stories/issues and cross-date identity comparison",
+        "source": "GadDev/healthtech-ai-pulse",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable."
+      }
+    ],
+    "coverage_gaps": [
+      "Retrospective work executed now; exact historical local-calendar window is an assignment, not a historical publication/execution claim. Date-only metadata does not establish the exact publication hour.",
+      "Partial bounded discovery across five desks, not exhaustive surveillance. Europe PMC first-page retrieval is capped at 100; PMC deposit/index dates can differ from first article publication. Completed research cutoff remains null.",
+      "No complete CTIS/ClinicalTrials.gov results sweep, national EU device-authority rotation, regional-language database sweep or 30-day corrections/watch search. No patient data accessed.",
+      "Web search publisher extraction sometimes failed/redirected. Selected papers were accessible through ordinary public HTTP HTML; accepted RARE-PHENIX PDF was publicly accessible. No authenticated or restricted-source access claimed.",
+      "Only selected sources received full evidence review; other records retain their declared access and promotion conditions. Model review is not independent clinical or human editorial approval."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-10-17-ai-assistant-mental-health-hypothesis",
+      "decision": "watch",
+      "title": "AI-assistant mental-health construct lacks inspected causal evidence",
+      "desk": "safety-policy",
+      "topics": [
+        "safety",
+        "evaluation"
+      ],
+      "entities": [],
+      "event_date": "2026-10-17",
+      "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
+      "source_publication_date": "2026-10-17",
+      "source_date_reason": "Inspected calendar-date metadata; retrospective assignment, not a historical execution time.",
+      "discovered_at": "2026-10-19T20:01:40.162Z",
+      "what_changed": "AI-assistant mental-health construct lacks inspected causal evidence",
+      "why_now": "Retrospective assessment on 19 October for 2026-10-17. Dated source falls in this historical window; scope and novelty limits retained.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+          "canonical_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+          "publisher": "Europe PMC indexed abstract",
+          "role": "primary",
+          "source_type": "preprint-index-record",
+          "publication_date": "2026-10-17",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ai-assistant-mental-health-hypothesis",
+        "doi": "10.12688/f1000research.191633.1",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Evaluation, implementation or governance of healthcare AI.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect the underlying evidence and applicability before local evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: indexed abstract describes a preliminary psychiatric construct, not an incidence estimate or proof that chatbots cause mental illness. Full report, case ascertainment and peer-review status need checking.",
+      "promote_when": [
+        "Inspect original report and evaluation status, case definitions, denominator, alternative explanations and independent assessment before any causal or incidence claim."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": {
+        "significance": 2,
+        "claim_support": 2,
+        "relevance": 3,
+        "material_change": 2,
+        "durability": 3,
+        "rationales": {
+          "significance": "Narrow practical evaluation lead.",
+          "claim_support": "Source inspected only to the declared access level; critical questions remain.",
+          "relevance": "Relevant to healthcare AI builders and evaluators.",
+          "material_change": "Publication or posting is dated; substantive novelty still needs assessment.",
+          "durability": "Reusable evaluation question."
+        },
+        "weighted_total": 57.5
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No publication claim cleared at research checkpoint.",
+        "reason": "Research checkpoint; downstream publication verification not yet performed."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T20:01:40.162Z",
+          "reason": "Watch: indexed abstract describes a preliminary psychiatric construct, not an incidence estimate or proof that chatbots cause mental illness. Full report, case ascertainment and peer-review status need checking."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-17-oncology-already-covered",
+      "decision": "rejected",
+      "title": "Oncology AI pilot exposes a missing-data trap at the EHR handoff",
+      "desk": "health-systems",
+      "topics": [
+        "implementation",
+        "interoperability",
+        "safety",
+        "evaluation"
+      ],
+      "entities": [
+        "Netherlands Cancer Institute",
+        "kaiko.ai"
+      ],
+      "event_date": "2026-10-17",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-17",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T20:01:40.162Z",
+      "what_changed": "Accepted journal report and supplement add inspectable integration discrepancies, completeness and selection limitations to earlier conference coverage. Not a new clinical deployment or patient-benefit finding.",
+      "why_now": "17 October publication, assessed retrospectively; already published in finalized 19 October edition.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03396-6",
+      "sources": [
+        {
+          "id": "journal",
+          "url": "https://www.nature.com/articles/s41746-026-03396-6",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03396-6",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-17",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "manuscript",
+          "url": "https://www.nature.com/articles/s41746-026-03396-6_reference.pdf",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03396-6_reference.pdf",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-17",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "supplement",
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41746-026-03396-6/MediaObjects/41746_2026_3396_MOESM1_ESM.pdf",
+          "canonical_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41746-026-03396-6/MediaObjects/41746_2026_3396_MOESM1_ESM.pdf",
+          "publisher": "npj Digital Medicine",
+          "role": "supporting",
+          "source_type": "original-research",
+          "publication_date": null,
+          "date_reason": "Publication date not established from accessible record.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "conference",
+          "url": "https://ifhnos2026.org/au/talks/ai-supported-consultation-preparation-in-oncology-a-real-world-clinical-usability-study",
+          "canonical_url": "https://ifhnos2026.org/au/talks/ai-supported-consultation-preparation-in-oncology-a-real-world-clinical-usability-study",
+          "publisher": "IFHNOS 2026",
+          "role": "context",
+          "source_type": "conference-abstract",
+          "publication_date": "2026-08-28",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "oncology-ai-ehr-handoff",
+        "doi": "10.1038/s41746-026-03396-6",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": "NKI-AVL head-and-neck AI-FCP prospective usability, 2025-04-14 to 2025-06-02",
+        "product_version": "AI-FCP version-frozen study checkpoint; public version identifier not reported",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "LLM extraction of referral documents into an oncology EHR.",
+        "non_ai_exception": null,
+        "reader_consequence": "Test missing-data semantics and final EHR output separately from summary quality."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-19-oncology-ai-ehr-handoff"
+        ],
+        "previous_story_ids": [
+          "2026-10-19-oncology-ai-ehr-handoff"
+        ],
+        "material_delta": null,
+        "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
+        "publication_status": "not-started"
+      },
+      "reason": "Already covered by finalized October 19 story. Historical backfill must not republish the same underlying study.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No duplicate publication permitted.",
+        "reason": "Research checkpoint; downstream publication verification not yet performed."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-19T20:01:40.162Z",
+          "reason": "Already covered by finalized October 19 story. Historical backfill must not republish the same underlying study."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "Retrospective seven-day run. Research ledger first; No selected story in bounded review; do not manufacture content.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "research-2026-10-17-f5b4219b-d4ef-4d56-ae80-72f25a03278c",
+      "started_at": "2026-10-19T19:57:37.091525+00:00",
+      "completed_at": "2026-10-19T20:01:40.162Z",
+      "phases": [
+        "current-contracts-read",
+        "all-state-identity-check",
+        "bounded-discovery",
+        "primary-evidence-review",
+        "cross-date-deduplication",
+        "classification"
+      ],
+      "outcome": "Partial research classified; no completed cutoff claimed."
+    },
+    {
+      "run_id": "backfill-2026-10-17-2026-10-19T20:05:10.869Z",
+      "started_at": "2026-10-19T20:05:10.869Z",
+      "completed_at": null,
+      "phases": [
+        "ownership-acquired"
+      ],
+      "outcome": "in-progress"
+    }
+  ],
+  "active_run": {
+    "owner_token": "backfill-2026-10-17-2026-10-19T20:05:10.869Z",
+    "acquired_at": "2026-10-19T20:05:10.869Z",
+    "heartbeat_at": "2026-10-19T20:05:10.869Z",
+    "expires_at": "2026-10-19T22:05:10.869Z"
+  },
+  "human_overrides": []
+}
