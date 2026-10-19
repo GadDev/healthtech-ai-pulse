@@ -1,0 +1,135 @@
+name: Diagnose Firebase Hosting version creation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: firebase-hosting-production
+  cancel-in-progress: false
+
+jobs:
+  diagnose:
+    name: Test unpublished version creation with production OIDC
+    if: github.repository == 'GadDev/healthtech-ai-pulse' && github.ref == 'refs/heads/main' && vars.HEALTHTECH_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    env:
+      FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
+      FIREBASE_WIF_PROVIDER: ${{ vars.FIREBASE_WIF_PROVIDER }}
+      FIREBASE_SERVICE_ACCOUNT: ${{ vars.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - name: Check production identity and target
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$FIREBASE_PROJECT_ID" = 'healthtech-ai-pulse'
+          test "$FIREBASE_WIF_PROVIDER" = 'projects/293427463899/locations/global/workloadIdentityPools/github/providers/github'
+          test "$FIREBASE_SERVICE_ACCOUNT" = 'healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22.22.3
+          package-manager-cache: false
+
+      - name: Request a short-lived production token using OIDC
+        id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ env.FIREBASE_PROJECT_ID }}
+          workload_identity_provider: ${{ env.FIREBASE_WIF_PROVIDER }}
+          service_account: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_lifetime: 300s
+          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+          create_credentials_file: false
+          export_environment_variables: false
+
+      - name: Compare Hosting requests and remove test versions
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync } from 'node:fs';
+
+          const token = process.env.GOOGLE_ACCESS_TOKEN;
+          if (!token) throw new Error('OIDC did not issue an access token.');
+          const origin = 'https://firebasehosting.googleapis.com/v1beta1/';
+          const endpoint = `${origin}projects/-/sites/healthtech-ai-pulse/versions`;
+          const rows = [];
+          let failed = false;
+
+          for (const explicitQuota of [false, true]) {
+            const mode = explicitQuota ? 'Explicit quota project' : 'No quota-project header';
+            const headers = {
+              Authorization: `Bearer ${token}`,
+              'Content-Type': 'application/json',
+            };
+            if (explicitQuota) headers['X-Goog-User-Project'] = 'healthtech-ai-pulse';
+            let createStatus = 'not completed';
+            let cleanupStatus = 'no version name returned';
+            try {
+              // Match firebase-tools@15.30.2's initial version request. No upload or release.
+              const response = await fetch(endpoint, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify({
+                  status: 'CREATED',
+                  labels: { 'deployment-tool': 'cli-firebase' },
+                }),
+                signal: AbortSignal.timeout(30000),
+              });
+              createStatus = `HTTP ${response.status}`;
+              const raw = await response.text();
+              console.log(`${mode}: ${createStatus}\n${raw}`);
+              if (!response.ok) {
+                failed = true;
+              } else {
+                const version = JSON.parse(raw);
+                // Only delete this response's version, under the fixed target site.
+                const allowedName = /^(?:projects\/(?:293427463899|healthtech-ai-pulse)\/)?sites\/healthtech-ai-pulse\/versions\/[A-Za-z0-9_-]+$/;
+                if (typeof version.name !== 'string' || !allowedName.test(version.name)) {
+                  throw new Error('Unexpected version name; cleanup blocked.');
+                }
+                cleanupStatus = 'not completed';
+                const cleanup = await fetch(`${origin}${version.name}`, {
+                  method: 'DELETE',
+                  headers,
+                  signal: AbortSignal.timeout(30000),
+                });
+                cleanupStatus = `HTTP ${cleanup.status}`;
+                console.log(`${mode}: cleanup ${cleanupStatus}`);
+                if (!cleanup.ok) {
+                  console.log(await cleanup.text());
+                  failed = true;
+                }
+              }
+            } catch (error) {
+              console.error(`${mode}: ${error.message}`);
+              console.error('An interrupted create request may have left an unpublished version.');
+              failed = true;
+            }
+            rows.push(`| ${mode} | ${createStatus} | ${cleanupStatus} |`);
+          }
+
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, [
+            '## Production OIDC Hosting diagnostic',
+            '',
+            `Service account: ${process.env.FIREBASE_SERVICE_ACCOUNT}`,
+            '',
+            '| Request | Version creation | Cleanup |',
+            '| --- | --- | --- |',
+            ...rows,
+            '',
+            'Created versions are empty and unpublished. No files were uploaded and no release was created.',
+            'This compares direct API requests with and without an explicit quota project; it does not validate the Firebase CLI credential path or publish the website.',
+            '',
+          ].join('\n'));
+          if (failed) process.exitCode = 1;
+          NODE
