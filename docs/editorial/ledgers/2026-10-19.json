@@ -1012,12 +1012,55 @@
   ],
   "publication": {
     "mode": "publication",
-    "reason": "One verified briefing survives; five watch items and three exclusions remain outside public content. Generated artwork is required before this batch can pass preflight. English only; optional French not requested. No MUST KNOW designation or human overrides.",
+    "reason": "One source-verified English briefing, one reviewed generated image and one issue prepared for human review in draft PR #15. Five watch and three rejected records remain unpublished; no selected withholding, MUST KNOW or override. Exact artifact revision passes local checks; final-head CI and preview evidence are recorded in the PR after ownership release. Partial research coverage is retained; no complete cutoff or human approval claimed.",
     "story_ids": ["2026-10-19-oncology-ai-ehr-handoff"],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": "src/content/pulse/2026-10-19.md",
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci --no-audit --no-fund",
+        "status": "passed",
+        "tested_revision": "45cab544e2a6d2a736ebca09c45d359567e9c116",
+        "execution": "Local dependency installation used Node 24.19.0 and emitted the project engine warning. Actual verification subsequently used Node 22.22.3.",
+        "evidence": "370 packages installed; lockfile unchanged in this edition."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-19.json",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3.",
+        "evidence": "Explicit dated validation: two ledgers (including isolated trial), one story; source interpretation reviewed separately."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-19.json",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3; generated WebP and strict review.",
+        "evidence": "Source/policy/asset hashes and generation key checked; one actual candidate, model crop/medical-implication review. Full brief retained in PR #15."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3.",
+        "evidence": "131 tests passed; lint, format, schema drift, content/editorial/illustration checks, Astro check, build and Pagefind passed. Exact-revision CI handoff follows in PR #15."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3; Chromium 133.0.6943.0 via PLAYWRIGHT_EXECUTABLE_PATH; ASTRO_PREVIEW_BACKGROUND=1 prevents agent auto-backgrounding.",
+        "evidence": "18 passed. Initial local setup attempt failed before tests; invalid default browser download and preview lifecycle were resolved in the execution environment without repository changes."
+      },
+      {
+        "command": "Additional rendered article/issue browser inspection",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Astro preview API, Node 22.22.3, Chromium 133.0.6943.0.",
+        "evidence": "Article and issue at 320/375/960/1280: eight successful route/width checks, loaded image, exact issue mapping, no horizontal overflow and no serious/critical axe findings. Desktop/mobile article and evidence screenshots visually inspected; not complete accessibility certification."
+      }
+    ]
   },
   "attempts": [
     {
@@ -1036,22 +1079,21 @@
     {
       "run_id": "manual-healthtech-2026-10-19-12h17-codex",
       "started_at": "2026-10-19T12:18:27.660Z",
-      "completed_at": null,
+      "completed_at": "2026-10-19T12:34:25.110Z",
       "phases": [
         "ownership-acquired",
         "research-persisted",
         "publication-source-verification",
         "article-drafted",
-        "issue-assembled"
+        "issue-assembled",
+        "generated-artwork-model-reviewed",
+        "exact-artifact-preflight-passed",
+        "draft-pr-15-opened",
+        "final-head-ci-handoff-pending"
       ],
-      "outcome": "in-progress"
+      "outcome": "checkpoint-complete"
     }
   ],
-  "active_run": {
-    "owner_token": "manual-healthtech-2026-10-19-12h17-codex",
-    "acquired_at": "2026-10-19T12:18:27.660Z",
-    "heartbeat_at": "2026-10-19T12:26:18.349Z",
-    "expires_at": "2026-10-19T14:26:18.349Z"
-  },
+  "active_run": null,
   "human_overrides": []
 }
