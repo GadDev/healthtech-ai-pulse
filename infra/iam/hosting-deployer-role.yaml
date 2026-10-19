@@ -1,0 +1,10 @@
+title: HealthTech Hosting Deployer
+description: Deploy existing Hosting sites and manage preview channels
+stage: GA
+includedPermissions:
+  - firebase.projects.get
+  - firebasehosting.sites.get
+  - firebasehosting.sites.list
+  - firebasehosting.sites.update
+  - resourcemanager.projects.get
+  - serviceusage.services.use
