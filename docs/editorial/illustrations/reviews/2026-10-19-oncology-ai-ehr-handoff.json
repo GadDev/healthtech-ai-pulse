@@ -11,7 +11,7 @@
   "asset_sha256": "45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499",
   "crop": "wide",
   "reviewed_by": "Codex (model visual review; no independent human or clinical validation)",
-  "reviewed_at": "2026-10-19T18:29:25.673Z",
+  "reviewed_at": "2026-10-19T19:11:53.463Z",
   "review_type": "model",
   "unsupported_medical_implication": false,
   "crop_passed": true

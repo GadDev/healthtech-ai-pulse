@@ -6,24 +6,20 @@ import { desks, deskKeys } from '../../lib/categories';
 <BaseLayout title="Editorial desks">
   <header class="page-intro">
     <p class="eyebrow">Coverage · Five editorial desks</p>
-    <h1>
-      Follow the question,
-      <br />
-      not the hype.
-    </h1>
+    <h1>Explore the desks.</h1>
     <p class="lede">
-      Five ways into healthcare AI. No quota to fill, no story duplicated across desks.
+      Five ways into healthcare AI. Each published story belongs to one desk and follows the same
+      evidence standard.
     </p>
   </header>
-  <section aria-label="Editorial categories" class="category-list">
+  <section class="category-list" aria-label="Editorial desks">
     {deskKeys.map((key, index) => (
       <article class="category-row">
         <span class="desk-number">0{index + 1}</span>
         <div>
           <h2>
             <a href={`/desks/${key}/`}>
-              {desks[key].title}
-              <span aria-hidden="true"> ↗</span>
+              {desks[key].title} <span aria-hidden="true">↗</span>
             </a>
           </h2>
           <p>{desks[key].description}</p>

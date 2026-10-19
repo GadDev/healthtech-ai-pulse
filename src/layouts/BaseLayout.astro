@@ -1,4 +1,6 @@
 ---
+import { getCollection } from 'astro:content';
+import { desks, deskKeys } from '../lib/categories';
 import '../styles/global.css';
 import '../styles/publication.css';
 interface Props {
@@ -11,6 +13,17 @@ const {
 } = Astro.props;
 const configured = Boolean(import.meta.env.SITE_URL);
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const latest = (await getCollection('stories', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+)[0];
+const dateLabel = latest?.data.date.toLocaleDateString('en-GB', {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+const path = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -31,51 +44,64 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       Skip to content
     </a>
     <header class="site-header">
+      <div class="edition-ribbon">
+        <span>{dateLabel ?? 'Evidence before claims'}</span>
+        <span>Independent healthcare AI news</span>
+      </div>
       <div class="masthead">
-        <a class="brand" href="/">
-          HealthTech <span>AI Pulse</span>
+        <a class="brand" href="/" aria-label="HealthTech AI Pulse, home">
+          HealthTech AI Pulse
         </a>
-        <nav aria-label="Main navigation">
-          {[
-            ['/', 'Latest'],
-            ['/categories/', 'Categories'],
-            ['/pulse/', 'Editions'],
-            ['/methodology/', 'Methodology'],
-            ['/search/', 'Search'],
-          ].map(([href, label]) => (
+        <p>What changed · What the evidence supports · What to investigate next</p>
+      </div>
+      <nav class="desk-nav" aria-label="Publication navigation">
+        <div class="desk-nav__inner">
+          <a href="/" aria-current={path === '/' ? 'page' : undefined}>
+            Latest
+          </a>
+          <a href="/categories/" aria-current={path === '/categories/' ? 'page' : undefined}>
+            Desks
+          </a>
+          {deskKeys.map((key) => (
             <a
-              href={href}
-              aria-current={
-                Astro.url.pathname === href ||
-                (href === '/categories/' && Astro.url.pathname.startsWith('/desks/'))
-                  ? 'page'
-                  : undefined
-              }
+              href={`/desks/${key}/`}
+              aria-current={path === `/desks/${key}/` ? 'page' : undefined}
             >
-              {label}
+              {desks[key].title}
             </a>
           ))}
-        </nav>
-      </div>
+          <a href="/pulse/" aria-current={path.startsWith('/pulse/') ? 'page' : undefined}>
+            Editions
+          </a>
+          <a href="/methodology/" aria-current={path === '/methodology/' ? 'page' : undefined}>
+            Methodology
+          </a>
+          <a href="/search/" aria-current={path === '/search/' ? 'page' : undefined}>
+            Search
+          </a>
+        </div>
+      </nav>
     </header>
     <main id="main" class="publication-main">
       <slot />
     </main>
     <footer class="publication-footer">
-      <p class="footer-wordmark">HealthTech AI Pulse</p>
-      <p>Evidence-led intelligence for people building and evaluating healthcare AI.</p>
-      <nav aria-label="Footer navigation">
-        <a href="/about/">About</a>
-        <a href="/methodology/">Evidence & corrections</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/rss.xml">RSS</a>
-        <a href="https://github.com/GadDev/healthtech-ai-pulse">GitHub</a>
-      </nav>
-      <p class="fineprint">
-        Research and industry intelligence. No personalised medical advice. Publication follows
-        human review.
-      </p>
+      <div class="footer-inner">
+        <p class="footer-wordmark">HealthTech AI Pulse</p>
+        <p>Evidence-led intelligence for people building and evaluating healthcare AI.</p>
+        <nav aria-label="Footer navigation">
+          <a href="/about/">About</a>
+          <a href="/methodology/">Evidence & corrections</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/rss.xml">RSS</a>
+          <a href="https://github.com/GadDev/healthtech-ai-pulse">GitHub</a>
+        </nav>
+        <p class="fineprint">
+          Research and industry intelligence. No personalised medical advice. Publication follows
+          human review.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
