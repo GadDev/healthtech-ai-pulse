@@ -19,7 +19,7 @@ The reference is `GadDev/daily-ai-pulse` at `6269d2b7dbc01046cfcdaf7f204b8b6b14d
 
 Draft PRs are eligible for previews. Fork PRs are not. Automatic previews test the CI merge revision; the manual fallback builds the selected PR head. Both recheck that the PR remains open and its head is current before publishing. Automatic previews also reject a changed base, superseded attempt, failed browser/publication job, or inconsistent provenance. Privileged jobs never execute code from the PR artifact.
 
-Templates, CODEOWNERS, dependency updates, labels and browser failure reports are included. The existing shared role file `infra/iam/hosting-deployer-role.yaml` remains canonical: its six permissions match the source preview role, so a second role YAML is unnecessary. A YAML file describes the role; merging it does not change cloud IAM.
+Templates, CODEOWNERS, dependency updates, labels and browser failure reports are included. `infra/iam/hosting-deployer-role.yaml` describes the custom preview role; its six permissions match the source preview YAML. It is not evidence of production permissions or the complete live preview policy. A YAML file describes a role; merging it does not change cloud IAM.
 
 Healthcare validators remain authoritative. The four-file French translation skill is ported with healthcare terminology, exact-source review and non-public package output. Runtime translation scripts remain deferred because HealthTech currently has English-only schemas and routes. The illustration decision and contact-sheet helpers are adapted to HealthTech's identity, optional-image mappings and one-candidate workflow; browser CI exercises actual sheet rendering. These are intentional adaptations, not compatible files to copy blindly.
 
@@ -47,6 +47,8 @@ The project/site values are `healthtech-ai-pulse`; the production URL is the ori
 
 Production uses `healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`; preview operations require `healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`. No service account keys are used. The provider requires repository ID `1422703866`, owner ID `26112006`, and `refs/heads/main`.
 
+The working Daily AI Pulse production account was inspected on October 19, 2026: its project roles are `roles/firebasehosting.admin` and `roles/serviceusage.apiKeysViewer`. The maintainer applied those same roles to HealthTech production before successful run [39245460558](https://github.com/GadDev/healthtech-ai-pulse/actions/runs/39245460558). The additional custom-role binding was still present at that verification; removing it requires a subsequent deployment check. The successful comparison does not isolate which individual permission resolved the failure. Preview has a separate account: inspect its live bindings against the reference preview account instead of assuming production's roles apply.
+
 Each service account trusts its own environment subject through `roles/iam.workloadIdentityUser`:
 
 ```text
@@ -58,7 +60,42 @@ The immutable ID-bearing subjects were verified against the repository OIDC conf
 
 ## First deployment and preview acceptance
 
-Production run `39229486538` failed in both attempts while creating a Hosting version, with HTTP 500 from `firebasehosting.googleapis.com`. Publication and browser checks passed; no successful live release or smoke check was recorded. Diagnose that server response before treating deployment as accepted. Dependency deprecation warnings do not identify its cause. Do not broaden IAM without evidence of a denied permission.
+Production run [39245460558](https://github.com/GadDev/healthtech-ai-pulse/actions/runs/39245460558) passed on October 19, 2026: 46 static files uploaded, the version finalized and released, and home/robots/RSS/sitemap endpoint checks passed. Earlier version-creation HTTP 500 failures stopped after matching the reference production IAM roles. This establishes deployment and endpoint acceptance, not a complete manual browser review. The temporary diagnostic workflow introduced in PRs #11 and #12 is removed; its historical run logs remain available.
+
+### Preview reference and current acceptance
+
+The reference automatic preview [39237867884](https://github.com/GadDev/daily-ai-pulse/actions/runs/39237867884) passed on October 19, 2026, including exact-artifact download, current-PR/provenance checks, preview WIF, channel deployment and endpoint/noindex checks. HealthTech follows that process, retaining its own numeric identities and enable flag:
+
+1. Same-repository PR CI runs without cloud credentials and packages `dist/` plus the tested merge/head/base metadata.
+2. After both CI jobs pass, trusted main code validates the current PR and the exact run-attempt artifact, its digest and provenance.
+3. The preview identity publishes only the derived `pr-N` channel using Firebase CLI `15.30.2`, seven-day expiry and `--no-authorized-domains`.
+4. The workflow checks home/robots/RSS/sitemap and the `X-Robots-Tag: noindex` directive. The Actions summary records the URL and tested commit.
+5. Closing or merging the PR queues channel deletion in the same per-PR concurrency group. Expiry is the fallback.
+
+The manual fallback builds the selected PR head with local verification and browser checks, then hands static files to a separate trusted deploy job. Both paths use the production origin as the default Astro site, matching the reference's absolute RSS/sitemap URL behavior; channel URLs remain the preview entry points and response headers prevent indexing. Explicit `SITE_URL` still overrides the origin.
+
+At this review, all eight HealthTech preview/cleanup runs were skipped and no manual preview run existed. That is not live preview acceptance. The last operator-confirmed enable flag was false; read its current value before changing it. Do not reuse production deployment success as evidence that preview writes or cleanup work.
+
+Before activation, inspect the live preview project roles in both projects:
+
+```bash
+gcloud projects get-iam-policy daily-ai-pulse-db253 \
+  --flatten="bindings[].members" \
+  --filter="bindings.members=serviceAccount:daily-ai-pulse-preview@daily-ai-pulse-db253.iam.gserviceaccount.com" \
+  --format="yaml(bindings.role,bindings.condition)"
+
+gcloud projects get-iam-policy healthtech-ai-pulse \
+  --flatten="bindings[].members" \
+  --filter="bindings.members=serviceAccount:healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com" \
+  --format="yaml(bindings.role,bindings.condition)"
+
+gh variable list --repo GadDev/healthtech-ai-pulse --env preview --json name,value
+gh variable list --repo GadDev/healthtech-ai-pulse --json name,value
+```
+
+The reference uses a separate preview pool/provider with workflow/event restrictions. HealthTech retains its working provider with numeric owner/repository/main restrictions and a separate immutable environment subject on each account. Provider names and subject formats must match their own repositories; copying the reference principal literally would break trust. Verify the preview account's current `roles/iam.workloadIdentityUser` binding and environment branch restrictions before the trial. Hosting permissions remain site-level, so the generated-channel checks are workflow controls, not IAM channel isolation.
+
+### Live preview trial
 
 After reviewing and merging the workflow changes:
 
