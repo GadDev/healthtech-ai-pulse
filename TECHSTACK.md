@@ -65,7 +65,7 @@ No network URL availability test should make routine builds flaky. Syntax and cl
 
 ## Hosting and operational dependencies
 
-Use the existing dedicated Firebase project `healthtech-ai-pulse` (project number `293427463899`), identified by the maintainer's Firebase CLI output on 19 October 2026. Its default Hosting site and origin `https://healthtech-ai-pulse.web.app` were confirmed by `hosting:sites:list`; live publication remains unverified. Use short-lived GitHub OIDC/WIF credentials and target-scoped deployment service accounts. Reuse the deployment pattern after changing every hard-coded source identity and verifying repository/branch restrictions. Do not infer that an existing Google Cloud trust policy grants the new repository access. Configure SITE_URL, FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT for production; live credential exchange and Hosting writes remain unverified.
+Use the existing dedicated Firebase project `healthtech-ai-pulse` (project number `293427463899`), identified by the maintainer's Firebase CLI output on 19 October 2026. Its default Hosting site and origin `https://healthtech-ai-pulse.web.app` were confirmed by `hosting:sites:list`; live publication remains unverified. Use short-lived GitHub OIDC/WIF credentials and target-scoped deployment service accounts. Reuse the deployment pattern after changing every hard-coded source identity and verifying repository/branch restrictions. Do not infer that an existing Google Cloud trust policy grants the new repository access. Configure SITE_URL, FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT for production. Live credential exchange and authenticated Hosting reads passed for both identities on 19 October; Hosting writes remain unverified.
 
 Deploy only from main after human merge, successful verification and artifact checks. Retain production smoke checks. Add PR previews only after the basic deployment works; preserve the source's separation of untrusted PR build output from privileged deployment. Never execute untrusted PR code with deployment credentials. Require target CI and human review via repository rules where available. Content automation has no deployment or merge requirement.
 
@@ -91,11 +91,22 @@ Rollback procedure: pause the HealthTech task if active; choose the last known-g
 
 ### Keyless authentication verification
 
-Maintainer-provided CLI output on 19 October confirms the active service accounts `healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com` and `healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`, the project role `healthtechHostingDeployer` (recorded in `infra/iam/hosting-deployer-role.yaml`), and WIF provider `projects/293427463899/locations/global/workloadIdentityPools/github/providers/github`. The provider condition pins repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`. Each account's Workload Identity User binding selects its matching `repo:GadDev/healthtech-ai-pulse:environment:production` or `:environment:preview` subject. These CLI observations do not yet establish a successful GitHub token exchange.
+Maintainer-provided CLI output on 19 October confirms the active service accounts `healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com` and `healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`, the project role `healthtechHostingDeployer` (recorded in `infra/iam/hosting-deployer-role.yaml`), and WIF provider `projects/293427463899/locations/global/workloadIdentityPools/github/providers/github`. The provider condition pins repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`.
+
+This repository uses GitHub's immutable default OIDC subjects: `use_default=true`, `use_immutable_subject=true`, and prefix `repo:GadDev@26112006/healthtech-ai-pulse@1422703866`, confirmed through the repository's OIDC configuration API. Each account's Workload Identity User binding must select its complete matching subject:
+
+| GitHub environment | Subject                                                                      |
+| ------------------ | ---------------------------------------------------------------------------- |
+| production         | `repo:GadDev@26112006/healthtech-ai-pulse@1422703866:environment:production` |
+| preview            | `repo:GadDev@26112006/healthtech-ai-pulse@1422703866:environment:preview`    |
+
+Use these values after `principal://iam.googleapis.com/projects/293427463899/locations/global/workloadIdentityPools/github/subject/` in the service-account bindings. The earlier name-only `repo:GadDev/healthtech-ai-pulse:environment:...` subjects do not match this repository. Remove only those obsolete members after verifying the corrected bindings; their cloud cleanup has not yet been confirmed. Do not add broader roles to repair a subject mismatch: `roles/iam.workloadIdentityUser` already grants `iam.serviceAccounts.getAccessToken`. See GitHub's [immutable subject reference](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims).
+
+[OIDC run 39227950685, attempt 2](https://github.com/GadDev/healthtech-ai-pulse/actions/runs/39227950685/attempts/2) passed against main revision `44fe19ec4ada7d96ad64ba19fc0bbdbf01ebfad9` on 19 October 2026. Both jobs passed target configuration validation, the five-minute read-only token exchange and authenticated target Hosting read: preview job `117980579605`, production job `117980579906`. The initial attempt failed service-account impersonation while the legacy subject bindings were in place; the retry passed after the immutable bindings were added. No Hosting write, deployment, live endpoint smoke check or rollback was performed by this workflow.
 
 The `production` environment uses FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT. The `preview` environment uses PREVIEW_FIREBASE_PROJECT_ID, PREVIEW_FIREBASE_SITE_ID, PREVIEW_FIREBASE_WIF_PROVIDER and PREVIEW_FIREBASE_SERVICE_ACCOUNT. Keep HEALTHTECH_DEPLOY_ENABLED and HEALTHTECH_PREVIEW_ENABLED as repository variables set to false during setup; job-level enable conditions must not depend on environment-scoped variables that are unavailable before the job starts. Preview deployment workflows are a separate pending change.
 
-After the verification workflow is merged into main, run:
+To repeat the authentication checkpoint from main, run:
 
 ```bash
 gh workflow run verify-firebase-oidc.yml --repo GadDev/healthtech-ai-pulse --ref main
