@@ -1,0 +1,18 @@
+{
+  "story_id": "2026-10-19-oncology-ai-ehr-handoff",
+  "story_source_sha256": "c4369ad1dc7eb78d223ad061eac34087bd1699607b22337d1e7165a614e5d712",
+  "brief_sha256": "bfb5b041b856c7f588cf652788d5d25facb81b8731bb3c754f63dbb1c6509c1c",
+  "policy_sha256": "d98127f3092da042eae86ae8226f828ec8a990bd87071f9b01e0bfa76eaf1d50",
+  "version": "healthtech-1.0",
+  "candidate_count": 1,
+  "generator": "image_gen.imagegen",
+  "model_snapshot": null,
+  "generation_key": "88e267dc12574f6880f7a368f27b7294aa532a0cf0070cf8490618035076addd",
+  "asset_sha256": "4489a38b3559c221c3e012c5993ded5b98683de63de4939b0c57b41807d885c1",
+  "crop": "wide",
+  "reviewed_by": "Codex (model visual review; no independent human or clinical validation)",
+  "reviewed_at": "2026-10-19T12:25:11.634Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}

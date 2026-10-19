@@ -1,0 +1,1099 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-19",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "45cab544e2a6d2a736ebca09c45d359567e9c116",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-16T12:07:31Z",
+    "window_end": "2026-10-19T12:07:31Z",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "Initial five-desk discovery: healthcare AI October 16-19 2026; PubMed AI October 2026; FDA/EMA AI; AI drug discovery biomedical release",
+        "source": "Web search, systems 1 and 2",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Retained results reviewed at this timestamp. Primary follow-up below; not every result inspected. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "PubMed: artificial intelligence 2026 Oct 16; 2026 Oct 19 language model; exact oncology DOI",
+        "source": "PubMed discovery via web search",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Aortic-stenosis issue-date trap excluded; exact oncology DOI not found by discovery search. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "DOI:10.1038/s41746-026-03396-6; DOI:10.1038/s41746-026-03341-7",
+        "source": "Europe PMC REST search",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Both exact-DOI lookups returned hitCount=0 at this observation; this does not prove absence from all bibliographic services. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "Inspect npj Digital Medicine research listing and follow linked papers published 16-19 October",
+        "source": "https://www.nature.com/npjdigitalmed/research-articles",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Oncology manuscript/supplement inspected; several other leads retained as watch, not full-text-reviewed. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "Inspect accepted oncology manuscript, supplement and earlier conference abstract",
+        "source": "https://www.nature.com/articles/s41746-026-03396-6_reference.pdf",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Publicly linked reference PDF and supplement downloaded through ordinary HTTP; source text/tables inspected, Table 1a rendered visually. Generic .pdf URL returned HTML; browser extractor redirected to unsupported identity endpoint. No login/access bypass used. Manuscript SHA-256: c028e23e9bc310f974adcf35aef1c3eb51720af2d8b79d050eee814da5622ee5 Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "Exact oncology DOI correction OR retraction; compare earlier IFHNOS abstract",
+        "source": "Publisher record, web search and IFHNOS",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "No notice identified in inspected materials; earlier abstract differs in estimate and hallucination wording. Journal methods/results used; no claim of exhaustive notice surveillance. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "AI-FCP ClinicalTrials.gov; Koevorden consultation medRxiv",
+        "source": "Registry/preprint discovery via web search",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "No matching results returned. No trial identifier or preregistration invented. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "FDA GenAI devices discussion; EMA AI October 2026; MHRA AI sandbox October 2026; EUR-Lex AI healthcare",
+        "source": "FDA, EMA, GOV.UK and EUR-Lex discovery",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "FDA official pages inspected; Regulations.gov docket returned 403. EMA/MHRA older/context leads; no fresh action selected. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "AI drug discovery October 16 and October 19 2026; Insilico ISM9528 primary source",
+        "source": "Pharma discovery and sponsor release",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Sponsor announcement predates window; new comparative evidence not verified. Market forecast excluded. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "Fierce Healthcare October 16 AI; FirstWord HealthTech and LifeScienceDaily October 2026; MedTech Dive front page",
+        "source": "User-suggested specialist leads",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "Fierce AMA lead checked against original date. MedTech Dive front page accessible. No claim of comprehensive coverage or successful article inspection on every named outlet. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      },
+      {
+        "query": "Inspect all main stories/issues/ledgers and all-state PR heads and remote content/* branches",
+        "source": "GadDev/healthtech-ai-pulse",
+        "accessed_at": "2026-10-19T12:17:20+00:00",
+        "outcome": "No daily archive or canonical daily branch/PR exists; isolated 18 October trial is not a completed research cutoff. Timestamp records review of the retained response/extraction during this run, not the original search start."
+      }
+    ],
+    "coverage_gaps": [
+      "Bounded first-run discovery across five desks, not exhaustive surveillance. Research completion/cutoff remains null because coverage is partial.",
+      "Publications with date-only metadata on the first window day may predate its exact hour; no exact publication time inferred.",
+      "No exhaustive PubMed/Europe PMC corpus screening, CTIS result search, national EU device-authority sweep or all-publisher preprint search.",
+      "Full methods/artifacts not inspected for watch items; targeted notice search is not continuous corrections/retraction monitoring.",
+      "Some publisher extraction endpoints redirected; lawful publisher-linked PDFs were available for the selected story. Docket access failure retained.",
+      "No prior daily watch ledger to revisit; isolated 18 October EMA context trial inspected."
+    ],
+    "completed_at": null
+  },
+  "candidates": [
+    {
+      "id": "2026-10-19-oncology-ai-ehr-handoff",
+      "decision": "selected",
+      "title": "Oncology AI pilot exposes a missing-data trap at the EHR handoff",
+      "desk": "health-systems",
+      "topics": ["implementation", "interoperability", "safety", "evaluation"],
+      "entities": ["Netherlands Cancer Institute", "kaiko.ai"],
+      "event_date": "2026-10-17",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-17",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Accepted journal report and supplement add inspectable integration discrepancies, completeness and selection limitations to earlier conference coverage. Not a new clinical deployment or patient-benefit finding.",
+      "why_now": "Journal report published inside the 72-hour window; newly inspected full results expose a downstream missing-versus-negative conversion absent from the earlier conference abstract. Do not relabel the 2025 study as conducted today.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03396-6",
+      "sources": [
+        {
+          "id": "journal",
+          "url": "https://www.nature.com/articles/s41746-026-03396-6",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03396-6",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-17",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "manuscript",
+          "url": "https://www.nature.com/articles/s41746-026-03396-6_reference.pdf",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03396-6_reference.pdf",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-17",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "supplement",
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41746-026-03396-6/MediaObjects/41746_2026_3396_MOESM1_ESM.pdf",
+          "canonical_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41746-026-03396-6/MediaObjects/41746_2026_3396_MOESM1_ESM.pdf",
+          "publisher": "npj Digital Medicine",
+          "role": "supporting",
+          "source_type": "original-research",
+          "publication_date": null,
+          "date_reason": "Publication date not established from accessible record.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "conference",
+          "url": "https://ifhnos2026.org/au/talks/ai-supported-consultation-preparation-in-oncology-a-real-world-clinical-usability-study",
+          "canonical_url": "https://ifhnos2026.org/au/talks/ai-supported-consultation-preparation-in-oncology-a-real-world-clinical-usability-study",
+          "publisher": "IFHNOS 2026",
+          "role": "context",
+          "source_type": "conference-abstract",
+          "publication_date": "2026-08-28",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "oncology-ai-ehr-handoff",
+        "doi": "10.1038/s41746-026-03396-6",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": "NKI-AVL head-and-neck AI-FCP prospective usability, 2025-04-14 to 2025-06-02",
+        "product_version": "AI-FCP version-frozen study checkpoint; public version identifier not reported",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "LLM extraction of referral documents into an oncology EHR.",
+        "non_ai_exception": null,
+        "reader_consequence": "Test missing-data semantics and final EHR output separately from summary quality."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select the bounded workflow and integration finding; its practical consequence is end-to-end validation, not clinical adoption approval.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [
+        {
+          "id": "workflow-usability",
+          "type": "workflow",
+          "supported_statement": "Participants reported lower workload and incomplete summaries in a small uncontrolled oncology workflow pilot.",
+          "source_ids": ["manuscript", "supplement"],
+          "locators": [
+            "Manuscript Results and Figures 1/3; Supplementary Figure 1 and Tables 1/2."
+          ],
+          "evidence_scope": "Subjective usability in the studied setting, with the stated units and comparator.",
+          "limitations": [
+            "Self-report and selection prevent causal or population-wide conclusions."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T12:20:43.651Z",
+            "checked_by": "Codex (model evidence review; no independent human approval)",
+            "supported_scope": "Subjective usability in the studied setting, with the stated units and comparator.",
+            "reason": "Checked Manuscript Results and Figures 1/3; Supplementary Figure 1 and Tables 1/2. No extrapolation beyond the stated scope."
+          },
+          "study": {
+            "design": "Prospective non-randomised pre/post usability study.",
+            "setting": "Netherlands Cancer Institute, head-and-neck oncology; April-June 2025.",
+            "population_or_dataset": "Nine professionals: six clinicians plus three supervisors; real first consultations.",
+            "sample_sizes": [
+              {
+                "n": 9,
+                "unit": "healthcare professionals",
+                "reason": "Participant-level workload analysis."
+              },
+              {
+                "n": 33,
+                "unit": "analysed consultations",
+                "reason": "Complete questionnaire data; these are not 33 workload-independent participants."
+              },
+              {
+                "n": 72,
+                "unit": "eligible consultations",
+                "reason": "Supplementary Figure 1; 43 intended for study preparation, 33 analysed."
+              },
+              {
+                "n": 31,
+                "unit": "consultations with time estimates",
+                "reason": "Two of the 33 lacked a duration estimate."
+              }
+            ],
+            "comparator": "Within-participant routine-work baseline, not a concurrent randomised control.",
+            "primary_endpoints": [
+              "Perceived workflow usability/workload; outcome measures fixed before collection, without a preregistered statistical analysis plan."
+            ],
+            "secondary_exploratory_endpoints": [
+              "Perceived time saving, preparation success, completeness and workload subscales."
+            ],
+            "results": [
+              {
+                "endpoint": "Overall workload",
+                "metric": "Hodges-Lehmann paired difference",
+                "value": "-12.3",
+                "units": "Raw NASA-TLX points",
+                "comparator": "Person-level baseline",
+                "uncertainty": "95% CI -21.7 to -3.3; nine professionals.",
+                "source_id": "manuscript",
+                "locator": "Results, Reduction in overall workload; Figure 1; Supplementary Table 1."
+              },
+              {
+                "endpoint": "Perceived time saving",
+                "metric": "Descriptive mean",
+                "value": "3.26",
+                "units": "minutes per consultation",
+                "comparator": "Self-estimated against usual preparation; not stopwatch measurement.",
+                "uncertainty": "SD 2.65; 31 consultations with estimates.",
+                "source_id": "manuscript",
+                "locator": "Results, Self-reported time savings; Figure 3."
+              },
+              {
+                "endpoint": "Summary completeness",
+                "metric": "Participant-rated complete",
+                "value": "21/33 (63.6%)",
+                "units": "consultations",
+                "comparator": "No concurrent control for this proportion.",
+                "uncertainty": "Descriptive proportion; clustering-adjusted probability is a different estimate.",
+                "source_id": "manuscript",
+                "locator": "Results, Effectiveness of AI in First Consultation Preparation, page 4."
+              }
+            ],
+            "follow_up": "Eight-week study; clinicians assessed up to two clinic sessions. No patient-outcome follow-up evaluated.",
+            "harms": "Four participant-reported discrepancy cases reviewed; two concern missing allergy data during downstream integration. No systematic safety ascertainment or incidence estimate.",
+            "analysis_notes": "Repeated consultation ratings aggregated by professional for workload. Fixed sequence, different baseline referent and missing observations limit causal inference.",
+            "applicability": "Local usability and pipeline observations; not an implementation-effectiveness or patient-benefit trial."
+          }
+        },
+        {
+          "id": "ehr-handoff-discrepancies",
+          "type": "safety",
+          "supported_statement": "Two reported cases converted missing allergy information into a negative statement during downstream EHR processing; original summaries retained an unknown state.",
+          "source_ids": ["manuscript"],
+          "locators": ["Page 4, Table 1a, cases 1/2; Data analysis safety paragraph."],
+          "evidence_scope": "Observed handoff discrepancies, not demonstrated patient harm or an estimated error rate.",
+          "limitations": ["Spontaneous participant reports; no systematic audit of all outputs."],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T12:20:43.651Z",
+            "checked_by": "Codex (model evidence review; no independent human approval)",
+            "supported_scope": "Observed handoff discrepancies, not demonstrated patient harm or an estimated error rate.",
+            "reason": "Checked Page 4, Table 1a, cases 1/2; Data analysis safety paragraph. No extrapolation beyond the stated scope."
+          },
+          "safety": {
+            "report_type": "Participant-reported discrepancies reviewed retrospectively within a prospective usability study.",
+            "exposure_denominator": "Unknown for ascertainment: 33 consultations analysed for usability, but not all summaries systematically audited.",
+            "causality_limits": "Report locates the wording change after generation; it does not establish patient injury or general product failure rates.",
+            "duplicate_assessment": "Table 1a explicitly identifies two separate occurrences of the same missing-versus-unknown allergy discrepancy."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 4,
+        "relevance": 4,
+        "material_change": 3,
+        "durability": 4,
+        "weighted_total": 90,
+        "rationales": {
+          "significance": "Concrete integration failure mode with practical evaluation consequences; no urgent withdrawal or quantified patient harm.",
+          "claim_support": "Accepted manuscript, Table 1a and supplement directly support the bounded observation.",
+          "relevance": "Directly relevant to European clinical AI integration teams.",
+          "material_change": "Journal details add observed handoff discrepancies and completeness limitations beyond the earlier conference abstract.",
+          "durability": "Missing-versus-negative semantics remain relevant across future integrations."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-19T12:20:43.651Z",
+        "checked_by": "Codex (model evidence review; no independent human approval)",
+        "supported_scope": "Accepted manuscript and supplement support local usability and reported downstream discrepancies only; no causal patient-benefit, clinical-safety or incidence claim.",
+        "reason": "Inspected the publisher-linked accepted manuscript and supplement, visually checked Table 1a, compared the earlier conference abstract and searched the DOI for notices. Use journal definitions; retain study limitations and source-access observations."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Select the bounded workflow and integration finding; its practical consequence is end-to-end validation, not clinical adoption approval."
+        }
+      ],
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Peer-reviewed accepted manuscript; article in press, published 17 October 2026.",
+        "study_design": "Prospective single-group pre/post usability evaluation; non-randomised.",
+        "validation_setting": "One Dutch head-and-neck oncology department; six clinicians and three supervisors.",
+        "independent_validation": "Developer-affiliated authors; primary analysis separated institutionally. No independent multisite replication established.",
+        "clinical_utility": "not-assessed",
+        "access_level": "full-text",
+        "funding": "Health~Holland grant 50545-3.",
+        "conflicts_of_interest": "Three authors employed by kaiko.ai; one former employee. Institutional team performed primary outcome analysis; supplier-affiliated physician contributed to secondary discrepancy review.",
+        "corrections_retractions": "No correction/retraction notice identified in inspected publisher records or targeted DOI search at extraction time; not continuous surveillance.",
+        "contradictory_findings": [
+          "Earlier conference abstract reports 30.1% workload reduction and no observed hallucinations; journal report uses a different estimate and details downstream discrepancies. Use journal definitions and results; do not merge the estimates."
+        ],
+        "limitations": [
+          "Single group, small sample and self-reported outcomes; baseline and follow-up refer to different measurement contexts.",
+          "33 analysed consultations from 72 eligible; incomplete capture may favour successful use.",
+          "No prespecified prospective safety endpoint or systematic review of every summary; discrepancy frequency cannot be estimated.",
+          "Proprietary implementation/prompts and restricted underlying data limit independent reproduction."
+        ],
+        "applicability": "Early workflow evaluation in one specialised Dutch department. No demonstrated patient benefit, general safety claim, efficacy comparison or EU market-authorisation conclusion."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-19-rtms-reinforcement-learning",
+      "decision": "watch",
+      "title": "Retrospective rTMS policy-learning result needs methods review",
+      "desk": "clinical-ai",
+      "topics": ["decision-support", "patient-outcomes", "evaluation"],
+      "entities": [],
+      "event_date": "2026-10-19",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-19",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "New accepted report presents observational associations and projected treatment effects, not an interventional trial.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03417-4",
+      "sources": [
+        {
+          "id": "rtms-paper",
+          "url": "https://www.nature.com/articles/s41746-026-03417-4",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03417-4",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-19",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "rtms-reinforcement-learning",
+        "doi": "10.1038/s41746-026-03417-4",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: full methods, off-policy assumptions, harms and confounding not inspected sufficiently for publication.",
+      "promote_when": [
+        "Inspect manuscript and supplement; establish comparison/exclusion/overlap and off-policy evaluation assumptions.",
+        "Keep projected benefit distinct from observed outcomes; verify safety and COI."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Watch: full methods, off-policy assumptions, harms and confounding not inspected sufficiently for publication."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-medisyn-image-generation",
+      "decision": "watch",
+      "title": "MediSyn publication needs artifact and reuse verification",
+      "desk": "biomedical-foundations",
+      "topics": ["biomedical-models", "medical-imaging", "research-tools"],
+      "entities": [],
+      "event_date": "2026-10-16",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-16",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Accepted report describes a generalist medical-image generator; actual versioned artifact/license not inspected.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03381-z",
+      "sources": [
+        {
+          "id": "medisyn-paper",
+          "url": "https://www.nature.com/articles/s41746-026-03381-z",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03381-z",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-16",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "medisyn-image-generation",
+        "doi": "10.1038/s41746-026-03381-z",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": "MediSyn; specific release/version not verified",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: publication is not verification of downloadable weights, model licensing, memorisation evaluation or clinical utility.",
+      "promote_when": [
+        "Inspect versioned code/weights, model/data cards and applicable licenses.",
+        "Inspect full evaluation, leakage and memorisation methods before performance claims."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Watch: publication is not verification of downloadable weights, model licensing, memorisation evaluation or clinical utility."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-clinical-extraction-validation",
+      "decision": "watch",
+      "title": "Clinical extraction framework: journal/preprint delta unresolved",
+      "desk": "biomedical-foundations",
+      "topics": ["evaluation", "research-tools", "reproducibility"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Underlying event date not established; source publication date is not substituted.",
+      "source_publication_date": "2026-10-16",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Journal report follows an April preprint of the same named framework.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03341-7",
+      "sources": [
+        {
+          "id": "validation-journal",
+          "url": "https://www.nature.com/articles/s41746-026-03341-7",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03341-7",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-16",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        },
+        {
+          "id": "validation-preprint",
+          "url": "https://arxiv.org/abs/2604.06028",
+          "canonical_url": "https://arxiv.org/abs/2604.06028",
+          "publisher": "arXiv",
+          "role": "context",
+          "source_type": "preprint",
+          "publication_date": "2026-04-07",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "clinical-extraction-validation",
+        "doi": "10.1038/s41746-026-03341-7",
+        "pmid": null,
+        "preprint": "arXiv:2604.06028v1",
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: peer-review status alone is not a material new result; full-version comparison and judge-reference limitations remain unresolved.",
+      "promote_when": [
+        "Compare full April preprint and accepted paper; identify a substantive new evaluation or consequence.",
+        "Inspect expert sampling and independence of model-judge references."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Watch: peer-review status alone is not a material new result; full-version comparison and judge-reference limitations remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-fda-genai-feedback-deadline",
+      "decision": "watch",
+      "title": "FDA GenAI discussion paper reaches its advertised feedback date",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance", "medical-devices"],
+      "entities": [],
+      "event_date": "2026-10-19",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-08-18",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Existing agency page advertises 19 October feedback date; the paper expressly is neither draft/final guidance nor a policy change.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+      "sources": [
+        {
+          "id": "fda-release",
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+          "canonical_url": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+          "publisher": "FDA",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-08-18",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing agency"
+        },
+        {
+          "id": "fda-paper-page",
+          "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "canonical_url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "publisher": "FDA",
+          "role": "supporting",
+          "source_type": "regulatory-record",
+          "publication_date": null,
+          "date_reason": "Publication date not established from accessible record.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing agency"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-genai-feedback-deadline",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA-2026-N-7874"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch/context: underlying announcement is old and live docket was inaccessible; no completed consultation or final policy inferred.",
+      "promote_when": [
+        "Inspect live docket for extensions, closure and agency response before claiming a changed status."
+      ],
+      "next_review_at": "2026-10-20",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Watch/context: underlying announcement is old and live docket was inaccessible; no completed consultation or final policy inferred."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-ism9528-preclinical-claims",
+      "decision": "watch",
+      "title": "ISM9528 pain-candidate claims lack a verified new evidence package",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "preclinical-evidence"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Underlying event date not established; source publication date is not substituted.",
+      "source_publication_date": "2026-07-22",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "October secondary coverage revisits an already announced preclinical candidate.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.eurekalert.org/news-releases/1136910",
+      "sources": [
+        {
+          "id": "insilico-release",
+          "url": "https://www.eurekalert.org/news-releases/1136910",
+          "canonical_url": "https://www.eurekalert.org/news-releases/1136910",
+          "publisher": "Insilico Medicine via EurekAlert!",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-07-22",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Sponsor-authored release"
+        },
+        {
+          "id": "national-lead",
+          "url": "https://www.thenationalnews.com/news/uae/2026/10/16/abu-dhabi-scientists-use-ai-to-develop-pain-killer-more-effective-than-morphine/",
+          "canonical_url": "https://www.thenationalnews.com/news/uae/2026/10/16/abu-dhabi-scientists-use-ai-to-develop-pain-killer-more-effective-than-morphine/",
+          "publisher": "The National",
+          "role": "supporting",
+          "source_type": "secondary-reporting",
+          "publication_date": "2026-10-16",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Reports sponsor statements; not independent experiments"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ism9528-preclinical-claims",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": "ISM9528",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: no inspected primary comparative experiment, new milestone or human outcome supports a fresh efficacy article.",
+      "promote_when": [
+        "Inspect a primary preclinical paper with comparator, doses, denominators and uncertainty, or a verified new regulatory/clinical milestone.",
+        "Do not carry animal efficacy claims into human-benefit wording."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Watch: no inspected primary comparative experiment, new milestone or human outcome supports a fresh efficacy article."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-19-ama-framework-date",
+      "decision": "rejected",
+      "title": "AMA agentic governance guide predates the initial window",
+      "desk": "safety-policy",
+      "topics": ["governance", "implementation"],
+      "entities": [],
+      "event_date": "2026-10-13",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-13",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Secondary reporting dated 16 October points to an AMA page dated 13 October.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+      "sources": [
+        {
+          "id": "ama-guide",
+          "url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+          "canonical_url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+          "publisher": "American Medical Association",
+          "role": "primary",
+          "source_type": "professional-body-framework",
+          "publication_date": "2026-10-13",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing professional association"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ama-framework-date",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as fresh news: no verified substantive post-13-October change. Retain as context.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Reject as fresh news: no verified substantive post-13-October change. Retain as context."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-aortic-stenosis-date",
+      "decision": "rejected",
+      "title": "Aortic-stenosis paper has April publication, October collection date",
+      "desk": "clinical-ai",
+      "topics": ["medical-imaging", "evaluation"],
+      "entities": [],
+      "event_date": "2026-04-02",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-04-02",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Search lead labelled October 16; PubMed distinguishes April 2 publication from October eCollection.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42774865/",
+      "sources": [
+        {
+          "id": "pubmed-aortic",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42774865/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42774865/",
+          "publisher": "PubMed",
+          "role": "primary",
+          "source_type": "bibliographic-record",
+          "publication_date": "2026-04-02",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "aortic-stenosis-date",
+        "doi": "10.1016/j.isci.2026.115562",
+        "pmid": "42774865",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as current development: no material new evidence established.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Reject as current development: no material new evidence established."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-pharma-market-forecast",
+      "decision": "rejected",
+      "title": "AI drug-discovery market forecast lacks a verified operating change",
+      "desk": "pharma",
+      "topics": ["drug-discovery"],
+      "entities": [],
+      "event_date": "2026-10-16",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-16",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-19T12:17:20+00:00",
+      "what_changed": "Commercial market projection issued in the window.",
+      "why_now": "Discovered during the initial 72-hour sweep; source freshness assessed separately.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.globenewswire.com/news-release/2026/10/16/3382680/0/en/ai-in-drug-discovery-market-size-to-worth-usd-17-56-billion-by-2031-at-a-cagr-of-28-1-marketsandmarkets.html",
+      "sources": [
+        {
+          "id": "market-release",
+          "url": "https://www.globenewswire.com/news-release/2026/10/16/3382680/0/en/ai-in-drug-discovery-market-size-to-worth-usd-17-56-billion-by-2031-at-a-cagr-of-28-1-marketsandmarkets.html",
+          "canonical_url": "https://www.globenewswire.com/news-release/2026/10/16/3382680/0/en/ai-in-drug-discovery-market-size-to-worth-usd-17-56-billion-by-2031-at-a-cagr-of-28-1-marketsandmarkets.html",
+          "publisher": "MarketsandMarkets via GlobeNewswire",
+          "role": "primary",
+          "source_type": "commercial-market-report-announcement",
+          "publication_date": "2026-10-16",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Publisher promoting its own report"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "pharma-market-forecast",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Main 45cab544e2a6d2a736ebca09c45d359567e9c116 has no daily ledgers, canonical stories or issues. All 14 existing PRs and all content/* remote heads inspected; no daily publication branch/PR found. The isolated EMA trial is context, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: promotional market sizing is not inspected clinical/preclinical evidence or a material covered workflow change.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-19T12:17:20+00:00",
+          "reason": "Reject: promotional market sizing is not inspected clinical/preclinical evidence or a material covered workflow change."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "publication",
+    "reason": "One source-verified English briefing, one reviewed generated image and one issue prepared for human review in draft PR #15. Five watch and three rejected records remain unpublished; no selected withholding, MUST KNOW or override. Exact artifact revision passes local checks; final-head CI and preview evidence are recorded in the PR after ownership release. Partial research coverage is retained; no complete cutoff or human approval claimed.",
+    "story_ids": ["2026-10-19-oncology-ai-ehr-handoff"],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": "src/content/pulse/2026-10-19.md",
+    "checks": [
+      {
+        "command": "npm ci --no-audit --no-fund",
+        "status": "passed",
+        "tested_revision": "45cab544e2a6d2a736ebca09c45d359567e9c116",
+        "execution": "Local dependency installation used Node 24.19.0 and emitted the project engine warning. Actual verification subsequently used Node 22.22.3.",
+        "evidence": "370 packages installed; lockfile unchanged in this edition."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-19.json",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3.",
+        "evidence": "Explicit dated validation: two ledgers (including isolated trial), one story; source interpretation reviewed separately."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-19.json",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3; generated WebP and strict review.",
+        "evidence": "Source/policy/asset hashes and generation key checked; one actual candidate, model crop/medical-implication review. Full brief retained in PR #15."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3.",
+        "evidence": "131 tests passed; lint, format, schema drift, content/editorial/illustration checks, Astro check, build and Pagefind passed. Exact-revision CI handoff follows in PR #15."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Node 22.22.3; Chromium 133.0.6943.0 via PLAYWRIGHT_EXECUTABLE_PATH; ASTRO_PREVIEW_BACKGROUND=1 prevents agent auto-backgrounding.",
+        "evidence": "18 passed. Initial local setup attempt failed before tests; invalid default browser download and preview lifecycle were resolved in the execution environment without repository changes."
+      },
+      {
+        "command": "Additional rendered article/issue browser inspection",
+        "status": "passed",
+        "tested_revision": "0294d00dfee1c425393fbe09f65450cd87eabbd7",
+        "execution": "Local Astro preview API, Node 22.22.3, Chromium 133.0.6943.0.",
+        "evidence": "Article and issue at 320/375/960/1280: eight successful route/width checks, loaded image, exact issue mapping, no horizontal overflow and no serious/critical axe findings. Desktop/mobile article and evidence screenshots visually inspected; not complete accessibility certification."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "manual-research-2026-10-19",
+      "started_at": "2026-10-19T12:07:31Z",
+      "completed_at": "2026-10-19T12:17:20+00:00",
+      "phases": [
+        "contracts-read",
+        "archive-deduplication",
+        "bounded-five-desk-research",
+        "source-extraction",
+        "classification"
+      ],
+      "outcome": "Research extraction checkpoint; publication work pending."
+    },
+    {
+      "run_id": "manual-healthtech-2026-10-19-12h17-codex",
+      "started_at": "2026-10-19T12:18:27.660Z",
+      "completed_at": "2026-10-19T12:34:25.110Z",
+      "phases": [
+        "ownership-acquired",
+        "research-persisted",
+        "publication-source-verification",
+        "article-drafted",
+        "issue-assembled",
+        "generated-artwork-model-reviewed",
+        "exact-artifact-preflight-passed",
+        "draft-pr-15-opened",
+        "final-head-ci-handoff-pending"
+      ],
+      "outcome": "checkpoint-complete"
+    }
+  ],
+  "active_run": null,
+  "human_overrides": []
+}
