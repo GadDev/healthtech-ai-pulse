@@ -21,6 +21,7 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 
 - [CONSTITUTION.md](docs/CONSTITUTION.md): mission and accountability.
 - [docs/CONTENT_MODEL.md](docs/CONTENT_MODEL.md): implemented schemas and publication mappings.
+- [docs/DAILY_ISSUE.md](docs/DAILY_ISSUE.md): edition format, ordering and ledger-only days.
 - [EDITORIAL.md](docs/EDITORIAL.md): claim-specific evidence, scope and publication policy.
 - [TECHSTACK.md](docs/TECHSTACK.md): architecture, reuse and operations.
 - [ROADMAP.md](docs/ROADMAP.md): PR boundaries and readiness gates.

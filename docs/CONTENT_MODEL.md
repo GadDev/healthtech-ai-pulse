@@ -46,7 +46,7 @@ Scores are recomputed from 0–4 inputs at 30/30/25/10/5 weights. Selection thre
 
 Zero selected, or every selected item withheld, means `publication.mode: ledger-only`, no story IDs, no issue path and no MUST KNOW. In-progress checkpoints can be persisted for recovery but cannot pass final `verify`. A final ledger-only record may truthfully retain source conflicts or failures. Explicit validator paths must exist, and all dated ledgers are checked so an older invalid batch cannot hide behind a newer valid one.
 
-Article `draft` defaults to true. Public routes use non-draft stories only; issue references reject missing/private stories. A prepared publication PR may contain `draft: false` article metadata, but remains a draft GitHub PR and does not deploy before human merge. Source mappings, evidence, category, tags, claim IDs, type and depth must agree with its selected candidate. Issues contain unique nonempty sections and exactly the batch's surviving references; featured and MUST KNOW are optional and distinct.
+Article `draft` defaults to true. Public routes use non-draft stories only; issue references reject missing/private stories. A prepared publication PR may contain `draft: false` article metadata, but remains a draft GitHub PR and does not deploy before human merge. Source mappings, evidence, category, tags, claim IDs, type and depth must agree with its selected candidate. Issues contain unique nonempty sections and exactly the batch's surviving references; featured and MUST KNOW are optional and distinct. [DAILY_ISSUE.md](DAILY_ISSUE.md) defines edition fields, routes, ordering and empty-day behavior.
 
 ## Optional imagery and translations
 

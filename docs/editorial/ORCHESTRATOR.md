@@ -18,6 +18,7 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - docs/EDITORIAL.md
 - docs/TECHSTACK.md
 - docs/CONTENT_MODEL.md
+- docs/DAILY_ISSUE.md
 - docs/editorial/ledger.schema.json
 - docs/editorial/topics.yml
 - docs/editorial/ORCHESTRATOR.md
