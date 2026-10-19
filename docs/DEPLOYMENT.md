@@ -121,4 +121,4 @@ For a production rollback, use an approved previous release in Firebase Hosting 
 
 ## Local checks
 
-Use Node `22.22.3`, `npm ci`, `npm run verify`, and `npm run test:e2e` with Chromium installed. `npm test` includes artifact provenance, manual request, cleanup routing and preview identity rejection cases. Local tests do not establish live cloud permissions or Hosting availability.
+Use Node.js 24 LTS (`nvm install && nvm use`, using `.nvmrc`), `npm ci`, `npm run verify`, and `npm run test:e2e` with Chromium installed. `npm test` includes artifact provenance, manual request, cleanup routing and preview identity rejection cases. Local tests do not establish live cloud permissions or Hosting availability.
