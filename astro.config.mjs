@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-const site = process.env.SITE_URL || 'http://localhost:4321';
+const site = process.env.SITE_URL || 'https://healthtech-ai-pulse.web.app';
 const url = new URL(site);
 if (
   !['http:', 'https:'].includes(url.protocol) ||
