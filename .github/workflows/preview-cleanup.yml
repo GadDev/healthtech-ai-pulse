@@ -26,7 +26,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 22.22.3
+          node-version-file: .nvmrc
           package-manager-cache: false
       - name: Validate close event and derive channel
         id: cleanup
@@ -59,7 +59,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v7
         with:
-          node-version: 22.22.3
+          node-version-file: .nvmrc
           package-manager-cache: false
       - name: Validate isolated preview identity
         run: node scripts/validate-preview-deployment.mjs
