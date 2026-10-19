@@ -54,7 +54,7 @@ Article `draft` defaults to true. Public routes use non-draft stories only; issu
 
 Validation checks WebP header, byte hash, source/policy identity, review schema and generation key. The human/model visual review must separately assess crop and unsupported medical implications. Binary-safe Git operations are mandatory. A missing declared generated asset fails validation; it is not silently changed to none.
 
-English is the sole required locale. No French collection, translation approval or placeholder is generated in this implementation.
+English is the sole required locale. The repository includes `healthtech-ai-pulse-translate-fr` for explicitly requested, source-matched French translation packages under `docs/editorial/translations/fr/`. Its reviewed article and companion report remain outside public content; a successful linguistic review is not clinical validation. No French collection, route, runtime translation schema or stale-copy suppression is implemented. No placeholders or historical translation approvals are imported.
 
 ## Controlled trial and validation coverage
 

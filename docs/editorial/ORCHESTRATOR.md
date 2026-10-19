@@ -31,7 +31,7 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - package.json
 - .github/workflows/ci.yml
 
-Read referenced target dependencies recursively when required by these contracts. There is no runtime editorial dependency on GadDev/daily-ai-pulse, its cloud identities, external installed Pulse skills, policies or task. Do not substitute those for missing target files. No translation skill is required for English-only healthtech-1.0. If the adopted target later requires translations, read its actual locale contract/skill and validate the change before using it.
+Read referenced target dependencies recursively when required by these contracts. There is no runtime editorial dependency on GadDev/daily-ai-pulse, its cloud identities, external installed Pulse skills, policies or task. Do not substitute those for missing target files. No translation skill is required for English-only healthtech-1.0. The target `.agents/skills/healthtech-ai-pulse-translate-fr/SKILL.md` supports explicitly requested, reviewed French packages outside public collections; its presence does not activate translation in scheduled runs. If the adopted target later requires published translations, read its actual locale contract/skill and validate the integration before using it.
 
 If the repository, required contracts, supported source browsing, GitHub reads/writes or safe ownership mechanism is unavailable, stop publication preparation. Report the exact missing prerequisite. Preserve already gathered evidence as a checkpoint when possible; do not fabricate a ledger that supposedly passed unreadable contracts. A valid, classified ledger prepared under readable contracts may still be saved when a later publication source fails.
 

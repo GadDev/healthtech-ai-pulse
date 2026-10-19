@@ -25,7 +25,7 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 - [TECHSTACK.md](TECHSTACK.md): architecture, reuse and operations.
 - [ROADMAP.md](ROADMAP.md): PR boundaries and readiness gates.
 
-The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the initial language. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
+The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the public language. The repository’s `healthtech-ai-pulse-translate-fr` skill prepares reviewed French translation packages; French publication routes are not implemented. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
 Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the orchestration state machine and target skills are implemented. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
 

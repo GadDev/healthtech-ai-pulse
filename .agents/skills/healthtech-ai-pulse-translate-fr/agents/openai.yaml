@@ -1,0 +1,7 @@
+interface:
+  display_name: 'HealthTech AI Pulse — French Translation'
+  short_description: 'Translate healthcare articles with evidence fidelity'
+  default_prompt: 'Use $healthtech-ai-pulse-translate-fr to translate the specified finalized English healthcare article into French, preserve its evidence boundaries, and record the exact source and completed review.'
+
+policy:
+  allow_implicit_invocation: false
