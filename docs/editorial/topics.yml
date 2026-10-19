@@ -1,0 +1,35 @@
+# Proposed controlled vocabulary. Adopt and validate in PR 2.
+version: healthtech-1.0
+desks:
+  clinical-ai: Clinical AI
+  health-systems: Health systems and digital health
+  pharma: AI in pharmaceuticals
+  biomedical-foundations: Biomedical foundations
+  safety-policy: Safety, policy and governance
+topics:
+  diagnostics: Diagnosis and screening
+  medical-imaging: Imaging and image analysis
+  clinical-prediction: Prognosis and risk prediction
+  decision-support: Clinical decision support
+  care-delivery: Delivery of clinical care
+  health-operations: Administrative and operational workflows
+  digital-health: Digital health services and interventions
+  medical-devices: Medical device systems
+  interoperability: Data exchange and workflow integration
+  drug-discovery: Target and candidate discovery
+  preclinical-evidence: Experimental preclinical validation
+  clinical-trials: Trial design, conduct and results
+  pharmacovigilance: Postmarketing surveillance and safety
+  manufacturing-quality: Medicines manufacturing and quality
+  biomedical-models: Biomedical model methods and releases
+  biomedical-data: Datasets, provenance and access
+  evaluation: Benchmarks and evaluation methodology
+  research-tools: Reusable scientific software and tooling
+  implementation: Real-world implementation and adoption
+  patient-outcomes: Measured patient-relevant outcomes
+  safety: Safety evidence and incidents
+  regulation: Official actions and regulatory requirements
+  governance: Accountability, oversight and assurance
+  privacy: Privacy and responsible data handling
+  fairness: Subgroups, bias and distributional effects
+  reproducibility: Reproduction, transparency and validation

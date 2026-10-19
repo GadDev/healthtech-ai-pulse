@@ -76,3 +76,17 @@ Aim for no incremental hosting cost within the provider's no-cost quotas, not gu
 ## Activation requirements
 
 Target contracts and scripts merged; build and browser CI green on the exact target revision; supported GitHub read/write and binary upload path demonstrated by an authorized draft trial; source browsing works; safe branch ownership and recovery work; hosting identity separated and smoke-tested; maintainer can inspect evidence and pause the task. Each external integration requires an actual successful read, not tool discovery alone. Image generation is required only when generated assets are selected. Do not activate until the controlled trial in ROADMAP.md passes.
+
+## Implemented foundation and activation state
+
+The clean site, shared healthcare schemas, evidence card, ledger/story/issue checks, optional-image validation and isolated source-inspection trial are implemented locally. `scripts/lib/orchestration.mjs` implements the tested writer/session state machine; its adapter requires authenticated target GitHub operations and a live write/read-back trial before scheduling. No independent queue or database is introduced. The adapter simulator is not a live integration.
+
+`firebase.json` serves `dist/`. `.github/workflows/deploy.yml` is disabled by default: it runs only on main with `HEALTHTECH_DEPLOY_ENABLED=true`. It validates target variables, runs verification and browser checks, authenticates by OIDC, deploys and smoke-checks. `npm run deploy:check` checks syntax and cross-project isolation; it does not verify cloud IAM. No `.firebaserc`, stored service-account key or source project identity is copied.
+
+For the initial deployment, create or select a dedicated `healthtech-ai-pulse-*` Firebase project whose ID is at most 30 characters. Configure its own Hosting site and deployment service account. Configure a WIF provider with GitHub token audience/mapping and an attribute condition restricted to repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`; verify these against the actual token. The production environment subject may differ from a branch subject, so do not blindly copy a subject binding. Grant only the current documented Hosting deployment permissions and target-scoped workload-identity impersonation, then demonstrate the OIDC exchange and deployment with no stored JSON key.
+
+Set the four FIREBASE_* variables in the production environment to verified target values. The initial site must be `https://<target-project-id>.web.app`; the deployment script checks that relationship and service-account ownership. Before enabling deployment, complete target browser/CI checks, a live Hosting smoke test and rollback verification. Only then set HEALTHTECH_DEPLOY_ENABLED=true. The task itself never edits deployment configuration.
+
+Rollback procedure: pause the HealthTech task if active; choose the last known-good release in the dedicated target Hosting release history and roll back there; confirm home/RSS/robots/sitemap and affected article URLs; then prepare the matching Git revert/correction PR and verify the subsequent deployment. Record the actual release/revision; no rollback drill is claimed yet.
+
+See docs/editorial/trials/orchestration-2026-10-18.md for executed versus blocked trial coverage. The complete task request lives in docs/editorial/task-configuration.json and remains uncreated. Recheck duplicates, integration reads and current target default-branch dependencies before task creation.

@@ -23,7 +23,7 @@ export function checkContent(root = process.cwd()) {
       throw new Error(`${issue.id}: repeated section key`);
     if (!ids.length) throw new Error(`${issue.id}: empty issue`);
     for (const id of ids)
-      if (!byId.has(id) || byId.get(id).data.draft)
+      if (!byId.has(id) || byId.get(id).data.draft !== false)
         throw new Error(`${issue.id}: missing or draft story ${id}`);
     for (const key of ['featured', 'mustKnow'])
       if (issue.data[key] && !ids.includes(issue.data[key]))

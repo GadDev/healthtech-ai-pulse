@@ -11,17 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 22.22.3
           cache: npm
       - run: npm ci
       - run: npm run verify
+      - name: Validate every changed ledger
+        run: |
+          git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.sha }} HEAD -- ':(glob)docs/editorial/ledgers/*.json' ':(glob)docs/editorial/trials/*.json' | while IFS= read -r ledger; do
+            test -z "$ledger" || npm run editorial:check -- "$ledger"
+          done
   browser:
     name: Browser and accessibility
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 22.22.3

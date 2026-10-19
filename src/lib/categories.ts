@@ -1,10 +1,11 @@
-export const deskKeys = [
+import { deskKeys as keys } from './editorial-schema.mjs';
+export const deskKeys = keys as readonly [
   'clinical-ai',
   'health-systems',
   'pharma',
   'biomedical-foundations',
   'safety-policy',
-] as const;
+];
 export type Desk = (typeof deskKeys)[number];
 export const desks: Record<Desk, { title: string; description: string }> = {
   'clinical-ai': {
