@@ -57,11 +57,7 @@
       "decision": "watch",
       "title": "INFUSYNC is a conceptual infusion framework, not a tested care system",
       "desk": "health-systems",
-      "topics": [
-        "medical-devices",
-        "evaluation",
-        "safety"
-      ],
+      "topics": ["medical-devices", "evaluation", "safety"],
       "entities": [],
       "event_date": "2026-10-14",
       "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
@@ -154,10 +150,7 @@
       "decision": "rejected",
       "title": "Esophageal CT screening paper is September evidence, not an October release",
       "desk": "clinical-ai",
-      "topics": [
-        "diagnostics",
-        "medical-imaging"
-      ],
+      "topics": ["diagnostics", "medical-imaging"],
       "entities": [],
       "event_date": "2026-09-22",
       "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
@@ -229,13 +222,42 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Retrospective seven-day run. Research ledger first; No selected story in bounded review; do not manufacture content.",
+    "mode": "ledger-only",
+    "reason": "Retrospective backfill. No qualifying selected story in bounded research. Watch/exclusion reasons preserved; no issue or imagery manufactured.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "Primary evidence and cross-date publication preflight",
+        "status": "passed",
+        "tested_revision": "26aa43d5135fec020d1c4822a4b5c740524d8366 plus exact dated source bytes in this checkpoint",
+        "execution": "Model review of inspected primary evidence; not independent clinical validation.",
+        "evidence": "Claim locators, units, limitations, funding/COI and archive identities reviewed. Text-led mode explicit. Research gaps and no completed cutoff preserved."
+      },
+      {
+        "command": "npm ci --no-audit --no-fund; npm run verify",
+        "status": "passed",
+        "tested_revision": "Combined rehearsal Git tree 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403 on base 26aa43d5135fec020d1c4822a4b5c740524d8366",
+        "execution": "Local Node.js 24.19.0. Seven-date working tree, not each final remote PR head.",
+        "evidence": "Clean install; lint, formatting, schema/content/editorial/illustration validation, 131 tests, Astro check (zero errors/warnings), production build and Pagefind passed. Source bytes: No public content for this date; ledger-only."
+      },
+      {
+        "command": "PLAYWRIGHT_EXECUTABLE_PATH=/tmp/healthtech-chromium ASTRO_PREVIEW_BACKGROUND=1 npm run test:e2e",
+        "status": "passed",
+        "tested_revision": "Same new public article/issue bytes as combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403; new ledger-only files do not change public pages.",
+        "execution": "Local Chromium 133 via existing executable; Node.js 24.19.0. Exact final remote head still requires PR CI.",
+        "evidence": "19 browser tests passed. No public content for this date; ledger-only."
+      },
+      {
+        "command": "New article/issue responsive and accessibility inspection",
+        "status": "passed",
+        "tested_revision": "Built public bytes from combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403",
+        "execution": "Local static build served over HTTP; Playwright plus axe WCAG 2/2.1 A/AA checks.",
+        "evidence": "16 route/viewport combinations: both new articles and issues at 320,375,960,1280px; HTTP 200, one H1, no horizontal overflow, zero serious/critical axe findings. Representative article mobile/desktop screenshots visually inspected; not a complete manual accessibility audit."
+      }
+    ]
   },
   "attempts": [
     {
@@ -257,7 +279,12 @@
       "started_at": "2026-10-19T20:03:40.228Z",
       "completed_at": null,
       "phases": [
-        "ownership-acquired"
+        "ownership-acquired",
+        "publication-verification",
+        "drafts-prepared",
+        "publication-finalised",
+        "local-combined-rehearsal-passed",
+        "source-page-responsive-review-passed"
       ],
       "outcome": "in-progress"
     }
@@ -265,8 +292,8 @@
   "active_run": {
     "owner_token": "backfill-2026-10-14-2026-10-19T20:03:40.228Z",
     "acquired_at": "2026-10-19T20:03:40.228Z",
-    "heartbeat_at": "2026-10-19T20:03:40.228Z",
-    "expires_at": "2026-10-19T22:03:40.228Z"
+    "heartbeat_at": "2026-10-19T20:11:34.274Z",
+    "expires_at": "2026-10-19T22:11:34.274Z"
   },
   "human_overrides": []
 }
