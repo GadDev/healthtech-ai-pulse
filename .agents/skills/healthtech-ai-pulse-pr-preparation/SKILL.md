@@ -5,7 +5,7 @@ description: Prepare one HealthTech AI Pulse daily draft PR from its normalized 
 
 # Prepare a daily publication
 
-Operate only in GadDev/healthtech-ai-pulse. Read current target CONSTITUTION.md, EDITORIAL.md, docs/CONTENT_MODEL.md, docs/editorial/ORCHESTRATOR.md, ledger.schema.json, topics.yml, source schemas, validators and CI before work. Missing contracts block publication; do not use Daily AI Pulse contracts as a fallback.
+Operate only in GadDev/healthtech-ai-pulse. Read current target docs/CONSTITUTION.md, docs/EDITORIAL.md, docs/CONTENT_MODEL.md, docs/editorial/ORCHESTRATOR.md, ledger.schema.json, topics.yml, source schemas, validators and CI before work. Missing contracts block publication; do not use Daily AI Pulse contracts as a fallback.
 
 Use the ledger as the handoff. Preserve research decisions and their evidence/scoring; publication verification, supported scope and withholding are separate. A narrowed article claim must remain within inspected source support. Recheck source status, access, contradictions, date precision and deduplication across merged and open daily ledgers. Never draft watch/rejected records implicitly. Human promotion must be auditable in a selected record and never bypass source gates.
 

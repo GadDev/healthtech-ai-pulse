@@ -19,11 +19,11 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 
 ## Project contracts
 
-- [CONSTITUTION.md](CONSTITUTION.md): mission and accountability.
+- [CONSTITUTION.md](docs/CONSTITUTION.md): mission and accountability.
 - [docs/CONTENT_MODEL.md](docs/CONTENT_MODEL.md): implemented schemas and publication mappings.
-- [EDITORIAL.md](EDITORIAL.md): claim-specific evidence, scope and publication policy.
-- [TECHSTACK.md](TECHSTACK.md): architecture, reuse and operations.
-- [ROADMAP.md](ROADMAP.md): PR boundaries and readiness gates.
+- [EDITORIAL.md](docs/EDITORIAL.md): claim-specific evidence, scope and publication policy.
+- [TECHSTACK.md](docs/TECHSTACK.md): architecture, reuse and operations.
+- [ROADMAP.md](docs/ROADMAP.md): PR boundaries and readiness gates.
 
 The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the public language. The repository’s `healthtech-ai-pulse-translate-fr` skill prepares reviewed French translation packages; French publication routes are not implemented. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
@@ -35,4 +35,4 @@ Astro/tooling configuration and editorial CSS are adapted from GadDev/daily-ai-p
 
 ## Operations status
 
-Production deployment is gated by `HEALTHTECH_DEPLOY_ENABLED`. PR previews are separately gated by `HEALTHTECH_PREVIEW_ENABLED`. See [the deployment guide](docs/DEPLOYMENT.md) for identities, workflow behavior and acceptance steps. Scheduled-task activation is managed separately from deployment. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.
+Production deployment is gated by `HEALTHTECH_DEPLOY_ENABLED`. PR previews are separately gated by `HEALTHTECH_PREVIEW_ENABLED`. See [the deployment guide](docs/DEPLOYMENT.md) for identities, workflow behavior and acceptance steps. Scheduled-task activation is managed separately from deployment. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](docs/TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.

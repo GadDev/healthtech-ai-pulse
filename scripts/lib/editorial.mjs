@@ -184,7 +184,7 @@ export function validateIllustration(root, story, bytes) {
     review.story_source_sha256 !== digest(bytes)
   )
     throw new Error(`${story.id}: stale illustration identity/integrity`);
-  if (review.policy_sha256 !== digest(readFileSync(`${root}/EDITORIAL.md`)))
+  if (review.policy_sha256 !== digest(readFileSync(`${root}/docs/EDITORIAL.md`)))
     throw new Error(`${story.id}: illustration policy changed`);
   const key = digest(
     JSON.stringify([

@@ -1,6 +1,6 @@
 # Content and evidence contracts
 
-Version: healthtech-1.0. [EDITORIAL.md](../EDITORIAL.md) owns editorial policy. This file documents the implemented storage and validation boundaries.
+Version: healthtech-1.0. [EDITORIAL.md](EDITORIAL.md) owns editorial policy. This file documents the implemented storage and validation boundaries.
 
 ## One shared schema
 
@@ -50,11 +50,13 @@ Article `draft` defaults to true. Public routes use non-draft stories only; issu
 
 ## Optional imagery and translations
 
-`illustration.mode: none` is valid and renders a text-led article. Generated mode requires an asset, alt text and a review path. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
+`illustration.mode: none` is valid and renders a text-led article. Generated mode requires an asset, alt text and a review path. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact docs/EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
 
 Validation checks WebP header, byte hash, source/policy identity, review schema and generation key. The human/model visual review must separately assess crop and unsupported medical implications. Binary-safe Git operations are mandatory. A missing declared generated asset fails validation; it is not silently changed to none.
 
 English is the sole required locale. The repository includes `healthtech-ai-pulse-translate-fr` for explicitly requested, source-matched French translation packages under `docs/editorial/translations/fr/`. Its reviewed article and companion report remain outside public content; a successful linguistic review is not clinical validation. No French collection, route, runtime translation schema or stale-copy suppression is implemented. No placeholders or historical translation approvals are imported.
+
+For operating details, see [the illustration guide](editorial/ILLUSTRATION_SYSTEM_V1.md) and [ledger lifecycle guidance](editorial/ledgers/README.md).
 
 ## Controlled trial and validation coverage
 

@@ -1,6 +1,6 @@
 # HealthTech AI Pulse — Scheduled editorial orchestrator
 
-Status: target orchestration instructions prepared for review. Local dependencies exist; remote adoption, authenticated adapter/write trial, browser acceptance and isolated hosted deployment are not yet verified. Activate only after ROADMAP.md readiness gates pass. The instruction body from “Run” onward is the full proposed task prompt; scheduling is separate.
+Status: target orchestration instructions prepared for review. Local dependencies exist; remote adoption, authenticated adapter/write trial, browser acceptance and isolated hosted deployment are not yet verified. Activate only after docs/ROADMAP.md readiness gates pass. The instruction body from “Run” onward is the full proposed task prompt; scheduling is separate.
 
 ---
 
@@ -14,9 +14,9 @@ SOURCE OF TRUTH AND PREREQUISITES
 
 Resolve the target repository's current default branch and its commit. Read, at that same commit:
 
-- CONSTITUTION.md
-- EDITORIAL.md
-- TECHSTACK.md
+- docs/CONSTITUTION.md
+- docs/EDITORIAL.md
+- docs/TECHSTACK.md
 - docs/CONTENT_MODEL.md
 - docs/editorial/ledger.schema.json
 - docs/editorial/topics.yml

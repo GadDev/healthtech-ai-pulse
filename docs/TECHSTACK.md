@@ -16,10 +16,10 @@ Canonical paths after implementation:
 
 | Path                                                       | Responsibility                                                    |
 | ---------------------------------------------------------- | ----------------------------------------------------------------- |
-| CONSTITUTION.md                                            | Mission and accountability                                        |
-| EDITORIAL.md                                               | Sole normative editorial policy, including evidence and decisions |
-| ROADMAP.md                                                 | Delivery gates and remaining work                                 |
-| TECHSTACK.md                                               | Architecture and hosting operations                               |
+| docs/CONSTITUTION.md                                       | Mission and accountability                                        |
+| docs/EDITORIAL.md                                          | Sole normative editorial policy, including evidence and decisions |
+| docs/ROADMAP.md                                            | Delivery gates and remaining work                                 |
+| docs/TECHSTACK.md                                          | Architecture and hosting operations                               |
 | docs/CONTENT_MODEL.md                                      | Content and ledger field semantics and cross-file mapping         |
 | docs/editorial/ledger.schema.json                          | Structural machine validation, version healthtech-1.0             |
 | docs/editorial/topics.yml                                  | Controlled vocabulary, version healthtech-1.0                     |
@@ -33,9 +33,9 @@ Canonical paths after implementation:
 | public/images/stories/YYYY-MM-DD-slug.webp                 | Reviewed generated artwork when used                              |
 | docs/editorial/illustrations/reviews/<story-id>.json       | Asset identity, integrity and review                              |
 
-The proposed paths do not exist in the target yet. No scheduled task may assume otherwise. Consolidate the source's editorial schema prose, decision engine, and PR preparation policy into EDITORIAL.md plus these machine/content contracts; do not keep parallel normative copies.
+The proposed paths do not exist in the target yet. No scheduled task may assume otherwise. Consolidate the source's editorial schema prose, decision engine, and PR preparation policy into docs/EDITORIAL.md plus these machine/content contracts; do not keep parallel normative copies.
 
-Replace the scalar evidence label with structured, claim-specific evidence. Keep type values briefing/deep-dive/pulse initially; retire engineering-specific depth language in favour of general/specialist and define required concepts in the article. Use five categories from EDITORIAL.md. The content model must define an optional featured story separately from an optional MUST KNOW designation. Featured placement does not imply exceptional evidence.
+Replace the scalar evidence label with structured, claim-specific evidence. Keep type values briefing/deep-dive/pulse initially; retire engineering-specific depth language in favour of general/specialist and define required concepts in the article. Use five categories from docs/EDITORIAL.md. The content model must define an optional featured story separately from an optional MUST KNOW designation. Featured placement does not imply exceptional evidence.
 
 ## Visuals and languages
 
@@ -75,7 +75,7 @@ Aim for no incremental hosting cost within the provider's no-cost quotas, not gu
 
 ## Activation requirements
 
-Target contracts and scripts merged; build and browser CI green on the exact target revision; supported GitHub read/write and binary upload path demonstrated by an authorized draft trial; source browsing works; safe branch ownership and recovery work; hosting identity separated and smoke-tested; maintainer can inspect evidence and pause the task. Each external integration requires an actual successful read, not tool discovery alone. Image generation is required only when generated assets are selected. Do not activate until the controlled trial in ROADMAP.md passes.
+Target contracts and scripts merged; build and browser CI green on the exact target revision; supported GitHub read/write and binary upload path demonstrated by an authorized draft trial; source browsing works; safe branch ownership and recovery work; hosting identity separated and smoke-tested; maintainer can inspect evidence and pause the task. Each external integration requires an actual successful read, not tool discovery alone. Image generation is required only when generated assets are selected. Do not activate until the controlled trial in docs/ROADMAP.md passes.
 
 ## Implemented foundation and activation state
 
