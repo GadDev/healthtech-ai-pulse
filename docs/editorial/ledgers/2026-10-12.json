@@ -383,7 +383,7 @@
     {
       "run_id": "backfill-2026-10-12-2026-10-19T20:01:57.875Z",
       "started_at": "2026-10-19T20:01:57.875Z",
-      "completed_at": null,
+      "completed_at": "2026-10-19T20:10:41.223Z",
       "phases": [
         "ownership-acquired",
         "publication-verification",
@@ -392,14 +392,9 @@
         "local-combined-rehearsal-passed",
         "source-page-responsive-review-passed"
       ],
-      "outcome": "in-progress"
+      "outcome": "checkpoint-complete"
     }
   ],
-  "active_run": {
-    "owner_token": "backfill-2026-10-12-2026-10-19T20:01:57.875Z",
-    "acquired_at": "2026-10-19T20:01:57.875Z",
-    "heartbeat_at": "2026-10-19T20:10:17.612Z",
-    "expires_at": "2026-10-19T22:10:17.612Z"
-  },
+  "active_run": null,
   "human_overrides": []
 }
