@@ -134,6 +134,9 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Illustration contact sheet regression
+        run: npm run illustration:contact-sheet:test
+
       - name: Run Playwright suite
         run: npm run test:e2e
 

@@ -23,7 +23,10 @@
     "schema:check": "node scripts/generate-editorial-schema.mjs --check",
     "test": "node --test tests/*.test.mjs",
     "deploy:check": "node scripts/validate-deployment.mjs",
-    "orchestration:trial": "node --test tests/orchestration.test.mjs"
+    "orchestration:trial": "node --test tests/orchestration.test.mjs",
+    "illustration:decision": "node scripts/resolve-illustration-generation.mjs",
+    "illustration:contact-sheet": "node scripts/build-illustration-contact-sheet.mjs",
+    "illustration:contact-sheet:test": "node --test tests/browser/illustration-contact-sheet.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.10",

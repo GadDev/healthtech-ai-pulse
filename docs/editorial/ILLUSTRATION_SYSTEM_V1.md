@@ -35,7 +35,39 @@ Use `version: healthtech-1.0`, the actual generator and candidate count, and `nu
 
 Reuse requires matching current inputs, a valid review, matching final asset bytes and an acceptable crop. A retry or CI rerun alone does not justify regeneration. Source, brief, policy, generator, candidate-count or model-snapshot changes require reassessment. Asset changes invalidate its recorded integrity. Do not refresh timestamps or invent hashes to conceal a mismatch.
 
-The current validator recomputes article/policy/asset integrity and the stored identity key. The supplied brief still needs an exact-byte comparison during preparation; a stored brief hash alone does not prove that comparison occurred. HealthTech does not yet provide the source's separate generation/reuse decision CLI.
+The shared identity helper in `scripts/lib/illustration-generation-identity.mjs` implements the same ordered-array formula used by the batch validator and decision CLI. The batch validator checks article/policy/asset integrity and the stored key; the CLI additionally compares the currently supplied brief and any declared reference fingerprints.
+
+### Read-only generation decision
+
+Prepare an explicit local JSON brief with these fields:
+
+```json
+{
+  "story_id": "YYYY-MM-DD-story-slug",
+  "verified_context": "Two or three supported sentences from the final article.",
+  "visual_idea": "One bounded metaphor",
+  "placement": "article-hero",
+  "crop": "wide"
+}
+```
+
+This is a format example, not a real story or review. Replace its values with the actual source. Optional `constraints` is a nonempty string; optional `references` contains repository-relative `{ "path": "...", "sha256": "..." }` records. Include material layout/style/reference inputs and their real hashes in the brief. The CLI rejects stale reference bytes and unknown brief fields. Local briefs may be temporary; the command does not commit them or add new editorial write paths.
+
+```bash
+npm run illustration:decision -- --story YYYY-MM-DD-story-slug --brief /path/to/brief.json --generator-surface ACTUAL_TOOL --candidate-count 1 --json
+```
+
+Use the actual tool, count and optional `--model-snapshot` value; absent snapshot means null. The command reads the canonical non-draft English story and reports `NONE`, `GENERATE` or `REUSE`. It does not generate an image, alter the ledger or write an approval. Invalid/malformed inputs, foreign/forged reviews and unsupported contracts exit with code 2. Valid changed inputs or missing/changed asset bytes require generation rather than reuse. A `REUSE` decision still requires the normal batch and visual checks.
+
+### Optional comparison sheet
+
+```bash
+npm run illustration:contact-sheet -- --story YYYY-MM-DD-story-slug --out /path/to/new-review.png --crop wide /path/to/candidate.webp
+```
+
+The builder accepts at least one candidate, optional repeated `--reference <image>` arguments and `wide`, `square` or `landscape` preview crops. It embeds local PNG/JPEG/WebP inputs and writes a new PNG sheet without changing them or overwriting an existing file. No supplied references is recorded honestly; no production reference archive is invented. Preview ratios are 16:9, 1:1 and 3:2 respectively; inspect the real page as well. The sheet does not normalize the production image, create review JSON or certify medical fidelity.
+
+Chromium is required (`npx playwright install chromium`). `npm run illustration:contact-sheet:test` exercises actual rendering and invalid-image failure in the browser CI job, after Chromium installation. Unit tests run under the ordinary `npm test` gate. No new dependency is introduced.
 
 ## Persist and validate
 

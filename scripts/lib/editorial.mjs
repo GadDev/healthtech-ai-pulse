@@ -1,6 +1,5 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
-import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import { parse } from 'yaml';
 import {
@@ -10,8 +9,9 @@ import {
   weightedScore,
 } from '../../src/lib/editorial-schema.mjs';
 import { documents, markdown, checkContent } from './content.mjs';
+import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.mjs';
 
-export const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
+export const digest = sha256;
 export function inside(root, path) {
   const resolved = resolve(root, path);
   if (relative(root, resolved).startsWith('..') || relative(root, resolved) === '')
@@ -186,18 +186,7 @@ export function validateIllustration(root, story, bytes) {
     throw new Error(`${story.id}: stale illustration identity/integrity`);
   if (review.policy_sha256 !== digest(readFileSync(`${root}/docs/EDITORIAL.md`)))
     throw new Error(`${story.id}: illustration policy changed`);
-  const key = digest(
-    JSON.stringify([
-      review.story_id,
-      review.story_source_sha256,
-      review.brief_sha256,
-      review.policy_sha256,
-      review.version,
-      review.candidate_count,
-      review.generator,
-      review.model_snapshot,
-    ]),
-  );
+  const key = buildGenerationIdentity(review).generation_key;
   if (key !== review.generation_key) throw new Error(`${story.id}: invalid generation key`);
 }
 export function checkEditorial(root = process.cwd(), explicit, { allowInProgress = false } = {}) {

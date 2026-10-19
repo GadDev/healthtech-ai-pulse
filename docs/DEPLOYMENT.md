@@ -21,7 +21,7 @@ Draft PRs are eligible for previews. Fork PRs are not. Automatic previews test t
 
 Templates, CODEOWNERS, dependency updates, labels and browser failure reports are included. The existing shared role file `infra/iam/hosting-deployer-role.yaml` remains canonical: its six permissions match the source preview role, so a second role YAML is unnecessary. A YAML file describes the role; merging it does not change cloud IAM.
 
-Healthcare validators remain authoritative. The four-file French translation skill is ported with healthcare terminology, exact-source review and non-public package output. Runtime translation scripts remain deferred because HealthTech currently has English-only schemas and routes. Source illustration export/contact-sheet helpers assume different ledger contracts; HealthTech retains its optional-image mappings and validation. These are intentional adaptations, not compatible files to copy blindly.
+Healthcare validators remain authoritative. The four-file French translation skill is ported with healthcare terminology, exact-source review and non-public package output. Runtime translation scripts remain deferred because HealthTech currently has English-only schemas and routes. The illustration decision and contact-sheet helpers are adapted to HealthTech's identity, optional-image mappings and one-candidate workflow; browser CI exercises actual sheet rendering. These are intentional adaptations, not compatible files to copy blindly.
 
 ## Deliberate differences from the reference
 
