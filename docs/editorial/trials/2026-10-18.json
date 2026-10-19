@@ -31,14 +31,8 @@
       "decision": "rejected",
       "title": "EMA medicines-lifecycle AI reflection paper: historical context",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "governance",
-        "drug-discovery"
-      ],
-      "entities": [
-        "European Medicines Agency"
-      ],
+      "topics": ["regulation", "governance", "drug-discovery"],
+      "entities": ["European Medicines Agency"],
       "event_date": null,
       "event_date_reason": "Exact adoption date not established from the landing page; publication date is not silently substituted.",
       "source_publication_date": "2024-09-30",
@@ -122,21 +116,14 @@
       "run_id": "controlled-ema-context-2026-10-18",
       "started_at": "2026-10-18T19:10:03.979803+00:00",
       "completed_at": "2026-10-18T19:10:03.979803+00:00",
-      "phases": [
-        "source-inspection",
-        "deduplication",
-        "decision",
-        "ledger-only"
-      ],
+      "phases": ["source-inspection", "deduplication", "decision", "ledger-only"],
       "outcome": "Controlled trial only; no publication or human approval claimed."
     },
     {
       "run_id": "remote-handoff-2026-10-19",
       "started_at": "2026-10-19T07:15:15.157941+00:00",
       "completed_at": "2026-10-19T07:15:15.157941+00:00",
-      "phases": [
-        "remote-contract-ref-reconciled"
-      ],
+      "phases": ["remote-contract-ref-reconciled"],
       "outcome": "Referenced the real remote commit with the identical foundation tree; original source inspection and decisions retained unchanged."
     }
   ],
