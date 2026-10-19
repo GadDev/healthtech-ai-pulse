@@ -7,8 +7,10 @@ const editions = (await getCollection('pulse')).sort(
 ---
 
 <BaseLayout title="Edition archive">
-  <p class="eyebrow">The archive</p>
-  <h1>Evidence, edition by edition.</h1>
+  <header class="page-intro">
+    <p class="eyebrow">The archive</p>
+    <h1>Evidence, edition by edition.</h1>
+  </header>
   {editions.length ? (
     editions.map((edition) => (
       <article class="story-row">
