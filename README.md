@@ -27,8 +27,12 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 
 The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the initial language. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
 
-Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; automated editorial preparation remains a separate reviewable change. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
+Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the safe orchestration state machine, target skills and disabled deployment workflow are prepared as a separate reviewable change. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
 
 ## Reuse and licensing
 
 Astro/tooling configuration and editorial CSS are adapted from GadDev/daily-ai-pulse at commit 6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64. MIT software notices are retained. Articles, artwork, ledgers, translation approvals, domains and deployment identities were excluded.
+
+## Operations status
+
+Deployment is inactive until dedicated target variables/WIF and HEALTHTECH_DEPLOY_ENABLED are configured and verified. The scheduled task is not created. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.

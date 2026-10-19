@@ -1,6 +1,6 @@
 # HealthTech AI Pulse — Delivery roadmap
 
-Status: assessment proposal. No implementation PR was created during this assessment. Dependencies are sequential; dates are not promises. One maintainer owns technical acceptance and editorial approval.
+Status: implementation prepared for three stacked draft PRs. GitHub app access was verified on 19 October 2026. Bootstrap, evidence contracts/cards and orchestration/deployment configuration are implemented; default-branch adoption and hosted/browser/scheduled acceptance remain incomplete. Dependencies are sequential; dates are not promises. One maintainer owns technical acceptance and editorial approval.
 
 ## MVP boundary
 
