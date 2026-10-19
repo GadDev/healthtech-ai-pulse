@@ -6,9 +6,11 @@ The initial site is deliberately empty: no source-publication articles or histor
 
 ## Develop
 
-Use Node 22.22.3 (`nvm use`), then:
+Use Node.js 24 LTS (24.11.0 or newer within 24.x). Local development and GitHub Actions read the major version from `.nvmrc`, so installs pick up Node 24 updates. Run:
 
 ```bash
+nvm install
+nvm use
 npm ci
 npm run dev
 ```
