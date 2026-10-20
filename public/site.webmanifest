@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "HealthTech AI Pulse",
+  "short_name": "HealthTech Pulse",
+  "description": "Evidence-led healthcare AI news.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icons/app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
