@@ -1,4 +1,6 @@
-export function deploymentConfig(env) {
+type DeploymentEnvironment = Record<string, string | undefined>;
+
+export function deploymentConfig(env: DeploymentEnvironment) {
   const required = [
     'FIREBASE_PROJECT_ID',
     'FIREBASE_SITE_URL',
@@ -6,26 +8,26 @@ export function deploymentConfig(env) {
     'FIREBASE_SERVICE_ACCOUNT',
   ];
   for (const name of required) if (!env[name]) throw new Error(`Missing ${name}`);
-  const project = env.FIREBASE_PROJECT_ID;
+  const project = env.FIREBASE_PROJECT_ID!;
   if (project !== 'healthtech-ai-pulse')
     throw new Error(
       'Use the adopted healthtech-ai-pulse project; other projects are not accepted.',
     );
-  const site = new URL(env.FIREBASE_SITE_URL);
+  const site = new URL(env.FIREBASE_SITE_URL!);
   if (site.href !== `https://${project}.web.app/`)
     throw new Error('Initial Hosting origin must match the dedicated Firebase project.');
-  if (!env.FIREBASE_SERVICE_ACCOUNT.endsWith(`@${project}.iam.gserviceaccount.com`))
+  if (!env.FIREBASE_SERVICE_ACCOUNT!.endsWith(`@${project}.iam.gserviceaccount.com`))
     throw new Error('Deployment service account must belong to the dedicated target project.');
   if (
     !/^projects\/293427463899\/locations\/global\/workloadIdentityPools\/[a-z0-9-]+\/providers\/[a-z0-9-]+$/.test(
-      env.FIREBASE_WIF_PROVIDER,
+      env.FIREBASE_WIF_PROVIDER!,
     )
   )
     throw new Error('WIF provider must belong to target project number 293427463899.');
   return { project, site: site.origin };
 }
 
-export function previewDeploymentConfig(env) {
+export function previewDeploymentConfig(env: DeploymentEnvironment) {
   if (env.FIREBASE_SITE_ID !== 'healthtech-ai-pulse')
     throw new Error('Preview site must be the adopted healthtech-ai-pulse site.');
   const result = deploymentConfig({

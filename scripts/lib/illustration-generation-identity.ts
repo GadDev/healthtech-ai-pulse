@@ -3,14 +3,25 @@ import { existsSync, realpathSync } from 'node:fs';
 import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
 
 const hash = /^[a-f0-9]{64}$/;
-export const sha256 = (value) => createHash('sha256').update(value).digest('hex');
+export const sha256 = (value: string | Buffer) => createHash('sha256').update(value).digest('hex');
 
-export function resolveRepositoryPath(root, path) {
+export interface GenerationIdentityInput {
+  story_id: string;
+  story_source_sha256: string;
+  brief_sha256: string;
+  policy_sha256: string;
+  version?: 'healthtech-1.0';
+  candidate_count: number;
+  generator: string;
+  model_snapshot?: string | null;
+}
+
+export function resolveRepositoryPath(root: string, path: string) {
   if (typeof path !== 'string' || !path || isAbsolute(path))
     throw new Error('Expected a repository-relative path.');
   const boundary = realpathSync(root);
   const target = resolve(boundary, path);
-  const escapes = (p) => {
+  const escapes = (p: string) => {
     const value = relative(boundary, p);
     return value === '..' || value.startsWith(`..${sep}`) || isAbsolute(value);
   };
@@ -30,7 +41,7 @@ export function buildGenerationIdentity({
   candidate_count,
   generator,
   model_snapshot = null,
-}) {
+}: GenerationIdentityInput) {
   if (!/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(story_id || ''))
     throw new Error('Invalid story ID.');
   if (

@@ -7,7 +7,7 @@ import {
   ciOutcome,
   OwnershipLost,
 } from '../scripts/lib/orchestration.mjs';
-import { deploymentConfig } from '../scripts/lib/deployment.mjs';
+import { deploymentConfig } from '../scripts/lib/deployment.ts';
 import { fixture, vocabulary, now } from './helpers/fixtures.mjs';
 const clock = Date.parse(now);
 function adapter() {

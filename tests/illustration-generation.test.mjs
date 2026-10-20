@@ -18,7 +18,7 @@ import {
   buildGenerationIdentity,
   resolveRepositoryPath,
   sha256,
-} from '../scripts/lib/illustration-generation-identity.mjs';
+} from '../scripts/lib/illustration-generation-identity.ts';
 import {
   resolveIllustrationGeneration,
   parseGenerationArguments,

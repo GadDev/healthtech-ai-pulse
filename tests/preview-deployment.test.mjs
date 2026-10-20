@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { previewDeploymentConfig } from '../scripts/lib/deployment.mjs';
+import { previewDeploymentConfig } from '../scripts/lib/deployment.ts';
 
 const env = {
   FIREBASE_PROJECT_ID: 'healthtech-ai-pulse',
