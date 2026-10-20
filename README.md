@@ -1,46 +1,98 @@
 # HealthTech AI Pulse
 
-Evidence-led intelligence for people building and evaluating healthcare and pharmaceutical AI.
+**Evidence-led reporting on AI in healthcare and pharmaceutical research.**
 
-The publication has one verified Health systems briefing and a dated edition. No source-publication articles or historical decisions were imported. The dedicated Firebase target is configured; live deployment acceptance is still pending.
+[![PR checks](https://github.com/GadDev/healthtech-ai-pulse/actions/workflows/ci.yml/badge.svg?event=pull_request)](https://github.com/GadDev/healthtech-ai-pulse/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/github/license/GadDev/healthtech-ai-pulse?style=flat-square)](LICENSE)
+[![Astro 7](https://img.shields.io/badge/Astro-7-BC52EE?logo=astro&logoColor=white&style=flat-square)](https://astro.build/)
+[![TypeScript 6](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white&style=flat-square)](https://www.typescriptlang.org/)
+[![Node.js 24](https://img.shields.io/badge/Node.js-24-5FA04E?logo=nodedotjs&logoColor=white&style=flat-square)](https://nodejs.org/)
+[![Pagefind 1](https://img.shields.io/badge/Pagefind-1-344F51?style=flat-square)](https://pagefind.app/)
+[![Firebase Hosting](https://img.shields.io/badge/Firebase-Hosting-DD7B37?logo=firebase&logoColor=white&style=flat-square)](https://firebase.google.com/docs/hosting)
 
-## Develop
+[**Read the publication**](https://healthtech-ai-pulse.web.app/) · [Browse editions](https://healthtech-ai-pulse.web.app/pulse/) · [Editorial methodology](https://healthtech-ai-pulse.web.app/methodology/)
 
-Use Node.js 24 LTS (24.11.0 or newer within 24.x). Local development and GitHub Actions read the major version from `.nvmrc`, so installs pick up Node 24 updates. Run:
+HealthTech AI Pulse helps engineers, technical product leads, translational researchers and clinical innovation teams understand **what changed, what the evidence supports and what warrants further investigation**. Coverage prioritizes European relevance without excluding important international research.
+
+## Contents
+
+- [Editorial scope](#editorial-scope)
+- [Getting started](#getting-started)
+- [Quality checks](#quality-checks)
+- [Publication workflow](#publication-workflow)
+- [Technology](#technology)
+- [Deployment](#deployment)
+- [Documentation](#documentation)
+- [License and attribution](#license-and-attribution)
+
+## Editorial scope
+
+The five desks are **Clinical AI**, **Health systems**, **Pharma**, **Biomedical foundations** and **Safety & policy**. Stories distinguish announcements and benchmarks from clinical outcomes, with source links, evidence context and explicit limitations. English is the public language; French publication is not yet implemented.
+
+This is research and industry intelligence, not personalized medical advice. Every publication requires human editorial review, even when automation assists with research or drafting.
+
+## Getting started
+
+Requires **Node.js 24.11.0 or later within 24.x** and npm. The repository's `.nvmrc` selects Node 24 for `nvm` users.
 
 ```bash
+git clone https://github.com/GadDev/healthtech-ai-pulse.git
+cd healthtech-ai-pulse
 nvm install
 nvm use
 npm ci
 npm run dev
 ```
 
-`npm run verify` runs Oxlint, Oxfmt formatting checks, content integrity, Astro checks, build and Pagefind. `npm run test:e2e` checks public routes, accessibility, narrow navigation and search; install Chromium with `npx playwright install chromium` first.
+Open <http://localhost:4321>. If Node 24 is already installed without `nvm`, skip the two `nvm` commands.
 
-`npm run lint:fix` applies safe lint fixes; `npm run format` formats supported source, content and configuration files, including Astro. Oxfmt settings live in `.oxfmtrc.json`; Oxlint rules live in `.oxlintrc.json`. Generated output, the npm lockfile and the generated ledger schema are excluded from formatting. Astro type and template diagnostics remain covered by `npm run check`.
+Local development requires no cloud credentials. Leave `SITE_URL` unset locally: the site omits canonical tags and signals **noindex**. For a production build, set `SITE_URL` to the public HTTPS origin (see [`.env.example`](.env.example) and [deployment guidance](docs/DEPLOYMENT.md)).
 
-Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured local builds use localhost, omit canonical links and disallow indexing. No cloud credentials or source Firebase identities are included.
+## Quality checks
 
-## Project contracts
+| Command                | Purpose                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `npm run verify`       | Lint, format, schema, editorial and content validation; unit tests; Astro checks; static build and Pagefind index. |
+| `npm run test:e2e`     | Playwright browser, navigation and accessibility checks.                                                           |
+| `npm run deploy:check` | Validate supplied Firebase deployment variables; requires production environment configuration.                    |
 
-- [CONSTITUTION.md](docs/CONSTITUTION.md): mission and accountability.
-- [docs/CONTENT_MODEL.md](docs/CONTENT_MODEL.md): implemented schemas and publication mappings.
-- [docs/DAILY_ISSUE.md](docs/DAILY_ISSUE.md): edition format, ordering and ledger-only days.
-- [Editorial schema](docs/editorial/EDITORIAL_SCHEMA_V1.md), [decision engine](docs/editorial/DECISION_ENGINE_V1.md) and [PR preparation](docs/editorial/PR_PREPARATION_V1.md): research-to-publication contracts.
-- [Visual constitution](docs/editorial/VISUAL_CONSTITUTION_V1.md) and [topics](docs/editorial/TOPICS_V1.yml): artwork rules and controlled vocabulary.
-- [Edition Front review](docs/design/EDITION_FRONT.md): layout decisions, image reassessment and verification.
-- [EDITORIAL.md](docs/EDITORIAL.md): claim-specific evidence, scope and publication policy.
-- [TECHSTACK.md](docs/TECHSTACK.md): architecture, reuse and operations.
-- [ROADMAP.md](docs/ROADMAP.md): PR boundaries and readiness gates.
+Before the browser suite, install Chromium with `npx playwright install chromium` (use `--with-deps` on a fresh Linux environment). CI runs verification and browser checks on pull requests.
 
-The five desks are Clinical AI, Health systems, Pharma, Biomedical foundations, and Safety & policy. English is the public language. The repository’s `healthtech-ai-pulse-translate-fr` skill prepares reviewed French translation packages; French publication routes are not implemented. Images are explicitly optional; no patient data, account system, analytics or newsletter infrastructure is included.
+## Publication workflow
 
-Human review controls publication. Schema/validator checks cannot establish medical correctness. Healthcare evidence contracts and evidence cards are implemented; the orchestration state machine and target skills are implemented. The controlled ledger-only source-inspection trial is under `docs/editorial/trials/`; it is not a live edition.
+1. **Research:** Record source discovery, verification and selection decisions in dated [candidate ledgers](docs/editorial/ledgers/README.md).
+2. **Prepare:** Write validated articles in `src/content/stories/`, reference them from dated `src/content/pulse/` editions, and attach reviewed imagery only where appropriate.
+3. **Review and publish:** Use a draft pull request and validation checks. The maintainer reviews evidence and merges approved changes; deployment is separately gated.
 
-## Reuse and licensing
+Research-only or withheld days can have ledgers without a public edition. Repository orchestration contracts describe automation; their presence does not imply a scheduled run is active.
 
-Astro/tooling configuration and editorial CSS are adapted from GadDev/daily-ai-pulse at commit 6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64. MIT software notices are retained. Articles, artwork, ledgers, translation approvals, domains and deployment identities were excluded.
+## Technology
 
-## Operations status
+| Layer       | Implementation                                                                       |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Publication | Astro 7, TypeScript 6, Markdown content collections and CSS                          |
+| Discovery   | Pagefind search, RSS, sitemap and dated edition archives                             |
+| Validation  | Oxlint, Oxfmt, Astro checks, Node.js tests, Playwright and axe                       |
+| Delivery    | Static Firebase Hosting site with GitHub Actions CI and gated deployment/PR previews |
 
-Production deployment is gated by `HEALTHTECH_DEPLOY_ENABLED`. PR previews are separately gated by `HEALTHTECH_PREVIEW_ENABLED`. See [the deployment guide](docs/DEPLOYMENT.md) for identities, workflow behavior and acceptance steps. Scheduled-task activation is managed separately from deployment. See [trial coverage and blockers](docs/editorial/trials/orchestration-2026-10-18.md), [the orchestrator](docs/editorial/ORCHESTRATOR.md) and [TECHSTACK.md](docs/TECHSTACK.md). `npm run orchestration:trial` runs isolated adapter/deployment tests; it does not claim a live integration or launch a task.
+There is no application database, user account system or patient-data backend.
+
+## Deployment
+
+The public site uses [Firebase Hosting](https://healthtech-ai-pulse.web.app/). Production deployment runs from `main` only when `HEALTHTECH_DEPLOY_ENABLED=true`; pull-request previews have an independent `HEALTHTECH_PREVIEW_ENABLED=true` gate. These are GitHub repository variables, not local development settings.
+
+See [deployment and preview operations](docs/DEPLOYMENT.md) for configuration, identity checks, acceptance and rollback. Passing local checks does not prove cloud access or clinical correctness.
+
+## Documentation
+
+- [Constitution](docs/CONSTITUTION.md) — mission, audience and accountability.
+- [Editorial policy](docs/EDITORIAL.md) — evidence standards, selection and corrections.
+- [Content model](docs/CONTENT_MODEL.md) and [daily issue contract](docs/DAILY_ISSUE.md) — article, edition and ledger rules.
+- [Editorial orchestrator](docs/editorial/ORCHESTRATOR.md) — research-to-review workflow.
+- [Visual constitution](docs/editorial/VISUAL_CONSTITUTION_V1.md) — image standards and constraints.
+- [Technical decisions](docs/TECHSTACK.md) — architecture and operational boundaries.
+- [Security policy](SECURITY.md) — responsible vulnerability reporting.
+
+## License and attribution
+
+The software is licensed under [MIT](LICENSE). Parts of the tooling and editorial styles were adapted from [Daily AI Pulse](https://github.com/GadDev/daily-ai-pulse/tree/6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64), with its software notices retained. Source articles, artwork and editorial decisions were not imported.
