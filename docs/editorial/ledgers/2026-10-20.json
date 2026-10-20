@@ -1,0 +1,549 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-20",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "445b6368ef3a22268b22912de558534be92a35cd",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-17T12:03:03.037Z",
+    "window_end": "2026-10-20T12:03:03.037Z",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "Research/evaluation: PubMed AI October 2026 and October 20; Lancet FAHR-Face; npj Digital Medicine GUARD-LGG; independent expert response",
+        "source": "Web search systems 1/2, publisher-index results, arXiv, Science Media Centre",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "FAHR journal, June 2025 preprint and independent expert criticism checked; GUARD journal index and November 2025 conference abstract compared. Both retained watch because substantive novelty unresolved; publisher full text returned errors."
+      },
+      {
+        "query": "Regulatory/official: October 19-20 FDA AI devices/safety, EMA AI, EU Commission, MHRA policy, official EU health AI pages",
+        "source": "FDA/EMA/EU authority discovery",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "No fresh, directly AI-related, fully evidenced regulatory action qualified for today's story; old FDA GenAI discussion and EU calls not relabelled."
+      },
+      {
+        "query": "Specialist health and digital-health reports: Fierce Healthcare AI and digital, MedTech Dive, FirstWord HealthTech, Life Science Daily",
+        "source": "Specialist outlet search and source pages",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "No additional new, independently verifiable high-scoring development identified in bounded sweep. Some individual sites not exhaustively traversed."
+      },
+      {
+        "query": "Pharma AI: 20 October AstraZeneca Oracle clinical-trial collaboration, both original press releases, historical AstraZeneca-insitro 15 October",
+        "source": "AstraZeneca and Oracle direct corporate records, pharma reporting",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "Inspected 20 October announcements from both parties; novel nonbinding term sheet and planned M42 hypertension programme confirmed; old insitro agreement excluded as fresh item."
+      },
+      {
+        "query": "Biomedical/reusable artifacts: FAHR-Face release checkpoints, preprint, model card; Oct 20 RNA editing and ocular classification research",
+        "source": "Hugging Face author model card and Nature publisher index",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "FAHR survival checkpoint not public; older 2025 preprint supplied equivalent clinical signal. Other papers' full text not inspected; no supported additional article."
+      },
+      {
+        "query": "European/local-language and negative results: EU digital-health notice, French/Spanish oncology coverage, UK clinical reporting, searches for contrary/withdrawn evidence",
+        "source": "Multilingual web search and official European source checks",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "Spanish and UK coverage corroborated FAHR reporting but no new Europe-local operational change qualified. No comprehensive national-language or correction surveillance claimed."
+      },
+      {
+        "query": "Dedup: October 19 merged ledger and story, current main, canonical content branch and date-specific ledger",
+        "source": "GadDev/healthtech-ai-pulse GitHub",
+        "accessed_at": "2026-10-20T12:03:03.037Z",
+        "outcome": "No canonical 20 October branch or ledger at preflight; inspected October 19 selected and watches. Source-level historical FAHR preprint and GUARD abstract retained rather than ignoring older coverage."
+      }
+    ],
+    "coverage_gaps": [
+      "Bounded 72-hour source search is not exhaustive; Europe PMC bulk API, all national authorities, every specialist paywall and the full 30-day watch review were not completed. Research completed_at intentionally null.",
+      "The Lancet full text returned 403; npj Digital Medicine GUARD article redirected to unavailable publisher login. Abstract/index, institutional release and 2025 preprint/conference comparison were used to watch, not publish these studies.",
+      "No independent evaluation, project identifier or released AI product was found for the selected non-binding partnership; sponsor announcements only establish partnership status and plans.",
+      "Date-only publication records retain day precision; one third-party bibliographic index displayed an inconsistent future 2027 date for FAHR, not used as the event date.",
+      "No local Node test/build execution was possible because the execution environment was unavailable. Github Actions checks, if they run, are a separate handoff and not yet evidence of success."
+    ],
+    "completed_at": null
+  },
+  "candidates": [
+    {
+      "id": "2026-10-20-astrazeneca-oracle-trials-agreement",
+      "decision": "selected",
+      "title": "AstraZeneca and Oracle sign non-binding AI clinical research agreement",
+      "desk": "pharma",
+      "topics": [
+        "clinical-trials",
+        "health-operations",
+        "governance",
+        "privacy"
+      ],
+      "entities": [
+        "AstraZeneca",
+        "Oracle",
+        "M42"
+      ],
+      "event_date": "2026-10-20",
+      "event_date_reason": "Event date explicitly identified from the issuing source, not assigned from discovery.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Date is from the inspected primary record; time not established.",
+      "discovered_at": "2026-10-20T12:03:03.037Z",
+      "what_changed": "Both firms announced a non-binding term-sheet agreement to explore AI and real-world-data uses in trial recruitment, safety monitoring and care pathways. A first hypertension programme with M42 in Abu Dhabi is proposed but not reported as operating.",
+      "why_now": "The new agreement was announced on 20 October 2026. Its legal status and governance preconditions matter now; no efficacy, rollout or patient-benefit claim is made.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+      "sources": [
+        {
+          "id": "astrazeneca",
+          "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+          "canonical_url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+          "publisher": "AstraZeneca",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Agreement party; sponsor-authored statement"
+        },
+        {
+          "id": "oracle",
+          "url": "https://www.oracle.com/middleeast/news/announcement/oracle-and-astrazeneca-partner-to-advance-ai-enabled-healthcare-2026-10-20/",
+          "canonical_url": "https://www.oracle.com/middleeast/news/announcement/oracle-and-astrazeneca-partner-to-advance-ai-enabled-healthcare-2026-10-20/",
+          "publisher": "Oracle",
+          "role": "supporting",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Agreement party; corporate confirmation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "astrazeneca-oracle-ai-trial-operations-term-sheet-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named plan for AI-assisted trial matching and pharmacovigilance alongside real-world clinical data.",
+        "non_ai_exception": null,
+        "reader_consequence": "Trial operators can track the actual first project, agreed endpoints, consent/data governance and measured recruitment/safety outcomes before relying on claims."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Inspected merged 19 October ledger and article, current main stories and candidate identities, and searched the canonical 20 October branch/ledger; no earlier publication of this partnership identified. Bounded check of relevant current history, not a global exhaustive search.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select a short, explicitly non-efficacy industry pulse: two official primary parties verify the new signed-but-nonbinding agreement and operational implications. No claimed clinical benefit or product availability.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [
+        {
+          "id": "nonbinding-clinical-research-agreement",
+          "type": "pharma-progress",
+          "supported_statement": "AstraZeneca and Oracle announced a non-binding term-sheet collaboration to explore AI and real-world data in trial matching, safety monitoring and care pathways, naming hypertension work with M42 in Abu Dhabi as the first proposed programme.",
+          "source_ids": [
+            "astrazeneca",
+            "oracle"
+          ],
+          "locators": [
+            "AstraZeneca release: opening partnership section and paragraph on initial Abu Dhabi programme; final paragraph states non-binding term sheet and per-project approvals.",
+            "Oracle release: opening section on a non-binding agreement and Connecting Research and Care section on planned governance and outcome measures."
+          ],
+          "evidence_scope": "Existence, status and stated scope of a corporate research-planning agreement only; no implementation, operational effect, patient benefit or clinical efficacy.",
+          "limitations": [
+            "Commercial parties are the only directly inspected originators; no project implementation results or independently verified clinical outcomes published.",
+            "Any individual proposed programme may not proceed; term sheet is non-binding."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-20T12:03:03.037Z",
+            "checked_by": "ChatGPT research assistant (source audit; no human editorial approval)",
+            "supported_scope": "Two inspected 20 Oct company releases verify the announced non-binding agreement, proposed domains and planned first programme; they do not verify results.",
+            "reason": "Directly read both official partner announcements including AstraZeneca's non-binding and governance caveats; restrict every claim to reported intentions and signed term sheet."
+          },
+          "study": {
+            "design": "Not a research study; announcement of a non-binding collaboration agreement.",
+            "setting": "Planned international work, with hypertension care and research in Abu Dhabi named first; actual operating sites and launch dates not disclosed.",
+            "population_or_dataset": "No enrolled patient population or research dataset analysed or quantified in announcement.",
+            "sample_sizes": [
+              {
+                "n": null,
+                "unit": "patients, clinical trials or participating sites",
+                "reason": "No sample size or actual enrolment reported; proposal stage."
+              }
+            ],
+            "comparator": "None; no trial or operations comparator reported.",
+            "primary_endpoints": [
+              "No evaluated prespecified endpoint. Companies propose to agree on future outcome measures per project."
+            ],
+            "secondary_exploratory_endpoints": [
+              "Proposed future areas include enrolment matching, earlier diagnosis, guideline adherence, safety monitoring and real-world evidence."
+            ],
+            "results": [
+              {
+                "endpoint": "Research collaboration status",
+                "metric": "Corporate agreement milestone",
+                "value": "Non-binding term-sheet agreement announced 20 October 2026",
+                "units": "one corporate partnership announcement",
+                "comparator": "Not applicable; no evaluated intervention",
+                "uncertainty": "Nonbinding; launch, enrolment, efficiency and clinical outcomes unreported.",
+                "source_id": "astrazeneca",
+                "locator": "Final release paragraph: 'signed a non-binding term-sheet agreement'; first programme paragraph references M42."
+              }
+            ],
+            "follow_up": "No reported follow-up, outcomes or implementation timeline.",
+            "harms": "No clinical risk measurements; patient-data safeguards are future project conditions, not a demonstrated safety outcome.",
+            "analysis_notes": "The populated study schema describes source status; it must not be read as a study. No efficacy percentage or improvement estimate exists.",
+            "applicability": "Future research-operations planning only; not evidence for deploying software in patient care."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 2,
+        "claim_support": 4,
+        "relevance": 4,
+        "material_change": 3,
+        "durability": 2,
+        "weighted_total": 80,
+        "rationales": {
+          "significance": "Useful, narrow operational/governance signal for trial planners, not an achieved efficiency or clinical change.",
+          "claim_support": "Both company parties directly confirm the non-binding agreement, proposed scope and caveats; neither establishes outcomes.",
+          "relevance": "Directly addresses pharma sponsors and health systems examining clinical-trial AI governance and recruitment.",
+          "material_change": "New joint signed term sheet and named first proposed hypertension programme; no launched system or decisive effectiveness result.",
+          "durability": "Relevant for follow-up over coming weeks, contingent on projects proceeding."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-20T12:03:03.037Z",
+        "checked_by": "ChatGPT research assistant (source audit; no human editorial approval)",
+        "supported_scope": "Non-binding research collaboration announcement and specific proposed initiatives only. No realised workflow or therapeutic results.",
+        "reason": "Inspected both AstraZeneca and Oracle official releases and reconciled wording; retained privacy-governance and project-approval caveats."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-20T12:03:03.037Z",
+          "reason": "Select a short, explicitly non-efficacy industry pulse: two official primary parties verify the new signed-but-nonbinding agreement and operational implications. No claimed clinical benefit or product availability."
+        }
+      ],
+      "format": "pulse",
+      "depth": "general",
+      "evidence": {
+        "publication_status": "20 October 2026 joint company announcements of a non-binding term sheet; not a trial, deployment report or published effectiveness study.",
+        "study_design": "No study reported. Planned commercial/clinical research collaboration only.",
+        "validation_setting": "No evaluated clinical deployment reported. First proposed programme concerns hypertension care and research in Abu Dhabi with M42; US, Middle East and European projects are discussed as plans.",
+        "independent_validation": "None. Both inspected announcements come from agreement parties; no independent trial-operations results disclosed.",
+        "clinical_utility": "not-assessed",
+        "access_level": "announcement-only",
+        "funding": "Financial terms and programme budgets not disclosed in inspected announcement.",
+        "conflicts_of_interest": "AstraZeneca and Oracle are the commercial parties promoting the collaboration; their forward-looking claims are not independent evidence.",
+        "corrections_retractions": "No corrective notice identified on the inspected two party announcements at editorial preparation. Not a continuous or exhaustive notice search.",
+        "contradictory_findings": [
+          "No contrary outcome results identified in bounded search; no tested outcomes were available to compare.",
+          "The two corporate announcements emphasize possible benefits but present no realised recruitment, screening, safety-monitoring or patient-outcome measurements."
+        ],
+        "limitations": [
+          "Term sheet is explicitly non-binding. Each project still requires separate legal, privacy, regulatory, ethics and institutional approval.",
+          "No AI application version, public release, trial registry ID, participating sample, comparator, predefined endpoints or performance results disclosed.",
+          "M42 hypertension programme is described as first planned programme, not a verified rollout or treatment improvement.",
+          "Statements about faster diagnosis, more enrolment or improved safety are proposed goals rather than demonstrated outcomes."
+        ],
+        "applicability": "Relevant as a planning signal for research sponsors and health systems considering AI-assisted trial operations. Does not establish clinical validity, EU regulatory authorisation, tool availability or patient benefit."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-20-fahr-face-journal-release",
+      "decision": "watch",
+      "title": "FAHR-Face cancer-prognosis publication largely repeats 2025 preprint",
+      "desk": "clinical-ai",
+      "topics": [
+        "clinical-prediction",
+        "evaluation",
+        "fairness",
+        "reproducibility"
+      ],
+      "entities": [
+        "Mass General Brigham",
+        "The Lancet Digital Health"
+      ],
+      "event_date": "2026-10-19",
+      "event_date_reason": "Journal report was published at 23:30 UK time 19 October; this is 00:30 on the 20th in Luxembourg. Preprint dates to June 2025.",
+      "source_publication_date": "2026-10-19",
+      "source_date_reason": "19 October publishing notice from Science Media Centre; 2027 bibliographic record on one aggregator conflicts and is not used as event date.",
+      "discovered_at": "2026-10-20T12:03:03.037Z",
+      "what_changed": "Peer-reviewed journal record and fresh expert commentary on FAHR-FaceAge and FAHR-FaceSurvival; 2025 preprint already reported ~5.1-year MAE and adjusted hazard ratio ~3.22, near published ~3.23.",
+      "why_now": "The new journal record prompted headlines, but previously disclosed model-performance results lack a verified substantive delta; direct Lancet full text returned 403.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+      "sources": [
+        {
+          "id": "journal",
+          "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+          "canonical_url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+          "publisher": "The Lancet Digital Health",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-19",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": null,
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; full text inaccessible from current tool"
+        },
+        {
+          "id": "preprint",
+          "url": "https://arxiv.org/abs/2506.14909",
+          "canonical_url": "https://arxiv.org/abs/2506.14909",
+          "publisher": "arXiv",
+          "role": "context",
+          "source_type": "preprint",
+          "publication_date": "2025-06-17",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; older substantially same estimates"
+        },
+        {
+          "id": "hospital",
+          "url": "https://news.massgeneralbrigham.org/en/ai-facial-recognition-tools-assess-age-cancer-survival-risk",
+          "canonical_url": "https://news.massgeneralbrigham.org/en/ai-facial-recognition-tools-assess-age-cancer-survival-risk",
+          "publisher": "Mass General Brigham",
+          "role": "supporting",
+          "source_type": "institutional-announcement",
+          "publication_date": "2026-10-19",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Study-affiliated institutional media release"
+        },
+        {
+          "id": "expert",
+          "url": "https://www.sciencemediacentre.org/expert-reaction-to-study-testing-an-ai-tool-using-a-face-photograph-to-predict-cancer-survival/",
+          "canonical_url": "https://www.sciencemediacentre.org/expert-reaction-to-study-testing-an-ai-tool-using-a-face-photograph-to-predict-cancer-survival/",
+          "publisher": "Science Media Centre",
+          "role": "independent",
+          "source_type": "expert-commentary",
+          "publication_date": "2026-10-19",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent expert critique; no study replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fahr-face-cancer-survival-existing-preprint",
+        "doi": "10.1016/j.landig.2026.101056",
+        "pmid": "42897078",
+        "preprint": "arxiv:2506.14909",
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "AI cancer survival-risk stratification from facial photos.",
+        "non_ai_exception": null,
+        "reader_consequence": "Check incremental evidence, bias and clinical utility against original preprint before publishing or using prognostic claims."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "No corresponding prior HealthTech AI Pulse story found; June 2025 preprint already presented the same main result, so source novelty is unresolved.",
+        "publication_status": "dedup-unverified"
+      },
+      "reason": "Watch rather than recycle 2025 preprint estimates as 20 October new evidence. Need full-text comparison and corrected subgroup detail before a new story.",
+      "promote_when": [
+        "Compare peer-reviewed full methods/results and preprint (sample changes, endpoints, hazard ratios and external cohort); confirm a consequential new finding beyond journal status.",
+        "Resolve actual journal publication metadata, subgroup coverage and contradiction checks; require enough evidence for bounded patient-risk reporting."
+      ],
+      "next_review_at": "2026-10-27",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Discovery/abstract-only review; no publication approval.",
+        "reason": "Pending detailed source comparison before promotion."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-20T12:03:03.037Z",
+          "reason": "Watch rather than recycle 2025 preprint estimates as 20 October new evidence. Need full-text comparison and corrected subgroup detail before a new story."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-guard-lgg-journal-update",
+      "decision": "watch",
+      "title": "GUARD-LGG radiotherapy prediction paper overlaps 2025 conference results",
+      "desk": "clinical-ai",
+      "topics": [
+        "medical-imaging",
+        "clinical-prediction",
+        "evaluation"
+      ],
+      "entities": [
+        "Beijing Tiantan Hospital",
+        "npj Digital Medicine"
+      ],
+      "event_date": "2026-10-20",
+      "event_date_reason": "Event date explicitly identified from the issuing source, not assigned from discovery.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Date is from the inspected primary record; time not established.",
+      "discovered_at": "2026-10-20T12:03:03.037Z",
+      "what_changed": "20 October journal paper reports retrospective, external and prospective-set AUCs; a November 2025 published Neuro-Oncology conference abstract had virtually identical cohort sizes and performance.",
+      "why_now": "A current publisher record surfaced, but overlapping 2025 results and unavailable full text prevent confirming new methods or a material improvement.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03112-4",
+      "sources": [
+        {
+          "id": "journal",
+          "url": "https://www.nature.com/articles/s41746-026-03112-4",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03112-4",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": null,
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Research authors; publisher full text unavailable via current tool"
+        },
+        {
+          "id": "abstract",
+          "url": "https://academic.oup.com/neuro-oncology/article/27/Supplement_5/v274/8319485",
+          "canonical_url": "https://academic.oup.com/neuro-oncology/article/27/Supplement_5/v274/8319485",
+          "publisher": "Neuro-Oncology",
+          "role": "context",
+          "source_type": "conference-abstract",
+          "publication_date": "2025-11-11",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Same study authors and cohort reported in 2025"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "guard-lgg-glioma-radiotherapy-radiomics",
+        "doi": "10.1038/s41746-026-03112-4",
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT06454097",
+        "cohort": "Beijing Tiantan LGG plus five external centres, prospective set of 328",
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Machine-learning radiomics estimates radiotherapy response before treatment.",
+        "non_ai_exception": null,
+        "reader_consequence": "Differentiate same-cohort prospective test and model discrimination from demonstrated effects on decisions and patient outcomes."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Earlier 2025 Neuro-Oncology conference record found with same trial/sample identity; no earlier HealthTech article found; novelty unverified.",
+        "publication_status": "dedup-unverified"
+      },
+      "reason": "Watch until accessible journal methods and supplement are compared with 2025 abstract; do not interpret an AUC as improvement in survival.",
+      "promote_when": [
+        "Inspect journal full text and supplement lawfully; compare 2025 conference cohort, splits, endpoints and numerical differences.",
+        "Check ClinicalTrials.gov protocol/results and adverse outcomes; distinguish prospective model test from clinical implementation."
+      ],
+      "next_review_at": "2026-10-27",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Discovery/abstract-only review; no publication approval.",
+        "reason": "Pending detailed source comparison before promotion."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-20T12:03:03.037Z",
+          "reason": "Watch until accessible journal methods and supplement are compared with 2025 abstract; do not interpret an AUC as improvement in survival."
+        }
+      ]
+    }
+  ],
+  "exclusions": [],
+  "publication": {
+    "mode": "publication",
+    "reason": "One new scoped industry pulse selected (80/100) on signed-but-nonbinding trial operations exploration. Two studies held on watch because near-identical 2025 preprint/conference results undermine novelty and direct full-text extraction was unavailable. English-only, text-only edition. All source claims limited to inspected 20 October company statements. Draft PR requires human review and passing CI; no local verification claimed.",
+    "story_ids": [
+      "2026-10-20-astrazeneca-oracle-trials-agreement"
+    ],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": "src/content/pulse/2026-10-20.md",
+    "checks": [
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-20.json",
+        "status": "not-run",
+        "tested_revision": "445b6368ef3a22268b22912de558534be92a35cd",
+        "execution": "Local runner not available during manual preparation; must be executed on resulting PR head by CI.",
+        "evidence": "Structured schema and cross-file relationships reviewed manually against repository validator source; not a substitute for actual validator execution."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-20.json",
+        "status": "not-run",
+        "tested_revision": "445b6368ef3a22268b22912de558534be92a35cd",
+        "execution": "Local runner unavailable; text-only story specifies illustration.mode=none.",
+        "evidence": "No binary illustration asset or generated-art review referenced."
+      },
+      {
+        "command": "npm run verify",
+        "status": "not-run",
+        "tested_revision": "445b6368ef3a22268b22912de558534be92a35cd",
+        "execution": "Local Node execution unavailable; GitHub CI to validate exact PR head.",
+        "evidence": "No success claimed before passing CI."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "not-run",
+        "tested_revision": "445b6368ef3a22268b22912de558534be92a35cd",
+        "execution": "Local browser execution unavailable; GitHub workflow expected to run browser smoke tests.",
+        "evidence": "No preview/browser inspection claimed."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "manual-healthtech-2026-10-20-issue-pr",
+      "started_at": "2026-10-20T12:03:03.037Z",
+      "completed_at": "2026-10-20T12:03:03.037Z",
+      "phases": [
+        "contracts-read",
+        "canonical-branch-deduplication",
+        "bounded-five-lane-discovery",
+        "two-party-source-verification",
+        "historical-novelty-comparison",
+        "draft-article",
+        "issue-assembled",
+        "CI-handoff-pending"
+      ],
+      "outcome": "Manual editorial package composed; local execution unavailable, requires PR CI and human review."
+    }
+  ],
+  "active_run": null,
+  "human_overrides": []
+}
