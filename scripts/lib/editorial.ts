@@ -9,7 +9,7 @@ import {
   reviewSchema,
   weightedScore,
 } from '../../src/lib/editorial-schema.ts';
-import { documents, markdown, checkContent } from './content.mjs';
+import { documents, markdown, checkContent } from './content.ts';
 import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.ts';
 
 type Ledger = z.infer<typeof ledgerSchema>;
@@ -252,7 +252,7 @@ export function checkEditorial(
         throw new Error(`${id}: underlying development already covered without material delta`);
       for (const key of keys) identities.set(key, [...(identities.get(key) ?? []), id]);
     }
-  const allStories = documents(`${root}/src/content/stories`);
+  const allStories = documents<z.infer<typeof storySchema>>(`${root}/src/content/stories`);
   for (const story of allStories) {
     const data = storySchema.parse(story.data);
     if (/FIXTURE ONLY|SYNTHETIC TEST DATA/.test(story.body))
@@ -290,10 +290,13 @@ export function checkEditorial(
     if (ledger.publication.mode === 'ledger-only' && existsSync(issue))
       throw new Error('Ledger-only batch has issue');
     if (ledger.publication.mode === 'publication') {
-      const refs = markdown(readFileSync(issue, 'utf8')).data;
+      const refs = markdown(readFileSync(issue, 'utf8')).data as {
+        sections: { stories: string[] }[];
+        mustKnow?: string;
+      };
       if (
         !isDeepStrictEqual(
-          [...refs.sections.flatMap((s: { stories: string[] }) => s.stories)].sort(),
+          [...refs.sections.flatMap((s) => s.stories)].sort(),
           [...ledger.publication.story_ids].sort(),
         ) ||
         (refs.mustKnow ?? null) !== ledger.publication.must_know_story_id

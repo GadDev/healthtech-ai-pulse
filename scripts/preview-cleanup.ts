@@ -7,9 +7,21 @@ export const cleanupPolicy = {
   base: 'main',
 };
 
-const positiveInteger = (value) => Number.isSafeInteger(value) && value > 0;
+type CleanupEvent = {
+  action?: string;
+  repository?: { id?: number; owner?: { id?: number }; full_name?: string };
+  pull_request?: {
+    number?: number;
+    state?: string;
+    base?: { ref?: string; repo?: { id?: number } };
+    head?: { repo?: { id?: number } };
+  };
+};
 
-export function resolveCleanup(event) {
+const positiveInteger = (value: unknown): value is number =>
+  typeof value === 'number' && Number.isSafeInteger(value) && value > 0;
+
+export function resolveCleanup(event: CleanupEvent) {
   const repository = event.repository;
   const pr = event.pull_request;
 
@@ -35,16 +47,16 @@ export function resolveCleanup(event) {
 }
 
 function main() {
-  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH!, 'utf8'));
   const result = resolveCleanup(event);
-  appendFileSync(process.env.GITHUB_OUTPUT, `eligible=${result.eligible}\n`);
+  appendFileSync(process.env.GITHUB_OUTPUT!, `eligible=${result.eligible}\n`);
   if (result.eligible) {
     appendFileSync(
-      process.env.GITHUB_OUTPUT,
+      process.env.GITHUB_OUTPUT!,
       `pr_number=${result.prNumber}\nchannel=${result.channel}\n`,
     );
   } else {
-    appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Cleanup skipped: ${result.reason}\n`);
+    appendFileSync(process.env.GITHUB_STEP_SUMMARY!, `Cleanup skipped: ${result.reason}\n`);
   }
 }
 

@@ -12,7 +12,7 @@ or rollback acceptance. Platform source: GadDev/daily-ai-pulse at
 
 Use Astro, TypeScript, Markdown content collections, plain Astro components and CSS, Pagefind, RSS, sitemap generation, Oxlint, Oxfmt, Playwright, and axe. Keep one canonical article body and issue manifests containing references. Do not add React, a database, a CMS, a vector store, or a queue merely to transpose the publication.
 
-Start from the inspected source lockfile and compatible Node/tool versions, then run an installation and compatibility check in the implementation PR. The source specifies Node 22.22.3, Astro ^7.3.8, TypeScript 6.0.3, and Pagefind 1.5.2. These are verified source settings, not a promise that an untested copy builds. The current project targets Node.js 24 LTS (24.11.0 or newer within 24.x); `.nvmrc` selects Node 24 for local development and all GitHub Actions Node setup steps. Preserve the MIT notice for reused code. Do not import source articles, original artwork, historical ledgers, or translation review history.
+Start from the inspected source lockfile and compatible Node/tool versions, then run an installation and compatibility check in the implementation PR. The source specifies Node 22.22.3, Astro ^7.3.8, TypeScript 6.0.3, and Pagefind 1.5.2. These are verified source settings, not a promise that an untested copy builds. The current project targets Node.js 24 LTS (24.12.0 or newer within 24.x); `.nvmrc` selects Node 24 for local development and all GitHub Actions Node setup steps. Preserve the MIT notice for reused code. Do not import source articles, original artwork, historical ledgers, or translation review history.
 
 Keep independent repositories. Copy an explicitly listed platform subset once, recording its source commit. Maintain a short ported-components list in this document and review upstream improvements monthly. Introduce a shared package only after at least three concrete duplicated maintenance changes justify its release and coordination cost. Separate editorial policy and content remain valuable boundaries.
 
@@ -59,13 +59,14 @@ Use npm and package-lock.json. Implemented commands:
 
 ```bash
 npm ci
+npm run scripts:check
 npm run editorial:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run illustration:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run verify
 npm run test:e2e
 ```
 
-verify includes lint, format, all-ledger schema and relationship validation, content integrity, Astro check, static build, and Pagefind. PR CI validates every changed dated ledger explicitly, not only the lexicographically latest file. Regression tests cover selection/withholding, every claim type's conditional evidence fields, evidence-card rendering, fixture leakage, deduplication identities, empty/all-withheld batches, concurrent ownership, reruns, and source-update handling. Browser checks cover home, article, issue, search, keyboard/focus, evidence-card overflow, and representative 320/375/960/1280 widths. Passing axe does not establish complete accessibility.
+verify includes lint, format, strict Node-script TypeScript checking, all-ledger schema and relationship validation, content integrity, Astro check, static build, and Pagefind. Node 24 runs erasable `.ts` modules without a separate transpiler; small `.mjs` command wrappers remain JavaScript. Runtime schemas and API identity checks still validate untrusted inputs. PR CI validates every changed dated ledger explicitly, not only the lexicographically latest file. Regression tests cover selection/withholding, every claim type's conditional evidence fields, evidence-card rendering, fixture leakage, deduplication identities, empty/all-withheld batches, concurrent ownership, reruns, and source-update handling. Browser checks cover home, article, issue, search, keyboard/focus, evidence-card overflow, and representative 320/375/960/1280 widths. Passing axe does not establish complete accessibility.
 
 No network URL availability test should make routine builds flaky. Syntax and claim locators are deterministic checks; source accessibility is a dated editorial observation with manual retries. A URL returning HTTP 200 does not validate its claims. CI must reject publishable source/claim errors and leaked watch/rejected/withheld records. A ledger-only recovery batch may contain explicit source failures but no story or issue.
 

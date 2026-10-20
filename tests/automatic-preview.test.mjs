@@ -8,7 +8,7 @@ import {
   policy,
   resolveRequest,
   validateArtifact,
-} from '../scripts/automatic-preview.mjs';
+} from '../scripts/automatic-preview.ts';
 
 const head = 'a'.repeat(40);
 const base = 'b'.repeat(40);

@@ -3,9 +3,27 @@ import { basename, extname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { chromium } from '@playwright/test';
 
-export function parseContactSheetArguments(args) {
-  const options = { references: [], candidates: [], crop: 'wide' };
-  const names = new Map([
+interface ContactSheetOptions {
+  storyId: string;
+  output: string;
+  crop: 'wide' | 'square' | 'landscape';
+  references: string[];
+  candidates: string[];
+  help?: boolean;
+}
+
+type ImageRecord = { label: string; path: string; name: string; url: string };
+
+export function parseContactSheetArguments(args: string[]): ContactSheetOptions {
+  const options = {
+    references: [] as string[],
+    candidates: [] as string[],
+    crop: 'wide',
+    storyId: '',
+    output: '',
+    help: false,
+  };
+  const names = new Map<string, 'storyId' | 'output' | 'crop'>([
     ['--story', 'storyId'],
     ['--out', 'output'],
     ['--crop', 'crop'],
@@ -24,12 +42,12 @@ export function parseContactSheetArguments(args) {
       else {
         if (seen.has(arg)) throw new Error(`Repeated option: ${arg}`);
         seen.add(arg);
-        options[names.get(arg)] = value;
+        options[names.get(arg)!] = value;
       }
     } else if (arg.startsWith('-')) throw new Error(`Unknown option: ${arg}`);
     else options.candidates.push(arg);
   }
-  if (options.help) return options;
+  if (options.help) return options as ContactSheetOptions;
   if (
     !/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(options.storyId || '') ||
     !options.output ||
@@ -44,20 +62,22 @@ export function parseContactSheetArguments(args) {
     throw new Error('Contact sheet must not overwrite an input image.');
   if (existsSync(output))
     throw new Error('Contact sheet output already exists; choose a new review path.');
-  return options;
+  return options as ContactSheetOptions;
 }
 
-function imageRecord(input, label) {
+function imageRecord(input: string, label: string): ImageRecord {
   const path = resolve(input);
   if (!existsSync(path)) {
     throw new Error(`Image does not exist: ${path}`);
   }
-  const mimeType = {
-    '.webp': 'image/webp',
-    '.png': 'image/png',
-    '.jpg': 'image/jpeg',
-    '.jpeg': 'image/jpeg',
-  }[extname(path).toLowerCase()];
+  const mimeType: string | undefined = (
+    {
+      '.webp': 'image/webp',
+      '.png': 'image/png',
+      '.jpg': 'image/jpeg',
+      '.jpeg': 'image/jpeg',
+    } as Record<string, string>
+  )[extname(path).toLowerCase()];
   if (!mimeType) throw new Error(`Unsupported image format: ${path}`);
   return {
     label,
@@ -67,7 +87,7 @@ function imageRecord(input, label) {
   };
 }
 
-function cards(records, type) {
+function cards(records: ImageRecord[], type: 'reference' | 'candidate') {
   return records
     .map(
       (record) => `
@@ -80,7 +100,7 @@ function cards(records, type) {
     .join('');
 }
 
-function escapeHtml(value) {
+function escapeHtml(value: string) {
   return value
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -88,7 +108,7 @@ function escapeHtml(value) {
     .replaceAll('"', '&quot;');
 }
 
-export function buildContactSheetHtml(options) {
+export function buildContactSheetHtml(options: ContactSheetOptions) {
   if (
     !Array.isArray(options.candidates) ||
     !options.candidates.length ||
@@ -193,7 +213,7 @@ ${references.length ? `<section><h2>Supplied comparison references</h2><div clas
 </html>`;
 }
 
-export async function renderContactSheet(options) {
+export async function renderContactSheet(options: ContactSheetOptions) {
   if (extname(options.output).toLowerCase() !== '.png')
     throw new Error('Contact sheet output must be PNG.');
   // Recheck output ownership when invoked programmatically as well as through CLI.
@@ -209,9 +229,12 @@ export async function renderContactSheet(options) {
     });
     await page.route('**/*', (route) => route.abort());
     await page.setContent(html, { waitUntil: 'load' });
-    const loaded = await page
-      .locator('img')
-      .evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0));
+    const loaded = await page.locator('img').evaluateAll((images) =>
+      images.every((element) => {
+        const image = element as HTMLImageElement;
+        return image.complete && image.naturalWidth > 0;
+      }),
+    );
     if (!loaded) throw new Error('Contact sheet contains an image that could not be decoded.');
     const bytes = await page.screenshot({ fullPage: true, type: 'png' });
     writeFileSync(resolve(options.output), bytes, { flag: 'wx' });
@@ -230,7 +253,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
       );
     else console.log(`Contact sheet written to ${await renderContactSheet(options)}`);
   } catch (error) {
-    console.error(error.message);
+    console.error(error instanceof Error ? error.message : String(error));
     process.exitCode = 1;
   }
 }

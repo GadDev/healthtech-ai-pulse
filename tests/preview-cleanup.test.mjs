@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { cleanupPolicy, resolveCleanup } from '../scripts/preview-cleanup.mjs';
+import { cleanupPolicy, resolveCleanup } from '../scripts/preview-cleanup.ts';
 
 function fixture() {
   const repository = {

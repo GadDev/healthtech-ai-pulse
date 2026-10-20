@@ -1,8 +1,19 @@
 import { appendFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
-import { policy } from './automatic-preview.mjs';
+import { policy } from './automatic-preview.ts';
 
-export function validateManualRequest(pr, number, expectedHead) {
+type PreviewPR = {
+  number?: number;
+  state?: string;
+  base?: { ref?: string; repo?: { id?: number; owner?: { id?: number }; full_name?: string } };
+  head?: { sha?: string; repo?: { id?: number; full_name?: string } };
+};
+
+export function validateManualRequest(
+  pr: PreviewPR,
+  number: number | string,
+  expectedHead?: string,
+) {
   if (!/^[1-9][0-9]*$/.test(String(number)) || !Number.isSafeInteger(Number(number)))
     throw new Error('PR number must be a positive safe integer.');
   if (
@@ -43,15 +54,15 @@ async function main() {
   if (!response.ok) throw new Error(`PR metadata request failed: ${response.status}`);
   const { headSha, channel } = validateManualRequest(
     await response.json(),
-    number,
+    number!,
     process.env.EXPECTED_HEAD_SHA,
   );
-  appendFileSync(process.env.GITHUB_OUTPUT, `head_sha=${headSha}\nchannel=${channel}\n`);
+  appendFileSync(process.env.GITHUB_OUTPUT!, `head_sha=${headSha}\nchannel=${channel}\n`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
-    console.error(error.message);
+    console.error(error instanceof Error ? error.message : String(error));
     process.exitCode = 1;
   });
 }

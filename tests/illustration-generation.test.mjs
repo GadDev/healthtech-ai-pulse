@@ -22,12 +22,12 @@ import {
 import {
   resolveIllustrationGeneration,
   parseGenerationArguments,
-} from '../scripts/resolve-illustration-generation.mjs';
+} from '../scripts/resolve-illustration-generation.ts';
 import { validateIllustration } from '../scripts/lib/editorial.ts';
 import {
   parseContactSheetArguments,
   buildContactSheetHtml,
-} from '../scripts/build-illustration-contact-sheet.mjs';
+} from '../scripts/build-illustration-contact-sheet.ts';
 
 function setup(t, mode = 'generated') {
   const root = mkdtempSync(join(tmpdir(), 'healthtech-generation-'));
@@ -219,7 +219,7 @@ test('path traversal, absolute paths and escaping symlinks are rejected', (t) =>
 });
 test('CLI reports decisions as JSON and uses a failing exit code for blocked input', (t) => {
   const f = setup(t);
-  const path = resolve('scripts/resolve-illustration-generation.mjs');
+  const path = resolve('scripts/resolve-illustration-generation.ts');
   const call = (args) =>
     spawnSync(process.execPath, ['--no-warnings', path, ...args], {
       cwd: f.root,

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync, readFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { renderContactSheet } from '../../scripts/build-illustration-contact-sheet.mjs';
+import { renderContactSheet } from '../../scripts/build-illustration-contact-sheet.ts';
 
 const png = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGPo8jb9DwAEdwIKJbSpBgAAAABJRU5ErkJggg==',
