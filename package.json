@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "icons:generate": "node scripts/generate-icons.mjs",
     "check": "astro check",
     "content:check": "node scripts/validate-content.mjs",
     "lint": "oxlint --deny-warnings .",
@@ -43,6 +44,7 @@
     "@playwright/test": "1.64.0",
     "oxfmt": "0.74.0",
     "oxlint": "1.89.0",
-    "pagefind": "1.5.2"
+    "pagefind": "1.5.2",
+    "sharp": "0.35.5"
   }
 }

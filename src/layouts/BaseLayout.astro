@@ -36,7 +36,11 @@ const path = Astro.url.pathname;
     <meta name="theme-color" content="#ffffff" />
     {!configured && <meta name="robots" content="noindex, follow" />}
     {configured && <link rel="canonical" href={canonical} />}
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="HealthTech Pulse" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title="HealthTech AI Pulse" href="/rss.xml" />
   </head>
   <body>
