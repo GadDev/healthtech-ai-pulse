@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-20-astrazeneca-oracle-trials-agreement",
+  "story_source_sha256": "9c14730abc2c4837511a647041b2bd26686a1a4d1ec86971edce4f10af800c74",
+  "brief_sha256": "f0fb771af57f94b73951a9b606c40b547ef2d7d39f533dd443b11423d88c0884",
+  "policy_sha256": "d98127f3092da042eae86ae8226f828ec8a990bd87071f9b01e0bfa76eaf1d50",
+  "generation_key": "29ac3a1477ebab90c6e7e2d821246c9e5e7c7076336e8239535b5fb5177d58eb",
+  "candidate_count": 2,
+  "generator": "image_gen.imagegen",
+  "model_snapshot": null,
+  "asset_sha256": "a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT (model visual and contextual review; no independent human or clinical validation)",
+  "reviewed_at": "2026-10-20T12:31:37Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
