@@ -37,19 +37,19 @@ jobs:
       # HealthTech's verify command includes all unit regressions. These named
       # steps map the reference's editorial/illustration checks to our contracts.
       - name: Editorial and illustration validator regressions
-        run: node --test tests/editorial.test.mjs
+        run: node --test tests/editorial.test.ts
 
       - name: Rendered healthcare evidence regressions
-        run: node --test tests/rendered-evidence.test.mjs
+        run: node --test tests/rendered-evidence.test.ts
 
       - name: Orchestration and isolated deployment regressions
-        run: node --test tests/orchestration.test.mjs tests/preview-deployment.test.mjs
+        run: node --test tests/orchestration.test.ts tests/preview-deployment.test.ts
 
       - name: Automatic preview routing regressions
-        run: node --test tests/automatic-preview.test.mjs tests/manual-preview.test.mjs
+        run: node --test tests/automatic-preview.test.ts tests/manual-preview.test.ts
 
       - name: Preview cleanup regressions
-        run: node --test tests/preview-cleanup.test.mjs
+        run: node --test tests/preview-cleanup.test.ts
 
       - name: Validate every changed ledger
         shell: bash

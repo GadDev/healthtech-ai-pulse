@@ -1,4 +1,10 @@
 // Synthetic, non-publishable data for validator tests; never a real source or finding.
+import { candidateSchema, ledgerSchema, storySchema } from '../../src/lib/editorial-schema.ts';
+
+export type SyntheticLedger = ReturnType<typeof ledgerSchema.parse>;
+export type SyntheticCandidate = ReturnType<typeof candidateSchema.parse>;
+export type SyntheticStory = Omit<ReturnType<typeof storySchema.parse>, 'date'> & { date: string };
+
 export const now = '2026-10-18T19:00:00Z';
 export const vocabulary = new Set(['research-tools']);
 export function fixture() {
@@ -186,5 +192,13 @@ export function fixture() {
     illustration: { mode: 'none' },
     corrections: [],
   };
-  return structuredClone({ ledger, candidate, story });
+  // Check fixture shape at the boundary, while preserving the frontmatter date string.
+  // Tests deliberately mutate the returned data into invalid validator inputs.
+  ledgerSchema.parse(ledger);
+  storySchema.parse(story);
+  return structuredClone({ ledger, candidate, story }) as {
+    ledger: SyntheticLedger;
+    candidate: SyntheticCandidate;
+    story: SyntheticStory;
+  };
 }

@@ -13,7 +13,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { stringify } from 'yaml';
-import { fixture } from './helpers/fixtures.mjs';
+import { fixture } from './helpers/fixtures.ts';
 
 test('actual Astro rendering keeps evidence limits visible without an image; fixtures stay isolated', () => {
   const root = process.cwd();

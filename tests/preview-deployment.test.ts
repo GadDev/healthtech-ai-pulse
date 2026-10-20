@@ -38,7 +38,7 @@ for (const [key, value] of [
   });
 }
 test('preview configuration requires every identity variable', () => {
-  for (const key of Object.keys(env)) {
+  for (const key of Object.keys(env) as Array<keyof typeof env>) {
     const missing = { ...env };
     delete missing[key];
     assert.throws(() => previewDeploymentConfig(missing));

@@ -26,7 +26,7 @@ for (const number of ['../live', 'live', '7\nchannel=live', '0', '-1', '90071992
     assert.throws(() => validateManualRequest(fixture(), number));
   });
 }
-const mutations = {
+const mutations: Record<string, (pr: ReturnType<typeof fixture>) => void> = {
   'closed PR': (pr) => {
     pr.state = 'closed';
   },
