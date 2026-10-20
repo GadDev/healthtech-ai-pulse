@@ -43,7 +43,10 @@ sources:
     label: Oracle announcement — intended workflows and planned governance
     url: https://www.oracle.com/middleeast/news/announcement/oracle-and-astrazeneca-partner-to-advance-ai-enabled-healthcare-2026-10-20/
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-20-astrazeneca-oracle-trials-agreement.webp
+  alt: A clinician adjusts a blood-pressure cuff on an anonymous person's arm beside a closed, unmarked research folder.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-20-astrazeneca-oracle-trials-agreement.json
 ---
 
 AstraZeneca and Oracle announced on **20 October 2026** that they had signed a **non-binding term sheet** to explore AI and real-world data in clinical research. Their stated use cases include finding people who may qualify for clinical trials, supporting drug-safety monitoring and connecting research insights with clinical workflows. This is an agreement to investigate those possibilities, not evidence that the systems are working in hospitals or improving outcomes.
