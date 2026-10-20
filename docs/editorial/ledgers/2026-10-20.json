@@ -68,17 +68,8 @@
       "decision": "selected",
       "title": "AstraZeneca and Oracle sign non-binding AI clinical research agreement",
       "desk": "pharma",
-      "topics": [
-        "clinical-trials",
-        "health-operations",
-        "governance",
-        "privacy"
-      ],
-      "entities": [
-        "AstraZeneca",
-        "Oracle",
-        "M42"
-      ],
+      "topics": ["clinical-trials", "health-operations", "governance", "privacy"],
+      "entities": ["AstraZeneca", "Oracle", "M42"],
       "event_date": "2026-10-20",
       "event_date_reason": "Event date explicitly identified from the issuing source, not assigned from discovery.",
       "source_publication_date": "2026-10-20",
@@ -148,10 +139,7 @@
           "id": "nonbinding-clinical-research-agreement",
           "type": "pharma-progress",
           "supported_statement": "AstraZeneca and Oracle announced a non-binding term-sheet collaboration to explore AI and real-world data in trial matching, safety monitoring and care pathways, naming hypertension work with M42 in Abu Dhabi as the first proposed programme.",
-          "source_ids": [
-            "astrazeneca",
-            "oracle"
-          ],
+          "source_ids": ["astrazeneca", "oracle"],
           "locators": [
             "AstraZeneca release: opening partnership section and paragraph on initial Abu Dhabi programme; final paragraph states non-binding term sheet and per-project approvals.",
             "Oracle release: opening section on a non-binding agreement and Connecting Research and Care section on planned governance and outcome measures."
@@ -266,16 +254,8 @@
       "decision": "watch",
       "title": "FAHR-Face cancer-prognosis publication largely repeats 2025 preprint",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation",
-        "fairness",
-        "reproducibility"
-      ],
-      "entities": [
-        "Mass General Brigham",
-        "The Lancet Digital Health"
-      ],
+      "topics": ["clinical-prediction", "evaluation", "fairness", "reproducibility"],
+      "entities": ["Mass General Brigham", "The Lancet Digital Health"],
       "event_date": "2026-10-19",
       "event_date_reason": "Journal report was published at 23:30 UK time 19 October; this is 00:30 on the 20th in Luxembourg. Preprint dates to June 2025.",
       "source_publication_date": "2026-10-19",
@@ -391,15 +371,8 @@
       "decision": "watch",
       "title": "GUARD-LGG radiotherapy prediction paper overlaps 2025 conference results",
       "desk": "clinical-ai",
-      "topics": [
-        "medical-imaging",
-        "clinical-prediction",
-        "evaluation"
-      ],
-      "entities": [
-        "Beijing Tiantan Hospital",
-        "npj Digital Medicine"
-      ],
+      "topics": ["medical-imaging", "clinical-prediction", "evaluation"],
+      "entities": ["Beijing Tiantan Hospital", "npj Digital Medicine"],
       "event_date": "2026-10-20",
       "event_date_reason": "Event date explicitly identified from the issuing source, not assigned from discovery.",
       "source_publication_date": "2026-10-20",
@@ -489,9 +462,7 @@
   "publication": {
     "mode": "publication",
     "reason": "One new scoped industry pulse selected (80/100) on signed-but-nonbinding trial operations exploration. Two studies held on watch because near-identical 2025 preprint/conference results undermine novelty and direct full-text extraction was unavailable. English-only, text-only edition. All source claims limited to inspected 20 October company statements. Draft PR requires human review and passing CI; no local verification claimed.",
-    "story_ids": [
-      "2026-10-20-astrazeneca-oracle-trials-agreement"
-    ],
+    "story_ids": ["2026-10-20-astrazeneca-oracle-trials-agreement"],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": "src/content/pulse/2026-10-20.md",
