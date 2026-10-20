@@ -2,7 +2,7 @@
   "status": "created",
   "automation_id": "6ad5c8dac4908191af9387d876962a55",
   "activation_status": "paused",
-  "reason": "Observed 20 October 2026: the task exists but is paused. Its installed prompt still begins with a one-off 19 October backfill override, not the proposed normal-run bootstrap. The last recorded invocation does not establish successful completion. This repository change neither installs the replacement nor enables the task.",
+  "reason": "The existing task prompt was replaced with this compact bootstrap on 20 October 2026 at 08:32 UTC and the task remained paused. The last recorded invocation predates the replacement and does not establish success. The reviewed discovery contract is not adopted on main until PR #30 merges; live write/recovery readiness must still be verified before activation.",
   "last_recorded_invocation": "2026-10-19T19:30:04.258356+00:00",
   "request": {
     "title": "HealthTech AI Pulse Orchestrator",
@@ -11,7 +11,7 @@
     "timing_mode": "flexible_schedule",
     "default_timezone": "Europe/Luxembourg"
   },
-  "activation_note": "After review and merge, compare the installed task with this proposal and explicitly update the existing automation ID. Preserve its paused state unless activation is separately authorized. Recheck live prerequisites; do not create a duplicate task.",
-  "sync_status": "proposed-not-installed",
-  "observed_at": "2026-10-20T06:56:39.289871+00:00"
+  "activation_note": "The existing task ID now has the reviewed bootstrap installed. Keep it paused until PR #30 is merged and live safety/readiness checks pass; activation requires explicit maintainer authorization. Never create a duplicate task.",
+  "sync_status": "installed-paused",
+  "observed_at": "2026-10-20T08:32:33.079435+00:00"
 }

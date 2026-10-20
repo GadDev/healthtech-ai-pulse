@@ -39,9 +39,10 @@ stories per date and human merge. Make edition-date semantics and stored evidenc
 warnings visible to readers. Keep imagery instructions under the visual contracts.
 
 The source catalogue and detailed operating procedure belong in the repository;
-[task-configuration.json](editorial/task-configuration.json) contains a compact
-proposed bootstrap and the observed task ID/state. Installing the proposal is a
-separate operation after review. Never create a duplicate task to apply it.
+[task-configuration.json](editorial/task-configuration.json) records the compact
+bootstrap installed on the existing task on 20 October 2026 while paused.
+Merge this PR and complete live readiness checks before enabling that same task.
+Never create a duplicate task to apply it.
 
 ## Remaining acceptance
 
