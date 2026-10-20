@@ -19,6 +19,7 @@ const { stories, showImage = false } = Astro.props;
       <p class="story-kicker">
         <a href={`/desks/${story.data.category}/`}>{desks[story.data.category].title}</a>
         <span aria-hidden="true"> · </span>
+        <span>Edition </span>
         <time datetime={story.data.date.toISOString().slice(0, 10)}>
           {story.data.date.toLocaleDateString('en-GB', {
             day: 'numeric',

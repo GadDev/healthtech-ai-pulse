@@ -41,6 +41,23 @@ test('publication withholding preserves research selection and allows ledger-onl
   ledger.publication.withheld_selected = [];
   assert.throws(() => validateLedger(ledger, vocabulary), /accounted/);
 });
+test('two surviving stories is a hard pilot limit; selected overflow may be withheld', () => {
+  const { ledger, candidate } = fixture();
+  for (let i = 2; i <= 3; i++) {
+    const id = `${ledger.editorial_date}-extra-${i}`;
+    ledger.candidates.push({ ...structuredClone(candidate), id });
+    ledger.publication.story_ids.push(id);
+  }
+  assert.throws(() => validateLedger(ledger, vocabulary), /Pilot capacity exceeded/);
+  ledger.publication.story_ids.pop();
+  ledger.publication.withheld_selected.push({
+    id: ledger.candidates.at(-1).id,
+    reason: 'Pilot two-story capacity',
+    phase: 'prepare',
+    retry_condition: 'Separate approved publication decision',
+  });
+  assert.doesNotThrow(() => validateLedger(ledger, vocabulary));
+});
 test('watch needs a concrete promotion condition and cannot leak into publication', () => {
   const { ledger } = fixture();
   const c = ledger.candidates.pop();
@@ -50,6 +67,29 @@ test('watch needs a concrete promotion condition and cannot leak into publicatio
   c.promote_when = ['Inspect independent evidence'];
   c.next_review_at = '2026-10-25';
   assert.throws(() => validateLedger(ledger, vocabulary), /Only selected/);
+});
+test('unfinished watch can remain unscored with a specific promotion condition', () => {
+  const { ledger, candidate } = fixture();
+  ledger.candidates = [];
+  ledger.watchlist = [
+    {
+      ...candidate,
+      decision: 'watch',
+      editorial_score: null,
+      promote_when: ['Inspect versioned artifact and external evaluation'],
+      next_review_at: '2026-10-25',
+    },
+  ];
+  ledger.publication = {
+    mode: 'ledger-only',
+    reason: 'Artifact assessment unfinished',
+    story_ids: [],
+    withheld_selected: [],
+    must_know_story_id: null,
+    issue_path: null,
+    checks: [],
+  };
+  assert.doesNotThrow(() => validateLedger(ledger, vocabulary));
 });
 test('uninspected source, unsupported topic and false MUST KNOW block publication', () => {
   for (const change of [

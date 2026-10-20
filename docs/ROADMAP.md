@@ -1,6 +1,6 @@
 # HealthTech AI Pulse — Delivery roadmap
 
-Status: implementation prepared for three stacked draft PRs. GitHub app access was verified on 19 October 2026. Bootstrap, evidence contracts/cards and orchestration/deployment configuration are implemented; default-branch adoption and hosted/browser/scheduled acceptance remain incomplete. Dependencies are sequential; dates are not promises. One maintainer owns technical acceptance and editorial approval.
+Status (20 October 2026): bootstrap, evidence contracts/cards and deployment have reached merges and passing CI/production runs. The separate scheduled task **exists but is paused** and its installed one-off backfill prompt is not the normal-run replacement in this repository. Its past invocation/local orchestration simulation does not establish recurring acceptance or live stale-writer rejection. Hosted/browser and authenticated adapter/concurrency acceptance require separate evidence before activation. One maintainer owns technical acceptance and editorial approval.
 
 ## MVP boundary
 

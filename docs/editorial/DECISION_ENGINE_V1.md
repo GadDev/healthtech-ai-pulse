@@ -23,7 +23,7 @@ The policy owns the rubric and worked examples. Its current implemented score fi
 | Material change (M)        | `editorial_score.material_change` | 10%    |
 | Durability (D)             | `editorial_score.durability`      | 5%     |
 
-Use integer inputs 0–4 with written rationales. `weightedScore` in `src/lib/editorial-schema.mjs` computes a 0–100 total, rounded to one decimal: `25 × (0.30S + 0.30E + 0.25R + 0.10M + 0.05D)`. The validator recomputes it; a total is neither a probability nor a medical recommendation.
+Use integer inputs 0–4 with individualized evidence-based rationales. `weightedScore` in `src/lib/editorial-schema.mjs` computes a 0–100 total, rounded to one decimal: `25 × (0.30S + 0.30E + 0.25R + 0.10M + 0.05D)`. The validator recomputes it; a total is neither a probability nor a medical recommendation. Essential methods/artifact/version work not yet inspected belongs on watch with `editorial_score: null`, a reason, promotion condition and next review date. Do not assign the same numerical values to unrelated unfinished candidates. Distinguish evidence gaps, access failures, novelty, value, duplication and capacity. No shadow threshold is permitted in a live batch.
 
 | Decision | Current policy boundary                                                                                               | Stored record                                                                      |
 | -------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |

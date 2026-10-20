@@ -10,7 +10,7 @@ Read [the editorial policy](../../EDITORIAL.md), [content model](../../CONTENT_M
 - A selected candidate that fails publication verification stays selected in research history. Record its downstream reason in `publication.withheld_selected`.
 - Every selected record must map exactly once to a surviving story or explicit withholding. Watch/rejected records cannot enter a publication implicitly.
 - No surviving stories means `publication.mode: ledger-only`, empty story IDs, no issue and no artificial MUST KNOW or artwork. A valid ledger-only day is useful output.
-- Preserve missing-source observations and coverage gaps. A complete-looking JSON record is not proof of scientific correctness or comprehensive research.
+- Preserve missing-source observations and coverage gaps. Record each of the five [discovery lanes](../DISCOVERY_PLAN.md), actual access, retrieval caps, unscreened hits and recovery pages in existing strict research fields. A completed cutoff marks the last **bounded plan actually performed**, not an exhaustive literature search. Keep unfinished required coverage explicit and completion null; watch research awaiting essential inspection may stay `editorial_score: null` with a precise promotion condition. A complete-looking JSON record is not proof of scientific correctness or comprehensive research.
 
 ## Write and recover safely
 

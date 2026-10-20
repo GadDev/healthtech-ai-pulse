@@ -21,7 +21,7 @@ The filename must equal `editorial_date`. Final records account for every select
 
 ## Candidate and source identity
 
-Each candidate records its dated ID, research decision, title, desk/topics/entities, event/source/discovery dates and precision reasons, what changed, why now, scope fit, deduplication, source portfolio and underlying development identity. Selected records require score inputs/rationales, implemented format/depth, evidence and claims. Watch records need promotion conditions and a review date. Rejected records may omit detailed study extraction when a decisive rejection gate is already documented.
+Each candidate records its dated ID, research decision, title, desk/topics/entities, event/source/discovery dates and precision reasons, what changed, why now, scope fit, deduplication, source portfolio and underlying development identity. Selected records require score inputs/rationales, implemented format/depth, evidence and claims. Watch records need promotion conditions and a review date and may use `editorial_score: null` while essential appraisal is incomplete. Rejected records may omit detailed study extraction when a decisive rejection gate is documented. Record five bounded lane outcomes/retrieval caps in the existing query log and coverage gaps without adding unsupported fields.
 
 Use one of the five healthcare desks and controlled topic IDs from [TOPICS_V1.yml](TOPICS_V1.yml). Do not substitute source-publication categories or classify a development as several stories because it spans desks.
 

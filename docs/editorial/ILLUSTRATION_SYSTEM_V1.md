@@ -28,6 +28,8 @@ Include all material generation instructions in the final brief. If this guide o
 
 Use SHA-256 over exact final article bytes for `story_source_sha256`, exact brief bytes for `brief_sha256`, and exact `docs/EDITORIAL.md` bytes for `policy_sha256`. Do not normalize whitespace or line endings. Keep hashes/reviews outside the article they fingerprint.
 
+**Identity limitation:** unrelated edits to `docs/EDITORIAL.md` invalidate existing reviewed images, whereas changes to the visual constitution/skill are not in that hash. A versioned composite fingerprint requires a separate helper/schema/CLI/validator migration with explicit compatibility and genuine asset re-review; never silently rehash historic approvals. The repository's photorealistic Quiet Laboratory constitution and target illustration skill already align. Do not import warm-paper/terracotta rules from an external Pulse skill.
+
 Compute `generation_key` as SHA-256 of UTF-8 `JSON.stringify` of this ordered array:
 
 ```text

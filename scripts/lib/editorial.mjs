@@ -103,6 +103,8 @@ export function validateLedger(input, vocabulary) {
   }
   const published = ledger.publication.story_ids;
   const withheld = ledger.publication.withheld_selected.map((c) => c.id);
+  // The two-story pilot cap is executable; selected overflow stays in research history.
+  if (published.length > 2) throw new Error('Pilot capacity exceeded: at most two stories');
   if (new Set([...published, ...withheld]).size !== published.length + withheld.length)
     throw new Error('Duplicate or drafted/withheld overlap');
   if (

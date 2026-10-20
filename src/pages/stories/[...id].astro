@@ -26,7 +26,7 @@ const { Content } = await render(story);
       <h1>{story.data.title}</h1>
       <p class="lede">{story.data.description}</p>
       <p class="story-meta">
-        Published{' '}
+        Edition date{' '}
         <time datetime={story.data.date.toISOString().slice(0, 10)}>
           {story.data.date.toLocaleDateString('en-GB', {
             day: 'numeric',
