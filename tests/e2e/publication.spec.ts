@@ -38,6 +38,17 @@ for (const width of [320, 375, 960, 1280])
     await page.keyboard.press('Tab');
     await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
   });
+
+test('edition ribbon follows Luxembourg calendar date without a rebuild', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-10-20T21:59:00Z') });
+  await page.goto('/');
+  const ribbonDate = page.locator('.edition-ribbon [data-current-date]');
+  await expect(ribbonDate).toHaveText('Tuesday, 20 October 2026');
+
+  await page.clock.runFor(120_000);
+  await expect(ribbonDate).toHaveText('Wednesday, 21 October 2026');
+});
+
 test('publication has honest empty states and search loads', async ({ page, request }) => {
   await page.goto('/');
   if (!readdirSync('src/content/stories').some((name) => name.endsWith('.md'))) {
