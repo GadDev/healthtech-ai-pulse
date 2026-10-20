@@ -10,6 +10,27 @@ import { weightedScore } from '../src/lib/editorial-schema.mjs';
 
 test('bounded availability can pass without a patient-benefit claim', () =>
   assert.equal(validateLedger(fixture().ledger, vocabulary).candidates.length, 1));
+test('pilot capacity allows selected overflow only with explicit withholding', () => {
+  const { ledger, candidate } = fixture();
+  ledger.candidates = ['first', 'second', 'third'].map((suffix) => ({
+    ...structuredClone(candidate),
+    id: `2026-10-18-synthetic-${suffix}`,
+  }));
+  ledger.publication.story_ids = ledger.candidates.map((c) => c.id);
+  assert.throws(() => validateLedger(ledger, vocabulary), /Pilot capacity exceeded/);
+  const overflow = ledger.publication.story_ids.pop();
+  ledger.publication.withheld_selected = [
+    {
+      id: overflow,
+      phase: 'capacity',
+      reason: 'Two stronger stories fill the pilot capacity',
+      retry_condition: 'Reconsider under the next eligible edition with current verification',
+    },
+  ];
+  assert.equal(validateLedger(ledger, vocabulary).candidates.length, 3);
+  ledger.publication.withheld_selected = [];
+  assert.throws(() => validateLedger(ledger, vocabulary), /not accounted for/);
+});
 test('scoring matches published examples and rejects tampered totals', () => {
   const { ledger, candidate } = fixture();
   candidate.editorial_score.significance = 3;

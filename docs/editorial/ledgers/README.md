@@ -12,6 +12,11 @@ Read [the editorial policy](../../EDITORIAL.md), [content model](../../CONTENT_M
 - No surviving stories means `publication.mode: ledger-only`, empty story IDs, no issue and no artificial MUST KNOW or artwork. A valid ledger-only day is useful output.
 - Preserve missing-source observations and coverage gaps. A complete-looking JSON record is not proof of scientific correctness or comprehensive research.
 
+For bounded search completion and cutoff semantics, use
+[DISCOVERY_V1.md](../DISCOVERY_V1.md). A final publication ledger need not have a
+completed research window. Do not retrofit old completion timestamps. New runs
+must distinguish actual lane access/retrieval/screening from mere result counts.
+
 ## Write and recover safely
 
 Persist research before drafting; use `publication.mode: in-progress` for checkpoints. An unfinished checkpoint can support recovery but cannot pass final publication validation. Acquire ownership and update the canonical date branch through the implemented create-only/compare-and-swap protocol; preserve human edits and prior attempts.

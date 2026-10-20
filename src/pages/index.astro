@@ -16,6 +16,7 @@ const [lead, ...remaining] = stories;
       <div class="section-rule">
         <span>The latest signal · {desks[lead.data.category].title}</span>
         <time datetime={lead.data.date.toISOString().slice(0, 10)}>
+          Edition date{' '}
           {lead.data.date.toLocaleDateString('en-GB', {
             day: 'numeric',
             month: 'long',

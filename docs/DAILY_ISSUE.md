@@ -13,6 +13,11 @@ Contract: `healthtech-1.0`. A daily issue is an ordered index into canonical Eng
 
 Use the Europe/Luxembourg editorial date. The issue filename, frontmatter `date` and associated ledger's `editorial_date` must agree. Source/event dates remain on their own evidence records; do not relabel old evidence with the issue date.
 
+Article and listing dates identify the edition, not the first-publication time.
+Retrospective preparation must remain explicit in article prose. RSS entries state
+the edition date in their description and omit optional publication timestamps
+rather than relabelling an old edition date as `pubDate`.
+
 ## Issue frontmatter
 
 | Field                | Meaning                                                                   |

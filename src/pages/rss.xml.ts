@@ -12,7 +12,9 @@ export const GET: APIRoute = async ({ site }) => {
   const items = stories
     .map((story) => {
       const link = new URL(`/stories/${story.id}/`, site).href;
-      return `<item><title>${escape(story.data.title)}</title><description>${escape(story.data.description)}</description><link>${escape(link)}</link><guid>${escape(link)}</guid><pubDate>${story.data.date.toUTCString()}</pubDate></item>`;
+      const description = `Edition date: ${story.data.date.toISOString().slice(0, 10)}. ${story.data.description}`;
+      // RSS pubDate is optional. The stored edition date is not a first-publication timestamp.
+      return `<item><title>${escape(story.data.title)}</title><description>${escape(description)}</description><link>${escape(link)}</link><guid>${escape(link)}</guid></item>`;
     })
     .join('');
   return new Response(

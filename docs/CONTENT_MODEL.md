@@ -50,6 +50,20 @@ Zero selected, or every selected item withheld, means `publication.mode: ledger-
 
 Article `draft` defaults to true. Public routes use non-draft stories only; issue references reject missing/private stories. A prepared publication PR may contain `draft: false` article metadata, but remains a draft GitHub PR and does not deploy before human merge. Source mappings, evidence, category, tags, claim IDs, type and depth must agree with its selected candidate. Issues contain unique nonempty sections and exactly the batch's surviving references; featured and MUST KNOW are optional and distinct. [DAILY_ISSUE.md](DAILY_ISSUE.md) defines edition fields, routes, ordering and empty-day behavior.
 
+## Reader-facing evidence and dates
+
+The article evidence card renders stored contradictory/context findings and source
+correction/retraction observations as well as study limits and COI. These records
+remain dated editorial observations, not continuous safety monitoring. Material
+warnings must also be clear in article prose.
+
+Story `date` is the edition date, including retrospective editions; the article,
+listing and homepage label it accordingly. It is not an inferred first-publication
+time. RSS describes the edition date and omits optional `pubDate` until actual
+publication timestamps have an adopted storage contract. Story IDs, historical
+ledgers and research/source dates remain unchanged; first-publication timestamps
+must never be backfilled from edition dates or guessed merge/deployment times.
+
 ## Optional imagery and translations
 
 `illustration.mode: none` is valid and renders a text-led article. Generated mode requires an asset, alt text and a review path. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact docs/EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
