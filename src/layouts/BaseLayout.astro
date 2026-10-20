@@ -1,5 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
 import { desks, deskKeys } from '../lib/categories';
 import '../styles/global.css';
 import '../styles/publication.css';
@@ -13,16 +12,6 @@ const {
 } = Astro.props;
 const configured = Boolean(import.meta.env.SITE_URL);
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const latest = (await getCollection('stories', ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-)[0];
-const dateLabel = latest?.data.date.toLocaleDateString('en-GB', {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
 const path = Astro.url.pathname;
 ---
 
@@ -49,7 +38,7 @@ const path = Astro.url.pathname;
     </a>
     <header class="site-header">
       <div class="edition-ribbon">
-        <span>{dateLabel ?? 'Evidence before claims'}</span>
+        <span data-current-date>Evidence before claims</span>
         <span>Independent healthcare AI news</span>
       </div>
       <div class="masthead">
@@ -107,5 +96,25 @@ const path = Astro.url.pathname;
         </p>
       </div>
     </footer>
+    <script>
+      const dateElement = document.querySelector('[data-current-date]');
+      if (dateElement) {
+        const formatter = new Intl.DateTimeFormat('en-GB', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+          timeZone: 'Europe/Luxembourg',
+        });
+        const updateDate = () => {
+          dateElement.textContent = formatter.format(new Date());
+        };
+        updateDate();
+        window.setInterval(updateDate, 60_000);
+        document.addEventListener('visibilitychange', () => {
+          if (!document.hidden) updateDate();
+        });
+      }
+    </script>
   </body>
 </html>
