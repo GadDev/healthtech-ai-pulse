@@ -87,7 +87,7 @@ Target contracts and scripts merged; build and browser CI green on the exact tar
 
 The site, shared healthcare schemas, evidence card, ledger/story/issue checks,
 optional-image validation and isolated source-inspection trial are implemented.
-`scripts/lib/orchestration.mjs` implements the tested writer/session state machine;
+`scripts/lib/orchestration.ts` implements the tested writer/session state machine;
 its adapter still requires authenticated operations with stale-head rejection.
 Historical PR/ledger records demonstrate real publication preparation, but neither
 simulators nor successful serial writes prove a live concurrency trial. No

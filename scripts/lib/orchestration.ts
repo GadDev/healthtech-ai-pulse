@@ -1,14 +1,55 @@
 import { isDeepStrictEqual } from 'node:util';
-import { validateLedger } from './editorial.mjs';
+import { validateLedger } from './editorial.ts';
 
-export const dailyBranch = (date) => `content/healthtech-ai-pulse-${date}`;
-export const dailyTitle = (date) => `content: prepare HealthTech AI Pulse for ${date}`;
-const ledgerPath = (date) => `docs/editorial/ledgers/${date}.json`;
-const iso = (ms) => new Date(ms).toISOString();
+type Ledger = ReturnType<typeof validateLedger>;
+type EditorialFile = { encoding: 'utf-8' | 'base64'; content: string } | null;
+type EditorialFiles = Record<string, EditorialFile>;
+type PublicationPR = { merged?: boolean; state?: string; draft?: boolean };
+type BranchState = { sha: string; ledger: Ledger };
+type OwnedBranchState = BranchState & {
+  ledger: Ledger & { active_run: NonNullable<Ledger['active_run']> };
+};
+
+export interface EditorialAdapter {
+  findPRs(branch: string): Promise<PublicationPR[]>;
+  isFinalized(date: string): Promise<boolean>;
+  readBranch(branch: string): Promise<BranchState | null>;
+  defaultHead(): Promise<{ sha: string }>;
+  commit(commit: { parent: string; files: EditorialFiles }): Promise<string>;
+  updateRef(update: {
+    branch: string;
+    sha: string;
+    expectedSha: string;
+    force: false;
+  }): Promise<unknown>;
+  createRef(ref: { branch: string; sha: string }): Promise<unknown>;
+  updatePR(pr: PublicationPR, patch: { title: string; body: string }): Promise<PublicationPR>;
+  createPR(data: {
+    head: string;
+    title: string;
+    body: string;
+    draft: true;
+  }): Promise<PublicationPR>;
+}
+
+export interface RunSession {
+  outcome: 'acquired';
+  branch: string;
+  date: string;
+  owner: string;
+  sha: string;
+  vocabulary: ReadonlySet<string>;
+  ttl: number;
+}
+
+export const dailyBranch = (date: string) => `content/healthtech-ai-pulse-${date}`;
+export const dailyTitle = (date: string) => `content: prepare HealthTech AI Pulse for ${date}`;
+const ledgerPath = (date: string) => `docs/editorial/ledgers/${date}.json`;
+const iso = (ms: number) => new Date(ms).toISOString();
 export class RunBlocked extends Error {}
 export class OwnershipLost extends Error {}
 
-function lease(now, owner, ttl) {
+function lease(now: number, owner: string, ttl: number) {
   return {
     owner_token: owner,
     acquired_at: iso(now),
@@ -16,20 +57,24 @@ function lease(now, owner, ttl) {
     expires_at: iso(now + ttl),
   };
 }
-function assertOwner(snapshot, session, now) {
+function assertOwner(
+  snapshot: BranchState | null,
+  session: RunSession,
+  now: number,
+): asserts snapshot is OwnedBranchState {
   const active = snapshot?.ledger?.active_run;
   if (!active || active.owner_token !== session.owner || Date.parse(active.expires_at) <= now)
     throw new OwnershipLost('Run ownership expired or changed; reread before retrying.');
 }
-function researchView(candidate) {
+function researchView(candidate: Ledger['candidates'][number]) {
   const copy = structuredClone(candidate);
-  delete copy.publication_verification;
-  delete copy.deduplication.publication_status;
-  for (const claim of copy.claims ?? []) delete claim.verification;
+  Reflect.deleteProperty(copy, 'publication_verification');
+  Reflect.deleteProperty(copy.deduplication, 'publication_status');
+  for (const claim of copy.claims ?? []) Reflect.deleteProperty(claim, 'verification');
   return copy;
 }
-function preserveResearch(previous, next) {
-  for (const bucket of ['candidates', 'watchlist', 'exclusions'])
+function preserveResearch(previous: Ledger, next: Ledger) {
+  for (const bucket of ['candidates', 'watchlist', 'exclusions'] as const)
     for (const old of previous[bucket]) {
       const updated = next[bucket].find((c) => c.id === old.id);
       if (!updated || !isDeepStrictEqual(researchView(old), researchView(updated)))
@@ -45,7 +90,7 @@ function preserveResearch(previous, next) {
   )
     throw new RunBlocked('Existing human overrides must be preserved.');
 }
-function assertEditorialPaths(date, files) {
+function assertEditorialPaths(date: string, files: EditorialFiles) {
   const safe = new RegExp(
     `^(src/content/stories/${date}-[a-z0-9-]+\\.md|src/content/pulse/${date}\\.md|public/images/stories/${date}-[a-z0-9-]+\\.webp|docs/editorial/illustrations/reviews/${date}-[a-z0-9-]+\\.json)$`,
   );
@@ -60,7 +105,7 @@ function assertEditorialPaths(date, files) {
       throw new RunBlocked('Binary WebP must use base64 blob operations.');
   }
 }
-async function inspectPR(adapter, branch) {
+async function inspectPR(adapter: EditorialAdapter, branch: string) {
   const prs = await adapter.findPRs(branch);
   if (prs.length > 1)
     throw new RunBlocked('Multiple canonical PRs found; maintainer reconciliation required.');
@@ -74,8 +119,22 @@ async function inspectPR(adapter, branch) {
 
 /** Adapter must provide atomic createRef and updateRef({expectedSha,force:false}). */
 export async function acquireRun(
-  adapter,
-  { date, owner, seed, vocabulary, now = Date.now(), ttl = 120 * 60 * 1000 },
+  adapter: EditorialAdapter,
+  {
+    date,
+    owner,
+    seed,
+    vocabulary,
+    now = Date.now(),
+    ttl = 120 * 60 * 1000,
+  }: {
+    date: string;
+    owner: string;
+    seed: Ledger;
+    vocabulary: ReadonlySet<string>;
+    now?: number;
+    ttl?: number;
+  },
 ) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !owner)
     throw new RunBlocked('Valid date and unique owner token required.');
@@ -120,9 +179,14 @@ export async function acquireRun(
 }
 
 export async function checkpoint(
-  adapter,
-  session,
-  { ledger, files = {}, now = Date.now(), release = false },
+  adapter: EditorialAdapter,
+  session: RunSession,
+  {
+    ledger,
+    files = {},
+    now = Date.now(),
+    release = false,
+  }: { ledger: Ledger; files?: EditorialFiles; now?: number; release?: boolean },
 ) {
   const pr = await inspectPR(adapter, session.branch);
   if (pr.outcome || (await adapter.isFinalized(session.date)))
@@ -166,7 +230,11 @@ export async function checkpoint(
   return { ...session, sha };
 }
 
-export async function ensureDraft(adapter, session, { preflightHead, body, now = Date.now() }) {
+export async function ensureDraft(
+  adapter: EditorialAdapter,
+  session: RunSession,
+  { preflightHead, body, now = Date.now() }: { preflightHead: string; body: string; now?: number },
+) {
   let state = await inspectPR(adapter, session.branch);
   if (state.outcome || (await adapter.isFinalized(session.date)))
     return { outcome: 'already-finalized', pr: state.pr };
@@ -197,12 +265,25 @@ export async function ensureDraft(adapter, session, { preflightHead, body, now =
     state = await inspectPR(adapter, session.branch);
     if (state.pr) return { outcome: 'draft-recovered', pr: state.pr };
     throw new RunBlocked(
-      `PR creation outcome unconfirmed; reread before retrying. ${error.message}`,
+      `PR creation outcome unconfirmed; reread before retrying. ${error instanceof Error ? error.message : String(error)}`,
     );
   }
 }
 
-export function ciOutcome({ mode, headSha, run }) {
+export function ciOutcome({
+  mode,
+  headSha,
+  run,
+}: {
+  mode: 'ledger-only' | 'publication';
+  headSha: string;
+  run?: {
+    headSha: string;
+    status?: string;
+    conclusion?: string | null;
+    requiredJobs?: { name: string; conclusion: string }[];
+  } | null;
+}) {
   if (mode === 'ledger-only')
     return {
       outcome: 'ledger-only',
@@ -211,11 +292,12 @@ export function ciOutcome({ mode, headSha, run }) {
   if (!run || run.headSha !== headSha)
     return { outcome: 'ci-pending', ci: run ? 'stale' : 'unavailable' };
   if (run.status !== 'completed') return { outcome: 'ci-pending', ci: 'pending' };
+  const jobs = run.requiredJobs ?? [];
   if (
     run.conclusion !== 'success' ||
-    !run.requiredJobs?.length ||
+    !jobs.length ||
     ['Verify publication', 'Browser and accessibility'].some(
-      (name) => !run.requiredJobs.some((j) => j.name === name && j.conclusion === 'success'),
+      (name) => !jobs.some((j) => j.name === name && j.conclusion === 'success'),
     )
   )
     return { outcome: 'ci-failed', ci: run.conclusion ?? 'unknown' };

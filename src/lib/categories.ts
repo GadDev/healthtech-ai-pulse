@@ -1,4 +1,4 @@
-import { deskKeys as keys } from './editorial-schema.mjs';
+import { deskKeys as keys } from './editorial-schema.ts';
 export const deskKeys = keys as readonly [
   'clinical-ai',
   'health-systems',

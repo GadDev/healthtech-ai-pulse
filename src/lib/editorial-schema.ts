@@ -7,14 +7,13 @@ const instant = z.iso.datetime({ offset: true });
 const sha = z.string().regex(/^[a-f0-9]{40}$/);
 const hash = z.string().regex(/^[a-f0-9]{64}$/);
 const id = z.string().regex(/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/);
-/** @type {readonly ['clinical-ai','health-systems','pharma','biomedical-foundations','safety-policy']} */
 export const deskKeys = [
   'clinical-ai',
   'health-systems',
   'pharma',
   'biomedical-foundations',
   'safety-policy',
-];
+] as const;
 const access = z.enum([
   'full-text',
   'abstract-only',
@@ -138,11 +137,14 @@ const claimBase = {
   limitations: z.array(text).min(1),
   verification,
 };
-const studyClaim = (type) => z.object({ ...claimBase, type: z.literal(type), study }).strict();
+const studyClaim = <T extends string>(type: T) =>
+  z.object({ ...claimBase, type: z.literal(type), study }).strict();
 const claim = z.discriminatedUnion('type', [
-  ...['model-performance', 'workflow', 'patient-benefit', 'patient-outcome', 'pharma-progress'].map(
-    studyClaim,
-  ),
+  studyClaim('model-performance'),
+  studyClaim('workflow'),
+  studyClaim('patient-benefit'),
+  studyClaim('patient-outcome'),
+  studyClaim('pharma-progress'),
   z.object({ ...claimBase, type: z.literal('regulatory'), regulation }).strict(),
   z
     .object({
@@ -411,7 +413,13 @@ export const ledgerSchema = z
   })
   .strict();
 
-export function weightedScore(s) {
+export function weightedScore(s: {
+  significance: number;
+  claim_support: number;
+  relevance: number;
+  material_change: number;
+  durability: number;
+}) {
   // Integer weights avoid rounding artifacts; round half-up to one decimal.
   return (
     Math.round(

@@ -8,7 +8,7 @@ description: Translate or revise an existing HealthTech AI Pulse English article
 Operate only in `GadDev/healthtech-ai-pulse`. Invoke directly or from an
 explicitly authorized translation handoff after final English bytes are committed.
 Read target `docs/EDITORIAL.md`, `docs/CONTENT_MODEL.md`, `src/content.config.ts`,
-`src/lib/editorial-schema.mjs` and `src/components/EvidenceCard.astro`.
+`src/lib/editorial-schema.ts` and `src/components/EvidenceCard.astro`.
 
 Healthtech-1.0 has no French collection, routes or translation validator. Keep
 translation packages outside `src/content/`; do not claim French publication,

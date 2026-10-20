@@ -11,7 +11,7 @@ Use the ledger as the handoff. Preserve research decisions and their evidence/sc
 
 ## Safe writes
 
-Use the semantics implemented in scripts/lib/orchestration.mjs. Bind the adapter only to authenticated, already-authorised target GitHub operations. Required adapter methods are findPRs (all states for canonical head/base), isFinalized (default-branch ledger/merged PR), readBranch (head plus current ledger), defaultHead, commit (tree/commit from exact parent), createRef (create-only), updateRef (expected head and non-forced), createPR (draft) and updatePR (body/title only). Use the connected GitHub application's Git object and expected-sha ref tools when available. No new stored token is required by this skill; never scrape credentials from the environment or copy deployment credentials.
+Use the semantics implemented in scripts/lib/orchestration.ts. Bind the adapter only to authenticated, already-authorised target GitHub operations. Required adapter methods are findPRs (all states for canonical head/base), isFinalized (default-branch ledger/merged PR), readBranch (head plus current ledger), defaultHead, commit (tree/commit from exact parent), createRef (create-only), updateRef (expected head and non-forced), createPR (draft) and updatePR (body/title only). Use the connected GitHub application's Git object and expected-sha ref tools when available. No new stored token is required by this skill; never scrape credentials from the environment or copy deployment credentials.
 
 A bound adapter and live write/read-back trial are prerequisites, not something a simulator proves. If the execution surface cannot bind these operations or reject a stale ref, report the exact blocker. Do not approximate concurrency with a boolean or unconditional file writes.
 

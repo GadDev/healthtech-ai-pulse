@@ -1,6 +1,6 @@
 # HealthTech illustration system
 
-Contract: `healthtech-1.0`. This guide adapts the source publication's visual constitution, production workflow and generation-identity guidance to HealthTech's implemented optional-image contract. [Editorial policy](../EDITORIAL.md) governs medical claims; [the content model](../CONTENT_MODEL.md), `src/lib/editorial-schema.mjs` and `scripts/lib/editorial.mjs` define the stored fields and executable checks. Use the [target illustration skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) for execution.
+Contract: `healthtech-1.0`. This guide adapts the source publication's visual constitution, production workflow and generation-identity guidance to HealthTech's implemented optional-image contract. [Editorial policy](../EDITORIAL.md) governs medical claims; [the content model](../CONTENT_MODEL.md), `src/lib/editorial-schema.ts` and `scripts/lib/editorial.ts` define the stored fields and executable checks. Use the [target illustration skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) for execution.
 
 ## Choose the image mode first
 
