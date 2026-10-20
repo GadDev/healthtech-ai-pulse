@@ -4,7 +4,7 @@ Status: foundation implementation in progress. The local Astro bootstrap is impl
 
 ## Retain the static publication
 
-Use Astro, TypeScript, Markdown content collections, plain Astro components and CSS, Pagefind, RSS, sitemap generation, ESLint, Prettier, Playwright, and axe. Keep one canonical article body and issue manifests containing references. Do not add React, a database, a CMS, a vector store, or a queue merely to transpose the publication.
+Use Astro, TypeScript, Markdown content collections, plain Astro components and CSS, Pagefind, RSS, sitemap generation, Oxlint, Oxfmt, Playwright, and axe. Keep one canonical article body and issue manifests containing references. Do not add React, a database, a CMS, a vector store, or a queue merely to transpose the publication.
 
 Start from the inspected source lockfile and compatible Node/tool versions, then run an installation and compatibility check in the implementation PR. The source specifies Node 22.22.3, Astro ^7.3.8, TypeScript 6.0.3, and Pagefind 1.5.2. These are verified source settings, not a promise that an untested copy builds. The current project targets Node.js 24 LTS (24.11.0 or newer within 24.x); `.nvmrc` selects Node 24 for local development and all GitHub Actions Node setup steps. Preserve the MIT notice for reused code. Do not import source articles, original artwork, historical ledgers, or translation review history.
 

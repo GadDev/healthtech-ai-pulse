@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#f3ebdd"/><circle cx="32" cy="32" r="16" fill="none" stroke="#171715" stroke-width="3"/><circle cx="32" cy="32" r="5" fill="#8a4b35"/><path d="M32 7v9m0 32v9M7 32h9m32 0h9" stroke="#171715" stroke-width="3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .page { fill: #344f51; }
+    .signal { fill: #51796e; }
+    @media (prefers-color-scheme: dark) {
+      .page, .signal { fill: #ffffff; }
+    }
+  </style>
+  <path class="page" d="M10 14C18 12 24 15 29 19V51C23 47 17 45 10 47Z"/>
+  <path class="page" d="M35 27C41 23 47 21 54 22V47C47 45 41 47 35 51Z"/>
+  <circle class="signal" cx="45" cy="12" r="5"/>
+</svg>
