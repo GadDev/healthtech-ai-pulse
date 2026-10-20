@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { validateManualRequest } from '../scripts/manual-preview.mjs';
-import { policy } from '../scripts/automatic-preview.mjs';
+import { validateManualRequest } from '../scripts/manual-preview.ts';
+import { policy } from '../scripts/automatic-preview.ts';
 
 const head = 'a'.repeat(40);
 function fixture() {

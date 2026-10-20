@@ -41,7 +41,7 @@ jobs:
         env:
           PR_NUMBER: ${{ inputs.pr_number }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/manual-preview.mjs
+        run: node scripts/manual-preview.ts
 
       - name: Checkout selected PR commit
         uses: actions/checkout@v7
@@ -236,7 +236,7 @@ jobs:
           PR_NUMBER: ${{ inputs.pr_number }}
           EXPECTED_HEAD_SHA: ${{ needs.build.outputs.head_sha }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/manual-preview.mjs
+        run: node scripts/manual-preview.ts
 
       - name: Authenticate using preview WIF
         uses: google-github-actions/auth@v3
@@ -251,7 +251,7 @@ jobs:
           PR_NUMBER: ${{ inputs.pr_number }}
           EXPECTED_HEAD_SHA: ${{ needs.build.outputs.head_sha }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/manual-preview.mjs
+        run: node scripts/manual-preview.ts
       - name: Deploy temporary preview channel
         id: publish
         env:

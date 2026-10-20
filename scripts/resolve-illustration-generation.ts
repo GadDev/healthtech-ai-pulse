@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { z } from 'astro/zod';
 import { storySchema, reviewSchema } from '../src/lib/editorial-schema.ts';
-import { markdown } from './lib/content.mjs';
+import { markdown } from './lib/content.ts';
 import {
   buildGenerationIdentity,
   resolveRepositoryPath,
@@ -25,7 +25,17 @@ const briefSchema = z
   })
   .strict();
 
-export function resolveIllustrationGeneration(root, options) {
+interface GenerationOptions {
+  storyId?: string;
+  briefPath?: string;
+  generatorSurface?: string;
+  candidateCount?: number;
+  modelSnapshot?: string | null;
+  json?: boolean;
+  help?: boolean;
+}
+
+export function resolveIllustrationGeneration(root: string, options: GenerationOptions) {
   const id = options.storyId;
   if (!/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id || ''))
     throw new Error('Use a dated canonical story ID.');
@@ -51,7 +61,7 @@ export function resolveIllustrationGeneration(root, options) {
     brief_sha256: sha256(briefBytes),
     policy_sha256: sha256(readFileSync(resolveRepositoryPath(root, 'docs/EDITORIAL.md'))),
     candidate_count: options.candidateCount ?? 1,
-    generator: options.generatorSurface,
+    generator: options.generatorSurface!,
     model_snapshot: options.modelSnapshot ?? null,
   });
   const base = { story_id: id, expected_identity: identity, requires_batch_validation: true };
@@ -78,7 +88,7 @@ export function resolveIllustrationGeneration(root, options) {
   };
 }
 
-export function parseGenerationArguments(args) {
+export function parseGenerationArguments(args: string[]): GenerationOptions {
   const names = new Map([
     ['--story', 'storyId'],
     ['--brief', 'briefPath'],
@@ -86,7 +96,7 @@ export function parseGenerationArguments(args) {
     ['--candidate-count', 'candidateCount'],
     ['--model-snapshot', 'modelSnapshot'],
   ]);
-  const options = {};
+  const options: Record<string, string | number | boolean> = {};
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--json') {
       options.json = true;
@@ -103,13 +113,14 @@ export function parseGenerationArguments(args) {
   }
   if (options.candidateCount !== undefined) {
     if (
+      typeof options.candidateCount !== 'string' ||
       !/^[1-9][0-9]*$/.test(options.candidateCount) ||
       !Number.isSafeInteger(Number(options.candidateCount))
     )
       throw new Error('--candidate-count must be a positive safe integer.');
     options.candidateCount = Number(options.candidateCount);
   }
-  return options;
+  return options as GenerationOptions;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
@@ -122,7 +133,12 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     else
       console.log(JSON.stringify(resolveIllustrationGeneration(process.cwd(), options), null, 2));
   } catch (error) {
-    console.error(JSON.stringify({ error: 'decision-blocked', message: error.message }));
+    console.error(
+      JSON.stringify({
+        error: 'decision-blocked',
+        message: error instanceof Error ? error.message : String(error),
+      }),
+    );
     process.exitCode = 2;
   }
 }

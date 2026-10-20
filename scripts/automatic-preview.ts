@@ -3,6 +3,73 @@ import { appendFileSync, lstatSync, readFileSync, readdirSync, writeFileSync } f
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
+type Repository = { id?: number; owner?: { id?: number } };
+type WorkflowEvent = {
+  repository?: Repository;
+  workflow_run?: { id: number; run_attempt?: number };
+};
+type WorkflowRun = {
+  id: number;
+  repository?: Repository;
+  head_repository?: Repository;
+  workflow_id: number;
+  path: string;
+  event: string;
+  status: string;
+  conclusion: string | null;
+  run_attempt: number;
+  head_sha: string;
+  head_branch: string;
+  pull_requests?: { number: number }[];
+};
+type PullRequest = {
+  state: string;
+  base?: { ref: string; sha: string; repo?: Repository };
+  head?: { sha: string; ref: string; repo?: Repository };
+  merge_commit_sha: string;
+};
+type GitRef = { object?: { sha?: string } };
+type GitCommit = { sha: string; parents?: { sha: string }[] };
+type JobPage = { total_count: number; jobs?: { name: string; conclusion: string }[] };
+type ArtifactPage = {
+  total_count: number;
+  artifacts?: {
+    name: string;
+    id: number;
+    expired: boolean;
+    expires_at: string;
+    digest: string;
+    workflow_run?: {
+      id: number;
+      head_sha: string;
+      repository_id: number;
+      head_repository_id: number;
+    };
+  }[];
+};
+type Api = (path: string) => Promise<unknown>;
+
+export interface PreviewRequest {
+  schema_version: number;
+  repository: string;
+  run_id: string;
+  run_attempt: string;
+  pr_number: number;
+  head_sha: string;
+  base_sha: string;
+  tested_sha: string;
+  artifact_id: number;
+  artifact_digest: string;
+}
+
+type HostingConfig = {
+  hosting?: {
+    site?: string;
+    public?: string;
+    headers?: { source: string; headers?: { key: string; value: string }[] }[];
+  } & Record<string, unknown>;
+};
+
 export const policy = {
   repository: 'GadDev/healthtech-ai-pulse',
   repositoryId: 1422703866,
@@ -12,11 +79,12 @@ export const policy = {
 };
 
 const shaPattern = /^[0-9a-f]{40}$/;
-const positiveInteger = (value) => Number.isSafeInteger(value) && value > 0;
-const skip = (reason) => ({ eligible: false, reason });
+const positiveInteger = (value: unknown): value is number =>
+  typeof value === 'number' && Number.isSafeInteger(value) && value > 0;
+const skip = (reason: string) => ({ eligible: false as const, reason });
 
 // All authorization inputs come from GitHub, never from downloaded metadata.
-export async function resolveRequest(api, event, now = Date.now()) {
+export async function resolveRequest(api: Api, event: WorkflowEvent, now = Date.now()) {
   if (
     event.repository?.id !== policy.repositoryId ||
     event.repository?.owner?.id !== policy.ownerId ||
@@ -25,7 +93,7 @@ export async function resolveRequest(api, event, now = Date.now()) {
     return skip('Unexpected repository or originating run.');
   }
 
-  const run = await api(`/actions/runs/${event.workflow_run.id}`);
+  const run = (await api(`/actions/runs/${event.workflow_run.id}`)) as WorkflowRun;
   if (
     run.id !== event.workflow_run.id ||
     run.repository?.id !== policy.repositoryId ||
@@ -46,8 +114,8 @@ export async function resolveRequest(api, event, now = Date.now()) {
 
   const number = run.pull_requests[0].number;
   if (!positiveInteger(number)) return skip('Invalid PR association.');
-  const pr = await api(`/pulls/${number}`);
-  const main = await api('/git/ref/heads/main');
+  const pr = (await api(`/pulls/${number}`)) as PullRequest;
+  const main = (await api('/git/ref/heads/main')) as GitRef;
   if (
     pr.state !== 'open' ||
     pr.base?.ref !== 'main' ||
@@ -62,7 +130,7 @@ export async function resolveRequest(api, event, now = Date.now()) {
     return skip('PR is closed, forked, retargeted, or no longer matches the CI revision.');
   }
 
-  const commit = await api(`/git/commits/${pr.merge_commit_sha}`);
+  const commit = (await api(`/git/commits/${pr.merge_commit_sha}`)) as GitCommit;
   if (
     commit.sha !== pr.merge_commit_sha ||
     commit.parents?.length !== 2 ||
@@ -73,7 +141,9 @@ export async function resolveRequest(api, event, now = Date.now()) {
   }
 
   // Require both expected CI jobs to have actually passed, even if CI was edited.
-  const jobs = await api(`/actions/runs/${run.id}/attempts/${run.run_attempt}/jobs?per_page=100`);
+  const jobs = (await api(
+    `/actions/runs/${run.id}/attempts/${run.run_attempt}/jobs?per_page=100`,
+  )) as JobPage;
   if (
     jobs.total_count > 100 ||
     !['Verify project', 'Browser smoke and accessibility'].every((name) =>
@@ -84,7 +154,9 @@ export async function resolveRequest(api, event, now = Date.now()) {
   }
 
   const name = `ci-preview-${run.id}-${run.run_attempt}`;
-  const artifacts = await api(`/actions/runs/${run.id}/artifacts?name=${name}&per_page=100`);
+  const artifacts = (await api(
+    `/actions/runs/${run.id}/artifacts?name=${name}&per_page=100`,
+  )) as ArtifactPage;
   if (artifacts.total_count !== 1 || artifacts.artifacts?.length !== 1) {
     return skip('Expected exactly one artifact for this CI attempt.');
   }
@@ -104,7 +176,7 @@ export async function resolveRequest(api, event, now = Date.now()) {
   }
 
   return {
-    eligible: true,
+    eligible: true as const,
     request: {
       schema_version: 1,
       repository: policy.repository,
@@ -120,8 +192,8 @@ export async function resolveRequest(api, event, now = Date.now()) {
   };
 }
 
-export function validateArtifact(directory, request) {
-  function inspect(path) {
+export function validateArtifact(directory: string, request: PreviewRequest) {
+  function inspect(path: string) {
     const stat = lstatSync(path);
     if (stat.isSymbolicLink()) throw new Error('Artifact contains a symbolic link.');
     if (stat.isDirectory()) {
@@ -140,7 +212,7 @@ export function validateArtifact(directory, request) {
     throw new Error('Invalid provenance file.');
   }
   const metadata = JSON.parse(readFileSync(metadataPath, 'utf8'));
-  const keys = [
+  const keys: (keyof PreviewRequest)[] = [
     'schema_version',
     'repository',
     'run_id',
@@ -170,7 +242,7 @@ export function validateArtifact(directory, request) {
   }
 }
 
-export function deploymentConfig(config, directory, site) {
+export function deploymentConfig(config: HostingConfig, directory: string, site: string) {
   const hosting = config.hosting;
   const allowed = new Set(['site', 'public', 'ignore', 'cleanUrls', 'trailingSlash', 'headers']);
   if (
@@ -195,7 +267,7 @@ export function deploymentConfig(config, directory, site) {
   return { hosting: { ...hosting, public: resolve(directory, 'dist') } };
 }
 
-async function api(path) {
+async function api(path: string): Promise<unknown> {
   const response = await globalThis.fetch(
     `https://api.github.com/repos/${policy.repository}${path}`,
     {
@@ -212,42 +284,42 @@ async function api(path) {
 }
 
 async function main() {
-  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH!, 'utf8'));
   const result = await resolveRequest(api, event);
   if (process.argv[2] === 'resolve') {
-    appendFileSync(process.env.GITHUB_OUTPUT, `eligible=${result.eligible}\n`);
+    appendFileSync(process.env.GITHUB_OUTPUT!, `eligible=${result.eligible}\n`);
     if (result.eligible) {
       appendFileSync(
-        process.env.GITHUB_OUTPUT,
+        process.env.GITHUB_OUTPUT!,
         `request=${JSON.stringify(result.request)}\npr_number=${result.request.pr_number}\n`,
       );
     } else {
-      appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Preview skipped: ${result.reason}\n`);
+      appendFileSync(process.env.GITHUB_STEP_SUMMARY!, `Preview skipped: ${result.reason}\n`);
     }
     return;
   }
   if (process.argv[2] !== 'verify') throw new Error('Unknown preview command.');
-  const expected = JSON.parse(process.env.PREVIEW_REQUEST);
+  const expected = JSON.parse(process.env.PREVIEW_REQUEST!);
   if (!result.eligible || JSON.stringify(result.request) !== JSON.stringify(expected)) {
     throw new Error('Preview request changed or is no longer eligible.');
   }
-  const directory = join(process.env.RUNNER_TEMP, 'automatic-preview-artifact');
+  const directory = join(process.env.RUNNER_TEMP!, 'automatic-preview-artifact');
   validateArtifact(directory, expected);
   previewDeploymentConfig(process.env);
   const config = deploymentConfig(
     JSON.parse(readFileSync('firebase.preview.json', 'utf8')),
     directory,
-    process.env.FIREBASE_SITE_ID,
+    process.env.FIREBASE_SITE_ID!,
   );
   writeFileSync(
-    join(process.env.RUNNER_TEMP, 'automatic-preview-config.json'),
+    join(process.env.RUNNER_TEMP!, 'automatic-preview-config.json'),
     `${JSON.stringify(config, null, 2)}\n`,
   );
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
-    console.error(error.message);
+    console.error(error instanceof Error ? error.message : String(error));
     process.exitCode = 1;
   });
 }
