@@ -2,7 +2,7 @@
 
 Evidence-led intelligence for people building and evaluating healthcare and pharmaceutical AI.
 
-The initial site is deliberately empty: no source-publication articles or historical decisions were imported. The dedicated Firebase target is configured; live deployment acceptance is still pending.
+The publication has one verified Health systems briefing and a dated edition. No source-publication articles or historical decisions were imported. The dedicated Firebase target is configured; live deployment acceptance is still pending.
 
 ## Develop
 
@@ -15,7 +15,9 @@ npm ci
 npm run dev
 ```
 
-`npm run verify` runs lint, formatting, content integrity, Astro checks, build and Pagefind. `npm run test:e2e` checks public routes, accessibility, narrow navigation and search; install Chromium with `npx playwright install chromium` first.
+`npm run verify` runs Oxlint, Oxfmt formatting checks, content integrity, Astro checks, build and Pagefind. `npm run test:e2e` checks public routes, accessibility, narrow navigation and search; install Chromium with `npx playwright install chromium` first.
+
+`npm run lint:fix` applies safe lint fixes; `npm run format` formats supported source, content and configuration files, including Astro. Oxfmt settings live in `.oxfmtrc.json`; Oxlint rules live in `.oxlintrc.json`. Generated output, the npm lockfile and the generated ledger schema are excluded from formatting. Astro type and template diagnostics remain covered by `npm run check`.
 
 Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured local builds use localhost, omit canonical links and disallow indexing. No cloud credentials or source Firebase identities are included.
 
@@ -26,6 +28,7 @@ Set `SITE_URL` to the real public HTTPS origin before deployment. Unconfigured l
 - [docs/DAILY_ISSUE.md](docs/DAILY_ISSUE.md): edition format, ordering and ledger-only days.
 - [Editorial schema](docs/editorial/EDITORIAL_SCHEMA_V1.md), [decision engine](docs/editorial/DECISION_ENGINE_V1.md) and [PR preparation](docs/editorial/PR_PREPARATION_V1.md): research-to-publication contracts.
 - [Visual constitution](docs/editorial/VISUAL_CONSTITUTION_V1.md) and [topics](docs/editorial/TOPICS_V1.yml): artwork rules and controlled vocabulary.
+- [Edition Front review](docs/design/EDITION_FRONT.md): layout decisions, image reassessment and verification.
 - [EDITORIAL.md](docs/EDITORIAL.md): claim-specific evidence, scope and publication policy.
 - [TECHSTACK.md](docs/TECHSTACK.md): architecture, reuse and operations.
 - [ROADMAP.md](docs/ROADMAP.md): PR boundaries and readiness gates.

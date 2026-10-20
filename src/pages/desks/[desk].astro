@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import EvidenceSummary from '../../components/EvidenceSummary.astro';
 import StoryList from '../../components/StoryList.astro';
 import { deskKeys, desks, type Desk } from '../../lib/categories';
 export function getStaticPaths() {
@@ -10,18 +11,47 @@ const desk = Astro.params.desk as Desk;
 const stories = (
   await getCollection('stories', ({ data }) => !data.draft && data.category === desk)
 ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const [lead, ...remaining] = stories;
+const number = deskKeys.indexOf(desk) + 1;
 ---
 
 <BaseLayout title={desks[desk].title}>
-  <p class="eyebrow">Editorial desk</p>
-  <h1>{desks[desk].title}</h1>
-  <p class="lede">{desks[desk].description}</p>
-  {stories.length ? (
-    <StoryList stories={stories} />
-  ) : (
-    <div class="empty-state">
-      <h2>No published stories yet.</h2>
-      <p>We will publish here when a development clears the evidence and editorial gates.</p>
+  <header class="page-intro desk-intro">
+    <p class="eyebrow">Editorial desk / 0{number} of 05</p>
+    <h1>{desks[desk].title}</h1>
+    <p class="lede">{desks[desk].description}</p>
+  </header>
+  <section aria-label={`Latest in ${desks[desk].title}`} class="desk-stories">
+    <div class="section-rule">
+      <span>Latest in this desk</span>
+      <span>
+        {stories.length} {stories.length === 1 ? 'briefing' : 'briefings'}
+      </span>
     </div>
-  )}
+    {lead ? (
+      <>
+        <StoryList stories={[lead]} showImage />
+        <EvidenceSummary story={lead} compact />
+        {remaining.length > 0 && <StoryList stories={remaining} />}
+      </>
+    ) : (
+      <div class="empty-state">
+        <h2>No published stories yet.</h2>
+        <p>We will publish here when a development clears the evidence and editorial gates.</p>
+        <a class="text-link" href="/methodology/">
+          How we assess evidence →
+        </a>
+      </div>
+    )}
+  </section>
+  <nav class="other-desks" aria-label="Other editorial desks">
+    <p class="eyebrow">Browse the five desks</p>
+    <div class="desk-links">
+      {deskKeys.map((key) => (
+        <a href={`/desks/${key}/`} aria-current={key === desk ? 'page' : undefined}>
+          {desks[key].title} <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </nav>
 </BaseLayout>

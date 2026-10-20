@@ -4,19 +4,30 @@ import { desks, deskKeys } from '../../lib/categories';
 ---
 
 <BaseLayout title="Editorial desks">
-  <p class="eyebrow">Coverage</p>
-  <h1>Follow the question, not the hype.</h1>
-  <p class="lede">
-    Five ways into healthcare AI. No quota to fill, no story duplicated across desks.
-  </p>
-  <div class="desk-grid">
-    {deskKeys.map((key) => (
-      <section class="desk-tile">
-        <h2>
-          <a href={`/desks/${key}/`}>{desks[key].title}</a>
-        </h2>
-        <p>{desks[key].description}</p>
-      </section>
+  <header class="page-intro">
+    <p class="eyebrow">Coverage · Five editorial desks</p>
+    <h1>Explore the desks.</h1>
+    <p class="lede">
+      Five ways into healthcare AI. Each published story belongs to one desk and follows the same
+      evidence standard.
+    </p>
+  </header>
+  <section class="category-list" aria-label="Editorial desks">
+    {deskKeys.map((key, index) => (
+      <article class="category-row">
+        <span class="desk-number">0{index + 1}</span>
+        <div>
+          <h2>
+            <a href={`/desks/${key}/`}>
+              {desks[key].title} <span aria-hidden="true">↗</span>
+            </a>
+          </h2>
+          <p>{desks[key].description}</p>
+        </div>
+      </article>
     ))}
-  </div>
+  </section>
+  <p class="category-footnote">
+    Our <a href="/methodology/">methodology</a> applies across all five desks.
+  </p>
 </BaseLayout>

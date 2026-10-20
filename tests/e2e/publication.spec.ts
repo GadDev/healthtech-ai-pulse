@@ -50,3 +50,27 @@ test('publication has honest empty states and search loads', async ({ page, requ
   await expect(page.getByRole('textbox')).toBeVisible();
   expect((await request.get('/rss.xml')).ok()).toBeTruthy();
 });
+
+test('article connects evidence, sources and corrections to their destinations', async ({
+  page,
+}) => {
+  await page.goto('/stories/2026-10-19-oncology-ai-ehr-handoff/');
+  await expect(page.getByRole('navigation', { name: 'In this article' })).toBeVisible();
+  await page
+    .getByRole('navigation', { name: 'In this article' })
+    .getByRole('link', { name: 'Evidence' })
+    .click();
+  await expect(page.locator('#evidence-title')).toBeVisible();
+  await page
+    .getByRole('navigation', { name: 'In this article' })
+    .getByRole('link', { name: 'Sources' })
+    .click();
+  await expect(page.locator('#sources')).toBeVisible();
+  await expect(page.locator('#sources + ul a').first()).toHaveAttribute('href', /^https:\/\//);
+  await page
+    .getByRole('navigation', { name: 'In this article' })
+    .getByRole('link', { name: 'Corrections' })
+    .click();
+  await expect(page).toHaveURL(/\/methodology\/#corrections$/);
+  await expect(page.locator('#corrections')).toBeVisible();
+});

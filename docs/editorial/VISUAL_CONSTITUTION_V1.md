@@ -6,20 +6,24 @@ Contract: `healthtech-1.0`. Apply these visual authoring rules to generated Heal
 
 Build the brief from the story ID, two or three supported context sentences, one visual idea, intended placement and crop. Use the actual HealthTech article renderer and stylesheet for composition: `src/pages/stories/[...id].astro` and `src/styles/publication.css`. Do not claim that source reference-layout pages or additional image placements exist here.
 
-Prefer a restrained editorial illustration with a scientific or architectural sensibility: one physical/spatial metaphor, deliberate geometry, subtle material texture, readable silhouette and generous negative space. Technical lines may support the image; they should not turn it into a bare flowchart, wireframe or diagram. Use the publication's warm canvas `#F3EBDD`, paper `#FAF6EE`, ink `#171B1A`, muted gray `#575D5B` and restrained terracotta `#8A4B35`.
+Use Quiet Laboratory's photorealistic editorial direction. Choose a story-relevant setting or still life, soft light, restrained colours and generous negative space. The shared palette is white `#FFFFFF`, ink `#424242`, teals `#51796E` and `#344F51`, pale sage `#E8EFEC`, mist `#D1E0E2`, with rose `#D4A298` and caramel `#BC8A5F` as sparing accents. Keep small text in ink or dark teal. Avoid generic lab stock imagery. Generated photographs must be captioned as illustrative wherever a reader could mistake them for documentation of the study, people or institution.
+
+Prefer a specific, supported workplace detail over a staged laboratory scene: an unbranded workstation, an empty form or a device in context when the story supports it. Use natural or softly diffused light, neutral whites and restrained teal in the scene. Avoid broad coloured washes, glowing interfaces and synthetic gradient backdrops. Leave room for the intended crop without inserting headline text into the image.
+
+A generated photograph is an editorial illustration of context. It must not resemble documentary evidence of the reported study, identifiable investigators, a named institution, real patients or clinical results. Avoid readable records, identifying screens and brand marks. Caption it as illustrative at every placement where that distinction might otherwise be lost. Alt text describes visible content without claiming that the depicted scene occurred. If no truthful photographic idea survives the crop and implication review, use `illustration.mode: none`.
 
 Reject unsupported medical implications before judging aesthetics. In particular:
 
 - Do not invent anatomy, scans, molecular mechanisms, study results, patient outcomes or clinical endorsements.
 - Do not use generated charts or numbers as factual evidence. Data graphics require source data and a reproducible method under editorial policy.
 - Do not generate words, labels, logos, headlines, UI, screenshots, watermarks, borders or frames. The website supplies its own text.
-- Avoid generic robots, glowing brains, neon and stock AI imagery. Use abstraction when a literal depiction would imply more than the evidence establishes.
+- Avoid generic robots, glowing brains, neon and stock AI imagery. A photographic setting must not imply it depicts the actual study, participants, institution or a clinical outcome absent from reporting. Use a neutral still life or withhold imagery when a literal scene would mislead.
 
 Compare with approved HealthTech artwork when available. Do not import source artwork, approvals or a supposed target reference archive. Record honestly when no target comparison is available.
 
 ## Review order and authority
 
-Reject unsupported medical implications and prohibited content before considering aesthetics. Then inspect the actual crop, contrast and reduced-size legibility. Attractive artwork cannot compensate for a misleading clinical implication. Do not treat a high model confidence score as visual or scientific validation.
+Reject unsupported medical implications and prohibited content before considering aesthetics. Then inspect the actual crop, contrast and reduced-size legibility. At each intended size, check whether the image or its juxtaposition with the headline implies a treatment outcome, measured benefit or actual study scene; verify that the illustrative caption remains legible on desktop and mobile. Review the crop in the real article and listing placements. Attractive artwork cannot compensate for a misleading clinical implication. Do not treat a high model confidence score as visual or scientific validation.
 
 Use the real HealthTech renderer and approved target references when available; source-publication layouts and artwork are not target production evidence. One candidate is sufficient under the target contract. No golden-reference archive, multi-candidate competition or numerical aesthetic scoring is required or implied here.
 

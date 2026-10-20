@@ -3,18 +3,52 @@ import type { CollectionEntry } from 'astro:content';
 import { desks } from '../lib/categories';
 interface Props {
   stories: CollectionEntry<'stories'>[];
+  showImage?: boolean;
 }
-const { stories } = Astro.props;
+const { stories, showImage = false } = Astro.props;
 ---
 
 {stories.map((story) => (
-  <article class="story-row">
-    <p class="story-meta">
-      {desks[story.data.category].title} · {story.data.date.toISOString().slice(0, 10)}
-    </p>
-    <h2>
-      <a href={`/stories/${story.id}/`}>{story.data.title}</a>
-    </h2>
-    <p>{story.data.description}</p>
+  <article
+    class:list={[
+      'story-row',
+      { 'story-row--visual': showImage && story.data.illustration.mode === 'generated' },
+    ]}
+  >
+    <div>
+      <p class="story-kicker">
+        <a href={`/desks/${story.data.category}/`}>{desks[story.data.category].title}</a>
+        <span aria-hidden="true"> · </span>
+        <time datetime={story.data.date.toISOString().slice(0, 10)}>
+          {story.data.date.toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC',
+          })}
+        </time>
+      </p>
+      <h3>
+        <a href={`/stories/${story.id}/`}>{story.data.title}</a>
+      </h3>
+      <p>{story.data.description}</p>
+      <a class="text-link" href={`/stories/${story.id}/`}>
+        Read the analysis <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    {showImage && story.data.illustration.mode === 'generated' && (
+      <figure class="editorial-image story-row__image">
+        <img
+          src={story.data.illustration.image}
+          alt={story.data.illustration.alt}
+          width="1536"
+          height="1024"
+          loading="lazy"
+        />
+        <figcaption>
+          Illustrative image · not the reported study site or its participants
+        </figcaption>
+      </figure>
+    )}
   </article>
 ))}

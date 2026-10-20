@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EvidenceCard from '../../components/EvidenceCard.astro';
+import EvidenceSummary from '../../components/EvidenceSummary.astro';
 import { desks } from '../../lib/categories';
 export async function getStaticPaths() {
   return (await getCollection('stories', ({ data }) => !data.draft)).map((story) => ({
@@ -14,45 +15,86 @@ const { Content } = await render(story);
 ---
 
 <BaseLayout title={story.data.title} description={story.data.description}>
-  <article data-pagefind-body>
-    <p class="eyebrow">{desks[story.data.category].title}</p>
-    <h1>{story.data.title}</h1>
-    <p class="lede">{story.data.description}</p>
-    <p class="story-meta">
-      Published {story.data.date.toISOString().slice(0, 10)}
-      {story.data.updatedAt && ` · Updated ${story.data.updatedAt.toISOString().slice(0, 10)}`}
-    </p>
+  <article class="article-page" data-pagefind-body>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Latest</a>
+      <span aria-hidden="true"> / </span>
+      <a href={`/desks/${story.data.category}/`}>{desks[story.data.category].title}</a>
+    </nav>
+    <header class="article-header">
+      <p class="eyebrow">{desks[story.data.category].title} / Evidence briefing</p>
+      <h1>{story.data.title}</h1>
+      <p class="lede">{story.data.description}</p>
+      <p class="story-meta">
+        Published{' '}
+        <time datetime={story.data.date.toISOString().slice(0, 10)}>
+          {story.data.date.toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC',
+          })}
+        </time>
+        {story.data.updatedAt && ` · Updated ${story.data.updatedAt.toISOString().slice(0, 10)}`}
+      </p>
+    </header>
     {story.data.illustration.mode === 'generated' && (
-      <img
-        class="story-hero"
-        src={story.data.illustration.image}
-        alt={story.data.illustration.alt}
-      />
+      <figure class="editorial-image article-image">
+        <img
+          src={story.data.illustration.image}
+          alt={story.data.illustration.alt}
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+        />
+        <figcaption>
+          Illustrative image · not the reported study site or its participants
+        </figcaption>
+      </figure>
     )}
-    <EvidenceCard evidence={story.data.evidence} />
-    <div class="prose">
-      <Content />
-      <h2>Sources</h2>
-      <ul>
-        {story.data.sources.map((source) => (
-          <li>
-            <a href={source.url}>{source.label}</a>
-          </li>
-        ))}
-      </ul>
-      {story.data.corrections.length > 0 && (
-        <section aria-label="Corrections">
-          <h2>Corrections</h2>
-          {story.data.corrections.map((correction) => (
-            <p>
-              <time datetime={correction.date.toISOString()}>
-                {correction.date.toISOString().slice(0, 10)}
-              </time>{' '}
-              — {correction.note}
-            </p>
+    <nav class="article-jumps" aria-label="In this article">
+      <strong>On this page</strong>
+      <a href="#evidence-title">Evidence</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#sources">Sources</a>
+      <a href={story.data.corrections.length ? '#corrections' : '/methodology/#corrections'}>
+        Corrections
+      </a>
+    </nav>
+    <div class="article-reading">
+      <div class="prose article-prose" id="analysis">
+        <Content />
+        <h2 id="sources">Sources</h2>
+        <ul>
+          {story.data.sources.map((source) => (
+            <li>
+              <a href={source.url}>{source.label}</a>
+            </li>
           ))}
-        </section>
-      )}
+        </ul>
+        {story.data.corrections.length > 0 ? (
+          <section aria-label="Corrections" id="corrections">
+            <h2>Corrections</h2>
+            {story.data.corrections.map((correction) => (
+              <p>
+                <time datetime={correction.date.toISOString()}>
+                  {correction.date.toISOString().slice(0, 10)}
+                </time>{' '}
+                — {correction.note}
+              </p>
+            ))}
+          </section>
+        ) : (
+          <p class="corrections-link">
+            Corrections: <a href="/methodology/#corrections">Read our corrections policy ↗</a>
+          </p>
+        )}
+      </div>
+      <EvidenceSummary story={story} />
     </div>
+    <EvidenceCard evidence={story.data.evidence} />
+    <nav class="back-link" aria-label="More coverage">
+      <a href={`/desks/${story.data.category}/`}>← More from {desks[story.data.category].title}</a>
+    </nav>
   </article>
 </BaseLayout>

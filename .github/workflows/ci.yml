@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint, format-check, content-check, type-check, and build
+      - name: Oxlint, Oxfmt, content-check, type-check, and build
         run: npm run verify
 
       # HealthTech's verify command includes all unit regressions. These named
