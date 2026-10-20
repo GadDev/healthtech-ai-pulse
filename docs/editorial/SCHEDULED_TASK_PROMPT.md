@@ -11,7 +11,7 @@ Resolve default branch and commit. Read these at that **same commit**, following
 
 The repository contracts are authoritative; external Daily AI Pulse skills or remembered policies are not substitutes. If core contracts cannot be read or conflict, stop affected preparation. If visual policies conflict, choose valid text-only mode **before declaring** generated imagery and report the conflict.
 
-Record real timestamps, Europe/Luxembourg editorial date and `contract_ref`. Check canonical branch/PR **all states**, finalized default-branch ledgers, any active lease and previous phase checkpoints *before* research. Obey target finalized/no-op, closed-unmerged, non-draft, ownership and divergent human-edit stop conditions. Never create an alternate publication branch to bypass a blocker.
+Record real timestamps, Europe/Luxembourg editorial date and `contract_ref`. Check canonical branch/PR **all states**, finalized default-branch ledgers, any active lease and previous phase checkpoints _before_ research. Obey target finalized/no-op, closed-unmerged, non-draft, ownership and divergent human-edit stop conditions. Never create an alternate publication branch to bypass a blocker.
 
 ## B. Search a bounded five-lane window
 
@@ -27,7 +27,7 @@ Proposed operating budget: 30 minutes discovery and about 20 minutes routine ver
 
 Intentionally search for negative and contradictory results: no benefit/null finding, failed external transfer, unsafe outputs, bias/drift, withdrawal, recall, retraction, abandoned deployment and rollback. A search term does not prove an incident.
 
-Split large queries by desk/date/workflow/topic, set sorting and paginate/offset when supported. A first page of 100 from 1,862 hits is not complete discovery. Record **hits, retrieved, screened and primary inspected** separately *when actually observed*; preserve unscreened results, access failures, recovery page and time budget. Complement publication-date search with source entry/index dates when supported, then verify the original event date. A source named in the prompt is not a source successfully checked.
+Split large queries by desk/date/workflow/topic, set sorting and paginate/offset when supported. A first page of 100 from 1,862 hits is not complete discovery. Record **hits, retrieved, screened and primary inspected** separately _when actually observed_; preserve unscreened results, access failures, recovery page and time budget. Complement publication-date search with source entry/index dates when supported, then verify the original event date. A source named in the prompt is not a source successfully checked.
 
 In the existing strict ledger `research.query_log[].outcome` and `coverage_gaps[]`, record every lane's actual attempt/window/query, sort/page, access, limits and remaining work; do not invent schema fields. `completed_at`/`last_completed_cutoff` indicate the **bounded planned window** was actually searched, not exhaustive global surveillance. If a required lane/window was never attempted, keep completion/cutoff null and name what remains. Do not silently roll an unfinished backlog forward.
 

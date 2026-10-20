@@ -6,13 +6,11 @@ This five-lane rotation implements the existing `healthtech-1.0` research policy
 
 Define the search window before retrieval: initially preceding 72 hours, then a 24-hour overlap from the last **completed** research cutoff, with a seven-day automatic catch-up maximum. Sweep due watch items and relevant corrections/retractions inside the policy horizon. Budget approximately 30 minutes for discovery and 20 minutes per shortlisted lead for routine follow-up, then record actual time and unfinished work. Budgets never turn unknown evidence into verified evidence.
 
-| Lane | Required attempt and rotation | Search vocabulary |
-| --- | --- | --- |
-| Research/evaluation | Desk-specific PubMed or Europe PMC queries **and** a direct journal listing. Rotate npj Digital Medicine, Nature Medicine, JAMIA, NEJM AI, Lancet Digital Health, JAMA, PLOS Digital Health and imaging journals | Foundation/generative models, LLM, deep learning, transformers, NLP, diagnostics, decision support, external validation |
-| Official safety/policy | FDA official notices/records and appropriate European actions: Commission/EUR-Lex/MDCG, MHRA, HAS/ANSM or BfArM; EMA only for relevant medicines remit | Guidance, incidents, recall, withdrawal, bias, monitoring, regulation, cybersecurity |
-| Deployment/operations | Two accessible specialist reporting routes with different coverage, followed to primary hospital/health-system accounts | EHR/ambient documentation, implementation, monitoring, procurement, workload, rollback, abandoned pilots |
-| Pharma/biomedical artifacts | Relevant trial, research, preprint or primary engineering source; inspect versioned repositories, models/data cards and licensing before availability claims | Molecule/protein/target design, biological validation, data/model releases, trial results, pharmacovigilance |
-| European/local-language | One rotating French/German or neighbouring-region search, e.g. TICsanté, Health Data Hub, LIH/LCSB, Agence eSanté, regional authorities | IA clinique, déploiement, évaluation, incident; künstliche Intelligenz, Klinik, Validierung, Sicherheit |
+- **Research/evaluation:** Desk-specific PubMed/Europe PMC queries and a direct publisher listing. Rotate npj Digital Medicine, Nature Medicine, JAMIA, NEJM AI, Lancet Digital Health, JAMA, PLOS Digital Health and imaging journals. Search foundation/generative models, LLMs, deep learning, NLP, diagnostics, decision support and external validation.
+- **Official safety/policy:** FDA notices/records and appropriate European actions (Commission/EUR-Lex/MDCG, MHRA, HAS/ANSM or BfArM; EMA within its medicines remit). Search guidance, incidents, withdrawal, bias, monitoring, regulation and cybersecurity.
+- **Deployment/operations:** Two accessible specialist reporting sources with distinct coverage, followed to original hospital/health-system accounts. Search EHR/ambient documentation, implementation, procurement, monitoring, workload, rollback and abandoned pilots.
+- **Pharma/biomedical artifacts:** Relevant trial, preprint, research or engineering source. Inspect versioned repositories, model/data cards and licensing before availability claims. Search molecule/protein/target design, biological validation, releases, trials and pharmacovigilance.
+- **European/local-language:** One rotating French/German or neighbouring-region search (TICsanté, Health Data Hub, LIH/LCSB, Agence eSanté, national authorities). Search IA clinique, déploiement, évaluation, incident; künstliche Intelligenz, Klinik, Validierung, Sicherheit.
 
 Retain Fierce Healthcare (AI/digital-health), MedTech Dive, FirstWord HealthTech and Life Science Daily as user-requested **discovery entry points**, rotated with MobiHealthNews, Healthcare IT News, Digital Health and other relevant outlets. They are not daily fetch quotas or independent clinical validation. Trace important claims to the original records, identifying contributed, syndicated, promotional and sponsored material.
 
@@ -37,7 +35,7 @@ Keep five desks, ≥75 selection with the existing hard gates, two surviving art
 Replay **13–19 October 2026** without publishing, editing historical ledgers or claiming live-run acceptance:
 
 1. **A — current baseline:** captured original discovery, unchanged ≥75 gate.
-2. **B — improved discovery:** five lanes, pagination, query expansion and watch prioritization, with the *same* ≥75 gate and two-story cap.
+2. **B — improved discovery:** five lanes, pagination, query expansion and watch prioritization, with the _same_ ≥75 gate and two-story cap.
 3. **C — ranking sensitivity only:** on the adequately inspected union of A/B, **shadow-test** ≥65 for `pulse` with E≥3 and unchanged hard gates. This is not eligible for live publication.
 
 Give A and B equivalent actual search/verification budgets (e.g. 30 minutes discovery plus up to 30 minutes verification per arm), vary or document order and shared-knowledge effects, and preserve source snapshots/access failures. Ask the maintainer to review anonymized candidate summaries. Record relative missed/added useful leads, fully assessed denominator, material errors in claims/design/dates/regulatory status/COI, lane completion, and actual human review minutes. Proposed adoption signal for B is at least two useful additional leads across the seven days without losing A's strong stories and with zero material unsupported claims; change thresholds only after separate review.
