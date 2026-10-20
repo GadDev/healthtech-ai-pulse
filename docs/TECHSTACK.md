@@ -60,13 +60,14 @@ Use npm and package-lock.json. Implemented commands:
 ```bash
 npm ci
 npm run scripts:check
+npm run tests:check
 npm run editorial:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run illustration:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run verify
 npm run test:e2e
 ```
 
-verify includes lint, format, strict Node-script TypeScript checking, all-ledger schema and relationship validation, content integrity, Astro check, static build, and Pagefind. Node 24 runs erasable `.ts` modules without a separate transpiler; small `.mjs` command wrappers remain JavaScript. Runtime schemas and API identity checks still validate untrusted inputs. PR CI validates every changed dated ledger explicitly, not only the lexicographically latest file. Regression tests cover selection/withholding, every claim type's conditional evidence fields, evidence-card rendering, fixture leakage, deduplication identities, empty/all-withheld batches, concurrent ownership, reruns, and source-update handling. Browser checks cover home, article, issue, search, keyboard/focus, evidence-card overflow, and representative 320/375/960/1280 widths. Passing axe does not establish complete accessibility.
+verify includes lint, format, strict Node-script and regression-test TypeScript checking, all-ledger schema and relationship validation, content integrity, Astro check, static build, and Pagefind. Node 24 runs erasable `.ts` modules and `.ts` tests without a separate transpiler; small `.mjs` command wrappers remain JavaScript. `tsconfig.tests.json` covers Node test suites and typed fixtures; the existing Playwright E2E suite remains TypeScript and runs separately through Playwright. Runtime schemas and API identity checks still validate untrusted inputs. PR CI validates every changed dated ledger explicitly, not only the lexicographically latest file. Regression tests cover selection/withholding, every claim type's conditional evidence fields, evidence-card rendering, fixture leakage, deduplication identities, empty/all-withheld batches, concurrent ownership, reruns, and source-update handling. Browser checks cover home, article, issue, search, keyboard/focus, evidence-card overflow, and representative 320/375/960/1280 widths. Passing axe does not establish complete accessibility.
 
 No network URL availability test should make routine builds flaky. Syntax and claim locators are deterministic checks; source accessibility is a dated editorial observation with manual retries. A URL returning HTTP 200 does not validate its claims. CI must reject publishable source/claim errors and leaked watch/rejected/withheld records. A ledger-only recovery batch may contain explicit source failures but no story or issue.
 

@@ -1,4 +1,5 @@
 import test from 'node:test';
+import type { TestContext } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   mkdtempSync,
@@ -13,7 +14,8 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { stringify } from 'yaml';
-import { fixture } from './helpers/fixtures.mjs';
+import { fixture } from './helpers/fixtures.ts';
+import { storySchema } from '../src/lib/editorial-schema.ts';
 import {
   buildGenerationIdentity,
   resolveRepositoryPath,
@@ -29,7 +31,7 @@ import {
   buildContactSheetHtml,
 } from '../scripts/build-illustration-contact-sheet.ts';
 
-function setup(t, mode = 'generated') {
+function setup(t: TestContext, mode = 'generated') {
   const root = mkdtempSync(join(tmpdir(), 'healthtech-generation-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   for (const dir of [
@@ -56,7 +58,14 @@ function setup(t, mode = 'generated') {
     join(root, 'docs/EDITORIAL.md'),
     'Synthetic policy fixture, not production policy.',
   );
-  const brief = {
+  const brief: {
+    story_id: string;
+    verified_context: string;
+    visual_idea: string;
+    placement: string;
+    crop: 'wide' | 'square' | 'landscape';
+    references?: Array<{ path: string; sha256: string }>;
+  } = {
     story_id: id,
     verified_context: 'Synthetic fixture only. No medical claim.',
     visual_idea: 'One abstract form',
@@ -65,11 +74,19 @@ function setup(t, mode = 'generated') {
   };
   const briefPath = join(root, 'brief.json');
   writeFileSync(briefPath, JSON.stringify(brief));
-  const options = { storyId: id, briefPath: 'brief.json', generatorSurface: 'synthetic-generator' };
+  const options: {
+    storyId: string;
+    briefPath: string;
+    generatorSurface: string;
+    candidateCount?: number;
+    modelSnapshot?: string;
+  } = { storyId: id, briefPath: 'brief.json', generatorSurface: 'synthetic-generator' };
   return { root, id, story, sourcePath, source, brief, briefPath, options };
 }
-function persist(f) {
-  const identity = resolveIllustrationGeneration(f.root, f.options).expected_identity;
+function persist(f: ReturnType<typeof setup>) {
+  const decision = resolveIllustrationGeneration(f.root, f.options);
+  if (!('expected_identity' in decision)) throw new Error('Expected generation identity');
+  const identity = decision.expected_identity;
   // Isolated RIFF/WEBP container-header fixture; not generated or published artwork.
   const image = Buffer.from('RIFF0000WEBP');
   const review = {
@@ -82,6 +99,7 @@ function persist(f) {
     unsupported_medical_implication: false,
     crop_passed: true,
   };
+  if (f.story.illustration.mode !== 'generated') throw new Error('Expected generated story');
   const assetPath = join(f.root, `public${f.story.illustration.image}`);
   const reviewPath = join(f.root, f.story.illustration.reviewPath);
   writeFileSync(assetPath, image);
@@ -109,7 +127,11 @@ test('one identity formula stays compatible with existing healthtech-1.0 reviews
   );
   assert.equal(buildGenerationIdentity(identity).generation_key, identity.generation_key);
   assert.doesNotThrow(() =>
-    validateIllustration(f.root, { id: f.id, data: f.story }, Buffer.from(f.source)),
+    validateIllustration(
+      f.root,
+      { id: f.id, data: storySchema.parse(f.story) },
+      Buffer.from(f.source),
+    ),
   );
 });
 test('optional none requires neither a brief, generator, review nor asset', (t) => {
@@ -120,7 +142,10 @@ test('optional none requires neither a brief, generator, review nor asset', (t) 
 test('new generation is a read-only decision, not a fabricated review', (t) => {
   const f = setup(t);
   assert.equal(resolveIllustrationGeneration(f.root, f.options).reason, 'review-missing');
-  assert.equal(existsSync(join(f.root, f.story.illustration.reviewPath)), false);
+  assert.equal(
+    existsSync(join(f.root, `docs/editorial/illustrations/reviews/${f.id}.json`)),
+    false,
+  );
 });
 test('matching generation and reviewed bytes are reused across retries', (t) => {
   const f = setup(t);
@@ -142,7 +167,7 @@ for (const [name, change] of [
   ['candidate count', (f) => (f.options.candidateCount = 2)],
   ['model snapshot', (f) => (f.options.modelSnapshot = 'reported-test-snapshot')],
   ['crop', (f) => writeFileSync(f.briefPath, JSON.stringify({ ...f.brief, crop: 'square' }))],
-])
+] satisfies Array<[string, (f: ReturnType<typeof setup>) => void]>)
   test(`changed ${name} cannot reuse the old generation`, (t) => {
     const f = setup(t);
     persist(f);
@@ -158,7 +183,7 @@ for (const [name, change, reason] of [
     (r) => writeFileSync(r.assetPath, Buffer.from('RIFF1111WEBP')),
     'asset-bytes-changed',
   ],
-])
+] satisfies Array<[string, (r: ReturnType<typeof persist>) => void, string]>)
   test(`${name} is not reusable`, (t) => {
     const f = setup(t);
     const r = persist(f);
@@ -182,7 +207,7 @@ for (const [name, change] of [
     (r) => writeFileSync(r.reviewPath, JSON.stringify({ ...r.review, version: '1.3' })),
   ],
   ['wrong file format', (r) => writeFileSync(r.assetPath, Buffer.from('not an image'))],
-])
+] satisfies Array<[string, (r: ReturnType<typeof persist>) => void]>)
   test(`${name} blocks a trustworthy decision`, (t) => {
     const f = setup(t);
     const r = persist(f);
@@ -220,7 +245,7 @@ test('path traversal, absolute paths and escaping symlinks are rejected', (t) =>
 test('CLI reports decisions as JSON and uses a failing exit code for blocked input', (t) => {
   const f = setup(t);
   const path = resolve('scripts/resolve-illustration-generation.ts');
-  const call = (args) =>
+  const call = (args: string[]) =>
     spawnSync(process.execPath, ['--no-warnings', path, ...args], {
       cwd: f.root,
       encoding: 'utf8',

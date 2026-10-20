@@ -3,6 +3,8 @@ import { mkdtempSync, mkdirSync, rmSync, symlinkSync, writeFileSync } from 'node
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
+import type { TestContext } from 'node:test';
+import type { PreviewRequest } from '../scripts/automatic-preview.ts';
 import {
   deploymentConfig,
   policy,
@@ -67,7 +69,7 @@ function fixture() {
       ],
     },
   };
-  const routes = {
+  const routes: Record<string, keyof typeof data> = {
     '/actions/runs/123': 'run',
     '/pulls/158': 'pr',
     '/git/ref/heads/main': 'main',
@@ -78,11 +80,19 @@ function fixture() {
   return {
     event,
     data,
-    api: async (path) => {
-      assert.ok(routes[path], `Unexpected API request: ${path}`);
-      return data[routes[path]];
+    api: async (path: string) => {
+      const name = routes[path];
+      assert.ok(name, `Unexpected API request: ${path}`);
+      return data[name];
     },
   };
+}
+
+async function eligibleRequest(f: ReturnType<typeof fixture>): Promise<PreviewRequest> {
+  const result = await resolveRequest(f.api, f.event);
+  if (!result.eligible)
+    throw new Error(`Synthetic preview unexpectedly rejected: ${result.reason}`);
+  return result.request;
 }
 
 test('successful current CI for a draft PR resolves the exact run-attempt artifact and merge revision', async () => {
@@ -95,9 +105,9 @@ test('successful current CI for a draft PR resolves the exact run-attempt artifa
   assert.equal(result.request.run_attempt, '1');
 });
 
-const rejections = {
+const rejections: Record<string, (f: ReturnType<typeof fixture>) => void> = {
   'foreign repository': (f) => {
-    f.event = { ...f.event, repository: { id: 999 } };
+    Reflect.set(f.event, 'repository', { id: 999 });
   },
   'wrong owner': (f) => {
     f.event = { ...f.event, repository: { ...repository, owner: { id: 999 } } };
@@ -109,7 +119,7 @@ const rejections = {
     f.data.run.status = 'in_progress';
   },
   'fork run': (f) => {
-    f.data.run.head_repository = { id: 999 };
+    Reflect.set(f.data.run, 'head_repository', { id: 999 });
   },
   'wrong workflow identity': (f) => {
     f.data.run.workflow_id = 999;
@@ -133,7 +143,7 @@ const rejections = {
     f.data.pr.state = 'closed';
   },
   'fork PR': (f) => {
-    f.data.pr.head.repo = { id: 999 };
+    Reflect.set(f.data.pr.head, 'repo', { id: 999 });
   },
   'wrong target': (f) => {
     f.data.pr.base.ref = 'dev';
@@ -178,7 +188,7 @@ const rejections = {
     f.data.artifacts.artifacts[0].workflow_run.head_sha = 'e'.repeat(40);
   },
   'missing digest': (f) => {
-    delete f.data.artifacts.artifacts[0].digest;
+    Reflect.deleteProperty(f.data.artifacts.artifacts[0], 'digest');
   },
 };
 
@@ -199,7 +209,7 @@ test('GitHub API failures fail closed', async () => {
   );
 });
 
-function artifact(t, request) {
+function artifact(t: TestContext, request: PreviewRequest) {
   const directory = mkdtempSync(join(tmpdir(), 'preview-test-'));
   t.after(() => rmSync(directory, { recursive: true, force: true }));
   mkdirSync(join(directory, 'dist/pagefind'), { recursive: true });
@@ -212,7 +222,7 @@ function artifact(t, request) {
   ]) {
     writeFileSync(join(directory, 'dist', path), 'static');
   }
-  const metadata = { ...request };
+  const metadata: Record<string, unknown> = { ...request };
   delete metadata.artifact_id;
   delete metadata.artifact_digest;
   writeFileSync(join(directory, 'provenance.json'), JSON.stringify(metadata));
@@ -221,7 +231,7 @@ function artifact(t, request) {
 
 test('valid downloaded artifact matches API provenance', async (t) => {
   const f = fixture();
-  const { request } = await resolveRequest(f.api, f.event);
+  const request = await eligibleRequest(f);
   const { directory } = artifact(t, request);
   assert.doesNotThrow(() => validateArtifact(directory, request));
 });
@@ -237,7 +247,7 @@ for (const key of [
 ]) {
   test(`reject modified artifact ${key}`, async (t) => {
     const f = fixture();
-    const { request } = await resolveRequest(f.api, f.event);
+    const request = await eligibleRequest(f);
     const { directory, metadata } = artifact(t, request);
     metadata[key] = 'tampered';
     writeFileSync(join(directory, 'provenance.json'), JSON.stringify(metadata));
@@ -247,7 +257,7 @@ for (const key of [
 
 test('reject artifact symlinks', async (t) => {
   const f = fixture();
-  const { request } = await resolveRequest(f.api, f.event);
+  const request = await eligibleRequest(f);
   const { directory } = artifact(t, request);
   symlinkSync('/etc/passwd', join(directory, 'dist/link'));
   assert.throws(() => validateArtifact(directory, request), /symbolic link/);
@@ -255,7 +265,7 @@ test('reject artifact symlinks', async (t) => {
 
 test('reject extra artifact root configuration', async (t) => {
   const f = fixture();
-  const { request } = await resolveRequest(f.api, f.event);
+  const request = await eligibleRequest(f);
   const { directory } = artifact(t, request);
   writeFileSync(join(directory, 'firebase.json'), '{}');
   assert.throws(() => validateArtifact(directory, request), /root entries/);
@@ -263,7 +273,7 @@ test('reject extra artifact root configuration', async (t) => {
 
 test('reject incomplete artifact', async (t) => {
   const f = fixture();
-  const { request } = await resolveRequest(f.api, f.event);
+  const request = await eligibleRequest(f);
   const { directory } = artifact(t, request);
   rmSync(join(directory, 'dist/index.html'));
   assert.throws(() => validateArtifact(directory, request));
@@ -292,7 +302,7 @@ test('trusted config binds only the validated static directory', () => {
 for (const key of ['predeploy', 'rewrites']) {
   test(`reject config ${key}`, () => {
     const c = config();
-    c.hosting[key] = [];
+    Reflect.set(c.hosting, key, []);
     assert.throws(() => deploymentConfig(c, '/tmp/artifact', 'healthtech-ai-pulse'));
   });
 }

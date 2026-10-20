@@ -33,7 +33,7 @@ This is research and industry intelligence, not personalized medical advice. Eve
 
 ## Getting started
 
-Requires **Node.js 24.11.0 or later within 24.x** and npm. The repository's `.nvmrc` selects Node 24 for `nvm` users.
+Requires **Node.js 24.12.0 or later within 24.x** and npm. The repository's `.nvmrc` selects Node 24 for `nvm` users.
 
 ```bash
 git clone https://github.com/GadDev/healthtech-ai-pulse.git
@@ -50,11 +50,13 @@ Local development requires no cloud credentials. Leave `SITE_URL` unset locally:
 
 ## Quality checks
 
-| Command                | Purpose                                                                                                            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `npm run verify`       | Lint, format, schema, editorial and content validation; unit tests; Astro checks; static build and Pagefind index. |
-| `npm run test:e2e`     | Playwright browser, navigation and accessibility checks.                                                           |
-| `npm run deploy:check` | Validate supplied Firebase deployment variables; requires production environment configuration.                    |
+| Command                | Purpose                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `npm run verify`       | Lint, format, TypeScript checks for scripts and tests, content validation, unit tests, Astro checks, build and Pagefind. |
+| `npm run tests:check`  | Strict type-checking for Node tests and their shared fixtures.                                                           |
+| `npm test`             | Run the TypeScript Node unit and regression tests directly, with no transpilation.                                       |
+| `npm run test:e2e`     | Playwright browser, navigation and accessibility checks.                                                                 |
+| `npm run deploy:check` | Validate supplied Firebase deployment variables; requires production environment configuration.                          |
 
 Before the browser suite, install Chromium with `npx playwright install chromium` (use `--with-deps` on a fresh Linux environment). CI runs verification and browser checks on pull requests.
 

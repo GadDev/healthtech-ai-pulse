@@ -4,9 +4,11 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, readFileSync } from 'nod
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { stringify } from 'yaml';
-import { fixture, vocabulary } from './helpers/fixtures.mjs';
+import { fixture, vocabulary } from './helpers/fixtures.ts';
 import { validateLedger, checkEditorial, validateIllustration } from '../scripts/lib/editorial.ts';
 import { weightedScore } from '../src/lib/editorial-schema.ts';
+import { storySchema } from '../src/lib/editorial-schema.ts';
+import type { SyntheticLedger } from './helpers/fixtures.ts';
 
 test('bounded availability can pass without a patient-benefit claim', () =>
   assert.equal(validateLedger(fixture().ledger, vocabulary).candidates.length, 1));
@@ -18,7 +20,7 @@ test('pilot capacity allows selected overflow only with explicit withholding', (
   }));
   ledger.publication.story_ids = ledger.candidates.map((c) => c.id);
   assert.throws(() => validateLedger(ledger, vocabulary), /Pilot capacity exceeded/);
-  const overflow = ledger.publication.story_ids.pop();
+  const overflow = ledger.publication.story_ids.pop()!;
   ledger.publication.withheld_selected = [
     {
       id: overflow,
@@ -33,6 +35,7 @@ test('pilot capacity allows selected overflow only with explicit withholding', (
 });
 test('scoring matches published examples and rejects tampered totals', () => {
   const { ledger, candidate } = fixture();
+  assert.ok(candidate.editorial_score);
   candidate.editorial_score.significance = 3;
   assert.equal(weightedScore(candidate.editorial_score), 92.5);
   ledger.candidates = [candidate];
@@ -64,7 +67,7 @@ test('publication withholding preserves research selection and allows ledger-onl
 });
 test('watch needs a concrete promotion condition and cannot leak into publication', () => {
   const { ledger } = fixture();
-  const c = ledger.candidates.pop();
+  const c = ledger.candidates.pop()!;
   c.decision = 'watch';
   ledger.watchlist = [c];
   assert.throws(() => validateLedger(ledger, vocabulary), /promotion/);
@@ -102,11 +105,12 @@ test('uninspected source, unsupported topic and false MUST KNOW block publicatio
     (l) => (l.candidates[0].sources[0].inspected_at = null),
     (l) => (l.candidates[0].topics = ['unknown']),
     (l) => {
+      assert.ok(l.candidates[0].editorial_score);
       l.candidates[0].editorial_score.significance = 3;
       l.candidates[0].editorial_score.weighted_total = 92.5;
       l.publication.must_know_story_id = l.candidates[0].id;
     },
-  ]) {
+  ] satisfies Array<(ledger: SyntheticLedger) => void>) {
     const { ledger } = fixture();
     change(ledger);
     assert.throws(() => validateLedger(ledger, vocabulary));
@@ -193,7 +197,7 @@ test('declared generated image cannot silently pass without asset/review', () =>
   assert.throws(() =>
     validateIllustration(
       '/missing-root',
-      { id: story.candidateId, data: story },
+      { id: story.candidateId, data: storySchema.parse(story) },
       Buffer.from('Synthetic'),
     ),
   );

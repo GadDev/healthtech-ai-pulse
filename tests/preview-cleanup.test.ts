@@ -28,7 +28,7 @@ test('closed same-repository PR resolves its generated channel', () => {
   });
 });
 
-const rejections = {
+const rejections: Record<string, (event: ReturnType<typeof fixture>) => void> = {
   'non-close action': (event) => {
     event.action = 'reopened';
   },
@@ -36,7 +36,8 @@ const rejections = {
     event.pull_request.state = 'open';
   },
   'invalid PR number': (event) => {
-    event.pull_request.number = '../live';
+    // Deliberately violate GitHub's numeric PR contract.
+    Reflect.set(event.pull_request, 'number', '../live');
   },
   'foreign repository': (event) => {
     event.repository.id = 999;
@@ -51,10 +52,10 @@ const rejections = {
     event.pull_request.base.ref = 'dev';
   },
   'foreign base': (event) => {
-    event.pull_request.base.repo = { id: 999 };
+    Reflect.set(event.pull_request.base, 'repo', { id: 999 });
   },
   'fork PR': (event) => {
-    event.pull_request.head.repo = { id: 999 };
+    Reflect.set(event.pull_request.head, 'repo', { id: 999 });
   },
 };
 

@@ -22,7 +22,7 @@ test('Chromium renders one candidate, optional references and a square crop with
     candidates: [candidate],
     references: [],
     output,
-    crop: 'square',
+    crop: 'square' as const,
   };
   await renderContactSheet(options);
   const result = readFileSync(output);
