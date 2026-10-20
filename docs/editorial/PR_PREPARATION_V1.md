@@ -29,7 +29,7 @@ An editorial run may change its dated ledger, surviving story/issue files and de
 
 1. Reverify selected claims against inspected primary evidence, corrections/retractions, contradictions and publication-time duplicates. Record the actual reviewer/time and supported scope.
 2. Draft only surviving selected records. Keep later conflicts or inaccessible evidence as downstream withholding; do not erase the research selection. Account for every selected record exactly once as drafted or withheld.
-3. Finalize canonical English article bytes, evidence metadata, source mappings and any declared image paths. `illustration.mode: none` is valid. Generated imagery must follow [the illustration system](ILLUSTRATION_SYSTEM_V1.md) and target skill; failed declared imagery withholds the affected story.
+3. Finalize canonical English article bytes, evidence metadata, source mappings and any declared image paths. `illustration.mode: none` is valid. Generated imagery must follow [the illustration system](ILLUSTRATION_SYSTEM_V1.md) and target skill: explore three written concepts before new generation, choose one and review both medical implications and editorial quality. Failed declared imagery withholds the affected story.
 4. Create the [daily issue](../DAILY_ISSUE.md) only when at least one story survives. Otherwise finalize ledger-only with no issue, story IDs or MUST KNOW. Do not manufacture output to fill capacity.
 5. Keep explicitly requested French translation packages outside public collections until a runtime locale contract exists. Do not add translation or recurring work implicitly.
 6. Persist final mappings, withholding reasons, checks and attempt outcomes before the PR handoff. Opening a draft is not approval.
@@ -48,6 +48,8 @@ npm run test:e2e
 Report passed, failed and not-run checks honestly. Unavailable local execution can use the draft's CI for executable checks; it cannot waive source, evidence or deduplication gates. A valid ledger-only recovery PR may expose source failures. An unsafe/invalid ledger blocks a new publication PR.
 
 Include in the PR body: editorial date and contract ref; batch mode; research window and coverage gaps; selected/drafted/withheld/watch/rejected counts; per-story evidence/access/clinical-utility boundaries and source locators; score and material delta; issue/image/review/locale mappings; MUST KNOW rationale or none; actual overrides; exact-revision checks, unresolved blockers and recovery evidence.
+
+For each generated image, include the concept selection (or unchanged-input reuse), actual candidate count and rejected-attempt reasons, compared recent story IDs or unavailable comparisons, and pass/fail reasons for specificity, meaning, thumbnail/crop clarity and variety. Bind this evidence to story ID and accepted asset SHA-256. Report not-run review honestly and withhold imagery without a completed pass. CI validates the stored contract, not these editorial judgments.
 
 Inspect CI for the latest PR head and tested merge revision. Both `Verify project` and `Browser smoke and accessibility` must pass before reporting executable validation complete. Missing, pending, cancelled, stale or failed runs are not a pass. Keep the PR draft, make bounded repairs on the same branch and report the orchestrator's actual operational outcome. Human review, merge and production deployment are separate steps.
 
