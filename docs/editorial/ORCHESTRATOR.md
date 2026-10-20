@@ -2,7 +2,10 @@
 
 Status: operational reference for the compact task bootstrap in
 [task-configuration.json](task-configuration.json). The existing task was observed
-paused on 20 October 2026; this repository change does not update or enable it.
+paused on 20 October 2026. Its installed prompt still began with a one-off
+19 October backfill override, rather than the normal-run bootstrap proposed here.
+Its last recorded invocation is not evidence that the run succeeded. This
+repository change does not replace the prompt or enable the task.
 Publication PRs, exact-head CI and production deployment have run successfully;
 recurring-run, live concurrency and rollback acceptance are not implied by those
 results. See [ROADMAP.md](../ROADMAP.md) for remaining readiness gates.

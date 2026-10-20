@@ -72,6 +72,31 @@ test('watch needs a concrete promotion condition and cannot leak into publicatio
   c.next_review_at = '2026-10-25';
   assert.throws(() => validateLedger(ledger, vocabulary), /Only selected/);
 });
+test('unfinished watch is valid with a null score and actionable next inspection', () => {
+  const { ledger, candidate } = fixture();
+  ledger.candidates = [];
+  ledger.watchlist = [
+    {
+      ...structuredClone(candidate),
+      decision: 'watch',
+      editorial_score: null,
+      promote_when: ['Inspect versioned artifact and external evaluation'],
+      next_review_at: '2026-10-25',
+    },
+  ];
+  ledger.publication = {
+    mode: 'ledger-only',
+    reason: 'Artifact assessment unfinished',
+    story_ids: [],
+    withheld_selected: [],
+    must_know_story_id: null,
+    issue_path: null,
+    checks: [],
+  };
+  assert.doesNotThrow(() => validateLedger(ledger, vocabulary));
+  ledger.watchlist[0].promote_when = [];
+  assert.throws(() => validateLedger(ledger, vocabulary), /promotion/);
+});
 test('uninspected source, unsupported topic and false MUST KNOW block publication', () => {
   for (const change of [
     (l) => (l.candidates[0].sources[0].inspected_at = null),

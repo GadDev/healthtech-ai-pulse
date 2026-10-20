@@ -123,9 +123,15 @@ human effort measurement has been completed.
 
 Measure distinct developments/source lanes, accepted useful stories, relative
 misses between arms, material claim errors, actual maintainer review minutes and
-failure reasons. Log access differences and shared-knowledge/order effects.
-Have the maintainer assess candidate summaries and source support before adopting
-any threshold change. Do not invent total-news recall or a speedup percentage.
+failure reasons. Keep A and B search and verification budgets comparable, document
+their actual durations, source snapshots/access failures, and search order or
+shared-knowledge effects. Have the maintainer assess anonymized candidate summaries
+and source support before adopting any threshold change. A provisional signal that
+the broader rotation merits adoption is two or more additional useful leads across
+the seven days without losing baseline strong stories or introducing material
+unsupported claims. Record the fully inspected denominator: more leads alone do
+not prove more publishable stories. Do not invent total-news recall, publication
+yield or a review-time speedup percentage.
 
 ## Source catalogue
 
