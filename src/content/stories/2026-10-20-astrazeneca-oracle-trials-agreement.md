@@ -15,24 +15,24 @@ candidateId: 2026-10-20-astrazeneca-oracle-trials-agreement
 editorialDate: 2026-10-20
 contractVersion: healthtech-1.0
 evidence:
-  publication_status: "20 October 2026 joint company announcements of a non-binding term sheet; not a trial, deployment report or published effectiveness study."
-  study_design: "No study reported. Planned commercial/clinical research collaboration only."
-  validation_setting: "No evaluated clinical deployment reported. First proposed programme concerns hypertension care and research in Abu Dhabi with M42; US, Middle East and European projects are discussed as plans."
-  independent_validation: "None. Both inspected announcements come from agreement parties; no independent trial-operations results disclosed."
+  publication_status: 20 October 2026 joint company announcements of a non-binding term sheet; not a trial, deployment report or published effectiveness study.
+  study_design: No study reported. Planned commercial/clinical research collaboration only.
+  validation_setting: No evaluated clinical deployment reported. First proposed programme concerns hypertension care and research in Abu Dhabi with M42; US, Middle East and European projects are discussed as plans.
+  independent_validation: None. Both inspected announcements come from agreement parties; no independent trial-operations results disclosed.
   clinical_utility: not-assessed
   access_level: announcement-only
-  funding: "Financial terms and programme budgets not disclosed in inspected announcement."
-  conflicts_of_interest: "AstraZeneca and Oracle are the commercial parties promoting the collaboration; their forward-looking claims are not independent evidence."
-  corrections_retractions: "No corrective notice identified on the inspected two party announcements at editorial preparation. Not a continuous or exhaustive notice search."
+  funding: Financial terms and programme budgets not disclosed in inspected announcement.
+  conflicts_of_interest: AstraZeneca and Oracle are the commercial parties promoting the collaboration; their forward-looking claims are not independent evidence.
+  corrections_retractions: No corrective notice identified on the inspected two party announcements at editorial preparation. Not a continuous or exhaustive notice search.
   contradictory_findings:
-    - "No contrary outcome results identified in bounded search; no tested outcomes were available to compare."
-    - "The two corporate announcements emphasize possible benefits but present no realised recruitment, screening, safety-monitoring or patient-outcome measurements."
+    - No contrary outcome results identified in bounded search; no tested outcomes were available to compare.
+    - The two corporate announcements emphasize possible benefits but present no realised recruitment, screening, safety-monitoring or patient-outcome measurements.
   limitations:
-    - "Term sheet is explicitly non-binding. Each project still requires separate legal, privacy, regulatory, ethics and institutional approval."
-    - "No AI application version, public release, trial registry ID, participating sample, comparator, predefined endpoints or performance results disclosed."
-    - "M42 hypertension programme is described as first planned programme, not a verified rollout or treatment improvement."
-    - "Statements about faster diagnosis, more enrolment or improved safety are proposed goals rather than demonstrated outcomes."
-  applicability: "Relevant as a planning signal for research sponsors and health systems considering AI-assisted trial operations. Does not establish clinical validity, EU regulatory authorisation, tool availability or patient benefit."
+    - Term sheet is explicitly non-binding. Each project still requires separate legal, privacy, regulatory, ethics and institutional approval.
+    - No AI application version, public release, trial registry ID, participating sample, comparator, predefined endpoints or performance results disclosed.
+    - M42 hypertension programme is described as first planned programme, not a verified rollout or treatment improvement.
+    - Statements about faster diagnosis, more enrolment or improved safety are proposed goals rather than demonstrated outcomes.
+  applicability: Relevant as a planning signal for research sponsors and health systems considering AI-assisted trial operations. Does not establish clinical validity, EU regulatory authorisation, tool availability or patient benefit.
 claims:
   - nonbinding-clinical-research-agreement
 sources:
