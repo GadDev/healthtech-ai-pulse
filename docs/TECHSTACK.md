@@ -1,6 +1,12 @@
 # HealthTech AI Pulse — Technical decisions
 
-Status: foundation implementation in progress. The local Astro bootstrap is implemented and verified; healthcare contracts, orchestration and hosted operations remain gated by the roadmap. Platform source: GadDev/daily-ai-pulse at 6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64, 18 October 2026. No remote deployment is configured.
+Status: the static publication, healthcare evidence contracts, CI and dedicated
+Firebase Hosting deployment are implemented on main. Production run
+[39320066987](https://github.com/GadDev/healthtech-ai-pulse/actions/runs/39320066987)
+deployed commit `280f07d9709d32ce7b0d200875eb4418fe158a41` successfully on 19 October 2026. The existing editorial task was observed paused on 20 October; a successful
+publication/deployment does not establish recurring execution, live concurrency
+or rollback acceptance. Platform source: GadDev/daily-ai-pulse at
+`6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64` (18 October 2026).
 
 ## Retain the static publication
 
@@ -33,7 +39,7 @@ Canonical paths after implementation:
 | public/images/stories/YYYY-MM-DD-slug.webp                 | Reviewed generated artwork when used                              |
 | docs/editorial/illustrations/reviews/<story-id>.json       | Asset identity, integrity and review                              |
 
-The proposed paths do not exist in the target yet. No scheduled task may assume otherwise. Consolidate the source's editorial schema prose, decision engine, and PR preparation policy into docs/EDITORIAL.md plus these machine/content contracts; do not keep parallel normative copies.
+These paths are implemented in the target. EDITORIAL.md owns normative editorial policy; the schema guide, decision engine and preparation/orchestration documents describe its storage and operational implementation. DISCOVERY_V1.md owns the bounded search plan and source catalogue; the compact task bootstrap loads current target contracts instead of duplicating them.
 
 Replace the scalar evidence label with structured, claim-specific evidence. Keep type values briefing/deep-dive/pulse initially; retire engineering-specific depth language in favour of general/specialist and define required concepts in the article. Use five categories from docs/EDITORIAL.md. The content model must define an optional featured story separately from an optional MUST KNOW designation. Featured placement does not imply exceptional evidence.
 
@@ -49,7 +55,7 @@ Retain translation code only if it can remain dormant without confusing navigati
 
 ## Build, validation and CI
 
-Use npm and package-lock.json. Proposed commands, to be implemented before scheduler activation:
+Use npm and package-lock.json. Implemented commands:
 
 ```bash
 npm ci
@@ -65,7 +71,7 @@ No network URL availability test should make routine builds flaky. Syntax and cl
 
 ## Hosting and operational dependencies
 
-Use the existing dedicated Firebase project `healthtech-ai-pulse` (project number `293427463899`), identified by the maintainer's Firebase CLI output on 19 October 2026. Its default Hosting site and origin `https://healthtech-ai-pulse.web.app` were confirmed by `hosting:sites:list`; live publication remains unverified. Use short-lived GitHub OIDC/WIF credentials and target-scoped deployment service accounts. Reuse the deployment pattern after changing every hard-coded source identity and verifying repository/branch restrictions. Do not infer that an existing Google Cloud trust policy grants the new repository access. Configure SITE_URL, FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT for production; live credential exchange and Hosting writes remain unverified.
+Use the existing dedicated Firebase project `healthtech-ai-pulse` (project number `293427463899`), identified by the maintainer's Firebase CLI output on 19 October 2026. Its default Hosting site and origin `https://healthtech-ai-pulse.web.app` were confirmed by `hosting:sites:list`; the successful production run linked above separately records deployment and endpoint checks. Use short-lived GitHub OIDC/WIF credentials and target-scoped deployment service accounts. Reuse the deployment pattern after changing every hard-coded source identity and verifying repository/branch restrictions. Do not infer that an existing Google Cloud trust policy grants the new repository access. Configure SITE_URL, FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT for production; the production run linked above records successful credential exchange and Hosting deployment. Rollback and recurring-run acceptance remain separate.
 
 Deploy only from main after human merge, successful verification and artifact checks. Retain production smoke checks. Add PR previews only after the basic deployment works; preserve the source's separation of untrusted PR build output from privileged deployment. Never execute untrusted PR code with deployment credentials. Require target CI and human review via repository rules where available. Content automation has no deployment or merge requirement.
 
@@ -79,9 +85,20 @@ Target contracts and scripts merged; build and browser CI green on the exact tar
 
 ## Implemented foundation and activation state
 
-The clean site, shared healthcare schemas, evidence card, ledger/story/issue checks, optional-image validation and isolated source-inspection trial are implemented locally. `scripts/lib/orchestration.mjs` implements the tested writer/session state machine; its adapter requires authenticated target GitHub operations and a live write/read-back trial before scheduling. No independent queue or database is introduced. The adapter simulator is not a live integration.
+The site, shared healthcare schemas, evidence card, ledger/story/issue checks,
+optional-image validation and isolated source-inspection trial are implemented.
+`scripts/lib/orchestration.mjs` implements the tested writer/session state machine;
+its adapter still requires authenticated operations with stale-head rejection.
+Historical PR/ledger records demonstrate real publication preparation, but neither
+simulators nor successful serial writes prove a live concurrency trial. No
+independent queue or database is introduced.
 
-`firebase.json` serves `dist/`. `.github/workflows/deploy.yml` is disabled by default: it runs only on main with `HEALTHTECH_DEPLOY_ENABLED=true`. It validates target variables, runs verification and browser checks, authenticates by OIDC, deploys and smoke-checks. `npm run deploy:check` checks syntax and cross-project isolation; it does not verify cloud IAM. No `.firebaserc`, stored service-account key or source project identity is copied.
+`firebase.json` serves `dist/`, and `.firebaserc` selects the isolated target.
+Production requires main plus `HEALTHTECH_DEPLOY_ENABLED=true`; the workflow
+validates target identities, runs `verify`, checks artifacts, uses OIDC, deploys
+and smoke-checks endpoints. Browser acceptance is a separate required PR CI job.
+Preview build/deploy/cleanup workflows are implemented separately. No source
+publication project or stored service-account key is needed.
 
 For the initial deployment, reuse `healthtech-ai-pulse` (project number `293427463899`); the deployment validator rejects other project IDs and WIF provider project numbers. Verify its default Hosting site and configure its own deployment service account. Configure a WIF provider with GitHub token audience/mapping and an attribute condition restricted to repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`; verify these against the actual token. The production environment subject may differ from a branch subject, so do not blindly copy a subject binding. Grant only the current documented Hosting deployment permissions and target-scoped workload-identity impersonation, then demonstrate the OIDC exchange and deployment with no stored JSON key.
 
@@ -91,9 +108,9 @@ Rollback procedure: pause the HealthTech task if active; choose the last known-g
 
 ### Keyless authentication verification
 
-Maintainer-provided CLI output on 19 October confirms the active service accounts `healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com` and `healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`, the project role `healthtechHostingDeployer` (recorded in `infra/iam/hosting-deployer-role.yaml`), and WIF provider `projects/293427463899/locations/global/workloadIdentityPools/github/providers/github`. The provider condition pins repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`. Each account's Workload Identity User binding selects its matching `repo:GadDev/healthtech-ai-pulse:environment:production` or `:environment:preview` subject. These CLI observations do not yet establish a successful GitHub token exchange.
+Maintainer-provided CLI output on 19 October confirms the active service accounts `healthtech-prod-deployer@healthtech-ai-pulse.iam.gserviceaccount.com` and `healthtech-preview-deployer@healthtech-ai-pulse.iam.gserviceaccount.com`, the project role `healthtechHostingDeployer` (recorded in `infra/iam/hosting-deployer-role.yaml`), and WIF provider `projects/293427463899/locations/global/workloadIdentityPools/github/providers/github`. The provider condition pins repository ID `1422703866`, owner ID `26112006` and `refs/heads/main`. Each account's Workload Identity User binding selects its matching `repo:GadDev/healthtech-ai-pulse:environment:production` or `:environment:preview` subject. Those CLI observations describe configuration; the production run linked above separately demonstrates a successful GitHub token exchange and deployment at its recorded revision.
 
-The `production` environment uses FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT. The `preview` environment uses PREVIEW_FIREBASE_PROJECT_ID, PREVIEW_FIREBASE_SITE_ID, PREVIEW_FIREBASE_WIF_PROVIDER and PREVIEW_FIREBASE_SERVICE_ACCOUNT. Keep HEALTHTECH_DEPLOY_ENABLED and HEALTHTECH_PREVIEW_ENABLED as repository variables set to false during setup; job-level enable conditions must not depend on environment-scoped variables that are unavailable before the job starts. Preview deployment workflows are a separate pending change.
+The `production` environment uses FIREBASE_PROJECT_ID, FIREBASE_SITE_URL, FIREBASE_WIF_PROVIDER and FIREBASE_SERVICE_ACCOUNT. The `preview` environment uses PREVIEW_FIREBASE_PROJECT_ID, PREVIEW_FIREBASE_SITE_ID, PREVIEW_FIREBASE_WIF_PROVIDER and PREVIEW_FIREBASE_SERVICE_ACCOUNT. Keep HEALTHTECH_DEPLOY_ENABLED and HEALTHTECH_PREVIEW_ENABLED as repository variables set to false during setup; job-level enable conditions must not depend on environment-scoped variables that are unavailable before the job starts. Preview deployment workflows are present; their individual run results remain the source of execution evidence.
 
 After the verification workflow is merged into main, run:
 
@@ -104,4 +121,4 @@ gh run list --repo GadDev/healthtech-ai-pulse --workflow verify-firebase-oidc.ym
 
 Both environment jobs must validate the target variables, exchange GitHub OIDC for a five-minute token and read the exact existing Hosting site. The token has a Hosting read-only scope; the workflow does not deploy or modify channels and runs independently of the deployment enable flags. This tests authentication and read access, not deployment permission, hosted content or rollback. Inspect the actual run before recording acceptance. The custom role has shared Hosting update permission; trusted workflows enforce production versus preview channel selection rather than a claimed IAM channel boundary.
 
-See docs/editorial/trials/orchestration-2026-10-18.md for executed versus blocked trial coverage. The complete task request lives in docs/editorial/task-configuration.json and remains uncreated. Recheck duplicates, integration reads and current target default-branch dependencies before task creation.
+See docs/editorial/trials/orchestration-2026-10-18.md for executed versus blocked trial coverage. The existing task ID, compact bootstrap, and paused state are recorded in docs/editorial/task-configuration.json. Its prompt was installed on the existing disabled task on 20 October 2026; repository merge is still needed for the referenced discovery contract to become authoritative on main. Activation requires current live-safety checks and must not create a duplicate task.

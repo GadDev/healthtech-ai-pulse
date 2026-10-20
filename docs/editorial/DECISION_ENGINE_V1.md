@@ -11,6 +11,13 @@ Contract: `healthtech-1.0`. Apply this operational decision sequence under [the 
 5. Extract bounded claims, evidence dimensions and limitations. Score the actual supported claim, not a stronger marketing headline.
 6. Record selected, watch or rejected research decisions. Later publication verification is a separate gate and may withhold a selected item without rewriting its research history.
 
+Use the [bounded discovery plan](DISCOVERY_V1.md) for source lanes, query expansion,
+retrieval limits and cutoff semantics. Separate incomplete inspection from low
+editorial value. Use candidate-specific scoring rationales; a watch record may
+have a null score while essential inspection is unfinished, with explicit
+promotion conditions and a review date. Do not substitute identical default scores
+for independent appraisal. Existing selected thresholds remain unchanged.
+
 ## Score and gate
 
 The policy owns the rubric and worked examples. Its current implemented score fields are:

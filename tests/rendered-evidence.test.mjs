@@ -23,6 +23,9 @@ test('actual Astro rendering keeps evidence limits visible without an image; fix
       cpSync(resolve(root, path), join(temporary, path), { recursive: true });
     symlinkSync(resolve(root, 'node_modules'), join(temporary, 'node_modules'), 'dir');
     const { story } = fixture();
+    story.evidence.contradictory_findings = [
+      'Synthetic contradictory evidence remains unresolved.',
+    ];
     writeFileSync(
       join(temporary, `src/content/stories/${story.candidateId}.md`),
       `---\n${stringify(story)}---\nSYNTHETIC TEST DATA. Isolated rendering fixture, not a scientific finding.\n`,
@@ -43,9 +46,17 @@ test('actual Astro rendering keeps evidence limits visible without an image; fix
       'Source access',
       'artifact only',
       'No clinical claim or real tool is represented.',
+      'Synthetic contradictory evidence remains unresolved.',
+      'Source corrections and retractions:',
+      'Synthetic fixture; no real source',
+      'Edition date',
     ])
       assert.ok(html.includes(expected), expected);
     assert.ok(!html.includes('class="story-hero"'));
+    assert.ok(!html.includes('Published <time'));
+    const rss = readFileSync(join(temporary, 'dist/rss.xml'), 'utf8');
+    assert.ok(rss.includes('Edition date: 2026-10-18.'));
+    assert.ok(!rss.includes('<pubDate>'), 'edition date must not become a publication timestamp');
     assert.ok(!existsSync(resolve(root, `src/content/stories/${story.candidateId}.md`)));
     assert.ok(!existsSync(resolve(root, `dist/stories/${story.candidateId}/index.html`)));
   } finally {

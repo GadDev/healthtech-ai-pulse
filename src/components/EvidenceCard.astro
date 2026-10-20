@@ -10,6 +10,8 @@ interface Props {
     limitations: string[];
     funding: string;
     conflicts_of_interest: string;
+    corrections_retractions: string;
+    contradictory_findings: string[];
   };
 }
 const { evidence } = Astro.props;
@@ -36,6 +38,19 @@ const fields = [
   </dl>
   <p>
     <strong>Limits:</strong> {evidence.limitations.join(' ')}
+  </p>
+  {evidence.contradictory_findings.length > 0 && (
+    <section aria-label="Contradictions and context">
+      <h3>Contradictions and context</h3>
+      <ul>
+        {evidence.contradictory_findings.map((finding) => (
+          <li>{finding}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+  <p>
+    <strong>Source corrections and retractions:</strong> {evidence.corrections_retractions}
   </p>
   <p class="fineprint">
     <strong>Funding:</strong> {evidence.funding}

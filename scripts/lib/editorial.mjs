@@ -102,6 +102,8 @@ export function validateLedger(input, vocabulary) {
     }
   }
   const published = ledger.publication.story_ids;
+  if (published.length > 2)
+    throw new Error('Pilot capacity exceeded: at most two surviving stories');
   const withheld = ledger.publication.withheld_selected.map((c) => c.id);
   if (new Set([...published, ...withheld]).size !== published.length + withheld.length)
     throw new Error('Duplicate or drafted/withheld overlap');

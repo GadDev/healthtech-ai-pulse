@@ -10,6 +10,27 @@ import { weightedScore } from '../src/lib/editorial-schema.mjs';
 
 test('bounded availability can pass without a patient-benefit claim', () =>
   assert.equal(validateLedger(fixture().ledger, vocabulary).candidates.length, 1));
+test('pilot capacity allows selected overflow only with explicit withholding', () => {
+  const { ledger, candidate } = fixture();
+  ledger.candidates = ['first', 'second', 'third'].map((suffix) => ({
+    ...structuredClone(candidate),
+    id: `2026-10-18-synthetic-${suffix}`,
+  }));
+  ledger.publication.story_ids = ledger.candidates.map((c) => c.id);
+  assert.throws(() => validateLedger(ledger, vocabulary), /Pilot capacity exceeded/);
+  const overflow = ledger.publication.story_ids.pop();
+  ledger.publication.withheld_selected = [
+    {
+      id: overflow,
+      phase: 'capacity',
+      reason: 'Two stronger stories fill the pilot capacity',
+      retry_condition: 'Reconsider under the next eligible edition with current verification',
+    },
+  ];
+  assert.equal(validateLedger(ledger, vocabulary).candidates.length, 3);
+  ledger.publication.withheld_selected = [];
+  assert.throws(() => validateLedger(ledger, vocabulary), /not accounted for/);
+});
 test('scoring matches published examples and rejects tampered totals', () => {
   const { ledger, candidate } = fixture();
   candidate.editorial_score.significance = 3;
@@ -50,6 +71,31 @@ test('watch needs a concrete promotion condition and cannot leak into publicatio
   c.promote_when = ['Inspect independent evidence'];
   c.next_review_at = '2026-10-25';
   assert.throws(() => validateLedger(ledger, vocabulary), /Only selected/);
+});
+test('unfinished watch is valid with a null score and actionable next inspection', () => {
+  const { ledger, candidate } = fixture();
+  ledger.candidates = [];
+  ledger.watchlist = [
+    {
+      ...structuredClone(candidate),
+      decision: 'watch',
+      editorial_score: null,
+      promote_when: ['Inspect versioned artifact and external evaluation'],
+      next_review_at: '2026-10-25',
+    },
+  ];
+  ledger.publication = {
+    mode: 'ledger-only',
+    reason: 'Artifact assessment unfinished',
+    story_ids: [],
+    withheld_selected: [],
+    must_know_story_id: null,
+    issue_path: null,
+    checks: [],
+  };
+  assert.doesNotThrow(() => validateLedger(ledger, vocabulary));
+  ledger.watchlist[0].promote_when = [];
+  assert.throws(() => validateLedger(ledger, vocabulary), /promotion/);
 });
 test('uninspected source, unsupported topic and false MUST KNOW block publication', () => {
   for (const change of [

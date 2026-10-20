@@ -1,6 +1,20 @@
 # HealthTech AI Pulse — Scheduled editorial orchestrator
 
-Status: target orchestration instructions prepared for review. Local dependencies exist; remote adoption, authenticated adapter/write trial, browser acceptance and isolated hosted deployment are not yet verified. Activate only after docs/ROADMAP.md readiness gates pass. The instruction body from “Run” onward is the full proposed task prompt; scheduling is separate.
+Status: operational reference for the compact task bootstrap in
+[task-configuration.json](task-configuration.json). The existing task was observed
+paused on 20 October 2026. Its one-off 19 October backfill override was replaced
+with the reviewed compact bootstrap at 08:32 UTC, while preserving the paused
+state. The last invocation predates that update and is not evidence of success.
+PR #30 must merge before its discovery contract is available on main; task
+activation and live safety acceptance remain separate.
+Publication PRs, exact-head CI and production deployment have run successfully;
+recurring-run, live concurrency and rollback acceptance are not implied by those
+results. See [ROADMAP.md](../ROADMAP.md) for remaining readiness gates.
+
+Keep the detailed ownership, checkpoint, publication and CI procedure here. The
+bootstrap loads this file and its dependencies at one default-branch commit;
+source discovery and the source catalogue live in [DISCOVERY_V1.md](DISCOVERY_V1.md)
+rather than being copied into the installed task.
 
 ---
 
@@ -20,6 +34,7 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - docs/CONTENT_MODEL.md
 - docs/editorial/EDITORIAL_SCHEMA_V1.md
 - docs/editorial/DECISION_ENGINE_V1.md
+- docs/editorial/DISCOVERY_V1.md
 - docs/editorial/PR_PREPARATION_V1.md
 - docs/editorial/VISUAL_CONSTITUTION_V1.md
 - docs/DAILY_ISSUE.md
@@ -60,13 +75,26 @@ If a canonical PR was closed unmerged, stop for maintainer direction; do not ope
 
 PHASE 1 — RESEARCH
 
-Research these five desks: clinical-ai; health-systems; pharma; biomedical-foundations; safety-policy. Prioritise healthcare AI builders/evaluators, European practical relevance and material international evidence. Include non-AI developments only when the target inclusion test establishes a direct, consequential connection to covered workflows. No general pharma/funding feed and no category quotas.
+Follow docs/editorial/DISCOVERY_V1.md for the bounded five-lane plan, source
+catalogue, query expansion, pagination/caps, local-language rotation, deliberate
+negative-evidence search and actual cutoff semantics. Read that file at contract_ref;
+its operational guidance does not override EDITORIAL.md.
 
-Search PubMed/Europe PMC and inspect papers/supplements; labelled preprints; relevant trial registries/results; FDA records/safety notices; EMA, European Commission/EUR-Lex, appropriate national/device authorities and MHRA; hospitals/trial owners; versioned model/dataset/tool artifacts. Use secondary reporting for leads/context and independent contradictions. Read primary evidence, not only search snippets. Do not conflate registry entry, trial result, authorization and demonstrated patient benefit.
+Research clinical-ai, health-systems, pharma, biomedical-foundations and safety-policy.
+There are no story quotas. Non-AI developments must pass the adopted direct-consequence
+inclusion test. Search across the lanes before spending the remaining budget on
+shortlisted primary evidence; preserve access failures and unfinished work.
 
-Use the target research window: initially preceding 72 hours; later from last completed cutoff with 24-hour overlap, capped at seven days for automatic catch-up. Log longer gaps, partial coverage and inaccessible sources. Revisit watch items and material corrections/retractions from the preceding 30 days. Older material may supply context or explicitly justified late discovery, never fabricated freshness. Separate event dates, source dates, updates, discovered_at and editorial_date. Unknown values retain reasons and precision.
+Use the adopted initial 72-hour window, then the last completed cutoff with a
+24-hour overlap and a seven-day automatic catch-up cap. Longer gaps remain explicit.
+Review due watch items and relevant corrections within the preceding 30 days.
+Separate event, source, update, indexing, discovery and editorial dates. Do not
+invent freshness, exact times or unavailable information.
 
-Log discovery queries, windows, source access observations and coverage gaps. Inspect correction/retraction status and meaningful contradictory findings when relevant. Stop expanding routine research when the agreed capacity/time budget is reached; report unsearched areas rather than claiming exhaustive surveillance.
+Record reproducible queries and the distinction between hits, retrieval, screening
+and primary inspection in existing research fields. Completion is completion of
+the bounded plan, not exhaustive surveillance; unattempted planned coverage leaves
+completion null. A finalized publication does not prove a completed research window.
 
 PHASE 2 — DEDUPLICATE AND DECIDE
 
@@ -78,7 +106,7 @@ For selected candidates capture supported claims and source locators; primary so
 
 Apply the adopted scoring rubric: S/E/R/M/D 0–4, weights 30/30/25/10/5, total 0–100 with rationales. Scores do not bypass gates. Selected normally ≥75 with S,E,R≥2 and M≥1; watch normally 55–74.9 or unresolved evidence; reject duplicates/out-of-scope/unsupported claims. A company source can prove availability without proving clinical benefit. Watch records need promotion conditions and review dates. At most one MUST KNOW under the adopted stricter criteria; it is optional and distinct from the featured article.
 
-Record completed research cutoff only when the planned window was actually searched; record partial completion otherwise. If archive access prevents deduplication, keep the uncertainty visible and withhold publication.
+Apply the bounded-plan completion and previous-cutoff semantics in DISCOVERY_V1.md. Record completed research cutoff only when the planned window was actually searched; record partial completion otherwise. If archive access prevents deduplication, keep the uncertainty visible and withhold publication.
 
 PHASE 3 — CREATE OR REUSE THE DAILY BRANCH SAFELY
 

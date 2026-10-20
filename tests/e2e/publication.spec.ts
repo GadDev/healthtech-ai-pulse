@@ -85,3 +85,18 @@ test('article connects evidence, sources and corrections to their destinations',
   await expect(page).toHaveURL(/\/methodology\/#corrections$/);
   await expect(page.locator('#corrections')).toBeVisible();
 });
+
+test('retrospective edition dates are not presented as publication timestamps', async ({
+  page,
+  request,
+}) => {
+  await page.goto('/stories/2026-10-12-clinical-ai-language-evidence/');
+  await expect(page.locator('.story-meta')).toContainText('Edition date');
+  await expect(page.locator('.story-meta')).not.toContainText('Published');
+
+  const rssResponse = await request.get('/rss.xml');
+  expect(rssResponse.ok()).toBeTruthy();
+  const rss = await rssResponse.text();
+  expect(rss).toContain('Edition date: 2026-10-12.');
+  expect(rss).not.toContain('<pubDate>');
+});
