@@ -2,31 +2,35 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { parse } from 'yaml';
+import type { z } from 'astro/zod';
 import {
   ledgerSchema,
   storySchema,
   reviewSchema,
   weightedScore,
-} from '../../src/lib/editorial-schema.mjs';
+} from '../../src/lib/editorial-schema.ts';
 import { documents, markdown, checkContent } from './content.mjs';
 import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.ts';
 
+type Ledger = z.infer<typeof ledgerSchema>;
+type Story = { id: string; data: z.infer<typeof storySchema> };
+
 export const digest = sha256;
-export function inside(root, path) {
+export function inside(root: string, path: string) {
   const resolved = resolve(root, path);
   if (relative(root, resolved).startsWith('..') || relative(root, resolved) === '')
     throw new Error(`Unsafe path: ${path}`);
   return resolved;
 }
-const verified = (status) => ['verified', 'verified-with-claim-scope'].includes(status);
-export function validateLedger(input, vocabulary) {
+const verified = (status: string) => ['verified', 'verified-with-claim-scope'].includes(status);
+export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>): Ledger {
   const ledger = ledgerSchema.parse(input);
   const seen = new Set();
   for (const [bucket, decision] of [
     ['candidates', 'selected'],
     ['watchlist', 'watch'],
     ['exclusions', 'rejected'],
-  ]) {
+  ] as const) {
     for (const c of ledger[bucket]) {
       if (c.decision !== decision || seen.has(c.id))
         throw new Error(`${c.id}: decision/bucket mismatch or duplicate`);
@@ -94,7 +98,7 @@ export function validateLedger(input, vocabulary) {
           !claim.source_ids.includes(claim.regulation.official_source_id)
         )
           throw new Error(`${c.id}: regulatory record source missing`);
-        if (claim.study)
+        if ('study' in claim)
           for (const result of claim.study.results)
             if (!claim.source_ids.includes(result.source_id))
               throw new Error(`${c.id}: study result source missing`);
@@ -129,7 +133,7 @@ export function validateLedger(input, vocabulary) {
   )
     throw new Error('Publication batch must reference its issue');
   for (const id of published) {
-    const c = ledger.candidates.find((c) => c.id === id);
+    const c = ledger.candidates.find((c) => c.id === id)!;
     if (
       !verified(c.publication_verification.status) ||
       !c.publication_verification.checked_at ||
@@ -161,18 +165,18 @@ export function validateLedger(input, vocabulary) {
   }
   const must = ledger.publication.must_know_story_id;
   if (must) {
-    const c = ledger.candidates.find((c) => c.id === must);
+    const c = ledger.candidates.find((c) => c.id === must)!;
     if (
       !published.includes(must) ||
-      c.editorial_score.weighted_total < 90 ||
-      c.editorial_score.significance !== 4 ||
-      c.editorial_score.claim_support < 3
+      c.editorial_score!.weighted_total < 90 ||
+      c.editorial_score!.significance !== 4 ||
+      c.editorial_score!.claim_support < 3
     )
       throw new Error('Invalid MUST KNOW designation');
   }
   return ledger;
 }
-export function validateIllustration(root, story, bytes) {
+export function validateIllustration(root: string, story: Story, bytes: Buffer) {
   if (story.data.illustration.mode === 'none') return;
   const i = story.data.illustration;
   const asset = inside(root, `public${i.image}`);
@@ -191,7 +195,11 @@ export function validateIllustration(root, story, bytes) {
   const key = buildGenerationIdentity(review).generation_key;
   if (key !== review.generation_key) throw new Error(`${story.id}: invalid generation key`);
 }
-export function checkEditorial(root = process.cwd(), explicit, { allowInProgress = false } = {}) {
+export function checkEditorial(
+  root = process.cwd(),
+  explicit?: string,
+  { allowInProgress = false }: { allowInProgress?: boolean } = {},
+) {
   checkContent(root);
   const vocabulary = new Set(
     Object.keys(parse(readFileSync(`${root}/docs/editorial/TOPICS_V1.yml`, 'utf8')).topics),
@@ -225,7 +233,7 @@ export function checkEditorial(root = process.cwd(), explicit, { allowInProgress
     .filter((l) => l.kind === 'daily')
     .sort((a, b) => a.editorial_date.localeCompare(b.editorial_date)))
     for (const id of ledger.publication.story_ids) {
-      const c = ledger.candidates.find((c) => c.id === id);
+      const c = ledger.candidates.find((c) => c.id === id)!;
       const keys = [
         `url:${c.primary_source_url}`,
         ...Object.entries(c.underlying_identity)
@@ -285,7 +293,7 @@ export function checkEditorial(root = process.cwd(), explicit, { allowInProgress
       const refs = markdown(readFileSync(issue, 'utf8')).data;
       if (
         !isDeepStrictEqual(
-          [...refs.sections.flatMap((s) => s.stories)].sort(),
+          [...refs.sections.flatMap((s: { stories: string[] }) => s.stories)].sort(),
           [...ledger.publication.story_ids].sort(),
         ) ||
         (refs.mustKnow ?? null) !== ledger.publication.must_know_story_id

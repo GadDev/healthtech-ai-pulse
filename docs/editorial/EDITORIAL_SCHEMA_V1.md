@@ -1,6 +1,6 @@
 # HealthTech editorial schema guide
 
-Contract: `healthtech-1.0`. This is the human-readable map of the implemented ledger, evidence and publication records. [Editorial policy](../EDITORIAL.md) owns editorial meaning; [the decision engine](DECISION_ENGINE_V1.md) explains classification. The executable source is `src/lib/editorial-schema.mjs`; [ledger.schema.json](ledger.schema.json) is generated from it. Do not maintain a second schema in this document.
+Contract: `healthtech-1.0`. This is the human-readable map of the implemented ledger, evidence and publication records. [Editorial policy](../EDITORIAL.md) owns editorial meaning; [the decision engine](DECISION_ENGINE_V1.md) explains classification. The executable source is `src/lib/editorial-schema.ts`; [ledger.schema.json](ledger.schema.json) is generated from it. Do not maintain a second schema in this document.
 
 ## Ledger envelope
 

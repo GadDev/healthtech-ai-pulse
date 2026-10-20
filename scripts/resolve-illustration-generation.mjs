@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { z } from 'astro/zod';
-import { storySchema, reviewSchema } from '../src/lib/editorial-schema.mjs';
+import { storySchema, reviewSchema } from '../src/lib/editorial-schema.ts';
 import { markdown } from './lib/content.mjs';
 import {
   buildGenerationIdentity,

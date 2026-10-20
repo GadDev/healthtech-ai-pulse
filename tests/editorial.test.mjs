@@ -5,8 +5,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { stringify } from 'yaml';
 import { fixture, vocabulary } from './helpers/fixtures.mjs';
-import { validateLedger, checkEditorial, validateIllustration } from '../scripts/lib/editorial.mjs';
-import { weightedScore } from '../src/lib/editorial-schema.mjs';
+import { validateLedger, checkEditorial, validateIllustration } from '../scripts/lib/editorial.ts';
+import { weightedScore } from '../src/lib/editorial-schema.ts';
 
 test('bounded availability can pass without a patient-benefit claim', () =>
   assert.equal(validateLedger(fixture().ledger, vocabulary).candidates.length, 1));

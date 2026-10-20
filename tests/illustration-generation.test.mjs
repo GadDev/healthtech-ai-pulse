@@ -23,7 +23,7 @@ import {
   resolveIllustrationGeneration,
   parseGenerationArguments,
 } from '../scripts/resolve-illustration-generation.mjs';
-import { validateIllustration } from '../scripts/lib/editorial.mjs';
+import { validateIllustration } from '../scripts/lib/editorial.ts';
 import {
   parseContactSheetArguments,
   buildContactSheetHtml,

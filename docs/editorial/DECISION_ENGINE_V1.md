@@ -1,6 +1,6 @@
 # HealthTech editorial decision engine
 
-Contract: `healthtech-1.0`. Apply this operational decision sequence under [the normative editorial policy](../EDITORIAL.md). The [schema guide](EDITORIAL_SCHEMA_V1.md) describes storage; `scripts/lib/editorial.mjs` and the shared Zod schemas enforce structural and cross-file gates. Neither this workflow nor a score establishes scientific truth.
+Contract: `healthtech-1.0`. Apply this operational decision sequence under [the normative editorial policy](../EDITORIAL.md). The [schema guide](EDITORIAL_SCHEMA_V1.md) describes storage; `scripts/lib/editorial.ts` and the shared Zod schemas enforce structural and cross-file gates. Neither this workflow nor a score establishes scientific truth.
 
 ## Decide the development, then verify publication
 
@@ -30,7 +30,7 @@ The policy owns the rubric and worked examples. Its current implemented score fi
 | Material change (M)        | `editorial_score.material_change` | 10%    |
 | Durability (D)             | `editorial_score.durability`      | 5%     |
 
-Use integer inputs 0–4 with written rationales. `weightedScore` in `src/lib/editorial-schema.mjs` computes a 0–100 total, rounded to one decimal: `25 × (0.30S + 0.30E + 0.25R + 0.10M + 0.05D)`. The validator recomputes it; a total is neither a probability nor a medical recommendation.
+Use integer inputs 0–4 with written rationales. `weightedScore` in `src/lib/editorial-schema.ts` computes a 0–100 total, rounded to one decimal: `25 × (0.30S + 0.30E + 0.25R + 0.10M + 0.05D)`. The validator recomputes it; a total is neither a probability nor a medical recommendation.
 
 | Decision | Current policy boundary                                                                                               | Stored record                                                                      |
 | -------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |

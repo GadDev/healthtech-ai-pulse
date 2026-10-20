@@ -6,7 +6,7 @@ import {
   ensureDraft,
   ciOutcome,
   OwnershipLost,
-} from '../scripts/lib/orchestration.mjs';
+} from '../scripts/lib/orchestration.ts';
 import { deploymentConfig } from '../scripts/lib/deployment.ts';
 import { fixture, vocabulary, now } from './helpers/fixtures.mjs';
 const clock = Date.parse(now);

@@ -47,7 +47,7 @@ Resolve the target repository's current default branch and its commit. Read, at 
 - scripts/validate-content.mjs
 - scripts/validate-editorial-batch.mjs
 - scripts/validate-illustration-batch.mjs
-- scripts/lib/orchestration.mjs
+- scripts/lib/orchestration.ts
 - package.json
 - .github/workflows/ci.yml
 

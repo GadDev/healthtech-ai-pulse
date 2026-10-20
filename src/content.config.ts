@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { storySchema } from './lib/editorial-schema.mjs';
+import { storySchema } from './lib/editorial-schema.ts';
 
 const stories = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/stories' }),
