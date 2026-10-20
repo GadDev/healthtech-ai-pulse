@@ -1,0 +1,401 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-13",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "26aa43d5135fec020d1c4822a4b5c740524d8366",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-13T00:00:00+02:00",
+    "window_end": "2026-10-14T00:00:00+02:00",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "FIRST_PDATE:[2026-10-13 TO 2026-10-13] AND (\"artificial intelligence\" OR \"large language model\" OR \"machine learning\")",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=FIRST_PDATE%3A%5B2026-10-13+TO+2026-10-13%5D+AND+%28%22artificial+intelligence%22+OR+%22large+language+model%22+OR+%22machine+learning%22%29&format=json&resultType=core&pageSize=100",
+        "accessed_at": "2026-10-19T19:57:37.895806+00:00",
+        "outcome": "225 hits; first 100 records retrieved. Bounded title/selected-abstract screening; no exhaustive corpus or full-paper review claimed."
+      },
+      {
+        "query": "healthcare artificial intelligence October 12 13 14 2026 study hospital FDA; healthcare artificial intelligence October 15 16 2026 study trial; AI drug discovery October 2026 12 18 Nature biomedical",
+        "source": "Web search systems 1 and 2; shared seven-day discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Cross-window clinical/operations/pharma/policy discovery reviewed during this run. Result dates checked individually; query wording does not establish complete daily coverage."
+      },
+      {
+        "query": "site.fda.gov OR site.ema.europa.eu OR site.gov.uk artificial intelligence after:2026-10-11 before:2026-10-19; site.fiercehealthcare.com OR site.medtechdive.com OR site.firstwordhealthtech.com OR site.lifesciencedaily.news AI after:2026-10-11 before:2026-10-19",
+        "source": "Web search; specialist leads and authority discovery",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Shared authority/outlet discovery; no new official action selected for this day. FDA discussion paper predates window; MHRA leads point to 6 October. These are not completed registry or direct-site sweeps."
+      },
+      {
+        "query": "Inspect https://www.nature.com/articles/s41591-026-04680-4; https://europepmc.org/article/MED/42869550",
+        "source": "Primary records, lawful publisher content and Europe PMC indexed abstracts at declared access levels",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Actual source review/extraction checkpoint, not source publication time. Selected language and epilepsy full HTML methods/results/limitations/funding inspected. RARE-PHENIX accepted PDF text and page 4 inspected, with February abstract comparison. Other records remain limited to documented access. No access-control bypass."
+      },
+      {
+        "query": "All-state target PRs, canonical branches, all main daily ledgers/stories/issues and cross-date identity comparison",
+        "source": "GadDev/healthtech-ai-pulse",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable."
+      },
+      {
+        "query": "Exact DOI correction/retraction and preprint searches: 10.1038/s44528-026-00042-1; 10.1038/s41591-026-04680-4; 10.1038/s41746-026-03275-0; RARE-PHENIX preprint",
+        "source": "Web search and publisher records; arXiv 2602.20324",
+        "accessed_at": "2026-10-19T20:01:40.162Z",
+        "outcome": "No notice found for selected papers in inspected records. RARE-PHENIX v1 dated 23 February identified and retained on watch. Not a complete corrections/retraction or version-ancestry audit."
+      }
+    ],
+    "coverage_gaps": [
+      "Retrospective work executed now; exact historical local-calendar window is an assignment, not a historical publication/execution claim. Date-only metadata does not establish the exact publication hour.",
+      "Partial bounded discovery across five desks, not exhaustive surveillance. Europe PMC first-page retrieval is capped at 100; PMC deposit/index dates can differ from first article publication. Completed research cutoff remains null.",
+      "No complete CTIS/ClinicalTrials.gov results sweep, national EU device-authority rotation, regional-language database sweep or 30-day corrections/watch search. No patient data accessed.",
+      "Web search publisher extraction sometimes failed/redirected. Selected papers were accessible through ordinary public HTTP HTML; accepted RARE-PHENIX PDF was publicly accessible. No authenticated or restricted-source access claimed.",
+      "Only selected sources received full evidence review; other records retain their declared access and promotion conditions. Model review is not independent clinical or human editorial approval.",
+      "Europe PMC web landing for PMID 42869550 returned HTTP 403 in a later URL check. Its abstract was inspected through the already retrieved Europe PMC core API record; no full-text BMJ access claimed."
+    ],
+    "completed_at": null
+  },
+  "candidates": [
+    {
+      "id": "2026-10-13-epilepsy-feedback-replay",
+      "decision": "selected",
+      "title": "Epilepsy AI pilot tests patient feedback, with detector gains confined to replay",
+      "desk": "clinical-ai",
+      "topics": ["evaluation", "implementation", "medical-devices"],
+      "entities": [],
+      "event_date": "2026-10-13",
+      "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
+      "source_publication_date": "2026-10-13",
+      "source_date_reason": "Inspected calendar-date metadata; retrospective assignment, not a historical execution time.",
+      "discovered_at": "2026-10-19T20:01:40.162Z",
+      "what_changed": "13 October paper reports real patient interaction and offline detector adaptation; no outpatient patient outcome trial.",
+      "why_now": "Retrospective assessment on 19 October for 2026-10-13. Dated source falls in this historical window; scope and novelty limits retained.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.nature.com/articles/s41591-026-04680-4",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://www.nature.com/articles/s41591-026-04680-4",
+          "canonical_url": "https://www.nature.com/articles/s41591-026-04680-4",
+          "publisher": "Nature Medicine",
+          "role": "primary",
+          "source_type": "original-research",
+          "publication_date": "2026-10-13",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "epilepsy-feedback-replay",
+        "doi": "10.1038/s41591-026-04680-4",
+        "pmid": "42869994",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Evaluation, implementation or governance of healthcare AI.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect the underlying evidence and applicability before local evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select a bounded feasibility and evaluation-method story; never recast replay performance as fewer seizures or live adaptive-care efficacy.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [
+        {
+          "id": "feedback-detector-replay",
+          "type": "model-performance",
+          "supported_statement": "An inpatient conversational-EEG pilot involved 13 patients; replayed detector fine-tuning using patient push-button labels reduced false alarms in the study.",
+          "source_ids": ["primary"],
+          "locators": [
+            "Results: Patient-in-the-loop model fine-tuning; Figure 5a–b.",
+            "Discussion: Limitations of our results; Ethical considerations; Methods: Platform implementation."
+          ],
+          "evidence_scope": "Single-site feasibility with offline pseudoprospective detector evaluation; no clinical benefit claim.",
+          "limitations": [
+            "Small selected inpatient cohort in a supervised, artificial setting.",
+            "Detector improvements were replayed offline, not a live randomized adaptive-care trial.",
+            "Sensitivity did not improve; remaining false alarms may still burden patients."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-19T20:04:45.703Z",
+            "checked_by": "Codex (model review; no human or independent clinical approval)",
+            "supported_scope": "Single-site feasibility with offline pseudoprospective detector evaluation; no clinical benefit claim.",
+            "reason": "Rechecked extracted full primary methods/results/limitations and source status before drafting; material claims use the stated locators."
+          },
+          "study": {
+            "design": "Prospective interface use, followed by offline pseudoprospective rolling detector fine-tuning.",
+            "setting": "Hospital of the University of Pennsylvania epilepsy monitoring unit.",
+            "population_or_dataset": "13 patients undergoing scalp (11) or intracranial (2) video-EEG monitoring.",
+            "sample_sizes": [
+              {
+                "n": 13,
+                "unit": "patients in pilot and push-button replay analysis",
+                "reason": "Not 13 independent hospitals or randomized arms."
+              },
+              {
+                "n": 6,
+                "unit": "patients contributing app-response fine-tuning analysis",
+                "reason": "Distinct analysis; its effect must not be substituted for the 13-patient push-button result."
+              }
+            ],
+            "comparator": "Baseline detector versus sequentially fine-tuned detector on future unseen segments in offline replay.",
+            "primary_endpoints": [
+              "Seizure-detector false alarms per hour, sensitivity and F1 in replay; interface feasibility."
+            ],
+            "secondary_exploratory_endpoints": [
+              "Patient engagement; separate app-response and clinician-label simulations."
+            ],
+            "results": [
+              {
+                "endpoint": "Push-button-label replay false alarms",
+                "metric": "median reduction across patients",
+                "value": "77.8% (absolute difference −0.306 per hour; 95% CI −0.629 to −0.202)",
+                "units": "relative percent and false alarms per hour",
+                "comparator": "Baseline detector, same study patients",
+                "uncertainty": "Small selected cohort; simulation, not live treatment efficacy.",
+                "source_id": "primary",
+                "locator": "Results: Patient-in-the-loop model fine-tuning; Figure 5b, middle panel."
+              }
+            ],
+            "follow_up": "Short inpatient EMU stays; no long-term outpatient clinical follow-up established.",
+            "harms": "No powered adverse-event or patient-benefit trial; daily review of AI interactions was a study safeguard.",
+            "analysis_notes": "Do not conflate the 77.8% per-model comparison with the separate full-stay replay estimate. LLM delivered information; seizure detector, not the LLM, was fine-tuned.",
+            "applicability": "Feasibility of patient/device interaction and a detector adaptation strategy; does not establish safe autonomous care or outpatient patient benefit."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 3,
+        "relevance": 4,
+        "material_change": 3,
+        "durability": 3,
+        "rationales": {
+          "significance": "Practical distinction for adaptive-device evaluation.",
+          "claim_support": "Full primary methods, results, safeguards and conflicts inspected.",
+          "relevance": "Direct relevance to device builders and clinical evaluators.",
+          "material_change": "New dated feasibility report; no prior target publication.",
+          "durability": "Human-feedback and replay boundaries remain useful."
+        },
+        "weighted_total": 81.3
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-19T20:04:45.703Z",
+        "checked_by": "Codex (model review; no human or independent clinical approval)",
+        "supported_scope": "Single-site feasibility with offline pseudoprospective detector evaluation; no clinical benefit claim.",
+        "reason": "Rechecked extracted full primary methods/results/limitations and source status before drafting; material claims use the stated locators."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-19T20:01:40.162Z",
+          "reason": "Select a bounded feasibility and evaluation-method story; never recast replay performance as fewer seizures or live adaptive-care efficacy."
+        }
+      ],
+      "format": "pulse",
+      "depth": "general",
+      "evidence": {
+        "publication_status": "Peer-reviewed original research, version of record 13 October 2026",
+        "study_design": "Prospective inpatient feasibility pilot plus offline pseudoprospective replay of detector fine-tuning.",
+        "validation_setting": "Single University of Pennsylvania epilepsy monitoring unit; 13 patients (11 scalp EEG, two intracranial).",
+        "independent_validation": "No independent replication established; patient feedback and expert EEG annotations have distinct roles.",
+        "clinical_utility": "not-assessed",
+        "access_level": "full-text",
+        "funding": "NIH/NINDS and NIH training awards; named philanthropic foundations; additional author NIH, Department of Defense and Burroughs Wellcome support.",
+        "conflicts_of_interest": "Zack Goldblum, Haoer Shi and Brian Litt report a pending University of Pennsylvania provisional patent on the system (63/932,309).",
+        "corrections_retractions": "No notice found on inspected publisher record or targeted DOI search; ongoing surveillance not claimed.",
+        "contradictory_findings": [
+          "Reduced false alarms came from offline simulation; live outpatient seizure reduction and quality-of-life benefit remain unproven."
+        ],
+        "limitations": [
+          "Small selected inpatient cohort in a supervised, artificial setting.",
+          "Detector improvements were replayed offline, not a live randomized adaptive-care trial.",
+          "Sensitivity did not improve; remaining false alarms may still burden patients."
+        ],
+        "applicability": "Feasibility of patient/device interaction and a detector adaptation strategy; does not establish safe autonomous care or outpatient patient benefit."
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-13-llm-trial-reporting-review",
+      "decision": "watch",
+      "title": "LLM clinical-trial reporting review needs full synthesis inspection",
+      "desk": "safety-policy",
+      "topics": ["evaluation", "clinical-trials"],
+      "entities": [],
+      "event_date": "2026-10-13",
+      "event_date_reason": "Publication date is the dated development; not the study conduct date. Exact hour unknown.",
+      "source_publication_date": "2026-10-13",
+      "source_date_reason": "Inspected calendar-date metadata; retrospective assignment, not a historical execution time.",
+      "discovered_at": "2026-10-19T20:01:40.162Z",
+      "what_changed": "LLM clinical-trial reporting review needs full synthesis inspection",
+      "why_now": "Retrospective assessment on 19 October for 2026-10-13. Dated source falls in this historical window; scope and novelty limits retained.",
+      "late_discovery": true,
+      "primary_source_url": "https://europepmc.org/article/MED/42869550",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://europepmc.org/article/MED/42869550",
+          "canonical_url": "https://europepmc.org/article/MED/42869550",
+          "publisher": "Europe PMC / BMJ",
+          "role": "primary",
+          "source_type": "systematic-review",
+          "publication_date": "2026-10-13",
+          "date_reason": "Source gives a calendar date; exact publication hour and time zone not established.",
+          "inspected_at": "2026-10-19T20:01:40.162Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Original authors or issuing organization, not independent replication."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "llm-trial-reporting-review",
+        "doi": "10.1136/bmj-2026-100855",
+        "pmid": "42869550",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Evaluation, implementation or governance of healthcare AI.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect the underlying evidence and applicability before local evaluation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Current main 26aa43d5135fec020d1c4822a4b5c740524d8366: inspected all daily ledgers, stories and issues (one finalized edition, 19 October), all 20 PRs in every state and canonical branches. No 12–18 October batch existed. Cross-date backfill identities tracked; later October 19 watch mentions are context, not publication. October 19 remains immutable.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: indexed abstract reports a systematic review; full eligibility, extraction and source-trial reporting assessment were not inspected. Do not translate incomplete reporting into proven clinical harm.",
+      "promote_when": [
+        "Inspect full methods, limitations, source status and material novelty; establish the professional evaluation consequence before promotion."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": {
+        "significance": 2,
+        "claim_support": 2,
+        "relevance": 3,
+        "material_change": 2,
+        "durability": 3,
+        "rationales": {
+          "significance": "Narrow practical evaluation lead.",
+          "claim_support": "Source inspected only to the declared access level; critical questions remain.",
+          "relevance": "Relevant to healthcare AI builders and evaluators.",
+          "material_change": "Publication or posting is dated; substantive novelty still needs assessment.",
+          "durability": "Reusable evaluation question."
+        },
+        "weighted_total": 57.5
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No publication claim cleared at research checkpoint.",
+        "reason": "Research checkpoint; downstream publication verification not yet performed."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-19T20:01:40.162Z",
+          "reason": "Watch: indexed abstract reports a systematic review; full eligibility, extraction and source-trial reporting assessment were not inspected. Do not translate incomplete reporting into proven clinical harm."
+        }
+      ]
+    }
+  ],
+  "exclusions": [],
+  "publication": {
+    "mode": "publication",
+    "reason": "Retrospective backfill. One verified, bounded text-led article; imagery explicitly none because an invented study/device scene would add no evidence. No MUST KNOW designation.",
+    "story_ids": ["2026-10-13-epilepsy-feedback-replay"],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": "src/content/pulse/2026-10-13.md",
+    "checks": [
+      {
+        "command": "Primary evidence and cross-date publication preflight",
+        "status": "passed",
+        "tested_revision": "26aa43d5135fec020d1c4822a4b5c740524d8366 plus exact dated source bytes in this checkpoint",
+        "execution": "Model review of inspected primary evidence; not independent clinical validation.",
+        "evidence": "Claim locators, units, limitations, funding/COI and archive identities reviewed. Text-led mode explicit. Research gaps and no completed cutoff preserved."
+      },
+      {
+        "command": "npm ci --no-audit --no-fund; npm run verify",
+        "status": "passed",
+        "tested_revision": "Combined rehearsal Git tree 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403 on base 26aa43d5135fec020d1c4822a4b5c740524d8366",
+        "execution": "Local Node.js 24.19.0. Seven-date working tree, not each final remote PR head.",
+        "evidence": "Clean install; lint, formatting, schema/content/editorial/illustration validation, 131 tests, Astro check (zero errors/warnings), production build and Pagefind passed. Source bytes: 2026-10-13-epilepsy-feedback-replay: ba0bf4dee8296f312110a1b68b353034116b3c029e3e17110ae5ec19a3e292fe"
+      },
+      {
+        "command": "PLAYWRIGHT_EXECUTABLE_PATH=/tmp/healthtech-chromium ASTRO_PREVIEW_BACKGROUND=1 npm run test:e2e",
+        "status": "passed",
+        "tested_revision": "Same new public article/issue bytes as combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403; new ledger-only files do not change public pages.",
+        "execution": "Local Chromium 133 via existing executable; Node.js 24.19.0. Exact final remote head still requires PR CI.",
+        "evidence": "19 browser tests passed. 2026-10-13-epilepsy-feedback-replay: ba0bf4dee8296f312110a1b68b353034116b3c029e3e17110ae5ec19a3e292fe"
+      },
+      {
+        "command": "New article/issue responsive and accessibility inspection",
+        "status": "passed",
+        "tested_revision": "Built public bytes from combined rehearsal 43f48191bb95fd17f7f676ffa41bc1bf7aa8a403",
+        "execution": "Local static build served over HTTP; Playwright plus axe WCAG 2/2.1 A/AA checks.",
+        "evidence": "16 route/viewport combinations: both new articles and issues at 320,375,960,1280px; HTTP 200, one H1, no horizontal overflow, zero serious/critical axe findings. Representative article mobile/desktop screenshots visually inspected; not a complete manual accessibility audit."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "research-2026-10-13-85508c75-641a-49d2-8334-be1fd043f6d3",
+      "started_at": "2026-10-19T19:57:37.895806+00:00",
+      "completed_at": "2026-10-19T20:01:40.162Z",
+      "phases": [
+        "current-contracts-read",
+        "all-state-identity-check",
+        "bounded-discovery",
+        "primary-evidence-review",
+        "cross-date-deduplication",
+        "classification"
+      ],
+      "outcome": "Partial research classified; no completed cutoff claimed."
+    },
+    {
+      "run_id": "backfill-2026-10-13-2026-10-19T20:03:09.362Z",
+      "started_at": "2026-10-19T20:03:09.363Z",
+      "completed_at": "2026-10-19T20:11:19.589Z",
+      "phases": [
+        "ownership-acquired",
+        "publication-verification",
+        "drafts-prepared",
+        "publication-finalised",
+        "local-combined-rehearsal-passed",
+        "source-page-responsive-review-passed"
+      ],
+      "outcome": "checkpoint-complete"
+    }
+  ],
+  "active_run": null,
+  "human_overrides": []
+}

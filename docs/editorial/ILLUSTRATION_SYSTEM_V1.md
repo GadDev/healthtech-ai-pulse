@@ -6,17 +6,21 @@ Contract: `healthtech-1.0`. This guide adapts the source publication's visual co
 
 `illustration.mode: none` is a complete, valid choice. A ledger-only batch creates no artwork. Generate only for a selected, verified story whose final article bytes and image/alt/review paths are fixed. If a declared generated asset fails, withhold that story until repaired; do not silently change its mode or research decision.
 
-Start with one candidate. Record the actual candidate count; the source publication's three-candidate competition and production-reference archive are not requirements for this target.
+Explore three written photographic concepts and choose one before new generation. Start with one generated candidate from that choice and record the actual candidate count, excluding text concepts. Revise a failed concept or composition before generating a replacement. A three-image competition and production-reference archive are not requirements for this target.
 
 ## Compose from verified context
 
-Read [the visual constitution](VISUAL_CONSTITUTION_V1.md) before preparing a brief or reviewing a candidate. Record the actual story ID, two or three supported context sentences, one visual idea, intended placement and crop. Inspect the current HealthTech renderer and stylesheet; do not assume source-publication layouts or image placements have been implemented here.
+Read [the visual constitution](VISUAL_CONSTITUTION_V1.md) before preparing a brief or reviewing a candidate. Record the actual story ID, two or three supported context sentences, the chosen visual idea, intended placement and crop. Use `constraints` for the editorial point, meaningful action/relationship, composition and focal point, lighting, human-presence limits and anti-cliches specific to the story. Natural photographic colour, purposeful contrast and anonymous gestures are allowed within the medical safeguards. Inspect the current HealthTech renderer and stylesheet; do not assume source-publication layouts or image placements have been implemented here.
 
 ## Review the actual asset
 
 Inspect the image at intended article size, a narrow viewport and reduced thumbnail size. Check focal-point survival, crop, contrast and faithful alt text; the crop field accepts `wide`, `square` or `landscape`. The validator does not prove aesthetic quality, clinical fidelity or successful visual inspection.
 
 Keep a rejected candidate rejected. Record `unsupported_medical_implication: false` and `crop_passed: true` only after the corresponding review actually occurred. Record the real reviewer, `model` or `human` review type, and actual UTC review time. A model's self-review is not independent clinical validation.
+
+After medical and technical review, apply the visual constitution's four editorial gates: specificity to the story, meaningful action/relationship/metaphor, clarity at a 160-pixel thumbnail and responsive crops, and variety against recent approved images/current edition. A generic desk-and-device photograph can pass technical validation and still fail editorial review. Withhold any candidate that fails; identity reuse does not bypass these gates.
+
+In the publication PR body, record the three concepts and selection rationale, compared story IDs (or unavailable comparisons), and pass/fail with a brief observed reason for each gate. Key accepted-image evidence to story ID and final asset SHA-256. Record rejected attempts and their actual failures; do not invent review outcomes. Keep these editorial judgments out of the unchanged strict `healthtech-1.0` review JSON. Automated validation does not enforce their presence or prove their truth; the PR reviewer must inspect them.
 
 ## Bind generation to exact inputs
 
@@ -45,13 +49,14 @@ Prepare an explicit local JSON brief with these fields:
 {
   "story_id": "YYYY-MM-DD-story-slug",
   "verified_context": "Two or three supported sentences from the final article.",
-  "visual_idea": "One bounded metaphor",
+  "visual_idea": "Chosen photographic concept with one meaningful action or relationship",
   "placement": "article-hero",
-  "crop": "wide"
+  "crop": "wide",
+  "constraints": "Editorial point and why this scene is specific to it; focal point and required crop relationships; lighting; limits on human presence; story-specific cliches to avoid; medical and illustrative-context safeguards."
 }
 ```
 
-This is a format example, not a real story or review. Replace its values with the actual source. Optional `constraints` is a nonempty string; optional `references` contains repository-relative `{ "path": "...", "sha256": "..." }` records. Include material layout/style/reference inputs and their real hashes in the brief. The CLI rejects stale reference bytes and unknown brief fields. Local briefs may be temporary; the command does not commit them or add new editorial write paths.
+This is a format example, not a real story or review. Replace its values with the actual source. The CLI retains optional `constraints` for existing brief compatibility; new briefs must use that nonempty string for the editorial direction above. Optional `references` contains repository-relative `{ "path": "...", "sha256": "..." }` records. Include material layout/style/reference inputs and their real hashes in the brief. The CLI rejects stale reference bytes and unknown brief fields. Local briefs may be temporary; the command does not commit them or add new editorial write paths.
 
 ```bash
 npm run illustration:decision -- --story YYYY-MM-DD-story-slug --brief /path/to/brief.json --generator-surface ACTUAL_TOOL --candidate-count 1 --json

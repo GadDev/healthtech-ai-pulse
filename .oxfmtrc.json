@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "astro": true,
+  "sortImports": false,
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "package-lock.json",
+    "node_modules/",
+    "dist/",
+    ".astro/",
+    "playwright-report/",
+    "test-results/",
+    "docs/editorial/ledger.schema.json"
+  ]
+}
