@@ -1,4 +1,4 @@
-import { previewDeploymentConfig } from './lib/deployment.mjs';
+import { previewDeploymentConfig } from './lib/deployment.ts';
 import { appendFileSync, lstatSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';

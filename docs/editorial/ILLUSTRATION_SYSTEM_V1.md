@@ -41,7 +41,7 @@ Use `version: healthtech-1.0`, the actual generator and candidate count, and `nu
 
 Reuse requires matching current inputs, a valid review, matching final asset bytes and an acceptable crop. A retry or CI rerun alone does not justify regeneration. Source, brief, policy, generator, candidate-count or model-snapshot changes require reassessment. Asset changes invalidate its recorded integrity. Do not refresh timestamps or invent hashes to conceal a mismatch.
 
-The shared identity helper in `scripts/lib/illustration-generation-identity.mjs` implements the same ordered-array formula used by the batch validator and decision CLI. The batch validator checks article/policy/asset integrity and the stored key; the CLI additionally compares the currently supplied brief and any declared reference fingerprints.
+The shared identity helper in `scripts/lib/illustration-generation-identity.ts` implements the same ordered-array formula used by the batch validator and decision CLI. The batch validator checks article/policy/asset integrity and the stored key; the CLI additionally compares the currently supplied brief and any declared reference fingerprints.
 
 ### Read-only generation decision
 

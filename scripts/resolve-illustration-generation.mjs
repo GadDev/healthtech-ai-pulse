@@ -8,7 +8,7 @@ import {
   buildGenerationIdentity,
   resolveRepositoryPath,
   sha256,
-} from './lib/illustration-generation-identity.mjs';
+} from './lib/illustration-generation-identity.ts';
 
 const text = z.string().trim().min(1);
 const briefSchema = z

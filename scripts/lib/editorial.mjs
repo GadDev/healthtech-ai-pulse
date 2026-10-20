@@ -9,7 +9,7 @@ import {
   weightedScore,
 } from '../../src/lib/editorial-schema.mjs';
 import { documents, markdown, checkContent } from './content.mjs';
-import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.mjs';
+import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.ts';
 
 export const digest = sha256;
 export function inside(root, path) {
