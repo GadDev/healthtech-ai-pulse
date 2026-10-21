@@ -48,7 +48,8 @@ const { Content } = await render(story);
           fetchpriority="high"
         />
         <figcaption>
-          {story.data.illustration.caption ?? 'Illustrative image · not the reported study site or its participants'}
+          {story.data.illustration.caption ??
+            'Illustrative image · not the reported study site or its participants'}
         </figcaption>
       </figure>
     )}
