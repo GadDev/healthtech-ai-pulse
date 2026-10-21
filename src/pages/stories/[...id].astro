@@ -43,12 +43,12 @@ const { Content } = await render(story);
         <img
           src={story.data.illustration.image}
           alt={story.data.illustration.alt}
-          width="1536"
-          height="1024"
+          width="1672"
+          height="941"
           fetchpriority="high"
         />
         <figcaption>
-          Illustrative image · not the reported study site or its participants
+          {story.data.illustration.caption ?? 'Illustrative image · not the reported study site or its participants'}
         </figcaption>
       </figure>
     )}
