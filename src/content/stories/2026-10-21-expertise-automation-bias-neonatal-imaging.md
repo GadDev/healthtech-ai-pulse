@@ -48,7 +48,11 @@ sources:
     label: Author repository — research code and non-clinical-use notice
     url: https://github.com/junjslee/neonatal-ai-reliability
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-21-expertise-automation-bias-neonatal-imaging.webp
+  alt: A clinician reviews a neonatal abdominal radiograph at a monitor in a softly lit intensive-care setting.
+  caption: Illustrative neonatal imaging setting—not one of the radiographs, study readers or clinical outcomes examined in the published simulation.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-21-expertise-automation-bias-neonatal-imaging.json
 ---
 
 When a medical AI system gives the wrong answer, what matters next is whether the person reading it spots the mistake. In a study published on **20 October 2026**, researchers deliberately showed clinicians incorrect AI advice while they interpreted X-rays of newborns. The clinicians did not all respond in the same way.
