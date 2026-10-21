@@ -85,9 +85,9 @@ The public site uses [Firebase Hosting](https://healthtech-ai-pulse.web.app/). P
 
 See [deployment and preview operations](docs/DEPLOYMENT.md) for configuration, identity checks, acceptance and rollback. Passing local checks does not prove cloud access or clinical correctness.
 
-## Research intelligence (proposed)
+## Research intelligence (fixture prototype)
 
-[HealthTech Scientific Evidence Intelligence](docs/research/README.md) is a **proposed** research experience within this existing Astro publication. A later, isolated `/research/` route may offer fixture-first literature discovery; a separately authorized Research API would handle scientific retrieval, evidence validation and authenticated workspaces. **Neither the route nor the API is implemented by this documentation PR.** Existing stories, human-reviewed publication workflow, Firebase Hosting deployment and Pagefind remain independent of backend availability, accounts and AI model spending.
+[HealthTech Scientific Evidence Intelligence](docs/research/README.md) includes a [fixture-backed `/research/` experience](/research/) inside this Astro publication. It displays explicitly fictional records for UI evaluation, with local filtering, selection and public identifier validation. No live literature lookup or AI inference is connected. The separate Research API remains proposed and would own retrieval, evidence validation and authenticated workspaces. Existing stories, human-reviewed publication workflows, Firebase Hosting and Pagefind remain independent of backend availability, accounts and model spending.
 
 ## Documentation
 

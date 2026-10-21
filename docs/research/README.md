@@ -1,6 +1,6 @@
 # HealthTech Scientific Evidence Intelligence — Hybrid Project Foundation
 
-**Research design foundation v0.2 · Proposed for Pulse adoption on 2026-10-21 · Documentation only.**
+**Research design foundation v0.2 · Adopted as a proposed architecture in Pulse PR 1; PR 2 adds a fixture-only frontend.**
 
 > **One reader experience, two isolated technical domains.** HealthTech AI Pulse remains the public editorial site. A new `/research/` experience is planned inside it; a separate, independently deployed Research API performs scientific retrieval and AI synthesis. Research intelligence, **not medical advice** or clinical validation.
 
@@ -10,7 +10,7 @@ The earlier v0.1 kit assumed a **standalone React/Vite website** plus Fastify ba
 
 ## Snapshot of actual existing foundation
 
-Inspected `GadDev/healthtech-ai-pulse` `main` on 2026-10-21: Astro 7/TypeScript 6/Node 24 static site, Pagefind, Playwright, Firebase Hosting at `https://healthtech-ai-pulse.web.app/`. React integration, `/research/` route, research database, hosted research API and research accounts are **not implemented** as part of the inspected baseline. Recheck `main` before coding.
+Inspected `GadDev/healthtech-ai-pulse` `main` on 2026-10-21: Astro 7/TypeScript 6/Node 24 static site, Pagefind, Playwright, Firebase Hosting at `https://healthtech-ai-pulse.web.app/`. At the time of this baseline inspection, React integration, `/research/` route, research database, hosted research API and research accounts were **not implemented**. PR 2 introduces only the first two, as a fixture-only frontend. Recheck `main` before coding.
 
 ## MVP reader flows
 
@@ -63,8 +63,8 @@ The source design kit also contains optional post-MVP monitoring, business valid
 
 ## Implementation sequence (not yet executed)
 
-1. **PR 1 — this documentation foundation:** no runtime change.
-2. **PR 2 — fixture-only `/research/`:** add `@astrojs/react` after dependency compatibility review, one scoped island and accessible offline/empty/invalid states; default all PR previews to static fixtures and prove existing news, RSS, Pagefind and sitemap work when API is unavailable.
+1. **PR 1 — documentation foundation:** no runtime change.
+2. **PR 2 — fixture-only `/research/` (implementation in draft PR):** add `@astrojs/react` after dependency compatibility review, one scoped island and accessible offline/empty/invalid states; default all PR previews to static fixtures and prove existing news, RSS, Pagefind and sitemap work when API is unavailable.
 3. **Later reviewed PRs:** verified article identifiers and a pinned, versioned API client.
 4. **Separate API repo:** requires explicit authorization and independent cost, region, auth, rights, deployment and security decisions.
 
@@ -98,4 +98,4 @@ GadDev/healthtech-evidence-api        # proposed separate backend repo
 
 ## Status and truthfulness
 
-This PR adopts **documentation only**. It does not create repositories, implement the `/research/` route, configure any authentication, provision a Cloud Run service, make API calls, perform tests, change editorial PRs, or deploy a new product. All milestones and pricing/privacy decisions remain subject to review.
+**Implementation status after PR 2:** The Astro `/research/` route and its scoped React island use explicitly synthetic fixtures, local filtering, selected-example state and `research-link-v1` syntax checks. This does **not** create an API repository, configure authentication, provision Cloud Run, call Europe PMC or paid models, publish medical findings, or alter editorial content and scheduling. All later milestones, privacy and pricing decisions still require review.

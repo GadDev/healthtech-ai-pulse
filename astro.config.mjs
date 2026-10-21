@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 
 const site = process.env.SITE_URL || 'https://healthtech-ai-pulse.web.app';
 const url = new URL(site);
@@ -17,4 +18,8 @@ if (
   );
 }
 
-export default defineConfig({ site: url.origin, base: '/', integrations: [mdx(), sitemap()] });
+export default defineConfig({
+  site: url.origin,
+  base: '/',
+  integrations: [mdx(), sitemap(), react()],
+});
