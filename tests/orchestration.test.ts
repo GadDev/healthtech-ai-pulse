@@ -1,5 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { stringify } from 'yaml';
+import { storySchema } from '../src/lib/editorial-schema.ts';
+import { validateIllustration } from '../scripts/lib/editorial.ts';
+import {
+  buildGenerationIdentity,
+  sha256,
+} from '../scripts/lib/illustration-generation-identity.ts';
 import {
   acquireRun,
   checkpoint,
@@ -226,8 +236,8 @@ test('CI reports exact-head required-job results and never treats stale green as
     status: 'completed',
     conclusion: 'success',
     requiredJobs: [
-      { name: 'Verify publication', conclusion: 'success' },
-      { name: 'Browser and accessibility', conclusion: 'success' },
+      { name: 'Verify project', conclusion: 'success' },
+      { name: 'Browser smoke and accessibility', conclusion: 'success' },
     ],
   };
   assert.equal(
@@ -274,4 +284,164 @@ test('deployment rejects missing, cross-project and non-HTTPS configuration', ()
     },
   ])
     assert.throws(() => deploymentConfig({ ...env, ...patch }));
+});
+
+test('controlled end-to-end fixture: ledger → reviewed image → issue → draft PR → exact-head CI', async (t) => {
+  const a = adapter();
+  let session = await acquire(a);
+  const { story, ledger: publishable } = fixture();
+  const id = story.candidateId;
+  const root = mkdtempSync(join(tmpdir(), 'healthtech-controlled-e2e-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  for (const directory of [
+    'src/content/stories',
+    'public/images/stories',
+    'docs/editorial/illustrations/reviews',
+    'docs',
+  ]) {
+    mkdirSync(join(root, directory), { recursive: true });
+  }
+
+  // No production news, original clinical images, external publication or real
+  // reviewer is involved. This deliberately uses the synthetic fixture only.
+  const policy = 'Synthetic editorial policy, not medical guidance.\\n';
+  const image = Buffer.from('RIFF0000WEBP');
+  const source = `---\\n${stringify(story)}---\\nSynthetic fixture only.\\n`;
+  const brief = JSON.stringify({ story_id: id, visual_idea: 'Synthetic fixture image' });
+  const identity = buildGenerationIdentity({
+    story_id: id,
+    story_source_sha256: sha256(source),
+    brief_sha256: sha256(brief),
+    policy_sha256: sha256(policy),
+    candidate_count: 1,
+    generator: 'synthetic-test-fixture',
+  });
+  const review = {
+    ...identity,
+    asset_sha256: sha256(image),
+    crop: 'wide',
+    reviewed_by: 'Synthetic fixture, not independent approval',
+    reviewed_at: now,
+    review_type: 'model',
+    unsupported_medical_implication: false,
+    crop_passed: true,
+  };
+  const illustration = {
+    mode: 'generated' as const,
+    image: `/images/stories/${id}.webp`,
+    alt: 'Synthetic test-only image fixture',
+    reviewPath: `docs/editorial/illustrations/reviews/${id}.json`,
+  };
+  const generatedStory = {
+    ...story,
+    illustration,
+  };
+  const actualSource = `---\\n${stringify(generatedStory)}---\\nSynthetic fixture only.\\n`;
+  const actualIdentity = buildGenerationIdentity({
+    ...identity,
+    story_source_sha256: sha256(actualSource),
+  });
+  const actualReview = {
+    ...review,
+    story_source_sha256: sha256(actualSource),
+    generation_key: actualIdentity.generation_key,
+  };
+  writeFileSync(join(root, 'docs/EDITORIAL.md'), policy);
+  writeFileSync(join(root, `src/content/stories/${id}.md`), actualSource);
+  writeFileSync(join(root, `public/images/stories/${id}.webp`), image);
+  writeFileSync(join(root, illustration.reviewPath), JSON.stringify(actualReview));
+  assert.doesNotThrow(() =>
+    validateIllustration(
+      root,
+      { id, data: storySchema.parse(generatedStory) },
+      Buffer.from(actualSource),
+    ),
+  );
+
+  // New-date publication MUST reject an article without an image.
+  const nextDateTextOnly = {
+    ...story,
+    editorialDate: '2026-10-22',
+    illustration: { mode: 'none' as const },
+  };
+  assert.throws(
+    () =>
+      validateIllustration(
+        root,
+        { id, data: storySchema.parse(nextDateTextOnly) },
+        Buffer.from(actualSource),
+      ),
+    /mandatory illustration missing/,
+  );
+
+  const current = await a.readBranch();
+  assert.ok(current);
+  const ledger = current.ledger;
+  ledger.publication = publishable.publication;
+  session = await checkpoint(a, session, {
+    ledger,
+    files: {
+      [`src/content/stories/${id}.md`]: { encoding: 'utf-8', content: actualSource },
+      [`src/content/pulse/2026-10-18.md`]: {
+        encoding: 'utf-8',
+        content: 'Synthetic fixture issue; never publish.\\n',
+      },
+      [`public/images/stories/${id}.webp`]: {
+        encoding: 'base64',
+        content: image.toString('base64'),
+      },
+      [illustration.reviewPath]: {
+        encoding: 'utf-8',
+        content: JSON.stringify(actualReview),
+      },
+    },
+    now: clock + 2,
+  });
+  const handoff = await ensureDraft(a, session, {
+    preflightHead: session.sha,
+    body: 'Synthetic QA fixture only — no live editorial batch.',
+    now: clock + 3,
+  });
+  assert.equal(handoff.outcome, 'draft-created');
+  assert.equal(a.prs.length, 1);
+  assert.equal(a.prs[0]?.draft, true);
+
+  const requiredJobs = [
+    { name: 'Verify project', conclusion: 'success' },
+    { name: 'Browser smoke and accessibility', conclusion: 'success' },
+  ];
+  const run = {
+    headSha: session.sha,
+    status: 'completed',
+    conclusion: 'success',
+    requiredJobs,
+  };
+  assert.equal(
+    ciOutcome({ mode: 'publication', headSha: session.sha, run }).outcome,
+    'review-ready',
+  );
+  assert.equal(
+    ciOutcome({
+      mode: 'publication',
+      headSha: 'stale-head',
+      run,
+    }).outcome,
+    'ci-pending',
+  );
+  assert.equal(
+    ciOutcome({
+      mode: 'publication',
+      headSha: session.sha,
+      run: {
+        ...run,
+        requiredJobs: [
+          { name: 'Verify publication', conclusion: 'success' },
+          { name: 'Browser and accessibility', conclusion: 'success' },
+        ],
+      },
+    }).outcome,
+    'ci-failed',
+  );
+  assert.equal(a.prs.length, 1);
 });
