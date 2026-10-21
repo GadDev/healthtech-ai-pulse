@@ -2,6 +2,10 @@
 
 _Editorial preview — not for publication. Based on the accessible accepted abstract and publication disclosures only. Full methods, subgroup detail and supplementary data require inspection._
 
+![A clinician examines information on a computer screen in a sunlit healthcare workspace.](images/clinical-ai-message-metrics.webp)
+
+> **Illustrative photograph:** Staged clinical workspace, not a participant, patient message, or observed AI output from the reported study.
+
 A patient asking a doctor about a medical concern needs an answer that is clear, appropriate and safe. For hospitals testing AI-written replies, the obvious temptation is to ask software to grade the software: compare an AI draft with a clinician's answer and calculate how much their wording overlaps.
 
 A study published on **21 October 2026** in _npj Digital Medicine_ suggests that this shortcut can miss the point. A high similarity score may tell you that two messages resemble one another. It does not necessarily tell you whether the patient received a useful answer.
