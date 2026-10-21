@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-21-fda-ai-device-change-plan-examples",
+  "story_source_sha256": "2c0008b0df991cf93754778be5dc7794b3535eda7747b425345c4176da8c1d9d",
+  "brief_sha256": "1d8cb34a7b92464825084259061b766b0314f283b4ca2f4d7c2872e406b6288f",
+  "policy_sha256": "ccb63dc3c3ea5b0de2437ca31815768bc735dd94118e36e4b072f6a472ef2a66",
+  "generation_key": "5658002aff7c8c24506b476c29c863844ecd268f859a8904b1b2819aeb6cd253",
+  "candidate_count": 2,
+  "generator": "image_gen.text2im",
+  "model_snapshot": null,
+  "asset_sha256": "e64b6d050d255bfe36ee2eaa22de55f7d8c15ec061a7282cf96a54915eeb4564",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT GPT-6 (model visual and article-context review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-21T18:03:52.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
