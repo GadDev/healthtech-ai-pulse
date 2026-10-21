@@ -1,0 +1,8 @@
+{
+  "story_id": "2026-10-21-expertise-automation-bias-neonatal-imaging",
+  "verified_context": "A peer-reviewed simulation examined 14 clinicians interpreting neonatal abdominal radiographs with correct and deliberately incorrect AI advice. The study addressed response to errors in a retrospective interface; it did not report improved clinical outcomes in newborns.",
+  "visual_idea": "Thoughtful clinician in front of a generic neonatal abdominal imaging display while an incubator is blurred in the background, emphasizing the human decision to question automated advice.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Retrospective acceptance brief documenting the image already merged in PR #46; this is not the original image-generation prompt, which was not retained. Exact WebP bytes must be reused, not regenerated. 16:9 cinematic human-centred editorial photography; article/card and 3:2 responsive crops. Clearly illustrative site captions, accurately descriptive alt text and no documentary implication. The radiograph is synthetic and not an authentic study image, diagnosis or example of a verified pathology. Incubator and child are staged contextual objects, not actual patient care or outcomes."
+}
