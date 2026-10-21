@@ -5,6 +5,7 @@
 **Status:** Proposed hybrid v0.2. Governs both the proposed Research API and any HealthTech AI Pulse changes made for this feature. Formal adoption requires maintainer review. Amend via an explicit decision record and reviewed PR.
 
 ## Non-negotiable principles
+
 1. **One reader-facing identity, two separate operational domains.** Pulse owns public pages, UI, article navigation, editorial policies and editorial releases. Research API owns search, retrieval, model execution, persistence, privacy and research-workspace authorization. Neither service can silently change the other's data or permissions.
 2. **The publication must stand alone.** Astro editorial pages, Pagefind, RSS, sitemap, article routes and content validation work when Research API, Postgres or Claude is unavailable. Research failure is an isolated `/research/` error state, not an editorial outage.
 3. **Evidence before prose.** Model claims must reference permitted inspected `EvidenceSpan` records in a selected research set. Invalid or out-of-scope spans fail closed; absence of evidence means abstain or clearly labelled knowledge gap.
@@ -23,6 +24,7 @@
 16. **Truthful evidence of completion.** Never invent deploy URLs, tests, scientific approvals, licenses, provider terms, cost figures or operational status. Record precise measurements and honest gaps.
 
 ## Ownership and authority
+
 - `strategy/MISSION.md`: product purpose and limits.
 - `product/PRD-001-*`, `PRD-002-*`: MVP workflows and acceptance.
 - `product/PRD-003-*`: opportunity only, requires later approval.
@@ -32,7 +34,9 @@
 - **Existing Pulse repository contracts remain authoritative** for editorial policy, article schema, publication CI, and deployment. This kit cannot override them.
 
 ## Release gates and stop conditions
+
 Stop a release on any unauthorized text retention; critical invalid or fabricated evidence link; unsafe clinical claim; unauthorized access; secret or personal-data leak; unaudited model cost; or attempts to turn research output into publication automatically. **Pulse feature rollout gate:** no impact on existing article/publication tests and static performance/accessibility smoke checks. **API gate:** auth/ownership, cost ceilings, rights tests and groundedness review. Do not combine these approvals into one opaque green status.
 
 ## Assistant/agent working agreement
+
 Read actual `main` of Pulse before code changes. Propose scoped PRs in the appropriate repositories. Do not assume research repo exists; do not alter editorial pipelines unless expressly approved. Report exact commands/results, request paid-spend approval, and leave merges to the maintainer.
