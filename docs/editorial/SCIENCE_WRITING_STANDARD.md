@@ -56,4 +56,4 @@ Both sentences still need the underlying primary-source check. The example does 
 
 ## Production gate
 
-New public stories from editorial date **2026-10-22** need approved, story-specific photorealistic artwork as well as the narrative and evidence review. When a suitable image cannot be made safely, **withhold the story** rather than using a generic image or switching to `mode: none`. Ledger-only issues remain valid. Image-free historical stories from 12, 13 and 21 October 2026 are documented migration debt requiring a separate, real art/review pass.
+New public stories from editorial date **2026-10-22** need approved, story-specific photorealistic artwork as well as the narrative and evidence review. When a suitable image cannot be made safely, **withhold the story** rather than using a generic image or switching to `mode: none`. Ledger-only issues remain valid. The originally image-free historical stories from 12, 13 and 21 October 2026 are linked to reused PR #46 WebPs in PR #44, with model-only review records and exact asset hashes; human editorial/scientific approval remains required.
