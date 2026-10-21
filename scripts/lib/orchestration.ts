@@ -296,7 +296,7 @@ export function ciOutcome({
   if (
     run.conclusion !== 'success' ||
     !jobs.length ||
-    ['Verify publication', 'Browser and accessibility'].some(
+    ['Verify project', 'Browser smoke and accessibility'].some(
       (name) => !jobs.some((j) => j.name === name && j.conclusion === 'success'),
     )
   )
