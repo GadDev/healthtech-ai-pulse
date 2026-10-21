@@ -2,7 +2,11 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { z } from 'astro/zod';
-import { storySchema, reviewSchema, mandatoryImageEditorialDate } from '../src/lib/editorial-schema.ts';
+import {
+  storySchema,
+  reviewSchema,
+  mandatoryImageEditorialDate,
+} from '../src/lib/editorial-schema.ts';
 import { markdown } from './lib/content.ts';
 import {
   buildGenerationIdentity,
@@ -46,7 +50,9 @@ export function resolveIllustrationGeneration(root: string, options: GenerationO
   if (story.draft) throw new Error('Finalize the English story before illustration decisions.');
   if (story.illustration.mode === 'none') {
     if (story.editorialDate >= mandatoryImageEditorialDate)
-      throw new Error(`${id}: illustration required for public articles from ${mandatoryImageEditorialDate}`);
+      throw new Error(
+        `${id}: illustration required for public articles from ${mandatoryImageEditorialDate}`,
+      );
     return { decision: 'NONE', reason: 'legacy-image-backfill-pending', story_id: id };
   }
   if (!options.briefPath) throw new Error('--brief is required for generated imagery.');
