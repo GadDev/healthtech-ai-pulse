@@ -6,7 +6,10 @@ import { join } from 'node:path';
 import { stringify } from 'yaml';
 import { storySchema } from '../src/lib/editorial-schema.ts';
 import { validateIllustration } from '../scripts/lib/editorial.ts';
-import { buildGenerationIdentity, sha256 } from '../scripts/lib/illustration-generation-identity.ts';
+import {
+  buildGenerationIdentity,
+  sha256,
+} from '../scripts/lib/illustration-generation-identity.ts';
 import {
   acquireRun,
   checkpoint,
@@ -414,7 +417,10 @@ test('controlled end-to-end fixture: ledger → reviewed image → issue → dra
     conclusion: 'success',
     requiredJobs,
   };
-  assert.equal(ciOutcome({ mode: 'publication', headSha: session.sha, run }).outcome, 'review-ready');
+  assert.equal(
+    ciOutcome({ mode: 'publication', headSha: session.sha, run }).outcome,
+    'review-ready',
+  );
   assert.equal(
     ciOutcome({
       mode: 'publication',
