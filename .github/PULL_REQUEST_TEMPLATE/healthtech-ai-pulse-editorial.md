@@ -40,7 +40,9 @@ workflow outcomes, patient benefit, regulatory status and availability.
 - Does the lead communicate a real, supported question or consequence before jargon?
 - Are key numbers, study context and uncertainty understandable without specialist background?
 - Cut stock AI phrasing, template headings, redundant caveats, unsupported drama and jargon.
-- Image concepts, why the chosen photograph is story-specific, actual crop/thumbnail findings, and four editorial gate results:
+- Image concepts, why the chosen **human-centred or conceptual** photograph is story-specific, actual crop/thumbnail findings and four editorial gate results:
+- Headline + photograph medical accuracy; where fictional people/scenes appear, confirm an explicit illustrative caption:
+- Verify that the delivered WebP is standalone and text-free, with all headlines, dates and labels supplied by Astro:
 - Four historical image-free stories remain a backfill item, not an acceptable mode for new editions.
 
 ### Validation and handoff
