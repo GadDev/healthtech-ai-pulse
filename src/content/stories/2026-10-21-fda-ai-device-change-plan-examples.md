@@ -45,7 +45,11 @@ sources:
     label: FDA CDRH — 20 October 2026 update index
     url: https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-21-fda-ai-device-change-plan-examples.webp
+  alt: A medical-technology researcher looks at generic testing and workflow dashboards displayed on two monitors.
+  caption: Illustrative medical-software evaluation scene—not an FDA tool, authorised device or performance results from the agency's hypothetical examples.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-21-fda-ai-device-change-plan-examples.json
 ---
 
 Medical AI can change after it reaches a hospital. A model may be adapted to local patients, or it may learn from new data. But how do you tell whether an update is safe enough to release?
