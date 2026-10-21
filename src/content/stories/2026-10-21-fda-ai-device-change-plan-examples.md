@@ -1,6 +1,6 @@
 ---
-title: FDA sketches change-control plans for localized and continuously learning medical AI
-description: Two hypothetical cases translate existing PCCP concepts into validation gates, subgroup checks, audit trails and post-market monitoring—not a new rule or authorization.
+title: FDA shows how medical AI updates could be checked before release
+description: Two fictional FDA examples show how hospitals and manufacturers might validate changing AI devices. They are not a new rule or product approval.
 date: 2026-10-21
 draft: false
 category: safety-policy
@@ -48,36 +48,28 @@ illustration:
   mode: none
 ---
 
-The U.S. Food and Drug Administration has added two hypothetical examples showing how a medical-device sponsor might plan, validate and monitor future changes to an AI system under a predetermined change control plan, or PCCP.
+Medical AI can change after it reaches a hospital. A model may be adapted to local patients, or it may learn from new data. But how do you tell whether an update is safe enough to release?
 
-The examples appeared on the agency's **20 October 2026** device-update list. They are practical illustrations of the existing framework—not a new rule, a binding guidance revision or the authorization of either device described.
+On **20 October 2026**, the U.S. Food and Drug Administration published two fictional examples intended to make that question easier to discuss. They illustrate a **predetermined change control plan** (PCCP): a description of which future changes a device maker proposes, how each change would be checked and how performance would be watched afterwards.
 
-### Two different update patterns
+This was **not** a new regulation, an approval of a medical device or evidence that either imagined system works in patients.
 
-The first fictional case is a sepsis-alert system that a hospital wants to adapt to local data. The example separates the proposed modifications into site-specific input weighting, fine-tuning of the final model layer and adjustment of an alert threshold. The modified model would be locked before validation and tested on an independent, sequestered local set against the authorized device and clinical ground truth.
+### Two ways an AI system could change
 
-The second case is a continuously learning cardiac-arrhythmia detector. Here, retraining, validation and deployment are automated. The example calls for predefined overall and subgroup performance criteria, blocks deployment if any criterion fails, records versions and deployment dates, uses staggered rollout and monitors for drift after release.
+In the first example, a hospital wants to adapt a **sepsis alert** to its local data. The fictional device maker proposes adjusting input weights, refining the final layer of the model and changing an alert threshold. Before any modified version is used, the model would be locked and tested on an independent local dataset kept apart from the data used to train it. The comparison includes the previously authorised version and a clinical reference standard.
 
-The contrast matters. A bounded local update can be validated before a locked release. A continuously learning system needs controls around the update pipeline itself, including automated rejection, rollback and traceability.
+The second example is a **heart-rhythm detector** that learns continuously. Here, the system may retrain and deploy updates through an automated pipeline. That requires a different kind of safeguard: predefined checks on overall and subgroup performance, a block on deployment when a threshold is missed, version records, a staged rollout and monitoring for changes in performance after release.
 
-### What the examples clarify
+The key distinction is not simply how often an algorithm changes. It is **where the safety decision happens**. In one case a team validates a fixed local update; in the other, the update process itself needs reliable stop and rollback controls.
 
-Across the two cases, FDA emphasizes several recurring controls:
+### What is useful—and what remains hypothetical
 
-- pre-specifying which parts of a model or threshold may change;
-- keeping validation data independent from retraining data;
-- comparing the modified system with the previously authorized version and an appropriate reference standard;
-- checking performance across relevant subgroups rather than relying only on an overall metric;
-- stopping deployment when acceptance criteria are missed;
-- recording version, validation and deployment history; and
-- monitoring performance and data drift after release.
+Both examples make a strong case for keeping training and validation data separate, checking whether performance differs between patient groups and recording what changed and when. The sepsis scenario also addresses where data came from and how identifying information is removed. The continuously learning scenario draws attention to the risks of releasing updates without a person approving each one.
 
-For the hospital-localized example, the agency also highlights data provenance and de-identification. For the continuously learning example, it explicitly recognizes additional risk where deployment can occur without a human in the update loop.
+But these are illustrative scenarios, not clinical studies. They provide **no measured patient benefit**, no universally acceptable sample size and no one-size-fits-all performance threshold. The agency itself describes the cases as incomplete. They do not replace existing laws, regulations, guidance or product-specific review.
 
-### The boundary on interpretation
+For teams building medical-device software, the immediate value is a better set of questions: Which parts of the system may change? What independent evidence permits a new release? What makes the update stop? Who can roll it back? What signal would trigger a post-release investigation?
 
-These are fictional and incomplete examples. They do not specify a universally sufficient sample size, performance threshold or monitoring interval, and they do not supersede statutes, regulations or current guidance. No clinical benefit or product safety outcome was measured because no real device was evaluated.
+Those questions follow from the examples; answering them for an actual device still requires its own evidence and regulatory assessment. And the FDA examples concern the **United States**, not the legal requirements for the European Union or Luxembourg.
 
-**Editorial interpretation:** the useful reading is as a design checklist for an evidence package, not as a template that guarantees clearance. Teams should be able to identify every permitted change, the data that can trigger it, an independent validation set, subgroup failure rules, who or what can approve deployment, how rollback works and what post-market signal stops further updates.
-
-The examples apply to the U.S. regulatory context. They should not be represented as requirements in the European Union or Luxembourg without a separate jurisdiction-specific analysis.
+The linked FDA case examples and PCCP overview are the primary sources for this briefing.
