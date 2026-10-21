@@ -51,28 +51,32 @@ illustration:
   mode: none
 ---
 
-A diagnostic-AI system can be highly accurate and still be unsafe if clinicians defer to it at the wrong moment. A study published in _npj Digital Medicine_ on **20 October 2026** tested that problem directly by giving clinicians both reliable and deliberately incorrect AI suggestions while they interpreted neonatal abdominal radiographs.
+When a medical AI system gives the wrong answer, what matters next is whether the person reading it spots the mistake. In a study published on **20 October 2026**, researchers deliberately showed clinicians incorrect AI advice while they interpreted X-rays of newborns. The clinicians did not all respond in the same way.
 
-The result was not a simple contest between people and a model. It was a test of whether different readers acted as a safety backstop when the model was wrong.
+That finding raises a practical question for hospitals: how should they test the *partnership* between a clinician and an algorithm, not just the algorithm's accuracy?
 
-### What the researchers tested
+### A wrong suggestion, by design
 
-Fourteen readers—six paediatric radiologists, three neonatologists and five radiology residents—reviewed 125 radiographs for neonatal pneumoperitoneum. The cases came from 11 South Korean tertiary hospitals and were external to the model's training data. Across unaided, reliable-AI and error-injected conditions, the study recorded 1,750 interpretations.
+The researchers asked **14 clinicians**—six paediatric radiologists, three neonatologists and five radiology residents—to review 125 abdominal radiographs from 11 South Korean tertiary hospitals. They were looking for neonatal pneumoperitoneum, or air in the abdominal cavity.
 
-In the deliberately wrong condition, the five residents accepted **52.0%** of erroneous suggestions. The three neonatologists overrode **91.7%** of them, with a reported Wilson 95% confidence interval of 83.0% to 96.0%.
+The readers worked under three conditions: without AI, with reliable AI advice and with AI advice deliberately made wrong. Across the conditions, the researchers recorded **1,750 interpretations**. Those are readings of images, not 1,750 separate patients or clinicians.
 
-That contrast is striking, but it is not a stable estimate of how whole professions behave. There were only three neonatologists and five residents. The authors describe the neonatologist pattern as hypothesis-generating, and multiplicity-adjusted post-hoc comparisons were imprecise and not statistically significant even though the adjusted group-by-condition interaction was reported at _p_=0.020.
+In the wrong-advice condition, the five residents accepted **52%** of erroneous suggestions. The three neonatologists overrode **91.7%** of them. For that second figure, the reported 95% confidence interval ran from **83% to 96%**.
 
-### What the study does—and does not—show
+The difference is hard to ignore. It is also too early to turn into a rule about either profession.
 
-The experiment supports a specific human-factors point: reader expertise can change how people respond to incorrect AI advice. It also shows why an aggregate model metric cannot stand in for evaluation of the full human–AI system.
+### What the small study can tell us
 
-It does **not** show that the research model improves routine care. The study was retrospective and simulated. It measured diagnostic decisions, not treatment, patient outcomes or clinical harms. The reader groups were small, and the selected cases do not reproduce the prevalence, interruptions or interface constraints of a live service.
+Just **three neonatologists** took part. That makes their apparent resistance to incorrect advice interesting, but uncertain. The paper reports a statistical interaction between reader group and AI condition (*p* = 0.020). Yet the individual comparisons after correction for multiple testing were imprecise and did not reach statistical significance. The authors treat the neonatologist pattern as hypothesis-generating.
 
-The underlying high-reliability model had strong external test performance, but that is background to the safety question rather than evidence of deployment readiness. The authors' code repository is marked for research and education, not clinical use.
+Nor was this a trial of AI in routine care. The images were collected retrospectively, and the interpretations took place in a study interface. The experiment did not follow treatment choices, patient outcomes or clinical harms. All 125 images came from South Korean tertiary hospitals, so the findings may not carry over to other wards, devices or clinical teams.
 
-### The operational implication
+The underlying research model performed well in external image testing, but model performance was not the main safety question here. Its author-maintained code is offered for research and education, not clinical use.
 
-**Editorial interpretation:** teams evaluating diagnostic AI should deliberately test wrong-answer scenarios by user group, not only average accuracy under normal model operation. Useful measures include when clinicians override the model, when they accept an erroneous suggestion, whether uncertainty is visible, and how escalation or second-reading changes those responses.
+### The test hospitals still need
 
-This study does not establish the right interface or training programme. It does make the failure mode measurable. Before deployment, a health system would still need a representative local evaluation, predefined stop criteria, monitoring for reader–model interaction and a clear route for resolving disagreement.
+A hospital evaluating diagnostic AI could learn from this design by including **deliberately wrong suggestions** in supervised tests. Who notices them? Who accepts them? Does an uncertain recommendation look different from a confident one? What happens when the reader and the software disagree?
+
+These are questions for a local evaluation, not recommendations to deploy this model. The study offers evidence that experience may shape reactions to AI errors. It does **not** show that AI improves outcomes for newborns.
+
+The article and supplement in *npj Digital Medicine* provide the methods and subgroup analyses. The authors report no competing interests; the study lists institutional and public research support. No correction or retraction notice was identified in the materials inspected for this edition.
