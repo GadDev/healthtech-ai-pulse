@@ -41,7 +41,7 @@ workflow outcomes, patient benefit, regulatory status and availability.
 - Are key numbers, study context and uncertainty understandable without specialist background?
 - Cut stock AI phrasing, template headings, redundant caveats, unsupported drama and jargon.
 - Image concepts, why the chosen photograph is story-specific, actual crop/thumbnail findings, and four editorial gate results:
-- Five historical image-free stories remain a backfill item, not an acceptable mode for new editions.
+- Four historical image-free stories remain a backfill item, not an acceptable mode for new editions.
 
 ### Validation and handoff
 
