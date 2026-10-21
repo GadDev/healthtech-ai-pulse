@@ -273,6 +273,9 @@ export const candidateSchema = z
       .min(1),
   })
   .strict();
+// The historical `none` shape remains parseable for pre-cutover stories only.
+// Publication and generation validators reject image-free stories from this edition forward.
+export const mandatoryImageEditorialDate = '2026-10-22';
 export const illustrationSchema = z.discriminatedUnion('mode', [
   z.object({ mode: z.literal('none') }).strict(),
   z
