@@ -95,30 +95,28 @@ export function verifiedPaperResearchHref(
 
   // Scan all research histories, not just today's ledger. Any identity conflict
   // or duplicate candidate is ambiguous and must suppress the link.
-  const matches = ledgers.flatMap((ledger) =>
-    [...ledger.candidates, ...(ledger.watchlist ?? []), ...(ledger.exclusions ?? [])]
-      .filter((candidate) => candidate.id === expected.candidateId)
-      .map((candidate) => ({ ledger, candidate })),
-  );
-  if (matches.length !== 1) return null;
-  const { ledger, candidate } = matches[0];
+  const matches = ledgers.flatMap((ledger) => {
+    const count = [...ledger.candidates, ...(ledger.watchlist ?? []), ...(ledger.exclusions ?? [])]
+      .filter((candidate) => candidate.id === expected.candidateId).length;
+    return count > 0 ? [{ ledger, count }] : [];
+  });
+  if (matches.length !== 1 || matches[0].count !== 1) return null;
+  const { ledger } = matches[0];
+  // Only the selected bucket has full verification/source data.
+  const candidate = ledger.candidates.find((item) => item.id === expected.candidateId);
+  if (!candidate) return null;
   if (
     ledger.kind !== 'daily' ||
     ledger.publication.mode !== 'publication' ||
     !ledger.publication.story_ids.includes(story.id) ||
     ledger.publication.story_ids.filter((id) => id === story.id).length !== 1 ||
     ledger.publication.withheld_selected.some((item) => item.id === story.id) ||
-    !('decision' in candidate) ||
     candidate.decision !== 'selected' ||
-    !('underlying_identity' in candidate) ||
     candidate.underlying_identity.doi !== expected.doi ||
-    !('publication_verification' in candidate) ||
     !verified.has(candidate.publication_verification.status) ||
     !candidate.publication_verification.checked_at ||
     !candidate.publication_verification.checked_by ||
-    !('deduplication' in candidate) ||
     !confirmed.has(candidate.deduplication.publication_status) ||
-    !('sources' in candidate) ||
     !candidate.sources.some(
       (source) =>
         source.role === 'primary' &&

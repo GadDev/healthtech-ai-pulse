@@ -122,7 +122,7 @@ test('missing source inspection, changed DOI, unverified status or dedup conflic
     },
   ];
   for (const change of changes) {
-    const altered = deepClone(original);
+    const altered: ResearchLedger = deepClone(original);
     change(altered);
     assert.equal(verifiedPaperResearchHref(story, [altered]), null);
   }
