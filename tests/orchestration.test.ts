@@ -226,8 +226,8 @@ test('CI reports exact-head required-job results and never treats stale green as
     status: 'completed',
     conclusion: 'success',
     requiredJobs: [
-      { name: 'Verify publication', conclusion: 'success' },
-      { name: 'Browser and accessibility', conclusion: 'success' },
+      { name: 'Verify project', conclusion: 'success' },
+      { name: 'Browser smoke and accessibility', conclusion: 'success' },
     ],
   };
   assert.equal(
