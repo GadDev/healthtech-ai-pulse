@@ -1,0 +1,798 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-21",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "249f888e6fd71405ace03d29f88f58a779480078",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-18T07:43:40.000Z",
+    "window_end": "2026-10-21T07:56:00.000Z",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "Research/evaluation lane: PubMed AI/ML publication-date query 18-21 October 2026; Europe PMC TITLE_ABS AI/ML query for the same dates; npj Digital Medicine current articles and underlying neonatal-AI repository",
+        "source": "NCBI E-utilities, Europe PMC REST, Nature/npj Digital Medicine and GitHub research repository",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "PubMed reported 303 hits and 20 records were screened; Europe PMC reported 363 hits and 25 were screened. Date metadata included future-dated noise. The 20 October neonatal automation-bias study was retrieved at full accepted-article/supplement level and selected; an ophthalmic implementation paper remained watch because only bibliographic metadata was accessible."
+      },
+      {
+        "query": "Safety/official lane: FDA CDRH updates for 18-21 October; PCCP overview and hypothetical medical-AI cases; FDA-2026-N-7874 docket follow-up; EMA AI meeting/current items",
+        "source": "FDA, Regulations.gov and EMA official records",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "New 20 October FDA hypothetical PCCP cases were verified and selected with nonbinding scope. GenAI docket is reachable and still shows Open after the advertised deadline, so it remains watch. No completed EMA action qualified."
+      },
+      {
+        "query": "Deployment/operations lane: Fierce Healthcare AI/digital, MedTech Dive AI/device and Healthcare IT News current pages for 18-21 October 2026",
+        "source": "Specialist health-technology outlet searches and accessible category/current pages",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "Required specialist lane was attempted across three outlets. No additional new item with adequate primary evidence and a consequential operational delta cleared the gate; paywalled and robot-blocked coverage was not exhaustively traversed."
+      },
+      {
+        "query": "Biomedical/pharma engineering lane: OpenAI and Orchestra Bio acquisition announcement; current biopharma-agent and reusable-repository leads",
+        "source": "OpenAI primary announcement, Axios reporting, Europe PMC records and inspected study code repository",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "The Orchestra Bio acquisition was rejected as a transaction plus forward-looking plans without released version, validation or measured workflow effect. The neonatal study repository was inspected as a research artifact, not clinical availability evidence."
+      },
+      {
+        "query": "European/local-language lane: French HAS artificial intelligence health October 2026; German BfArM künstliche Intelligenz Medizin Oktober 2026; Luxembourg/near-neighbour multilingual query",
+        "source": "HAS and BfArM official-domain search plus multilingual web search",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "No qualifying 18-21 October official regional development surfaced. Results were older guidance, newsletters or event pages; no current local deployment or safety action was inferred."
+      },
+      {
+        "query": "Negative evidence, corrections and watch sweep: correction/retraction terms; 30-day ledger watches; overdue FDA GenAI docket; current default-branch history and canonical 21 October branch/PR/date files",
+        "source": "Publisher/search results, Regulations.gov, FDA and GadDev/healthtech-ai-pulse GitHub history",
+        "accessed_at": "2026-10-21T07:56:00.000Z",
+        "outcome": "No correction or retraction affecting the two selected items surfaced in the bounded pass. All prior watches were reviewed for due dates; the only overdue watch was rechecked and carried with a material status observation. No finalized date, canonical branch, ledger or matching PR existed before ownership."
+      }
+    ],
+    "coverage_gaps": [
+      "This was a bounded initial 72-hour sweep, not an exhaustive review of all 303 PubMed or 363 Europe PMC hits; 20 and 25 records respectively were screened, and unfinished retrieval remains explicit.",
+      "PubMed publication-date filtering returned several future-dated records, so metadata alone was not treated as a verified event date.",
+      "The BMJ Open Quality ophthalmic study full text and abstract were not available in the retrieved record; it remains watch without inferred denominators or effects.",
+      "Some specialist and publisher pages were paywalled, robot-blocked or only index-accessible. No claim of exhaustive national-authority, local-language or 30-day correction surveillance is made.",
+      "The neonatal reader study is simulated and subgroup-small; no independent replication, live deployment or patient-outcome evidence was found.",
+      "FDA PCCP cases are hypothetical, nonbinding U.S. examples, not a device authorization, final rule, EU requirement or clinical evaluation."
+    ],
+    "completed_at": null
+  },
+  "candidates": [
+    {
+      "id": "2026-10-21-expertise-automation-bias-neonatal-imaging",
+      "decision": "selected",
+      "title": "Expertise changed how clinicians responded to wrong neonatal-imaging AI advice",
+      "desk": "clinical-ai",
+      "topics": [
+        "diagnostics",
+        "medical-imaging",
+        "decision-support",
+        "evaluation",
+        "safety",
+        "implementation"
+      ],
+      "entities": ["Asan Medical Center", "npj Digital Medicine"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "The journal record identifies 20 October 2026 as the online publication date.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Date shown on the Nature journal record and accepted-article metadata.",
+      "discovered_at": "2026-10-21T07:56:00.000Z",
+      "what_changed": "A peer-reviewed multi-reader crossover study reported that reader expertise modified reactions to deliberately wrong AI suggestions for neonatal pneumoperitoneum, with residents accepting 52.0% of erroneous suggestions while three neonatologists overrode 91.7%.",
+      "why_now": "The article was published on 20 October inside the initial 72-hour discovery window and adds direct, bounded human-AI interaction evidence rather than another model-only benchmark.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03399-3",
+      "sources": [
+        {
+          "id": "article",
+          "url": "https://www.nature.com/articles/s41746-026-03399-3",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03399-3",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors and publisher; author-run evaluation"
+        },
+        {
+          "id": "supplement",
+          "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41746-026-03399-3/MediaObjects/41746_2026_3399_MOESM1_ESM.pdf",
+          "canonical_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41746-026-03399-3/MediaObjects/41746_2026_3399_MOESM1_ESM.pdf",
+          "publisher": "npj Digital Medicine",
+          "role": "supporting",
+          "source_type": "peer-reviewed-supplement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Study authors; detailed sensitivity analyses and protocol material"
+        },
+        {
+          "id": "code",
+          "url": "https://github.com/junjslee/neonatal-ai-reliability",
+          "canonical_url": "https://github.com/junjslee/neonatal-ai-reliability",
+          "publisher": "Study authors",
+          "role": "context",
+          "source_type": "research-code-repository",
+          "publication_date": null,
+          "date_reason": "Repository inspected on 21 October; no publication date inferred.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Author-maintained research repository; not independent clinical validation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "npj-neonatal-pneumoperitoneum-automation-bias-2026",
+        "doi": "10.1038/s41746-026-03399-3",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": "125 external neonatal abdominal radiographs from 11 South Korean tertiary hospitals; 14 readers",
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Reader behaviour under reliable and deliberately erroneous diagnostic-AI advice in neonatal radiography.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical-AI teams can treat interface design, training and sentinel behaviour as measurable safety controls rather than assuming model accuracy determines safe use."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Inspected all merged HealthTech ledgers and stories through 20 October, current main and the canonical 21 October branch/PR namespace. No prior story or candidate with this DOI, cohort or event identity was found.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select as bounded human-factors evidence: a peer-reviewed crossover reader study directly measured responses to correct and deliberately wrong AI suggestions, while wording remains limited to the simulated study and its small reader subgroups.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Peer-reviewed npj Digital Medicine article published online 20 October 2026; accepted early version inspected with a full supplementary PDF.",
+        "study_design": "Multi-reader crossover diagnostic study with unaided, reliable-AI and deliberately error-injected AI conditions; 1,750 interpretations across 14 readers and 125 radiographs.",
+        "validation_setting": "Retrospective external radiographs from 11 South Korean tertiary hospitals, interpreted in a study interface rather than live clinical care.",
+        "independent_validation": "The reader set and images were external to model training, but the evaluation was author-run; no independent replication or live-site implementation study was reported.",
+        "clinical_utility": "measured-no-demonstrated-benefit",
+        "access_level": "full-text",
+        "funding": "Reported support from Asan Medical Center, the Korea Health Industry Development Institute and the National Research Foundation of Korea; funders were reported to have no role in study conduct or reporting.",
+        "conflicts_of_interest": "The article reports no competing interests. The inspected code repository is author-maintained and marked for research/education, not clinical use.",
+        "corrections_retractions": "No correction or retraction notice was identified on the inspected article, supplement or repository during the bounded 21 October review.",
+        "contradictory_findings": [
+          "Adjusted interaction tests support different condition effects by reader group, but individual post-hoc contrasts were wide and not significant after multiplicity correction.",
+          "The study found expertise-related resistance to erroneous AI advice, not proof that any AI-assisted workflow improves neonatal outcomes or routine diagnostic safety."
+        ],
+        "limitations": [
+          "Only 14 readers participated: six paediatric radiologists, three neonatologists and five radiology residents; subgroup estimates are imprecise and the neonatologist finding is hypothesis-generating.",
+          "The study was retrospective and simulated, with 125 selected images and no measurement of downstream treatment decisions, patient outcomes or harms.",
+          "All images came from South Korean tertiary hospitals; generalisability to other settings, devices, prevalence and reader mixes is unknown.",
+          "The error-injection condition isolates automation bias but does not reproduce the full pattern of failures or interface constraints of a deployed product."
+        ],
+        "applicability": "Useful for designing training, interfaces and escalation around diagnostic AI. It does not justify deploying the research model or extrapolating the observed reader behaviour to other specialties."
+      },
+      "claims": [
+        {
+          "id": "expertise-modulates-response-to-wrong-ai-advice",
+          "type": "workflow",
+          "supported_statement": "In a simulated crossover reader study of 1,750 interpretations, five radiology residents accepted 52.0% of deliberately wrong AI suggestions, while three neonatologists overrode 91.7% of them; the small subgroup finding is hypothesis-generating.",
+          "source_ids": ["article", "supplement"],
+          "locators": [
+            "Article abstract, Methods and Results sections: reader composition, 125-case external set, three AI conditions and 1,750 interpretations.",
+            "Supplementary Table 7 and sensitivity-analysis text: group-by-condition interaction, multiplicity-adjusted post-hoc uncertainty and leave-one-neonatologist-out results."
+          ],
+          "evidence_scope": "Observed reader responses in this retrospective simulated study only; no live clinical outcome, causal implementation benefit or general cross-specialty effect.",
+          "limitations": [
+            "Reader groups were small and not randomized samples of their professions.",
+            "Post-hoc subgroup comparisons were imprecise after correction; neonatologist resistance should not be treated as a population estimate."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-21T07:56:00.000Z",
+            "checked_by": "ChatGPT research assistant (source audit; no human editorial approval)",
+            "supported_scope": "Full accepted-article text and supplement support the reader counts, study conditions and reported acceptance/override percentages; wording explicitly preserves uncertainty and simulation limits.",
+            "reason": "Reconciled abstract-level percentages with supplement sensitivity analyses and excluded patient-benefit and deployment claims."
+          },
+          "study": {
+            "design": "Multi-reader crossover diagnostic study with unaided, reliable-AI and error-injected AI conditions.",
+            "setting": "Retrospective study interface using external radiographs from 11 South Korean tertiary hospitals.",
+            "population_or_dataset": "125 neonatal abdominal radiographs: 40 positive and 85 negative under the study reference standard; 14 readers comprised six paediatric radiologists, three neonatologists and five radiology residents.",
+            "sample_sizes": [
+              {
+                "n": 125,
+                "unit": "radiographs",
+                "reason": "External test cases reported in Methods."
+              },
+              {
+                "n": 14,
+                "unit": "readers",
+                "reason": "Six paediatric radiologists, three neonatologists and five residents."
+              },
+              {
+                "n": 1750,
+                "unit": "interpretations",
+                "reason": "Total interpretations reported by the article."
+              }
+            ],
+            "comparator": "Unaided interpretations and reliable-AI suggestions, compared with deliberately error-injected suggestions within the crossover design.",
+            "primary_endpoints": [
+              "Reader diagnostic accuracy and responses to correct versus erroneous AI suggestions across expertise groups."
+            ],
+            "secondary_exploratory_endpoints": [
+              "Group-by-condition interactions and leave-one-neonatologist-out sensitivity analyses."
+            ],
+            "results": [
+              {
+                "endpoint": "Acceptance of erroneous AI suggestions among residents",
+                "metric": "Accepted deliberately wrong suggestions",
+                "value": "52.0",
+                "units": "percent",
+                "comparator": "Residents overrode 48.0% of erroneous suggestions",
+                "uncertainty": "Small group of five residents; simulated cases and no population-level confidence interval cited for this descriptive percentage.",
+                "source_id": "article",
+                "locator": "Abstract and Results section on responses to erroneous suggestions."
+              },
+              {
+                "endpoint": "Override of erroneous AI suggestions among neonatologists",
+                "metric": "Overrode deliberately wrong suggestions",
+                "value": "91.7",
+                "units": "percent",
+                "comparator": "Corresponds to 8.3% acceptance",
+                "uncertainty": "Wilson 95% CI 83.0% to 96.0%; only three neonatologists, so authors characterize the pattern as hypothesis-generating.",
+                "source_id": "supplement",
+                "locator": "Supplement sensitivity analyses and mechanism plot/table for erroneous suggestions."
+              },
+              {
+                "endpoint": "Adjusted interaction",
+                "metric": "Reader-group by AI-condition interaction p value",
+                "value": "0.020",
+                "units": "p value",
+                "comparator": "Case-mix adjusted mixed-effects analysis",
+                "uncertainty": "Individual Holm-adjusted post-hoc contrasts were wide and non-significant.",
+                "source_id": "supplement",
+                "locator": "Supplementary Table 7 and accompanying paragraph."
+              }
+            ],
+            "follow_up": "Single-session reader experiment; no longitudinal or clinical follow-up.",
+            "harms": "No patient harms were measured because the study did not alter live care.",
+            "analysis_notes": "Percentages describe behaviour under experimentally injected wrong suggestions. They are not the sensitivity or specificity of a marketed device.",
+            "applicability": "Supports attention to expertise, training and sentinel behaviour when testing AI-assisted diagnosis; does not establish clinical effectiveness."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 3,
+        "relevance": 4,
+        "material_change": 4,
+        "durability": 4,
+        "weighted_total": 85,
+        "rationales": {
+          "significance": "Direct evidence about automation bias and expert sentinel behaviour is consequential for diagnostic-AI safety, but the experiment did not change care.",
+          "claim_support": "Peer-reviewed full text and supplement support the central measurements; very small reader subgroups cap confidence.",
+          "relevance": "Highly relevant to clinicians, implementers and safety teams evaluating AI-assisted diagnosis.",
+          "material_change": "New peer-reviewed multi-reader evidence with an error-injection condition and subgroup analyses.",
+          "durability": "Human-factors and evaluation lessons should remain useful beyond this specific model."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-21T08:07:00.000Z",
+        "checked_by": "ChatGPT research assistant (publication source audit; no human editorial approval)",
+        "supported_scope": "Accepted article text, supplement and repository support the study design, descriptive reader responses and bounded human-factors interpretation; no live-care or patient-benefit claim is published.",
+        "reason": "Rechecked every quantitative statement against the full accepted article and supplement, including subgroup size, confidence interval, multiplicity-adjusted uncertainty and simulated-study limits."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-21T07:56:00.000Z",
+          "reason": "Select as bounded human-factors evidence: a peer-reviewed crossover reader study directly measured responses to correct and deliberately wrong AI suggestions, while wording remains limited to the simulated study and its small reader subgroups."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-21-fda-ai-device-change-plan-examples",
+      "decision": "selected",
+      "title": "FDA illustrates change-control plans for localized and continuously learning medical AI",
+      "desk": "safety-policy",
+      "topics": ["medical-devices", "regulation", "governance", "safety", "evaluation"],
+      "entities": ["U.S. Food and Drug Administration"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "FDA CDRH news lists the new PCCP examples under 20 October 2026.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "The official CDRH update index identifies 20 October 2026; the example page itself does not show a separate timestamp.",
+      "discovered_at": "2026-10-21T07:56:00.000Z",
+      "what_changed": "FDA published two hypothetical AI-device PCCP cases covering hospital-specific sepsis-alert tuning and automated retraining of a cardiac-arrhythmia detector, with examples of locked validation, subgroup criteria, blocked deployment on failed thresholds, audit trails and drift monitoring.",
+      "why_now": "The examples appeared on FDA CDRH’s 20 October update list and give device teams a new, concrete official illustration of existing PCCP expectations.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/novel-medical-devices-predetermined-change-control-plans-hypothetical-case-examples",
+      "sources": [
+        {
+          "id": "examples",
+          "url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/novel-medical-devices-predetermined-change-control-plans-hypothetical-case-examples",
+          "canonical_url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/novel-medical-devices-predetermined-change-control-plans-hypothetical-case-examples",
+          "publisher": "U.S. Food and Drug Administration",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing regulator; hypothetical examples, not a sponsor record"
+        },
+        {
+          "id": "pccp-overview",
+          "url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/predetermined-change-control-plans",
+          "canonical_url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/predetermined-change-control-plans",
+          "publisher": "U.S. Food and Drug Administration",
+          "role": "supporting",
+          "source_type": "regulatory-record",
+          "publication_date": null,
+          "date_reason": "No separate publication date established from the inspected page.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing regulator; current PCCP overview"
+        },
+        {
+          "id": "cdrh-updates",
+          "url": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+          "canonical_url": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+          "publisher": "U.S. Food and Drug Administration",
+          "role": "supporting",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing regulator; dated update index"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-pccp-hypothetical-ai-device-cases-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA PCCP hypothetical case examples, 2026-10-20"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Both new hypothetical cases describe controlled modifications to AI-enabled medical devices.",
+        "non_ai_exception": null,
+        "reader_consequence": "Device teams can translate the examples into evidence, rollback, audit and monitoring questions without mistaking them for product clearance or a new binding rule."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Inspected merged HealthTech ledgers and stories through 20 October, current main and the canonical 21 October branch/PR namespace. Previous FDA GenAI discussion-paper watch is a different docket and event; no prior PCCP-example story was found.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select a tightly scoped policy briefing because FDA added concrete AI-specific PCCP examples that translate existing requirements into testable update and monitoring controls; present them as hypothetical, nonbinding illustrations rather than a new rule or authorization.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Official FDA webpage added 20 October 2026 with hypothetical PCCP case examples; it is an educational regulatory record, not a binding guidance change or device authorization.",
+        "study_design": "No research study. Official hypothetical examples illustrating how predetermined change control plans could describe, validate and monitor future AI-device modifications.",
+        "validation_setting": "Two fictional AI-device cases: a hospital-localized sepsis alert and a continuously learning cardiac-arrhythmia detector.",
+        "independent_validation": "Not applicable to an official interpretive example. No product, sponsor submission or outcome study is evaluated.",
+        "clinical_utility": "not-applicable",
+        "access_level": "official-record-only",
+        "funding": "FDA publication; no separate funding disclosure on the inspected pages.",
+        "conflicts_of_interest": "Issuing regulator authored the examples. They illustrate FDA expectations but are explicitly hypothetical and incomplete.",
+        "corrections_retractions": "No correction or withdrawal notice identified on the inspected FDA pages during the bounded 21 October review.",
+        "contradictory_findings": [
+          "The page offers implementation detail but explicitly says the cases are hypothetical, illustrative and incomplete; it does not create a new binding requirement."
+        ],
+        "limitations": [
+          "The examples do not replace applicable statutes, regulations, guidance or sponsor-specific review.",
+          "No real device, authorization, safety event or measured clinical benefit is described.",
+          "The examples are U.S.-specific and should not be treated as EU or Luxembourg regulatory requirements."
+        ],
+        "applicability": "Useful to medical-device teams designing update protocols, sequestered validation, subgroup thresholds, audit trails and post-market monitoring. Legal and regulatory review remains product- and jurisdiction-specific."
+      },
+      "claims": [
+        {
+          "id": "fda-hypothetical-ai-pccp-controls",
+          "type": "regulatory",
+          "supported_statement": "FDA’s new hypothetical PCCP examples show how sponsors might pre-specify local model tuning or continuous retraining, validation thresholds, subgroup checks, blocked deployment on failure, versioned audit trails and post-market drift monitoring.",
+          "source_ids": ["examples", "pccp-overview", "cdrh-updates"],
+          "locators": [
+            "Hypothetical Case Example 1: hospital-specific sepsis-alert modification protocol and validation plan.",
+            "Hypothetical Case Example 2: automated retraining, validation gates, deployment controls, audit trail and drift monitoring.",
+            "CDRH New, 20 October 2026: link to Novel Medical Devices with Predetermined Change Control Plans: Hypothetical Case Examples."
+          ],
+          "evidence_scope": "Official examples of possible PCCP content under existing U.S. requirements; not binding guidance, approval of a named device or evidence that either fictional system works.",
+          "limitations": [
+            "Examples are expressly hypothetical, illustrative and incomplete.",
+            "Sponsors must apply current law, regulations and guidance to their own device and submission."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-21T07:56:00.000Z",
+            "checked_by": "ChatGPT research assistant (source audit; no human editorial approval)",
+            "supported_scope": "Direct inspection of the official example page, PCCP overview and dated CDRH index supports the described controls and 20 October addition; all language preserves the nonbinding hypothetical status.",
+            "reason": "Used only official FDA records and excluded claims of new legal obligations, authorization or clinical benefit."
+          },
+          "regulation": {
+            "authority": "U.S. Food and Drug Administration",
+            "jurisdiction": "United States",
+            "document_id": "FDA PCCP hypothetical case examples (web record)",
+            "official_source_id": "examples",
+            "exact_status": "New official hypothetical and nonbinding case examples illustrating existing PCCP concepts; not a guidance issuance, regulation or marketing authorization.",
+            "product_and_version": "No real product or version. Fictional sepsis-alert and cardiac-arrhythmia AI devices.",
+            "intended_use": "Illustrate possible pre-specified AI-device modification, validation, deployment and monitoring controls.",
+            "population": "Hypothetical hospital and arrhythmia-monitoring populations; no actual enrolled or treated population.",
+            "decision_date": null,
+            "publication_date": "2026-10-20",
+            "effective_date": null,
+            "unknown_dates_reason": "No regulatory decision or effective date exists because this is an educational hypothetical record.",
+            "restrictions": "Page is illustrative and incomplete and must be read with applicable statutes, regulations and current guidance."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 4,
+        "relevance": 4,
+        "material_change": 3,
+        "durability": 4,
+        "weighted_total": 90,
+        "rationales": {
+          "significance": "Concrete official examples can materially improve medical-AI update governance, but they do not change binding law.",
+          "claim_support": "All central claims come from directly inspected FDA records with explicit status caveats.",
+          "relevance": "Directly relevant to medical-device developers, compliance teams, evaluators and health-system buyers.",
+          "material_change": "New practical examples added to an existing PCCP framework; no new authorization or rule.",
+          "durability": "Validation gates, audit trails and drift monitoring are durable lifecycle-management concerns."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-21T08:07:00.000Z",
+        "checked_by": "ChatGPT research assistant (publication source audit; no human editorial approval)",
+        "supported_scope": "Official FDA records support the two hypothetical cases, described update controls and 20 October listing; no binding-rule, authorization, EU applicability or clinical-benefit claim is published.",
+        "reason": "Rechecked every article statement against official FDA example, overview and dated index pages and retained the hypothetical, incomplete and nonbinding qualifiers."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-21T07:56:00.000Z",
+          "reason": "Select a tightly scoped policy briefing because FDA added concrete AI-specific PCCP examples that translate existing requirements into testable update and monitoring controls; present them as hypothetical, nonbinding illustrations rather than a new rule or authorization."
+        }
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-21-ophthalmic-ai-timeout-alert-study",
+      "decision": "watch",
+      "title": "Ophthalmic surgery AI-authentication alert before-after study needs full methods",
+      "desk": "health-systems",
+      "topics": ["implementation", "safety", "care-delivery", "evaluation"],
+      "entities": ["Tsukazaki Hospital", "BMJ Open Quality"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "PubMed records electronic publication on 20 October 2026.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "PubMed ESummary and MEDLINE XML both report 20 October 2026.",
+      "discovered_at": "2026-10-21T07:56:00.000Z",
+      "what_changed": "A BMJ Open Quality article reports a one-year before-after study of adding a visual alert to an AI safety-authentication time-out monitor in ophthalmic surgery.",
+      "why_now": "Newly indexed inside the discovery window, but the accessible PubMed record contained no abstract and the full article was not retrieved in the bounded pass.",
+      "late_discovery": false,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+      "sources": [
+        {
+          "id": "pubmed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+          "publisher": "PubMed",
+          "role": "primary",
+          "source_type": "bibliographic-record",
+          "publication_date": "2026-10-20",
+          "date_reason": "PubMed metadata inspected via official E-utilities; the record exposed no abstract in the retrieved XML.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Bibliographic index; not the study sponsor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "bmj-open-quality-ophthalmic-ai-timeout-alert",
+        "doi": "10.1136/bmjoq-2025-004002",
+        "pmid": "42901704",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Human-factors intervention around an AI safety-authentication system in ophthalmic surgery.",
+        "non_ai_exception": null,
+        "reader_consequence": "Could inform implementation design if the full before-after methods and safety outcomes support the headline."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "No matching DOI, PMID or event identity found in merged HealthTech ledgers and stories through 20 October.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: only bibliographic metadata and article type were accessible in the bounded sweep; full methods, intervention details, denominators and outcome definitions are required before assessing the before-after result.",
+      "promote_when": [
+        "Retrieve the full article and verify the time-out intervention, baseline and post-intervention denominators, prespecified outcomes, statistical analysis, adverse events and confounding controls."
+      ],
+      "next_review_at": "2026-10-28",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-21T07:56:00.000Z",
+          "reason": "Watch: only bibliographic metadata and article type were accessible in the bounded sweep; full methods, intervention details, denominators and outcome definitions are required before assessing the before-after result."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-21-fda-genai-device-docket-status",
+      "decision": "watch",
+      "title": "FDA GenAI-device docket still shows open after advertised deadline",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance", "medical-devices"],
+      "entities": ["U.S. Food and Drug Administration"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "Status was inspected on 21 October; this is an observation date, not an inferred agency action date.",
+      "source_publication_date": "2026-08-18",
+      "source_date_reason": "FDA discussion paper and docket document were issued 18 August 2026.",
+      "discovered_at": "2026-10-21T07:56:00.000Z",
+      "what_changed": "The Regulations.gov docket that was inaccessible in the prior watch review is now reachable and displays Open, although FDA had advertised 19 October as the feedback deadline.",
+      "why_now": "This is the scheduled follow-up to the overdue 19 October watch; status remains ambiguous and is not a completed policy action.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+      "sources": [
+        {
+          "id": "docket",
+          "url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+          "canonical_url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+          "publisher": "Regulations.gov",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-08-18",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Official U.S. docket record"
+        },
+        {
+          "id": "fda-paper",
+          "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "canonical_url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "publisher": "U.S. Food and Drug Administration",
+          "role": "supporting",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-08-18",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing agency"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-genai-feedback-deadline",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA-2026-N-7874"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Regulatory discussion paper specifically concerns generative-AI-enabled medical devices.",
+        "non_ai_exception": null,
+        "reader_consequence": "Stakeholders need an actual agency status change or synthesis before treating the consultation as completed policy."
+      },
+      "deduplication": {
+        "status": "material-update",
+        "previous_candidate_ids": ["2026-10-19-fda-genai-feedback-deadline"],
+        "previous_story_ids": [],
+        "material_delta": "The live docket is now accessible and displays Open; the underlying discussion paper and absence of final policy are unchanged.",
+        "archive_coverage": "Matched the same docket number and event key to the 19 October watch; no published HealthTech story exists.",
+        "publication_status": "not-started"
+      },
+      "reason": "Continue watch: the official docket became reachable and still displays Open after the advertised feedback deadline, but no closure notice, agency synthesis, extension or final policy was identified.",
+      "promote_when": [
+        "Confirm a docket closure or extension in an official record and inspect any FDA response, synthesis, guidance or policy action rather than inferring one from a deadline."
+      ],
+      "next_review_at": "2026-10-28",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-21T07:56:00.000Z",
+          "reason": "Continue watch: the official docket became reachable and still displays Open after the advertised feedback deadline, but no closure notice, agency synthesis, extension or final policy was identified."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-21-openai-orchestra-bio-acquisition",
+      "decision": "rejected",
+      "title": "OpenAI acquisition of Orchestra Bio is a business event without validated health outcome evidence",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "research-tools", "health-operations"],
+      "entities": ["OpenAI", "Orchestra Bio"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "Both announcement and reporting identify 20 October 2026.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Official announcement was published 20 October 2026.",
+      "discovered_at": "2026-10-21T07:56:00.000Z",
+      "what_changed": "OpenAI announced an agreement to acquire Orchestra Bio and plans to integrate its agentic biopharma-development platform with Rosalind.",
+      "why_now": "The acquisition was announced inside the window, but the editorial gate requires more than a transaction and forward-looking product claims.",
+      "late_discovery": false,
+      "primary_source_url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+      "sources": [
+        {
+          "id": "openai",
+          "url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+          "canonical_url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+          "publisher": "OpenAI",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Acquirer and product sponsor"
+        },
+        {
+          "id": "axios",
+          "url": "https://www.axios.com/2026/10/20/exclusive-openai-biotech-startup-drug-development",
+          "canonical_url": "https://www.axios.com/2026/10/20/exclusive-openai-biotech-startup-drug-development",
+          "publisher": "Axios",
+          "role": "supporting",
+          "source_type": "news-report",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on the inspected record; exact time not assumed.",
+          "inspected_at": "2026-10-21T07:56:00.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent news report; not product validation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "openai-orchestra-bio-acquisition-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Agentic AI platform intended to coordinate biopharma research and development workflows.",
+        "non_ai_exception": null,
+        "reader_consequence": "Readers should wait for a named version, access terms, real workflow deployment and measured research effect before treating the acquisition as a health-AI advance."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "No prior HealthTech story or candidate for this acquisition found in merged history through 20 October.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: the new acquisition announcement describes planned agentic workflows and future integration, but supplies no released product version, validation, operational denominator, clinical outcome or documented deployment change.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Only the source access and research classification recorded here.",
+        "reason": "Research extraction complete; separate publication verification pending."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-21T07:56:00.000Z",
+          "reason": "Reject: the new acquisition announcement describes planned agentic workflows and future integration, but supplies no released product version, validation, operational denominator, clinical outcome or documented deployment change."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "publication",
+    "reason": "Two independently scoped developments survived publication verification: an 85-point peer-reviewed human-AI interaction study and a 90-point official FDA policy example. Neither meets the significance=4 MUST KNOW rule. Two records remain watch and one acquisition is rejected. English-only issue; illustration.mode=none is explicit for both stories because a literal neonatal scene could imply documentary study evidence and a generic policy still life would fail the story-specific meaning gate.",
+    "story_ids": [
+      "2026-10-21-expertise-automation-bias-neonatal-imaging",
+      "2026-10-21-fda-ai-device-change-plan-examples"
+    ],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": "src/content/pulse/2026-10-21.md",
+    "checks": [
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-21.json",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after final story, issue and ledger assembly.",
+        "evidence": "Editorial checks passed: 11 ledgers and 6 stories."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-21.json",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after final story, issue and ledger assembly.",
+        "evidence": "Illustration and publication mappings passed: 11 ledgers and 6 stories; both new stories explicitly use illustration.mode=none."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after formatting final batch files.",
+        "evidence": "Lint, formatting, TypeScript, schema, content, editorial, illustration, 133 unit tests and production build all passed; Astro built 24 pages."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Two local Playwright attempts, including CI=1, stopped before browser tests because the configured Astro preview process exited after daemonizing.",
+        "evidence": "Playwright reported: Process from config.webServer exited early. No browser assertion ran; exact PR-head Browser and accessibility CI is required."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-21-codex-20261021T075600Z",
+      "started_at": "2026-10-21T07:56:00.000Z",
+      "completed_at": "2026-10-21T08:12:30.000Z",
+      "phases": [
+        "ownership-acquired",
+        "contracts-read",
+        "canonical-branch-deduplication",
+        "bounded-five-lane-discovery",
+        "watch-sweep",
+        "research-ledger-checkpoint",
+        "publication-verification",
+        "draft-articles",
+        "issue-assembled",
+        "local-preflight-passed",
+        "local-browser-check-blocked-by-preview-process",
+        "draft-pr-created-41",
+        "exact-revision-ci-handoff",
+        "ownership-released"
+      ],
+      "outcome": "checkpoint-complete"
+    }
+  ],
+  "active_run": null,
+  "human_overrides": []
+}
