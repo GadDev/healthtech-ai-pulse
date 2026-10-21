@@ -64,7 +64,7 @@ publication timestamps have an adopted storage contract. Story IDs, historical
 ledgers and research/source dates remain unchanged; first-publication timestamps
 must never be backfilled from edition dates or guessed merge/deployment times.
 
-## Optional imagery and translations
+## Mandatory article imagery and optional translations
 
 From editorial date 2026-10-22, every public article must have `illustration.mode: generated`, its story-specific WebP, alt text and review path. `none` remains parseable only to read historical content: the four already-published image-free stories from 12, 13 and 21 October 2026 require a separate visual backfill, not a future publishing exception. The publication checker blocks new `none` stories; a ledger-only batch has no story/image obligation. The separate review stores the exact final article SHA-256, brief/policy hashes, generator/candidate count, generation key, actual WebP hash, crop and truthful reviewer/type/time. No hash is stored inside the source file it hashes. Identity uses SHA-256 of the JSON array `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]`. The policy hash covers exact docs/EDITORIAL.md bytes; policy/source changes require review/reuse reassessment. Do not invent an unavailable model snapshot.
 
