@@ -5,7 +5,7 @@ description: Generate or revise mandatory photorealistic HealthTech AI Pulse art
 
 # Required editorial photograph
 
-Read target docs/EDITORIAL.md, docs/CONTENT_MODEL.md, [the visual constitution](../../../docs/editorial/VISUAL_CONSTITUTION_V1.md), [the illustration guide](../../../docs/editorial/ILLUSTRATION_SYSTEM_V1.md) and the story/ledger first. Never change research classifications. mode=none is a valid explicit choice and needs no generation. A declared generated image requires the complete review and asset; do not silently change mode after a generation failure.
+Read target docs/EDITORIAL.md, docs/CONTENT_MODEL.md, [the visual constitution](../../../docs/editorial/VISUAL_CONSTITUTION_V1.md), [the illustration guide](../../../docs/editorial/ILLUSTRATION_SYSTEM_V1.md) and the story/ledger first. Never change research classifications. For new editions from 2026-10-22, `mode=none` is not a valid publication choice: withhold the story if no image can pass all gates. Historical image-free stories remain backfill work. A declared generated image requires the complete review and asset; do not silently change mode after a generation failure.
 
 Generate only for a verified, selected, factually stable story. Follow the visual constitution's photorealistic direction. Propose three distinct written photographic concepts before new generation, then choose one with a story-specific rationale. Record why the others were rejected. Use contextual photography, a meaningful anonymous gesture, conceptual still life or a tactile close-up as appropriate; reject interchangeable desk-and-device stock compositions. Do not require white desks, teal props, soft light, blanket absence of people or central placement. Preserve the constitution's medical, privacy and illustrative-caption safeguards; never invent clinical evidence or study hardware.
 
@@ -13,7 +13,7 @@ Use the existing strict brief fields: actual story ID, verified context, chosen 
 
 Fix final article bytes, image path, alt text and review path before computing the exact-source SHA-256. Hash exact docs/EDITORIAL.md bytes for policy_sha256 and exact brief bytes for brief_sha256. The review is separate from the article to avoid a self-referential source hash. Target review version is healthtech-1.0; do not copy a source-publication v1.3 approval or identity.
 
-Before generating or reusing, run `npm run illustration:decision -- --story <id> --brief <local-brief.json> --generator-surface <actual-tool> --candidate-count <actual-count> --json` using the brief format in the illustration guide. It is read-only; `NONE` needs no imagery, `GENERATE` is not an approval and `REUSE` still requires normal review/validation. Invalid input blocks the decision.
+Before generating or reusing, run `npm run illustration:decision -- --story <id> --brief <local-brief.json> --generator-surface <actual-tool> --candidate-count <actual-count> --json` using the brief format in the illustration guide. It is read-only; `NONE` is reserved for historical pre-cutover stories, `GENERATE` is not an approval and `REUSE` still requires normal review/validation. Invalid input blocks the decision.
 
 Compute generation_key as SHA-256 over UTF-8 JSON.stringify of `[story_id, story_source_sha256, brief_sha256, policy_sha256, version, candidate_count, generator, model_snapshot]` using the same ordered array as the validator. Use null for an unavailable model snapshot, never a guessed model name. Reuse only when identity, review, asset bytes and crop remain valid. A retry alone does not justify regeneration.
 
