@@ -10,20 +10,20 @@ The current scheduler cannot be triggered immediately through the available conn
 
 ### Editorial candidates
 
-1. **Clinical messages and AI metrics:** `clinical-ai-message-metrics.md`. Primary accepted research: [Hui et al., *npj Digital Medicine*, 21 October 2026](https://doi.org/10.1038/s41746-026-03211-2). New clinical-evaluation methods finding; abstract and publication/COI information inspected, but full methods were not accessible in this run.
-2. **GUARD-LGG radiotherapy-response predictions:** `glioma-radiotherapy-model.md`. Primary accepted research: [Wang et al., *npj Digital Medicine*, 20 October 2026](https://doi.org/10.1038/s41746-026-03112-4). Multi-institution, prospective-test-cohort results reported; full methods/supplement could not be reviewed and no clinical benefit was established. An older 2025 conference abstract exists; publication represents a newer peer-reviewed research report rather than proof of a newly deployed system.
+1. **Clinical messages and AI metrics:** `clinical-ai-message-metrics.md`. Primary accepted research: [Hui et al., _npj Digital Medicine_, 21 October 2026](https://doi.org/10.1038/s41746-026-03211-2). New clinical-evaluation methods finding; abstract and publication/COI information inspected, but full methods were not accessible in this run.
+2. **GUARD-LGG radiotherapy-response predictions:** `glioma-radiotherapy-model.md`. Primary accepted research: [Wang et al., _npj Digital Medicine_, 20 October 2026](https://doi.org/10.1038/s41746-026-03112-4). Multi-institution, prospective-test-cohort results reported; full methods/supplement could not be reviewed and no clinical benefit was established. An older 2025 conference abstract exists; publication represents a newer peer-reviewed research report rather than proof of a newly deployed system.
 
 Both are **provisional editorial drafts**, not selected/published candidates in a canonical ledger. No fake research scores, verified claims, human sign-off, image review records or image hashes are supplied.
 
 ### Actual discovery work and source coverage
 
-- Research/evaluation: inspected dated *npj Digital Medicine* listings and the accessible accepted-article abstracts, publication dates, DOI identifiers, funding/COI disclosures.
-- Safety and regulation: checked FDA/EMA search listings and an October 21 MedTech Dive report on planned *draft* generative-AI-device guidance; no new rule or clearance can be inferred.
+- Research/evaluation: inspected dated _npj Digital Medicine_ listings and the accessible accepted-article abstracts, publication dates, DOI identifiers, funding/COI disclosures.
+- Safety and regulation: checked FDA/EMA search listings and an October 21 MedTech Dive report on planned _draft_ generative-AI-device guidance; no new rule or clearance can be inferred.
 - Deployment: reviewed current Healthcare IT News and MedTech Dive AI coverage; the Oracle/AstraZeneca nonbinding partnership was already covered on the site and is a duplicate for publication.
 - Biomedicine: evaluated GUARD-LGG and medical language metrics; earlier seizure-detector and neonatal-AI stories were found in existing merged ledgers.
 - European/local-language: searched regional regulation and European-language sources, but this short pilot did not complete the repository's prescribed rotating/local-language source set or source-level method appraisal.
 - Corrections/dedup: checked the existing 21 October ledger and the public paper landing pages; no exhaustive prior-history or correction search was completed.
-- Access blocker: full text on the two new *Nature* pages redirected to an inaccessible login through the current web fetch; snippets/abstracts do not substitute for full method or supplement inspection.
+- Access blocker: full text on the two new _Nature_ pages redirected to an inaccessible login through the current web fetch; snippets/abstracts do not substitute for full method or supplement inspection.
 
 **Research coverage is incomplete**; do not set a completed cutoff or present this as the scheduled five-lane discovery run.
 
