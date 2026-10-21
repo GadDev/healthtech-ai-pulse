@@ -47,7 +47,11 @@ sources:
     label: Communications Health
     url: https://www.nature.com/articles/s44528-026-00042-1
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-12-clinical-ai-language-evidence.webp
+  alt: Two people compare illustrated health-information sheets with a world map spread across a table.
+  caption: Staged illustration of multilingual health communication—not a study participant, evaluated AI translation tool or demonstrated clinical deployment.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-12-clinical-ai-language-evidence.json
 corrections: []
 ---
 
