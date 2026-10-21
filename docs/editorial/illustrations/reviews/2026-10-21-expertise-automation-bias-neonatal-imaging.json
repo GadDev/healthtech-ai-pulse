@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-21-expertise-automation-bias-neonatal-imaging",
+  "story_source_sha256": "909e735234c6088d3e382b0215e5705cd9e8d2ea48d97df5230f68ac903781fd",
+  "brief_sha256": "ef15092c528dd99ff515dd70dc27a601e60f426341aed115a3b05291e13bd06d",
+  "policy_sha256": "ccb63dc3c3ea5b0de2437ca31815768bc735dd94118e36e4b072f6a472ef2a66",
+  "generation_key": "7a19f83cacae30d0fe9aea7bcf50e14d50927f2f3b2ab44691026d927dc96579",
+  "candidate_count": 2,
+  "generator": "image_gen.text2im",
+  "model_snapshot": null,
+  "asset_sha256": "e6b90ecdd90b0afd9e663467c499ea1ffd50cd44768e40ac7dccdd6735372340",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT GPT-6 (model visual and article-context review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-21T18:03:52.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
