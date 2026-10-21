@@ -1,0 +1,8 @@
+{
+  "story_id": "2026-10-13-epilepsy-feedback-replay",
+  "verified_context": "A 13-patient prospective inpatient interface pilot measured the feasibility of patient feedback; reported false-alarm improvement came from offline EEG-detector replay. It did not demonstrate seizure prevention, safety of autonomous deployment or a live outpatient benefit.",
+  "visual_idea": "Staged adult with EEG cap and handheld button in a neurological monitoring setting; another person and generic monitoring screens in the background convey feedback and human oversight.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Retrospective acceptance brief documenting the image already merged in PR #46; this is not the original image-generation prompt, which was not retained. Exact WebP bytes must be reused, not regenerated. 16:9 cinematic human-centred editorial photography; article/card and 3:2 responsive crops. Clearly illustrative site captions, accurately descriptive alt text and no documentary implication. All screen waveforms and background brain images are invented illustrative content, not EEG traces, MRI acquisitions, seizures or study data. Do not claim real-time seizure prediction, treatment response or actual study participation."
+}
