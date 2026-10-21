@@ -1,10 +1,10 @@
 # HealthTech illustration system
 
-Contract: `healthtech-1.0`. This guide adapts the source publication's visual constitution, production workflow and generation-identity guidance to HealthTech's implemented optional-image contract. [Editorial policy](../EDITORIAL.md) governs medical claims; [the content model](../CONTENT_MODEL.md), `src/lib/editorial-schema.ts` and `scripts/lib/editorial.ts` define the stored fields and executable checks. Use the [target illustration skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) for execution.
+Contract: `healthtech-1.0`. This guide adapts the source publication's visual constitution, production workflow and generation-identity guidance to HealthTech's mandatory-image publication rule with a bounded legacy transition. [Editorial policy](../EDITORIAL.md) governs medical claims; [the content model](../CONTENT_MODEL.md), `src/lib/editorial-schema.ts` and `scripts/lib/editorial.ts` define the stored fields and executable checks. Use the [target illustration skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) for execution.
 
-## Choose the image mode first
+## Mandatory image gate
 
-`illustration.mode: none` is a complete, valid choice. A ledger-only batch creates no artwork. Generate only for a selected, verified story whose final article bytes and image/alt/review paths are fixed. If a declared generated asset fails, withhold that story until repaired; do not silently change its mode or research decision.
+Each new public story from the 2026-10-22 editorial edition must have one reviewed, specific photorealistic editorial image. `illustration.mode: none` is **not** a production choice. Five older, already-published stories retain this historical mode until images can be created, scientifically reviewed, and linked in a separate backfill PR; none may be treated as a new publishing pattern. A ledger-only batch creates no artwork because it publishes no story. Generate only for a selected, verified story whose final article bytes and image/alt/review paths are fixed. If the image fails, withhold that story until repaired; do not silently downgrade its mode or its research decision.
 
 Explore three written photographic concepts and choose one before new generation. Start with one generated candidate from that choice and record the actual candidate count, excluding text concepts. Revise a failed concept or composition before generating a replacement. A three-image competition and production-reference archive are not requirements for this target.
 
@@ -28,7 +28,7 @@ Include all material generation instructions in the final brief. If this guide o
 
 Use SHA-256 over exact final article bytes for `story_source_sha256`, exact brief bytes for `brief_sha256`, and exact `docs/EDITORIAL.md` bytes for `policy_sha256`. Do not normalize whitespace or line endings. Keep hashes/reviews outside the article they fingerprint.
 
-**Current fingerprint limitation:** unrelated changes to `docs/EDITORIAL.md` invalidate existing reviewed images, while changes to the visual constitution or illustration skill are not directly included in `policy_sha256`. A composite fingerprint would require a separately reviewed helper, schema, CLI and validator migration, with compatibility rules and genuine re-review of affected assets. Never silently rehash historical approvals. The target's photorealistic Quiet Laboratory constitution and illustration skill govern generation; do not import warm-paper/terracotta instructions from the separate Daily AI Pulse publication.
+**Current fingerprint limitation:** unrelated changes to `docs/EDITORIAL.md` invalidate existing reviewed images, while changes to the visual constitution or illustration skill are not directly included in `policy_sha256`. The 2026-10-21 policy revision uses a narrowly scoped and explicit legacy fingerprint exception for the two previously accepted, unchanged image files and exact-story reviews; new images always hash the revised policy. This is not a new approval or a waiver of renewed visual review before merge. A composite fingerprint would require a separately reviewed helper, schema, CLI and validator migration, with compatibility rules and genuine re-review of affected assets. Never silently rehash historical approvals. The target's photorealistic Quiet Laboratory constitution and illustration skill govern generation; do not import warm-paper/terracotta instructions from the separate Daily AI Pulse publication.
 
 Compute `generation_key` as SHA-256 of UTF-8 `JSON.stringify` of this ordered array:
 
@@ -64,7 +64,7 @@ This is a format example, not a real story or review. Replace its values with th
 npm run illustration:decision -- --story YYYY-MM-DD-story-slug --brief /path/to/brief.json --generator-surface ACTUAL_TOOL --candidate-count 1 --json
 ```
 
-Use the actual tool, count and optional `--model-snapshot` value; absent snapshot means null. The command reads the canonical non-draft English story and reports `NONE`, `GENERATE` or `REUSE`. It does not generate an image, alter the ledger or write an approval. Invalid/malformed inputs, foreign/forged reviews and unsupported contracts exit with code 2. Valid changed inputs or missing/changed asset bytes require generation rather than reuse. A `REUSE` decision still requires the normal batch and visual checks.
+Use the actual tool, count and optional `--model-snapshot` value; absent snapshot means null. The command reads the canonical non-draft English story and reports `GENERATE` or `REUSE` for new stories; `NONE` is reserved for historical, pre-cutover stories awaiting backfill. It does not generate an image, alter the ledger or write an approval. Invalid/malformed inputs, foreign/forged reviews and unsupported contracts exit with code 2. Valid changed inputs or missing/changed asset bytes require generation rather than reuse. A `REUSE` decision still requires the normal batch and visual checks.
 
 ### Optional comparison sheet
 
