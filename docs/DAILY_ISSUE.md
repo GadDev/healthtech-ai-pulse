@@ -78,7 +78,7 @@ npm run illustration:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run verify
 ```
 
-These checks do not establish scientific correctness or approve a story. A missing declared generated image blocks that story; `illustration.mode: none` is valid. English is the required public locale; French translation packages do not create French edition routes.
+These checks do not establish scientific correctness or approve a story. An absent or failed required image blocks a new story. `illustration.mode: none` remains historical-only through the 2026-10-21 edition. English is the required public locale; French translation packages do not create French edition routes.
 
 The [orchestrator](editorial/ORCHESTRATOR.md) persists research, verifies selected claims, prepares canonical articles and any declared assets, writes the issue and final ledger, and opens or updates one draft PR. `draft: false` on a publication-ready article is separate from the mandatory draft status of that GitHub PR. Human review/merge and a successful gated deployment control live publication. GitHub Actions does not perform research or schedule editorial runs.
 
