@@ -1,10 +1,10 @@
 # When an AI-written patient message sounds right, is it actually good?
 
-*Editorial preview — not for publication. Based on the accessible accepted abstract and publication disclosures only. Full methods, subgroup detail and supplementary data require inspection.*
+_Editorial preview — not for publication. Based on the accessible accepted abstract and publication disclosures only. Full methods, subgroup detail and supplementary data require inspection._
 
 A patient asking a doctor about a medical concern needs an answer that is clear, appropriate and safe. For hospitals testing AI-written replies, the obvious temptation is to ask software to grade the software: compare an AI draft with a clinician's answer and calculate how much their wording overlaps.
 
-A study published on **21 October 2026** in *npj Digital Medicine* suggests that this shortcut can miss the point. A high similarity score may tell you that two messages resemble one another. It does not necessarily tell you whether the patient received a useful answer.
+A study published on **21 October 2026** in _npj Digital Medicine_ suggests that this shortcut can miss the point. A high similarity score may tell you that two messages resemble one another. It does not necessarily tell you whether the patient received a useful answer.
 
 ### The drafts doctors saw — and the ones they didn't
 
@@ -30,6 +30,6 @@ The study's broader claim is about **measurement validity**, not whether AI shou
 
 ### Source and verification
 
-Primary study: Gavin Hui and colleagues, [*Silent evaluation reveals context-dependent validity of automated metrics for AI-generated clinical messages*](https://doi.org/10.1038/s41746-026-03211-2), *npj Digital Medicine*, published 21 October 2026. The accepted article landing record reports no competing interests. A full-text methods and corrections review remains **pending**; this article is therefore a **provisional draft, not a verified publication-ready briefing**.
+Primary study: Gavin Hui and colleagues, [_Silent evaluation reveals context-dependent validity of automated metrics for AI-generated clinical messages_](https://doi.org/10.1038/s41746-026-03211-2), _npj Digital Medicine_, published 21 October 2026. The accepted article landing record reports no competing interests. A full-text methods and corrections review remains **pending**; this article is therefore a **provisional draft, not a verified publication-ready briefing**.
 
 **Image concept, not approved:** A clearly staged clinician reviewing an unreadable patient-portal reply in a warmly lit working environment. No invented patient message, identifiable person, effectiveness score or real study setting.
