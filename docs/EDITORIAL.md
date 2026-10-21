@@ -1,6 +1,6 @@
 # HealthTech AI Pulse — Editorial policy
 
-Version: healthtech-1.0. This is the single normative editorial rulebook. CONSTITUTION.md governs mission; docs/CONTENT_MODEL.md and machine contracts express these rules structurally. Daily runs cannot change this policy.
+Version: healthtech-1.0 (editorial revision: 2026-10-21). This is the single normative editorial rulebook. CONSTITUTION.md governs mission; docs/CONTENT_MODEL.md and machine contracts express these rules structurally. Daily runs cannot change this policy.
 
 ## Reader promise and scope
 
@@ -96,6 +96,8 @@ Store selected in candidates, watch in watchlist and rejected in exclusions, wit
 
 ## Article structure and presentation
 
+Follow [the science-writing standard](editorial/SCIENCE_WRITING_STANDARD.md): lead with a concrete, source-supported human or scientific question, explain the actual development in plain English, then build the evidence and stakes into a coherent story. Use precise, attributed claims and natural transitions, not a fixed AI-summary template. Write for a curious non-specialist without sacrificing the essential methodology. An unfamiliar clinical or statistical term needs a short explanation at first mention. Do not manufacture scenes, quotes, emotions or causal claims to make the narrative vivid. Give readers useful context early, and never bury a material limitation behind the end of the story. Editorial interpretation must be identifiable but does not require a formulaic repeated heading.
+
 Default 400–700 words, shorter when enough. Title states the bounded development, not an unsupported outcome. Include:
 
 1. What changed, dated and attributed.
@@ -109,7 +111,7 @@ For regulation substitute action, jurisdiction, status, intended use and dates f
 
 ## Publication, corrections and readiness
 
-Pilot: zero to two articles per daily research run. Selected overflow is held for capacity with the decision preserved; it is not silently rejected. Publication requires cleared source/deduplication gates, complete relevant evidence fields, consistent metadata, and assets/locales required by the actual target contracts. English-only with illustration.mode=none is valid. Missing declared generated assets withhold the affected story; no broken references. Optional French may be absent with a recorded reason. A required locale introduced later blocks only the applicable story until satisfied.
+Pilot: zero to two articles per daily research run. Selected overflow is held for capacity with the decision preserved; it is not silently rejected. Publication requires cleared source/deduplication gates, complete relevant evidence fields, consistent metadata, and assets/locales required by the actual target contracts. Every newly prepared public article from the 2026-10-22 edition onward requires one accepted, article-specific photorealistic editorial image, its WebP asset, truthful alt text, review record and an illustrative caption where confusion is possible. If the image cannot be produced or passes neither medical nor editorial review, withhold the story; do not fall back to `mode: none`, a stock placeholder or a generic AI visual. A ledger-only issue has no image obligation because it has no published stories. Five previously published articles dated 2026-10-12, 2026-10-13 and 2026-10-21 still have `mode: none`: this is a disclosed backfill debt, not an optional path for future publication. Existing historical image reviews are retained with an explicitly bounded legacy fingerprint exception until re-review/migration, never silently rehashed. Missing generated assets withhold the affected story; no broken references. Optional French may be absent with a recorded reason. A required locale introduced later blocks only the applicable story until satisfied.
 
 If no stories survive, create a ledger-only draft PR; no issue or artificial featured story. All selected records must be accounted for as drafted or withheld. Blocked candidates do not prevent a valid ledger-only recovery PR when the ledger truthfully records the failures and itself validates. Unsafe or unverifiable ledger structure blocks any PR; preserve the checkpoint separately and report its location.
 
