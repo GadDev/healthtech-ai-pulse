@@ -4,13 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import EvidenceCard from '../../components/EvidenceCard.astro';
 import EvidenceSummary from '../../components/EvidenceSummary.astro';
 import { desks } from '../../lib/categories';
+import { verifiedPaperResearchHref, type ResearchLedger } from '../../lib/research/verified-paper-links.ts';
 export async function getStaticPaths() {
+  // Local, versioned editorial JSON only. No research API or network at build time.
+  const ledgers = Object.values(
+    import.meta.glob('../../../docs/editorial/ledgers/*.json', { eager: true, import: 'default' }),
+  ) as ResearchLedger[];
   return (await getCollection('stories', ({ data }) => !data.draft)).map((story) => ({
     params: { id: story.id },
-    props: { story },
+    props: { story, researchHref: verifiedPaperResearchHref(story, ledgers) },
   }));
 }
-const { story } = Astro.props;
+const { story, researchHref } = Astro.props;
 const { Content } = await render(story);
 ---
 
@@ -72,6 +77,19 @@ const { Content } = await render(story);
             </li>
           ))}
         </ul>
+        {researchHref && (
+          <aside class="article-research-link" aria-labelledby="research-link-title">
+            <h3 id="research-link-title">Explore the underlying paper</h3>
+            <p>
+              The article's publication ledger and the publisher record agree on this public
+              identifier. Research currently shows a fixture-only demonstration: no live paper
+              lookup, evidence extraction or AI synthesis is connected.
+            </p>
+            <a class="text-link" href={researchHref}>
+              Open this paper identifier in Research (demo) <span aria-hidden="true">→</span>
+            </a>
+          </aside>
+        )}
         {story.data.corrections.length > 0 ? (
           <section aria-label="Corrections" id="corrections">
             <h2>Corrections</h2>
