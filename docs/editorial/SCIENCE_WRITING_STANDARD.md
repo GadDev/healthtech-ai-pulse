@@ -6,7 +6,7 @@
 
 Write for an intelligent, curious reader who knows healthcare matters but may not know a clinical abbreviation, study design or statistical convention. The opening should answer **why this specific development matters** in one or two plain sentences, backed by the verified record. Reveal the real tension: a model can score well yet fail at a human handoff; a regulator can describe a safeguard without approving a device; a promising study can be limited to one site. A scene must be observed and sourced, not invented.
 
-Keep an **evidence spine** throughout the story: *what happened → what researchers or authorities actually did → what they found or said → what the evidence cannot tell us → what deserves attention next*. This is a narrative progression, **not five compulsory subheadings**. Choose an order appropriate to the event. A short announcement may need only four paragraphs; a complex study may need two useful subheadings.
+Keep an **evidence spine** throughout the story: _what happened → what researchers or authorities actually did → what they found or said → what the evidence cannot tell us → what deserves attention next_. This is a narrative progression, **not five compulsory subheadings**. Choose an order appropriate to the event. A short announcement may need only four paragraphs; a complex study may need two useful subheadings.
 
 When covering a study, put the design and sample next to the finding they qualify. Distinguish patients from images, readings, encounters and sites. Explain absolute numbers, units, denominators and uncertainty in reader language. A result from 14 clinicians is not a result from 1,750 independent people. Expand clinical terms at first use, where a five-word gloss can prevent an entire paragraph of confusion.
 
@@ -25,19 +25,19 @@ Avoid recurrent machine-written markers: “In a rapidly evolving landscape”, 
 
 ## Fit the structure to the evidence
 
-| Story type | Lead with | Then make clear |
-| --- | --- | --- |
-| Original clinical/biomedical study | The question and bounded finding | Design, sample, setting, meaningful numbers, uncertainty, clinical boundary |
-| Device regulation or policy | The actual action, jurisdiction and date | What changed in practice, what was *not* authorised or required |
-| Corporate partnership/tool launch | What exists today, not the pitch | Intended deployment versus demonstrated use, independence and next verifiable milestone |
-| Safety or contradiction | The verified failure mode or disputed result | Source of signal, exposure/denominators, competing explanations and practical checks |
+| Story type                         | Lead with                                    | Then make clear                                                                         |
+| ---------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Original clinical/biomedical study | The question and bounded finding             | Design, sample, setting, meaningful numbers, uncertainty, clinical boundary             |
+| Device regulation or policy        | The actual action, jurisdiction and date     | What changed in practice, what was _not_ authorised or required                         |
+| Corporate partnership/tool launch  | What exists today, not the pitch             | Intended deployment versus demonstrated use, independence and next verifiable milestone |
+| Safety or contradiction            | The verified failure mode or disputed result | Source of signal, exposure/denominators, competing explanations and practical checks    |
 
 ## Editorial acceptance checklist
 
 A reviewer should be able to answer yes to each of the following:
 
 1. Would the first two sentences matter to a reader who has not yet seen the study or press release?
-2. Can a non-specialist explain the result and *who/what was measured* after one read?
+2. Can a non-specialist explain the result and _who/what was measured_ after one read?
 3. Is each headline, number, comparison, date and quote traceable to a primary source or properly attributed secondary reporting?
 4. Are the main qualification and access limitations close to the claims they constrain rather than hidden in a boilerplate ending?
 5. Does the article progress without repetitive stock headings, disclaimers, abstract-style phrasing or padded bullets?
