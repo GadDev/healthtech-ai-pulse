@@ -51,12 +51,20 @@ illustration:
 corrections: []
 ---
 
-A review published on 12 October maps 806 clinical language-model evaluations across 62 non-English languages. Only 202 studies included an English comparison. The practical question for a multilingual health system is whether evidence matches its language and workflow.
+A medical AI tool that performs well in English may face a very different test in another language. That matters wherever patients and clinicians switch between languages—or work in one that receives little attention from technology developers.
 
-The authors searched PubMed, Scopus and Embase through February 2026. Most extraction used titles and abstracts; a 100-study subset received full-text checks for translation methods and cultural adaptation. Regional repositories were excluded, and the review did not assess risk of bias or pool effectiveness estimates. Missing indexed evidence does not prove that no local evaluation exists.
+A review published on **12 October 2026** examined **806 evaluations** of clinical language models spanning **62 non-English languages**. Just **202 studies** included an English-language comparison. The numbers describe the published evaluations the reviewers found, not a head-to-head ranking of languages or proof that a particular model is safe or unsafe.
 
-The proposed LINGUA checklist was developed and assessed in the same corpus. It requires prospective validation before use as a formal reporting standard.
+### What the review could—and could not—find
 
-**Editorial interpretation:** evaluate the intended language, task and care setting separately. An examination score in one language cannot establish deployment safety in another.
+The authors searched PubMed, Scopus and Embase through **February 2026**. Much of the information was extracted from titles and abstracts. They examined full texts for a smaller subset of **100 studies** to look more closely at translation methods and cultural adaptation.
 
-Source access: publisher full text inspected, especially Methods and the reporting-results and limitations sections. The authors report no external funding or competing interests. This retrospective edition was prepared on 19 October; human editorial review remains required.
+There are important gaps in that map. The search did not include regional repositories, so local work may have been missed. The reviewers did not formally assess risk of bias or combine studies into a single measure of effectiveness. And studies that ask different questions, use different tasks or report results differently cannot be treated as interchangeable.
+
+The authors also propose a reporting checklist called **LINGUA**. It could help researchers describe multilingual evaluations more consistently, but it was developed and assessed using the same body of literature. It still needs testing on independent future studies before it can be treated as an established standard.
+
+### Why the language of evaluation matters
+
+For a multilingual hospital, the practical question is narrower than “Does this model work in many languages?” It is whether the model has been evaluated in **the language, clinical task and care setting where it will actually be used**. A good result on an examination-style benchmark does not establish safe clinical deployment, and an English result cannot simply stand in for another language.
+
+This briefing draws on the publisher's full-text review, especially its methods and limitations. The authors report no external funding or competing interests. The article was prepared retrospectively for the 19 October edition; the study itself was published on 12 October.
