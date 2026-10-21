@@ -18,4 +18,8 @@ if (
   );
 }
 
-export default defineConfig({ site: url.origin, base: '/', integrations: [mdx(), sitemap(), react()] });
+export default defineConfig({
+  site: url.origin,
+  base: '/',
+  integrations: [mdx(), sitemap(), react()],
+});

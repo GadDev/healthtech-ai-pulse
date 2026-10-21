@@ -35,8 +35,8 @@ export default function ResearchExplorer() {
     <div className="research-explorer">
       {link.state === 'invalid' && (
         <p className="research-notice" role="status">
-          The research link contains an invalid or conflicting public identifier. No lookup was made.
-          You can explore the demonstration records below.
+          The research link contains an invalid or conflicting public identifier. No lookup was
+          made. You can explore the demonstration records below.
         </p>
       )}
       {link.state === 'identifier' && (
@@ -77,8 +77,13 @@ export default function ResearchExplorer() {
           {matches.length === 0 ? (
             <div className="research-empty">
               <h3>No matching examples</h3>
-              <p>This fixture catalogue is intentionally small. A missing match is not a finding about published research.</p>
-              <button type="button" onClick={() => setQuery('')}>Clear filter</button>
+              <p>
+                This fixture catalogue is intentionally small. A missing match is not a finding
+                about published research.
+              </p>
+              <button type="button" onClick={() => setQuery('')}>
+                Clear filter
+              </button>
             </div>
           ) : (
             <div className="research-results">
@@ -121,13 +126,20 @@ export default function ResearchExplorer() {
             <strong>{selected.length}</strong> of {MAX_SELECTION} allowed
           </p>
           {selectedPapers.length === 0 ? (
-            <p className="research-selection-empty">Choose an example to see how a future evidence workspace could collect papers for review.</p>
+            <p className="research-selection-empty">
+              Choose an example to see how a future evidence workspace could collect papers for
+              review.
+            </p>
           ) : (
             <ul className="research-selected-items">
               {selectedPapers.map((paper) => (
                 <li key={paper.id}>
                   <span>{paper.title}</span>
-                  <button type="button" onClick={() => toggle(paper.id)} aria-label={`Remove ${paper.title}`}>
+                  <button
+                    type="button"
+                    onClick={() => toggle(paper.id)}
+                    aria-label={`Remove ${paper.title}`}
+                  >
                     Remove
                   </button>
                 </li>
@@ -135,8 +147,13 @@ export default function ResearchExplorer() {
             </ul>
           )}
           <div className="research-next">
-            <button type="button" disabled>Generate evidence brief · not available</button>
-            <p>Evidence extraction, synthesis, saving, export and clinical review are not implemented. No accounts or model calls are used.</p>
+            <button type="button" disabled>
+              Generate evidence brief · not available
+            </button>
+            <p>
+              Evidence extraction, synthesis, saving, export and clinical review are not
+              implemented. No accounts or model calls are used.
+            </p>
           </div>
           <div className="research-guide">
             <h3>What to look for later</h3>

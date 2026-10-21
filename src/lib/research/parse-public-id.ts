@@ -23,7 +23,12 @@ export function parseResearchLink(search: string): ResearchLink {
   const pairs = [...new URLSearchParams(raw).entries()];
   if (pairs.length !== 1) return { state: 'invalid' };
   const [kind, value] = pairs[0];
-  if (!value || value.length > 200 || value !== value.trim() || /[\u0000-\u001f\u007f\ufffd]/.test(value)) {
+  if (
+    !value ||
+    value.length > 200 ||
+    value !== value.trim() ||
+    /[\u0000-\u001f\u007f\ufffd]/.test(value)
+  ) {
     return { state: 'invalid' };
   }
 
