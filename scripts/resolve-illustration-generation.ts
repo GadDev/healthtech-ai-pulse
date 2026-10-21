@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { z } from 'astro/zod';
-import { storySchema, reviewSchema } from '../src/lib/editorial-schema.ts';
+import { storySchema, reviewSchema, mandatoryImageEditorialDate } from '../src/lib/editorial-schema.ts';
 import { markdown } from './lib/content.ts';
 import {
   buildGenerationIdentity,
@@ -44,8 +44,11 @@ export function resolveIllustrationGeneration(root: string, options: GenerationO
   const story = storySchema.parse(markdown(source.toString('utf8')).data);
   if (story.candidateId !== id) throw new Error('Story ID does not match its candidate.');
   if (story.draft) throw new Error('Finalize the English story before illustration decisions.');
-  if (story.illustration.mode === 'none')
-    return { decision: 'NONE', reason: 'optional-illustration-none', story_id: id };
+  if (story.illustration.mode === 'none') {
+    if (story.editorialDate >= mandatoryImageEditorialDate)
+      throw new Error(`${id}: illustration required for public articles from ${mandatoryImageEditorialDate}`);
+    return { decision: 'NONE', reason: 'legacy-image-backfill-pending', story_id: id };
+  }
   if (!options.briefPath) throw new Error('--brief is required for generated imagery.');
   const briefBytes = readFileSync(resolve(root, options.briefPath));
   const brief = briefSchema.parse(JSON.parse(briefBytes.toString('utf8')));
