@@ -96,8 +96,11 @@ export function verifiedPaperResearchHref(
   // Scan all research histories, not just today's ledger. Any identity conflict
   // or duplicate candidate is ambiguous and must suppress the link.
   const matches = ledgers.flatMap((ledger) => {
-    const count = [...ledger.candidates, ...(ledger.watchlist ?? []), ...(ledger.exclusions ?? [])]
-      .filter((candidate) => candidate.id === expected.candidateId).length;
+    const count = [
+      ...ledger.candidates,
+      ...(ledger.watchlist ?? []),
+      ...(ledger.exclusions ?? []),
+    ].filter((candidate) => candidate.id === expected.candidateId).length;
     return count > 0 ? [{ ledger, count }] : [];
   });
   if (matches.length !== 1 || matches[0].count !== 1) return null;
