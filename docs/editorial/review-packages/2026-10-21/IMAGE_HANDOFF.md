@@ -4,12 +4,12 @@
 
 The branch's proposed **review-only** paths are:
 
-| Provisional draft | Intended review asset | Source dimensions | WebP SHA-256 |
-| --- | --- | --- | --- |
-| Clinical AI message metrics | `docs/editorial/review-packages/2026-10-21/images/clinical-ai-message-metrics.webp` | 1672 × 941 | `d7052eae455a7148c62de65c66ccaca328487c7e539d6cbc7cc714381f965f99` |
-| GUARD-LGG radiotherapy | `docs/editorial/review-packages/2026-10-21/images/glioma-radiotherapy-model.webp` | 1672 × 941 | `ae6719a4f6c50ce552a5b8b8577fa8a030d08689fd7abdc6917021ecd9b12b32` |
+| Provisional draft           | Intended review asset                                                               | Source dimensions | WebP SHA-256                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------ |
+| Clinical AI message metrics | `docs/editorial/review-packages/2026-10-21/images/clinical-ai-message-metrics.webp` | 1672 × 941        | `d7052eae455a7148c62de65c66ccaca328487c7e539d6cbc7cc714381f965f99` |
+| GUARD-LGG radiotherapy      | `docs/editorial/review-packages/2026-10-21/images/glioma-radiotherapy-model.webp`   | 1672 × 941        | `ae6719a4f6c50ce552a5b8b8577fa8a030d08689fd7abdc6917021ecd9b12b32` |
 
-Both are WebP exports of the **two existing image-generation outputs**; no new study-derived image, result or factual dashboard has been produced. The package contains a `push-images.sh` helper that requires a clean checkout of this exact branch and pushes the binaries via Git rather than through GitHub's UTF-8 text file API. The images should be reviewed alongside the provisional article drafts *after* the binary push. No links to nonexistent repository images should be presented as working previews.
+Both are WebP exports of the **two existing image-generation outputs**; no new study-derived image, result or factual dashboard has been produced. The package contains a `push-images.sh` helper that requires a clean checkout of this exact branch and pushes the binaries via Git rather than through GitHub's UTF-8 text file API. The images should be reviewed alongside the provisional article drafts _after_ the binary push. No links to nonexistent repository images should be presented as working previews.
 
 ## Editorial candidate 1 — clinical AI messages
 
