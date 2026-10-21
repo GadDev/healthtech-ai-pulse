@@ -47,7 +47,11 @@ sources:
     label: Nature Medicine
     url: https://www.nature.com/articles/s41591-026-04680-4
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-13-epilepsy-feedback-replay.webp
+  alt: An adult wearing an EEG electrode cap holds a handheld feedback button while monitoring screens glow in the background.
+  caption: Illustrative EEG monitoring scene. The person, brain imagery and screen signals do not depict participants, measured data or clinical outcomes from the reported replay study.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-13-epilepsy-feedback-replay.json
 corrections: []
 ---
 
