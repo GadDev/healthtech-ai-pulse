@@ -2,6 +2,10 @@
 
 _Editorial preview — not for publication. The journal's accessible abstract and disclosures were inspected, but the full study methods and supplementary material remain unverified._
 
+![Two clinicians examine a simulated brain-imaging interface in a clinical setting.](images/glioma-radiotherapy-model.webp)
+
+> **Illustrative image, not research evidence:** This staged interface contains fictional MRI overlays, diagnostic labels, and confidence values. None represents GUARD-LGG results or study images. The visual needs independent clinical and editorial review or replacement before publication.
+
 Radiotherapy is an important treatment for people with lower-grade glioma, a type of brain tumour. But tumours do not all respond alike. A tool that could reliably flag an unfavourable response **before** treatment would give clinicians a reason to investigate how best to plan and follow up care.
 
 Researchers reporting in _npj Digital Medicine_ on **20 October 2026** describe an AI model called **GUARD-LGG** designed to make such predictions. It is a promising research result, but it is not evidence that patients have already benefited from AI-guided treatment decisions.
