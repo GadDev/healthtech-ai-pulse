@@ -71,10 +71,7 @@
         "safety",
         "implementation"
       ],
-      "entities": [
-        "Asan Medical Center",
-        "npj Digital Medicine"
-      ],
+      "entities": ["Asan Medical Center", "npj Digital Medicine"],
       "event_date": "2026-10-20",
       "event_date_reason": "The journal record identifies 20 October 2026 as the online publication date.",
       "source_publication_date": "2026-10-20",
@@ -147,7 +144,7 @@
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "Inspected all merged HealthTech ledgers and stories through 20 October, current main and the canonical 21 October branch/PR namespace. No prior story or candidate with this DOI, cohort or event identity was found.",
-        "publication_status": "not-started"
+        "publication_status": "new-confirmed"
       },
       "reason": "Select as bounded human-factors evidence: a peer-reviewed crossover reader study directly measured responses to correct and deliberately wrong AI suggestions, while wording remains limited to the simulated study and its small reader subgroups.",
       "promote_when": [],
@@ -181,10 +178,7 @@
           "id": "expertise-modulates-response-to-wrong-ai-advice",
           "type": "workflow",
           "supported_statement": "In a simulated crossover reader study of 1,750 interpretations, five radiology residents accepted 52.0% of deliberately wrong AI suggestions, while three neonatologists overrode 91.7% of them; the small subgroup finding is hypothesis-generating.",
-          "source_ids": [
-            "article",
-            "supplement"
-          ],
+          "source_ids": ["article", "supplement"],
           "locators": [
             "Article abstract, Methods and Results sections: reader composition, 125-case external set, three AI conditions and 1,750 interpretations.",
             "Supplementary Table 7 and sensitivity-analysis text: group-by-condition interaction, multiplicity-adjusted post-hoc uncertainty and leave-one-neonatologist-out results."
@@ -284,11 +278,11 @@
         }
       },
       "publication_verification": {
-        "status": "not-started",
-        "checked_at": null,
-        "checked_by": null,
-        "supported_scope": "Only the source access and research classification recorded here.",
-        "reason": "Research extraction complete; separate publication verification pending."
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-21T08:07:00.000Z",
+        "checked_by": "ChatGPT research assistant (publication source audit; no human editorial approval)",
+        "supported_scope": "Accepted article text, supplement and repository support the study design, descriptive reader responses and bounded human-factors interpretation; no live-care or patient-benefit claim is published.",
+        "reason": "Rechecked every quantitative statement against the full accepted article and supplement, including subgroup size, confidence interval, multiplicity-adjusted uncertainty and simulated-study limits."
       },
       "decision_history": [
         {
@@ -303,16 +297,8 @@
       "decision": "selected",
       "title": "FDA illustrates change-control plans for localized and continuously learning medical AI",
       "desk": "safety-policy",
-      "topics": [
-        "medical-devices",
-        "regulation",
-        "governance",
-        "safety",
-        "evaluation"
-      ],
-      "entities": [
-        "U.S. Food and Drug Administration"
-      ],
+      "topics": ["medical-devices", "regulation", "governance", "safety", "evaluation"],
+      "entities": ["U.S. Food and Drug Administration"],
       "event_date": "2026-10-20",
       "event_date_reason": "FDA CDRH news lists the new PCCP examples under 20 October 2026.",
       "source_publication_date": "2026-10-20",
@@ -385,7 +371,7 @@
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "Inspected merged HealthTech ledgers and stories through 20 October, current main and the canonical 21 October branch/PR namespace. Previous FDA GenAI discussion-paper watch is a different docket and event; no prior PCCP-example story was found.",
-        "publication_status": "not-started"
+        "publication_status": "new-confirmed"
       },
       "reason": "Select a tightly scoped policy briefing because FDA added concrete AI-specific PCCP examples that translate existing requirements into testable update and monitoring controls; present them as hypothetical, nonbinding illustrations rather than a new rule or authorization.",
       "promote_when": [],
@@ -417,11 +403,7 @@
           "id": "fda-hypothetical-ai-pccp-controls",
           "type": "regulatory",
           "supported_statement": "FDA’s new hypothetical PCCP examples show how sponsors might pre-specify local model tuning or continuous retraining, validation thresholds, subgroup checks, blocked deployment on failure, versioned audit trails and post-market drift monitoring.",
-          "source_ids": [
-            "examples",
-            "pccp-overview",
-            "cdrh-updates"
-          ],
+          "source_ids": ["examples", "pccp-overview", "cdrh-updates"],
           "locators": [
             "Hypothetical Case Example 1: hospital-specific sepsis-alert modification protocol and validation plan.",
             "Hypothetical Case Example 2: automated retraining, validation gates, deployment controls, audit trail and drift monitoring.",
@@ -472,11 +454,11 @@
         }
       },
       "publication_verification": {
-        "status": "not-started",
-        "checked_at": null,
-        "checked_by": null,
-        "supported_scope": "Only the source access and research classification recorded here.",
-        "reason": "Research extraction complete; separate publication verification pending."
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-21T08:07:00.000Z",
+        "checked_by": "ChatGPT research assistant (publication source audit; no human editorial approval)",
+        "supported_scope": "Official FDA records support the two hypothetical cases, described update controls and 20 October listing; no binding-rule, authorization, EU applicability or clinical-benefit claim is published.",
+        "reason": "Rechecked every article statement against official FDA example, overview and dated index pages and retained the hypothetical, incomplete and nonbinding qualifiers."
       },
       "decision_history": [
         {
@@ -493,16 +475,8 @@
       "decision": "watch",
       "title": "Ophthalmic surgery AI-authentication alert before-after study needs full methods",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "safety",
-        "care-delivery",
-        "evaluation"
-      ],
-      "entities": [
-        "Tsukazaki Hospital",
-        "BMJ Open Quality"
-      ],
+      "topics": ["implementation", "safety", "care-delivery", "evaluation"],
+      "entities": ["Tsukazaki Hospital", "BMJ Open Quality"],
       "event_date": "2026-10-20",
       "event_date_reason": "PubMed records electronic publication on 20 October 2026.",
       "source_publication_date": "2026-10-20",
@@ -578,14 +552,8 @@
       "decision": "watch",
       "title": "FDA GenAI-device docket still shows open after advertised deadline",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "governance",
-        "medical-devices"
-      ],
-      "entities": [
-        "U.S. Food and Drug Administration"
-      ],
+      "topics": ["regulation", "governance", "medical-devices"],
+      "entities": ["U.S. Food and Drug Administration"],
       "event_date": "2026-10-21",
       "event_date_reason": "Status was inspected on 21 October; this is an observation date, not an inferred agency action date.",
       "source_publication_date": "2026-08-18",
@@ -641,9 +609,7 @@
       },
       "deduplication": {
         "status": "material-update",
-        "previous_candidate_ids": [
-          "2026-10-19-fda-genai-feedback-deadline"
-        ],
+        "previous_candidate_ids": ["2026-10-19-fda-genai-feedback-deadline"],
         "previous_story_ids": [],
         "material_delta": "The live docket is now accessible and displays Open; the underlying discussion paper and absence of final policy are unchanged.",
         "archive_coverage": "Matched the same docket number and event key to the 19 October watch; no published HealthTech story exists.",
@@ -678,15 +644,8 @@
       "decision": "rejected",
       "title": "OpenAI acquisition of Orchestra Bio is a business event without validated health outcome evidence",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "research-tools",
-        "health-operations"
-      ],
-      "entities": [
-        "OpenAI",
-        "Orchestra Bio"
-      ],
+      "topics": ["drug-discovery", "research-tools", "health-operations"],
+      "entities": ["OpenAI", "Orchestra Bio"],
       "event_date": "2026-10-20",
       "event_date_reason": "Both announcement and reporting identify 20 October 2026.",
       "source_publication_date": "2026-10-20",
@@ -770,13 +729,45 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Two candidates cleared the 75-point gate and await final publication verification and drafting. One new implementation paper remains watch for inaccessible methods, the overdue FDA docket remains watch, and one acquisition was rejected.",
-    "story_ids": [],
+    "mode": "publication",
+    "reason": "Two independently scoped developments survived publication verification: an 85-point peer-reviewed human-AI interaction study and a 90-point official FDA policy example. Neither meets the significance=4 MUST KNOW rule. Two records remain watch and one acquisition is rejected. English-only issue; illustration.mode=none is explicit for both stories because a literal neonatal scene could imply documentary study evidence and a generic policy still life would fail the story-specific meaning gate.",
+    "story_ids": [
+      "2026-10-21-expertise-automation-bias-neonatal-imaging",
+      "2026-10-21-fda-ai-device-change-plan-examples"
+    ],
     "withheld_selected": [],
     "must_know_story_id": null,
-    "issue_path": null,
-    "checks": []
+    "issue_path": "src/content/pulse/2026-10-21.md",
+    "checks": [
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-21.json",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after final story, issue and ledger assembly.",
+        "evidence": "Editorial checks passed: 11 ledgers and 6 stories."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-21.json",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after final story, issue and ledger assembly.",
+        "evidence": "Illustration and publication mappings passed: 11 ledgers and 6 stories; both new stories explicitly use illustration.mode=none."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Node 24.19.0 local execution after formatting final batch files.",
+        "evidence": "Lint, formatting, TypeScript, schema, content, editorial, illustration, 133 unit tests and production build all passed; Astro built 24 pages."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "local worktree based on checkpoint 2b2061171f3270de3a42c9977651dc0ed53aa008",
+        "execution": "Two local Playwright attempts, including CI=1, stopped before browser tests because the configured Astro preview process exited after daemonizing.",
+        "evidence": "Playwright reported: Process from config.webServer exited early. No browser assertion ran; exact PR-head Browser and accessibility CI is required."
+      }
+    ]
   },
   "attempts": [
     {
@@ -789,7 +780,13 @@
         "canonical-branch-deduplication",
         "bounded-five-lane-discovery",
         "watch-sweep",
-        "research-ledger-checkpoint"
+        "research-ledger-checkpoint",
+        "publication-verification",
+        "draft-articles",
+        "issue-assembled",
+        "local-preflight-passed",
+        "local-browser-check-blocked-by-preview-process",
+        "draft-pr-handoff-pending"
       ],
       "outcome": "in-progress"
     }
@@ -797,8 +794,8 @@
   "active_run": {
     "owner_token": "healthtech-2026-10-21-codex-20261021T075600Z",
     "acquired_at": "2026-10-21T07:56:00.000Z",
-    "heartbeat_at": "2026-10-21T07:56:00.000Z",
-    "expires_at": "2026-10-21T09:56:00.000Z"
+    "heartbeat_at": "2026-10-21T08:07:00.000Z",
+    "expires_at": "2026-10-21T10:07:00.000Z"
   },
   "human_overrides": []
 }
