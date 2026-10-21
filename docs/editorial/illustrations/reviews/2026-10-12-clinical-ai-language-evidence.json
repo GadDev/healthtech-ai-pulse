@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-12-clinical-ai-language-evidence",
+  "story_source_sha256": "734b887c97dd18980379bcf903280ffc2c4c0ac7967c7bf59f3efe2c59dc5371",
+  "brief_sha256": "6a126da18052e060c2ac4550963b34df7511bea2c90c41a91317d923b6ec48a9",
+  "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
+  "generation_key": "320f7075cb48d3daafcac54d5c70b3d005e849a56a5ee2aab3181e431e8b4323",
+  "candidate_count": 2,
+  "generator": "image_gen.text2im",
+  "model_snapshot": null,
+  "asset_sha256": "adf67caf119a17846a43494157b713903030239b02e7c4070346c32bc740e2bf",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT GPT-6 (model visual and article-context review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-21T18:03:52.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}

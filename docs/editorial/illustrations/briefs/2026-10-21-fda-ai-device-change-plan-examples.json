@@ -1,0 +1,8 @@
+{
+  "story_id": "2026-10-21-fda-ai-device-change-plan-examples",
+  "verified_context": "The FDA published two hypothetical medical-device AI change-control examples on 20 October 2026, not a new binding rule or a device authorisation. The examples consider validation of updates and monitored deployments, not reported product performance.",
+  "visual_idea": "Fictional medical-technology analyst studying a generic staged workflow dashboard and broad medical-software screens to evoke human oversight of validation and change control.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Retrospective acceptance brief documenting the image already merged in PR #46; this is not the original image-generation prompt, which was not retained. Exact WebP bytes must be reused, not regenerated. 16:9 cinematic human-centred editorial photography; article/card and 3:2 responsive crops. Clearly illustrative site captions, accurately descriptive alt text and no documentary implication. Invented graphs and generic brain image cannot be reported as evidence, measured clinical performance, actual FDA testing, approved products or regulatory decisions. Do not imply that a real device was validated."
+}

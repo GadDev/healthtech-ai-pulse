@@ -1,0 +1,8 @@
+{
+  "story_id": "2026-10-12-clinical-ai-language-evidence",
+  "verified_context": "A published scoping review described language-specific evidence gaps in evaluations of clinical language models across 62 non-English languages and did not establish safe clinical deployment. Illustrative photography may address communication and evaluation questions but cannot depict a validated translation service or a participant in the reported literature.",
+  "visual_idea": "Two people in a staged healthcare-education discussion compare pictorial leaflets and a world map in warm natural light, emphasizing uncertainty and diverse language contexts rather than a deployed AI translator.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Retrospective acceptance brief documenting the image already merged in PR #46; this is not the original image-generation prompt, which was not retained. Exact WebP bytes must be reused, not regenerated. 16:9 cinematic human-centred editorial photography; article/card and 3:2 responsive crops. Clearly illustrative site captions, accurately descriptive alt text and no documentary implication. Maps and printed flags are decorative/illustrative only, not research results. The staged people must not be described as actual study subjects, and no clinical translation performance is implied."
+}

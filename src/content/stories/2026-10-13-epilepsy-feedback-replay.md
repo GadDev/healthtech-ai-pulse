@@ -47,16 +47,32 @@ sources:
     label: Nature Medicine
     url: https://www.nature.com/articles/s41591-026-04680-4
 illustration:
-  mode: none
+  mode: generated
+  image: /images/stories/2026-10-13-epilepsy-feedback-replay.webp
+  width: 1672
+  height: 941
+  alt: An adult wearing an EEG electrode cap holds a handheld feedback button while monitoring screens glow in the background.
+  caption: Illustrative EEG monitoring scene. The person, brain imagery and screen signals do not depict participants, measured data or clinical outcomes from the reported replay study.
+  reviewPath: docs/editorial/illustrations/reviews/2026-10-13-epilepsy-feedback-replay.json
 corrections: []
 ---
 
-A 13 October study connected inpatient EEG monitoring to a conversational interface used by 13 patients. Its detector results need a careful label: patients used the interface prospectively, while adaptive detector performance was evaluated through offline, pseudoprospective replay.
+False alerts are more than a technical nuisance in seizure-monitoring research: each one asks a person to decide whether the system has detected something real.
 
-In the push-button-label analysis, fine-tuning reduced false alarms per hour by a median 77.8% across patients: an absolute difference of −0.306, with a 95% confidence interval from −0.629 to −0.202. This is a detector comparison, not evidence of fewer seizures.
+A study published on **13 October 2026** explored whether feedback from patients could help an electroencephalogram (**EEG**, a recording of the brain's electrical activity) detector make fewer mistakes. **Thirteen patients** used a conversational interface during supervised hospital monitoring.
 
-The single-site, supervised monitoring setting differs from outpatient life. Sensitivity did not improve, and remaining alarms could still burden patients. The study does not establish autonomous-care safety or long-term clinical benefit.
+That sounds like a live test of adaptive AI. The distinction is that the **interface was used prospectively**, while the measured performance of the updated detector came from an **offline replay** of collected data. The system was not shown to improve treatment.
 
-**Editorial interpretation:** assess the patient interface, detector updates and clinical outcomes as separate components. Replay gains justify further evaluation, not a claim that treatment improved.
+### Fewer false alarms in replay
 
-Source access: publisher full text inspected, including Figure 5 and the limitations and safeguards. Funding included NIH and philanthropic support; three authors disclose a pending system patent. Prepared retrospectively on 19 October for human editorial review.
+In the analysis using patients' push-button labels, fine-tuning was associated with a **median 77.8% reduction** in false alarms per hour across patients. The reported absolute difference was **0.306 fewer false alarms per hour**, with a 95% confidence interval from **0.202 to 0.629 fewer**.
+
+Those two figures describe a detector comparison, not a reduction in seizure frequency or patient harm. The study did **not** show improved sensitivity. Even with fewer false alerts in the replay, remaining alarms could still burden people using the system.
+
+The evaluation came from one hospital's supervised inpatient setting. That is very different from someone using a device at home over months, with interruptions, changing conditions and no immediate clinical team nearby.
+
+### What should be tested next
+
+The useful next question is not only whether a detector's score improves. It is whether people can give feedback reliably, whether retraining introduces missed events, and whether the system remains manageable and safe in the intended care setting. Those are separate tests; the replay result cannot answer all of them.
+
+The published _Nature Medicine_ article, including its figure and limitations, is the source for this account. The authors report NIH and philanthropic support, and three authors disclose a pending patent related to the system. This story was prepared retrospectively for the 19 October edition.

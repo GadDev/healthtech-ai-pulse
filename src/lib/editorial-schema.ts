@@ -273,6 +273,9 @@ export const candidateSchema = z
       .min(1),
   })
   .strict();
+// The historical `none` shape remains parseable for pre-cutover stories only.
+// Publication and generation validators reject image-free stories from this edition forward.
+export const mandatoryImageEditorialDate = '2026-10-22';
 export const illustrationSchema = z.discriminatedUnion('mode', [
   z.object({ mode: z.literal('none') }).strict(),
   z
@@ -280,6 +283,9 @@ export const illustrationSchema = z.discriminatedUnion('mode', [
       mode: z.literal('generated'),
       image: z.string().regex(/^\/images\/stories\/[a-z0-9-]+\.webp$/),
       alt: text,
+      caption: text.optional(),
+      width: z.number().int().positive().optional(),
+      height: z.number().int().positive().optional(),
       reviewPath: z.string().regex(/^docs\/editorial\/illustrations\/reviews\/[a-z0-9-]+\.json$/),
     })
     .strict(),

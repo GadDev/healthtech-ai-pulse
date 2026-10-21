@@ -31,9 +31,19 @@ workflow outcomes, patient benefit, regulatory status and availability.
 
 - Full ledger: `docs/editorial/ledgers/YYYY-MM-DD.json`
 - Candidate → story → issue mappings, or ledger-only reason:
-- Images: explicit none, or asset/review paths and exact identity:
+- Mandatory image for every surviving new story: asset/review paths and exact identity (or withhold reason):
 - Featured and MUST KNOW: separately justified, or none:
 - Locale coverage: English; French is not configured:
+
+### Narrative and imagery review
+
+- Does the lead communicate a real, supported question or consequence before jargon?
+- Are key numbers, study context and uncertainty understandable without specialist background?
+- Cut stock AI phrasing, template headings, redundant caveats, unsupported drama and jargon.
+- Image concepts, why the chosen **human-centred or conceptual** photograph is story-specific, actual crop/thumbnail findings and four editorial gate results:
+- Headline + photograph medical accuracy; where fictional people/scenes appear, confirm an explicit illustrative caption:
+- Verify that the delivered WebP is standalone and text-free, with all headlines, dates and labels supplied by Astro:
+- Four historical image-free stories remain a backfill item, not an acceptable mode for new editions.
 
 ### Validation and handoff
 

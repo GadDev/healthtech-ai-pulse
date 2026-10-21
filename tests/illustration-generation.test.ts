@@ -134,7 +134,17 @@ test('one identity formula stays compatible with existing healthtech-1.0 reviews
     ),
   );
 });
-test('optional none requires neither a brief, generator, review nor asset', (t) => {
+test('new image-free stories fail the illustration decision before generation', (t) => {
+  const f = setup(t, 'none');
+  f.story.editorialDate = '2026-10-22';
+  writeFileSync(f.sourcePath, `---\n${stringify(f.story)}---\nSynthetic fixture only.\n`);
+  assert.throws(
+    () => resolveIllustrationGeneration(f.root, { storyId: f.id }),
+    /illustration required/,
+  );
+});
+
+test('historical none remains parseable while images await backfill', (t) => {
   const f = setup(t, 'none');
   rmSync(f.briefPath);
   assert.equal(resolveIllustrationGeneration(f.root, { storyId: f.id }).decision, 'NONE');

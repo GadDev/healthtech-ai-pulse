@@ -10,7 +10,7 @@ from remaining operational acceptance; it does not activate the task.
 - Static Astro publication: five desks, English articles, issue archive, search,
   RSS, evidence cards, methodology and corrections/contact information.
 - Shared schemas and validators for decisions, claim-specific evidence, source
-  mappings, deduplication, withholding, issue references and optional imagery.
+  mappings, deduplication, withholding, issue references and mandatory imagery for new publishable articles.
 - Canonical dated branch/PR identity, ownership/checkpoint state machine and
   synthetic recovery/concurrency tests. These do not prove live concurrent writes.
 - Real publication preparation and human merges: [PR #15](https://github.com/GadDev/healthtech-ai-pulse/pull/15),
