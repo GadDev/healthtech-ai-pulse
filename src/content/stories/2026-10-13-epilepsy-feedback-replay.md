@@ -75,4 +75,4 @@ The evaluation came from one hospital's supervised inpatient setting. That is ve
 
 The useful next question is not only whether a detector's score improves. It is whether people can give feedback reliably, whether retraining introduces missed events, and whether the system remains manageable and safe in the intended care setting. Those are separate tests; the replay result cannot answer all of them.
 
-The published *Nature Medicine* article, including its figure and limitations, is the source for this account. The authors report NIH and philanthropic support, and three authors disclose a pending patent related to the system. This story was prepared retrospectively for the 19 October edition.
+The published _Nature Medicine_ article, including its figure and limitations, is the source for this account. The authors report NIH and philanthropic support, and three authors disclose a pending patent related to the system. This story was prepared retrospectively for the 19 October edition.
