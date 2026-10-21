@@ -284,6 +284,8 @@ export const illustrationSchema = z.discriminatedUnion('mode', [
       image: z.string().regex(/^\/images\/stories\/[a-z0-9-]+\.webp$/),
       alt: text,
       caption: text.optional(),
+      width: z.number().int().positive().optional(),
+      height: z.number().int().positive().optional(),
       reviewPath: z.string().regex(/^docs\/editorial\/illustrations\/reviews\/[a-z0-9-]+\.json$/),
     })
     .strict(),
