@@ -23,16 +23,22 @@ export const digest = sha256;
 // This is historical compatibility, NOT a re-review or reusable publishing exception.
 const historicalPolicySha256 = 'd98127f3092da042eae86ae8226f828ec8a990bd87071f9b01e0bfa76eaf1d50';
 const historicalReviewedImages = new Map([
-  ['2026-10-19-oncology-ai-ehr-handoff', {
-    source: '3c767335e4205b9af9f8901ea1b0b5bfa555d2ffec80f59bde5fc44f24f52460',
-    asset: '45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499',
-    generation: '6b91f4d892971c59dc573bf8342a89df0fc315ad40c79debecba0abfa7577b3a',
-  }],
-  ['2026-10-20-astrazeneca-oracle-trials-agreement', {
-    source: '9c14730abc2c4837511a647041b2bd26686a1a4d1ec86971edce4f10af800c74',
-    asset: 'a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a',
-    generation: '29ac3a1477ebab90c6e7e2d821246c9e5e7c7076336e8239535b5fb5177d58eb',
-  }],
+  [
+    '2026-10-19-oncology-ai-ehr-handoff',
+    {
+      source: '3c767335e4205b9af9f8901ea1b0b5bfa555d2ffec80f59bde5fc44f24f52460',
+      asset: '45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499',
+      generation: '6b91f4d892971c59dc573bf8342a89df0fc315ad40c79debecba0abfa7577b3a',
+    },
+  ],
+  [
+    '2026-10-20-astrazeneca-oracle-trials-agreement',
+    {
+      source: '9c14730abc2c4837511a647041b2bd26686a1a4d1ec86971edce4f10af800c74',
+      asset: 'a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a',
+      generation: '29ac3a1477ebab90c6e7e2d821246c9e5e7c7076336e8239535b5fb5177d58eb',
+    },
+  ],
 ]);
 export function inside(root: string, path: string) {
   const resolved = resolve(root, path);
@@ -197,7 +203,9 @@ export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>):
 export function validateIllustration(root: string, story: Story, bytes: Buffer) {
   if (story.data.illustration.mode === 'none') {
     if (story.data.editorialDate >= mandatoryImageEditorialDate)
-      throw new Error(`${story.id}: mandatory illustration missing for editorial date ${story.data.editorialDate}`);
+      throw new Error(
+        `${story.id}: mandatory illustration missing for editorial date ${story.data.editorialDate}`,
+      );
     return; // Pre-cutover images still need a real backfill and review.
   }
   const i = story.data.illustration;
