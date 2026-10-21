@@ -59,7 +59,7 @@ illustration:
 
 When a medical AI system gives the wrong answer, what matters next is whether the person reading it spots the mistake. In a study published on **20 October 2026**, researchers deliberately showed clinicians incorrect AI advice while they interpreted X-rays of newborns. The clinicians did not all respond in the same way.
 
-That finding raises a practical question for hospitals: how should they test the *partnership* between a clinician and an algorithm, not just the algorithm's accuracy?
+That finding raises a practical question for hospitals: how should they test the _partnership_ between a clinician and an algorithm, not just the algorithm's accuracy?
 
 ### A wrong suggestion, by design
 
@@ -73,7 +73,7 @@ The difference is hard to ignore. It is also too early to turn into a rule about
 
 ### What the small study can tell us
 
-Just **three neonatologists** took part. That makes their apparent resistance to incorrect advice interesting, but uncertain. The paper reports a statistical interaction between reader group and AI condition (*p* = 0.020). Yet the individual comparisons after correction for multiple testing were imprecise and did not reach statistical significance. The authors treat the neonatologist pattern as hypothesis-generating.
+Just **three neonatologists** took part. That makes their apparent resistance to incorrect advice interesting, but uncertain. The paper reports a statistical interaction between reader group and AI condition (_p_ = 0.020). Yet the individual comparisons after correction for multiple testing were imprecise and did not reach statistical significance. The authors treat the neonatologist pattern as hypothesis-generating.
 
 Nor was this a trial of AI in routine care. The images were collected retrospectively, and the interpretations took place in a study interface. The experiment did not follow treatment choices, patient outcomes or clinical harms. All 125 images came from South Korean tertiary hospitals, so the findings may not carry over to other wards, devices or clinical teams.
 
@@ -85,4 +85,4 @@ A hospital evaluating diagnostic AI could learn from this design by including **
 
 These are questions for a local evaluation, not recommendations to deploy this model. The study offers evidence that experience may shape reactions to AI errors. It does **not** show that AI improves outcomes for newborns.
 
-The article and supplement in *npj Digital Medicine* provide the methods and subgroup analyses. The authors report no competing interests; the study lists institutional and public research support. No correction or retraction notice was identified in the materials inspected for this edition.
+The article and supplement in _npj Digital Medicine_ provide the methods and subgroup analyses. The authors report no competing interests; the study lists institutional and public research support. No correction or retraction notice was identified in the materials inspected for this edition.
