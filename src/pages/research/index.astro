@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResearchExplorer from '../../components/research/ResearchExplorer.tsx';
+import '../../styles/research.css';
+---
+
+<BaseLayout
+  title="Scientific evidence research · Demo"
+  description="Explore a fixture-only prototype of HealthTech Scientific Evidence Intelligence. No live biomedical search, API or AI synthesis."
+>
+  <div class="research-page">
+    <header class="page-intro research-intro">
+      <p class="eyebrow">HealthTech / Scientific evidence intelligence</p>
+      <h1>From the headline to the underlying question.</h1>
+      <p class="lede">
+        A focused space for examining biomedical research, checking what evidence can support and
+        making uncertainty visible.
+      </p>
+      <div class="research-intro-meta">
+        <span>Prototype 01 — Local examples</span>
+        <span>Research intelligence, not medical advice</span>
+      </div>
+    </header>
+    <section class="research-disclosure" aria-label="Prototype status">
+      <div class="research-disclosure-mark" aria-hidden="true">✳</div>
+      <div>
+        <h2>You're exploring a fixture-only demonstration.</h2>
+        <p>
+          Every record here is fictional and labelled as such. This page does not query Europe PMC,
+          verify publications, fetch protected full text or contact a Research API. No scientific
+          conclusions, clinical advice or systematic-review claims are made.
+        </p>
+      </div>
+    </section>
+    <ResearchExplorer client:load />
+    <noscript>
+      <div class="research-notice">
+        Interactive filtering and selection require JavaScript. This page contains only synthetic
+        examples. Read the <a href="/methodology/">editorial methodology</a> or browse
+        <a href="/search/">published article search</a> without JavaScript.
+      </div>
+    </noscript>
+    <footer class="research-page-foot">
+      <p>Why a separate research system?</p>
+      <p>
+        HealthTech AI Pulse's journalism remains an independently published static website. The
+        future research service will have its own authentication, science validation, cost controls
+        and deployment lifecycle. A service outage must never interrupt the news.
+      </p>
+      <a href="/methodology/">How we evaluate published reporting →</a>
+    </footer>
+  </div>
+</BaseLayout>
