@@ -96,11 +96,7 @@ export function verifiedPaperResearchHref(
   // Scan all research histories, not just today's ledger. Any identity conflict
   // or duplicate candidate is ambiguous and must suppress the link.
   const matches = ledgers.flatMap((ledger) =>
-    [
-      ...ledger.candidates,
-      ...(ledger.watchlist ?? []),
-      ...(ledger.exclusions ?? []),
-    ]
+    [...ledger.candidates, ...(ledger.watchlist ?? []), ...(ledger.exclusions ?? [])]
       .filter((candidate) => candidate.id === expected.candidateId)
       .map((candidate) => ({ ledger, candidate })),
   );

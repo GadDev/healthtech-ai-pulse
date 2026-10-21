@@ -95,13 +95,31 @@ test('missing source inspection, changed DOI, unverified status or dedup conflic
   const original = ledgers.find((l) => l.candidates.some((c) => c.id === story.id));
   assert.ok(original);
   const changes: Array<(ledger: ResearchLedger) => void> = [
-    (l) => { l.candidates[0].underlying_identity.doi = '10.1000/other-paper'; },
-    (l) => { l.candidates[0].publication_verification.status = 'conflict'; },
-    (l) => { l.candidates[0].publication_verification.checked_at = null; },
-    (l) => { l.candidates[0].publication_verification.checked_by = null; },
-    (l) => { l.candidates[0].deduplication.publication_status = 'dedup-unverified'; },
-    (l) => { l.candidates[0].sources.forEach((s) => { s.inspected_at = null; }); },
-    (l) => { l.candidates[0].sources.forEach((s) => { s.canonical_url = 'https://example.org/elsewhere'; }); },
+    (l) => {
+      l.candidates[0].underlying_identity.doi = '10.1000/other-paper';
+    },
+    (l) => {
+      l.candidates[0].publication_verification.status = 'conflict';
+    },
+    (l) => {
+      l.candidates[0].publication_verification.checked_at = null;
+    },
+    (l) => {
+      l.candidates[0].publication_verification.checked_by = null;
+    },
+    (l) => {
+      l.candidates[0].deduplication.publication_status = 'dedup-unverified';
+    },
+    (l) => {
+      l.candidates[0].sources.forEach((s) => {
+        s.inspected_at = null;
+      });
+    },
+    (l) => {
+      l.candidates[0].sources.forEach((s) => {
+        s.canonical_url = 'https://example.org/elsewhere';
+      });
+    },
   ];
   for (const change of changes) {
     const altered = deepClone(original);

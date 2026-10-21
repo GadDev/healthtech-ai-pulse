@@ -4,7 +4,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import EvidenceCard from '../../components/EvidenceCard.astro';
 import EvidenceSummary from '../../components/EvidenceSummary.astro';
 import { desks } from '../../lib/categories';
-import { verifiedPaperResearchHref, type ResearchLedger } from '../../lib/research/verified-paper-links.ts';
+import {
+  verifiedPaperResearchHref,
+  type ResearchLedger,
+} from '../../lib/research/verified-paper-links.ts';
 export async function getStaticPaths() {
   // Local, versioned editorial JSON only. No research API or network at build time.
   const ledgers = Object.values(
