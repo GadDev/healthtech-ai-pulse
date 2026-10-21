@@ -1,9 +1,9 @@
 ---
 name: healthtech-ai-pulse-illustration
-description: Generate or revise optional photorealistic HealthTech AI Pulse article images from verified stories. Select a specific editorial concept and review medical implications, visual quality, crops and exact-source asset integrity.
+description: Generate or revise mandatory photorealistic HealthTech AI Pulse article images from verified stories. Select a specific editorial concept and review medical implications, visual quality, crops and exact-source asset integrity.
 ---
 
-# Optional editorial illustration
+# Required editorial photograph
 
 Read target docs/EDITORIAL.md, docs/CONTENT_MODEL.md, [the visual constitution](../../../docs/editorial/VISUAL_CONSTITUTION_V1.md), [the illustration guide](../../../docs/editorial/ILLUSTRATION_SYSTEM_V1.md) and the story/ledger first. Never change research classifications. mode=none is a valid explicit choice and needs no generation. A declared generated image requires the complete review and asset; do not silently change mode after a generation failure.
 
