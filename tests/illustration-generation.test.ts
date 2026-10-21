@@ -134,7 +134,7 @@ test('one identity formula stays compatible with existing healthtech-1.0 reviews
     ),
   );
 });
-test('optional none requires neither a brief, generator, review nor asset', (t) => {
+test('historical none remains parseable while images await backfill', (t) => {
   const f = setup(t, 'none');
   rmSync(f.briefPath);
   assert.equal(resolveIllustrationGeneration(f.root, { storyId: f.id }).decision, 'NONE');
