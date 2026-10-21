@@ -1,10 +1,10 @@
 # Can an MRI help predict how a brain tumour will respond to radiotherapy?
 
-*Editorial preview — not for publication. The journal's accessible abstract and disclosures were inspected, but the full study methods and supplementary material remain unverified.*
+_Editorial preview — not for publication. The journal's accessible abstract and disclosures were inspected, but the full study methods and supplementary material remain unverified._
 
 Radiotherapy is an important treatment for people with lower-grade glioma, a type of brain tumour. But tumours do not all respond alike. A tool that could reliably flag an unfavourable response **before** treatment would give clinicians a reason to investigate how best to plan and follow up care.
 
-Researchers reporting in *npj Digital Medicine* on **20 October 2026** describe an AI model called **GUARD-LGG** designed to make such predictions. It is a promising research result, but it is not evidence that patients have already benefited from AI-guided treatment decisions.
+Researchers reporting in _npj Digital Medicine_ on **20 October 2026** describe an AI model called **GUARD-LGG** designed to make such predictions. It is a promising research result, but it is not evidence that patients have already benefited from AI-guided treatment decisions.
 
 ### The test beyond the training hospital
 
@@ -28,6 +28,6 @@ For a neuro-oncology team, the next step is not to let software decide radiation
 
 ### Source and verification
 
-Primary study: Zihan Wang and colleagues, [*GUARD-LGG: a glioma upfront AI-driven radiotherapy response decipher for lower-grade glioma*](https://doi.org/10.1038/s41746-026-03112-4), *npj Digital Medicine*, published 20 October 2026. The accessible article record lists public research funding and reports no competing interests. Historical context: [2025 Neuro-Oncology conference abstract](https://academic.oup.com/neuro-oncology/article/27/Supplement_5/v274/8319485). **Full methods, trial design, supplement, correction and source-version reconciliation are pending.** This is a provisional draft.
+Primary study: Zihan Wang and colleagues, [_GUARD-LGG: a glioma upfront AI-driven radiotherapy response decipher for lower-grade glioma_](https://doi.org/10.1038/s41746-026-03112-4), _npj Digital Medicine_, published 20 October 2026. The accessible article record lists public research funding and reports no competing interests. Historical context: [2025 Neuro-Oncology conference abstract](https://academic.oup.com/neuro-oncology/article/27/Supplement_5/v274/8319485). **Full methods, trial design, supplement, correction and source-version reconciliation are pending.** This is a provisional draft.
 
-**Image concept, not approved:** A neurologist and imaging scientist discussing an anonymous, out-of-focus *generic* imaging workflow. No fake radiology diagnosis, patient, GUARD output, AUC dashboard, treatment success or participant reenactment.
+**Image concept, not approved:** A neurologist and imaging scientist discussing an anonymous, out-of-focus _generic_ imaging workflow. No fake radiology diagnosis, patient, GUARD output, AUC dashboard, treatment success or participant reenactment.
