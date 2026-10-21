@@ -15,7 +15,7 @@
     "content:check": "node scripts/validate-content.mjs",
     "lint": "oxlint --deny-warnings .",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt --write docs/editorial/review-packages/2026-10-21 && git diff -- docs/editorial/review-packages/2026-10-21 && git diff --exit-code",
+    "format:check": "oxfmt --check .",
     "build": "npm run check && astro build && pagefind --site dist",
     "verify": "npm run lint && npm run format:check && npm run scripts:check && npm run tests:check && npm run schema:check && npm run content:check && npm run editorial:check && npm run illustration:check && npm test && npm run build",
     "test:e2e": "playwright test",
