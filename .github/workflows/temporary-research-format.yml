@@ -1,0 +1,28 @@
+name: Temporary Research Markdown Formatting
+on:
+  push:
+    branches: [docs/research-hybrid-foundation-v1]
+permissions:
+  contents: read
+jobs:
+  format-research-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Format proposed research Markdown and emit transfer bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx oxfmt --write docs/research
+          while IFS= read -r path; do
+            data="$(base64 -w0 "$path")"
+            printf 'DOC_B64_BEGIN::%s::%s::DOC_B64_END\n' "$path" "$data"
+          done < <(find docs/research -type f -name '*.md' | sort)
