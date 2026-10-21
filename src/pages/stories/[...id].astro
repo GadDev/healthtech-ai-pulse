@@ -43,8 +43,8 @@ const { Content } = await render(story);
         <img
           src={story.data.illustration.image}
           alt={story.data.illustration.alt}
-          width="1672"
-          height="941"
+          width={story.data.illustration.width ?? 1536}
+          height={story.data.illustration.height ?? 1024}
           fetchpriority="high"
         />
         <figcaption>
