@@ -16,7 +16,7 @@ Choose lighting, camera distance, viewpoint, texture and contrast to support the
 
 Allow fictional, non-identifiable human presence, such as hands or an anonymous contextual gesture, when it adds meaning. Do not present it as an actual participant, investigator or observed clinical encounter. Avoid invented medical-looking accessories that could be mistaken for study hardware. A conceptual construction must not encode invented study counts, measurements or mechanisms.
 
-A generated photograph is an editorial illustration of context. It must not resemble documentary evidence of the reported study, identifiable investigators, a named institution, real patients or clinical results. Avoid readable records, identifying screens and brand marks. Caption it as illustrative at every placement where that distinction might otherwise be lost. Alt text describes visible content without claiming that the depicted scene occurred. If no truthful photographic idea survives the crop and implication review, use `illustration.mode: none`.
+A generated photograph is an editorial illustration of context. It must not resemble documentary evidence of the reported study, identifiable investigators, a named institution, real patients or clinical results. Avoid readable records, identifying screens and brand marks. Caption it as illustrative at every placement where that distinction might otherwise be lost. Alt text describes visible content without claiming that the depicted scene occurred. If no truthful photographic concept survives the medical-implication and crop review, try a materially different story-specific concept. If no image passes, withhold the article and record the obstacle in the ledger. Never publish a new image-free story or an interchangeable filler photograph. Historical `mode: none` stories are tracked as image-backfill debt, not a precedent.
 
 Reject unsupported medical implications before judging aesthetics. In particular:
 
@@ -44,4 +44,4 @@ Use the real HealthTech renderer; source-publication layouts and artwork are not
 
 Include material visual constraints in the exact final brief. Changes to this guide require reassessing that brief and the recorded review before reuse; updating a timestamp alone is not a new review. Record unresolved failures and withhold declared imagery until repaired.
 
-Adapted from `GadDev/daily-ai-pulse/docs/editorial/VISUAL_CONSTITUTION_V1.md` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`. The target retains its healthcare restrictions, optional imagery and `healthtech-1.0` identity rather than adopting the source's separate version hierarchy.
+Adapted from `GadDev/daily-ai-pulse/docs/editorial/VISUAL_CONSTITUTION_V1.md` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`. The target retains its healthcare restrictions and `healthtech-1.0` identity rather than adopting the source's separate version hierarchy; from the 2026-10-22 edition an accepted image is mandatory for each story.
