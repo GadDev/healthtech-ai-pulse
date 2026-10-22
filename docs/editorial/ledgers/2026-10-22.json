@@ -830,7 +830,7 @@
     {
       "run_id": "healthtech-2026-10-22T074438Z-root",
       "started_at": "2026-10-22T07:44:38.000Z",
-      "completed_at": null,
+      "completed_at": "2026-10-22T08:05:40.000Z",
       "phases": [
         "contracts-read",
         "bounded-discovery-complete",
@@ -841,16 +841,14 @@
         "story-drafted",
         "illustration-reviewed",
         "issue-created",
-        "local-preflight-complete"
+        "local-preflight-complete",
+        "publication-commit",
+        "draft-pr-opened",
+        "ownership-released"
       ],
-      "outcome": "in-progress"
+      "outcome": "draft-pr-opened-awaiting-exact-head-ci-and-human-review"
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-10-22T074438Z-root",
-    "acquired_at": "2026-10-22T07:50:49.000Z",
-    "heartbeat_at": "2026-10-22T08:02:43.000Z",
-    "expires_at": "2026-10-22T10:02:43.000Z"
-  },
+  "active_run": null,
   "human_overrides": []
 }
