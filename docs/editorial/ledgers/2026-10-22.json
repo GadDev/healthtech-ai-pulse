@@ -124,7 +124,7 @@
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "Canonical URLs, TGA identity terms and digital-scribe terms were searched across merged ledgers and stories through contract_ref; no prior HealthTech candidate or story covers this review.",
-        "publication_status": "not-started"
+        "publication_status": "new-confirmed"
       },
       "reason": "Select as a late-discovery regulatory briefing: the central finding is directly inspectable in an official record, has a concrete procurement/compliance consequence and is bounded by the regulator's explicit statement that it did not test safety or performance or make a market-wide estimate.",
       "promote_when": [],
@@ -132,23 +132,25 @@
       "format": "briefing",
       "depth": "specialist",
       "evidence": {
-        "publication_status": "Official Australian regulatory review outcome with companion guidance",
-        "study_design": "Regulatory environmental scan, voluntary supplier survey and document/function review; not a clinical study or product-performance test",
-        "validation_setting": "Publicly available information, supplier documentation, labelling, marketing material, functionality/intended-purpose descriptions, and information supplied by clinicians and patients",
-        "independent_validation": "The issuing regulator performed the review, but no independent product testing or product-by-product final determination is reported.",
+        "publication_status": "Official Australian regulatory review outcome published 16 October 2026 with companion guidance; covered here as a late-discovery briefing.",
+        "study_design": "Regulatory environmental scan, voluntary supplier survey and review of product information and functions; not a clinical study or product-performance test.",
+        "validation_setting": "Public information, supplier documentation, labelling, marketing material, functionality and intended-purpose descriptions, plus information supplied by clinicians and patients.",
+        "independent_validation": "The regulator conducted the review, but reported no independent product testing or final product-by-product classification.",
         "clinical_utility": "not-assessed",
         "access_level": "official-record-only",
         "funding": "Australian government regulator; no separate funding declaration appears on the inspected records.",
         "conflicts_of_interest": "No conflict declaration appears on the inspected pages; suppliers voluntarily provided product information to the regulator.",
-        "corrections_retractions": "No correction, withdrawal or superseding notice was observed on either inspected TGA page at the recorded inspection time.",
-        "contradictory_findings": [],
-        "limitations": [
-          "TGA focused on 12 products rather than every supplier identified in its approximately 100-supplier scan; the sample is not a market prevalence estimate.",
-          "TGA did not test the products, check safety or performance, assess privacy/data protections, or assess detailed compliance requirements.",
-          "The finding is that functions were likely to meet a definition; it is not a disclosed final enforcement decision for each named product.",
-          "Individual product versions and product-level classifications were not reported."
+        "corrections_retractions": "No correction, withdrawal or superseding notice was identified on the two inspected TGA pages during the 22 October 2026 review.",
+        "contradictory_findings": [
+          "The review found likely medical-device functions in some products, but explicitly says not all digital scribes or AI-enabled outputs have a therapeutic purpose."
         ],
-        "applicability": "Applies to products supplied in Australia and to the TGA's function- and intended-purpose-based medical-device boundary. Other jurisdictions may use different legal tests."
+        "limitations": [
+          "TGA focused on 12 products rather than every supplier in its approximately 100-supplier scan; the sample is not a market-prevalence estimate.",
+          "TGA did not test products, check safety or performance, assess privacy or data protection, or assess detailed regulatory compliance.",
+          "The findings are not disclosed final enforcement decisions for individual products or versions.",
+          "Australian rules do not determine regulatory status in the European Union, Luxembourg or other jurisdictions."
+        ],
+        "applicability": "Useful to healthcare buyers, deployers and suppliers assessing whether individual scribe functions and claims trigger Australian medical-device obligations. Product- and jurisdiction-specific legal review remains necessary."
       },
       "claims": [
         {
@@ -167,11 +169,11 @@
             "The exact regulatory consequence depends on intended purpose, functionality and any applicable CDSS exemption."
           ],
           "verification": {
-            "status": "not-started",
-            "checked_at": null,
-            "checked_by": null,
-            "supported_scope": "Research extraction from the two inspected official TGA records.",
-            "reason": "Publication-time claim verification follows the research checkpoint."
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-22T07:57:09.000Z",
+            "checked_by": "ChatGPT GPT-6 (model source review; not independent human, clinical or regulatory validation)",
+            "supported_scope": "The live TGA review directly supports the 8/2/2 finding, none of the 12 suppliers self-identifying as a device, the approximately 100-supplier scan and 40 survey responses. The companion guidance supports the function- and intended-purpose boundary, administrative examples, disclaimer limitation and conditional CDSS-exemption scope.",
+            "reason": "Rechecked both official TGA records immediately before drafting; the story confines the claim to likely device functions in a purposive 12-product review and carries forward every material published limitation."
           },
           "type": "regulatory",
           "regulation": {
@@ -207,11 +209,11 @@
         }
       },
       "publication_verification": {
-        "status": "not-started",
-        "checked_at": null,
-        "checked_by": null,
-        "supported_scope": "Research selection only; publication verification has not yet been recorded.",
-        "reason": "Selected for downstream verification after the ledger-first checkpoint."
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-22T07:57:09.000Z",
+        "checked_by": "ChatGPT GPT-6 (model source review; not independent human, clinical or regulatory validation)",
+        "supported_scope": "Official regulator outcome and companion guidance support a late-discovery regulatory briefing about reviewed functions and the operational classification boundary. They do not support product safety, performance, clinical benefit, market prevalence, or a final product-by-product enforcement conclusion.",
+        "reason": "Fresh inspection found the official pages live, dated 16 October 2026 and consistent with the selected claim. No correction, withdrawal or superseding notice was visible on either page."
       },
       "decision_history": [
         {
@@ -787,13 +789,42 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "One late-discovery regulatory candidate cleared research selection and awaits publication verification and mandatory illustration review. Three records remain watch and four are rejected.",
-    "story_ids": [],
+    "mode": "publication",
+    "reason": "One late-discovery regulatory candidate cleared the 75-point gate, publication-time claim verification and mandatory generated-illustration review. Three records remain watch and four are rejected.",
+    "story_ids": ["2026-10-22-tga-digital-scribe-review"],
     "withheld_selected": [],
     "must_know_story_id": null,
-    "issue_path": null,
-    "checks": []
+    "issue_path": "src/content/pulse/2026-10-22.md",
+    "checks": [
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-22.json",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 67629d3703e2d602049c842cfea0a5bc91a2d7ff",
+        "execution": "Node 24.19.0 local execution after final story, issue, ledger and reviewed-image assembly.",
+        "evidence": "Editorial checks passed: 12 ledgers and 7 stories."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-22.json",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 67629d3703e2d602049c842cfea0a5bc91a2d7ff",
+        "execution": "Node 24.19.0 local execution after exact story, brief, review and WebP identities were finalized.",
+        "evidence": "Illustration and publication mappings passed: 12 ledgers and 7 stories; the generated asset matched its source, brief, policy and asset hashes."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 67629d3703e2d602049c842cfea0a5bc91a2d7ff",
+        "execution": "Node 24.19.0 local execution after formatting the final batch files.",
+        "evidence": "Lint, formatting, TypeScript, schema, content, editorial, illustration, 136 unit tests and production build passed; Astro built 26 pages and Pagefind indexed 8 pages."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "local prospective tree based on checkpoint 67629d3703e2d602049c842cfea0a5bc91a2d7ff",
+        "execution": "Local Playwright execution stopped before assertions because Chromium v1248 was absent; a bounded installation retry received zero-byte/truncated archives from the download endpoint.",
+        "evidence": "All 21 cases reported the same missing executable before any browser assertion ran. Exact PR-head Browser smoke and accessibility CI remains required and authoritative."
+      }
+    ]
   },
   "attempts": [
     {
@@ -805,7 +836,12 @@
         "bounded-discovery-complete",
         "decisions-recorded",
         "ownership-acquired",
-        "research-checkpoint"
+        "research-checkpoint",
+        "claim-verification-complete",
+        "story-drafted",
+        "illustration-reviewed",
+        "issue-created",
+        "local-preflight-complete"
       ],
       "outcome": "in-progress"
     }
@@ -813,8 +849,8 @@
   "active_run": {
     "owner_token": "healthtech-2026-10-22T074438Z-root",
     "acquired_at": "2026-10-22T07:50:49.000Z",
-    "heartbeat_at": "2026-10-22T07:50:49.000Z",
-    "expires_at": "2026-10-22T09:50:49.000Z"
+    "heartbeat_at": "2026-10-22T08:02:43.000Z",
+    "expires_at": "2026-10-22T10:02:43.000Z"
   },
   "human_overrides": []
 }

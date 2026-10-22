@@ -1,0 +1,30 @@
+{
+  "story_id": "2026-10-22-tga-digital-scribe-review",
+  "verified_context": "On 16 October 2026, Australia's Therapeutic Goods Administration reported that eight of 12 reviewed digital scribes included functions likely to meet the medical-device definition. The regulator did not test products, check safety or performance, or publish final product-level classifications. Administrative transcription alone may be outside device regulation, while patient-specific clinical recommendations or conclusions may trigger it.",
+  "visual_idea": "A staged clinician pauses to review digital documentation at an unbranded workstation in a calm consultation room, with a small tabletop microphone as the concrete scribe motif. The scene represents human scrutiny at the boundary between transcription and clinical recommendation without showing a patient, a real product or any medical result.",
+  "placement": "article hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Selected from three written concepts. Rejected concept 1: an empty microphone between consultation chairs was too generic and weak at thumbnail scale. Rejected concept 2: a split-screen classification metaphor risked looking like a factual regulatory diagram and generating pseudo-text. Generate one standalone 3:2 editorial image with a crop-safe central motif; keep the clinician and microphone legible in 16:9 and mobile object-fit crops. The computer display must be dark or softly abstract with no readable words, numbers, clinical values, charts, diagnosis, recommendation, patient data, logo or recognisable interface. No identifiable patient, product, supplier, regulator, national emblem, paperwork, regulatory approval cue, safety-performance result, futuristic AI motif or glowing brain. Clearly staged and non-documentary. No border, frame or watermark.",
+  "references": [
+    {
+      "path": "public/images/stories/2026-10-21-expertise-automation-bias-neonatal-imaging.webp",
+      "sha256": "e6b90ecdd90b0afd9e663467c499ea1ffd50cd44768e40ac7dccdd6735372340"
+    },
+    {
+      "path": "public/images/stories/2026-10-21-fda-ai-device-change-plan-examples.webp",
+      "sha256": "e64b6d050d255bfe36ee2eaa22de55f7d8c15ec061a7282cf96a54915eeb4564"
+    },
+    {
+      "path": "public/images/stories/2026-10-20-astrazeneca-oracle-trials-agreement.webp",
+      "sha256": "a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a"
+    },
+    {
+      "path": "public/images/stories/2026-10-19-oncology-ai-ehr-handoff.webp",
+      "sha256": "45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499"
+    },
+    {
+      "path": "public/images/stories/2026-10-13-epilepsy-feedback-replay.webp",
+      "sha256": "a3f226f221253c3c5e1148b37cea472161d36215fc792b71f60595b847f9fdd5"
+    }
+  ]
+}

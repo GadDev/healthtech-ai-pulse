@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-22-tga-digital-scribe-review",
+  "story_source_sha256": "3cd6bed329891dfbb50deacc665bd2954fc4e8c49090fd118ed07b36c4f87e56",
+  "brief_sha256": "5b2d25132ac8c61b6761c39b27856fed66230b1763d38f51d01a2ce493b869bf",
+  "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
+  "generation_key": "2cfe743f412880b42954fd47013ac812659939ff928771cb757eac5da7192f02",
+  "candidate_count": 1,
+  "generator": "image_gen.text2im",
+  "model_snapshot": null,
+  "asset_sha256": "6d124774b4273cb58dd4aa587ae42fefecea32d35eb252f9bf550f1c44c3969e",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT GPT-6 (model visual and article-context review; not independent human, clinical or regulatory validation)",
+  "reviewed_at": "2026-10-22T07:57:09.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
