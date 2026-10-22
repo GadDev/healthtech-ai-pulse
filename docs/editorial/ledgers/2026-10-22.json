@@ -1,0 +1,820 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-22",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "e06894e88b470484725ced5c3167a013725cddda",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-19T07:49:48.000Z",
+    "window_end": "2026-10-22T07:49:48.000Z",
+    "last_completed_cutoff": null,
+    "query_log": [
+      {
+        "query": "Research/evaluation lane: PubMed and Europe PMC discovery for artificial intelligence, machine learning, foundation models and clinical decision support dated 19-22 October 2026; direct PubMed records and Nature Medicine listings",
+        "source": "PubMed, Europe PMC discovery search, Nature Medicine and publisher listings",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "The bounded search interface returned and screened the first 20 surfaced records/listings. Direct PubMed records were inspected for the 15 October OpenEvidence usage study and 16 October Lancet Digital Health commentary. Direct Europe PMC REST access failed in the available browser, so no database hit count or completed pagination is claimed; this access limitation is retained below."
+      },
+      {
+        "query": "Safety/official lane: TGA digital-scribe review and guidance; FDA AI-device updates, FDA-2026-N-7874 docket status and FY2027 guidance priorities; EMA current AI items",
+        "source": "TGA, FDA, Regulations.gov, EMA and MedTech Dive",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "The TGA's 16 October official review outcome and companion digital-scribe guidance were inspected in full and selected as an explicitly late-discovered catch-up. The FDA docket returned HTTP 403; secondary reporting says its comment period closed with more than 500 submissions, while the official FY2027 list confirms planned AI guidance topics but not that docket status. EMA current listings did not surface a completed new AI action in the window."
+      },
+      {
+        "query": "Deployment/operations lane: Fierce Healthcare Health Tech and AI pages plus MedTech Dive AI/policy pages for 19-22 October 2026; follow Epic Connectors and FDA generative-AI policy leads",
+        "source": "Fierce Healthcare and MedTech Dive",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "Two independent specialist outlets were directly inspected. Epic's 21 October Connector announcement remains watch because testing is prospective and developer distribution is planned for March 2027. MedTech Dive's FDA conference report remains watch because the central docket record was inaccessible and a conference timetable is not issued guidance."
+      },
+      {
+        "query": "Biomedical/pharma engineering lane: AI drug-discovery and biomedical model searches across Fierce Biotech, BioPharma Dive, bioRxiv and GitHub for 19-22 October 2026",
+        "source": "Fierce Biotech, BioPharma Dive, bioRxiv and GitHub discovery results",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "The bounded pass screened the first 20 surfaced items. The new Astellas-AI Proteins partnership was rejected as a commercial discovery agreement without an inspected experimental evidence package. The OpenAI-Orchestra Bio acquisition was recognized as the already-recorded 21 October rejection, and no new released version or validated biological result justified a material update."
+      },
+      {
+        "query": "European/local-language lane: site-restricted French HAS and Luxembourg LIH/Agence eSanté queries plus German BfArM query for intelligence artificielle or künstliche Intelligenz in health, 19-22 October 2026",
+        "source": "HAS, BfArM, Luxembourg Institute of Health and Agence eSanté Luxembourg",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "French, German and Luxembourg searches were attempted. A 21 October Luxembourg translational-research event included an AI-in-health visit but no new result, tool release, regulatory action or implementation evidence and was rejected. Other surfaced items were older guidance, events or previously published infrastructure pages."
+      },
+      {
+        "query": "Negative evidence, corrections and watch sweep: no benefit, failed external validation, harm, recall, retraction, bias, drift, hallucination and abandoned deployment terms; 30-day merged watch records; current default branch and canonical 22 October branch/PR identity",
+        "source": "Publisher and regulator searches plus GadDev/healthtech-ai-pulse merged ledgers, stories, issues and all-state branch/PR checks",
+        "accessed_at": "2026-10-22T07:49:48.000Z",
+        "outcome": "No correction or retraction affecting the selected TGA records surfaced. Existing watch records were checked for due dates: only the 21 October FDA docket item required immediate follow-up, and it remains unresolved because the official docket was inaccessible. No finalized 22 October ledger, canonical branch or matching PR existed before ownership."
+      }
+    ],
+    "coverage_gaps": [
+      "No earlier merged daily ledger has a non-null research.completed_at, so no valid completed cutoff exists. This run uses the initial 72-hour window and does not claim catch-up of the older uncovered interval.",
+      "Europe PMC REST access was unavailable in the browsing surface and direct PubMed/Europe PMC pagination was not completed. The first 20 surfaced research records/listings were screened; no exhaustive database coverage is claimed.",
+      "The FDA-2026-N-7874 Regulations.gov record returned HTTP 403. Secondary reporting about closure and submission count is not promoted to an official regulatory-status claim.",
+      "Some specialist, publisher and Financial Times pages were paywalled, robot-blocked or index-only. No inaccessible detail was inferred from a snippet.",
+      "The TGA review concerns 12 deliberately chosen products from 40 responding suppliers after a scan of about 100 suppliers; it is not a prevalence estimate and did not test safety, performance, privacy or detailed compliance.",
+      "The TGA event was published six days before this edition and is presented as late discovery, not news dated 22 October."
+    ],
+    "completed_at": "2026-10-22T07:49:48.000Z"
+  },
+  "candidates": [
+    {
+      "id": "2026-10-22-tga-digital-scribe-review",
+      "decision": "selected",
+      "title": "Australian review finds medical-device functions in eight of 12 digital scribes",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance", "health-operations", "medical-devices"],
+      "entities": ["Therapeutic Goods Administration", "digital scribes"],
+      "event_date": "2026-10-16",
+      "event_date_reason": "The TGA report states that it was published on 16 October 2026; no separate enforcement-decision date is reported.",
+      "source_publication_date": "2026-10-16",
+      "source_date_reason": "Both inspected TGA pages display 16 October 2026.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "The TGA published the outcome of a market review: among 12 named digital-scribe products, eight included functions the regulator considered likely to meet the medical-device definition, two needed more information and two appeared unlikely to be devices on the available information. None of the suppliers had identified its product as a medical device.",
+      "why_now": "This six-day-old official outcome was missed by prior bounded runs and surfaced during today's safety scan. Its product-function boundary and compliance consequence remain materially useful, so it is handled as a clearly labelled catch-up rather than relabelled as today's event.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.tga.gov.au/resources/publication/corporate-reports/digital-scribe-review-outcomes",
+      "sources": [
+        {
+          "id": "tga-review",
+          "url": "https://www.tga.gov.au/resources/publication/corporate-reports/digital-scribe-review-outcomes",
+          "canonical_url": "https://www.tga.gov.au/resources/publication/corporate-reports/digital-scribe-review-outcomes",
+          "publisher": "Therapeutic Goods Administration",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-10-16",
+          "date_reason": "The official record displays Published 16 October 2026.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Australian government regulator issuing its own review outcome"
+        },
+        {
+          "id": "tga-guidance",
+          "url": "https://www.tga.gov.au/products/medical-devices/software-and-artificial-intelligence-ai/overview/types-software-based-medical-devices/digital-scribes",
+          "canonical_url": "https://www.tga.gov.au/products/medical-devices/software-and-artificial-intelligence-ai/overview/types-software-based-medical-devices/digital-scribes",
+          "publisher": "Therapeutic Goods Administration",
+          "role": "supporting",
+          "source_type": "regulatory-guidance",
+          "publication_date": "2026-10-16",
+          "date_reason": "The official guidance displays Last updated 16 October 2026.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Australian government regulator explaining the boundary it applies"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "tga-digital-scribe-market-review-2026-10-16",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": "12 named digital-scribe products selected from 40 supplier responses",
+        "product_version": null,
+        "regulatory_record": "TGA Digital scribe review outcomes, published 2026-10-16"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The reviewed products are digital scribes, many with generative-AI functions that analyze information or generate patient-specific clinical conclusions and recommendations.",
+        "non_ai_exception": null,
+        "reader_consequence": "Health systems and suppliers need to evaluate individual scribe functions and marketing claims against medical-device obligations instead of assuming an administrative label or disclaimer controls regulatory status."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Canonical URLs, TGA identity terms and digital-scribe terms were searched across merged ledgers and stories through contract_ref; no prior HealthTech candidate or story covers this review.",
+        "publication_status": "not-started"
+      },
+      "reason": "Select as a late-discovery regulatory briefing: the central finding is directly inspectable in an official record, has a concrete procurement/compliance consequence and is bounded by the regulator's explicit statement that it did not test safety or performance or make a market-wide estimate.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Official Australian regulatory review outcome with companion guidance",
+        "study_design": "Regulatory environmental scan, voluntary supplier survey and document/function review; not a clinical study or product-performance test",
+        "validation_setting": "Publicly available information, supplier documentation, labelling, marketing material, functionality/intended-purpose descriptions, and information supplied by clinicians and patients",
+        "independent_validation": "The issuing regulator performed the review, but no independent product testing or product-by-product final determination is reported.",
+        "clinical_utility": "not-assessed",
+        "access_level": "official-record-only",
+        "funding": "Australian government regulator; no separate funding declaration appears on the inspected records.",
+        "conflicts_of_interest": "No conflict declaration appears on the inspected pages; suppliers voluntarily provided product information to the regulator.",
+        "corrections_retractions": "No correction, withdrawal or superseding notice was observed on either inspected TGA page at the recorded inspection time.",
+        "contradictory_findings": [],
+        "limitations": [
+          "TGA focused on 12 products rather than every supplier identified in its approximately 100-supplier scan; the sample is not a market prevalence estimate.",
+          "TGA did not test the products, check safety or performance, assess privacy/data protections, or assess detailed compliance requirements.",
+          "The finding is that functions were likely to meet a definition; it is not a disclosed final enforcement decision for each named product.",
+          "Individual product versions and product-level classifications were not reported."
+        ],
+        "applicability": "Applies to products supplied in Australia and to the TGA's function- and intended-purpose-based medical-device boundary. Other jurisdictions may use different legal tests."
+      },
+      "claims": [
+        {
+          "id": "tga-review-finding",
+          "supported_statement": "On 16 October 2026, the TGA reported that eight of 12 reviewed digital-scribe products included functions likely to meet Australia's medical-device definition; two required more information and two appeared unlikely to be devices on the available information, while none of the 12 suppliers had identified its product as a medical device.",
+          "source_ids": ["tga-review", "tga-guidance"],
+          "locators": [
+            "TGA review: What we did, paragraphs reporting 40 responses, 12 named products and the 8/2/2 outcome",
+            "TGA review: What we did not do and What this does not mean",
+            "TGA guidance: When digital scribes are medical devices; Functions to consider; What to do if your digital scribe is a medical device"
+          ],
+          "evidence_scope": "Official regulator's review outcome and regulatory interpretation for Australia; not product performance, patient benefit, prevalence or a final disclosed product-by-product enforcement decision.",
+          "limitations": [
+            "The sample was purposive and limited to 12 products.",
+            "The regulator did not test safety or performance and did not publish product-specific final classifications.",
+            "The exact regulatory consequence depends on intended purpose, functionality and any applicable CDSS exemption."
+          ],
+          "verification": {
+            "status": "not-started",
+            "checked_at": null,
+            "checked_by": null,
+            "supported_scope": "Research extraction from the two inspected official TGA records.",
+            "reason": "Publication-time claim verification follows the research checkpoint."
+          },
+          "type": "regulatory",
+          "regulation": {
+            "authority": "Therapeutic Goods Administration",
+            "jurisdiction": "Australia",
+            "document_id": "Digital scribe review outcomes, published 16 October 2026",
+            "official_source_id": "tga-review",
+            "exact_status": "Published compliance-review outcome and guidance; proportionate compliance activity is planned, but no final product-by-product enforcement action is disclosed.",
+            "product_and_version": "12 named digital-scribe products; individual versions not reported",
+            "intended_use": "Clinical documentation and transcription, with some functions analyzing patient information or generating patient-specific clinical conclusions or recommendations",
+            "population": "Products supplied in Australian healthcare settings; no patient cohort or clinical outcome population was assessed",
+            "decision_date": null,
+            "publication_date": "2026-10-16",
+            "effective_date": null,
+            "unknown_dates_reason": "The record provides a publication date but no discrete enforcement decision or effective date for individual products.",
+            "restrictions": "Function- and intended-purpose-specific; administrative transcription alone may fall outside device regulation, and some qualifying CDSS functions may be exempt from ARTG inclusion while remaining regulated."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 4,
+        "relevance": 4,
+        "material_change": 4,
+        "durability": 4,
+        "weighted_total": 92.5,
+        "rationales": {
+          "significance": "A regulator found a concrete compliance boundary in widely deployed workflow software, but the review did not impose disclosed product-level actions or measure harm.",
+          "claim_support": "The bounded claim and its limitations are stated directly in an inspectable official review and companion guidance.",
+          "relevance": "The finding changes what health-system buyers, deployers and vendors should verify about AI scribe functions and intended purpose.",
+          "material_change": "This is a new regulator market review with an 8/2/2 result and stated follow-up compliance approach, not another general warning.",
+          "durability": "Function-level regulatory classification and procurement checks will remain relevant beyond the news cycle."
+        }
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research selection only; publication verification has not yet been recorded.",
+        "reason": "Selected for downstream verification after the ledger-first checkpoint."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Cleared the 75-point gate with direct official support, a concrete operational consequence and explicit late-discovery/limitation boundaries."
+        }
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-22-fda-genai-docket-follow-up",
+      "decision": "watch",
+      "title": "FDA generative-AI docket closure and guidance timetable need official confirmation",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance", "medical-devices"],
+      "entities": ["US Food and Drug Administration", "Center for Devices and Radiological Health"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "MedTech Dive attributes the conference comments and post-deadline observation to 20 October 2026; the official docket could not be inspected.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "MedTech Dive displays Published Oct. 21, 2026.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "Secondary reporting says the FDA comment period closed and a CDRH official expects draft generative-AI policy in coming months; the official FY2027 guidance list confirms related planned work but not the docket's live status or submission total.",
+      "why_now": "This is the required follow-up to yesterday's overdue watch, but the central official docket record remained inaccessible.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+      "sources": [
+        {
+          "id": "fda-fy2027",
+          "url": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+          "canonical_url": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+          "publisher": "US Food and Drug Administration",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": null,
+          "date_reason": "The inspected HTML did not expose a reliable publication date.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing US regulator"
+        },
+        {
+          "id": "medtech-dive",
+          "url": "https://www.medtechdive.com/news/gen-ai-policy-is-a-white-house-priority-cdrh-digital-health-leader-says/833551/",
+          "canonical_url": "https://www.medtechdive.com/news/gen-ai-policy-is-a-white-house-priority-cdrh-digital-health-leader-says/833551/",
+          "publisher": "MedTech Dive",
+          "role": "supporting",
+          "source_type": "news-report",
+          "publication_date": "2026-10-21",
+          "date_reason": "The article displays Published Oct. 21, 2026.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent conference reporting; not the official docket record"
+        },
+        {
+          "id": "regulations-docket",
+          "url": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+          "canonical_url": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+          "publisher": "Regulations.gov",
+          "role": "context",
+          "source_type": "regulatory-record",
+          "publication_date": null,
+          "date_reason": "Unavailable because the record returned HTTP 403.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Official US rulemaking docket hosting the requested feedback"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-genai-device-docket-2026-n-7874",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA-2026-N-7874"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The docket and planned guidance concern generative-AI-enabled medical devices.",
+        "non_ai_exception": null,
+        "reader_consequence": "Device teams need the official status, resulting policy text and evidence requirements before treating conference comments as a regulatory change."
+      },
+      "deduplication": {
+        "status": "material-update",
+        "previous_candidate_ids": ["2026-10-21-fda-genai-device-docket-status"],
+        "previous_story_ids": [],
+        "material_delta": "Secondary reporting now says the comment period closed and reports a policy timetable, but official docket verification remains blocked.",
+        "archive_coverage": "Linked to the prior day's watch record and checked against merged FDA-related ledgers and stories.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: a secondary report supplies a plausible status update, but the official docket is inaccessible and no draft guidance has issued.",
+      "promote_when": [
+        "Inspect the official docket closure/status and any agency summary or posted submissions.",
+        "Inspect issued draft guidance or another formal FDA policy artifact rather than relying on conference comments."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research watch only.",
+        "reason": "Official central record unavailable."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Official docket status and policy artifact remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-epic-ai-connectors-preview",
+      "decision": "watch",
+      "title": "Epic previews connectors that let AI agents reach third-party applications",
+      "desk": "health-systems",
+      "topics": ["interoperability", "health-operations", "implementation", "governance"],
+      "entities": ["Epic"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "Fierce Healthcare reports the announcement on 21 October 2026.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "The inspected article displays Oct 21, 2026.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "Epic announced a Connector capability intended to let its AI assistants access and act through third-party applications, with partner testing planned by year-end and developer distribution in March 2027.",
+      "why_now": "The announcement falls inside the search window, but current availability and measured operational effects are not established.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+      "sources": [
+        {
+          "id": "fierce-epic",
+          "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+          "canonical_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+          "publisher": "Fierce Healthcare",
+          "role": "primary",
+          "source_type": "news-report",
+          "publication_date": "2026-10-21",
+          "date_reason": "The article displays Oct 21, 2026.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent reporting built primarily on Epic executive statements and announcement material"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "epic-ai-connectors-announcement-2026-10-21",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": "Epic Connectors preview; no shipped version reported",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The announced connectors extend Epic's named AI agents into third-party application workflows.",
+        "non_ai_exception": null,
+        "reader_consequence": "Health-system teams would need to assess permissions, auditability, rollback and human review before enabling cross-application agent actions."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "No canonical URL or Epic Connectors identity match found in merged HealthTech ledgers/stories through contract_ref.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: the capability is an announced preview with prospective testing/distribution and vendor-stated guardrails, not a released artifact or measured deployment.",
+      "promote_when": [
+        "Inspect a versioned Epic artifact or technical documentation describing permissions, audit logs and rollback behavior.",
+        "Verify an actual health-system deployment with measured operational outcomes, adoption and harms."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research watch only.",
+        "reason": "Versioned release and implementation evidence are not yet available."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Announced future availability and vendor assertions do not yet clear the availability or workflow-evidence gate."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-openevidence-clinician-use-study",
+      "decision": "watch",
+      "title": "OpenEvidence usage study measures adoption, not clinical value",
+      "desk": "clinical-ai",
+      "topics": ["decision-support", "implementation", "evaluation"],
+      "entities": ["OpenEvidence", "JAMA"],
+      "event_date": "2026-10-15",
+      "event_date_reason": "PubMed lists the JAMA article online on 15 October 2026.",
+      "source_publication_date": "2026-10-15",
+      "source_date_reason": "PubMed gives 2026 Oct 15 and DOI 10.1001/jama.2026.21868.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "A sponsor-involved cross-sectional JAMA study reported how verified US clinicians used OpenEvidence across 271 million queries through June 2026, including specialty and query-purpose distributions.",
+      "why_now": "The study fell outside the 72-hour window but surfaced during today's research and negative-evidence pass after renewed reporting attention to the platform; it is retained as late-discovery watch rather than treated as today's news.",
+      "late_discovery": true,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+      "sources": [
+        {
+          "id": "pubmed-openevidence",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+          "publisher": "PubMed / JAMA",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research-abstract",
+          "publication_date": "2026-10-15",
+          "date_reason": "PubMed lists 2026 Oct 15.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Several authors were OpenEvidence employees; OpenEvidence provided data and contributed to analysis."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "openevidence-clinician-use-jama-2026-21868",
+        "doi": "10.1001/jama.2026.21868",
+        "pmid": "42879271",
+        "preprint": null,
+        "trial": null,
+        "cohort": "OpenEvidence verified clinician accounts and stratified sample of 38.8 million queries, 2024-01-01 to 2026-06-30",
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Study of clinician use of an AI-enabled clinical information platform.",
+        "non_ai_exception": null,
+        "reader_consequence": "The usage distribution may inform evaluation priorities, but it cannot establish accuracy, workflow benefit or patient outcomes."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "DOI, PMID and platform name checked against merged ledgers and stories through contract_ref; no prior matching record found.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: abstract-level evidence supports a bounded usage claim, but the full methods are embargoed until 2027 and sponsor involvement, query-classification validity and absence of clinical utility outcomes require fuller appraisal.",
+      "promote_when": [
+        "Inspect full methods and supplement, including account deduplication, sampling weights, query-classifier validation and missingness.",
+        "Keep adoption/use patterns separate from accuracy, workflow benefit and patient outcomes, and assess independent contradictory evidence."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Abstract-level research watch only.",
+        "reason": "Full methods and clinical-utility evidence remain unavailable."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "High-volume usage data are relevant but do not establish clinical usefulness or safety, and full methods were unavailable."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-22-astellas-ai-proteins-deal",
+      "decision": "rejected",
+      "title": "Astellas and AI Proteins announce computational-discovery agreement",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "preclinical-evidence"],
+      "entities": ["Astellas Pharma", "AI Proteins"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "Fierce Biotech reports the agreement on 21 October 2026.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "The inspected article displays Oct 21, 2026.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "The companies announced a discovery partnership and potential milestone payments around computationally designed miniproteins.",
+      "why_now": "The commercial agreement appeared inside the search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fiercebiotech.com/biotech/astellas-links-ai-proteins-400m-computational-discovery-deal",
+      "sources": [
+        {
+          "id": "fierce-astellas",
+          "url": "https://www.fiercebiotech.com/biotech/astellas-links-ai-proteins-400m-computational-discovery-deal",
+          "canonical_url": "https://www.fiercebiotech.com/biotech/astellas-links-ai-proteins-400m-computational-discovery-deal",
+          "publisher": "Fierce Biotech",
+          "role": "primary",
+          "source_type": "news-report",
+          "publication_date": "2026-10-21",
+          "date_reason": "The article displays Oct 21, 2026.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent reporting based on company deal announcement"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "astellas-ai-proteins-deal-2026-10-21",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Computational design is central to the announced discovery work.",
+        "non_ai_exception": null,
+        "reader_consequence": "No local evaluation consequence is supportable until a named target, candidate or experimental result is disclosed."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Company/deal identity checked against merged HealthTech history through contract_ref.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: a funding/deal announcement without an inspected target, candidate, biological validation, comparator or released artifact is not a demonstrated drug-development advance.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Hard gate failed before publication verification."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Commercial agreement without verifiable experimental progress."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-lih-ai-health-research-day",
+      "decision": "rejected",
+      "title": "Luxembourg translational-research day includes an AI-in-health visit",
+      "desk": "biomedical-foundations",
+      "topics": ["research-tools"],
+      "entities": ["Luxembourg Institute of Health", "Centre Hospitalier de Luxembourg"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "The official event page lists 21 October 2026.",
+      "source_publication_date": null,
+      "source_date_reason": "The event page exposes the event date but no reliable page-publication date.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "An in-person event offered six places for a visit on artificial intelligence applied to health.",
+      "why_now": "The event surfaced in the required Luxembourg/French-language lane.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+      "sources": [
+        {
+          "id": "lih-event",
+          "url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+          "canonical_url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+          "publisher": "Luxembourg Institute of Health",
+          "role": "primary",
+          "source_type": "institutional-event-page",
+          "publication_date": null,
+          "date_reason": "No reliable publication date displayed.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Co-organizer of the event"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "lih-chl-research-day-ai-visit-2026-10-21",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "The programme names an AI-in-health research visit.",
+        "non_ai_exception": null,
+        "reader_consequence": "No result, artifact, evaluation, adoption change or policy action was reported."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Event identity checked against merged history.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: a scheduled visit/event is not a substantive health-AI development.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Scope/material-change gate failed."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Event listing without a development or evidence package."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-clinical-agent-task-commentary",
+      "decision": "rejected",
+      "title": "Lancet Digital Health commentary urges keeping AI agents within clinical tasks",
+      "desk": "safety-policy",
+      "topics": ["governance", "safety"],
+      "entities": ["The Lancet Digital Health"],
+      "event_date": "2026-10-16",
+      "event_date_reason": "PubMed lists 16 October 2026.",
+      "source_publication_date": "2026-10-16",
+      "source_date_reason": "PubMed lists 2026 Oct 16.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "A commentary was published on constraining clinical AI agents to the intended task.",
+      "why_now": "It surfaced during the research/negative-evidence scan outside the 72-hour window.",
+      "late_discovery": true,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42888106/",
+      "sources": [
+        {
+          "id": "pubmed-commentary",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42888106/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42888106/",
+          "publisher": "PubMed / The Lancet Digital Health",
+          "role": "primary",
+          "source_type": "commentary",
+          "publication_date": "2026-10-16",
+          "date_reason": "PubMed lists 2026 Oct 16.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Authors declare no competing interests in the PubMed record"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "lancet-digital-health-agent-task-commentary-2026",
+        "doi": "10.1016/j.landig.2026.101123",
+        "pmid": "42888106",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Clinical AI-agent governance commentary.",
+        "non_ai_exception": null,
+        "reader_consequence": "The topic is relevant but the accessible record exposes no new empirical result or operational requirement."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "DOI and PMID checked against merged history.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: commentary with no abstract or inspected new empirical evidence does not clear the material-change gate.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Material-change/evidence gate failed."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "No accessible new empirical contribution."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-openai-orchestra-bio-repeat",
+      "decision": "rejected",
+      "title": "OpenAI-Orchestra Bio acquisition has no new evidence delta",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "research-tools"],
+      "entities": ["OpenAI", "Orchestra Bio"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "The announcement was dated 20 October 2026.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "The official announcement is dated 20 October 2026.",
+      "discovered_at": "2026-10-22T07:49:48.000Z",
+      "what_changed": "No new version, access artifact, validation or measured workflow result was found after the acquisition announcement recorded yesterday.",
+      "why_now": "The item recurred in the overlapping biomedical/pharma search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+      "sources": [
+        {
+          "id": "openai-repeat",
+          "url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+          "canonical_url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+          "publisher": "OpenAI",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Official announcement date.",
+          "inspected_at": "2026-10-22T07:49:48.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Acquirer and product sponsor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "openai-orchestra-bio-acquisition-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Agentic AI for biopharma research workflows.",
+        "non_ai_exception": null,
+        "reader_consequence": "No new evaluation consequence beyond yesterday's rejection."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": ["2026-10-21-openai-orchestra-bio-acquisition"],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Exact event key and canonical URL match the merged 21 October exclusion.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as a repeat without material evidence delta.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Duplicate without material delta."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-22T07:49:48.000Z",
+          "reason": "Repeat of the prior day's rejected acquisition announcement."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "One late-discovery regulatory candidate cleared research selection and awaits publication verification and mandatory illustration review. Three records remain watch and four are rejected.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-22T074438Z-root",
+      "started_at": "2026-10-22T07:44:38.000Z",
+      "completed_at": null,
+      "phases": [
+        "contracts-read",
+        "bounded-discovery-complete",
+        "decisions-recorded",
+        "ownership-acquired",
+        "research-checkpoint"
+      ],
+      "outcome": "in-progress"
+    }
+  ],
+  "active_run": {
+    "owner_token": "healthtech-2026-10-22T074438Z-root",
+    "acquired_at": "2026-10-22T07:50:49.000Z",
+    "heartbeat_at": "2026-10-22T07:50:49.000Z",
+    "expires_at": "2026-10-22T09:50:49.000Z"
+  },
+  "human_overrides": []
+}
