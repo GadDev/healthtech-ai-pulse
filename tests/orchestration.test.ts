@@ -298,6 +298,7 @@ test('controlled end-to-end fixture: ledger → reviewed image → issue → dra
     'src/content/stories',
     'public/images/stories',
     'docs/editorial/illustrations/reviews',
+    'docs/editorial/illustrations/briefs',
     'docs',
   ]) {
     mkdirSync(join(root, directory), { recursive: true });
@@ -306,9 +307,20 @@ test('controlled end-to-end fixture: ledger → reviewed image → issue → dra
   // No production news, original clinical images, external publication or real
   // reviewer is involved. This deliberately uses the synthetic fixture only.
   const policy = 'Synthetic editorial policy, not medical guidance.\\n';
-  const image = Buffer.from('RIFF0000WEBP');
+  const image = Buffer.from(
+    'UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoQABAAAUAmJaQAA3AA/vz0AAA=',
+    'base64',
+  );
   const source = `---\\n${stringify(story)}---\\nSynthetic fixture only.\\n`;
-  const brief = JSON.stringify({ story_id: id, visual_idea: 'Synthetic fixture image' });
+  const brief = JSON.stringify({
+    story_id: id,
+    verified_context: 'Synthetic context, no medical claim.',
+    visual_idea: 'Synthetic fixture image',
+    placement: 'article-hero',
+    crop: 'wide',
+  });
+  const briefPath = `docs/editorial/illustrations/briefs/${id}.json`;
+  writeFileSync(join(root, briefPath), brief);
   const identity = buildGenerationIdentity({
     story_id: id,
     story_source_sha256: sha256(source),
@@ -319,6 +331,7 @@ test('controlled end-to-end fixture: ledger → reviewed image → issue → dra
   });
   const review = {
     ...identity,
+    brief_path: briefPath,
     asset_sha256: sha256(image),
     crop: 'wide',
     reviewed_by: 'Synthetic fixture, not independent approval',

@@ -37,6 +37,7 @@ function setup(t: TestContext, mode = 'generated') {
   for (const dir of [
     'src/content/stories',
     'docs/editorial/illustrations/reviews',
+    'docs/editorial/illustrations/briefs',
     'public/images/stories',
   ])
     mkdirSync(join(root, dir), { recursive: true });
@@ -87,10 +88,16 @@ function persist(f: ReturnType<typeof setup>) {
   const decision = resolveIllustrationGeneration(f.root, f.options);
   if (!('expected_identity' in decision)) throw new Error('Expected generation identity');
   const identity = decision.expected_identity;
-  // Isolated RIFF/WEBP container-header fixture; not generated or published artwork.
-  const image = Buffer.from('RIFF0000WEBP');
+  // Decodable synthetic white 16px WebP; not generated or published artwork.
+  const image = Buffer.from(
+    'UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoQABAAAUAmJaQAA3AA/vz0AAA=',
+    'base64',
+  );
+  const briefPath = `docs/editorial/illustrations/briefs/${f.id}.json`;
+  writeFileSync(join(f.root, briefPath), readFileSync(f.briefPath));
   const review = {
     ...identity,
+    brief_path: briefPath,
     asset_sha256: sha256(image),
     crop: 'wide',
     reviewed_by: 'Synthetic fixture, not approval',
@@ -380,4 +387,25 @@ test('persisted briefs bind reference bytes in both decision and batch validatio
     /incomplete WebP/,
   );
   assert.throws(() => resolveIllustrationGeneration(f.root, f.options), /incomplete WebP/);
+});
+
+test('new review cannot bypass reference validation by omitting the persisted brief', (t) => {
+  const f = setup(t);
+  const saved = persist(f);
+  const legacyShape = { ...saved.review };
+  Reflect.deleteProperty(legacyShape, 'brief_path');
+  writeFileSync(saved.reviewPath, JSON.stringify(legacyShape));
+  assert.throws(
+    () =>
+      validateIllustration(
+        f.root,
+        { id: f.id, data: storySchema.parse(f.story) },
+        Buffer.from(f.source),
+      ),
+    /requires a persisted brief/,
+  );
+  assert.throws(
+    () => resolveIllustrationGeneration(f.root, f.options),
+    /requires a persisted brief/,
+  );
 });

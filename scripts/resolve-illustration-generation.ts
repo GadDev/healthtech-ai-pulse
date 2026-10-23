@@ -6,6 +6,7 @@ import {
   mandatoryImageEditorialDate,
 } from '../src/lib/editorial-schema.ts';
 import { markdown } from './lib/content.ts';
+import { validateIllustration } from './lib/editorial.ts';
 import { readIllustrationBrief } from './lib/illustration-brief.ts';
 import {
   buildGenerationIdentity,
@@ -64,10 +65,9 @@ export function resolveIllustrationGeneration(root: string, options: GenerationO
   const asset = readFileSync(assetPath);
   if (asset.subarray(0, 4).toString() !== 'RIFF' || asset.subarray(8, 12).toString() !== 'WEBP')
     throw new Error('Existing asset is not a WebP container.');
-  if (review.brief_path && (asset.length < 20 || asset.readUInt32LE(4) + 8 !== asset.length))
-    throw new Error('Existing asset is an incomplete WebP container.');
   if (sha256(asset) !== review.asset_sha256)
     return { ...base, decision: 'GENERATE', reason: 'asset-bytes-changed' };
+  validateIllustration(root, { id: id!, data: story }, source);
   return {
     ...base,
     decision: 'REUSE',

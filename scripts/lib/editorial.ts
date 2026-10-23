@@ -209,6 +209,8 @@ export function validateIllustration(root: string, story: Story, bytes: Buffer) 
     historicalIllustrationReviews.get(story.id) === digest(reviewBytes);
   if (review.policy_sha256 !== currentPolicySha256 && !unchangedHistoricalReview)
     throw new Error(`${story.id}: illustration policy changed`);
+  if (!review.brief_path && !unchangedHistoricalReview)
+    throw new Error(`${story.id}: new illustration review requires a persisted brief`);
   if (review.brief_path) {
     const { bytes: briefBytes, brief } = readIllustrationBrief(root, review.brief_path, story.id);
     if (digest(briefBytes) !== review.brief_sha256 || brief.crop !== review.crop)
