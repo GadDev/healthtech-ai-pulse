@@ -1,6 +1,6 @@
 ---
-title: FDA shows how medical AI updates could be checked before release
-description: Two fictional FDA examples show how hospitals and manufacturers might validate changing AI devices. They are not a new rule or product approval.
+title: FDA publishes fictional examples of how AI device updates might be checked
+description: Two fictional FDA examples illustrate how hospitals and manufacturers might validate changing AI devices. They are not a new rule or product approval.
 date: 2026-10-21
 draft: false
 category: safety-policy

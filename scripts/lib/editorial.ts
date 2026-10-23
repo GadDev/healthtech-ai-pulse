@@ -26,9 +26,9 @@ const historicalReviewedImages = new Map([
   [
     '2026-10-19-oncology-ai-ehr-handoff',
     {
-      source: '3c767335e4205b9af9f8901ea1b0b5bfa555d2ffec80f59bde5fc44f24f52460',
+      source: 'ea530ee6674f0c4cf553ab423974e575de20d4b33d5f2bee61f1525523527406',
       asset: '45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499',
-      generation: '6b91f4d892971c59dc573bf8342a89df0fc315ad40c79debecba0abfa7577b3a',
+      generation: '55c6fd1b758d6b1230a0337222d89290cb665e4cfaf2fd38bc4f157602315b06',
     },
   ],
   [

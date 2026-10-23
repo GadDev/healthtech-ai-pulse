@@ -46,7 +46,7 @@ npm run dev
 
 Open <http://localhost:4321>. If Node 24 is already installed without `nvm`, skip the two `nvm` commands.
 
-Local development requires no cloud credentials. Leave `SITE_URL` unset locally: the site omits canonical tags and signals **noindex**. For a production build, set `SITE_URL` to the public HTTPS origin (see [`.env.example`](.env.example) and [deployment guidance](docs/DEPLOYMENT.md)).
+Local development requires no cloud credentials. Leave `SITE_URL` unset locally: the site omits canonical tags and signals **noindex**. For a production build, set `SITE_URL` to the public HTTPS origin (see [deployment guidance](docs/DEPLOYMENT.md) for required environment variables).
 
 ## Quality checks
 
@@ -91,6 +91,7 @@ See [deployment and preview operations](docs/DEPLOYMENT.md) for configuration, i
 - [Editorial policy](docs/EDITORIAL.md) — evidence standards, selection and corrections.
 - [Content model](docs/CONTENT_MODEL.md) and [daily issue contract](docs/DAILY_ISSUE.md) — article, edition and ledger rules.
 - [Editorial orchestrator](docs/editorial/ORCHESTRATOR.md) — research-to-review workflow.
+- [Bounded discovery plan](docs/editorial/DISCOVERY_V1.md) — source lanes, queries and retrieval limits.
 - [Visual constitution](docs/editorial/VISUAL_CONSTITUTION_V1.md) — image standards and constraints.
 - [Technical decisions](docs/TECHSTACK.md) — architecture and operational boundaries.
 - [Security policy](SECURITY.md) — responsible vulnerability reporting.

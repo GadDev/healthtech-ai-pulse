@@ -1,5 +1,5 @@
 ---
-title: Oncology AI pilot exposes a missing-data trap at the EHR handoff
+title: 'Oncology AI summary changed unknown allergies to "no known allergies" in two cases'
 description: A Dutch consultation-preparation study reports perceived workload gains alongside an integration error that turned unknown allergy information into a negative statement.
 date: 2026-10-19
 draft: false

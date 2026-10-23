@@ -1,5 +1,5 @@
 ---
-title: Clinical AI language evidence remains uneven across a growing literature
+title: Three-quarters of non-English medical AI evaluations lack an English-language comparison, review finds
 description: A scoping review maps language-specific evaluation gaps; its proposed reporting
   checklist still needs validation.
 date: 2026-10-12

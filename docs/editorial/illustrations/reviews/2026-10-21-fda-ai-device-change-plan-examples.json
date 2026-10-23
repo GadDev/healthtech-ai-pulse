@@ -1,10 +1,10 @@
 {
   "version": "healthtech-1.0",
   "story_id": "2026-10-21-fda-ai-device-change-plan-examples",
-  "story_source_sha256": "2c0008b0df991cf93754778be5dc7794b3535eda7747b425345c4176da8c1d9d",
+  "story_source_sha256": "fc146dcb438355cd91bdaa8490a518a3c2fa2271225e4892d31d2fd5c10b0ff9",
   "brief_sha256": "1d8cb34a7b92464825084259061b766b0314f283b4ca2f4d7c2872e406b6288f",
   "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
-  "generation_key": "f6150ff2273f97c073e2a7fb2d9bd90b6ea1810f98531e02e10c62d6b1e7b941",
+  "generation_key": "3c5fbc69b689a86f973d8a06a93e9be1b57f72b712890cb36ad4386372377369",
   "candidate_count": 2,
   "generator": "image_gen.text2im",
   "model_snapshot": null,
