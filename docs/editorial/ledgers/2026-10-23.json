@@ -133,7 +133,7 @@
       "depth": "specialist",
       "evidence": {
         "publication_status": "Peer-reviewed open-access Nature Biotechnology version of record published 21 October 2026; earlier preprint posted 23 June 2026.",
-        "study_design": "Computational method development and evaluation on single-cell RNA/chromatin-accessibility data, followed by targeted genetic perturbation experiments in mice.",
+        "study_design": "Computational method development and evaluation on single-cell RNA and chromatin-accessibility data, followed by targeted genetic perturbation experiments in mice.",
         "validation_setting": "Wild-type and mutant murine germinal-center B cells; new compound-heterozygous mouse models tested Ctcf, Bcl6 and Stat3 rescue nominations, with single-cell multiome profiling for the Ctcf double mutant.",
         "independent_validation": "No independent replication was found. The biological experiments were performed by the same author group, although the Bcl6 and Stat3 mouse models were newly generated after model nomination.",
         "clinical_utility": "not-assessed",
@@ -441,7 +441,10 @@
       },
       "deduplication": {
         "status": "material-update",
-        "previous_candidate_ids": ["2026-10-21-fda-genai-device-docket-status", "2026-10-22-fda-genai-docket-follow-up"],
+        "previous_candidate_ids": [
+          "2026-10-21-fda-genai-device-docket-status",
+          "2026-10-22-fda-genai-docket-follow-up"
+        ],
         "previous_story_ids": [],
         "material_delta": "The official docket and filed attachments are now discoverable, resolving the prior access block; no FDA draft guidance or formal policy action has issued.",
         "archive_coverage": "Linked to the two prior watch records and checked against merged FDA-related stories and ledgers.",
@@ -699,21 +702,61 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "One candidate cleared the research gate and awaits publication preparation and mandatory illustration review.",
-    "story_ids": [],
+    "mode": "publication",
+    "reason": "One biomedical-model candidate cleared the 75-point gate, publication-time source verification and mandatory generated-image review. Two records remain watch and three are rejected.",
+    "story_ids": ["2026-10-23-dynavelo-b-cell-rescue-predictions"],
     "withheld_selected": [],
     "must_know_story_id": null,
-    "issue_path": null,
-    "checks": []
+    "issue_path": "src/content/pulse/2026-10-23.md",
+    "checks": [
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-23.json",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 7a0e0302ca5603db48bf89d2a095d4d5ee53dec2",
+        "execution": "Node 24.19.0 local execution after final story, issue, ledger, brief, review and image assembly.",
+        "evidence": "Editorial checks passed: 13 ledgers and 8 stories."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-23.json",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 7a0e0302ca5603db48bf89d2a095d4d5ee53dec2",
+        "execution": "Node 24.19.0 local execution after exact story, brief, review and WebP identities were finalized.",
+        "evidence": "Illustration and publication mappings passed: 13 ledgers and 8 stories; the asset matched its source, brief, policy and reviewed hash."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "local prospective tree based on checkpoint 7a0e0302ca5603db48bf89d2a095d4d5ee53dec2",
+        "execution": "Node 24.19.0 local execution after formatting the final batch files.",
+        "evidence": "Lint, formatting, scripts and tests TypeScript, schema, content, editorial, illustration, 136 unit tests and production build passed; Astro built 28 pages and Pagefind indexed 9 pages."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "local prospective tree based on checkpoint 7a0e0302ca5603db48bf89d2a095d4d5ee53dec2",
+        "execution": "Local Playwright execution stopped before browser assertions because the configured Astro preview process exited immediately after reporting its managed-server start.",
+        "evidence": "Playwright reported 'Process from config.webServer exited early'; no test assertion ran. Exact PR-head Browser smoke and accessibility CI remains required and authoritative."
+      }
+    ]
   },
   "attempts": [
     {
       "run_id": "healthtech-2026-10-23T073434Z-root",
       "started_at": "2026-10-23T07:34:34.000Z",
       "completed_at": null,
-      "phases": ["contracts-read", "bounded-discovery-complete", "decisions-recorded", "ownership-acquired", "research-checkpoint"],
-      "outcome": "research-checkpoint-awaiting-publication-preparation"
+      "phases": [
+        "contracts-read",
+        "bounded-discovery-complete",
+        "decisions-recorded",
+        "ownership-acquired",
+        "research-checkpoint",
+        "claim-verification-complete",
+        "story-drafted",
+        "illustration-reviewed",
+        "issue-created",
+        "local-preflight-complete"
+      ],
+      "outcome": "publication-prepared-awaiting-commit-and-draft-pr"
     }
   ],
   "active_run": {

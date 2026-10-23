@@ -1,0 +1,18 @@
+{
+  "version": "healthtech-1.0",
+  "story_id": "2026-10-23-dynavelo-b-cell-rescue-predictions",
+  "story_source_sha256": "c40d25fa972ca53c9344c1d17843319dd0f513a12de526f7bc180568423d27bf",
+  "brief_sha256": "5e2af9f387566c5075bfd524a687c858c2aa57dc110fc56bb2506540ec84a65f",
+  "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
+  "generation_key": "a4899411559f507868cb24284b54d2545d8f3f1364905fcb4df44fdeaca3077b",
+  "candidate_count": 1,
+  "generator": "image_gen.text2im",
+  "model_snapshot": null,
+  "asset_sha256": "c67661ed1800679aedcebc90e2100f2098091ff0ecafa88e8a80ce93a4cbef00",
+  "crop": "wide",
+  "reviewed_by": "ChatGPT GPT-6 (model visual and article-context review; not independent human or biological validation)",
+  "reviewed_at": "2026-10-23T07:50:13.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
