@@ -45,9 +45,6 @@ const [lead, ...remaining] = stories;
               height="1024"
               fetchpriority="high"
             />
-            <figcaption>
-              Illustrative image · not the reported study site or its participants
-            </figcaption>
           </figure>
         )}
       </article>
@@ -88,7 +85,7 @@ const [lead, ...remaining] = stories;
       <div class="section-rule">
         <h2 id="more-stories">More coverage</h2>
       </div>
-      <StoryList stories={remaining} />
+      <StoryList stories={remaining} showImage />
     </section>
   )}
 </BaseLayout>

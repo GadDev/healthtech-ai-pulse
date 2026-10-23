@@ -47,10 +47,6 @@ const { Content } = await render(story);
           height={story.data.illustration.height ?? 1024}
           fetchpriority="high"
         />
-        <figcaption>
-          {story.data.illustration.caption ??
-            'Illustrative image · not the reported study site or its participants'}
-        </figcaption>
       </figure>
     )}
     <nav class="article-jumps" aria-label="In this article">
