@@ -45,89 +45,106 @@
   font-size: 0.85rem;
 }
 .desk-nav {
+  position: relative;
+  z-index: 10;
   border-block: 1px solid var(--line);
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--teal) transparent;
 }
 .desk-nav__inner {
-  width: max-content;
-  max-width: none;
-  min-width: min(100%, 1200px);
+  max-width: 1200px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0.25rem 0.75rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.7rem, 1.5vw, 1.5rem);
+  gap: 0 0.5rem;
 }
-.desk-nav a {
+.desk-nav__inner > a,
+.desk-nav__summary {
   color: var(--teal-dark);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   white-space: nowrap;
-  padding: 0.8rem 0;
+  padding: 0.65rem 0.5rem;
   font-size: 0.79rem;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
-.desk-nav a:hover,
-.desk-nav a[aria-current] {
+.desk-nav__inner > a:hover,
+.desk-nav__inner > a[aria-current],
+.desk-nav__summary:hover,
+.desk-nav__summary[data-active],
+.desk-nav__categories[open] > .desk-nav__summary {
   border-color: var(--teal-dark);
 }
 .desk-nav__categories {
-  display: inline-block;
+  position: relative;
 }
 .desk-nav__summary {
-  color: var(--teal-dark);
-  display: inline-block;
-  white-space: nowrap;
-  padding: 0.8rem 0;
-  font-size: 0.79rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
+  gap: 0.4rem;
   cursor: pointer;
   list-style: none;
 }
 .desk-nav__summary::-webkit-details-marker {
   display: none;
 }
-.desk-nav__summary:hover,
-.desk-nav__summary[aria-current] {
-  border-color: var(--teal-dark);
+.desk-nav__chevron {
+  flex-shrink: 0;
+}
+.desk-nav__categories[open] .desk-nav__chevron {
+  transform: rotate(180deg);
 }
 .desk-nav__menu {
-  display: none;
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  z-index: 1;
+  width: 19rem;
+  max-width: calc(100vw - 2rem);
+  max-height: min(26rem, 65vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   margin: 0;
-  padding: 0.4rem 0;
+  padding: 0.5rem;
   list-style: none;
   background: var(--canvas);
   border: 1px solid var(--line);
-  border-top: none;
-  border-radius: 0 0 0.5rem 0.5rem;
-  min-width: 14rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-details[open] .desk-nav__menu {
-  display: block;
+  border-top: 2px solid var(--teal-dark);
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0 12px 24px rgb(52 79 81 / 12%);
 }
 .desk-nav__menu li {
   margin: 0;
 }
+.desk-nav__menu .desk-nav__overview {
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
 .desk-nav__menu a {
-  display: block;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.79rem;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  border-inline-start: 3px solid transparent;
+  font-size: 0.85rem;
+  line-height: 1.4;
   font-weight: 600;
   color: var(--teal-dark);
   text-decoration: none;
-  white-space: nowrap;
 }
 .desk-nav__menu a:hover,
+.desk-nav__menu a:focus-visible,
 .desk-nav__menu a[aria-current] {
   background: var(--surface);
-  color: var(--teal-dark);
+}
+.desk-nav__menu a[aria-current] {
+  border-inline-start-color: var(--teal-dark);
+}
+.desk-nav__menu a:focus-visible {
+  outline-offset: -3px;
 }
 .publication-main {
   width: min(1200px, calc(100% - 2.5rem));
@@ -550,9 +567,6 @@ details[open] .desk-nav__menu {
   font-size: 0.8rem;
 }
 @media (max-width: 850px) {
-  .desk-nav__inner {
-    justify-content: flex-start;
-  }
   .article-reading {
     grid-template-columns: minmax(0, 1fr) minmax(200px, 250px);
     gap: 1.5rem;
@@ -576,11 +590,13 @@ details[open] .desk-nav__menu {
     font-size: 0.67rem;
     line-height: 1.3;
   }
-  .desk-nav__inner {
-    gap: 1rem;
+  .desk-nav__categories {
+    position: static;
   }
-  .desk-nav a {
-    padding: 0.7rem 0;
+  .desk-nav__menu {
+    inset-inline: 1rem;
+    width: auto;
+    max-width: none;
   }
   .publication-main {
     width: min(100% - 2rem, 1200px);
