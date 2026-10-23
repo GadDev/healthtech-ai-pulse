@@ -75,6 +75,60 @@
 .desk-nav a[aria-current] {
   border-color: var(--teal-dark);
 }
+.desk-nav__categories {
+  display: inline-block;
+}
+.desk-nav__summary {
+  color: var(--teal-dark);
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.8rem 0;
+  font-size: 0.79rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  list-style: none;
+}
+.desk-nav__summary::-webkit-details-marker {
+  display: none;
+}
+.desk-nav__summary:hover,
+.desk-nav__summary[aria-current] {
+  border-color: var(--teal-dark);
+}
+.desk-nav__menu {
+  display: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  min-width: 14rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+details[open] .desk-nav__menu {
+  display: block;
+}
+.desk-nav__menu li {
+  margin: 0;
+}
+.desk-nav__menu a {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.desk-nav__menu a:hover,
+.desk-nav__menu a[aria-current] {
+  background: var(--surface);
+  color: var(--teal-dark);
+}
 .publication-main {
   width: min(1200px, calc(100% - 2.5rem));
   min-height: 50vh;

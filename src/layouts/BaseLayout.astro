@@ -1,4 +1,5 @@
 ---
+import { desks, deskKeys } from '../lib/categories';
 import '../styles/global.css';
 import '../styles/publication.css';
 interface Props {
@@ -51,9 +52,26 @@ const path = Astro.url.pathname;
           <a href="/" aria-current={path === '/' ? 'page' : undefined}>
             Latest
           </a>
-          <a href="/categories/" aria-current={path === '/categories/' ? 'page' : undefined}>
-            Desks
-          </a>
+          <details class="desk-nav__categories">
+            <summary
+              class="desk-nav__summary"
+              aria-current={path === '/categories/' ? 'page' : undefined}
+            >
+              Categories
+            </summary>
+            <ul class="desk-nav__menu">
+              {deskKeys.map((key) => (
+                <li>
+                  <a
+                    href={`/desks/${key}/`}
+                    aria-current={path === `/desks/${key}/` ? 'page' : undefined}
+                  >
+                    {desks[key].title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
           <a href="/pulse/" aria-current={path.startsWith('/pulse/') ? 'page' : undefined}>
             Editions
           </a>
