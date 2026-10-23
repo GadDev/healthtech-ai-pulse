@@ -51,7 +51,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-19-oncology-ai-ehr-handoff.webp
-  alt: An illustrative clinical workspace with a blank paper form, keyboard and a person pointing to an empty field.
+  width: 1536
+  height: 1024
+  alt: Two blank translucent record leaves overlap, with an open aperture above a solid patch at their seam.
+  caption: An open aperture becoming a solid patch represents uncertainty lost during a record handoff; it is not an actual medical record, allergy finding or measured error rate.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-19-oncology-ai-ehr-handoff.json
 ---
 

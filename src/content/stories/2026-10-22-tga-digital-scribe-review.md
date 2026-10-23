@@ -46,8 +46,8 @@ illustration:
   image: /images/stories/2026-10-22-tga-digital-scribe-review.webp
   width: 1536
   height: 1024
-  alt: A clinician pauses beside an unbranded computer and a small tabletop microphone in a consultation room.
-  caption: Staged editorial illustration of a clinician reviewing digital documentation—not a reviewed product, regulatory test or patient outcome.
+  alt: A curved speech ribbon folds beside a blank record leaf, separated from a profile contour by a narrow seam.
+  caption: Speech, record and separate clinical-profile forms evoke the boundary between transcription and added clinical inference; they do not classify a product or establish its safety.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-22-tga-digital-scribe-review.json
 ---
 

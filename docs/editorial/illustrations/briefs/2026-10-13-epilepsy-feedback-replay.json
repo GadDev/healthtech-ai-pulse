@@ -1,8 +1,46 @@
 {
   "story_id": "2026-10-13-epilepsy-feedback-replay",
-  "verified_context": "A 13-patient prospective inpatient interface pilot measured the feasibility of patient feedback; reported false-alarm improvement came from offline EEG-detector replay. It did not demonstrate seizure prevention, safety of autonomous deployment or a live outpatient benefit.",
-  "visual_idea": "Staged adult with EEG cap and handheld button in a neurological monitoring setting; another person and generic monitoring screens in the background convey feedback and human oversight.",
+  "verified_context": "A small inpatient epilepsy pilot tested patient interaction with a feedback interface. Reported detector adaptation results came from offline replay rather than demonstrated live adaptive treatment or patient benefit.",
+  "visual_idea": "Recorded activity revisited offline: a tactile unmarked recording ribbon curls back above a separate, quiet tissue-like observation layer, while a small detached impression evokes human feedback.",
   "placement": "article-hero and responsive listing",
   "crop": "wide",
-  "constraints": "Retrospective acceptance brief documenting the image already merged in PR #46; this is not the original image-generation prompt, which was not retained. Exact WebP bytes must be reused, not regenerated. 16:9 cinematic human-centred editorial photography; article/card and 3:2 responsive crops. Clearly illustrative site captions, accurately descriptive alt text and no documentary implication. All screen waveforms and background brain images are invented illustrative content, not EEG traces, MRI acquisitions, seizures or study data. Do not claim real-time seizure prediction, treatment response or actual study participation."
+  "constraints": "Routine production after maintainer approval of the DynaVelo pilot. One initial generated candidate from three written concepts. Selected concept: Recorded activity revisited offline: a tactile unmarked recording ribbon curls back above a separate, quiet tissue-like observation layer, while a small detached impression evokes human feedback. Chosen because it makes this article's specific medical/research tension legible without asserting a mechanism or outcome. Alternatives: A realistic EEG cap and participant: rejected because it could imply documentary access to the pilot. A lower-amplitude before/after waveform: rejected because it would invent measured traces and suggest clinical improvement. Exact generation prompt: Create ONE standalone high-resolution 3:2 landscape scientific editorial illustration for a HealthTech AI Pulse article hero and responsive listing, 1536 by 1024 composition. It must survive central 16:9 article and 3:2 mobile cover crops and a 160px thumbnail. Scientific Editorial Abstraction: commissioned, restrained, recognisable medical or research subject matter, subtle dimensional matte-paper relief, dry-brush/etched surface detail and one focal relationship. Match the approved DynaVelo family in white space, tactile texture and calm contrast, but do not copy its cellular subject or arrangement. Palette: dominant white #FFFFFF, ink #424242, teals #51796E and #344F51, pale sage #E8EFEC and mist #D1E0E2; rose #D4A298 and caramel #BC8A5F only as sparing accents. Essential meaning must come from shapes and separation, not colour alone. No cream wash, glossy 3D or excessive gradients. No words, letters, numbers, labels, logos, UI, screenshots, page furniture, watermark, border or frame. No generated medical scans, documentary histology, actual patients, identifiable people or institutions, invented apparatus, unsupported anatomy or diagnostic features, invented molecular interactions, factual mechanism, data chart, measured proportions or outcome claims. No neon, glowing brain, robot, decorative floating molecules or generic AI icons. Do not depict clinical success, harm, treatment advice or regulatory endorsement. Not a bare schematic, flowchart, icon composition, generic geometric poster, stock artwork or website mockup.  Verified article context: A small inpatient epilepsy pilot tested patient interaction with a feedback interface. Reported detector adaptation results came from offline replay rather than demonstrated live adaptive treatment or patient benefit. Visual idea: Recorded activity revisited offline: a tactile unmarked recording ribbon curls back above a separate, quiet tissue-like observation layer, while a small detached impression evokes human feedback. Composition and scientific boundaries: An oblique close-up illustration of an ivory-white paper recording ribbon looping back over itself, with sparse irregular teal engraved strokes that are clearly abstract marks, not a recognizable EEG trace or measured signal. Beneath it, a shallow folded sage tissue-like observation plane stays separate. A single small rose tactile impression beside the ribbon evokes feedback without being a button or UI. One broad loop, strong crop-safe silhouette, generous white. No brain, patient, electrode apparatus, diagnostic waveform, medical event, before/after comparison or evidence of improved sensitivity or treatment.",
+  "references": [
+    {
+      "path": "docs/editorial/VISUAL_CONSTITUTION_V1.md",
+      "sha256": "ebc2fec12f0d0f75aa81b9ea1907f1805bd6c712061487d234c80d7c01a950bc"
+    },
+    {
+      "path": "docs/editorial/ILLUSTRATION_SYSTEM_V1.md",
+      "sha256": "c931665ddfb181c7de5abc5f67912be08761317f45533b279c8a61ce53367531"
+    },
+    {
+      "path": ".agents/skills/healthtech-ai-pulse-illustration/SKILL.md",
+      "sha256": "fc335a5428133837b140c0dc824fe1ad42ec14f80a002dbf27bd03725f037dd8"
+    },
+    {
+      "path": "src/pages/stories/[...id].astro",
+      "sha256": "2c088b58c041762930eb35c4c3fa66578123c0e10ad36b0c79b8a60e3c369ca5"
+    },
+    {
+      "path": "src/components/StoryList.astro",
+      "sha256": "2b23835997f9887f42d46b6ae98d4718ded2e8e8347ecf4b61aac51b8e3bfbed"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "35b280e2359b32c8514707b8884f0f37ec0142b480ba46dc247d4798e44fc7e6"
+    },
+    {
+      "path": "src/components/IllustrationCaption.astro",
+      "sha256": "e691bd4b466b4fb52dab1281ca9dfe5f4e6fb1e757611c46e6cab3ce4993bc44"
+    },
+    {
+      "path": "src/styles/publication.css",
+      "sha256": "3a4d3423f332f045ab2e66987338d7c2fc7b2ab70f350a0300d5bff47c61f8af"
+    },
+    {
+      "path": "public/images/stories/2026-10-23-dynavelo-b-cell-rescue-predictions.webp",
+      "sha256": "bff8b4f0593f1e81ddbdede6ab26a26a816bd69baee7a0ca95d122003ded30d5"
+    }
+  ]
 }
