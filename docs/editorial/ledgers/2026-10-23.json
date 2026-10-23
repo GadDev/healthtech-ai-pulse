@@ -1,0 +1,726 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-23",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "07efed8cbff3914fd57e40d00a300bb5225879d1",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-21T07:49:48.000Z",
+    "window_end": "2026-10-23T07:41:55.000Z",
+    "last_completed_cutoff": "2026-10-22T07:49:48.000Z",
+    "query_log": [
+      {
+        "query": "Research/evaluation lane: PubMed, PMC and direct Nature/Nature Biotechnology searches for artificial intelligence, machine learning, generative models, clinical decision support and biomedical models dated 21-23 October 2026; inspect primary records for DynaVelo, NeoGen-BC, Visionary AI, SHAKED and the Tanzania diabetic-retinopathy trial",
+        "source": "PubMed, PubMed Central, Nature Biotechnology and publisher search",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "The bounded search screened the first surfaced results and directly inspected the peer-reviewed DynaVelo version of record plus its accessible preprint/full-text record. DynaVelo was selected. NeoGen-BC was rejected below; Visionary AI, SHAKED and the Tanzania trial were older than the window and had no new event establishing a material update. PubMed pages exposed only limited HTML in the available browsing surface, so database-wide pagination and a measured hit count are not claimed."
+      },
+      {
+        "query": "Safety/official lane: FDA, Regulations.gov, European Commission, EMA and UK government searches for AI-enabled medical-device actions, guidance, recalls and policy updates dated 21-23 October 2026; follow FDA-2026-N-7874",
+        "source": "FDA, Regulations.gov, European Commission, EMA, GOV.UK, Healthcare Dive and MedTech Dive",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "The FDA discussion-paper page and official docket identity were found. Individual public-comment attachments are now discoverable, resolving yesterday's access problem, but FDA has not issued the anticipated draft guidance or another formal policy action. Provider-group comments are stakeholder positions rather than agency policy, so the item remains watch. No new in-window European or UK official AI-device action or recall was found in the bounded pass."
+      },
+      {
+        "query": "Deployment/operations lane: Fierce Healthcare AI and digital-health pages, Healthcare Dive health-IT coverage, Healthcare IT News and MedTech Dive for 21-23 October 2026; follow hospital implementations to original records",
+        "source": "Fierce Healthcare, Healthcare Dive, Healthcare IT News and MedTech Dive",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "Four specialist outlets were screened. Sentara's new Regard case-management deployment was directly inspected and retained as watch because only sponsor and executive projections, not measured implementation outcomes or an evaluation protocol, were available. Healthcare IT News conference coverage and MedTech conference material did not supply a discrete verified deployment result."
+      },
+      {
+        "query": "Biomedical/pharma engineering lane: Nature Biotechnology, PubMed, bioRxiv/PMC, Fierce Biotech and BioPharma Dive searches for biomedical models, multiomics, protein or molecule design, validation and trial results dated 21-23 October 2026",
+        "source": "Nature Biotechnology, PubMed, PMC/bioRxiv, Fierce Biotech and BioPharma Dive",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "The Nature Biotechnology listing surfaced the 21 October DynaVelo version of record. Its central in-silico rescue predictions were followed to the paper's mouse experiments, data accessions and released code. The 22 October NeoGen-BC record did not expose prospective experimental validation and was rejected. No second current biomedical or pharma item cleared the evidence and material-change gates."
+      },
+      {
+        "query": "European/local-language lane: site-restricted French HAS, German BfArM and Luxembourg LIH searches for intelligence artificielle or künstliche Intelligenz in health dated 21-23 October 2026",
+        "source": "Haute Autorité de Santé, BfArM and Luxembourg Institute of Health",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "French, German and Luxembourg queries were attempted. LIH's 21 October medical-research day and current event/news listings were inspected; the AI-in-health visit was the same non-substantive event rejected yesterday and no new result or artifact was reported. HAS and BfArM queries did not surface a new in-window AI health action in the first results."
+      },
+      {
+        "query": "Negative evidence, corrections, retractions and 30-day watch sweep: no benefit, failed external validation, harm, recall, retraction, bias, drift, hallucination and abandoned deployment terms; due FDA docket watch; prior merged ledgers/stories and today's all-state branch/PR identity",
+        "source": "Publisher and regulator searches plus GadDev/healthtech-ai-pulse merged ledgers, stories, branch and all-state PR checks",
+        "accessed_at": "2026-10-23T07:41:55.000Z",
+        "outcome": "No correction, retraction or contradictory experiment affecting the selected DynaVelo paper surfaced. The paper itself limits the result to one murine germinal-center system and discloses incomplete agreement between predicted and observed velocities. The FDA watch was revisited and remains unresolved pending formal FDA policy. Epic Connectors and OpenEvidence remain not due until 29 October. No finalized 23 October ledger, canonical branch or matching PR existed before ownership."
+      }
+    ],
+    "coverage_gaps": [
+      "PubMed and journal discovery was bounded to the first surfaced results; the browsing surface did not provide a reliable database hit count or completed pagination, so exhaustive literature coverage is not claimed.",
+      "Some publisher, specialist and official search results exposed snippets or index pages only. No inaccessible detail was promoted into a claim.",
+      "The Nature version of record was inspectable through indexed full-text excerpts, but its funding and competing-interest declarations did not surface in the available extract; both remain explicitly unavailable rather than inferred.",
+      "No controlled independent reproduction of DynaVelo was found. The paper's new mouse experiments are biological validation by the same author group and are not independent replication.",
+      "The Sentara deployment has sponsor-projected time and labor savings but no inspected measured post-deployment outcome, adoption denominator, error analysis, monitoring protocol or rollback evidence.",
+      "The FDA docket now exposes filings, but a set of stakeholder comments and a conference timetable are not an issued FDA policy artifact."
+    ],
+    "completed_at": "2026-10-23T07:41:55.000Z"
+  },
+  "candidates": [
+    {
+      "id": "2026-10-23-dynavelo-b-cell-rescue-predictions",
+      "decision": "selected",
+      "title": "DynaVelo predictions identified three genetic rescues tested in mice",
+      "desk": "biomedical-foundations",
+      "topics": ["biomedical-models", "preclinical-evidence", "research-tools", "reproducibility"],
+      "entities": ["DynaVelo", "Memorial Sloan Kettering Cancer Center", "Weill Cornell Medicine"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "Nature Biotechnology lists the peer-reviewed version of record as published on 21 October 2026.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "The publisher gives Published and Version of record as 21 October 2026.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "A peer-reviewed Nature Biotechnology paper reported DynaVelo, a neural-ODE model that combines gene expression and transcription-factor motif accessibility. Its in-silico analysis nominated Ctcf, Bcl6 and Stat3 perturbations to rescue an Arid1a-loss phenotype; newly generated double-heterozygous mouse models restored the germinal-center dark-zone/light-zone ratio for all three targets, with deeper multiome comparison for Ctcf.",
+      "why_now": "The version of record was published inside the current search window and adds peer-reviewed model, code, data and in-vivo validation evidence beyond the June preprint record.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41587-026-03348-1",
+      "sources": [
+        {
+          "id": "nature-dynavelo",
+          "url": "https://www.nature.com/articles/s41587-026-03348-1",
+          "canonical_url": "https://www.nature.com/articles/s41587-026-03348-1",
+          "publisher": "Nature Biotechnology",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-21",
+          "date_reason": "The publisher lists Published and Version of record as 21 October 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Peer-reviewed report written by the model developers and experimental collaborators; not an independent replication"
+        },
+        {
+          "id": "pmc-dynavelo-preprint",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13320785/",
+          "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13320785/",
+          "publisher": "PubMed Central / bioRxiv",
+          "role": "supporting",
+          "source_type": "preprint-full-text",
+          "publication_date": "2026-06-23",
+          "date_reason": "PMC identifies version 2 of the preprint as posted 23 June 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Earlier author manuscript from the same research group; used for method and result locators, not independent corroboration"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "dynavelo-nature-biotechnology-version-of-record-2026-10-21",
+        "doi": "10.1038/s41587-026-03348-1",
+        "pmid": "42395443",
+        "preprint": "10.1101/2025.04.24.650458v2",
+        "trial": null,
+        "cohort": "Murine wild-type, Arid1a and Ctcf germinal-center B-cell multiome datasets plus newly generated double-heterozygous mouse models",
+        "product_version": "DynaVelo code archived at Zenodo DOI 10.5281/zenodo.22760121",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "DynaVelo is a generative neural ordinary differential equation model for single-cell multiomic dynamics and in-silico perturbation.",
+        "non_ai_exception": null,
+        "reader_consequence": "Biomedical-model developers get an unusually concrete example of computational perturbation predictions followed by targeted in-vivo tests, while the one-system mouse evidence sets a clear boundary on translational claims."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Title, DynaVelo name, DOI, PMID, preprint DOI and code identity were searched across merged ledgers and stories through contract_ref; no prior HealthTech record was found.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select as bounded biomedical-model evidence: the peer-reviewed paper connects in-silico rescue nominations to newly generated mouse models and releases code and data, while the story will avoid therapy, patient-benefit and general biological-causality claims.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Peer-reviewed open-access Nature Biotechnology version of record published 21 October 2026; earlier preprint posted 23 June 2026.",
+        "study_design": "Computational method development and evaluation on single-cell RNA/chromatin-accessibility data, followed by targeted genetic perturbation experiments in mice.",
+        "validation_setting": "Wild-type and mutant murine germinal-center B cells; new compound-heterozygous mouse models tested Ctcf, Bcl6 and Stat3 rescue nominations, with single-cell multiome profiling for the Ctcf double mutant.",
+        "independent_validation": "No independent replication was found. The biological experiments were performed by the same author group, although the Bcl6 and Stat3 mouse models were newly generated after model nomination.",
+        "clinical_utility": "not-assessed",
+        "access_level": "full-text",
+        "funding": "The funding declaration did not surface in the inspected publisher extract and is recorded as unavailable; no funding source is inferred.",
+        "conflicts_of_interest": "The competing-interest declaration did not surface in the inspected publisher extract and is recorded as unavailable; absence of an extracted declaration is not evidence of no conflict.",
+        "corrections_retractions": "No correction, retraction or withdrawal notice was identified on the publisher record or PubMed/PMC records during the 23 October 2026 check.",
+        "contradictory_findings": [
+          "The paper reports that predicted motif-velocity changes agreed better than RNA-velocity changes and that rescue magnitudes varied across cell types and modalities, limiting any claim of uniform predictive accuracy."
+        ],
+        "limitations": [
+          "The work evaluates one murine germinal-center B-cell system and heterozygous genetic perturbations; it does not establish performance in human tissue, other cell systems or disease treatment.",
+          "The same author group developed the model and conducted the validation experiments; no external replication was identified.",
+          "Restoration of a dark-zone/light-zone ratio is a preclinical phenotype, not evidence of therapeutic benefit, safety or patient outcome.",
+          "The model uses inferred RNA velocity and transcription-factor motif accessibility from destructive single-time-point measurements, so its dynamics are model-dependent rather than direct longitudinal observations.",
+          "The paper reports more complete multiomic validation for Ctcf than for Bcl6 and Stat3, whose confirmation centers on immunophenotypic ratio rescue."
+        ],
+        "applicability": "Relevant to computational biologists designing perturbation models and validation plans. It supports experimentally testing model-nominated interactions in matched systems, not selecting a human therapeutic target."
+      },
+      "claims": [
+        {
+          "id": "dynavelo-three-mouse-rescue-tests",
+          "type": "model-performance",
+          "supported_statement": "In one murine germinal-center B-cell system, DynaVelo nominated Ctcf, Bcl6 and Stat3 perturbations as rescues for an Arid1a-loss phenotype; compound-heterozygous mouse experiments restored the dark-zone/light-zone ratio toward wild type for all three, with multiome profiling additionally showing partial recovery across four modalities for Ctcf.",
+          "source_ids": ["nature-dynavelo", "pmc-dynavelo-preprint"],
+          "locators": [
+            "Nature Biotechnology abstract, Results section 'In silico perturbations of Arid1a mutant GCs identify candidate targets for rescuing the loss of function', Figure 6 and Discussion.",
+            "PMC full text lines 237-266 and Figure 6 legend: nomination, sample counts, ratio rescue and Ctcf modality-specific rescue rates."
+          ],
+          "evidence_scope": "Same-team computational and in-vivo validation in genetically engineered mice; no claim about human disease, therapy, patient benefit or general performance across biological systems.",
+          "limitations": [
+            "No independent replication was identified.",
+            "The three targets share one biological system and phenotype; deeper multiomic validation was reported for Ctcf only.",
+            "Model-derived velocities and inferred latent dynamics are not direct time-series measurements."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-23T07:41:55.000Z",
+            "checked_by": "ChatGPT GPT-6 (model source review; not independent human or biological validation)",
+            "supported_scope": "The peer-reviewed version of record and accessible author manuscript directly support the identities of all three nominated perturbations, the new Bcl6 and Stat3 mouse models, restoration of the dark-zone/light-zone ratio and modality-specific Ctcf rescue measurements.",
+            "reason": "The claim was narrowed to the tested murine system and phenotype, distinguishes same-team validation from independent replication and excludes therapeutic or patient-benefit language."
+          },
+          "study": {
+            "design": "Neural-ODE model development and retrospective prediction on paired single-cell RNA and chromatin-accessibility data, followed by prospective targeted creation and immunophenotyping of compound-heterozygous mouse models.",
+            "setting": "Murine germinal-center B cells under wild-type, Arid1a and Ctcf genetic conditions.",
+            "population_or_dataset": "Seven initial multiome samples plus six new multiome validation samples; separate newly generated Arid1aHet;Bcl6Het and Arid1aHet;Stat3Het mouse cohorts for phenotype tests.",
+            "sample_sizes": [
+              {
+                "n": 54,
+                "unit": "mouse samples across Bcl6 and Stat3 rescue experiments",
+                "reason": "Figure 6 legend reports 24 samples in the Bcl6 experiment and 30 in the Stat3 experiment."
+              },
+              {
+                "n": 6,
+                "unit": "new multiome samples",
+                "reason": "Data-availability statement reports two wild-type, two Arid1aHet and two Arid1aHet;CtcfHet samples."
+              }
+            ],
+            "comparator": "Wild-type, single-heterozygous and compound-heterozygous germinal-center phenotypes; predicted velocity shifts were compared with observed mutant and rescue profiles.",
+            "primary_endpoints": [
+              "Agreement of predicted perturbation effects with observed differential RNA and motif velocities.",
+              "Restoration of the germinal-center dark-zone/light-zone ratio in compound-heterozygous mice."
+            ],
+            "secondary_exploratory_endpoints": [
+              "Recovery of RNA expression, RNA velocity, motif accessibility and motif velocity toward wild-type values in the Ctcf double mutant."
+            ],
+            "results": [
+              {
+                "endpoint": "Bcl6 and Stat3 rescue phenotype",
+                "metric": "Dark-zone/light-zone ratio",
+                "value": "restored to wild-type levels in both compound-heterozygous backgrounds",
+                "units": "qualitative result reported by authors",
+                "comparator": "Arid1aHet single-heterozygous and wild-type mice",
+                "uncertainty": "Exact effect sizes and confidence intervals did not surface in the inspected text; sample groups were WT 6, Arid1aHet 6, Bcl6Het 6, DKO 6 and WT 10, Arid1aHet 10, Stat3Het 6, DKO 4.",
+                "source_id": "nature-dynavelo",
+                "locator": "Results and Figure 6g."
+              },
+              {
+                "endpoint": "Ctcf rescue across modalities in the most disrupted CC cell type",
+                "metric": "Features shifted from Arid1aHet toward wild type",
+                "value": "38% RNA expression; 64% RNA velocity; 51% motif accessibility; 46% motif velocity",
+                "units": "percent",
+                "comparator": "Arid1aHet versus Arid1aHet;CtcfHet and wild-type profiles",
+                "uncertainty": "Reported as modality-specific rescue fractions in the same-team validation; not an external confidence interval or patient outcome.",
+                "source_id": "pmc-dynavelo-preprint",
+                "locator": "Results lines 259-262 and Figure 6f."
+              }
+            ],
+            "follow_up": "Endpoint-specific mouse experiments; no clinical or longitudinal patient follow-up.",
+            "harms": "No therapeutic safety or animal-harm outcome was reported as an efficacy endpoint in the inspected sections.",
+            "analysis_notes": "The study also reports incomplete agreement between predicted and observed velocity changes; motif velocities performed better than RNA velocities. Rescue of one phenotype does not validate every predicted network edge.",
+            "applicability": "Supports a workflow in which in-silico perturbation nominations are subjected to matched biological experiments; generalization outside the studied murine system is untested."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 3,
+        "relevance": 3,
+        "material_change": 4,
+        "durability": 3,
+        "weighted_total": 77.5,
+        "rationales": {
+          "significance": "The link from model nomination to newly generated in-vivo tests is consequential for biomedical-model evaluation, but the evidence remains preclinical and system-specific.",
+          "claim_support": "Peer-reviewed full-text excerpts, released code/data and mouse experiments support the bounded claim; missing extracted funding/COI declarations and no independent replication cap support.",
+          "relevance": "Directly relevant to biomedical AI and computational-biology readers, though less immediate for clinical operations.",
+          "material_change": "The 21 October peer-reviewed version of record packages the model, artifacts and biological validation as a new confirmed publication.",
+          "durability": "The validation pattern and released artifacts should remain useful beyond the news cycle, while specific biological findings still need broader replication."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-23T07:41:55.000Z",
+        "checked_by": "ChatGPT GPT-6 (model source review; not independent human or biological validation)",
+        "supported_scope": "The live Nature Biotechnology record confirms the 21 October version of record, model and code/data availability, the three target nominations and same-team mouse validation. The accessible manuscript supports detailed result locators and reported sample counts.",
+        "reason": "Fresh inspection found no correction or retraction and supports a specialist briefing limited to preclinical model validation in one mouse system."
+      },
+      "decision_history": [
+        {
+          "decision": "selected",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "Cleared the 75-point gate with peer-reviewed, directly inspectable preclinical validation and explicit translational limits."
+        }
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-23-sentara-regard-case-management",
+      "decision": "watch",
+      "title": "Sentara deploys Regard chart-query tool for case managers",
+      "desk": "health-systems",
+      "topics": ["health-operations", "implementation", "decision-support"],
+      "entities": ["Sentara Health", "Regard"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "The 22 October report says the tool was deployed Tuesday, corresponding to 20 October 2026.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "Fierce Healthcare displays 22 October 2026.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "Sentara and Regard announced deployment of a chart-query and patient-summary tool for case managers, with planned expansion across acute and ambulatory care.",
+      "why_now": "The first specialist report appeared inside the current search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+      "sources": [
+        {
+          "id": "fierce-sentara",
+          "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+          "canonical_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+          "publisher": "Fierce Healthcare",
+          "role": "primary",
+          "source_type": "news-report",
+          "publication_date": "2026-10-22",
+          "date_reason": "Article displays 22 October 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent outlet reporting primarily from Sentara and Regard announcement statements"
+        },
+        {
+          "id": "sentara-regard-release",
+          "url": "https://www.businesswire.com/news/home/20261020722379/en/Sentara-Health-Extends-AI-Clinical-Reasoning-to-Case-Managers-Providing-a-Complete-Clinical-Picture-for-Accelerated-Care-Transitions",
+          "canonical_url": "https://www.businesswire.com/news/home/20261020722379/en/Sentara-Health-Extends-AI-Clinical-Reasoning-to-Case-Managers-Providing-a-Complete-Clinical-Picture-for-Accelerated-Care-Transitions",
+          "publisher": "Sentara Health and Regard via Business Wire",
+          "role": "supporting",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Release URL and listing identify 20 October 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Joint announcement by deploying health system and vendor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "sentara-regard-case-management-deployment-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": "Regard case-management solution; version not reported",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The tool uses AI to summarize and query patient charts for case-management workflows.",
+        "non_ai_exception": null,
+        "reader_consequence": "Case-management teams would need measured adoption, error handling, escalation, monitoring and workflow outcomes before judging the deployment's value."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Sentara, Regard and deployment identity checked against merged HealthTech ledgers and stories through contract_ref; no prior matching record found.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: actual deployment is reported, but time and labor savings are projections and no measured post-deployment performance, adoption, safety or workflow comparison was inspected.",
+      "promote_when": [
+        "Inspect a prospective or retrospective implementation evaluation with denominators, measured workflow outcomes, error analysis and harms.",
+        "Verify governance, escalation, monitoring and rollback controls for the deployed version."
+      ],
+      "next_review_at": "2026-10-30",
+      "claims": [],
+      "editorial_score": {
+        "significance": 2,
+        "claim_support": 2,
+        "relevance": 3,
+        "material_change": 3,
+        "durability": 2,
+        "weighted_total": 58.8,
+        "rationales": {
+          "significance": "The workflow is operationally important, but reported benefits are not measured.",
+          "claim_support": "Deployment and features are traceable to the health system/vendor announcement and specialist report; outcome claims are not independently supported.",
+          "relevance": "Directly relevant to health-system case management and discharge planning.",
+          "material_change": "A live deployment is more concrete than a product preview, but no version or evaluation artifact was released.",
+          "durability": "The use case may persist, but the current evidence is mostly launch material."
+        }
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research watch only.",
+        "reason": "Measured implementation outcomes and safety controls are not available."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "Deployment is real but projected savings and executive testimonials do not establish operational benefit or safety."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-fda-genai-docket-follow-up",
+      "decision": "watch",
+      "title": "FDA generative-AI docket is accessible, but draft guidance has not issued",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance", "medical-devices"],
+      "entities": ["US Food and Drug Administration", "Center for Devices and Radiological Health"],
+      "event_date": "2026-10-22",
+      "event_date_reason": "Healthcare Dive published its synthesis of provider-group comments on 22 October 2026; this is not an FDA decision date.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "Healthcare Dive displays 22 October 2026.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "The official docket and individual filed attachments are now discoverable, and provider groups' post-deadline positions can be traced to filings. FDA still has not issued draft guidance or another formal policy artifact.",
+      "why_now": "This is the required 30-day watch follow-up after yesterday's docket-access limitation and new reporting on filed comments.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+      "sources": [
+        {
+          "id": "fda-discussion-page",
+          "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "canonical_url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request",
+          "publisher": "US Food and Drug Administration",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-08-18",
+          "date_reason": "FDA page displays 18 August 2026 and the 19 October feedback deadline.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing US regulator"
+        },
+        {
+          "id": "regulations-docket",
+          "url": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+          "canonical_url": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+          "publisher": "Regulations.gov",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": "2026-08-18",
+          "date_reason": "Official docket search result displays 18 August 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Official US rulemaking docket hosting the requested feedback"
+        },
+        {
+          "id": "healthcare-dive-comments",
+          "url": "https://www.healthcaredive.com/news/developers-not-doctors-held-accountable-generative-ai-medical-devices-fda/833738/",
+          "canonical_url": "https://www.healthcaredive.com/news/developers-not-doctors-held-accountable-generative-ai-medical-devices-fda/833738/",
+          "publisher": "Healthcare Dive",
+          "role": "supporting",
+          "source_type": "news-report",
+          "publication_date": "2026-10-22",
+          "date_reason": "Article displays Published Oct. 22, 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Independent reporting on stakeholder comments; not FDA policy"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-genai-device-docket-2026-n-7874",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA-2026-N-7874"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The docket concerns generative-AI-enabled medical devices.",
+        "non_ai_exception": null,
+        "reader_consequence": "Device teams should treat the discussion paper and comments as inputs to future policy, not as current binding requirements."
+      },
+      "deduplication": {
+        "status": "material-update",
+        "previous_candidate_ids": ["2026-10-21-fda-genai-device-docket-status", "2026-10-22-fda-genai-docket-follow-up"],
+        "previous_story_ids": [],
+        "material_delta": "The official docket and filed attachments are now discoverable, resolving the prior access block; no FDA draft guidance or formal policy action has issued.",
+        "archive_coverage": "Linked to the two prior watch records and checked against merged FDA-related stories and ledgers.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch: source access improved and stakeholder positions are traceable, but comments are not agency policy and the anticipated draft guidance remains unpublished.",
+      "promote_when": [
+        "Inspect issued FDA draft guidance or another formal agency policy artifact.",
+        "Record exact status, scope, dates and evidence requirements from the official text rather than stakeholder comments or conference predictions."
+      ],
+      "next_review_at": "2026-10-30",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research watch only.",
+        "reason": "No formal FDA policy artifact has issued."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "Docket access recovered, but the promotion condition remains issuance of official FDA policy."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-23-neogen-bc-computational-neoantigens",
+      "decision": "rejected",
+      "title": "NeoGen-BC proposes shared breast-cancer neoantigens computationally",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "preclinical-evidence"],
+      "entities": ["NeoGen-BC"],
+      "event_date": "2026-10-22",
+      "event_date_reason": "PubMed lists a publication date of 22 October 2026.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "PubMed lists 2026 Oct 22.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "A paper described a computational framework combining protein-language models and multi-window deep learning to design shared neoantigens for breast cancer.",
+      "why_now": "The PubMed record appeared inside the current search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42721858/",
+      "sources": [
+        {
+          "id": "pubmed-neogen-bc",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42721858/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42721858/",
+          "publisher": "PubMed",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research-abstract",
+          "publication_date": "2026-10-22",
+          "date_reason": "PubMed search record lists 2026 Oct 22.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Author publication record; funding and conflicts were not inspected"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "neogen-bc-shared-neoantigen-framework-2026",
+        "doi": null,
+        "pmid": "42721858",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": "NeoGen-BC",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Generative protein language models are central to the framework.",
+        "non_ai_exception": null,
+        "reader_consequence": "No supportable translational consequence follows without an inspected full method and prospective experimental validation."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Title, model name and PMID checked against merged ledgers and stories through contract_ref.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: the accessible record did not establish prospective biological validation, candidate developability or a clinical result, and abstract-only access was insufficient for a bounded material claim.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Evidence/access gate failed before publication verification."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "No inspected prospective experimental validation or clinical evidence."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-lih-ai-health-event-repeat",
+      "decision": "rejected",
+      "title": "Luxembourg AI-in-health research visit has no new result",
+      "desk": "biomedical-foundations",
+      "topics": ["research-tools"],
+      "entities": ["Luxembourg Institute of Health", "Centre Hospitalier de Luxembourg"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "The LIH page lists the event on 21 October 2026.",
+      "source_publication_date": null,
+      "source_date_reason": "The event page does not expose a reliable publication date.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "No new result, release or implementation record was found after the AI-in-health visit that was rejected in yesterday's ledger.",
+      "why_now": "The item recurred in the overlapping Luxembourg/French-language search.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+      "sources": [
+        {
+          "id": "lih-event-repeat",
+          "url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+          "canonical_url": "https://www.lih.lu/en/event/%F0%9F%87%AB%F0%9F%87%B7-la-journee-de-la-recherche-medicale-translationnelle-2/",
+          "publisher": "Luxembourg Institute of Health",
+          "role": "primary",
+          "source_type": "institutional-event-page",
+          "publication_date": null,
+          "date_reason": "No reliable publication date displayed.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Co-organizer of the event"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "lih-chl-research-day-ai-visit-2026-10-21",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "The event programme names a visit about AI applied to health.",
+        "non_ai_exception": null,
+        "reader_consequence": "No development or evidence package was reported."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": ["2026-10-22-lih-ai-health-research-day"],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Exact event key and canonical URL match the 22 October exclusion.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as a repeat event listing without a material evidence delta.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Duplicate without material delta."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "Repeat of yesterday's rejected event listing."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-himss-ai-forum-coverage",
+      "decision": "rejected",
+      "title": "HIMSS forum coverage offers viewpoints without a new evaluated development",
+      "desk": "health-systems",
+      "topics": ["implementation", "governance"],
+      "entities": ["HIMSS", "Healthcare IT News"],
+      "event_date": "2026-10-22",
+      "event_date_reason": "The forum coverage was published during the 22 October 2026 event.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "Healthcare IT News home listing displays 22 October 2026.",
+      "discovered_at": "2026-10-23T07:41:55.000Z",
+      "what_changed": "Conference panel coverage summarized opportunities and implementation hurdles for healthcare AI.",
+      "why_now": "The coverage appeared inside the current search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.healthcareitnews.com/",
+      "sources": [
+        {
+          "id": "hitn-forum",
+          "url": "https://www.healthcareitnews.com/",
+          "canonical_url": "https://www.healthcareitnews.com/",
+          "publisher": "Healthcare IT News",
+          "role": "primary",
+          "source_type": "news-report",
+          "publication_date": "2026-10-22",
+          "date_reason": "Home listing displays 22 October 2026.",
+          "inspected_at": "2026-10-23T07:41:55.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "HIMSS-owned outlet covering a HIMSS event"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "himss-ai-healthcare-forum-panel-coverage-2026-10-22",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The forum concerned healthcare AI adoption and governance.",
+        "non_ai_exception": null,
+        "reader_consequence": "No specific verified artifact, deployment result or official action was available to change practice."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "Event title and outlet coverage checked against merged ledgers and stories through contract_ref.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject: conference viewpoints without a discrete evaluated deployment, released artifact or formal action do not clear the material-change gate.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research rejection only.",
+        "reason": "Material-change gate failed."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-23T07:41:55.000Z",
+          "reason": "No discrete evidence-backed development."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "One candidate cleared the research gate and awaits publication preparation and mandatory illustration review.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-23T073434Z-root",
+      "started_at": "2026-10-23T07:34:34.000Z",
+      "completed_at": null,
+      "phases": ["contracts-read", "bounded-discovery-complete", "decisions-recorded", "ownership-acquired", "research-checkpoint"],
+      "outcome": "research-checkpoint-awaiting-publication-preparation"
+    }
+  ],
+  "active_run": {
+    "owner_token": "healthtech-2026-10-23T073434Z-root",
+    "acquired_at": "2026-10-23T07:45:48.000Z",
+    "heartbeat_at": "2026-10-23T07:45:48.000Z",
+    "expires_at": "2026-10-23T09:45:48.000Z"
+  },
+  "human_overrides": []
+}
