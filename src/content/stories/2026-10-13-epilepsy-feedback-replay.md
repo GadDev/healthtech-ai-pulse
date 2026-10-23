@@ -1,5 +1,5 @@
 ---
-title: Epilepsy AI pilot tests patient feedback, with detector gains confined to replay
+title: 'Epilepsy study: patient-feedback interface tested, but detector improvement shown only in offline data replay'
 description: A 13-patient inpatient pilot separates live device interaction from offline detector
   adaptation; patient benefit remains unproven.
 date: 2026-10-13

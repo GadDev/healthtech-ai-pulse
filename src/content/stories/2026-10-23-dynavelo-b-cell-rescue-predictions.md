@@ -1,5 +1,5 @@
 ---
-title: DynaVelo predictions point to three genetic rescues tested in mice
+title: DynaVelo model nominated three genetic fixes, tested in mice in preclinical study
 description: A neural-ODE model nominated three genetic perturbations that restored one germinal-center phenotype in mice. It is preclinical, same-team validation.
 date: 2026-10-23
 draft: false

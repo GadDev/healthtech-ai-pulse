@@ -32,6 +32,42 @@ Avoid recurrent machine-written markers: “In a rapidly evolving landscape”, 
 | Corporate partnership/tool launch  | What exists today, not the pitch             | Intended deployment versus demonstrated use, independence and next verifiable milestone |
 | Safety or contradiction            | The verified failure mode or disputed result | Source of signal, exposure/denominators, competing explanations and practical checks    |
 
+## Headlines
+
+A title must let a reader identify the subject and the main development without opening the article. It should carry the evidence boundary (preclinical versus patient outcome, plan versus result, association versus causation) rather than reserving qualifications for the standfirst.
+
+### Editorial references
+
+| Outlet       | Example principle demonstrated                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nature News  | Names the subject and the concrete finding; keeps "mice", "cells" or "patients" distinctions visible in the title rather than implying human benefit. |
+| Science news | Uses active verbs and plain language; avoids turning a method paper into a breakthrough announcement.                                                 |
+| The BMJ news | States what changed, for whom, and with what limitation; avoids promotional verbs such as "revolutionises".                                           |
+| STAT         | Front-loads the actor and action (who did what); separates announcement from evidence.                                                                |
+
+These are news headlines, not technical research-paper titles. A research title can pack methods and caveats; a news headline must communicate the development and its boundary at a glance.
+
+### Concise headline guidance
+
+- **Name the subject:** the technology, study, regulator, organisation or condition — not "AI" or "researchers" alone.
+- **State the concrete development:** what was found, announced, published or changed, with the key number where it matters.
+- **Use plain language and active verbs:** expand acronyms at first use; replace jargon such as "rescue", "efficacy signal" or "replay" with reader terms.
+- **Keep the evidence boundary:** preclinical versus clinical, plan versus result, association versus causation, retrospective performance versus patient benefit. A qualification that changes the meaning belongs in the title, not hidden at the end.
+- **Avoid clickbait and promotional wording:** no "reveals", "game changer", "breakthrough", "exposes", "trap" or unsupported outcomes.
+- **Support natural variation:** do not force every story into one template or a rigid character limit; let the evidence shape the title.
+
+### Before and after (verified against each article and its sources)
+
+| Story                                | Before                                                                           | After                                                                                                         | Reason                                                                                                                                                                                                     |
+| ------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Clinical AI language review (12 Oct) | Clinical AI language evidence remains uneven across a growing literature         | Three-quarters of non-English medical AI evaluations lack an English-language comparison, review finds        | Replaces jargon ("Clinical AI language") and vagueness ("remains uneven") with the subject, the concrete finding and the review boundary. 806 evaluations were mapped; 202 included an English comparison. |
+| Epilepsy AI pilot (13 Oct)           | Epilepsy AI pilot tests patient feedback, with detector gains confined to replay | Epilepsy study: patient-feedback interface tested, but detector improvement shown only in offline data replay | Explains "replay" in reader language and keeps the offline-versus-live boundary visible.                                                                                                                   |
+| Oncology AI EHR handoff (19 Oct)     | Oncology AI pilot exposes a missing-data trap at the EHR handoff                 | Oncology AI summary changed unknown allergies to "no known allergies" in two cases                            | Removes the unexplained acronym ("EHR") and promotional framing ("exposes", "trap"); bounds the claim to two reported cases.                                                                               |
+| FDA AI device updates (21 Oct)       | FDA shows how medical AI updates could be checked before release                 | FDA publishes fictional examples of how AI device updates might be checked                                    | Clarifies the examples are hypothetical and illustrative, not an FDA method or binding rule.                                                                                                               |
+| DynaVelo mouse predictions (23 Oct)  | DynaVelo predictions point to three genetic rescues tested in mice               | DynaVelo model nominated three genetic fixes, tested in mice in preclinical study                             | Replaces jargon ("genetic rescues") and vague "point to" with the concrete development and the preclinical boundary.                                                                                       |
+
+The three titles not listed above (AstraZeneca/Oracle agreement, neonatal-imaging expertise, TGA digital scribe review) already name the subject, state a concrete development and keep the evidence boundary visible, so they are unchanged.
+
 ## Editorial acceptance checklist
 
 A reviewer should be able to answer yes to each of the following:
@@ -43,6 +79,8 @@ A reviewer should be able to answer yes to each of the following:
 5. Does the article progress without repetitive stock headings, disclaimers, abstract-style phrasing or padded bullets?
 6. Does the practical consequence follow from the evidence without drifting into medical advice, certainty or unsupported causation?
 7. Does the mandatory photographic concept illuminate this exact story without pretending to document actual participants, outcomes or a named institution?
+8. Can a reader identify the subject and main development from the title alone, with the evidence boundary (preclinical versus patient benefit, plan versus result) visible?
+9. Does the title avoid unexplained acronyms, jargon, promotional wording and unsupported outcomes?
 
 If an answer is no, revise the draft or withhold the story. Automated spelling/readability metrics are aids, not permission to skip editorial review. A human editor must inspect the live reading layout and image together.
 

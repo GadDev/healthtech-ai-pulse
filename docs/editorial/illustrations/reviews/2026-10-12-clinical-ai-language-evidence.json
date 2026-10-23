@@ -1,10 +1,10 @@
 {
   "version": "healthtech-1.0",
   "story_id": "2026-10-12-clinical-ai-language-evidence",
-  "story_source_sha256": "734b887c97dd18980379bcf903280ffc2c4c0ac7967c7bf59f3efe2c59dc5371",
+  "story_source_sha256": "33549724b6a5bf7751856c049f0c1a5ef11c2b37c664d592184907d3ef83bbe2",
   "brief_sha256": "6a126da18052e060c2ac4550963b34df7511bea2c90c41a91317d923b6ec48a9",
   "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
-  "generation_key": "320f7075cb48d3daafcac54d5c70b3d005e849a56a5ee2aab3181e431e8b4323",
+  "generation_key": "e7e71a7a76b80a2c895373602a80adeae1a453eac2275981cd21ce921049e98e",
   "candidate_count": 2,
   "generator": "image_gen.text2im",
   "model_snapshot": null,
