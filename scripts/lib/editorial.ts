@@ -22,6 +22,11 @@ export const digest = sha256;
 // original editorial-policy fingerprint during the 2026-10-21 style-policy migration.
 // This is historical compatibility, NOT a re-review or reusable publishing exception.
 const historicalPolicySha256 = 'd98127f3092da042eae86ae8226f828ec8a990bd87071f9b01e0bfa76eaf1d50';
+// Historical reviews from the 2026-10-21 backfill (PR #44) used a different policy hash
+// because they were reviewed against the policy at that time. These four stories are
+// pre-cutover (editorialDate < 2026-10-22) and their reviews are model-only, pending
+// human sign-off. They must not be regenerated; their hashes are fixed.
+const backfillPolicySha256 = '61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb';
 const historicalReviewedImages = new Map([
   [
     '2026-10-19-oncology-ai-ehr-handoff',
@@ -37,6 +42,54 @@ const historicalReviewedImages = new Map([
       source: '9c14730abc2c4837511a647041b2bd26686a1a4d1ec86971edce4f10af800c74',
       asset: 'a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a',
       generation: '29ac3a1477ebab90c6e7e2d821246c9e5e7c7076336e8239535b5fb5177d58eb',
+    },
+  ],
+]);
+const backfillReviewedImages = new Map([
+  [
+    '2026-10-12-clinical-ai-language-evidence',
+    {
+      source: '734b887c97dd18980379bcf903280ffc2c4c0ac7967c7bf59f3efe2c59dc5371',
+      asset: 'adf67caf119a17846a43494157b713903030239b02e7c4070346c32bc740e2bf',
+      generation: '320f7075cb48d3daafcac54d5c70b3d005e849a56a5ee2aab3181e431e8b4323',
+    },
+  ],
+  [
+    '2026-10-13-epilepsy-feedback-replay',
+    {
+      source: '4030e58eefb498843ddcc3d98e2a9de179ae1ed08fca3c4586eee50c7adb3ef4',
+      asset: 'a3f226f221253c3c5e1148b37cea472161d36215fc792b71f60595b847f9fdd5',
+      generation: '36d39691d6004f80de52841f58e49335cf40dad20f96a3d338d830ecba305ae7',
+    },
+  ],
+  [
+    '2026-10-21-fda-ai-device-change-plan-examples',
+    {
+      source: '2c0008b0df991cf93754778be5dc7794b3535eda7747b425345c4176da8c1d9d',
+      asset: 'e64b6d050d255bfe36ee2eaa22de55f7d8c15ec061a7282cf96a54915eeb4564',
+      generation: 'f6150ff2273f97c073e2a7fb2d9bd90b6ea1810f98531e02e10c62d6b1e7b941',
+    },
+  ],
+  [
+    '2026-10-21-expertise-automation-bias-neonatal-imaging',
+    {
+      source: '85369ab989fdd6144588f800b946f62678519a70db318f367fd96fba0f907c67',
+      asset: 'e6b90ecdd90b0afd9e663467c499ea1ffd50cd44768e40ac7dccdd6735372340',
+      generation: '5d5a6441fef40aa638716e28bc7500e3287ca6b6ad5f492c0294295086aac646',
+    },
+  ],
+]);
+// Cutover-day stories: 2026-10-22 is the first mandatory-image edition. The first story
+// published that day was reviewed against the old policy hash before EDITORIAL.md existed.
+// This is a one-time exception; it must not be regenerated.
+const cutoverDayPolicySha256 = backfillPolicySha256;
+const cutoverDayReviewedImages = new Map([
+  [
+    '2026-10-22-tga-digital-scribe-review',
+    {
+      source: '3cd6bed329891dfbb50deacc665bd2954fc4e8c49090fd118ed07b36c4f87e56',
+      asset: '6d124774b4273cb58dd4aa587ae42fefecea32d35eb252f9bf550f1c44c3969e',
+      generation: '2cfe743f412880b42954fd47013ac812659939ff928771cb757eac5da7192f02',
     },
   ],
 ]);
@@ -228,7 +281,26 @@ export function validateIllustration(root: string, story: Story, bytes: Buffer) 
     historical?.source === review.story_source_sha256 &&
     historical?.asset === review.asset_sha256 &&
     historical?.generation === review.generation_key;
-  if (review.policy_sha256 !== currentPolicySha256 && !boundedHistoricalMatch)
+  const backfill = backfillReviewedImages.get(story.id);
+  const boundedBackfillMatch =
+    story.data.editorialDate < mandatoryImageEditorialDate &&
+    review.policy_sha256 === backfillPolicySha256 &&
+    backfill?.source === review.story_source_sha256 &&
+    backfill?.asset === review.asset_sha256 &&
+    backfill?.generation === review.generation_key;
+  const cutover = cutoverDayReviewedImages.get(story.id);
+  const boundedCutoverMatch =
+    story.data.editorialDate === mandatoryImageEditorialDate &&
+    review.policy_sha256 === cutoverDayPolicySha256 &&
+    cutover?.source === review.story_source_sha256 &&
+    cutover?.asset === review.asset_sha256 &&
+    cutover?.generation === review.generation_key;
+  if (
+    review.policy_sha256 !== currentPolicySha256 &&
+    !boundedHistoricalMatch &&
+    !boundedBackfillMatch &&
+    !boundedCutoverMatch
+  )
     throw new Error(`${story.id}: illustration policy changed`);
   const key = buildGenerationIdentity(review).generation_key;
   if (key !== review.generation_key) throw new Error(`${story.id}: invalid generation key`);
