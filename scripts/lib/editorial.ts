@@ -26,7 +26,7 @@ const historicalPolicySha256 = 'd98127f3092da042eae86ae8226f828ec8a990bd87071f9b
 // because they were reviewed against the policy at that time. These four stories are
 // pre-cutover (editorialDate < 2026-10-22) and their reviews are model-only, pending
 // human sign-off. They must not be regenerated; their hashes are fixed.
-const backfillPolicySha256 = '61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb';
+const backfillPolicySha256 = 'f7524af24724d20d7786de0429b6d9ad1fc18fd48d6616ecab48514050e744ae';
 const historicalReviewedImages = new Map([
   [
     '2026-10-19-oncology-ai-ehr-handoff',
@@ -49,25 +49,25 @@ const backfillReviewedImages = new Map([
   [
     '2026-10-12-clinical-ai-language-evidence',
     {
-      source: '734b887c97dd18980379bcf903280ffc2c4c0ac7967c7bf59f3efe2c59dc5371',
+      source: '33549724b6a5bf7751856c049f0c1a5ef11c2b37c664d592184907d3ef83bbe2',
       asset: 'adf67caf119a17846a43494157b713903030239b02e7c4070346c32bc740e2bf',
-      generation: '320f7075cb48d3daafcac54d5c70b3d005e849a56a5ee2aab3181e431e8b4323',
+      generation: '1218c9de11dda7d76a3856df4ec38f59d61d777a25f3264315be690797dab9a2',
     },
   ],
   [
     '2026-10-13-epilepsy-feedback-replay',
     {
-      source: '4030e58eefb498843ddcc3d98e2a9de179ae1ed08fca3c4586eee50c7adb3ef4',
+      source: '45bd6ec3e56134535df526fcb33103eb787b6623df88d23afc2b5f43bfc34266',
       asset: 'a3f226f221253c3c5e1148b37cea472161d36215fc792b71f60595b847f9fdd5',
-      generation: '36d39691d6004f80de52841f58e49335cf40dad20f96a3d338d830ecba305ae7',
+      generation: '7537461fe1b1278e14c15323f5b945564ce61ac4c2cf3a4338eef325a397a4bb',
     },
   ],
   [
     '2026-10-21-fda-ai-device-change-plan-examples',
     {
-      source: '2c0008b0df991cf93754778be5dc7794b3535eda7747b425345c4176da8c1d9d',
+      source: 'fc146dcb438355cd91bdaa8490a518a3c2fa2271225e4892d31d2fd5c10b0ff9',
       asset: 'e64b6d050d255bfe36ee2eaa22de55f7d8c15ec061a7282cf96a54915eeb4564',
-      generation: 'f6150ff2273f97c073e2a7fb2d9bd90b6ea1810f98531e02e10c62d6b1e7b941',
+      generation: 'd498defa1ebad63fb7b5f69fb200cd3badd3fcb17893ad46b318f2eff0400aca',
     },
   ],
   [
@@ -75,7 +75,7 @@ const backfillReviewedImages = new Map([
     {
       source: '85369ab989fdd6144588f800b946f62678519a70db318f367fd96fba0f907c67',
       asset: 'e6b90ecdd90b0afd9e663467c499ea1ffd50cd44768e40ac7dccdd6735372340',
-      generation: '5d5a6441fef40aa638716e28bc7500e3287ca6b6ad5f492c0294295086aac646',
+      generation: 'c2654681af919729be1bd83e4b751e1747781a1693bae562c58257e303736c20',
     },
   ],
 ]);
@@ -89,7 +89,7 @@ const cutoverDayReviewedImages = new Map([
     {
       source: '3cd6bed329891dfbb50deacc665bd2954fc4e8c49090fd118ed07b36c4f87e56',
       asset: '6d124774b4273cb58dd4aa587ae42fefecea32d35eb252f9bf550f1c44c3969e',
-      generation: '2cfe743f412880b42954fd47013ac812659939ff928771cb757eac5da7192f02',
+      generation: '289894c7747184f403f87f5b98e2dcb00834190f71dd3649c57ff6034def4b46',
     },
   ],
 ]);
