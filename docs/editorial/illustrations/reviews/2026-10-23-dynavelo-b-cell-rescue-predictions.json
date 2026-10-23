@@ -1,10 +1,10 @@
 {
   "version": "healthtech-1.0",
   "story_id": "2026-10-23-dynavelo-b-cell-rescue-predictions",
-  "story_source_sha256": "c40d25fa972ca53c9344c1d17843319dd0f513a12de526f7bc180568423d27bf",
+  "story_source_sha256": "7e84d1f418cf4a07db025875d4a699d9e34474d45ae1601a9430eb839e69cb1a",
   "brief_sha256": "5e2af9f387566c5075bfd524a687c858c2aa57dc110fc56bb2506540ec84a65f",
   "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
-  "generation_key": "a4899411559f507868cb24284b54d2545d8f3f1364905fcb4df44fdeaca3077b",
+  "generation_key": "05e880ad95423b7a6430a69ef72f62c494317a933cedda6b01b12ce87638821b",
   "candidate_count": 1,
   "generator": "image_gen.text2im",
   "model_snapshot": null,

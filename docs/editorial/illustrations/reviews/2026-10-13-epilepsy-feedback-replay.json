@@ -1,10 +1,10 @@
 {
   "version": "healthtech-1.0",
   "story_id": "2026-10-13-epilepsy-feedback-replay",
-  "story_source_sha256": "4030e58eefb498843ddcc3d98e2a9de179ae1ed08fca3c4586eee50c7adb3ef4",
+  "story_source_sha256": "45bd6ec3e56134535df526fcb33103eb787b6623df88d23afc2b5f43bfc34266",
   "brief_sha256": "1813c00355d534620b7aceef483927a8057f4b21293764836832eb216a04231b",
   "policy_sha256": "61ca82c3b8c5a0efaeff7fccc7dbb963c54710a934bf0ead04988b9330b909bb",
-  "generation_key": "36d39691d6004f80de52841f58e49335cf40dad20f96a3d338d830ecba305ae7",
+  "generation_key": "eff37cd4e3551f2e13ff0e4ea935883291632ed6ee9b5bf1e0cc8844c7daf2d4",
   "candidate_count": 2,
   "generator": "image_gen.text2im",
   "model_snapshot": null,
