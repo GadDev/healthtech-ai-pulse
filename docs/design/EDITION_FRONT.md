@@ -1,6 +1,6 @@
 # Edition Front implementation review
 
-The publication uses a dated serif masthead, a story-first homepage, five visible editorial desks and a white reading canvas. Teal rules and compact evidence summaries provide structure. Article navigation jumps to the full evidence record, analysis, original sources and corrections. The mobile layout places the summary before the copy and scrolls the desk navigation within its row.
+The publication uses a dated serif masthead, a story-first homepage, a single Desks entry routing to the category index and a white reading canvas. Teal rules and compact evidence summaries provide structure. Article navigation jumps to the full evidence record, analysis, original sources and corrections. The mobile layout places the summary before the copy and scrolls the desk navigation within its row.
 
 ## Existing photograph reassessment
 
