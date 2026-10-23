@@ -47,10 +47,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-21-fda-ai-device-change-plan-examples.webp
-  width: 1672
-  height: 941
-  alt: A medical-technology researcher looks at generic testing and workflow dashboards displayed on two monitors.
-  caption: Illustrative medical-software evaluation scene—not an FDA tool, authorised device or performance results from the agency's hypothetical examples.
+  width: 1536
+  height: 1024
+  alt: A simplified cardiac silhouette remains apart from offset update layers at a translucent checking membrane.
+  caption: Separated cardiac and update forms represent checks on hypothetical medical-software changes; they are not an FDA approval, a real device or evidence of clinical safety.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-21-fda-ai-device-change-plan-examples.json
 ---
 

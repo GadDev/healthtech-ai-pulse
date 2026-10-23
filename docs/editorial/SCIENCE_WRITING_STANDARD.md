@@ -78,7 +78,7 @@ A reviewer should be able to answer yes to each of the following:
 4. Are the main qualification and access limitations close to the claims they constrain rather than hidden in a boilerplate ending?
 5. Does the article progress without repetitive stock headings, disclaimers, abstract-style phrasing or padded bullets?
 6. Does the practical consequence follow from the evidence without drifting into medical advice, certainty or unsupported causation?
-7. Does the mandatory photographic concept illuminate this exact story without pretending to document actual participants, outcomes or a named institution?
+7. Does the mandatory scientific illustration concept illuminate this exact story without pretending to document actual participants, outcomes or a named institution?
 8. Can a reader identify the subject and main development from the title alone, with the evidence boundary (preclinical versus patient benefit, plan versus result) visible?
 9. Does the title avoid unexplained acronyms, jargon, promotional wording and unsupported outcomes?
 
@@ -94,4 +94,4 @@ Both sentences still need the underlying primary-source check. The example does 
 
 ## Production gate
 
-New public stories from editorial date **2026-10-22** need approved, story-specific photorealistic artwork as well as the narrative and evidence review. When a suitable image cannot be made safely, **withhold the story** rather than using a generic image or switching to `mode: none`. Ledger-only issues remain valid. The originally image-free historical stories from 12, 13 and 21 October 2026 are linked to reused PR #46 WebPs in PR #44, with model-only review records and exact asset hashes; human editorial/scientific approval remains required.
+New public stories from editorial date **2026-10-22** need approved, story-specific scientific editorial artwork as well as the narrative and evidence review. When a suitable image cannot be made safely, **withhold the story** rather than using a generic image or switching to `mode: none`. Ledger-only issues remain valid. The originally image-free historical stories from 12, 13 and 21 October 2026 are linked to reused PR #46 WebPs in PR #44, with model-only review records and exact asset hashes; human editorial/scientific approval remains required.

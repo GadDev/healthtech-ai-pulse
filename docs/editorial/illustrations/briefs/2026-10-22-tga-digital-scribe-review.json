@@ -1,30 +1,46 @@
 {
   "story_id": "2026-10-22-tga-digital-scribe-review",
-  "verified_context": "On 16 October 2026, Australia's Therapeutic Goods Administration reported that eight of 12 reviewed digital scribes included functions likely to meet the medical-device definition. The regulator did not test products, check safety or performance, or publish final product-level classifications. Administrative transcription alone may be outside device regulation, while patient-specific clinical recommendations or conclusions may trigger it.",
-  "visual_idea": "A staged clinician pauses to review digital documentation at an unbranded workstation in a calm consultation room, with a small tabletop microphone as the concrete scribe motif. The scene represents human scrutiny at the boundary between transcription and clinical recommendation without showing a patient, a real product or any medical result.",
-  "placement": "article hero and responsive listing",
+  "verified_context": "An Australian TGA review examined digital-scribe functions and identified some as likely to meet a medical-device definition. It did not test product safety or publish final product-level rulings; transcription and added clinical inference remain distinct functions.",
+  "visual_idea": "Transcription versus clinical inference: an organic speech ribbon settles into a blank folded record leaf, while a separate anatomical-profile contour lies beyond a fine rose seam.",
+  "placement": "article-hero and responsive listing",
   "crop": "wide",
-  "constraints": "Selected from three written concepts. Rejected concept 1: an empty microphone between consultation chairs was too generic and weak at thumbnail scale. Rejected concept 2: a split-screen classification metaphor risked looking like a factual regulatory diagram and generating pseudo-text. Generate one standalone 3:2 editorial image with a crop-safe central motif; keep the clinician and microphone legible in 16:9 and mobile object-fit crops. The computer display must be dark or softly abstract with no readable words, numbers, clinical values, charts, diagnosis, recommendation, patient data, logo or recognisable interface. No identifiable patient, product, supplier, regulator, national emblem, paperwork, regulatory approval cue, safety-performance result, futuristic AI motif or glowing brain. Clearly staged and non-documentary. No border, frame or watermark.",
+  "constraints": "Routine production after maintainer approval of the DynaVelo pilot. One initial generated candidate from three written concepts. Selected concept: Transcription versus clinical inference: an organic speech ribbon settles into a blank folded record leaf, while a separate anatomical-profile contour lies beyond a fine rose seam. Chosen because it makes this article's specific medical/research tension legible without asserting a mechanism or outcome. Alternatives: A clinician at a microphone and screen: rejected because it repeats the previous workstation imagery without explaining the functional boundary. A group of products divided into coloured categories: rejected because counts and colours could imply final product classifications or measured safety. Exact generation prompt: Create ONE standalone high-resolution 3:2 landscape scientific editorial illustration for a HealthTech AI Pulse article hero and responsive listing, 1536 by 1024 composition. It must survive central 16:9 article and 3:2 mobile cover crops and a 160px thumbnail. Scientific Editorial Abstraction: commissioned, restrained, recognisable medical or research subject matter, subtle dimensional matte-paper relief, dry-brush/etched surface detail and one focal relationship. Match the approved DynaVelo family in white space, tactile texture and calm contrast, but do not copy its cellular subject or arrangement. Palette: dominant white #FFFFFF, ink #424242, teals #51796E and #344F51, pale sage #E8EFEC and mist #D1E0E2; rose #D4A298 and caramel #BC8A5F only as sparing accents. Essential meaning must come from shapes and separation, not colour alone. No cream wash, glossy 3D or excessive gradients. No words, letters, numbers, labels, logos, UI, screenshots, page furniture, watermark, border or frame. No generated medical scans, documentary histology, actual patients, identifiable people or institutions, invented apparatus, unsupported anatomy or diagnostic features, invented molecular interactions, factual mechanism, data chart, measured proportions or outcome claims. No neon, glowing brain, robot, decorative floating molecules or generic AI icons. Do not depict clinical success, harm, treatment advice or regulatory endorsement. Not a bare schematic, flowchart, icon composition, generic geometric poster, stock artwork or website mockup.  Verified article context: An Australian TGA review examined digital-scribe functions and identified some as likely to meet a medical-device definition. It did not test product safety or publish final product-level rulings; transcription and added clinical inference remain distinct functions. Visual idea: Transcription versus clinical inference: an organic speech ribbon settles into a blank folded record leaf, while a separate anatomical-profile contour lies beyond a fine rose seam. Composition and scientific boundaries: A wordless editorial composition with one broad organic teal speech ribbon curling into a blank pale-sage record leaf on the left. A separate simplified faceless medical-profile relief sits across a narrow rose-edged seam on the right, offset rather than connected. The ribbon, physical record fold and separate profile are substantial illustrated forms, not icon rows or a flowchart. Keep the seam central and crop-safe. Fine etched texture, mostly white field, no literal characters or speech punctuation. No diagnoses, patient-specific recommendation, screen, microphone photograph, supplier logo, Australian map, TGA seal, approved/unsafe classification, product count or legal threshold.",
   "references": [
     {
-      "path": "public/images/stories/2026-10-21-expertise-automation-bias-neonatal-imaging.webp",
-      "sha256": "e6b90ecdd90b0afd9e663467c499ea1ffd50cd44768e40ac7dccdd6735372340"
+      "path": "docs/editorial/VISUAL_CONSTITUTION_V1.md",
+      "sha256": "ebc2fec12f0d0f75aa81b9ea1907f1805bd6c712061487d234c80d7c01a950bc"
     },
     {
-      "path": "public/images/stories/2026-10-21-fda-ai-device-change-plan-examples.webp",
-      "sha256": "e64b6d050d255bfe36ee2eaa22de55f7d8c15ec061a7282cf96a54915eeb4564"
+      "path": "docs/editorial/ILLUSTRATION_SYSTEM_V1.md",
+      "sha256": "c931665ddfb181c7de5abc5f67912be08761317f45533b279c8a61ce53367531"
     },
     {
-      "path": "public/images/stories/2026-10-20-astrazeneca-oracle-trials-agreement.webp",
-      "sha256": "a58e376929a4a22a39d2e0daa6ffa47db8cde907d117a5d44227c26e8f110a1a"
+      "path": ".agents/skills/healthtech-ai-pulse-illustration/SKILL.md",
+      "sha256": "fc335a5428133837b140c0dc824fe1ad42ec14f80a002dbf27bd03725f037dd8"
     },
     {
-      "path": "public/images/stories/2026-10-19-oncology-ai-ehr-handoff.webp",
-      "sha256": "45bf80a1cfb50d10fbb999c3a75eace36f6ef501e6dfcfb3e81c411e6763f499"
+      "path": "src/pages/stories/[...id].astro",
+      "sha256": "2c088b58c041762930eb35c4c3fa66578123c0e10ad36b0c79b8a60e3c369ca5"
     },
     {
-      "path": "public/images/stories/2026-10-13-epilepsy-feedback-replay.webp",
-      "sha256": "a3f226f221253c3c5e1148b37cea472161d36215fc792b71f60595b847f9fdd5"
+      "path": "src/components/StoryList.astro",
+      "sha256": "2b23835997f9887f42d46b6ae98d4718ded2e8e8347ecf4b61aac51b8e3bfbed"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "35b280e2359b32c8514707b8884f0f37ec0142b480ba46dc247d4798e44fc7e6"
+    },
+    {
+      "path": "src/components/IllustrationCaption.astro",
+      "sha256": "e691bd4b466b4fb52dab1281ca9dfe5f4e6fb1e757611c46e6cab3ce4993bc44"
+    },
+    {
+      "path": "src/styles/publication.css",
+      "sha256": "3a4d3423f332f045ab2e66987338d7c2fc7b2ab70f350a0300d5bff47c61f8af"
+    },
+    {
+      "path": "public/images/stories/2026-10-23-dynavelo-b-cell-rescue-predictions.webp",
+      "sha256": "bff8b4f0593f1e81ddbdede6ab26a26a816bd69baee7a0ca95d122003ded30d5"
     }
   ]
 }

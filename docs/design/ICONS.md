@@ -2,7 +2,7 @@
 
 The **open folio** combines two editorial pages and a raised signal dot. Its broad, filled shapes and open central gutter stay legible at 16px. It complements the serif masthead without squeezing initials into a browser tab. This is a publication identifier, not a clinical or certification symbol.
 
-The transparent SVG uses dark teal `#344F51` and teal `#51796E` on light browser chrome, switching to white on dark chrome. Touch/app icons use white artwork on a solid dark teal square; the operating system supplies corner masks. These brand assets are separate from generated editorial photographs.
+The transparent SVG uses dark teal `#344F51` and teal `#51796E` on light browser chrome, switching to white on dark chrome. Touch/app icons use white artwork on a solid dark teal square; the operating system supplies corner masks. These brand assets are separate from generated editorial illustrations.
 
 | Asset                                     | Use                                                  |
 | ----------------------------------------- | ---------------------------------------------------- |

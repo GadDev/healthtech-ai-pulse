@@ -692,3 +692,13 @@
 #search {
   margin-top: 1.75rem;
 }
+
+.illustration-caption {
+  margin-top: 0.55rem;
+  color: var(--ink);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.illustration-caption span {
+  font-weight: 600;
+}

@@ -23,7 +23,7 @@ AI is the organising focus. A non-AI development qualifies only when it material
 5. Prefer fewer useful stories. Empty desks and ledger-only days are valid. Selection scores support decisions and cannot override publication gates.
 6. Preserve the research record. Selected, watch, and rejected decisions remain auditable; withholding a selected story is a separate publication outcome. Later decisions and explicit human overrides append history.
 7. Readers must be able to find the sources, understand the claim boundary, and distinguish reporting from editorial interpretation. Articles must read as clear, engaging science journalism—not templated AI summaries; the story's evidence sets the narrative, never the other way around.
-8. Every newly prepared article must carry a medically responsible, story-specific, reviewed photorealistic editorial image. A failed or unavailable image withholds the article; there is no decorative placeholder escape hatch. Legacy articles needing image backfill are documented openly.
+8. Every newly prepared article must carry a medically responsible, story-specific, reviewed scientific editorial illustration. A failed or unavailable image withholds the article; there is no decorative placeholder escape hatch. Legacy articles needing image backfill are documented openly.
 9. Publish through human-reviewed Git changes. Automation never writes editorial batches to main, merges, enables auto-merge, or marks publication PRs ready for review.
 10. Collect no patient information. Use public evidence and lawfully accessible material; do not bypass access controls or copy entire protected papers or datasets.
 11. Keep operations sustainable for one maintainer. Automation must reduce review effort without concealing failures.

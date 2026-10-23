@@ -47,8 +47,8 @@ illustration:
   image: /images/stories/2026-10-23-dynavelo-b-cell-rescue-predictions.webp
   width: 1536
   height: 1024
-  alt: Gloved hands arrange three glass markers along branching paths on a laboratory light table.
-  caption: Staged editorial photograph representing model-nominated paths followed by laboratory tests—not the reported experiment, a biological mechanism or a treatment result.
+  alt: Stylised teal cells with dark nuclei lie beside a separate layer of fine curved traces on white.
+  caption: Cellular forms and separate traces evoke computational inference from cell snapshots; they are not microscopy, a measured pathway or evidence of treatment benefit.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-23-dynavelo-b-cell-rescue-predictions.json
 ---
 

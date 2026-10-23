@@ -50,10 +50,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-21-expertise-automation-bias-neonatal-imaging.webp
-  width: 1672
-  height: 941
-  alt: A clinician reviews a neonatal abdominal radiograph at a monitor in a softly lit intensive-care setting.
-  caption: Illustrative neonatal imaging setting—not one of the radiographs, study readers or clinical outcomes examined in the published simulation.
+  width: 1536
+  height: 1024
+  alt: A translucent tracing layer sits displaced above a smooth organic contour, leaving a clear gap between them.
+  caption: A displaced tracing overlay evokes checking AI advice against an observation; it is not a radiograph, diagnostic finding, study interface or neonatal outcome.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-21-expertise-automation-bias-neonatal-imaging.json
 ---
 

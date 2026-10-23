@@ -1,92 +1,61 @@
 # HealthTech illustration system
 
-Contract: `healthtech-1.0`. This guide adapts the source publication's visual constitution, production workflow and generation-identity guidance to HealthTech's mandatory-image publication rule with a bounded legacy transition. [Editorial policy](../EDITORIAL.md) governs medical claims; [the content model](../CONTENT_MODEL.md), `src/lib/editorial-schema.ts` and `scripts/lib/editorial.ts` define the stored fields and executable checks. Use the [target illustration skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) for execution.
+Contract: `healthtech-1.0`; authoring direction: `scientific-1`. [Editorial policy](../EDITORIAL.md) controls claims, [the visual constitution](VISUAL_CONSTITUTION_V1.md) controls scientific abstraction and palette, and the [target skill](../../.agents/skills/healthtech-ai-pulse-illustration/SKILL.md) executes this workflow. Do not import Daily AI Pulse's identity formula, warm palette, candidate thresholds or approvals.
 
-## Mandatory image gate
+## Preflight in the executing runtime
 
-Each new public story from the 2026-10-22 editorial edition must have one reviewed, specific photorealistic editorial image. `illustration.mode: none` is **not** a production choice. Four historical stories originally used `mode: none`. PR #46 merged their four existing WebP assets; PR #44 links those same bytes in the article frontmatter and adds retrospective briefs, model-only reviews and verified exact-source/asset hashes. The original image-generation prompts were not retained, and human scientific/editorial approval and exact-revision CI remain outstanding. Do not regenerate or duplicate these images by default. The former `mode: none` is a legacy state, not a valid new publishing pattern. A ledger-only batch creates no artwork because it publishes no story. Generate only for a selected, verified story whose final article bytes and image/alt/review paths are fixed. If the image fails, withhold that story until repaired; do not silently downgrade its mode or its research decision.
+Before drafting publication copy, record generation, pixel inspection, WebP conversion/decoding and binary-safe repository upload separately as available/unavailable/unverified, with observed evidence. A listed tool is not a successful call; this interactive session does not prove scheduler capabilities. Capability failure blocks affected artwork, not independent research.
 
-Explore three written photographic concepts and choose one before new generation. Start with one generated candidate from that choice and record the actual candidate count, excluding text concepts. Revise a failed concept or composition before generating a replacement. A three-image competition and production-reference archive are not requirements for this target.
+Use the existing ledger/checkpoint mechanism's optional `artwork` extension (`healthtech-artwork-1`); do not create a second competing ledger. New runs acquire this extension before drafting. Historical ledgers remain parseable and are not rewritten. Its exact shape is in `src/lib/editorial-schema.ts` and generated `ledger.schema.json`.
 
-## Compose from verified context
+Track per-story `pending` → `generated` → `reviewed` → `uploaded`, or `blocked` with failed stage, observed error and next action. Keep chronological history, the exact brief path/key, real candidate output IDs and prompt hashes, accepted review path and final asset details. Uploaded requires a Git blob ID and actual read-back revision. Save each stage under the existing owner lease and expected parent; resume the same branch/PR at the first unfinished stage. Preserve successful outputs on conversion/upload failure. Only material generation-input changes justify reopening generation. A retry, rebase or CI rerun alone does not.
 
-Use the **Editorial Science Photography** direction in [the visual constitution](VISUAL_CONSTITUTION_V1.md): credible, cinematic and human-centred where justified by the verified article. Fictional, staged clinical scenes may show people and realistic settings when a truthful illustrative caption and article context prevent confusion with real participants or outcomes. Don't default to sterile objects-only concepts simply because people are present. Read the visual constitution before preparing a brief or reviewing a candidate. Record the actual story ID, two or three supported context sentences, the chosen visual idea, intended placement and crop. Use `constraints` for the editorial point, meaningful action/relationship, composition and focal point, lighting, human-presence limits and anti-cliches specific to the story. Natural photographic colour, purposeful contrast, believable human interaction, portraits and environmental depth are allowed within the medical safeguards. The selected visual idea should explain the article's _actual_ tension without simulating proof of a finding. Inspect the current HealthTech renderer and stylesheet; do not assume source-publication layouts or image placements have been implemented here. Generate **only a standalone photograph**, never a four-panel news collage, mock website, precomposed magazine card or text baked into imagery. Serif headlines, dates, standfirsts, evidence labels and captions belong in Astro, where they stay accurate, responsive and accessible.
+## Brief, decision and generation
 
-## Review the actual asset
+Prepare a factually stable selected story with final image path, alt, caption and review path before hashing its bytes. Use Scientific Editorial Abstraction and the exact Quiet Laboratory palette. Routine production: three written concepts, select one, start with one real candidate. Issue #52: three real compositions for one replacement article, then select one. Bound retries to one revised batch per invocation and checkpoint a blocker if none pass.
 
-Inspect the image at intended article size, a narrow viewport and reduced thumbnail size **with the real headline and caption alongside it**. Check whether headline + photo imply stronger conclusions than the inspected evidence, especially real-world deployment, patient benefit, study participation, a regulatory action or validated performance. Check focal-point survival, crop, contrast and faithful alt text; the crop field accepts `wide`, `square` or `landscape`. The validator does not prove aesthetic quality, clinical fidelity or successful visual inspection.
+Persist the exact final brief at `docs/editorial/illustrations/briefs/<story-id>.json`. Required fields: `story_id`, `verified_context`, `visual_idea`, `placement`, `crop`; use `constraints` for scientific structure/simplification/metaphor, palette, focal relationship, prohibited implications, concepts and prompt construction. Include real repository-relative `{path, sha256}` references for constitution, skill, renderer, stylesheet and any supplied approved visual references. The shared brief reader checks exact reference bytes in both the decision CLI and batch validator.
 
-Keep a rejected candidate rejected. Record `unsupported_medical_implication: false` and `crop_passed: true` only after the corresponding review actually occurred. Record the real reviewer, `model` or `human` review type, and actual UTC review time. A model's self-review is not independent clinical validation.
+Before any new image call:
 
-After medical and technical review, apply the visual constitution's four editorial gates: specificity to the story, meaningful human question/workflow/action/relationship/metaphor, clarity at a 160-pixel thumbnail and responsive crops, and variety against recent approved images/current edition. A generic desk-and-device photograph can pass technical validation and still fail editorial review. Withhold any candidate that fails; identity reuse does not bypass these gates.
+```bash
+npm run illustration:decision -- --story YYYY-MM-DD-slug --brief docs/editorial/illustrations/briefs/YYYY-MM-DD-slug.json --generator-surface ACTUAL_TOOL --candidate-count ACTUAL_COUNT --json
+```
 
-In the publication PR body, record the three concepts and selection rationale (including the image's relationship to the specific scientific question), compared story IDs (or unavailable comparisons), any staged-human-scene/illustrative-caption risks, and pass/fail with a brief observed reason for each gate. Key accepted-image evidence to story ID and final asset SHA-256. Record rejected attempts and their actual failures; do not invent review outcomes. Keep these editorial judgments out of the unchanged strict `healthtech-1.0` review JSON. Automated validation does not enforce their presence or prove their truth; the PR reviewer must inspect them.
+`REUSE` requires matching identity, valid review/asset and the ordinary visual/batch checks. `GENERATE` is not acceptance. `NONE` is historical backfill only, never a new-publication choice. Invalid inputs block the decision. Build each actual prompt from placement/crop → verified context → one scientific idea → composition → constitution/palette → full prohibitions. Retain actual prompts and output identifiers in the PR evidence, not fabricated production records.
 
-## Bind generation to exact inputs
+## Inspect, compare and review
 
-Include all material generation instructions in the final brief, particularly whether the scene is staged, human presence limits, intended editorial crops, the exact scientific claim boundary and the prohibition on in-image titles/logos/UI. Follow the four historical backfill examples in the visual constitution when appropriate, without assuming their concepts are approved. If this guide or a supplied reference changes, reassess and update the brief before deciding reuse.
+Open actual pixels and apply the constitution's medical/prohibition gate before its specificity, meaning, clarity and variety gates. Inspect beside the actual headline, lead and visible disclosure. Compare with recent target images without mistaking old photography for an approved scientific reference set. Use the target comparison-sheet builder:
 
-Use SHA-256 over exact final article bytes for `story_source_sha256`, exact brief bytes for `brief_sha256`, and exact `docs/EDITORIAL.md` bytes for `policy_sha256`. Do not normalize whitespace or line endings. Keep hashes/reviews outside the article they fingerprint.
+```bash
+npm run illustration:contact-sheet -- --story YYYY-MM-DD-slug --out /path/to/new-sheet.png --crop wide --reference /path/to/current.webp /path/to/a.png /path/to/b.png /path/to/c.png
+```
 
-**Current fingerprint limitation:** unrelated changes to `docs/EDITORIAL.md` invalidate existing reviewed images, while changes to the visual constitution or illustration skill are not directly included in `policy_sha256`. The 2026-10-21 policy revision uses a narrowly scoped and explicit legacy fingerprint exception for the two previously accepted, unchanged image files and exact-story reviews; new images always hash the revised policy. This is not a new approval or a waiver of renewed visual review before merge. A composite fingerprint would require a separately reviewed helper, schema, CLI and validator migration, with compatibility rules and genuine re-review of affected assets. Never silently rehash historical approvals. The target's photorealistic Quiet Laboratory constitution and illustration skill govern generation; do not import warm-paper/terracotta instructions from the separate Daily AI Pulse publication.
+Contact sheets and candidates are temporary aids. Review the selected image in actual article and listing contexts at desktop, narrow mobile and 160 pixels, including 16:9/3:2 cover crops. The builder needs Chromium; `PLAYWRIGHT_EXECUTABLE_PATH` may select an existing compatible browser. It writes no approval. Put concise concept/candidate decisions and observed gate reasons in the PR, keyed to story ID and accepted asset SHA-256. Do not pretend CI judges taste or scientific truth.
 
-Compute `generation_key` as SHA-256 of UTF-8 `JSON.stringify` of this ordered array:
+## Convert, persist and read back
+
+Convert accepted artwork without stretching to a complete WebP, decode the final bytes and check dimensions/crops. Save under `public/images/stories/<story-id>.webp`; update image, alt, caption, dimensions and review metadata atomically. The reader must see a generated-editorial-illustration disclosure; alt alone is not disclosure.
+
+Use the strict `healthtech-1.0` review schema with actual reviewer/type/time, candidate count, actual tool, nullable exposed model snapshot and exact hashes. New reviews include `brief_path`, a backwards-compatible optional field for historical reviews; batch validation reads that brief and verifies its hash, story, crop and all references. Never invent past prompts or rewrite historical approvals. `unsupported_medical_implication=false` and `crop_passed=true` require actual review.
+
+Identity remains SHA-256 of UTF-8 JSON.stringify of the ordered array:
 
 ```text
 [story_id, story_source_sha256, brief_sha256, policy_sha256,
  version, candidate_count, generator, model_snapshot]
 ```
 
-Use `version: healthtech-1.0`, the actual generator and candidate count, and `null` when the model snapshot is unavailable. Do not import the source's nested version-1.3 identity, canonical-JSON object formula, legacy exceptions or reference-input hashes into the strict target review.
+Use the shared `scripts/lib/illustration-generation-identity.ts`; exact source/brief/policy bytes, no whitespace normalization. Reviewer, timestamps, branch, PR, selected candidate and output hash are not generation inputs. Reference hashes are included through the exact brief. New generation policy hash covers current `docs/EDITORIAL.md` bytes.
 
-Reuse requires matching current inputs, a valid review, matching final asset bytes and an acceptable crop. A retry or CI rerun alone does not justify regeneration. Source, brief, policy, generator, candidate-count or model-snapshot changes require reassessment. Asset changes invalidate its recorded integrity. Do not refresh timestamps or invent hashes to conceal a mismatch.
+The scientific-direction migration retains seven exact unchanged historical review fingerprints from main `16d3519`; source and asset hashes must still match. This is historical compatibility, not approval under the new direction or automatic reuse. Changed/new source, asset or review bytes must use current inputs. The maintainer approved the DynaVelo scientific direction and explicitly requested replacing all remaining article images on 23 October 2026. Each deliberate replacement receives a genuine new brief/review; previous review bytes remain in Git history. The immutable compatibility allowlist recognizes original historical bytes only and never supplies approval for new artwork. The accepted DynaVelo image is now the first approved HealthTech scientific production reference.
 
-The shared identity helper in `scripts/lib/illustration-generation-identity.ts` implements the same ordered-array formula used by the batch validator and decision CLI. The batch validator checks article/policy/asset integrity and the stored key; the CLI additionally compares the currently supplied brief and any declared reference fingerprints.
-
-### Read-only generation decision
-
-Prepare an explicit local JSON brief with these fields:
-
-```json
-{
-  "story_id": "YYYY-MM-DD-story-slug",
-  "verified_context": "Two or three supported sentences from the final article.",
-  "visual_idea": "Chosen photographic concept with one meaningful action or relationship",
-  "placement": "article-hero",
-  "crop": "wide",
-  "constraints": "Editorial point and why this scene is specific to it; focal point and required crop relationships; lighting; limits on human presence; story-specific cliches to avoid; medical and illustrative-context safeguards."
-}
-```
-
-This is a format example, not a real story or review. Replace its values with the actual source. The CLI retains optional `constraints` for existing brief compatibility; new briefs must use that nonempty string for the editorial direction above. Optional `references` contains repository-relative `{ "path": "...", "sha256": "..." }` records. Include material layout/style/reference inputs and their real hashes in the brief. The CLI rejects stale reference bytes and unknown brief fields. Local briefs may be temporary; the command does not commit them or add new editorial write paths.
-
-```bash
-npm run illustration:decision -- --story YYYY-MM-DD-story-slug --brief /path/to/brief.json --generator-surface ACTUAL_TOOL --candidate-count 1 --json
-```
-
-Use the actual tool, count and optional `--model-snapshot` value; absent snapshot means null. The command reads the canonical non-draft English story and reports `GENERATE` or `REUSE` for new stories; `NONE` is reserved for historical, pre-cutover stories awaiting backfill. It does not generate an image, alter the ledger or write an approval. Invalid/malformed inputs, foreign/forged reviews and unsupported contracts exit with code 2. Valid changed inputs or missing/changed asset bytes require generation rather than reuse. A `REUSE` decision still requires the normal batch and visual checks.
-
-### Optional comparison sheet
-
-```bash
-npm run illustration:contact-sheet -- --story YYYY-MM-DD-story-slug --out /path/to/new-review.png --crop wide /path/to/candidate.webp
-```
-
-The builder accepts at least one candidate, optional repeated `--reference <image>` arguments and `wide`, `square` or `landscape` preview crops. It embeds local PNG/JPEG/WebP inputs and writes a new PNG sheet without changing them or overwriting an existing file. No supplied references is recorded honestly; no production reference archive is invented. Preview ratios are 16:9, 1:1 and 3:2 respectively; inspect the real page as well. The sheet does not normalize the production image, create review JSON or certify medical fidelity.
-
-Chromium is required (`npx playwright install chromium`). `npm run illustration:contact-sheet:test` exercises actual rendering and invalid-image failure in the browser CI job, after Chromium installation. Unit tests run under the ordinary `npm test` gate. No new dependency is introduced.
-
-## Persist and validate
-
-Save accepted WebP bytes at `public/images/stories/<story-id>.webp` and the strict review JSON at `docs/editorial/illustrations/reviews/<story-id>.json`. Use the actual asset SHA-256 and schema field names. Stage related source, asset, review and ledger changes atomically under the orchestrator's ownership rules. Upload binary bytes through binary-safe Git operations.
-
-Run:
+Upload WebP through binary-safe Git operations. Read back the committed bytes or Git blob at the target revision, decode and match SHA-256/dimensions to frontmatter and review; only then record `uploaded`. An unreferenced blob, filename or upload-success response is not complete preparation. Run:
 
 ```bash
 npm run illustration:check -- docs/editorial/ledgers/YYYY-MM-DD.json
 npm run verify
 ```
 
-Replace the date with the actual batch date. Report command execution separately from source/visual inspection. No generated-image production acceptance is claimed by this guide.
-
-Adapted from `GadDev/daily-ai-pulse` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`: `VISUAL_CONSTITUTION_V1.md`, `ILLUSTRATION_SYSTEM_V1.md` and `ILLUSTRATION_GENERATION_IDENTITY_V1.md`. Visual authoring rules are in the target visual constitution; production and identity guidance are consolidated here; their historical approvals and incompatible contracts are excluded.
+A complete publication handoff requires uploaded artwork for every published story, no blocked capabilities, required checks and observed CI for the exact current head. Withhold affected stories when mandatory artwork fails; continue independent candidates where policy permits. A blocked checkpoint and a green build alone do not constitute publication approval. Keep the PR draft; human review/merge remain separate.

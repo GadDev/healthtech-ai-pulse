@@ -54,3 +54,7 @@ For each generated image, include the concept selection (or unchanged-input reus
 Inspect CI for the latest PR head and tested merge revision. Both `Verify project` and `Browser smoke and accessibility` must pass before reporting executable validation complete. Missing, pending, cancelled, stale or failed runs are not a pass. Keep the PR draft, make bounded repairs on the same branch and report the orchestrator's actual operational outcome. Human review, merge and production deployment are separate steps.
 
 Adapted from `GadDev/daily-ai-pulse/docs/editorial/PR_PREPARATION_V1.md` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`, using the target's evidence, ownership and optional-asset contracts.
+
+## Artwork evidence and recovery
+
+Before publication drafting, checkpoint runtime capabilities and per-story stages in the existing ledger.artwork extension; follow ILLUSTRATION_SYSTEM_V1.md. Final preparation requires uploaded, reviewed WebP bytes with a matching strict review/brief and committed read-back evidence. Resume the same branch/PR at the unfinished stage; do not regenerate valid outputs to repair upload. Preserve historical records. New briefs bind constitution, skill, renderer/CSS and supplied references; new reviews record brief_path. CI checks integrity and progress, not aesthetic/scientific truth.

@@ -49,10 +49,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-13-epilepsy-feedback-replay.webp
-  width: 1672
-  height: 941
-  alt: An adult wearing an EEG electrode cap holds a handheld feedback button while monitoring screens glow in the background.
-  caption: Illustrative EEG monitoring scene. The person, brain imagery and screen signals do not depict participants, measured data or clinical outcomes from the reported replay study.
+  width: 1536
+  height: 1024
+  alt: A pale recording ribbon curls back over a separate sage layer, beside a small rose impression.
+  caption: The looping recording ribbon represents offline replay and the separate impression evokes feedback; it is not a measured EEG signal, device interface or treatment result.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-13-epilepsy-feedback-replay.json
 corrections: []
 ---

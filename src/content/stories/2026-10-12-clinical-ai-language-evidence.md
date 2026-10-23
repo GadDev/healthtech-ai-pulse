@@ -49,10 +49,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-12-clinical-ai-language-evidence.webp
-  width: 1672
-  height: 941
-  alt: Two people compare illustrated health-information sheets with a world map spread across a table.
-  caption: Staged illustration of multilingual health communication—not a study participant, evaluated AI translation tool or demonstrated clinical deployment.
+  width: 1536
+  height: 1024
+  alt: Two simplified profile contours face layered speech-like forms and an incomplete translucent comparison leaf.
+  caption: Profiles and incomplete comparison layers evoke gaps in clinical-language evaluation; no language ranking, measured distribution or deployed translation system is depicted.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-12-clinical-ai-language-evidence.json
 corrections: []
 ---

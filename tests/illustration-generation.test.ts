@@ -37,6 +37,7 @@ function setup(t: TestContext, mode = 'generated') {
   for (const dir of [
     'src/content/stories',
     'docs/editorial/illustrations/reviews',
+    'docs/editorial/illustrations/briefs',
     'public/images/stories',
   ])
     mkdirSync(join(root, dir), { recursive: true });
@@ -87,10 +88,16 @@ function persist(f: ReturnType<typeof setup>) {
   const decision = resolveIllustrationGeneration(f.root, f.options);
   if (!('expected_identity' in decision)) throw new Error('Expected generation identity');
   const identity = decision.expected_identity;
-  // Isolated RIFF/WEBP container-header fixture; not generated or published artwork.
-  const image = Buffer.from('RIFF0000WEBP');
+  // Decodable synthetic white 16px WebP; not generated or published artwork.
+  const image = Buffer.from(
+    'UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoQABAAAUAmJaQAA3AA/vz0AAA=',
+    'base64',
+  );
+  const briefPath = `docs/editorial/illustrations/briefs/${f.id}.json`;
+  writeFileSync(join(f.root, briefPath), readFileSync(f.briefPath));
   const review = {
     ...identity,
+    brief_path: briefPath,
     asset_sha256: sha256(image),
     crop: 'wide',
     reviewed_by: 'Synthetic fixture, not approval',
@@ -340,5 +347,65 @@ test('sheet escapes filename markup and preserves input/output ownership', (t) =
         image,
       ]),
     /crop/,
+  );
+});
+
+test('persisted briefs bind reference bytes in both decision and batch validation', async (t) => {
+  const f = setup(t);
+  const reference = join(f.root, 'reference.md');
+  writeFileSync(reference, 'Synthetic original reference.');
+  f.brief.references = [{ path: 'reference.md', sha256: sha256(readFileSync(reference)) }];
+  writeFileSync(f.briefPath, JSON.stringify(f.brief));
+  const saved = persist(f);
+  const path = `docs/editorial/illustrations/briefs/${f.id}.json`;
+  mkdirSync(join(f.root, 'docs/editorial/illustrations/briefs'), { recursive: true });
+  writeFileSync(join(f.root, path), readFileSync(f.briefPath));
+  const { default: sharp } = await import('sharp');
+  const image = await sharp({
+    create: { width: 16, height: 16, channels: 3, background: '#FFFFFF' },
+  })
+    .webp()
+    .toBuffer();
+  const review = { ...saved.review, brief_path: path, asset_sha256: sha256(image) };
+  writeFileSync(saved.assetPath, image);
+  writeFileSync(saved.reviewPath, JSON.stringify(review));
+  const story = { id: f.id, data: storySchema.parse(f.story) };
+  assert.doesNotThrow(() => validateIllustration(f.root, story, Buffer.from(f.source)));
+  assert.equal(resolveIllustrationGeneration(f.root, f.options).decision, 'REUSE');
+  writeFileSync(reference, 'Changed synthetic constitution/reference.');
+  assert.throws(() => resolveIllustrationGeneration(f.root, f.options), /Reference changed/);
+  assert.throws(
+    () => validateIllustration(f.root, story, Buffer.from(f.source)),
+    /Reference changed/,
+  );
+  writeFileSync(reference, 'Synthetic original reference.');
+  const truncated = image.subarray(0, 20);
+  writeFileSync(saved.assetPath, truncated);
+  writeFileSync(saved.reviewPath, JSON.stringify({ ...review, asset_sha256: sha256(truncated) }));
+  assert.throws(
+    () => validateIllustration(f.root, story, Buffer.from(f.source)),
+    /incomplete WebP/,
+  );
+  assert.throws(() => resolveIllustrationGeneration(f.root, f.options), /incomplete WebP/);
+});
+
+test('new review cannot bypass reference validation by omitting the persisted brief', (t) => {
+  const f = setup(t);
+  const saved = persist(f);
+  const legacyShape = { ...saved.review };
+  Reflect.deleteProperty(legacyShape, 'brief_path');
+  writeFileSync(saved.reviewPath, JSON.stringify(legacyShape));
+  assert.throws(
+    () =>
+      validateIllustration(
+        f.root,
+        { id: f.id, data: storySchema.parse(f.story) },
+        Buffer.from(f.source),
+      ),
+    /requires a persisted brief/,
+  );
+  assert.throws(
+    () => resolveIllustrationGeneration(f.root, f.options),
+    /requires a persisted brief/,
   );
 });

@@ -320,6 +320,10 @@ export const reviewSchema = z
     story_id: id,
     story_source_sha256: hash,
     brief_sha256: hash,
+    brief_path: z
+      .string()
+      .regex(/^docs\/editorial\/illustrations\/briefs\/[a-z0-9-]+\.json$/)
+      .optional(),
     policy_sha256: hash,
     generation_key: hash,
     candidate_count: z.number().int().positive(),
@@ -334,12 +338,75 @@ export const reviewSchema = z
     crop_passed: z.literal(true),
   })
   .strict();
+// Optional for stored historical ledgers; acquireRun initializes it for new runs.
+const capability = z
+  .object({ status: z.enum(['available', 'unavailable', 'unverified']), evidence: text })
+  .strict();
+export const artworkSchema = z
+  .object({
+    version: z.literal('healthtech-artwork-1'),
+    runtime: text,
+    checked_at: instant,
+    capabilities: z
+      .object({
+        generation: capability,
+        inspection: capability,
+        conversion: capability,
+        upload: capability,
+      })
+      .strict(),
+    stories: z.array(
+      z
+        .object({
+          story_id: id,
+          stage: z.enum(['pending', 'generated', 'reviewed', 'uploaded', 'blocked']),
+          brief_path: text.optional(),
+          generation_key: hash.optional(),
+          candidates: z.array(z.object({ output_id: text, prompt_sha256: hash }).strict()),
+          review_path: text.optional(),
+          asset: z
+            .object({
+              path: text,
+              sha256: hash,
+              width: z.number().int().positive(),
+              height: z.number().int().positive(),
+              git_blob_sha: sha.optional(),
+              read_back_revision: sha.optional(),
+            })
+            .strict()
+            .optional(),
+          blocker: z
+            .object({
+              stage: z.enum(['pending', 'generated', 'reviewed', 'uploaded']),
+              error: text,
+              next_action: text,
+            })
+            .strict()
+            .optional(),
+          history: z
+            .array(
+              z
+                .object({
+                  stage: z.enum(['pending', 'generated', 'reviewed', 'uploaded', 'blocked']),
+                  at: instant,
+                  evidence: text,
+                })
+                .strict(),
+            )
+            .min(1),
+        })
+        .strict(),
+    ),
+  })
+  .strict();
+
 export const ledgerSchema = z
   .object({
     schema_version: z.literal('healthtech-1.0'),
     decision_engine_version: z.literal('healthtech-1.0'),
     editorial_date: date,
     timezone: z.literal('Europe/Luxembourg'),
+    artwork: artworkSchema.optional(),
     contract_ref: sha,
     kind: z.enum(['daily', 'controlled-trial']),
     research: z

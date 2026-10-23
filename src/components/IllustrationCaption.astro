@@ -1,0 +1,12 @@
+---
+interface Props {
+  caption?: string;
+  compact?: boolean;
+}
+const { caption, compact = false } = Astro.props;
+---
+
+<figcaption class="illustration-caption">
+  <span>Generated editorial illustration.</span>
+  {!compact && caption && ` ${caption}`}
+</figcaption>

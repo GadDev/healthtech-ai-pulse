@@ -221,7 +221,10 @@ export async function renderContactSheet(options: ContactSheetOptions) {
   if (inputs.includes(resolve(options.output)) || existsSync(options.output))
     throw new Error('Contact sheet output would overwrite an existing file.');
   const html = buildContactSheetHtml(options);
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH || undefined,
+  });
   try {
     const page = await browser.newPage({
       viewport: { width: 1600, height: 1400 },
