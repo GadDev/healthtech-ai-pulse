@@ -342,3 +342,42 @@ test('sheet escapes filename markup and preserves input/output ownership', (t) =
     /crop/,
   );
 });
+
+test('persisted briefs bind reference bytes in both decision and batch validation', async (t) => {
+  const f = setup(t);
+  const reference = join(f.root, 'reference.md');
+  writeFileSync(reference, 'Synthetic original reference.');
+  f.brief.references = [{ path: 'reference.md', sha256: sha256(readFileSync(reference)) }];
+  writeFileSync(f.briefPath, JSON.stringify(f.brief));
+  const saved = persist(f);
+  const path = `docs/editorial/illustrations/briefs/${f.id}.json`;
+  mkdirSync(join(f.root, 'docs/editorial/illustrations/briefs'), { recursive: true });
+  writeFileSync(join(f.root, path), readFileSync(f.briefPath));
+  const { default: sharp } = await import('sharp');
+  const image = await sharp({
+    create: { width: 16, height: 16, channels: 3, background: '#FFFFFF' },
+  })
+    .webp()
+    .toBuffer();
+  const review = { ...saved.review, brief_path: path, asset_sha256: sha256(image) };
+  writeFileSync(saved.assetPath, image);
+  writeFileSync(saved.reviewPath, JSON.stringify(review));
+  const story = { id: f.id, data: storySchema.parse(f.story) };
+  assert.doesNotThrow(() => validateIllustration(f.root, story, Buffer.from(f.source)));
+  assert.equal(resolveIllustrationGeneration(f.root, f.options).decision, 'REUSE');
+  writeFileSync(reference, 'Changed synthetic constitution/reference.');
+  assert.throws(() => resolveIllustrationGeneration(f.root, f.options), /Reference changed/);
+  assert.throws(
+    () => validateIllustration(f.root, story, Buffer.from(f.source)),
+    /Reference changed/,
+  );
+  writeFileSync(reference, 'Synthetic original reference.');
+  const truncated = image.subarray(0, 20);
+  writeFileSync(saved.assetPath, truncated);
+  writeFileSync(saved.reviewPath, JSON.stringify({ ...review, asset_sha256: sha256(truncated) }));
+  assert.throws(
+    () => validateIllustration(f.root, story, Buffer.from(f.source)),
+    /incomplete WebP/,
+  );
+  assert.throws(() => resolveIllustrationGeneration(f.root, f.options), /incomplete WebP/);
+});

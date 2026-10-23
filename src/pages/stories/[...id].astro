@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import IllustrationCaption from '../../components/IllustrationCaption.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EvidenceCard from '../../components/EvidenceCard.astro';
 import EvidenceSummary from '../../components/EvidenceSummary.astro';
@@ -47,6 +48,7 @@ const { Content } = await render(story);
           height={story.data.illustration.height ?? 1024}
           fetchpriority="high"
         />
+        <IllustrationCaption caption={story.data.illustration.caption} />
       </figure>
     )}
     <nav class="article-jumps" aria-label="In this article">

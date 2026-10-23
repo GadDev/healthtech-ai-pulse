@@ -1,4 +1,5 @@
 ---
+import IllustrationCaption from './IllustrationCaption.astro';
 import type { CollectionEntry } from 'astro:content';
 import { desks } from '../lib/categories';
 interface Props {
@@ -24,6 +25,7 @@ const { stories, showImage = false } = Astro.props;
           height="1024"
           loading="lazy"
         />
+        <IllustrationCaption compact />
       </figure>
     )}
     <div>

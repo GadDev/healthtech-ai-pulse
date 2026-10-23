@@ -79,3 +79,7 @@ For operating details, see [the illustration guide](editorial/ILLUSTRATION_SYSTE
 The 18 October 2026 trial inspects an actual EMA landing page, rejects its old reflection paper as current news, records access/coverage limitations and produces no public article or issue. It is not a comprehensive research run, clinical study review, human editorial approval or scheduled trial.
 
 Synthetic positive and negative fixtures live under `tests/` and temporary test directories, never live collections. Tests cover schema requirements, score arithmetic, source access, withholding, watch/exclusion leakage, empty batches, story/ledger drift, duplicate developments and declared missing imagery. Required browser checks remain separate; passing build/unit checks must not be reported as completed visual/accessibility review.
+
+### Compatible artwork evidence extension
+
+New orchestration checkpoints use optional ledger.artwork (version healthtech-artwork-1), defined by editorial-schema.ts. Historical ledgers remain unchanged. New reviews include optional brief_path pointing to their exact stored brief; when present, both CLI and batch checks verify brief/reference bytes. Source, asset and unchanged historical review fingerprints remain bound during the scientific-direction policy migration; no historical review is silently rehashed. The illustration guide owns the workflow and recovery details.

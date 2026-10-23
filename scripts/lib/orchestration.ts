@@ -1,4 +1,5 @@
 import { isDeepStrictEqual } from 'node:util';
+import { preserveArtwork } from './artwork.ts';
 import { validateLedger } from './editorial.ts';
 
 type Ledger = ReturnType<typeof validateLedger>;
@@ -92,7 +93,7 @@ function preserveResearch(previous: Ledger, next: Ledger) {
 }
 function assertEditorialPaths(date: string, files: EditorialFiles) {
   const safe = new RegExp(
-    `^(src/content/stories/${date}-[a-z0-9-]+\\.md|src/content/pulse/${date}\\.md|public/images/stories/${date}-[a-z0-9-]+\\.webp|docs/editorial/illustrations/reviews/${date}-[a-z0-9-]+\\.json)$`,
+    `^(src/content/stories/${date}-[a-z0-9-]+\\.md|src/content/pulse/${date}\\.md|public/images/stories/${date}-[a-z0-9-]+\\.webp|docs/editorial/illustrations/(?:reviews|briefs)/${date}-[a-z0-9-]+\\.json)$`,
   );
   for (const [path, value] of Object.entries(files)) {
     if (!safe.test(path)) throw new RunBlocked(`Editorial run cannot modify ${path}`);
@@ -157,6 +158,19 @@ export async function acquireRun(
     throw new RunBlocked('Daily ledger/date required.');
   if (ledger.active_run && Date.parse(ledger.active_run.expires_at) > now)
     throw new RunBlocked('A run already owns this date; do not create another branch or PR.');
+  ledger.publication.mode = 'in-progress';
+  ledger.artwork = {
+    version: 'healthtech-artwork-1',
+    runtime: 'Unverified executing runtime',
+    checked_at: iso(now),
+    capabilities: Object.fromEntries(
+      ['generation', 'inspection', 'conversion', 'upload'].map((name) => [
+        name,
+        { status: 'unverified', evidence: 'Runtime preflight not performed.' },
+      ]),
+    ) as NonNullable<Ledger['artwork']>['capabilities'],
+    stories: ledger.artwork?.stories ?? [],
+  };
   ledger.active_run = lease(now, owner, ttl);
   ledger.attempts.push({
     run_id: owner,
@@ -198,6 +212,7 @@ export async function checkpoint(
       'Branch changed after checkpoint; inspect human/concurrent edits before resuming.',
     );
   preserveResearch(current.ledger, ledger);
+  preserveArtwork(current.ledger, ledger);
   for (let i = 0; i < current.ledger.attempts.length; i++) {
     const old = current.ledger.attempts[i];
     const updated = ledger.attempts[i];
@@ -205,6 +220,12 @@ export async function checkpoint(
       throw new RunBlocked('Previous run attempts must remain unchanged.');
   }
   assertEditorialPaths(session.date, files);
+  if (
+    Object.keys(files).some((path) => path.startsWith('src/content/stories/')) &&
+    (!ledger.artwork ||
+      Object.values(ledger.artwork.capabilities).some((c) => c.status !== 'available'))
+  )
+    throw new RunBlocked('Record observed artwork capability preflight before drafting stories.');
   const next = structuredClone(ledger);
   next.active_run = release
     ? null

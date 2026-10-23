@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import IllustrationCaption from '../components/IllustrationCaption.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceSummary from '../components/EvidenceSummary.astro';
 import StoryList from '../components/StoryList.astro';
@@ -45,6 +46,7 @@ const [lead, ...remaining] = stories;
               height="1024"
               fetchpriority="high"
             />
+            <IllustrationCaption compact />
           </figure>
         )}
       </article>

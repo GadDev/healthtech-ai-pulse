@@ -379,6 +379,34 @@ test('controlled end-to-end fixture: ledger → reviewed image → issue → dra
   assert.ok(current);
   const ledger = current.ledger;
   ledger.publication = publishable.publication;
+  assert.ok(ledger.artwork);
+  for (const capability of Object.values(ledger.artwork.capabilities)) {
+    capability.status = 'available';
+    capability.evidence = 'Synthetic observed tool call; not production capability.';
+  }
+  ledger.artwork.stories = [
+    {
+      story_id: id,
+      stage: 'uploaded',
+      brief_path: 'synthetic-brief.json',
+      generation_key: actualIdentity.generation_key,
+      candidates: [{ output_id: 'synthetic-output', prompt_sha256: sha256(brief) }],
+      review_path: illustration.reviewPath,
+      asset: {
+        path: illustration.image,
+        sha256: sha256(image),
+        width: 16,
+        height: 16,
+        git_blob_sha: 'b'.repeat(40),
+        read_back_revision: 'c'.repeat(40),
+      },
+      history: ['pending', 'generated', 'reviewed', 'uploaded'].map((stage) => ({
+        stage: stage as 'pending' | 'generated' | 'reviewed' | 'uploaded',
+        at: now,
+        evidence: 'Synthetic fixture stage.',
+      })),
+    },
+  ];
   session = await checkpoint(a, session, {
     ledger,
     files: {

@@ -100,3 +100,34 @@ test('retrospective edition dates are not presented as publication timestamps', 
   expect(rss).toContain('Edition date: 2026-10-12.');
   expect(rss).not.toContain('<pubDate>');
 });
+
+for (const width of [375, 1280])
+  test(`scientific pilot image and disclosure survive real placements at ${width}px`, async ({
+    page,
+  }, testInfo) => {
+    await page.setViewportSize({ width, height: 1000 });
+    for (const [name, path, selector] of [
+      ['home', '/', '.lead-story'],
+      ['article', '/stories/2026-10-23-dynavelo-b-cell-rescue-predictions/', '.article-page'],
+      ['listing', '/desks/biomedical-foundations/', '.story-row--visual'],
+    ]) {
+      await page.goto(path);
+      const image = page.locator(`${selector} img[src*="dynavelo"]`).first();
+      await expect(image).toBeVisible();
+      expect(
+        await image.evaluate(async (el) => {
+          await (el as HTMLImageElement).decode();
+          return (el as HTMLImageElement).naturalWidth;
+        }),
+      ).toBe(1536);
+      await expect(page.locator(`${selector} figcaption`).first()).toContainText(
+        'Generated editorial illustration.',
+      );
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+      ).toBeTruthy();
+      if (name === 'article')
+        await expect(page.locator('.article-image figcaption')).toContainText('not microscopy');
+      await page.screenshot({ path: testInfo.outputPath(`scientific-pilot-${name}-${width}.png`) });
+    }
+  });
