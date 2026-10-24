@@ -1,0 +1,678 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-24",
+  "timezone": "Europe/Luxembourg",
+  "artwork": {
+    "version": "healthtech-artwork-1",
+    "runtime": "ChatGPT Work automation runtime",
+    "checked_at": "2026-10-24T07:57:16.000Z",
+    "capabilities": {
+      "generation": {
+        "status": "available",
+        "evidence": "The runtime exposes image_gen.imagegen for original raster generation."
+      },
+      "inspection": {
+        "status": "available",
+        "evidence": "The runtime exposes pixel inspection for local image files and repository preview rendering."
+      },
+      "conversion": {
+        "status": "available",
+        "evidence": "The pinned dependency tree includes Sharp for WebP conversion and decoding."
+      },
+      "upload": {
+        "status": "available",
+        "evidence": "The connected GitHub API exposes binary-safe blob, tree, commit and compare-and-swap ref operations."
+      }
+    },
+    "stories": [
+      {
+        "story_id": "2026-10-24-microsoft-sequential-diagnosis-benchmark",
+        "stage": "pending",
+        "candidates": [],
+        "history": [
+          {
+            "stage": "pending",
+            "at": "2026-10-24T07:57:16.000Z",
+            "evidence": "Selected and verified candidate awaiting a fixed story, persisted brief and generated pixels."
+          }
+        ]
+      },
+      {
+        "story_id": "2026-10-24-head-ct-ai-advice-reliance",
+        "stage": "pending",
+        "candidates": [],
+        "history": [
+          {
+            "stage": "pending",
+            "at": "2026-10-24T07:57:16.000Z",
+            "evidence": "Selected and verified candidate awaiting a fixed story, persisted brief and generated pixels."
+          }
+        ]
+      }
+    ]
+  },
+  "contract_ref": "2ffe6a39284b0a12418c2c6ec72112f72938f6a1",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-22T07:41:55.000Z",
+    "window_end": "2026-10-24T07:57:16.000Z",
+    "last_completed_cutoff": "2026-10-23T07:41:55.000Z",
+    "query_log": [
+      {
+        "query": "Research/evaluation lane: PubMed publication-date search for artificial intelligence, machine learning, diagnostic decision support, medical imaging and biomedical models dated 22-24 October 2026; screen the first 25 of 221 returned records and follow candidate records to primary sources",
+        "source": "PubMed E-utilities, Science, The Lancet Digital Health, author manuscripts and public research artifacts",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "The bounded first-page screen surfaced the 22 October Science sequential-diagnosis paper, the 23 October Lancet Digital Health reliance experiment, an ECG/dementia embedding study and a late-indexed AMIE feasibility study. The first two were selected after full-text verification; the ECG study remains watch, and AMIE was rejected as an older event without a current material delta. Europe PMC retrieval returned a transient 503 and is recorded as a gap."
+      },
+      {
+        "query": "Safety/official lane: FDA, European Commission, EMA, GOV.UK, HAS and BfArM searches for AI-enabled medical-device actions, guidance, safety alerts, recalls and policy changes dated 22-24 October 2026",
+        "source": "FDA, European Commission, EMA, GOV.UK, Haute Autorité de Santé and BfArM",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "No new in-window formal AI-device authorization, recall, guidance or enforcement action was identified in the bounded official pass. Provider comments on the FDA generative-AI docket remain stakeholder submissions rather than agency policy and the existing watch is not due until 30 October."
+      },
+      {
+        "query": "Deployment/operations lane: Fierce Healthcare, Healthcare Dive, MedTech Dive and Healthcare IT News items dated 22-24 October 2026; follow product and deployment reports to original evidence",
+        "source": "Fierce Healthcare, Healthcare Dive, MedTech Dive and Healthcare IT News",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "Specialist outlets were screened. A Doximity-UpToDate partnership described access and integration but supplied no measured workflow, safety or patient outcome and was rejected. Provider accountability comments on an FDA docket did not constitute a new regulator action. No deployment evaluation cleared the evidence gate."
+      },
+      {
+        "query": "Biomedical/pharma engineering lane: PubMed, Nature-family journals, ESMO listings, Fierce Biotech and BioPharma Dive for model validation, multiomics, molecule design and trial results dated 22-24 October 2026",
+        "source": "PubMed, publisher pages, ESMO congress listings and specialist biotechnology outlets",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "No additional biomedical or pharma candidate cleared the current-event and evidence gates. Insilico Medicine's ISM6331 presentation is scheduled for 25 October; results had not yet been presented at the cutoff and remain watch rather than being inferred from advance promotion."
+      },
+      {
+        "query": "European/local-language lane: French HAS, German BfArM and Luxembourg LIH and Agence eSanté searches for intelligence artificielle, künstliche Intelligenz and digital-health developments dated 22-24 October 2026",
+        "source": "HAS, BfArM, Luxembourg Institute of Health and Agence eSanté Luxembourg",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "French, German and Luxembourg official or institutional results were screened. No new in-window AI health action or result was found. A 23 October Agence eSanté notice concerned EHDS project participation, not a discrete AI development, and LIH search results were older research or event material."
+      },
+      {
+        "query": "Negative evidence and archive sweep: correction, retraction, expression of concern, contamination, failed validation, harm, automation bias and recall terms for selected candidates; exact DOI, PMID, title, model and event identities across merged HealthTech ledgers and stories",
+        "source": "Science and Lancet records, PubMed, Crossref-indexed results, public manuscripts, OSF artifacts and GadDev/healthtech-ai-pulse history through contract_ref",
+        "accessed_at": "2026-10-24T07:57:16.000Z",
+        "outcome": "No correction, retraction or expression of concern was identified for either selected paper. The MAI-DxO paper does not report a contamination check for public CPC cases and its gatekeeper can synthesize missing details; the reliance experiment deliberately fixed AI advice at 80% accuracy and used an artificial prevalence. Exact title, DOI, PMID, benchmark, model and study identities did not match a prior HealthTech candidate or story. The 21 October neonatal-imaging story is related context, not the same experiment, cohort or publication."
+      }
+    ],
+    "coverage_gaps": [
+      "PubMed returned 221 results for the bounded date/topic query; only the first 25 were screened, so exhaustive literature coverage is not claimed.",
+      "Europe PMC returned a transient 503 during the research window; no Europe PMC result count or completed pagination is claimed.",
+      "The Science publisher page did not expose full text in the available browsing surface. Claims were checked against the full author-hosted manuscript and the versioned PhysioNet benchmark artifact, while publisher status and DOI were checked separately.",
+      "No independent prospective clinical validation of MAI-DxO was found; both datasets are text-only simulations and all study authors are affiliated with Microsoft.",
+      "The Lancet Digital Health publisher full text was not directly retrievable. The final PubMed abstract and the accepted manuscript, preregistration, data and code on OSF were inspected.",
+      "The accepted reliance manuscript predates the 23 October journal publication. The current event is peer-reviewed publication, not a newly conducted experiment.",
+      "No formal in-window EU, UK, French, German or Luxembourg AI-health policy action surfaced in the first bounded official/local-language results."
+    ],
+    "completed_at": "2026-10-24T07:57:16.000Z"
+  },
+  "candidates": [
+    {
+      "id": "2026-10-24-microsoft-sequential-diagnosis-benchmark",
+      "decision": "selected",
+      "title": "Microsoft diagnostic orchestrator outperformed generalist physicians in text-only simulations",
+      "desk": "clinical-ai",
+      "topics": ["diagnostics", "decision-support", "evaluation", "reproducibility"],
+      "entities": ["Microsoft AI", "MAI-DxO", "SDBench", "PhysioNet"],
+      "event_date": "2026-10-22",
+      "event_date_reason": "Science lists the peer-reviewed paper in its 22 October 2026 issue.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "The Science citation and the SDBench PhysioNet release both identify 22 October 2026.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "A peer-reviewed Science paper evaluated Microsoft's MAI Diagnostic Orchestrator on two sequential, text-only diagnostic simulations. The GPT-5 configuration reached 83.2% accuracy on a held-out set of difficult NEJM clinicopathological cases and 80.3% on a held-out MIMIC-IV emergency-department set, above individual generalist-physician comparison groups in the same simulated interface.",
+      "why_now": "The 22 October version of record adds peer review, a second emergency-department-derived benchmark and a versioned public SDBench artifact to a result first promoted in a 2025 preprint.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1126/science.aeh7930",
+      "sources": [
+        {
+          "id": "science-sequential-diagnosis",
+          "url": "https://doi.org/10.1126/science.aeh7930",
+          "canonical_url": "https://www.science.org/doi/10.1126/science.aeh7930",
+          "publisher": "Science",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-22",
+          "date_reason": "Science volume 394, issue 6822 identifies 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Peer-reviewed paper written entirely by Microsoft-affiliated authors"
+        },
+        {
+          "id": "author-sequential-diagnosis-manuscript",
+          "url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "canonical_url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "publisher": "Eric Horvitz / Microsoft Research",
+          "role": "supporting",
+          "source_type": "author-hosted-full-manuscript",
+          "publication_date": null,
+          "date_reason": "The file does not display a reliable hosting date; it is used for methods, results and limitations rather than event dating.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Full manuscript hosted by a study author and Microsoft employee; not independent corroboration"
+        },
+        {
+          "id": "physionet-sdbench",
+          "url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "canonical_url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "publisher": "PhysioNet",
+          "role": "supporting",
+          "source_type": "versioned-public-benchmark-artifact",
+          "publication_date": "2026-10-22",
+          "date_reason": "PhysioNet version 1.0.0 lists publication on 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Public artifact deposited by the Microsoft study team"
+        },
+        {
+          "id": "microsoft-mai-dxo-announcement",
+          "url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "canonical_url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "publisher": "Microsoft AI",
+          "role": "context",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-22",
+          "date_reason": "The announcement is dated 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Promotional account from the model developer and study sponsor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "science-sequential-diagnosis-language-models-2026-10-22",
+        "doi": "10.1126/science.aeh7930",
+        "pmid": null,
+        "preprint": "10.48550/arXiv.2506.22405",
+        "trial": null,
+        "cohort": "304 NEJM CPC cases and 325 MIMIC-IV-ED encounters transformed into sequential text simulations",
+        "product_version": "MAI-DxO with GPT-5; SDBench MIMIC-IV-Ext-SDBench 1.0.0",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The study evaluates a language-model orchestrator and multiple frontier language models in sequential diagnosis simulations.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical AI teams get a stronger interactive benchmark and a direct warning that benchmark advantage over individuals is not evidence of patient benefit, deployment safety or clinical readiness."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": "Peer-reviewed publication adds the MIMIC-IV-ED evaluation, current model configurations and a versioned public benchmark artifact beyond the 2025 preprint announcement.",
+        "archive_coverage": "Exact title, DOI, preprint, SDBench and MAI-DxO were searched across merged ledgers and stories through contract_ref; no prior HealthTech record was found.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select as bounded model-performance evidence: the two sequential simulations and physician comparisons are directly inspectable and material, while the story will explicitly exclude real-world care, patient benefit and clinical-readiness claims.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Peer-reviewed Science paper published 22 October 2026; prior preprint first appeared in June 2025.",
+        "study_design": "Controlled sequential-diagnosis benchmark comparison of language-model agents and individual generalist physicians using text-derived cases.",
+        "validation_setting": "Held-out sets of 56 difficult NEJM clinicopathological cases and 71 clinician-reviewed MIMIC-IV emergency-department encounters, presented through a simulated text gatekeeper.",
+        "independent_validation": "No independent prospective validation was found. The second dataset broadens the setting but was constructed and evaluated by the same Microsoft team.",
+        "clinical_utility": "not-assessed",
+        "access_level": "full-text",
+        "funding": "The accessible manuscript did not expose a formal funding declaration. The work was conducted by Microsoft-affiliated authors; no separate funder is inferred.",
+        "conflicts_of_interest": "All listed authors are affiliated with Microsoft. A complete final-paper competing-interest declaration did not surface in the accessible manuscript and is recorded as unavailable.",
+        "corrections_retractions": "No correction, retraction or expression of concern was identified in the publisher, DOI, PubMed-style or artifact checks on 24 October 2026.",
+        "contradictory_findings": [
+          "The public NEJM cases may have appeared in model training data, and the paper does not report a direct contamination test.",
+          "The gatekeeper can synthesize plausible findings when source cases lack requested details, so the interaction is not a faithful replay of a clinical encounter.",
+          "Reported cost figures standardize test prices and do not measure actual care spending."
+        ],
+        "limitations": [
+          "Both evaluations are text-only simulations; they exclude direct patient interaction, imaging and waveforms, treatment decisions, longitudinal management and clinical outcomes.",
+          "The physician comparison used individual generalists in the same artificial interface, not specialist teams or real clinical workflows.",
+          "NEJM clinicopathological cases are unusually difficult and selected for educational interest; the MIMIC set excludes healthy and benign presentations.",
+          "A model gatekeeper controls information release and may synthesize absent details.",
+          "No external prospective validation, regulatory assessment or deployment evidence was identified."
+        ],
+        "applicability": "Useful for developers evaluating interactive diagnostic agents and test-selection behavior. It does not support autonomous diagnosis or procurement for patient care."
+      },
+      "claims": [
+        {
+          "id": "mai-dxo-two-simulation-accuracy",
+          "type": "model-performance",
+          "supported_statement": "In held-out text simulations, GPT-5 with MAI-DxO achieved 83.2% diagnostic accuracy on 56 NEJM CPC cases and 80.3% on 71 MIMIC-IV-ED cases, compared with 36.1% for 19 open-book generalist physicians on the NEJM set and 46.8% for 16 physicians on the MIMIC set.",
+          "source_ids": ["science-sequential-diagnosis", "author-sequential-diagnosis-manuscript", "physionet-sdbench"],
+          "locators": [
+            "Science paper abstract, results and main comparison figures.",
+            "Author manuscript Methods: physician study design; Results: NEJM and MIMIC held-out accuracy comparisons.",
+            "PhysioNet MIMIC-IV-Ext-SDBench 1.0.0 description and release metadata."
+          ],
+          "evidence_scope": "Model-performance results in author-constructed, text-only sequential simulations; no claim about real patients, clinical outcomes, deployment safety or autonomous use.",
+          "limitations": [
+            "The NEJM comparison set contains 56 cases and the MIMIC comparison set 71 cases.",
+            "Generalist physicians were compared as individuals inside the benchmark rather than as clinical teams.",
+            "No direct training-data contamination analysis is reported for public CPC cases."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-24T07:57:16.000Z",
+            "checked_by": "ChatGPT GPT-6 (model source review; not independent clinical validation)",
+            "supported_scope": "The full manuscript and versioned benchmark artifact support the two held-out set sizes, model configuration, physician group sizes and accuracy values.",
+            "reason": "The claim is limited to the specified simulations and comparison groups and excludes Microsoft's broader superintelligence framing."
+          },
+          "study": {
+            "design": "Controlled benchmark comparison in which physicians and language-model agents iteratively requested information from a text gatekeeper before giving a diagnosis.",
+            "setting": "Sequential simulations derived from NEJM clinicopathological conferences and MIMIC-IV emergency-department encounters.",
+            "population_or_dataset": "304 NEJM CPC cases and 325 MIMIC-IV-ED cases overall; 56 and 71 cases, respectively, in held-out physician-comparison sets.",
+            "sample_sizes": [
+              {"n": 56, "unit": "NEJM held-out cases", "reason": "Final physician-comparison test set reported by the study."},
+              {"n": 71, "unit": "MIMIC-IV-ED held-out cases", "reason": "Clinician-reviewed final diagnosis test set reported by the study."},
+              {"n": 19, "unit": "open-book generalist physicians", "reason": "NEJM comparison group with access to external references."},
+              {"n": 16, "unit": "generalist physicians", "reason": "MIMIC-IV-ED physician comparison group."}
+            ],
+            "comparator": "Individual generalist physicians using the same sequential benchmark interface; open-book physicians could use external references for the main NEJM comparison.",
+            "primary_endpoints": ["Final diagnostic accuracy on held-out cases."],
+            "secondary_exploratory_endpoints": ["Estimated diagnostic test cost using standardized US price proxies.", "Performance across alternative language-model families and orchestrator configurations."],
+            "results": [
+              {
+                "endpoint": "NEJM held-out diagnostic accuracy",
+                "metric": "Final diagnoses scored correct",
+                "value": "83.2% for GPT-5 MAI-DxO versus 36.1% for open-book generalist physicians",
+                "units": "percent of 56 cases",
+                "comparator": "19 open-book generalist physicians",
+                "uncertainty": "The comparison is confined to difficult public CPC cases in a model-mediated text simulation; no clinical confidence interval or patient outcome is claimed.",
+                "source_id": "author-sequential-diagnosis-manuscript",
+                "locator": "Results section and physician comparison figure for the NEJM held-out set."
+              },
+              {
+                "endpoint": "MIMIC-IV-ED held-out diagnostic accuracy",
+                "metric": "Final diagnoses scored correct",
+                "value": "80.3% for GPT-5 MAI-DxO versus 46.8% for physicians",
+                "units": "percent of 71 cases",
+                "comparator": "16 generalist physicians",
+                "uncertainty": "The MIMIC cases were curated and presented as text; they do not represent live emergency-department decisions or outcome measurement.",
+                "source_id": "author-sequential-diagnosis-manuscript",
+                "locator": "Results section and MIMIC-IV-ED physician comparison figure."
+              }
+            ],
+            "follow_up": "No patient follow-up; repeated benchmark runs only.",
+            "harms": "Clinical harms were not measured because no system was used in patient care.",
+            "analysis_notes": "Diagnosis scoring and gatekeeper behavior use model-mediated components. Cost estimates are standardized proxies and were not treated as healthcare savings.",
+            "applicability": "Evaluates interactive diagnostic reasoning in controlled text environments; deployment claims require prospective clinical evaluation and human-factors testing."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 3,
+        "relevance": 4,
+        "material_change": 3,
+        "durability": 4,
+        "weighted_total": 82.5,
+        "rationales": {
+          "significance": "The two-dataset physician comparison is consequential for diagnostic-agent evaluation, but it remains simulation evidence.",
+          "claim_support": "Full methods and results plus a released artifact support the bounded metrics; sponsor authorship, no contamination test and no independent validation cap support.",
+          "relevance": "Directly relevant to clinical AI evaluation, procurement claims and benchmark governance.",
+          "material_change": "Peer review, a second emergency-department-derived set and public artifact materially extend the 2025 preprint record.",
+          "durability": "The benchmark design and limitations should remain useful beyond the launch cycle."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-24T07:57:16.000Z",
+        "checked_by": "ChatGPT GPT-6 (model source review; not independent clinical validation)",
+        "supported_scope": "The sources support a specialist briefing about model accuracy in two text simulations and the limits of physician comparison, not real-world superiority or patient benefit.",
+        "reason": "Publication status, DOI, benchmark release, methods, comparison groups, result values and central limitations were checked against primary or author-provided records."
+      },
+      "decision_history": [
+        {"decision": "selected", "at": "2026-10-24T07:57:16.000Z", "reason": "Cleared the 75-point gate with a material peer-reviewed update and directly inspectable bounded model-performance evidence."}
+      ]
+    },
+    {
+      "id": "2026-10-24-head-ct-ai-advice-reliance",
+      "decision": "selected",
+      "title": "Head CT experiment found clinicians both followed wrong AI advice and rejected correct advice",
+      "desk": "clinical-ai",
+      "topics": ["medical-imaging", "decision-support", "evaluation", "safety", "implementation", "reproducibility"],
+      "entities": ["The Lancet Digital Health", "OSF", "University of Michigan", "University College London"],
+      "event_date": "2026-10-23",
+      "event_date_reason": "The final peer-reviewed Lancet Digital Health article was published online on 23 October 2026.",
+      "source_publication_date": "2026-10-23",
+      "source_date_reason": "PubMed and the journal issue feed list 23 October 2026 for the final article.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "A peer-reviewed randomized crossover experiment reported how 50 radiologists and 75 non-radiologist physicians or trainees used correct and deliberately incorrect AI advice across 50 head CT cases. Correct explainable advice improved diagnostic performance, but both over-reliance and under-reliance persisted; novices could be harmed by explainable false-positive advice on easy cases.",
+      "why_now": "The final Lancet Digital Health publication appeared inside the current search window, making a preregistered experiment with public data and code part of the peer-reviewed record.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1016/j.landig.2026.101050",
+      "sources": [
+        {
+          "id": "lancet-reliance-final",
+          "url": "https://doi.org/10.1016/j.landig.2026.101050",
+          "canonical_url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900073-7/fulltext",
+          "publisher": "The Lancet Digital Health",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-23",
+          "date_reason": "Final article metadata and PubMed identify 23 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Peer-reviewed author report; no commercial AI vendor supplied or evaluated a product"
+        },
+        {
+          "id": "osf-reliance-manuscript",
+          "url": "https://osf.io/preprints/osf/4wv8j_v4",
+          "canonical_url": "https://osf.io/preprints/osf/4wv8j_v4",
+          "publisher": "OSF Preprints",
+          "role": "supporting",
+          "source_type": "accepted-author-manuscript",
+          "publication_date": "2026-07-30",
+          "date_reason": "OSF version 4 metadata lists 30 July 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Author-posted accepted manuscript from the same research team; not independent corroboration"
+        },
+        {
+          "id": "osf-reliance-artifacts",
+          "url": "https://doi.org/10.17605/OSF.IO/DQRA6",
+          "canonical_url": "https://osf.io/dqra6/",
+          "publisher": "Open Science Framework",
+          "role": "supporting",
+          "source_type": "preregistration-data-and-code-artifact",
+          "publication_date": null,
+          "date_reason": "The project contains versioned registrations and artifacts with multiple dates; no single publication date is assigned here.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Public study materials deposited by the authors"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "lancet-digital-health-ai-advice-reliance-head-ct-2026-10-23",
+        "doi": "10.1016/j.landig.2026.101050",
+        "pmid": "42919730",
+        "preprint": "10.31219/osf.io/4wv8j_v4",
+        "trial": null,
+        "cohort": "50 radiologists and 75 novices from 10 countries reviewing 50 head CT cases in three crossover conditions",
+        "product_version": "Author-generated advice fixed at 80% accuracy; no commercial model product evaluated",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The randomized experiment tests clinician reliance on basic and explainable AI advice in head CT interpretation.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical AI teams should measure both acceptance of wrong advice and rejection of correct advice, because an explanation layer did not eliminate either failure mode."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": ["2026-10-21-expertise-automation-bias-neonatal-imaging"],
+        "material_delta": "Distinct randomized crossover experiment, head CT task, participant cohort, explanation condition and publication from the neonatal-imaging expertise study covered on 21 October.",
+        "archive_coverage": "Exact title, DOI, PMID, OSF identifier, participant counts and authors were searched across merged ledgers and stories through contract_ref. Only a thematically related but non-duplicate neonatal-imaging story was found.",
+        "publication_status": "new-confirmed"
+      },
+      "reason": "Select because the preregistered crossover design, public artifacts and direct measurement of both over- and under-reliance support a durable implementation lesson, while the article will preserve the artificial 80% advice accuracy and case-prevalence limits.",
+      "promote_when": [],
+      "next_review_at": null,
+      "format": "briefing",
+      "depth": "specialist",
+      "evidence": {
+        "publication_status": "Peer-reviewed Lancet Digital Health article published 23 October 2026; accepted manuscript and artifacts were available earlier on OSF.",
+        "study_design": "Preregistered mixed-methods randomized crossover web experiment with no-AI, basic-advice and explainable-advice conditions separated by at least 14 days.",
+        "validation_setting": "Fifty curated head CT cases with equal intracranial-hemorrhage prevalence, reviewed by 50 radiologists and 75 non-radiologist physicians or medical trainees from 10 countries.",
+        "independent_validation": "No external replication was identified. Advice correctness was deliberately generated by the study team rather than produced by a deployed commercial system.",
+        "clinical_utility": "not-assessed",
+        "access_level": "full-text",
+        "funding": "Volkswagen Foundation grant 98525/98526/98527; parts of think-aloud compensation and data cleaning were funded by the Forum for Interdisciplinary Research and a TU Darmstadt friends association; eye-tracking equipment was funded by the German Federal Ministry of Education and Research. Authors state funders had no role in design, analysis or publication decisions.",
+        "conflicts_of_interest": "The accepted manuscript discloses travel support from Google for one author, institutional or personal support involving Google, Microsoft, Bayer, GE Healthcare and other organizations for several authors, and multiple professional roles; it reports no other disclosures. These disclosures are not described as funding the core experiment unless listed in its funding statement.",
+        "corrections_retractions": "No correction, retraction or expression of concern was identified for DOI 10.1016/j.landig.2026.101050 or PMID 42919730 on 24 October 2026.",
+        "contradictory_findings": [
+          "Explainable advice improved performance when the advice was correct but did not prevent harmful influence when advice was wrong.",
+          "Explainable advice did not significantly reduce reading time in the final abstract.",
+          "Under-reliance affected more cases largely because the experiment made 80% of advice correct; that balance need not hold for a deployed system."
+        ],
+        "limitations": [
+          "The web experiment used an artificial 50% hemorrhage prevalence and deliberately fixed advice accuracy at 80%.",
+          "Cases were limited to a binary intracranial-hemorrhage decision and oversampled difficult examples.",
+          "The advice was generated for the experiment rather than by a named deployed model, so vendor-specific behavior and drift were not tested.",
+          "Some radiologists were early in their careers and novices combined non-radiologist physicians and trainees.",
+          "No patient outcomes, downstream treatment decisions or real workflow consequences were measured."
+        ],
+        "applicability": "Useful for designing human-factors evaluation and monitoring for imaging decision support; it does not estimate benefit or harm under real clinical prevalence or a particular product's error distribution."
+      },
+      "claims": [
+        {
+          "id": "head-ct-correct-xai-and-reliance-patterns",
+          "type": "workflow",
+          "supported_statement": "Across 125 participants and three crossover conditions, correct explainable AI advice improved diagnostic performance versus no advice (odds ratio 1.84, 95% CI 1.49-2.28), but participants also followed wrong advice and rejected correct advice; the experiment's 80% correct-advice design made under-reliance affect more cases in absolute terms.",
+          "source_ids": ["lancet-reliance-final", "osf-reliance-manuscript", "osf-reliance-artifacts"],
+          "locators": [
+            "Final PubMed abstract for participant counts, crossover design and primary model estimates.",
+            "Accepted manuscript Methods pp. 7-9, Results pp. 10-15, Discussion and Conflict/Funding declarations.",
+            "OSF project registrations, de-identified participant data and analysis scripts."
+          ],
+          "evidence_scope": "Clinician behavior in a controlled web experiment using curated head CT cases and author-generated advice; no claim about patient benefit, deployed systems or real-world prevalence.",
+          "limitations": [
+            "Advice was correct on 80% of trials by design.",
+            "The 50-case set was balanced 25 positive and 25 negative rather than reflecting clinical prevalence.",
+            "Only a binary hemorrhage task was tested."
+          ],
+          "verification": {
+            "status": "verified-with-claim-scope",
+            "checked_at": "2026-10-24T07:57:16.000Z",
+            "checked_by": "ChatGPT GPT-6 (model source review; not independent clinical validation)",
+            "supported_scope": "The final abstract and accepted manuscript directly support the sample, design, odds ratio, confidence interval and observed over- and under-reliance patterns.",
+            "reason": "The claim preserves the experiment's constructed advice accuracy and avoids translating behavioral effects into patient outcomes."
+          },
+          "study": {
+            "design": "Preregistered randomized crossover web experiment with three time-separated conditions and mixed-effects statistical analysis.",
+            "setting": "Remote interpretation of curated head CT cases with no advice, basic advice or advice plus an explanatory bounding box.",
+            "population_or_dataset": "50 radiologists and 75 novices from 10 countries; 50 head CT cases, half with intracranial hemorrhage.",
+            "sample_sizes": [
+              {"n": 125, "unit": "participants starting the first session", "reason": "All were included in analysis; 111 completed all three sessions."},
+              {"n": 50, "unit": "radiologists", "reason": "Task-expert subgroup."},
+              {"n": 75, "unit": "non-radiologist physicians or medical trainees", "reason": "Novice subgroup."},
+              {"n": 50, "unit": "head CT cases", "reason": "Each condition used the curated 25-positive/25-negative case set."}
+            ],
+            "comparator": "The same participants without AI advice; basic and explainable-advice conditions were also compared.",
+            "primary_endpoints": ["Binary diagnostic performance for intracranial hemorrhage.", "Behavioral over-reliance on wrong advice and under-reliance on correct advice."],
+            "secondary_exploratory_endpoints": ["Confidence.", "Reading time.", "Eye-tracking and think-aloud measures in non-random subsamples."],
+            "results": [
+              {
+                "endpoint": "Diagnostic performance with correct explainable advice",
+                "metric": "Mixed-effects odds ratio",
+                "value": "1.84 (95% CI 1.49-2.28; p<0.0001)",
+                "units": "odds ratio",
+                "comparator": "No-AI condition",
+                "uncertainty": "Effect applies to correct advice in the constructed experiment; it does not estimate net benefit for a product with an unknown error distribution.",
+                "source_id": "lancet-reliance-final",
+                "locator": "Final abstract, Findings."
+              },
+              {
+                "endpoint": "Observed reliance-error rates",
+                "metric": "Over-reliance and under-reliance across expertise and advice conditions",
+                "value": "Over-reliance ranged 27%-58%; under-reliance ranged 11%-21%",
+                "units": "percent of eligible advice trials",
+                "comparator": "Expertise and advice-presentation subgroups",
+                "uncertainty": "Absolute case impact is conditioned on advice being correct 80% of the time and on the balanced case set.",
+                "source_id": "osf-reliance-manuscript",
+                "locator": "Accepted manuscript Results, lines 247-251 and Supplement p. 25."
+              }
+            ],
+            "follow_up": "At least 14 days separated crossover sessions; no patient follow-up.",
+            "harms": "No patient harms were measured. The experiment observed diagnostic errors induced by wrong advice, including negative effects on novices in easy false-positive cases.",
+            "analysis_notes": "Participants and cases were random intercepts. The accepted manuscript and final abstract differ in presentation of the reading-time coefficient; the final abstract reports no statistically significant reduction.",
+            "applicability": "Supports measuring both forms of reliance and testing explanation displays under realistic error prevalence before deployment."
+          }
+        }
+      ],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 4,
+        "relevance": 4,
+        "material_change": 2,
+        "durability": 4,
+        "weighted_total": 87.5,
+        "rationales": {
+          "significance": "The randomized human-factors result matters for medical-imaging AI, but it does not measure clinical outcomes.",
+          "claim_support": "Preregistration, accepted full text, final abstract, public data and code provide unusually strong support for the bounded claim.",
+          "relevance": "Directly relevant to clinical AI interface design, oversight, training and monitoring.",
+          "material_change": "Final peer-reviewed publication is new, but the accepted manuscript and core results were public earlier.",
+          "durability": "The distinction between over- and under-reliance is a durable evaluation principle."
+        }
+      },
+      "publication_verification": {
+        "status": "verified-with-claim-scope",
+        "checked_at": "2026-10-24T07:57:16.000Z",
+        "checked_by": "ChatGPT GPT-6 (model source review; not independent clinical validation)",
+        "supported_scope": "The sources support a specialist briefing on reliance behavior in the specified randomized head CT experiment, not a claim that explainability makes deployed AI safe or beneficial.",
+        "reason": "Final publication metadata, methods, participant counts, estimates, funding, conflicts, artifacts and central limitations were checked."
+      },
+      "decision_history": [
+        {"decision": "selected", "at": "2026-10-24T07:57:16.000Z", "reason": "Cleared the 75-point gate with a preregistered randomized design, public artifacts and a clinically relevant human-factors result."}
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "2026-10-24-ecg-embedding-dementia-signal",
+      "decision": "watch",
+      "title": "ECG embeddings added a small retrospective dementia-discrimination signal",
+      "desk": "clinical-ai",
+      "topics": ["clinical-prediction", "evaluation", "diagnostics"],
+      "entities": ["JMIR", "Wake Forest University School of Medicine"],
+      "event_date": "2026-10-23",
+      "event_date_reason": "PubMed lists electronic publication on 23 October 2026.",
+      "source_publication_date": "2026-10-23",
+      "source_date_reason": "The PubMed record is dated 23 October 2026.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "A retrospective two-site study reported that adding an ECG-derived deep-learning representation to age modestly increased external discrimination for dementia from AUROC 0.809 to 0.825; the age-residualized ECG signal alone was 0.579.",
+      "why_now": "The peer-reviewed article appeared inside the current search window.",
+      "late_discovery": false,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42918629/",
+      "sources": [
+        {"id": "pubmed-ecg-dementia", "url": "https://pubmed.ncbi.nlm.nih.gov/42918629/", "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42918629/", "publisher": "PubMed", "role": "primary", "source_type": "peer-reviewed-original-research-abstract", "publication_date": "2026-10-23", "date_reason": "PubMed lists 23 October 2026.", "inspected_at": "2026-10-24T07:57:16.000Z", "access_level": "abstract-only", "relationship_to_sponsor": "Author publication record; funding and conflicts were not fully inspected"}
+      ],
+      "underlying_identity": {"event_key": "ecg-deep-learning-dementia-retrospective-2026", "doi": null, "pmid": "42918629", "preprint": null, "trial": null, "cohort": "52,355 development participants and 6,500 external-site participants", "product_version": null, "regulatory_record": null},
+      "scope_fit": {"in_scope": true, "ai_connection": "A deep-learning ECG representation is the evaluated predictor.", "non_ai_exception": null, "reader_consequence": "The small incremental signal may inform research, but it is not enough to justify screening or a clinical workflow."},
+      "deduplication": {"status": "new", "previous_candidate_ids": [], "previous_story_ids": [], "material_delta": null, "archive_coverage": "Title, PMID and ECG/dementia identity were checked across merged ledgers and stories through contract_ref.", "publication_status": "not-started"},
+      "reason": "Watch: the external cohort is useful, but the incremental discrimination over age is small, causal interpretation is unsupported and clinical utility is untested.",
+      "promote_when": ["Inspect full methods, calibration and subgroup performance.", "Find prospective independent validation or evidence that the signal changes a defined clinical pathway without excess harm."],
+      "next_review_at": "2026-10-31",
+      "claims": [],
+      "editorial_score": {"significance": 2, "claim_support": 3, "relevance": 3, "material_change": 3, "durability": 3, "weighted_total": 67.5, "rationales": {"significance": "The signal is potentially interesting but adds little discrimination beyond age.", "claim_support": "The abstract reports a large two-site cohort, but full methods and calibration were not inspected.", "relevance": "Relevant to AI biomarker evaluation and screening claims.", "material_change": "A new peer-reviewed report appeared in-window.", "durability": "The result may remain useful as a caution about age confounding."}},
+      "publication_verification": {"status": "not-started", "checked_at": null, "checked_by": null, "supported_scope": "Research watch only.", "reason": "Full-method and clinical-utility gates were not cleared."},
+      "decision_history": [{"decision": "watch", "at": "2026-10-24T07:57:16.000Z", "reason": "Below the 75-point gate and insufficient for a screening claim."}]
+    },
+    {
+      "id": "2026-10-24-insilico-ism6331-esmo-preview",
+      "decision": "watch",
+      "title": "ISM6331 clinical results were scheduled but not yet presented",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "clinical-trials"],
+      "entities": ["Insilico Medicine", "ESMO", "ISM6331"],
+      "event_date": "2026-10-25",
+      "event_date_reason": "The ESMO presentation was scheduled for 25 October 2026, after the research cutoff.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "The company announcement was dated 21 October 2026.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "Insilico Medicine announced that first-in-human ISM6331 data would be presented at ESMO on 25 October.",
+      "why_now": "The scheduled presentation is imminent, but its results were not public at the cutoff.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026",
+      "sources": [
+        {"id": "insilico-ism6331-preview", "url": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026", "canonical_url": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026", "publisher": "Insilico Medicine", "role": "primary", "source_type": "company-announcement", "publication_date": "2026-10-21", "date_reason": "Announcement displays 21 October 2026.", "inspected_at": "2026-10-24T07:57:16.000Z", "access_level": "announcement-only", "relationship_to_sponsor": "Announcement from the drug developer"}
+      ],
+      "underlying_identity": {"event_key": "ism6331-esmo-2026-presentation", "doi": null, "pmid": null, "preprint": null, "trial": null, "cohort": null, "product_version": "ISM6331", "regulatory_record": null},
+      "scope_fit": {"in_scope": true, "ai_connection": "The sponsor describes ISM6331 as AI-discovered.", "non_ai_exception": null, "reader_consequence": "Readers need the actual abstract and denominators before judging safety, activity or the contribution of AI to development."},
+      "deduplication": {"status": "new", "previous_candidate_ids": [], "previous_story_ids": [], "material_delta": null, "archive_coverage": "ISM6331, sponsor and ESMO presentation identity were checked through contract_ref.", "publication_status": "not-started"},
+      "reason": "Watch: the presentation had not occurred and no trial result is inferred from advance promotion.",
+      "promote_when": ["Inspect the final ESMO abstract or presentation after 25 October for dose, denominators, follow-up, adverse events and response data.", "Separate the clinical result from sponsor claims about AI contribution."],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {"status": "not-started", "checked_at": null, "checked_by": null, "supported_scope": "Research watch only.", "reason": "The announced event was not complete at cutoff."},
+      "decision_history": [{"decision": "watch", "at": "2026-10-24T07:57:16.000Z", "reason": "Future event; no result available to score or publish."}]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-24-amie-primary-care-late-indexing",
+      "decision": "rejected",
+      "title": "AMIE primary-care feasibility paper was indexed after its earlier publication event",
+      "desk": "clinical-ai",
+      "topics": ["care-delivery", "decision-support", "evaluation"],
+      "entities": ["Google Research", "Beth Israel Deaconess Medical Center", "AMIE"],
+      "event_date": "2026-10-08",
+      "event_date_reason": "The peer-reviewed article was published online on 8 October 2026.",
+      "source_publication_date": "2026-10-08",
+      "source_date_reason": "The article's electronic publication date predates the current discovery window despite a later PubMed issue date.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "PubMed indexing surfaced a single-centre prospective feasibility study of AMIE in supervised primary-care encounters, but the underlying publication event occurred on 8 October.",
+      "why_now": "The record surfaced during the current database screen because of issue-date indexing, not a new study or update.",
+      "late_discovery": true,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42849491/",
+      "sources": [
+        {"id": "pubmed-amie-feasibility", "url": "https://pubmed.ncbi.nlm.nih.gov/42849491/", "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42849491/", "publisher": "PubMed", "role": "primary", "source_type": "peer-reviewed-original-research-abstract", "publication_date": "2026-10-08", "date_reason": "Electronic publication date is 8 October 2026.", "inspected_at": "2026-10-24T07:57:16.000Z", "access_level": "abstract-only", "relationship_to_sponsor": "Author publication record including Google-affiliated developers"}
+      ],
+      "underlying_identity": {"event_key": "amie-primary-care-prospective-feasibility-2026", "doi": null, "pmid": "42849491", "preprint": null, "trial": null, "cohort": "114 enrolled and 98 completed supervised primary-care encounters", "product_version": "AMIE version not reported in inspected abstract", "regulatory_record": null},
+      "scope_fit": {"in_scope": true, "ai_connection": "AMIE is a conversational clinical AI system.", "non_ai_exception": null, "reader_consequence": "Feasibility evidence is potentially relevant, but late indexing alone is not a current development and the run had stronger current candidates."},
+      "deduplication": {"status": "new", "previous_candidate_ids": [], "previous_story_ids": [], "material_delta": null, "archive_coverage": "Title, PMID and AMIE feasibility identity checked through contract_ref.", "publication_status": "not-started"},
+      "reason": "Reject for this edition: the event predates the search window and no new material update justifies catch-up treatment; the abstract-only record also lacks a comparative clinical endpoint.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {"status": "not-started", "checked_at": null, "checked_by": null, "supported_scope": "Research rejection only.", "reason": "Current-event/material-change gate failed before publication verification."},
+      "decision_history": [{"decision": "rejected", "at": "2026-10-24T07:57:16.000Z", "reason": "Late indexing without a current material delta; no catch-up slot used."}]
+    },
+    {
+      "id": "2026-10-24-doximity-uptodate-partnership",
+      "decision": "rejected",
+      "title": "Doximity and UpToDate announced an AI reference partnership",
+      "desk": "health-systems",
+      "topics": ["health-operations", "decision-support", "implementation"],
+      "entities": ["Doximity", "Wolters Kluwer", "UpToDate"],
+      "event_date": "2026-10-21",
+      "event_date_reason": "The partnership announcement was dated 21 October 2026.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "Company and specialist coverage identify 21 October 2026.",
+      "discovered_at": "2026-10-24T07:57:16.000Z",
+      "what_changed": "The companies announced that Doximity's AI service would surface UpToDate content.",
+      "why_now": "The announcement fell in the 24-hour overlap window.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/doximity-partners-wolters-kluwer-bring-uptodate-content-its-ai-tool",
+      "sources": [
+        {"id": "fierce-doximity-uptodate", "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/doximity-partners-wolters-kluwer-bring-uptodate-content-its-ai-tool", "canonical_url": "https://www.fiercehealthcare.com/ai-and-machine-learning/doximity-partners-wolters-kluwer-bring-uptodate-content-its-ai-tool", "publisher": "Fierce Healthcare", "role": "primary", "source_type": "news-report", "publication_date": "2026-10-21", "date_reason": "Article date is 21 October 2026.", "inspected_at": "2026-10-24T07:57:16.000Z", "access_level": "full-text", "relationship_to_sponsor": "Independent outlet report based largely on company statements"}
+      ],
+      "underlying_identity": {"event_key": "doximity-uptodate-ai-reference-partnership-2026", "doi": null, "pmid": null, "preprint": null, "trial": null, "cohort": null, "product_version": "Doximity AI with UpToDate content; exact versions not reported", "regulatory_record": null},
+      "scope_fit": {"in_scope": true, "ai_connection": "The announcement concerns a clinician-facing generative AI reference tool.", "non_ai_exception": null, "reader_consequence": "Availability alone does not show accurate retrieval, adoption, workflow effect or patient benefit."},
+      "deduplication": {"status": "new", "previous_candidate_ids": [], "previous_story_ids": [], "material_delta": null, "archive_coverage": "Company names and partnership identity checked through contract_ref.", "publication_status": "not-started"},
+      "reason": "Reject: an access partnership without measured use, error analysis, evaluation protocol or patient/workflow outcome does not clear the evidence gate.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {"status": "not-started", "checked_at": null, "checked_by": null, "supported_scope": "Research rejection only.", "reason": "Evidence gate failed before publication verification."},
+      "decision_history": [{"decision": "rejected", "at": "2026-10-24T07:57:16.000Z", "reason": "Partnership availability without measured outcomes."}]
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "Two candidates cleared research, score, deduplication and source-verification gates; story and required illustration preparation are in progress.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-24T074510Z-root",
+      "started_at": "2026-10-24T07:45:10.000Z",
+      "completed_at": null,
+      "phases": ["contracts-read", "bounded-discovery-complete", "decisions-recorded", "claim-verification-complete"],
+      "outcome": "preparing-ownership-checkpoint"
+    }
+  ],
+  "active_run": {
+    "owner_token": "healthtech-2026-10-24T074510Z-root",
+    "acquired_at": "2026-10-24T07:57:16.000Z",
+    "heartbeat_at": "2026-10-24T07:57:16.000Z",
+    "expires_at": "2026-10-24T09:57:16.000Z"
+  },
+  "human_overrides": []
+}
