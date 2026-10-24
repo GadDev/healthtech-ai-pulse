@@ -5,6 +5,7 @@
 // - Requires SITE_URL for absolute links; local dev omits canonical URLs.
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
+import { newestEditionFirst } from '../lib/edition.ts';
 const escape = (s: string) =>
   s.replace(
     /[<>&"']/g,
@@ -12,12 +13,12 @@ const escape = (s: string) =>
   );
 export const GET: APIRoute = async ({ site }) => {
   const stories = (await getCollection('stories', ({ data }) => !data.draft)).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+    newestEditionFirst,
   );
   const items = stories
     .map((story) => {
       const link = new URL(`/stories/${story.id}/`, site).href;
-      const description = `Edition date: ${story.data.date.toISOString().slice(0, 10)}. ${story.data.description}`;
+      const description = `Edition date: ${story.data.date.toISOString().slice(0, 10)}.${story.data.edition === 'evening' ? ' Evening edition.' : ''} ${story.data.description}`;
       // RSS pubDate is optional. The stored edition date is not a first-publication timestamp.
       return `<item><title>${escape(story.data.title)}</title><description>${escape(description)}</description><link>${escape(link)}</link><guid>${escape(link)}</guid></item>`;
     })

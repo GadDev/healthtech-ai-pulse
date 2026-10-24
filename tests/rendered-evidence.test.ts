@@ -63,3 +63,58 @@ test('actual Astro rendering keeps evidence limits visible without an image; fix
     rmSync(temporary, { recursive: true, force: true });
   }
 });
+
+test('evening fixture renders separately, labels its date and leads without replacing the ordinary issue', () => {
+  const root = process.cwd();
+  const temporary = mkdtempSync(join(tmpdir(), 'healthtech-evening-render-'));
+  try {
+    for (const path of ['src', 'public', 'astro.config.mjs', 'package.json', 'tsconfig.json'])
+      cpSync(resolve(root, path), join(temporary, path), { recursive: true });
+    symlinkSync(resolve(root, 'node_modules'), join(temporary, 'node_modules'), 'dir');
+    const { story } = fixture();
+    const id = '2026-10-24-evening-synthetic-rendering';
+    story.candidateId = id;
+    story.date = '2026-10-24';
+    story.editorialDate = '2026-10-24';
+    story.edition = 'evening';
+    story.title = 'Synthetic evening rendering fixture';
+    // Rendering only, not a publishable evidence/illustration fixture.
+    writeFileSync(
+      join(temporary, `src/content/stories/${id}.md`),
+      `---\n${stringify(story)}---\nSYNTHETIC TEST DATA, temporary renderer test only.\n`,
+    );
+    writeFileSync(
+      join(temporary, 'src/content/pulse/2026-10-24-evening.md'),
+      `---\n${stringify({ date: '2026-10-24', edition: 'evening', title: 'Synthetic evening edition', summary: 'Rendering regression only', sections: [{ key: 'tools', label: 'Synthetic', stories: [id] }] })}---\n`,
+    );
+    const ordinaryPath = join(temporary, 'src/content/pulse/2026-10-24.md');
+    const ordinary = readFileSync(ordinaryPath);
+    execFileSync(
+      process.execPath,
+      [resolve(root, 'node_modules/astro/bin/astro.mjs'), 'build', '--root', temporary],
+      { cwd: temporary, stdio: 'pipe', env: { ...process.env, SITE_URL: 'http://localhost:4321' } },
+    );
+    assert.deepEqual(readFileSync(ordinaryPath), ordinary);
+    for (const path of [
+      'pulse/2026-10-24/index.html',
+      'pulse/2026-10-24-evening/index.html',
+      `stories/${id}/index.html`,
+    ])
+      assert.ok(existsSync(join(temporary, 'dist', path)), path);
+    const home = readFileSync(join(temporary, 'dist/index.html'), 'utf8');
+    assert.match(home, /class="lead-story"[\s\S]*?Synthetic evening rendering fixture/);
+    assert.match(home, /Evening edition/);
+    const archive = readFileSync(join(temporary, 'dist/pulse/index.html'), 'utf8');
+    assert.ok(
+      archive.indexOf('/pulse/2026-10-24-evening/') < archive.indexOf('/pulse/2026-10-24/'),
+    );
+    const html = readFileSync(join(temporary, `dist/stories/${id}/index.html`), 'utf8');
+    assert.match(html, /Evening edition/);
+    const rss = readFileSync(join(temporary, 'dist/rss.xml'), 'utf8');
+    assert.ok(rss.includes('Edition date: 2026-10-24. Evening edition.'));
+    assert.ok(!rss.includes('<pubDate>'));
+    assert.ok(!existsSync(resolve(root, `src/content/stories/${id}.md`)));
+  } finally {
+    rmSync(temporary, { recursive: true, force: true });
+  }
+});

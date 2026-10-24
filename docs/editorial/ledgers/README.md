@@ -19,6 +19,12 @@ must distinguish actual lane access/retrieval/screening from mere result counts.
 
 ## Write and recover safely
 
+The sole same-date exception is the explicitly requested
+[24 October evening supplement](../EVENING_EDITION_2026_10_24.md), keyed as
+`2026-10-24-evening`. Its ledger is independent; the ordinary merged ledger is
+immutable. Other dates, automated second editions and alternative suffixes remain
+unsupported. Use the full key for ownership, issue mappings, checks and recovery.
+
 Persist research before drafting; use `publication.mode: in-progress` for checkpoints. An unfinished checkpoint can support recovery but cannot pass final publication validation. Acquire ownership and update the canonical date branch through the implemented create-only/compare-and-swap protocol; preserve human edits and prior attempts.
 
 Reuse the existing date branch and draft PR after interruption. Inspect all PR states and the default-branch ledger before creating anything. If that date is already finalized on main, the ordinary daily run is a no-op. A closed-unmerged canonical PR requires maintainer direction, not a duplicate PR.

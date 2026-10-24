@@ -4,6 +4,13 @@ Contract: `healthtech-1.0`. A daily issue is an ordered index into canonical Eng
 
 ## Files and routes
 
+One explicitly authorised exception exists for the
+[24 October evening edition](editorial/EVENING_EDITION_2026_10_24.md):
+`edition: evening` keeps the real `date: 2026-10-24` but uses the full filename/key
+`2026-10-24-evening` and route `/pulse/2026-10-24-evening/`. The ordinary issue is
+unchanged. No other date or suffix is supported. All story references must resolve
+to the evening ledger, with at most two surviving stories for that edition.
+
 | Item                              | Repository path                          | Public route                |
 | --------------------------------- | ---------------------------------------- | --------------------------- |
 | Canonical article                 | `src/content/stories/YYYY-MM-DD-slug.md` | `/stories/YYYY-MM-DD-slug/` |

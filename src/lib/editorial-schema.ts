@@ -306,6 +306,7 @@ export const storySchema = z
       (value) => (value instanceof Date ? value.toISOString().slice(0, 10) : value),
       date,
     ),
+    edition: z.literal('evening').optional(),
     contractVersion: z.literal('healthtech-1.0'),
     evidence: evidenceSchema,
     claims: z.array(text).min(1),
@@ -405,6 +406,16 @@ export const ledgerSchema = z
     schema_version: z.literal('healthtech-1.0'),
     decision_engine_version: z.literal('healthtech-1.0'),
     editorial_date: date,
+    edition: z.literal('evening').optional(),
+    edition_authorization: z
+      .object({
+        actor: text,
+        recorded_at: instant,
+        reason: text,
+        scope: z.literal('2026-10-24-evening'),
+      })
+      .strict()
+      .optional(),
     timezone: z.literal('Europe/Luxembourg'),
     artwork: artworkSchema.optional(),
     contract_ref: sha,

@@ -67,6 +67,14 @@ HARD INVARIANTS
 
 PHASE 0 — RUN IDENTITY AND EXISTING BATCH
 
+Manual one-off exception only: the maintainer authorised a
+[24 October 2026 evening supplement](EVENING_EDITION_2026_10_24.md), with separate
+`edition: evening`, full key, ledger, branch and PR. Read that contract before the
+explicitly requested evening run. Ordinary scheduled runs never infer or select
+this suffix and retain the finalized-date stop below. The evening run stops when
+its **own** key is finalized and cannot modify the ordinary merged batch. No other
+same-date exception is active. Support must be merged before editorial preparation.
+
 Read the runtime clock; record run_id, editorial_date in Europe/Luxembourg, started_at and target contract_ref. Inspect today's branch, all-state PRs and default-branch ledger before expensive research.
 
 If today's canonical PR has merged or a finalized ledger already exists on the default branch, do not recreate a branch or PR and do not edit the merged ledger. Report the existing result as Already finalized; no-op. New substantive evidence belongs in the next edition; an urgent correction requires a separately authorised correction workflow.

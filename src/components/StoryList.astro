@@ -41,6 +41,7 @@ const { stories, showImage = false } = Astro.props;
             timeZone: 'UTC',
           })}
         </time>
+        {story.data.edition === 'evening' && ' · Evening edition'}
       </p>
       <h3>
         <a href={`/stories/${story.id}/`}>{story.data.title}</a>

@@ -5,8 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceSummary from '../components/EvidenceSummary.astro';
 import StoryList from '../components/StoryList.astro';
 import { desks, deskKeys } from '../lib/categories';
+import { newestEditionFirst } from '../lib/edition';
 const stories = (await getCollection('stories', ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  newestEditionFirst,
 );
 const [lead, ...remaining] = stories;
 ---
@@ -25,6 +26,7 @@ const [lead, ...remaining] = stories;
             timeZone: 'UTC',
           })}
         </time>
+        {lead.data.edition === 'evening' && ' · Evening edition'}
       </div>
       <article class="lead-story" data-pagefind-body>
         <div class="lead-story__copy">

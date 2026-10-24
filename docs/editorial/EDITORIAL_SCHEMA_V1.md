@@ -4,6 +4,13 @@ Contract: `healthtech-1.0`. This is the human-readable map of the implemented le
 
 ## Ledger envelope
 
+Compatible identity extension `evening-1` adds optional `edition: evening` and
+`edition_authorization` for only the
+[authorised 24 October supplement](EVENING_EDITION_2026_10_24.md). Its filename is
+`2026-10-24-evening.json`; story/issue frontmatter must carry the same `edition`.
+Absent fields retain all historical schema and mapping behavior. This exception
+does not change candidate scoring, evidence, artwork or capacity gates.
+
 | Fields                                      | Responsibility                                                                                                         |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `schema_version`, `decision_engine_version` | Target contract version `healthtech-1.0`                                                                               |

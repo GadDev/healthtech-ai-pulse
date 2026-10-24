@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { z } from 'astro/zod';
 import { resolveRepositoryPath, sha256 } from './illustration-generation-identity.ts';
+import { preservedRendererReference } from './preserved-renderer-references.ts';
 
 const text = z.string().trim().min(1);
 export const briefSchema = z
@@ -23,7 +24,10 @@ export function readIllustrationBrief(root: string, path: string, storyId: strin
   if (brief.story_id !== storyId) throw new Error('Brief belongs to another story.');
   for (const reference of brief.references ?? []) {
     const current = readFileSync(resolveRepositoryPath(root, reference.path));
-    if (sha256(current) !== reference.sha256)
+    if (
+      sha256(current) !== reference.sha256 &&
+      !preservedRendererReference(root, storyId, bytes, reference, sha256(current))
+    )
       throw new Error(`Reference changed; refresh the brief and review: ${reference.path}`);
   }
   return { bytes, brief };

@@ -44,6 +44,12 @@ Use only the implemented story formats `pulse`, `briefing` and `deep-dive`, with
 
 ## Publication gate and capacity
 
+The separately authorised [24 October evening exception](EVENING_EDITION_2026_10_24.md)
+allows an independent second ledger on that date only. Its two-story capacity is
+separate from the immutable ordinary edition; all decisions and evidence gates
+remain identical, and deduplication includes both editions. Do not infer a standing
+second-edition allowance from this exception.
+
 Recheck source status, contradictions and duplicate coverage during preparation. Publishable claims require actual inspections and `verified` or `verified-with-claim-scope` outcomes, with the reviewer, time and supported wording recorded. A source-unavailable/conflicting selected record remains in research history and is withheld downstream. Patient-benefit claims require demonstrated clinical utility in the studied setting; regulatory claims require the inspected official record and exact jurisdiction/status.
 
 The pilot prepares at most two surviving articles per research date. Preserve selected overflow as capacity withholding, not a silent rejection. With no survivors, finalize ledger-only and omit the issue and artwork. [PR preparation](PR_PREPARATION_V1.md) accounts for every selected item and reports checks without granting publication approval.

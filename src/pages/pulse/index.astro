@@ -1,9 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const editions = (await getCollection('pulse')).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+import { newestEditionFirst } from '../../lib/edition';
+const editions = (await getCollection('pulse')).sort(newestEditionFirst);
 ---
 
 <BaseLayout title="Edition archive">

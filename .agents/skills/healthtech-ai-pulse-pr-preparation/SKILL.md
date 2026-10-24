@@ -11,6 +11,12 @@ Use the ledger as the handoff. Preserve research decisions and their evidence/sc
 
 ## Safe writes
 
+Only an explicitly requested 24 October 2026 evening run may use the separately
+authorised `evening-1` identity extension; first read
+`docs/editorial/EVENING_EDITION_2026_10_24.md` on current main. It requires its own
+authorisation record and full edition key for every adapter lookup and path. Never
+infer evening from a scheduled invocation or change the ordinary merged batch.
+
 Use the semantics implemented in scripts/lib/orchestration.ts. Bind the adapter only to authenticated, already-authorised target GitHub operations. Required adapter methods are findPRs (all states for canonical head/base), isFinalized (default-branch ledger/merged PR), readBranch (head plus current ledger), defaultHead, commit (tree/commit from exact parent), createRef (create-only), updateRef (expected head and non-forced), createPR (draft) and updatePR (body/title only). Use the connected GitHub application's Git object and expected-sha ref tools when available. No new stored token is required by this skill; never scrape credentials from the environment or copy deployment credentials.
 
 A bound adapter and live write/read-back trial are prerequisites, not something a simulator proves. If the execution surface cannot bind these operations or reject a stale ref, report the exact blocker. Do not approximate concurrency with a boolean or unconditional file writes.

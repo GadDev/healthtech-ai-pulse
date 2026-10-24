@@ -12,6 +12,13 @@ Read [the editorial schema guide](editorial/EDITORIAL_SCHEMA_V1.md) for the reco
 
 ## Files and identity
 
+The optional `evening-1` identity extension supports only the explicitly authorised
+[24 October evening supplement](editorial/EVENING_EDITION_2026_10_24.md). It adds
+`edition: evening` to its ledger/story/issue and a ledger `edition_authorization`.
+Its full key is `2026-10-24-evening`; all absent-field historical identities remain
+unchanged. Mappings and the two-story limit are per edition, while deduplication
+still spans every edition. This is not general permission for multiple daily runs.
+
 | Path                                                   | Meaning                                                               |
 | ------------------------------------------------------ | --------------------------------------------------------------------- |
 | `docs/editorial/ledgers/YYYY-MM-DD.json`               | Final or in-progress daily research and publication record            |

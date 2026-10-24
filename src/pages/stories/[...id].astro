@@ -36,6 +36,7 @@ const { Content } = await render(story);
             timeZone: 'UTC',
           })}
         </time>
+        {story.data.edition === 'evening' && ' · Evening edition'}
         {story.data.updatedAt && ` · Updated ${story.data.updatedAt.toISOString().slice(0, 10)}`}
       </p>
     </header>

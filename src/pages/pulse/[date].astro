@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { editionLabel } from '../../lib/edition';
 export async function getStaticPaths() {
   return (await getCollection('pulse')).map((edition) => ({
     params: { date: edition.id },
@@ -15,7 +16,9 @@ const stories = new Map(
 
 <BaseLayout title={edition.data.title}>
   <header class="page-intro">
-    <p class="eyebrow">Daily edition · {edition.id}</p>
+    <p class="eyebrow">
+      {editionLabel(edition.data.edition)} · {edition.data.date.toISOString().slice(0, 10)}
+    </p>
     <h1>{edition.data.title}</h1>
     <p class="lede">{edition.data.summary}</p>
   </header>

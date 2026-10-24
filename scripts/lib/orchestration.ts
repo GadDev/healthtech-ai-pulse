@@ -1,6 +1,7 @@
 import { isDeepStrictEqual } from 'node:util';
 import { preserveArtwork } from './artwork.ts';
 import { validateLedger } from './editorial.ts';
+import { editionKey, type Edition } from '../../src/lib/edition.ts';
 
 type Ledger = ReturnType<typeof validateLedger>;
 type EditorialFile = { encoding: 'utf-8' | 'base64'; content: string } | null;
@@ -13,7 +14,7 @@ type OwnedBranchState = BranchState & {
 
 export interface EditorialAdapter {
   findPRs(branch: string): Promise<PublicationPR[]>;
-  isFinalized(date: string): Promise<boolean>;
+  isFinalized(editionKey: string): Promise<boolean>;
   readBranch(branch: string): Promise<BranchState | null>;
   defaultHead(): Promise<{ sha: string }>;
   commit(commit: { parent: string; files: EditorialFiles }): Promise<string>;
@@ -37,15 +38,19 @@ export interface RunSession {
   outcome: 'acquired';
   branch: string;
   date: string;
+  edition?: Edition;
   owner: string;
   sha: string;
   vocabulary: ReadonlySet<string>;
   ttl: number;
 }
 
-export const dailyBranch = (date: string) => `content/healthtech-ai-pulse-${date}`;
-export const dailyTitle = (date: string) => `content: prepare HealthTech AI Pulse for ${date}`;
-const ledgerPath = (date: string) => `docs/editorial/ledgers/${date}.json`;
+export const dailyBranch = (date: string, edition?: Edition) =>
+  `content/healthtech-ai-pulse-${editionKey(date, edition)}`;
+export const dailyTitle = (date: string, edition?: Edition) =>
+  `content: prepare HealthTech AI Pulse for ${editionKey(date, edition)}`;
+const ledgerPath = (date: string, edition?: Edition) =>
+  `docs/editorial/ledgers/${editionKey(date, edition)}.json`;
 const iso = (ms: number) => new Date(ms).toISOString();
 export class RunBlocked extends Error {}
 export class OwnershipLost extends Error {}
@@ -64,7 +69,14 @@ function assertOwner(
   now: number,
 ): asserts snapshot is OwnedBranchState {
   const active = snapshot?.ledger?.active_run;
-  if (!active || active.owner_token !== session.owner || Date.parse(active.expires_at) <= now)
+  if (
+    !active ||
+    active.owner_token !== session.owner ||
+    Date.parse(active.expires_at) <= now ||
+    snapshot?.ledger.editorial_date !== session.date ||
+    snapshot.ledger.edition !== session.edition ||
+    session.branch !== dailyBranch(session.date, session.edition)
+  )
     throw new OwnershipLost('Run ownership expired or changed; reread before retrying.');
 }
 function researchView(candidate: Ledger['candidates'][number]) {
@@ -91,9 +103,10 @@ function preserveResearch(previous: Ledger, next: Ledger) {
   )
     throw new RunBlocked('Existing human overrides must be preserved.');
 }
-function assertEditorialPaths(date: string, files: EditorialFiles) {
+function assertEditorialPaths(date: string, files: EditorialFiles, edition?: Edition) {
+  const key = editionKey(date, edition);
   const safe = new RegExp(
-    `^(src/content/stories/${date}-[a-z0-9-]+\\.md|src/content/pulse/${date}\\.md|public/images/stories/${date}-[a-z0-9-]+\\.webp|docs/editorial/illustrations/(?:reviews|briefs)/${date}-[a-z0-9-]+\\.json)$`,
+    `^(src/content/stories/${key}-[a-z0-9-]+\\.md|src/content/pulse/${key}\\.md|public/images/stories/${key}-[a-z0-9-]+\\.webp|docs/editorial/illustrations/(?:reviews|briefs)/${key}-[a-z0-9-]+\\.json)$`,
   );
   for (const [path, value] of Object.entries(files)) {
     if (!safe.test(path)) throw new RunBlocked(`Editorial run cannot modify ${path}`);
@@ -139,10 +152,16 @@ export async function acquireRun(
 ) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !owner)
     throw new RunBlocked('Valid date and unique owner token required.');
-  const branch = dailyBranch(date);
+  const edition = seed.edition;
+  const key = editionKey(date, edition);
+  // Validate the explicit exception before creating any Git objects or refs.
+  validateLedger(seed, vocabulary);
+  const branch = dailyBranch(date, edition);
   const currentPR = await inspectPR(adapter, branch);
-  if (currentPR.outcome || (await adapter.isFinalized(date)))
+  if (currentPR.outcome || (await adapter.isFinalized(key)))
     return { outcome: 'already-finalized', pr: currentPR.pr };
+  if (edition && !(await adapter.isFinalized(date)))
+    throw new RunBlocked('Evening supplement requires the ordinary edition to be finalized first.');
   const current = await adapter.readBranch(branch);
   if (current && !current.ledger)
     throw new RunBlocked(
@@ -154,7 +173,7 @@ export async function acquireRun(
     throw new RunBlocked(
       'Default branch changed after contract read; reread contracts before creating the batch.',
     );
-  if (ledger.editorial_date !== date || ledger.kind !== 'daily')
+  if (ledger.editorial_date !== date || ledger.edition !== edition || ledger.kind !== 'daily')
     throw new RunBlocked('Daily ledger/date required.');
   if (ledger.active_run && Date.parse(ledger.active_run.expires_at) > now)
     throw new RunBlocked('A run already owns this date; do not create another branch or PR.');
@@ -183,13 +202,16 @@ export async function acquireRun(
   const commit = await adapter.commit({
     parent: base.sha,
     files: {
-      [ledgerPath(date)]: { encoding: 'utf-8', content: JSON.stringify(ledger, null, 2) + '\n' },
+      [ledgerPath(date, edition)]: {
+        encoding: 'utf-8',
+        content: JSON.stringify(ledger, null, 2) + '\n',
+      },
     },
   });
   if (current)
     await adapter.updateRef({ branch, sha: commit, expectedSha: base.sha, force: false });
   else await adapter.createRef({ branch, sha: commit });
-  return { outcome: 'acquired', branch, date, owner, sha: commit, vocabulary, ttl };
+  return { outcome: 'acquired', branch, date, edition, owner, sha: commit, vocabulary, ttl };
 }
 
 export async function checkpoint(
@@ -203,7 +225,7 @@ export async function checkpoint(
   }: { ledger: Ledger; files?: EditorialFiles; now?: number; release?: boolean },
 ) {
   const pr = await inspectPR(adapter, session.branch);
-  if (pr.outcome || (await adapter.isFinalized(session.date)))
+  if (pr.outcome || (await adapter.isFinalized(editionKey(session.date, session.edition))))
     throw new OwnershipLost('Date finalized while run was active.');
   const current = await adapter.readBranch(session.branch);
   assertOwner(current, session, now);
@@ -211,6 +233,13 @@ export async function checkpoint(
     throw new OwnershipLost(
       'Branch changed after checkpoint; inspect human/concurrent edits before resuming.',
     );
+  if (
+    ledger.editorial_date !== session.date ||
+    ledger.edition !== session.edition ||
+    current.ledger.edition !== session.edition ||
+    !isDeepStrictEqual(current.ledger.edition_authorization, ledger.edition_authorization)
+  )
+    throw new RunBlocked('Edition identity and authorisation cannot change during a run.');
   preserveResearch(current.ledger, ledger);
   preserveArtwork(current.ledger, ledger);
   for (let i = 0; i < current.ledger.attempts.length; i++) {
@@ -219,7 +248,7 @@ export async function checkpoint(
     if (old.run_id !== session.owner && !isDeepStrictEqual(old, updated))
       throw new RunBlocked('Previous run attempts must remain unchanged.');
   }
-  assertEditorialPaths(session.date, files);
+  assertEditorialPaths(session.date, files, session.edition);
   if (
     Object.keys(files).some((path) => path.startsWith('src/content/stories/')) &&
     (!ledger.artwork ||
@@ -241,7 +270,7 @@ export async function checkpoint(
     parent: current.sha,
     files: {
       ...files,
-      [ledgerPath(session.date)]: {
+      [ledgerPath(session.date, session.edition)]: {
         encoding: 'utf-8',
         content: JSON.stringify(next, null, 2) + '\n',
       },
@@ -257,7 +286,7 @@ export async function ensureDraft(
   { preflightHead, body, now = Date.now() }: { preflightHead: string; body: string; now?: number },
 ) {
   let state = await inspectPR(adapter, session.branch);
-  if (state.outcome || (await adapter.isFinalized(session.date)))
+  if (state.outcome || (await adapter.isFinalized(editionKey(session.date, session.edition))))
     return { outcome: 'already-finalized', pr: state.pr };
   const current = await adapter.readBranch(session.branch);
   assertOwner(current, session, now);
@@ -269,14 +298,17 @@ export async function ensureDraft(
   if (state.pr)
     return {
       outcome: 'draft-existing',
-      pr: await adapter.updatePR(state.pr, { title: dailyTitle(session.date), body }),
+      pr: await adapter.updatePR(state.pr, {
+        title: dailyTitle(session.date, session.edition),
+        body,
+      }),
     };
   try {
     return {
       outcome: 'draft-created',
       pr: await adapter.createPR({
         head: session.branch,
-        title: dailyTitle(session.date),
+        title: dailyTitle(session.date, session.edition),
         body,
         draft: true,
       }),

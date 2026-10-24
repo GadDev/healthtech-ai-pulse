@@ -12,6 +12,7 @@ const pulse = defineCollection({
   schema: z
     .object({
       date: z.coerce.date(),
+      edition: z.literal('evening').optional(),
       title: z.string().min(1),
       summary: z.string().min(1),
       featured: z.string().optional(),

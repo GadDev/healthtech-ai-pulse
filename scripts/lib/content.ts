@@ -1,9 +1,11 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
+import { editionKey, type Edition } from '../../src/lib/edition.ts';
 
 type ContentDocument<T> = { id: string; data: T; body: string };
 type IssueFrontmatter = {
   date: string | Date;
+  edition?: Edition;
   sections: { key: string; stories: string[] }[];
   featured?: string;
   mustKnow?: string;
@@ -37,7 +39,7 @@ export function checkContent(root = process.cwd()) {
     for (const key of ['featured', 'mustKnow'] as const)
       if (issue.data[key] && !ids.includes(issue.data[key]))
         throw new Error(`${issue.id}: invalid ${key}`);
-    if (String(issue.data.date).slice(0, 10) !== issue.id)
+    if (editionKey(issue.data.date, issue.data.edition) !== issue.id)
       throw new Error(`${issue.id}: date must match filename`);
   }
   return { stories: stories.length };

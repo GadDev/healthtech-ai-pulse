@@ -18,11 +18,95 @@ import {
   OwnershipLost,
 } from '../scripts/lib/orchestration.ts';
 import type { EditorialAdapter, RunSession } from '../scripts/lib/orchestration.ts';
+import { dailyBranch, dailyTitle } from '../scripts/lib/orchestration.ts';
 import { deploymentConfig } from '../scripts/lib/deployment.ts';
 import { fixture, vocabulary, now } from './helpers/fixtures.ts';
 import type { SyntheticLedger } from './helpers/fixtures.ts';
 import { ledgerSchema } from '../src/lib/editorial-schema.ts';
 const clock = Date.parse(now);
+
+test('authorised evening uses a separate lease, finalisation key and write boundary', async () => {
+  const a = adapter();
+  const ledger = JSON.parse(
+    JSON.stringify(seed()).replaceAll('2026-10-18', '2026-10-24'),
+  ) as SyntheticLedger;
+  ledger.edition = 'evening';
+  ledger.edition_authorization = {
+    actor: 'Synthetic actor',
+    recorded_at: now,
+    reason: 'Synthetic test only',
+    scope: '2026-10-24-evening',
+  };
+  for (const c of ledger.candidates) c.id = c.id.replace('2026-10-24-', '2026-10-24-evening-');
+  ledger.publication.story_ids = ledger.candidates.map((c) => c.id);
+  ledger.publication.issue_path = 'src/content/pulse/2026-10-24-evening.md';
+  const paths: string[] = [];
+  const finalizationKeys: string[] = [];
+  const wrapped: EditorialAdapter = {
+    ...a,
+    async isFinalized(key) {
+      finalizationKeys.push(key);
+      return key === '2026-10-24';
+    },
+    async commit(input) {
+      paths.push(...Object.keys(input.files));
+      return a.commit(input);
+    },
+  };
+  const result = await acquireRun(wrapped, {
+    date: '2026-10-24',
+    owner: 'synthetic-evening',
+    seed: ledger,
+    vocabulary,
+    now: clock,
+  });
+  assert.equal(result.outcome, 'acquired');
+  if (result.outcome !== 'acquired') throw new Error('Expected acquired');
+  const session = result as RunSession;
+  assert.equal(session.branch, dailyBranch('2026-10-24', 'evening'));
+  assert.equal(
+    dailyTitle('2026-10-24', 'evening'),
+    'content: prepare HealthTech AI Pulse for 2026-10-24-evening',
+  );
+  assert.deepEqual(paths, ['docs/editorial/ledgers/2026-10-24-evening.json']);
+  assert.deepEqual(finalizationKeys, ['2026-10-24-evening', '2026-10-24']);
+  const state = await a.readBranch();
+  assert.ok(state);
+  for (const path of [
+    'src/content/pulse/2026-10-24.md',
+    'src/content/stories/2026-10-24-original.md',
+    'public/images/stories/2026-10-24-original.webp',
+  ]) {
+    await assert.rejects(
+      () =>
+        checkpoint(wrapped, session, {
+          ledger: state.ledger,
+          files: { [path]: null },
+          now: clock + 1,
+        }),
+      /cannot modify/,
+    );
+  }
+  const changed = structuredClone(state.ledger);
+  changed.edition_authorization!.reason = 'Rewritten permission';
+  await assert.rejects(
+    () => checkpoint(wrapped, session, { ledger: changed, now: clock + 1 }),
+    /authorisation cannot change/,
+  );
+  const next = await checkpoint(wrapped, session, { ledger: state.ledger, now: clock + 1 });
+  assert.notEqual(next.sha, session.sha);
+  assert.equal(paths.at(-1), 'docs/editorial/ledgers/2026-10-24-evening.json');
+  a.setFinalized(true);
+  wrapped.isFinalized = async () => true;
+  const repeat = await acquireRun(wrapped, {
+    date: '2026-10-24',
+    owner: 'repeat',
+    seed: ledger,
+    vocabulary,
+    now: clock + 2,
+  });
+  assert.equal(repeat.outcome, 'already-finalized');
+});
 type EditorialPR = Awaited<ReturnType<EditorialAdapter['findPRs']>>[number];
 function adapter() {
   let index = 0;

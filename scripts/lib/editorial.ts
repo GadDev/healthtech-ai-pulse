@@ -16,6 +16,7 @@ import { validateArtwork } from './artwork.ts';
 import { historicalIllustrationReviews } from './historical-illustration-reviews.ts';
 import { documents, markdown, checkContent } from './content.ts';
 import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.ts';
+import { editionKey } from '../../src/lib/edition.ts';
 
 type Ledger = z.infer<typeof ledgerSchema>;
 type Story = { id: string; data: z.infer<typeof storySchema> };
@@ -31,6 +32,12 @@ export function inside(root: string, path: string) {
 const verified = (status: string) => ['verified', 'verified-with-claim-scope'].includes(status);
 export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>): Ledger {
   const ledger = ledgerSchema.parse(input);
+  const key = editionKey(ledger.editorial_date, ledger.edition);
+  if (
+    (ledger.edition && (!ledger.edition_authorization || ledger.kind !== 'daily')) ||
+    (!ledger.edition && ledger.edition_authorization)
+  )
+    throw new Error('Evening edition requires its own explicit authorisation record');
   validateArtwork(ledger);
   const seen = new Set();
   for (const [bucket, decision] of [
@@ -42,7 +49,10 @@ export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>):
       if (c.decision !== decision || seen.has(c.id))
         throw new Error(`${c.id}: decision/bucket mismatch or duplicate`);
       seen.add(c.id);
-      if (!c.id.startsWith(`${ledger.editorial_date}-`))
+      if (
+        !c.id.startsWith(`${key}-`) ||
+        (!ledger.edition && c.id.startsWith(`${ledger.editorial_date}-evening-`))
+      )
         throw new Error(`${c.id}: wrong editorial date`);
       if (c.topics.some((t) => !vocabulary.has(t))) throw new Error(`${c.id}: uncontrolled topic`);
       const sources = new Map(c.sources.map((s) => [s.id, s]));
@@ -135,8 +145,7 @@ export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>):
     throw new Error('Ledger-only batch cannot contain issue/stories/MUST KNOW');
   if (
     ledger.publication.mode === 'publication' &&
-    (!published.length ||
-      ledger.publication.issue_path !== `src/content/pulse/${ledger.editorial_date}.md`)
+    (!published.length || ledger.publication.issue_path !== `src/content/pulse/${key}.md`)
   )
     throw new Error('Publication batch must reference its issue');
   for (const id of published) {
@@ -246,7 +255,7 @@ export function checkEditorial(
     );
   const ledgers = paths.map((path) => {
     const ledger = validateLedger(JSON.parse(readFileSync(path, 'utf8')), vocabulary);
-    if (path.split('/').at(-1) !== `${ledger.editorial_date}.json`)
+    if (path.split('/').at(-1) !== `${editionKey(ledger.editorial_date, ledger.edition)}.json`)
       throw new Error(`${path}: date/filename mismatch`);
     if (ledger.publication.mode === 'in-progress' && !allowInProgress)
       throw new Error(`${path}: unfinished checkpoint cannot pass final validation`);
@@ -254,10 +263,27 @@ export function checkEditorial(
       throw new Error('Controlled trials are isolated from live story mappings');
     return ledger;
   });
+  for (const ledger of ledgers)
+    if (
+      ledger.edition &&
+      !ledgers.some(
+        (prior) =>
+          prior.kind === 'daily' &&
+          !prior.edition &&
+          prior.editorial_date === ledger.editorial_date &&
+          prior.publication.mode !== 'in-progress' &&
+          prior.active_run === null,
+      )
+    )
+      throw new Error('Evening supplement requires a finalized ordinary ledger.');
   const identities = new Map();
   for (const ledger of [...ledgers]
     .filter((l) => l.kind === 'daily')
-    .sort((a, b) => a.editorial_date.localeCompare(b.editorial_date)))
+    .sort((a, b) =>
+      editionKey(a.editorial_date, a.edition).localeCompare(
+        editionKey(b.editorial_date, b.edition),
+      ),
+    ))
     for (const id of ledger.publication.story_ids) {
       const c = ledger.candidates.find((c) => c.id === id)!;
       const keys = [
@@ -284,7 +310,8 @@ export function checkEditorial(
     if (/FIXTURE ONLY|SYNTHETIC TEST DATA/.test(story.body))
       throw new Error(`${story.id}: fixture leaked into live content`);
     const ledger = ledgers.find(
-      (l) => l.editorial_date === data.editorialDate && l.kind === 'daily',
+      (l) =>
+        l.editorial_date === data.editorialDate && l.edition === data.edition && l.kind === 'daily',
     );
     if (!ledger || !ledger.publication.story_ids.includes(story.id))
       throw new Error(`${story.id}: no daily publication mapping`);
@@ -334,7 +361,7 @@ export function checkEditorial(
   for (const ledger of ledgers) {
     for (const id of ledger.publication.story_ids)
       if (!allStories.some((s) => s.id === id)) throw new Error(`${id}: mapped story missing`);
-    const issue = `${root}/src/content/pulse/${ledger.editorial_date}.md`;
+    const issue = `${root}/src/content/pulse/${editionKey(ledger.editorial_date, ledger.edition)}.md`;
     if (ledger.kind === 'controlled-trial') continue;
     if (ledger.publication.mode === 'ledger-only' && existsSync(issue))
       throw new Error('Ledger-only batch has issue');
@@ -359,7 +386,7 @@ export function checkEditorial(
       !ledgers.some(
         (l) =>
           l.kind === 'daily' &&
-          l.editorial_date === issue.id &&
+          editionKey(l.editorial_date, l.edition) === issue.id &&
           l.publication.mode === 'publication',
       )
     )
