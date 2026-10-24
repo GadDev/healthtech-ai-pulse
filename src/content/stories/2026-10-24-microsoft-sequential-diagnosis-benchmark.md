@@ -23,7 +23,7 @@ evidence:
   access_level: full-text
   funding: The accessible manuscript did not expose a formal funding declaration. The work was conducted by Microsoft-affiliated authors; no separate funder is inferred.
   conflicts_of_interest: All listed authors are affiliated with Microsoft. A complete final-paper competing-interest declaration did not surface in the accessible manuscript and is recorded as unavailable.
-  corrections_retractions: No correction, retraction or expression of concern was identified in publisher, DOI or artifact checks on 24 October 2026.
+  corrections_retractions: No correction, retraction or expression of concern was identified in the publisher, DOI, PubMed-style or artifact checks on 24 October 2026.
   contradictory_findings:
     - The public NEJM cases may have appeared in model training data, and the paper does not report a direct contamination test.
     - The gatekeeper can synthesize plausible findings when source cases lack requested details, so the interaction is not a faithful replay of a clinical encounter.
@@ -86,4 +86,3 @@ The paper reports estimated diagnostic costs alongside accuracy. These estimates
 SDBench is nevertheless more demanding than a static multiple-choice exam. It exposes what an agent asks next, how quickly it commits to a hypothesis and whether an orchestration strategy changes test selection. The PhysioNet release gives other researchers a defined artifact to inspect and, where access permits, reproduce.
 
 The responsible conclusion is therefore narrow: in two author-constructed text simulations, one MAI-DxO configuration outperformed the participating individual generalists on final diagnostic accuracy. Whether that advantage survives real prevalence, incomplete records, multimodal evidence, clinical teamwork and safety monitoring remains unanswered.
-

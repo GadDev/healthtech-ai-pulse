@@ -90,4 +90,3 @@ Oversight plans often focus on automation bias: will a user accept an incorrect 
 That does not mean users should trust the system more. Appropriate reliance depends on calibration: the advice should be accepted when it is likely to be right and challenged when it is likely to be wrong. The experiment's fixed 80% accuracy created one such environment; a hospital needs evidence from its own model, prevalence, interface and users.
 
 For implementation teams, the durable requirement is to test both failure modes. Explanation interfaces should be evaluated under deliberately wrong as well as correct advice, across easy and difficult cases, with subgroup, confidence and workflow measures. A visually persuasive explanation is not itself evidence that the recommendation deserves trust.
-
