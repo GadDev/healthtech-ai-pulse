@@ -1,0 +1,19 @@
+{
+  "story_id": "2026-10-24-microsoft-sequential-diagnosis-benchmark",
+  "story_source_sha256": "f5f26d77b696475b62c75fc35de254023c0c4eae6beeec35b6a14c745e6ce4c4",
+  "brief_sha256": "89cbbc158b7f29f0f50efbc911959f18362eec2adc9dc50a14c3738c63600480",
+  "brief_path": "docs/editorial/illustrations/briefs/2026-10-24-microsoft-sequential-diagnosis-benchmark.json",
+  "policy_sha256": "9057c3830bb9ed78b04137966f009bf33855d16fc909411dc86a303b3b6332c8",
+  "version": "healthtech-1.0",
+  "candidate_count": 1,
+  "generator": "image_gen.imagegen",
+  "model_snapshot": null,
+  "generation_key": "1de6176d7e7cfb7ae0229539ab87de75f358dbefcb2874e9df7281dd66420b83",
+  "asset_sha256": "fa860a6ac79aa69967e0f42664ea774af778f98eb2a697369551a5cd0e7ccc9b",
+  "crop": "wide",
+  "reviewed_by": "Codex (model visual, crop and article-context review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-24T08:04:39.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}

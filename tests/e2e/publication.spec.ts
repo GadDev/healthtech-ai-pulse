@@ -101,33 +101,62 @@ test('retrospective edition dates are not presented as publication timestamps', 
   expect(rss).not.toContain('<pubDate>');
 });
 
-for (const width of [375, 1280])
-  test(`scientific pilot image and disclosure survive real placements at ${width}px`, async ({
+for (const width of [375, 1280]) {
+  test(`current lead image and disclosure survive real placements at ${width}px`, async ({
     page,
   }, testInfo) => {
     await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    const lead = page.locator('.lead-story');
+    const leadImage = lead.locator('img');
+    await expect(leadImage).toBeVisible();
+    await expect(leadImage).toHaveAttribute('src', /^\/images\/stories\/.+\.webp$/);
+    const imageSrc = await leadImage.getAttribute('src');
+    const articlePath = await lead.locator('h1 a').getAttribute('href');
+    expect(articlePath).toMatch(/^\/stories\/.+\/$/);
+
+    await page.goto(articlePath!);
+    const categoryLink = page.locator('.breadcrumbs a[href^="/desks/"]');
+    await expect(categoryLink).toHaveAttribute('href', /^\/desks\/.+\/$/);
+    const categoryPath = await categoryLink.getAttribute('href');
+
     for (const [name, path, selector] of [
       ['home', '/', '.lead-story'],
-      ['article', '/stories/2026-10-23-dynavelo-b-cell-rescue-predictions/', '.article-page'],
-      ['listing', '/desks/biomedical-foundations/', '.story-row--visual'],
+      ['article', articlePath!, '.article-page'],
+      ['listing', categoryPath!, '.story-row--visual'],
     ]) {
       await page.goto(path);
-      const image = page.locator(`${selector} img[src*="dynavelo"]`).first();
+      const placement = page.locator(selector).first();
+      const image = placement.locator('figure img');
       await expect(image).toBeVisible();
+      await expect(image).toHaveAttribute('src', imageSrc!);
+      await expect(image).toHaveAttribute('alt', /\S/);
       expect(
         await image.evaluate(async (el) => {
           await (el as HTMLImageElement).decode();
           return (el as HTMLImageElement).naturalWidth;
         }),
       ).toBe(1536);
-      await expect(page.locator(`${selector} figcaption`).first()).toContainText(
+      await expect(placement.locator('figcaption')).toContainText(
         'Generated editorial illustration.',
       );
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
       ).toBeTruthy();
-      if (name === 'article')
-        await expect(page.locator('.article-image figcaption')).toContainText('not microscopy');
-      await page.screenshot({ path: testInfo.outputPath(`scientific-pilot-${name}-${width}.png`) });
+      await page.screenshot({ path: testInfo.outputPath(`current-lead-${name}-${width}.png`) });
     }
   });
+
+  test(`scientific pilot article retains its image and microscopy disclaimer at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/stories/2026-10-23-dynavelo-b-cell-rescue-predictions/');
+    await expect(page.locator('.article-image img')).toHaveAttribute('src', /dynavelo/);
+    await expect(page.locator('.article-image img')).toBeVisible();
+    await expect(page.locator('.article-image figcaption')).toContainText(
+      'Generated editorial illustration.',
+    );
+    await expect(page.locator('.article-image figcaption')).toContainText('not microscopy');
+  });
+}
