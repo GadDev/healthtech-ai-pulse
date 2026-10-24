@@ -1,0 +1,17 @@
+{
+  "story_id": "2026-10-24-head-ct-ai-advice-reliance",
+  "verified_context": "A randomized web experiment found both over-reliance on wrong advice and under-reliance on correct advice during a binary head CT task. Advice was deliberately 80% accurate; no commercial model or patient outcome was evaluated.",
+  "visual_idea": "A simplified head profile faces a separate observation disc while two offset guidance ribbons diverge around it. The split evokes accepting or rejecting advice without marking either path correct or depicting a generated scan.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Scientific Editorial Abstraction, scientific-1. Standalone 3:2 landscape magazine illustration, crop-safe in central 16:9 and 3:2. White #FFFFFF dominates; ink #424242, teals #51796E/#344F51 structure, pale sage #E8EFEC and mist #D1E0E2 layers, sparing rose #D4A298/caramel #BC8A5F. Three written concepts considered: A a simplified head contour facing a separate observation disc with two offset guidance ribbons diverging beside it; B paired viewing apertures with one cue accepted and one held apart; C a radiology-like observation plane separated from two balancing paths. Choose A because the head, observation and competing cues remain legible at thumbnail size without inventing a CT image. Reject B as too abstract and C because balance imagery could imply quantified equivalence. Recognisable medical anchor is an anatomically informed but simplified head contour and observation surface. No realistic or synthetic CT image, lesion, hemorrhage location, bounding-box result, correct/incorrect color coding, measured error map, patient outcome or recommendation. No words, letters, numbers, labels, logos, UI, screenshot, actual patient, researcher, institution, study apparatus, generated medical scan, documentary radiograph, invented anatomy or mechanism, data scale, watermark, border, frame, neon, robot, glowing brain, decorative molecules, glossy 3D, excessive gradient or webpage furniture. Generate one standalone wordless illustration.",
+  "references": [
+    {"path": "docs/editorial/VISUAL_CONSTITUTION_V1.md", "sha256": "ebc2fec12f0d0f75aa81b9ea1907f1805bd6c712061487d234c80d7c01a950bc"},
+    {"path": ".agents/skills/healthtech-ai-pulse-illustration/SKILL.md", "sha256": "fc335a5428133837b140c0dc824fe1ad42ec14f80a002dbf27bd03725f037dd8"},
+    {"path": "src/pages/stories/[...id].astro", "sha256": "2c088b58c041762930eb35c4c3fa66578123c0e10ad36b0c79b8a60e3c369ca5"},
+    {"path": "src/components/StoryList.astro", "sha256": "2b23835997f9887f42d46b6ae98d4718ded2e8e8347ecf4b61aac51b8e3bfbed"},
+    {"path": "src/pages/index.astro", "sha256": "35b280e2359b32c8514707b8884f0f37ec0142b480ba46dc247d4798e44fc7e6"},
+    {"path": "src/components/IllustrationCaption.astro", "sha256": "e691bd4b466b4fb52dab1281ca9dfe5f4e6fb1e757611c46e6cab3ce4993bc44"},
+    {"path": "src/styles/publication.css", "sha256": "3a4d3423f332f045ab2e66987338d7c2fc7b2ab70f350a0300d5bff47c61f8af"}
+  ]
+}

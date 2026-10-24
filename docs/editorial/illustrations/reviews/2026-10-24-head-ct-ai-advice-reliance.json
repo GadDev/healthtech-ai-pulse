@@ -1,0 +1,19 @@
+{
+  "story_id": "2026-10-24-head-ct-ai-advice-reliance",
+  "story_source_sha256": "b191f0afec7b5ea90f924fefcf30d58e643a1aa536b13206c84d5d0a8c79f2f1",
+  "brief_sha256": "049830ed44a4baad24288e27074d0e76210bb4d7ccdd6957478f07d7904ae401",
+  "brief_path": "docs/editorial/illustrations/briefs/2026-10-24-head-ct-ai-advice-reliance.json",
+  "policy_sha256": "9057c3830bb9ed78b04137966f009bf33855d16fc909411dc86a303b3b6332c8",
+  "version": "healthtech-1.0",
+  "candidate_count": 1,
+  "generator": "image_gen.imagegen",
+  "model_snapshot": null,
+  "generation_key": "9666e578f57f14bc45d84b6cc9921e30123d50dc1ca3cd2a4fb2fc5b0f241043",
+  "asset_sha256": "269de333e5ca393d01a09cb8f70760bf83321c219077ddf271d079d9cc9f4bf7",
+  "crop": "wide",
+  "reviewed_by": "Codex (model visual, crop and article-context review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-24T08:04:39.000Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
