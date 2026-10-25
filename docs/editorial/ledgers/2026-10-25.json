@@ -912,8 +912,8 @@
       {
         "command": "npm run verify",
         "status": "passed",
-        "tested_revision": "Prospective ledger-only tree based on 0c2dceee4789ed8b81b3fb49f27f604fbccdc1a5; final exact-head checks recorded in PR handoff",
-        "execution": "Local Node24.22.1; initial ledger-only formatting failure repaired with formatter limited to today's JSON, then full rerun.",
+        "tested_revision": "bc77923f25e90de657365f3cb4130f283dc12593",
+        "execution": "Local Node24.22.1 full rerun on exact committed preflight head; earlier prospective formatting failure repaired only in today's JSON.",
         "evidence": "Lint, formatting, scripts/tests TypeScript, schema drift, content/editorial/illustration,145tests, Astro0errors/0warnings,31-page build and11-page Pagefind index passed."
       },
       {
@@ -929,7 +929,7 @@
     {
       "run_id": "healthtech-2026-10-25T081803Z-root",
       "started_at": "2026-10-25T08:18:03Z",
-      "completed_at": null,
+      "completed_at": "2026-10-25T08:39:13Z",
       "phases": [
         "contracts-read",
         "existing-batch-checked",
@@ -938,17 +938,14 @@
         "ownership-acquired",
         "research-checkpoint",
         "ledger-only-finalized",
-        "local-preflight-complete"
+        "local-preflight-complete",
+        "draft-pr-created",
+        "ownership-released"
       ],
-      "outcome": "ledger-only-preflight-complete-awaiting-draft"
+      "outcome": "checkpoint-complete"
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-10-25T081803Z-root",
-    "acquired_at": "2026-10-25T08:33:07Z",
-    "heartbeat_at": "2026-10-25T08:36:06Z",
-    "expires_at": "2026-10-25T10:36:06.000Z"
-  },
+  "active_run": null,
   "human_overrides": [],
   "artwork": {
     "version": "healthtech-artwork-1",
