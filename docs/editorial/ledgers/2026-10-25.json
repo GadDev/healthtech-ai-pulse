@@ -95,17 +95,8 @@
       "decision": "watch",
       "title": "Human-oversight review highlights limits of clinical error-interception evidence",
       "desk": "safety-policy",
-      "topics": [
-        "safety",
-        "evaluation",
-        "governance",
-        "decision-support"
-      ],
-      "entities": [
-        "Di Zeng",
-        "Jianyong Lei",
-        "Zhihui Li"
-      ],
+      "topics": ["safety", "evaluation", "governance", "decision-support"],
+      "entities": ["Di Zeng", "Jianyong Lei", "Zhihui Li"],
       "event_date": "2026-10-23",
       "event_date_reason": "Publisher-indexed listing gives23 October; Article in Press, not a new experiment.",
       "source_publication_date": "2026-10-23",
@@ -231,17 +222,8 @@
       "decision": "watch",
       "title": "ISM6331 ESMO results remain unverified",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "clinical-trials",
-        "evaluation"
-      ],
-      "entities": [
-        "Insilico Medicine",
-        "ISM6331",
-        "Chemistry42",
-        "ESMO"
-      ],
+      "topics": ["drug-discovery", "clinical-trials", "evaluation"],
+      "entities": ["Insilico Medicine", "ISM6331", "Chemistry42", "ESMO"],
       "event_date": null,
       "event_date_reason": "Sponsor scheduled25 October08:57–09:02 CET within08:30–10:00 session. Elapsed time is not proof of completed presentation/results.",
       "source_publication_date": "2026-10-21",
@@ -297,9 +279,7 @@
       },
       "deduplication": {
         "status": "repeat",
-        "previous_candidate_ids": [
-          "2026-10-24-insilico-ism6331-esmo-preview"
-        ],
+        "previous_candidate_ids": ["2026-10-24-insilico-ism6331-esmo-preview"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
@@ -333,17 +313,8 @@
       "decision": "watch",
       "title": "INTerpath-001 requires primary-result and AI-role verification",
       "desk": "pharma",
-      "topics": [
-        "clinical-trials",
-        "evaluation"
-      ],
-      "entities": [
-        "Moderna",
-        "Merck",
-        "intismeran autogene",
-        "V940",
-        "INTerpath-001"
-      ],
+      "topics": ["clinical-trials", "evaluation"],
+      "entities": ["Moderna", "Merck", "intismeran autogene", "V940", "INTerpath-001"],
       "event_date": "2026-10-24",
       "event_date_reason": "Sponsor meeting listing labels ESMO presentation24 October, not the earlier announcement's verified timing.",
       "source_publication_date": null,
@@ -448,18 +419,8 @@
       "decision": "rejected",
       "title": "Microsoft diagnostic orchestrator outperformed generalist physicians in text-only simulations — already covered",
       "desk": "clinical-ai",
-      "topics": [
-        "diagnostics",
-        "decision-support",
-        "evaluation",
-        "reproducibility"
-      ],
-      "entities": [
-        "Microsoft AI",
-        "MAI-DxO",
-        "SDBench",
-        "PhysioNet"
-      ],
+      "topics": ["diagnostics", "decision-support", "evaluation", "reproducibility"],
+      "entities": ["Microsoft AI", "MAI-DxO", "SDBench", "PhysioNet"],
       "event_date": "2026-10-22",
       "event_date_reason": "Science lists the peer-reviewed paper in its 22 October 2026 issue.",
       "source_publication_date": "2026-10-22",
@@ -541,12 +502,8 @@
       },
       "deduplication": {
         "status": "repeat",
-        "previous_candidate_ids": [
-          "2026-10-24-microsoft-sequential-diagnosis-benchmark"
-        ],
-        "previous_story_ids": [
-          "2026-10-24-microsoft-sequential-diagnosis-benchmark"
-        ],
+        "previous_candidate_ids": ["2026-10-24-microsoft-sequential-diagnosis-benchmark"],
+        "previous_story_ids": ["2026-10-24-microsoft-sequential-diagnosis-benchmark"],
         "material_delta": null,
         "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
         "publication_status": "duplicate-conflict"
@@ -658,12 +615,8 @@
       },
       "deduplication": {
         "status": "repeat",
-        "previous_candidate_ids": [
-          "2026-10-24-head-ct-ai-advice-reliance"
-        ],
-        "previous_story_ids": [
-          "2026-10-24-head-ct-ai-advice-reliance"
-        ],
+        "previous_candidate_ids": ["2026-10-24-head-ct-ai-advice-reliance"],
+        "previous_story_ids": ["2026-10-24-head-ct-ai-advice-reliance"],
         "material_delta": null,
         "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
         "publication_status": "duplicate-conflict"
@@ -693,11 +646,7 @@
       "decision": "rejected",
       "title": "Vaccine digital-twins review was published online in September",
       "desk": "biomedical-foundations",
-      "topics": [
-        "research-tools",
-        "evaluation",
-        "manufacturing-quality"
-      ],
+      "topics": ["research-tools", "evaluation", "manufacturing-quality"],
       "entities": [],
       "event_date": "2026-09-07",
       "event_date_reason": "PubMed Epub7 September;24 October is later citation/issue date.",
@@ -772,11 +721,7 @@
       "decision": "rejected",
       "title": "Older GMP commentary is not a new regulatory action",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "manufacturing-quality",
-        "governance"
-      ],
+      "topics": ["regulation", "manufacturing-quality", "governance"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "No current official action verified; commentary discusses2025 draft and June/July2026 workshop.",
@@ -851,10 +796,7 @@
       "decision": "rejected",
       "title": "AMA agentic governance guide predates the initial window",
       "desk": "safety-policy",
-      "topics": [
-        "governance",
-        "implementation"
-      ],
+      "topics": ["governance", "implementation"],
       "entities": [],
       "event_date": "2026-10-13",
       "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
@@ -911,9 +853,7 @@
       },
       "deduplication": {
         "status": "repeat",
-        "previous_candidate_ids": [
-          "2026-10-19-ama-framework-date"
-        ],
+        "previous_candidate_ids": ["2026-10-19-ama-framework-date"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
@@ -941,13 +881,49 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Research checkpoint: no candidate clears all current selection gates; ledger-only finalization awaits executable preflight.",
+    "mode": "ledger-only",
+    "reason": "Zero selected: oversight review71.3 is below75; ISM6331 and INTerpath-001 essential result/method inspection remains unfinished. Older/duplicate leads rejected. No story, issue, artwork or MUST KNOW manufactured.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "45f94e7463883353304d1d3c216d8bd9705790f3",
+        "execution": "Local Node24.22.1/npm; pinned lockfile installation before today's ledger was added.",
+        "evidence": "295 packages installed, exit0."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-25.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on 0c2dceee4789ed8b81b3fb49f27f604fbccdc1a5; final exact-head checks recorded in PR handoff",
+        "execution": "Local Node24.22.1 on final-mode prospective ledger.",
+        "evidence": "15 ledgers /10 stories passed, no25October story or issue."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-25.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on 0c2dceee4789ed8b81b3fb49f27f604fbccdc1a5; final exact-head checks recorded in PR handoff",
+        "execution": "Local Node24.22.1/Sharp; no new artwork requested.",
+        "evidence": "All15ledgers/10existing stories decoded and mapped."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on 0c2dceee4789ed8b81b3fb49f27f604fbccdc1a5; final exact-head checks recorded in PR handoff",
+        "execution": "Local Node24.22.1; initial ledger-only formatting failure repaired with formatter limited to today's JSON, then full rerun.",
+        "evidence": "Lint, formatting, scripts/tests TypeScript, schema drift, content/editorial/illustration,145tests, Astro0errors/0warnings,31-page build and11-page Pagefind index passed."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only tree based on 0c2dceee4789ed8b81b3fb49f27f604fbccdc1a5; final exact-head checks recorded in PR handoff",
+        "execution": "Local Playwright configured managed server exited before assertions; no code/CI change attempted.",
+        "evidence": "Process from config.webServer exited early. No browser assertions ran; exact-head hosted Browser smoke and accessibility remains required."
+      }
+    ]
   },
   "attempts": [
     {
@@ -960,16 +936,18 @@
         "bounded-discovery-complete",
         "decisions-recorded",
         "ownership-acquired",
-        "research-checkpoint"
+        "research-checkpoint",
+        "ledger-only-finalized",
+        "local-preflight-complete"
       ],
-      "outcome": "in-progress"
+      "outcome": "ledger-only-preflight-complete-awaiting-draft"
     }
   ],
   "active_run": {
     "owner_token": "healthtech-2026-10-25T081803Z-root",
     "acquired_at": "2026-10-25T08:33:07Z",
-    "heartbeat_at": "2026-10-25T08:33:07Z",
-    "expires_at": "2026-10-25T10:33:07.000Z"
+    "heartbeat_at": "2026-10-25T08:36:06Z",
+    "expires_at": "2026-10-25T10:36:06.000Z"
   },
   "human_overrides": [],
   "artwork": {
