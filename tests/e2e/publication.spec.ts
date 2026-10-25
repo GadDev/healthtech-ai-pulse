@@ -66,6 +66,8 @@ test('article connects evidence, sources and corrections to their destinations',
   page,
 }) => {
   await page.goto('/stories/2026-10-19-oncology-ai-ehr-handoff/');
+  await expect(page.locator('.article-page .evidence-summary')).toHaveCount(0);
+  await expect(page.locator('.article-page > .evidence-card')).toHaveCount(1);
   await expect(page.getByRole('navigation', { name: 'In this article' })).toBeVisible();
   await page
     .getByRole('navigation', { name: 'In this article' })

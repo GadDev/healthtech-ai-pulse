@@ -3,7 +3,6 @@ import { getCollection, render } from 'astro:content';
 import IllustrationCaption from '../../components/IllustrationCaption.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EvidenceCard from '../../components/EvidenceCard.astro';
-import EvidenceSummary from '../../components/EvidenceSummary.astro';
 import { desks } from '../../lib/categories';
 export async function getStaticPaths() {
   return (await getCollection('stories', ({ data }) => !data.draft)).map((story) => ({
@@ -89,7 +88,6 @@ const { Content } = await render(story);
           </p>
         )}
       </div>
-      <EvidenceSummary story={story} />
     </div>
     <EvidenceCard evidence={story.data.evidence} />
     <nav class="back-link" aria-label="More coverage">
