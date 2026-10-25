@@ -1,0 +1,999 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-25",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "45f94e7463883353304d1d3c216d8bd9705790f3",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-23T07:57:16.000Z",
+    "window_end": "2026-10-25T08:30:42Z",
+    "last_completed_cutoff": "2026-10-24T07:57:16.000Z",
+    "query_log": [
+      {
+        "query": "Bounded plan: five lanes,30-minute discovery planning budget and up to20-minute verification per shortlisted lead; last completed cutoff minus24h, within7-day cap.",
+        "source": "DISCOVERY_V1.md at 45f94e7463883353304d1d3c216d8bd9705790f3",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "All lanes attempted with first-page/web-index bounds and followups below. These consolidated access timestamps record actual review of retained responses, not invented initial request times. Total search hits/retrieved/screened counts unknown unless explicitly stated; no exhaustive surveillance."
+      },
+      {
+        "query": "(\"artificial intelligence\" OR \"machine learning\" OR \"language model\") AND (diagnosis OR validation OR clinical OR protein OR drug) AND (2026/10/23:2026/10/25[dp] OR 2026/10/23:2026/10/25[edat]); sort=date; size=20; page1",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22artificial%20intelligence%22%20OR%20%22machine%20learning%22%20OR%20%22language%20model%22)%20AND%20(diagnosis%20OR%20validation%20OR%20clinical%20OR%20protein%20OR%20drug)%20AND%20(2026%2F10%2F23%3A2026%2F10%2F25%5Bdp%5D%20OR%202026%2F10%2F23%3A2026%2F10%2F25%5Bedat%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Direct documented publication/entry-date search unavailable. Complementary indexed PubMed searches led to two abstract records, including42705167. PMID41143654 date extraction inconsistent then failed, remains unappraised lead. No database pagination completion claimed."
+      },
+      {
+        "query": "site:europepmc.org \"2026-10-24\" (\"protein\" OR \"drug discovery\") (\"AI\" OR \"machine learning\"); site:europepmc.org \"2026-10-24\" \"machine learning\" (recency7)",
+        "source": "Europe PMC web-index discovery; https://europepmc.org/RestfulWebService ; https://europepmc.org/help",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Research/biomedical lanes: site queries attempted; no useful current primary record retrieved. Docs/help403, no API query invented. Counts/remainder unknown; no representative chronological database screen claimed."
+      },
+      {
+        "query": "\"Human oversight of erroneous clinical AI\" \"2026\" (recency7); \"Human oversight of erroneous clinical AI\" review meta analysis methods sample studies (recency7)",
+        "source": "https://www.nature.com/articles/s41746-026-03408-5 ; https://www.researchgate.net/publication/416713743_Human_oversight_of_erroneous_clinical_AI_and_decision_support_a_systematic_review_and_meta_analysis ; https://www.nature.com/npjdigitalmed/research-articles",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Direct journal listing/article500 authorization redirect. Publisher-indexed23 October date found. Lawful public manuscript recovered and Abstract/Results, Methods search/eligibility/appraisal, Discussion limitations, data/code and disclosures inspected. No source-data/supplement/registration audit. Below-gate 71.3 watch."
+      },
+      {
+        "query": "site:health.ec.europa.eu \"artificial intelligence\" October 2026 (recency7); direct eHealth and FDA CDRH listing",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en ; https://www.fda.gov/medical-devices/news-events-medical-devices/cdrh-new",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Safety lane: Commission latest visible21 October webinar registration, not authorization. Initial FDA retained response latest 20 October; later retry inaccessible. No in-window official action established, not exhaustive. MedTech21 October panel report describes expected future draft guidance, not enacted policy."
+      },
+      {
+        "query": "Direct first-page Fierce AI and MedTech homepage inspection; MedTech links42(AMA),32(genAI future guidance)",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning ; https://www.medtechdive.com/",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Operations lane: two specialist outlets accessible. Fierce five dated editorial items21–22 October plus sponsored entry. MedTech visible AI leads followed: AMA report16 October, FDA panel21 October. Old source dates not made new by homepage resurfacing. No new deployment evaluation cleared gates; off-topic M&A/earnings not counted as candidates."
+      },
+      {
+        "query": "ISM6331 ESMO 2026 October 25 results safety response abstract 997 (recency3); sponsor and NCT06566079",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026 ; https://clinicaltrials.gov/study/NCT06566079",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Pharma: full sponsor announcement inspected, Chemistry42 documented. Scheduled session not proof results occurred. No numerical results verified; registry rendered shell. Linked24 October watch preserved with no verified result delta."
+      },
+      {
+        "query": "site:merck.com OR site:investors.modernatx.com intismeran October 22 2026 phase 3 ESMO AI algorithm (recency7); site:merck.com \"intismeran\" \"October 22, 2026\"; site:investors.modernatx.com \"intismeran\" \"October\" \"2026\"; site:clinicaltrials.gov \"INTerpath-001\"",
+        "source": "https://investors.modernatx.com/scientific-medical-meetings ; https://news.modernatx.com/ ; https://clinicaltrials.gov/study/NCT05933577",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Pharma: sponsor listing identifies24 October presentation; linked PDF returned internal error. Newsroom no readable release. Older indexed registry extract not current results. Essential result/AI-role methods inspection unfinished, null-scorewatch, no efficacy numbers adopted."
+      },
+      {
+        "query": "site:lih.lu OR site:has-sante.fr \"intelligence artificielle\" octobre 2026 (recency7); initial regional terms included BfArM/Luxembourg health AI",
+        "source": "French-language regional/institutional web discovery",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "European/local-language lane attempted; no traceable23–25 October action/result surfaced. Not all regional sites/languages inspected; Luxembourg/French rotation without quota."
+      },
+      {
+        "query": "site:medrxiv.org OR site:biorxiv.org OR site:arxiv.org (clinical AI validation OR biomedical protein model) October 24 25 2026 (recency3); healthcare artificial intelligence failed validation recall retraction correction October 24 25 2026 (recency3)",
+        "source": "Preprint and negative-evidence web discovery",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Returned first-page results mostly older context and previously covered work. No new verified withdrawal/correction/failed validation established; absence of a hit is not proof none exists. No full server pagination or continuous safety monitoring claimed."
+      },
+      {
+        "query": "PubMed42705167 date/abstract; GMP commentary dateline; DOI/PMID/title/URL/event identity archive and30-day watch/correction sweep",
+        "source": "Primary abstracts/commentary; main ledgers/stories/issues; all-state canonical-head and all open PR searches",
+        "accessed_at": "2026-10-25T08:30:42Z",
+        "outcome": "Vaccine Epub7 September differs from24 October citation; GMP article13 August differs from search freshness. Microsoft/headCT already published 24 October; AMA previously rejected 19 October, not published. No unsuperseded watch due 25 October identified; later FDA followups due 30 October supersede old reminders. Others26 October or later; today's ISM announced event proactively checked."
+      }
+    ],
+    "coverage_gaps": [
+      "Direct PubMed date/entry search unavailable; Europe PMC docs/help403 with web-index fallback. Database hit/retrieval/screening totals unknown, not zero.",
+      "Indexed freshness labels unreliable. Ultrasound PMID41143654 date extraction inconsistent and unappraised; not promoted.",
+      "Nature article/listing inaccessible. Oversight manuscript recovered lawfully; supplements/source datasets/registration not independently audited.",
+      "ISM6331 abstract/presentation/results not verified; NCT06566079 shell. Scheduled clock time is not completion evidence.",
+      "INTerpath-001 primary presentation PDF failed; current trial results and primary AI-role methods unfinished.",
+      "First-page specialist/web-index bounds leave unquantified unscreened remainder. Full preprint listings, CTIS/registries, wider national regulators and remaining catalogue outlets not exhaustively searched.",
+      "No independent clinician review; model research/scoring is not clinical validation. Initial broad query wording not all retained verbatim; consolidated reproducible followups and actual outcomes retained without inventing counts."
+    ],
+    "completed_at": "2026-10-25T08:30:42Z"
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-10-25-human-oversight-review",
+      "decision": "watch",
+      "title": "Human-oversight review highlights limits of clinical error-interception evidence",
+      "desk": "safety-policy",
+      "topics": [
+        "safety",
+        "evaluation",
+        "governance",
+        "decision-support"
+      ],
+      "entities": [
+        "Di Zeng",
+        "Jianyong Lei",
+        "Zhihui Li"
+      ],
+      "event_date": "2026-10-23",
+      "event_date_reason": "Publisher-indexed listing gives23 October; Article in Press, not a new experiment.",
+      "source_publication_date": "2026-10-23",
+      "source_date_reason": "Publisher-indexed record; direct page inaccessible after cookie-authorization redirect.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "New systematic synthesis asks whether clinicians intercept erroneous automated advice. Small quantitative pools and predominantly legacy ECG real-world data do not estimate modern deployed AI harm.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03408-5",
+      "sources": [
+        {
+          "id": "npj-oversight",
+          "url": "https://www.nature.com/articles/s41746-026-03408-5",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03408-5",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "peer-reviewed-systematic-review",
+          "publication_date": "2026-10-23",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Author/issuing organization; not independent clinical validation"
+        },
+        {
+          "id": "oversight-manuscript",
+          "url": "https://www.researchgate.net/publication/416713743_Human_oversight_of_erroneous_clinical_AI_and_decision_support_a_systematic_review_and_meta_analysis",
+          "canonical_url": "https://www.researchgate.net/publication/416713743_Human_oversight_of_erroneous_clinical_AI_and_decision_support_a_systematic_review_and_meta_analysis",
+          "publisher": "ResearchGate / public author manuscript",
+          "role": "supporting",
+          "source_type": "article-in-press",
+          "publication_date": null,
+          "date_reason": "Exact page publication date unavailable.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Same authors; DOI matched; lawful public copy, not independent replication"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "human-oversight-review",
+        "doi": "10.1038/s41746-026-03408-5",
+        "pmid": null,
+        "preprint": null,
+        "trial": "PROSPERO CRD420261457103 (review registration; registry not independently inspected)",
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Directly studies clinician responses to wrong AI/LLM and older decision-support output.",
+        "non_ai_exception": null,
+        "reader_consequence": "Design error-interception tests specific to model, users and workflow; no inference of a universal patient-harm rate."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch 71.3: relevant oversight-testing consequence, but heterogeneous historical evidence, limited pools and incomplete reproducibility do not clear75. No general patient-harm rate or effective mitigation is established.",
+      "promote_when": [
+        "Inspect source data/supplements and assess whether contemporary comparable evidence supports a materially stronger bounded consequence.",
+        "New prospective error-interception evidence or substantive correction/update can justify linked reassessment; full-text availability alone is not promotion."
+      ],
+      "next_review_at": "2026-11-01",
+      "claims": [],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 2,
+        "relevance": 4,
+        "material_change": 2,
+        "durability": 3,
+        "weighted_total": 71.3,
+        "rationales": {
+          "significance": "Concrete oversight-testing consequence, but no proven intervention or new safety action.",
+          "claim_support": "Traceable manuscript supports bounded synthesis; small heterogeneous pools, reconstructed searches and uninspected source data limit support.",
+          "relevance": "Directly relevant to clinical-AI engineering, deployment evaluation and governance.",
+          "material_change": "New synthesis of prior evidence, not a new deployment outcome; distinct from yesterday's head-CT study.",
+          "durability": "Task-specific error-interception evaluation remains useful beyond the news cycle."
+        }
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Watch 71.3: relevant oversight-testing consequence, but heterogeneous historical evidence, limited pools and incomplete reproducibility do not clear75. No general patient-harm rate or effective mitigation is established."
+        }
+      ],
+      "evidence": {
+        "publication_status": "Peer-reviewed Article in Press23 October; public manuscript inspected, publisher status checked via indexed listing.",
+        "study_design": "Systematic review/meta-analysis; database search through 20 July2026, targeted revision search through 17 August.46 reports linked to41 cohort clusters,40core. Eligibility required clinician responses to erroneous automated output.",
+        "validation_setting": "Controlled experiments and observational deployments distinguished. Three adjusted cohorts in comparative pool; four heterogeneous legacy ECG cohorts in real-world pool. Contemporary AI/LLM evidence too heterogeneous to pool.",
+        "independent_validation": "Review is synthesis, not independent prospective replication; two internal reviewers screened/extracted. No independent source-data reanalysis performed here.",
+        "clinical_utility": "uncertain",
+        "access_level": "full-text",
+        "funding": "Manuscript: no funding granted.",
+        "conflicts_of_interest": "Manuscript: authors declare no competing interests.",
+        "corrections_retractions": "No correction/retraction surfaced in bounded25 October negative search; direct publisher notice/supplement access incomplete.",
+        "contradictory_findings": [
+          "Patient-level adverse events came from one retrospective cohort; no causal effect established.",
+          "Legacy ECG non-correction cannot be generalized to contemporary deployed AI."
+        ],
+        "limitations": [
+          "Inspected Abstract/Results, Methods eligibility/search/appraisal, Discussion, data/code availability and disclosures; supplements/source datasets/registration not independently inspected.",
+          "Original search histories were reconstructed; reasons for16 non-retrieved reports not retained.",
+          "Small pools, extreme ECG heterogeneity, predominantly experimental contemporary studies and sparse observational patient-harm evidence constrain inference.",
+          "All core cohorts had at least some methodological concern; code available on request, not publicly provided."
+        ],
+        "applicability": "Safety-evaluation context, not a modern-AI patient-harm rate or proof of protective intervention."
+      }
+    },
+    {
+      "id": "2026-10-25-ism6331-results-followup",
+      "decision": "watch",
+      "title": "ISM6331 ESMO results remain unverified",
+      "desk": "pharma",
+      "topics": [
+        "drug-discovery",
+        "clinical-trials",
+        "evaluation"
+      ],
+      "entities": [
+        "Insilico Medicine",
+        "ISM6331",
+        "Chemistry42",
+        "ESMO"
+      ],
+      "event_date": null,
+      "event_date_reason": "Sponsor scheduled25 October08:57–09:02 CET within08:30–10:00 session. Elapsed time is not proof of completed presentation/results.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "Direct sponsor announcement displays21 October.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Actual sponsor URL retrieved, documenting Chemistry42's contribution and abstract997. No numerical results, completed presentation or subsequent results release verified.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": false,
+      "primary_source_url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+      "sources": [
+        {
+          "id": "ism-announcement",
+          "url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+          "canonical_url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+          "publisher": "Insilico Medicine",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-21",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Drug developer and Chemistry42 vendor"
+        },
+        {
+          "id": "ism-trial",
+          "url": "https://clinicaltrials.gov/study/NCT06566079",
+          "canonical_url": "https://clinicaltrials.gov/study/NCT06566079",
+          "publisher": "ClinicalTrials.gov",
+          "role": "supporting",
+          "source_type": "trial-registry",
+          "publication_date": null,
+          "date_reason": "Exact page publication date unavailable.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Sponsor-submitted record; content did not render"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ism6331-esmo-2026-presentation",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT06566079",
+        "cohort": null,
+        "product_version": "ISM6331",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Sponsor directly attributes molecular design/optimization to Chemistry42; no attribution of human benefit.",
+        "non_ai_exception": null,
+        "reader_consequence": "Evaluate the actual evidence before considering clinical or operational use."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-24-insilico-ism6331-esmo-preview"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch, null score: announcement supports scheduled programme and AI contribution, not clinical safety/efficacy results. Trial page rendered only a shell.",
+      "promote_when": [
+        "Retrieve official abstract997/actual presentation or primary results and registry NCT06566079.",
+        "Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Watch, null score: announcement supports scheduled programme and AI contribution, not clinical safety/efficacy results. Trial page rendered only a shell."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-intismeran-phase-three-followup",
+      "decision": "watch",
+      "title": "INTerpath-001 requires primary-result and AI-role verification",
+      "desk": "pharma",
+      "topics": [
+        "clinical-trials",
+        "evaluation"
+      ],
+      "entities": [
+        "Moderna",
+        "Merck",
+        "intismeran autogene",
+        "V940",
+        "INTerpath-001"
+      ],
+      "event_date": "2026-10-24",
+      "event_date_reason": "Sponsor meeting listing labels ESMO presentation24 October, not the earlier announcement's verified timing.",
+      "source_publication_date": null,
+      "source_date_reason": "Sponsor meeting listing has an event date, not a separately verified page-publication date; discovery report is dated 22 October.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Specialist reporting surfaced Phase 3 melanoma data and an algorithmic contribution. Sponsor listing confirms presentation identity, but linked PDF failed; numerical results and primary AI documentation remain unappraised.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": false,
+      "primary_source_url": "https://investors.modernatx.com/scientific-medical-meetings",
+      "sources": [
+        {
+          "id": "moderna-meeting",
+          "url": "https://investors.modernatx.com/scientific-medical-meetings",
+          "canonical_url": "https://investors.modernatx.com/scientific-medical-meetings",
+          "publisher": "Moderna",
+          "role": "primary",
+          "source_type": "sponsor-meeting-listing",
+          "publication_date": null,
+          "date_reason": "Exact page publication date unavailable.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Vaccine co-developer"
+        },
+        {
+          "id": "interpath-registry",
+          "url": "https://clinicaltrials.gov/study/NCT05933577",
+          "canonical_url": "https://clinicaltrials.gov/study/NCT05933577",
+          "publisher": "ClinicalTrials.gov",
+          "role": "supporting",
+          "source_type": "trial-registry",
+          "publication_date": null,
+          "date_reason": "Exact page publication date unavailable.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Only older indexed extract retrieved; current record not inspected"
+        },
+        {
+          "id": "biospace-intismeran-lead",
+          "url": "https://www.biospace.com/drug-development/esmo-2026-merck-moderna-shares-fall-as-cancer-vaccine-disappoints-after-data-leak",
+          "canonical_url": "https://www.biospace.com/drug-development/esmo-2026-merck-moderna-shares-fall-as-cancer-vaccine-disappoints-after-data-leak",
+          "publisher": "BioSpace",
+          "role": "supporting",
+          "source_type": "specialist-reporting-discovery-lead",
+          "publication_date": "2026-10-22",
+          "date_reason": "Indexed article excerpt displays 22 October 2026; full source not appraised.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Journalism containing sponsor interviews; only indexed discovery excerpt seen, not treated as primary clinical evidence."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "interpath-001-esmo-2026",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT05933577",
+        "cohort": null,
+        "product_version": "Intismeran autogene / V940",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Potential AI/ML neoantigen selection reported by specialist journalism; primary confirmation unfinished, scope not finally cleared.",
+        "non_ai_exception": null,
+        "reader_consequence": "Adequately reported results for documented AI-enabled therapy could matter, but cannot be attributed wholesale to AI."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch, null score: essential primary results/current registry and documented AI contribution remain unfinished. No efficacy numbers or broad platform validation asserted.",
+      "promote_when": [
+        "Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record.",
+        "Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring."
+      ],
+      "next_review_at": "2026-10-26",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Watch, null score: essential primary results/current registry and documented AI contribution remain unfinished. No efficacy numbers or broad platform validation asserted."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-25-microsoft-sequential-diagnosis-benchmark-repeat",
+      "decision": "rejected",
+      "title": "Microsoft diagnostic orchestrator outperformed generalist physicians in text-only simulations — already covered",
+      "desk": "clinical-ai",
+      "topics": [
+        "diagnostics",
+        "decision-support",
+        "evaluation",
+        "reproducibility"
+      ],
+      "entities": [
+        "Microsoft AI",
+        "MAI-DxO",
+        "SDBench",
+        "PhysioNet"
+      ],
+      "event_date": "2026-10-22",
+      "event_date_reason": "Science lists the peer-reviewed paper in its 22 October 2026 issue.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "The Science citation and the SDBench PhysioNet release both identify 22 October 2026.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Same paper/artifact reappeared in overlap discovery, already mapped to merged24 October issue; no substantive new result/correction verified.",
+      "why_now": "Overlap rediscovery, not new publication opportunity.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1126/science.aeh7930",
+      "sources": [
+        {
+          "id": "science-sequential-diagnosis",
+          "url": "https://doi.org/10.1126/science.aeh7930",
+          "canonical_url": "https://www.science.org/doi/10.1126/science.aeh7930",
+          "publisher": "Science",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-22",
+          "date_reason": "Science volume 394, issue 6822 identifies 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Peer-reviewed paper written entirely by Microsoft-affiliated authors"
+        },
+        {
+          "id": "author-sequential-diagnosis-manuscript",
+          "url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "canonical_url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "publisher": "Eric Horvitz / Microsoft Research",
+          "role": "supporting",
+          "source_type": "author-hosted-full-manuscript",
+          "publication_date": null,
+          "date_reason": "The file does not display a reliable hosting date; it is used for methods, results and limitations rather than event dating.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Full manuscript hosted by a study author and Microsoft employee; not independent corroboration"
+        },
+        {
+          "id": "physionet-sdbench",
+          "url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "canonical_url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "publisher": "PhysioNet",
+          "role": "supporting",
+          "source_type": "versioned-public-benchmark-artifact",
+          "publication_date": "2026-10-22",
+          "date_reason": "PhysioNet version 1.0.0 lists publication on 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Public artifact deposited by the Microsoft study team"
+        },
+        {
+          "id": "microsoft-mai-dxo-announcement",
+          "url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "canonical_url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "publisher": "Microsoft AI",
+          "role": "context",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-22",
+          "date_reason": "The announcement is dated 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Promotional account from the model developer and study sponsor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "science-sequential-diagnosis-language-models-2026-10-22",
+        "doi": "10.1126/science.aeh7930",
+        "pmid": null,
+        "preprint": "10.48550/arXiv.2506.22405",
+        "trial": null,
+        "cohort": "304 NEJM CPC cases and 325 MIMIC-IV-ED encounters transformed into sequential text simulations",
+        "product_version": "MAI-DxO with GPT-5; SDBench MIMIC-IV-Ext-SDBench 1.0.0",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The study evaluates a language-model orchestrator and multiple frontier language models in sequential diagnosis simulations.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical AI teams get a stronger interactive benchmark and a direct warning that benchmark advantage over individuals is not evidence of patient benefit, deployment safety or clinical readiness."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-24-microsoft-sequential-diagnosis-benchmark"
+        ],
+        "previous_story_ids": [
+          "2026-10-24-microsoft-sequential-diagnosis-benchmark"
+        ],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "duplicate-conflict"
+      },
+      "reason": "Already covered24 October with no material delta. Source inspection timestamps deliberately retain historical24 October observations, not fresh full-text verification.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Already covered24 October with no material delta. Source inspection timestamps deliberately retain historical24 October observations, not fresh full-text verification."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-head-ct-ai-advice-reliance-repeat",
+      "decision": "rejected",
+      "title": "Head CT experiment found clinicians both followed wrong AI advice and rejected correct advice — already covered",
+      "desk": "clinical-ai",
+      "topics": [
+        "medical-imaging",
+        "decision-support",
+        "evaluation",
+        "safety",
+        "implementation",
+        "reproducibility"
+      ],
+      "entities": [
+        "The Lancet Digital Health",
+        "OSF",
+        "University of Michigan",
+        "University College London"
+      ],
+      "event_date": "2026-10-23",
+      "event_date_reason": "The final peer-reviewed Lancet Digital Health article was published online on 23 October 2026.",
+      "source_publication_date": "2026-10-23",
+      "source_date_reason": "PubMed and the journal issue feed list 23 October 2026 for the final article.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Same paper/artifact reappeared in overlap discovery, already mapped to merged24 October issue; no substantive new result/correction verified.",
+      "why_now": "Overlap rediscovery, not new publication opportunity.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1016/j.landig.2026.101050",
+      "sources": [
+        {
+          "id": "lancet-reliance-final",
+          "url": "https://doi.org/10.1016/j.landig.2026.101050",
+          "canonical_url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900073-7/fulltext",
+          "publisher": "The Lancet Digital Health",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-23",
+          "date_reason": "Final article metadata and PubMed identify 23 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Peer-reviewed author report; no commercial AI vendor supplied or evaluated a product"
+        },
+        {
+          "id": "osf-reliance-manuscript",
+          "url": "https://osf.io/preprints/osf/4wv8j_v4",
+          "canonical_url": "https://osf.io/preprints/osf/4wv8j_v4",
+          "publisher": "OSF Preprints",
+          "role": "supporting",
+          "source_type": "accepted-author-manuscript",
+          "publication_date": "2026-07-30",
+          "date_reason": "OSF version 4 metadata lists 30 July 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Author-posted accepted manuscript from the same research team; not independent corroboration"
+        },
+        {
+          "id": "osf-reliance-artifacts",
+          "url": "https://doi.org/10.17605/OSF.IO/DQRA6",
+          "canonical_url": "https://osf.io/dqra6/",
+          "publisher": "Open Science Framework",
+          "role": "supporting",
+          "source_type": "preregistration-data-and-code-artifact",
+          "publication_date": null,
+          "date_reason": "The project contains versioned registrations and artifacts with multiple dates; no single publication date is assigned here.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Public study materials deposited by the authors"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "lancet-digital-health-ai-advice-reliance-head-ct-2026-10-23",
+        "doi": "10.1016/j.landig.2026.101050",
+        "pmid": "42919730",
+        "preprint": "10.31219/osf.io/4wv8j_v4",
+        "trial": null,
+        "cohort": "50 radiologists and 75 novices from 10 countries reviewing 50 head CT cases in three crossover conditions",
+        "product_version": "Author-generated advice fixed at 80% accuracy; no commercial model product evaluated",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The randomized experiment tests clinician reliance on basic and explainable AI advice in head CT interpretation.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical AI teams should measure both acceptance of wrong advice and rejection of correct advice, because an explanation layer did not eliminate either failure mode."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-24-head-ct-ai-advice-reliance"
+        ],
+        "previous_story_ids": [
+          "2026-10-24-head-ct-ai-advice-reliance"
+        ],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "duplicate-conflict"
+      },
+      "reason": "Already covered24 October with no material delta. Source inspection timestamps deliberately retain historical24 October observations, not fresh full-text verification.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Already covered24 October with no material delta. Source inspection timestamps deliberately retain historical24 October observations, not fresh full-text verification."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-vaccine-digital-twins-date",
+      "decision": "rejected",
+      "title": "Vaccine digital-twins review was published online in September",
+      "desk": "biomedical-foundations",
+      "topics": [
+        "research-tools",
+        "evaluation",
+        "manufacturing-quality"
+      ],
+      "entities": [],
+      "event_date": "2026-09-07",
+      "event_date_reason": "PubMed Epub7 September;24 October is later citation/issue date.",
+      "source_publication_date": "2026-09-07",
+      "source_date_reason": "PubMed explicitly distinguishes Epub and issue dates.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Narrative review informed by searches2019–2025, not a new controlled study or in-window material update.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": true,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42705167/",
+      "sources": [
+        {
+          "id": "vaccine-pubmed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42705167/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42705167/",
+          "publisher": "PubMed / Vaccine",
+          "role": "primary",
+          "source_type": "narrative-review-abstract",
+          "publication_date": "2026-09-07",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Author/issuing organization; not independent clinical validation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "vaccine-digital-twins-date",
+        "doi": "10.1016/j.vaccine.2026.129131",
+        "pmid": "42705167",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Review concerns explainable AI and digital twins across vaccine lifecycle.",
+        "non_ai_exception": null,
+        "reader_consequence": "Evaluate the actual evidence before considering clinical or operational use."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject fresh-news framing: older online event with no established material late-discovery consequence. Abstract inspection is not methods audit.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Reject fresh-news framing: older online event with no established material late-discovery consequence. Abstract inspection is not methods audit."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-gmp-annex-commentary-date",
+      "decision": "rejected",
+      "title": "Older GMP commentary is not a new regulatory action",
+      "desk": "safety-policy",
+      "topics": [
+        "regulation",
+        "manufacturing-quality",
+        "governance"
+      ],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "No current official action verified; commentary discusses2025 draft and June/July2026 workshop.",
+      "source_publication_date": "2026-08-13",
+      "source_date_reason": "Direct dateline13 August despite search freshness label today.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "Fresh-looking search result led to older commentary; page distinguishes interpretation from an adopted final annex.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.pharmtech.com/view/europe-tried-to-ban-generative-ai-from-critical-gmp-the-ban-may-not-survive-it-does-not-matter-",
+      "sources": [
+        {
+          "id": "gmp-commentary",
+          "url": "https://www.pharmtech.com/view/europe-tried-to-ban-generative-ai-from-critical-gmp-the-ban-may-not-survive-it-does-not-matter-",
+          "canonical_url": "https://www.pharmtech.com/view/europe-tried-to-ban-generative-ai-from-critical-gmp-the-ban-may-not-survive-it-does-not-matter-",
+          "publisher": "Pharmaceutical Technology",
+          "role": "primary",
+          "source_type": "authored-regulatory-commentary",
+          "publication_date": "2026-08-13",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Author/issuing organization; not independent clinical validation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "gmp-annex-commentary-date",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "AI use in critical medicines manufacturing is in scope; freshness/action gate fails.",
+        "non_ai_exception": null,
+        "reader_consequence": "Evaluate the actual evidence before considering clinical or operational use."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject current-news framing: no in-window official delta established. Commentary/projected timing is not adopted law.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication claim approved.",
+        "reason": "Not selected for publication."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Reject current-news framing: no in-window official delta established. Commentary/projected timing is not adopted law."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-ama-framework-repeat",
+      "decision": "rejected",
+      "title": "AMA agentic governance guide predates the initial window",
+      "desk": "safety-policy",
+      "topics": [
+        "governance",
+        "implementation"
+      ],
+      "entities": [],
+      "event_date": "2026-10-13",
+      "event_date_reason": "Event date established from the issuing/source record; not the discovery date.",
+      "source_publication_date": "2026-10-13",
+      "source_date_reason": "Inspected publication metadata; date precision is one day.",
+      "discovered_at": "2026-10-25T08:30:42Z",
+      "what_changed": "MedTech homepage resurfaced its16 October report on the already recorded13 October AMA framework. No substantive current update verified.",
+      "why_now": "Homepage rediscovery, not a new governance event.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+      "sources": [
+        {
+          "id": "ama-guide",
+          "url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+          "canonical_url": "https://www.ama-assn.org/practice-management/digital-health/governance-framework-agentic-ai-assuming-clinical-functions",
+          "publisher": "American Medical Association",
+          "role": "primary",
+          "source_type": "professional-body-framework",
+          "publication_date": "2026-10-13",
+          "date_reason": "Source date field inspected; time of day not established.",
+          "inspected_at": "2026-10-19T12:17:20+00:00",
+          "access_level": "official-record-only",
+          "relationship_to_sponsor": "Issuing professional association"
+        },
+        {
+          "id": "medtech-ama",
+          "url": "https://www.medtechdive.com/news/ama-releases-governance-framework-for-agentic-ai-in-healthcare/833208/",
+          "canonical_url": "https://www.medtechdive.com/news/ama-releases-governance-framework-for-agentic-ai-in-healthcare/833208/",
+          "publisher": "MedTech Dive",
+          "role": "supporting",
+          "source_type": "specialist-reporting",
+          "publication_date": "2026-10-16",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": "2026-10-25T08:30:42Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Journalistic report about association framework"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ama-framework-date",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named healthcare AI workflow or evidence class.",
+        "non_ai_exception": null,
+        "reader_consequence": "Assess the recorded evidence boundary before further evaluation."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-19-ama-framework-date"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All main daily ledgers12–24 October, stories and issues at 45f94e7463883353304d1d3c216d8bd9705790f3 checked by URL/DOI/PMID/event identity; all open PRs #42/#43/#45/#61 are support work with no new daily ledger. Today's all-state canonical head PR and branch searches empty. Watch/rejected history is not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Repeat with no material delta, rejected 19 October. A prior rejection is not a published story.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research exclusion, not newly verified guidance.",
+        "reason": "No current material delta."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-25T08:30:42Z",
+          "reason": "Repeat with no material delta, rejected 19 October. A prior rejection is not a published story."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "Research checkpoint: no candidate clears all current selection gates; ledger-only finalization awaits executable preflight.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-25T081803Z-root",
+      "started_at": "2026-10-25T08:18:03Z",
+      "completed_at": null,
+      "phases": [
+        "contracts-read",
+        "existing-batch-checked",
+        "bounded-discovery-complete",
+        "decisions-recorded",
+        "ownership-acquired",
+        "research-checkpoint"
+      ],
+      "outcome": "in-progress"
+    }
+  ],
+  "active_run": {
+    "owner_token": "healthtech-2026-10-25T081803Z-root",
+    "acquired_at": "2026-10-25T08:33:07Z",
+    "heartbeat_at": "2026-10-25T08:33:07Z",
+    "expires_at": "2026-10-25T10:33:07.000Z"
+  },
+  "human_overrides": [],
+  "artwork": {
+    "version": "healthtech-artwork-1",
+    "runtime": "Executing ChatGPT Work runtime; no artwork production",
+    "checked_at": "2026-10-25T08:30:42Z",
+    "capabilities": {
+      "generation": {
+        "status": "unverified",
+        "evidence": "Not exercised: no selected story or artwork production. Tool discovery is not capability proof."
+      },
+      "inspection": {
+        "status": "unverified",
+        "evidence": "Not exercised: no selected story or artwork production. Tool discovery is not capability proof."
+      },
+      "conversion": {
+        "status": "unverified",
+        "evidence": "Not exercised: no selected story or artwork production. Tool discovery is not capability proof."
+      },
+      "upload": {
+        "status": "unverified",
+        "evidence": "Not exercised: no selected story or artwork production. Tool discovery is not capability proof."
+      }
+    },
+    "stories": []
+  }
+}
