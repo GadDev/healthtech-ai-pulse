@@ -212,7 +212,12 @@ export function validateIllustration(root: string, story: Story, bytes: Buffer) 
   if (!review.brief_path && !unchangedHistoricalReview)
     throw new Error(`${story.id}: new illustration review requires a persisted brief`);
   if (review.brief_path) {
-    const { bytes: briefBytes, brief } = readIllustrationBrief(root, review.brief_path, story.id);
+    const { bytes: briefBytes, brief } = readIllustrationBrief(
+      root,
+      review.brief_path,
+      story.id,
+      digest(reviewBytes),
+    );
     if (digest(briefBytes) !== review.brief_sha256 || brief.crop !== review.crop)
       throw new Error(`${story.id}: illustration brief changed`);
     if (image.length < 20 || image.readUInt32LE(4) + 8 !== image.length)
