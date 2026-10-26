@@ -698,23 +698,20 @@
     {
       "run_id": "healthtech-2026-10-26T080952Z-root",
       "started_at": "2026-10-26T08:09:52Z",
-      "completed_at": null,
+      "completed_at": "2026-10-26T08:21:30Z",
       "phases": [
         "contracts-pinned",
         "source-access-plan-attempted",
         "partial-research-recorded",
         "ownership-acquired",
         "ledger-only-finalized",
-        "local-preflight-complete"
+        "local-preflight-complete",
+        "draft-pr-created",
+        "ownership-released"
       ],
-      "outcome": "in-progress"
+      "outcome": "checkpoint-complete"
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-10-26T080952Z-root",
-    "acquired_at": "2026-10-26T08:17:42Z",
-    "heartbeat_at": "2026-10-26T08:19:50Z",
-    "expires_at": "2026-10-26T10:19:50.000Z"
-  },
+  "active_run": null,
   "human_overrides": []
 }
