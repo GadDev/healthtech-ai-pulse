@@ -650,13 +650,49 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Research checkpoint with no selected story; unresolved evidence stays watch and due-watch backlog remains explicit.",
+    "mode": "ledger-only",
+    "reason": "No selected candidate: essential primary methods, AI-role or actual-result verification unfinished. Partial due-watch review preserved; no issue, story, artwork or MUST KNOW manufactured.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on d6be1d22664c8ddd789766483b081c2ae21539ee",
+        "execution": "Local Node24 executing runtime; actual command output, not scientific verification.",
+        "evidence": "Pinned main installation: 295 packages, exit0."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-26.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on d6be1d22664c8ddd789766483b081c2ae21539ee",
+        "execution": "Local Node24 executing runtime; actual command output, not scientific verification.",
+        "evidence": "16ledgers/10stories passed."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-26.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on d6be1d22664c8ddd789766483b081c2ae21539ee",
+        "execution": "Local Node24 executing runtime; actual command output, not scientific verification.",
+        "evidence": "All mappings and existing image decoding passed; no new image."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only tree based on d6be1d22664c8ddd789766483b081c2ae21539ee",
+        "execution": "Local Node24 executing runtime; actual command output, not scientific verification.",
+        "evidence": "146tests, lint/format/types/schema/content/editorial/illustration/Astro/build passed;31pages/11indexed."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only tree based on d6be1d22664c8ddd789766483b081c2ae21539ee",
+        "execution": "Local Node24 executing runtime; actual command output, not scientific verification.",
+        "evidence": "Configured managed webServer exited early, before browser assertions. Hosted exact-head browser job still required."
+      }
+    ]
   },
   "attempts": [
     {
@@ -667,7 +703,9 @@
         "contracts-pinned",
         "source-access-plan-attempted",
         "partial-research-recorded",
-        "ownership-acquired"
+        "ownership-acquired",
+        "ledger-only-finalized",
+        "local-preflight-complete"
       ],
       "outcome": "in-progress"
     }
@@ -675,8 +713,8 @@
   "active_run": {
     "owner_token": "healthtech-2026-10-26T080952Z-root",
     "acquired_at": "2026-10-26T08:17:42Z",
-    "heartbeat_at": "2026-10-26T08:17:42Z",
-    "expires_at": "2026-10-26T10:17:42.000Z"
+    "heartbeat_at": "2026-10-26T08:19:50Z",
+    "expires_at": "2026-10-26T10:19:50.000Z"
   },
   "human_overrides": []
 }
