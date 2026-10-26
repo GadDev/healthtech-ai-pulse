@@ -1,0 +1,682 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-26",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "c923b8d95ed20741241b9a3acc81662d7df1af05",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-24T08:30:42Z",
+    "window_end": "2026-10-26T08:17:42Z",
+    "last_completed_cutoff": "2026-10-25T08:30:42Z",
+    "query_log": [
+      {
+        "query": "healthcare clinical artificial intelligence validation trial October 25 26 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "ISM6331 ESMO October 25 2026 results abstract 997",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:health.ec.europa.eu OR site:fda.gov AI medical device October 25 26 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:bfarm.de OR site:lih.lu künstliche Intelligenz Gesundheit Oktober 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:pubmed.ncbi.nlm.nih.gov (\"2026 Oct 25\" OR \"2026 Oct 26\") (\"artificial intelligence\" OR \"machine learning\")",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:europepmc.org (\"2026-10-25\" OR \"2026-10-26\") (clinical OR protein OR drug) AI",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "medical AI retraction recall failed validation no benefit October 25 26 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:merck.com OR site:modernatx.com intismeran ESMO October 2026 results",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "\"Systemwide adoption patterns of ambient AI scribe\"",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:medrxiv.org OR site:biorxiv.org biomedical protein clinical \"October 26, 2026\"",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "\"ISM6331\" \"997\" results response safety October 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "site:bfarm.de künstliche Intelligenz Klinik Sicherheit Oktober 2026",
+        "source": "Web discovery; first returned results only, no exhaustive or chronological screen",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Consolidated review of retained responses. Total hits/retrieval/screening counts unknown. Earlier sponsor previews and published Microsoft/AstraZeneca work dominated; traceable leads retained separately. No claim all hits screened."
+      },
+      {
+        "query": "(\"artificial intelligence\" OR \"machine learning\") AND (clinical OR protein OR drug OR workflow) AND (2026/10/24:2026/10/26[dp] OR 2026/10/24:2026/10/26[edat]); sort=date; size=20; page=1",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22artificial%20intelligence%22%20OR%20%22machine%20learning%22)%20AND%20(clinical%20OR%20protein%20OR%20drug%20OR%20workflow)%20AND%20(2026%2F10%2F24%3A2026%2F10%2F26%5Bdp%5D%20OR%202026%2F10%2F24%3A2026%2F10%2F26%5Bedat%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Direct query unavailable. Official PubMed help was inspected before syntax use. Europe PMC REST docs returned403; site-index searches attempted. No complete database page/pagination or hit count claimed."
+      },
+      {
+        "query": "Direct first-page sources: Fierce AI, MedTech Dive, npj research listing, FDA CDRH updates, European Commission eHealth, ESMO abstracts; followed sponsor preview/recap and ambient-scribe DOI.",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning ; https://www.medtechdive.com/ ; https://www.nature.com/npjdigitalmed/research-articles ; https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates ; https://health.ec.europa.eu/ehealth-digital-health-and-care_en ; https://www.esmo.org/meeting-calendar/esmo-congress-2026/abstracts",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "All five lanes attempted. Two specialist outlets retrieved; Fierce latest visible23October; FDA latest visible20October; Commission21October webinar item. No in-window official action verified. New26October scribe paper listed; direct article failed500. Moderna24October recap retrieved; ClinicalTrials.gov rendered only shell. ESMO footer only. Full result/methods verification unfinished."
+      },
+      {
+        "query": "Due-watch review: 2026-10-12-wales-ai-adoption-focus-groups",
+        "source": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-13-llm-trial-reporting-review",
+        "source": "https://europepmc.org/article/MED/42869550",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-14-infusion-automation-review",
+        "source": "https://www.nature.com/articles/s41746-026-03291-0",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-15-rare-phenix-journal-status",
+        "source": "https://www.nature.com/articles/s41746-026-03275-0",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-16-clinical-extraction-validation",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-17-ai-assistant-mental-health-hypothesis",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-18-cardiac-arrest-discordant-calls",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344390&format=json&resultType=core",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-18-maternal-risk-transportability-preprint",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344422&format=json&resultType=core",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-19-rtms-reinforcement-learning",
+        "source": "https://www.nature.com/articles/s41746-026-03417-4",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-19-medisyn-image-generation",
+        "source": "https://www.nature.com/articles/s41746-026-03381-z",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-19-clinical-extraction-validation",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-19-fda-genai-feedback-deadline",
+        "source": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Older FDA deadline reminder superseded by later docket followups; no new action inferred."
+      },
+      {
+        "query": "Due-watch review: 2026-10-19-ism9528-preclinical-claims",
+        "source": "https://www.eurekalert.org/news-releases/1136910",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-24-insilico-ism6331-esmo-preview",
+        "source": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Superseded source pointer by 25October actual sponsor URL; latter rechecked."
+      },
+      {
+        "query": "Due-watch review: 2026-10-25-ism6331-results-followup",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "Due-watch review: 2026-10-25-intismeran-phase-three-followup",
+        "source": "https://investors.modernatx.com/scientific-medical-meetings",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Source access attempted. Wales and infusion-review bodies were retrievable but full promotion-condition reappraisal not completed. Europe PMC/preprint records inaccessible; several Nature articles failed500; EurekAlert403. ISM and intismeran followups separately recorded. Prior decisions retained, not silently promoted or expired; source retrieval is not appraisal."
+      },
+      {
+        "query": "\"Systemwide adoption patterns\" Azad Warman Hughes; \"10.1038\" \"ambient\" \"Azad\" \"2026\"; \"s41746-026-03326-6\" abstract methods results; \"intismeran\" \"machine learning\" site:modernatx.com",
+        "source": "Indexed publisher and sponsor records",
+        "accessed_at": "2026-10-26T08:17:42Z",
+        "outcome": "Indexed publisher abstract/disclosures retrieved for new adoption paper; no full methods/supplement inspection. Sponsor general AI statements do not establish intismeran-specific AI causal contribution."
+      }
+    ],
+    "coverage_gaps": [
+      "Research completion remains null: the due-watch promotion-condition appraisal is unfinished; next run must retain last completed25October cutoff and overlap, not infer completion from this ledger-only PR.",
+      "Full primary methods/supplements and clinical-registry reconciliation incomplete for ambient-scribe and intismeran leads. ISM6331 actual results not verified.",
+      "Database direct retrieval unavailable; web-index hit counts and unscreened remainder unknown. No complete preprint/CTIS/database pagination or exhaustive regional surveillance.",
+      "German BfArM/Luxembourg query attempted without a new verified local development. No geographic quota filled.",
+      "Several source access failures are transient/technical. Old source dates and scheduled events were not relabelled as new results."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-10-26-ism6331-results-followup",
+      "decision": "watch",
+      "title": "ISM6331 ESMO results remain unverified",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "clinical-trials", "evaluation"],
+      "entities": ["Insilico Medicine", "ISM6331", "Chemistry42", "ESMO"],
+      "event_date": null,
+      "event_date_reason": "25 October remains the announced presentation date, not verified completion.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "Direct sponsor announcement displays21 October.",
+      "discovered_at": "2026-10-26T08:17:42Z",
+      "what_changed": "Direct 21 October sponsor preview rechecked, with no actual numerical result verified.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": false,
+      "primary_source_url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+      "sources": [
+        {
+          "id": "ism-announcement",
+          "url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+          "canonical_url": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+          "publisher": "Insilico Medicine",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-21",
+          "date_reason": "Displayed source date; no time inferred.",
+          "inspected_at": "2026-10-26T08:17:42Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Drug developer and Chemistry42 vendor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ism6331-esmo-2026-presentation",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT06566079",
+        "cohort": null,
+        "product_version": "ISM6331",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Sponsor directly attributes molecular design/optimization to Chemistry42; no attribution of human benefit.",
+        "non_ai_exception": null,
+        "reader_consequence": "Evaluate the actual evidence before considering clinical or operational use."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": [
+          "2026-10-25-ism6331-results-followup",
+          "2026-10-24-insilico-ism6331-esmo-preview"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All merged ledgers 12–25 October, story/issue identities at c923b8d95ed20741241b9a3acc81662d7df1af05 inspected; no open daily PR found among seven open non-daily PRs. Canonical 26 October branch/all-state PR absent. Prior watch/rejected records are research history, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "No actual result release retrieved; elapsed scheduled presentation time does not prove results. ESMO abstract page exposed only footer.",
+      "promote_when": [
+        "Retrieve official abstract997/actual presentation or primary results and registry NCT06566079.",
+        "Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring."
+      ],
+      "next_review_at": "2026-10-27",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication approval.",
+        "reason": "Essential publication gates not cleared."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-26T08:17:42Z",
+          "reason": "No actual result release retrieved; elapsed scheduled presentation time does not prove results. ESMO abstract page exposed only footer."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-intismeran-phase-three-followup",
+      "decision": "watch",
+      "title": "INTerpath-001 requires primary-result and AI-role verification",
+      "desk": "pharma",
+      "topics": ["clinical-trials", "evaluation"],
+      "entities": ["Moderna", "Merck", "intismeran autogene", "V940", "INTerpath-001"],
+      "event_date": "2026-10-24",
+      "event_date_reason": "25 October remains the announced presentation date, not verified completion.",
+      "source_publication_date": "2026-10-24",
+      "source_date_reason": "Direct sponsor page dated 24 October.",
+      "discovered_at": "2026-10-26T08:17:42Z",
+      "what_changed": "Direct 21 October sponsor preview rechecked, with no actual numerical result verified.",
+      "why_now": "Surfaced in bounded23–25 October discovery; discovery is not freshness.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+      "sources": [
+        {
+          "id": "moderna-recap",
+          "url": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+          "canonical_url": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+          "publisher": "Moderna",
+          "role": "primary",
+          "source_type": "sponsor-trial-recap",
+          "publication_date": "2026-10-24",
+          "date_reason": "Direct page dated 24 October 2026.",
+          "inspected_at": "2026-10-26T08:17:42Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Co-developer; not independent validation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "interpath-001-esmo-2026",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT05933577",
+        "cohort": null,
+        "product_version": "Intismeran autogene / V940",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Potential AI/ML neoantigen selection reported by specialist journalism; primary confirmation unfinished, scope not finally cleared.",
+        "non_ai_exception": null,
+        "reader_consequence": "Adequately reported results for documented AI-enabled therapy could matter, but cannot be attributed wholesale to AI."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": ["2026-10-25-intismeran-phase-three-followup"],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All merged ledgers 12–25 October, story/issue identities at c923b8d95ed20741241b9a3acc81662d7df1af05 inspected; no open daily PR found among seven open non-daily PRs. Canonical 26 October branch/all-state PR absent. Prior watch/rejected records are research history, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "No actual result release retrieved; elapsed scheduled presentation time does not prove results. ESMO abstract page exposed only footer.",
+      "promote_when": [
+        "Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record.",
+        "Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring."
+      ],
+      "next_review_at": "2026-10-27",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication approval.",
+        "reason": "Essential publication gates not cleared."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-26T08:17:42Z",
+          "reason": "No actual result release retrieved; elapsed scheduled presentation time does not prove results. ESMO abstract page exposed only footer."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-ambient-scribe-systemwide-adoption",
+      "decision": "watch",
+      "title": "Systemwide ambient-scribe adoption study needs full-method verification",
+      "desk": "health-systems",
+      "topics": ["implementation", "health-operations", "evaluation"],
+      "entities": ["Tej D. Azad", "Johns Hopkins"],
+      "event_date": "2026-10-26",
+      "event_date_reason": "Publisher listing dates early accepted research 26 October; underlying observations are older.",
+      "source_publication_date": "2026-10-26",
+      "source_date_reason": "Publisher listing and indexed abstract display 26 October.",
+      "discovered_at": "2026-10-26T08:17:42Z",
+      "what_changed": "A new retrospective adoption paper surfaced on the publisher listing. Indexed publisher abstract was retrieved, but direct article failed authorization redirect; methods and supplementary material remain uninspected.",
+      "why_now": "New publisher listing within today's bounded search; not a new prospective outcome study.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03326-6",
+      "sources": [
+        {
+          "id": "npj-scribe",
+          "url": "https://www.nature.com/articles/s41746-026-03326-6",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03326-6",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "peer-reviewed-accepted-research-indexed-abstract",
+          "publication_date": "2026-10-26",
+          "date_reason": "Publisher listing date.",
+          "inspected_at": "2026-10-26T08:17:42Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Author study record; complete COI/method context not independently appraised"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ambient-scribe-systemwide-adoption-2026",
+        "doi": "10.1038/s41746-026-03326-6",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Ambient AI scribe adoption in ambulatory practice.",
+        "non_ai_exception": null,
+        "reader_consequence": "Potential implementation-context evidence, not proof of clinical benefit or time savings."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All merged ledgers 12–25 October, story/issue identities at c923b8d95ed20741241b9a3acc81662d7df1af05 inspected; no open daily PR found among seven open non-daily PRs. Canonical 26 October branch/all-state PR absent. Prior watch/rejected records are research history, not publication.",
+        "publication_status": "not-started"
+      },
+      "reason": "Watch, null score: methods, denominators, uptake definitions, limitations and prior-conference overlap require full appraisal; indexed abstract is not a methods audit.",
+      "promote_when": [
+        "Retrieve full paper/supplement, extract adoption/visit denominators and missingness, verify setting and disclosures, compare any earlier conference report, then apply the unchanged 75-point gate."
+      ],
+      "next_review_at": "2026-10-27",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication approval.",
+        "reason": "Essential publication gates not cleared."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-26T08:17:42Z",
+          "reason": "Essential methods and novelty appraisal unfinished."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-26-astrazeneca-oracle-trials-agreement-repeat",
+      "decision": "rejected",
+      "title": "AstraZeneca and Oracle sign non-binding AI clinical research agreement",
+      "desk": "pharma",
+      "topics": ["clinical-trials", "health-operations", "governance", "privacy"],
+      "entities": ["AstraZeneca", "Oracle", "M42"],
+      "event_date": "2026-10-20",
+      "event_date_reason": "Event date explicitly identified from the issuing source, not assigned from discovery.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Date is from the inspected primary record; time not established.",
+      "discovered_at": "2026-10-26T08:17:42Z",
+      "what_changed": "Overlap/discovery rediscovery, no new verified event.",
+      "why_now": "Reject rediscovery as new coverage.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+      "sources": [
+        {
+          "id": "astrazeneca",
+          "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+          "canonical_url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-oracle-launch-global-ai-collaboration-advance-clinical-trial-optimisation-support-better-patient-outcomes.html",
+          "publisher": "AstraZeneca",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Agreement party; sponsor-authored statement"
+        },
+        {
+          "id": "oracle",
+          "url": "https://www.oracle.com/middleeast/news/announcement/oracle-and-astrazeneca-partner-to-advance-ai-enabled-healthcare-2026-10-20/",
+          "canonical_url": "https://www.oracle.com/middleeast/news/announcement/oracle-and-astrazeneca-partner-to-advance-ai-enabled-healthcare-2026-10-20/",
+          "publisher": "Oracle",
+          "role": "supporting",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-20",
+          "date_reason": "Source publication date shown on inspected official record; no exact hour assumed.",
+          "inspected_at": "2026-10-20T12:03:03.037Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Agreement party; corporate confirmation"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "astrazeneca-oracle-ai-trial-operations-term-sheet-2026-10-20",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Named plan for AI-assisted trial matching and pharmacovigilance alongside real-world clinical data.",
+        "non_ai_exception": null,
+        "reader_consequence": "Trial operators can track the actual first project, agreed endpoints, consent/data governance and measured recruitment/safety outcomes before relying on claims."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": ["2026-10-20-astrazeneca-oracle-trials-agreement"],
+        "previous_story_ids": ["2026-10-20-astrazeneca-oracle-trials-agreement"],
+        "material_delta": null,
+        "archive_coverage": "All merged ledgers 12–25 October, story/issue identities at c923b8d95ed20741241b9a3acc81662d7df1af05 inspected; no open daily PR found among seven open non-daily PRs. Canonical 26 October branch/all-state PR absent. Prior watch/rejected records are research history, not publication.",
+        "publication_status": "duplicate-conflict"
+      },
+      "reason": "Same underlying development resurfaced in search, already published in its earlier issue; no verified material delta. Historical source inspection times preserved.",
+      "promote_when": [],
+      "next_review_at": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication approval.",
+        "reason": "Essential publication gates not cleared."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-26T08:17:42Z",
+          "reason": "Same underlying development resurfaced in search, already published in its earlier issue; no verified material delta. Historical source inspection times preserved."
+        }
+      ],
+      "claims": [],
+      "editorial_score": null
+    },
+    {
+      "id": "2026-10-26-microsoft-sequential-diagnosis-benchmark-repeat",
+      "decision": "rejected",
+      "title": "Microsoft diagnostic orchestrator outperformed generalist physicians in text-only simulations",
+      "desk": "clinical-ai",
+      "topics": ["diagnostics", "decision-support", "evaluation", "reproducibility"],
+      "entities": ["Microsoft AI", "MAI-DxO", "SDBench", "PhysioNet"],
+      "event_date": "2026-10-22",
+      "event_date_reason": "Science lists the peer-reviewed paper in its 22 October 2026 issue.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "The Science citation and the SDBench PhysioNet release both identify 22 October 2026.",
+      "discovered_at": "2026-10-26T08:17:42Z",
+      "what_changed": "Overlap/discovery rediscovery, no new verified event.",
+      "why_now": "Reject rediscovery as new coverage.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1126/science.aeh7930",
+      "sources": [
+        {
+          "id": "science-sequential-diagnosis",
+          "url": "https://doi.org/10.1126/science.aeh7930",
+          "canonical_url": "https://www.science.org/doi/10.1126/science.aeh7930",
+          "publisher": "Science",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-22",
+          "date_reason": "Science volume 394, issue 6822 identifies 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Peer-reviewed paper written entirely by Microsoft-affiliated authors"
+        },
+        {
+          "id": "author-sequential-diagnosis-manuscript",
+          "url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "canonical_url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "publisher": "Eric Horvitz / Microsoft Research",
+          "role": "supporting",
+          "source_type": "author-hosted-full-manuscript",
+          "publication_date": null,
+          "date_reason": "The file does not display a reliable hosting date; it is used for methods, results and limitations rather than event dating.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Full manuscript hosted by a study author and Microsoft employee; not independent corroboration"
+        },
+        {
+          "id": "physionet-sdbench",
+          "url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "canonical_url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/",
+          "publisher": "PhysioNet",
+          "role": "supporting",
+          "source_type": "versioned-public-benchmark-artifact",
+          "publication_date": "2026-10-22",
+          "date_reason": "PhysioNet version 1.0.0 lists publication on 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "artifact-only",
+          "relationship_to_sponsor": "Public artifact deposited by the Microsoft study team"
+        },
+        {
+          "id": "microsoft-mai-dxo-announcement",
+          "url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "canonical_url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "publisher": "Microsoft AI",
+          "role": "context",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-22",
+          "date_reason": "The announcement is dated 22 October 2026.",
+          "inspected_at": "2026-10-24T07:57:16.000Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Promotional account from the model developer and study sponsor"
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "science-sequential-diagnosis-language-models-2026-10-22",
+        "doi": "10.1126/science.aeh7930",
+        "pmid": null,
+        "preprint": "10.48550/arXiv.2506.22405",
+        "trial": null,
+        "cohort": "304 NEJM CPC cases and 325 MIMIC-IV-ED encounters transformed into sequential text simulations",
+        "product_version": "MAI-DxO with GPT-5; SDBench MIMIC-IV-Ext-SDBench 1.0.0",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "The study evaluates a language-model orchestrator and multiple frontier language models in sequential diagnosis simulations.",
+        "non_ai_exception": null,
+        "reader_consequence": "Clinical AI teams get a stronger interactive benchmark and a direct warning that benchmark advantage over individuals is not evidence of patient benefit, deployment safety or clinical readiness."
+      },
+      "deduplication": {
+        "status": "repeat",
+        "previous_candidate_ids": ["2026-10-24-microsoft-sequential-diagnosis-benchmark"],
+        "previous_story_ids": ["2026-10-24-microsoft-sequential-diagnosis-benchmark"],
+        "material_delta": null,
+        "archive_coverage": "All merged ledgers 12–25 October, story/issue identities at c923b8d95ed20741241b9a3acc81662d7df1af05 inspected; no open daily PR found among seven open non-daily PRs. Canonical 26 October branch/all-state PR absent. Prior watch/rejected records are research history, not publication.",
+        "publication_status": "duplicate-conflict"
+      },
+      "reason": "Same underlying development resurfaced in search, already published in its earlier issue; no verified material delta. Historical source inspection times preserved.",
+      "promote_when": [],
+      "next_review_at": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research only; no publication approval.",
+        "reason": "Essential publication gates not cleared."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-26T08:17:42Z",
+          "reason": "Same underlying development resurfaced in search, already published in its earlier issue; no verified material delta. Historical source inspection times preserved."
+        }
+      ],
+      "claims": [],
+      "editorial_score": null
+    }
+  ],
+  "publication": {
+    "mode": "in-progress",
+    "reason": "Research checkpoint with no selected story; unresolved evidence stays watch and due-watch backlog remains explicit.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": []
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-26T080952Z-root",
+      "started_at": "2026-10-26T08:09:52Z",
+      "completed_at": null,
+      "phases": [
+        "contracts-pinned",
+        "source-access-plan-attempted",
+        "partial-research-recorded",
+        "ownership-acquired"
+      ],
+      "outcome": "in-progress"
+    }
+  ],
+  "active_run": {
+    "owner_token": "healthtech-2026-10-26T080952Z-root",
+    "acquired_at": "2026-10-26T08:17:42Z",
+    "heartbeat_at": "2026-10-26T08:17:42Z",
+    "expires_at": "2026-10-26T10:17:42.000Z"
+  },
+  "human_overrides": []
+}
