@@ -44,7 +44,7 @@
     "@astrojs/compiler-rs": "0.5.1",
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.64.0",
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.5",
     "oxfmt": "0.74.0",
     "oxlint": "1.89.0",
     "pagefind": "1.5.2",
