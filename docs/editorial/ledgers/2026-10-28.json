@@ -756,10 +756,7 @@
       "decision": "watch",
       "title": "ISM6331 numerical results recovered; protocol and response appraisal remain incomplete",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "clinical-trials"
-      ],
+      "topics": ["drug-discovery", "clinical-trials"],
       "entities": [],
       "event_date": "2026-10-25",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -854,10 +851,7 @@
       "decision": "watch",
       "title": "INTerpath-001 detailed sponsor release recovered; AI-role and registry appraisal unfinished",
       "desk": "pharma",
-      "topics": [
-        "clinical-trials",
-        "drug-discovery"
-      ],
+      "topics": ["clinical-trials", "drug-discovery"],
       "entities": [],
       "event_date": "2026-10-22",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -964,10 +958,7 @@
       "decision": "watch",
       "title": "Ambient-scribe adoption paper remains abstract-level evidence",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "implementation"
-      ],
+      "topics": ["health-operations", "implementation"],
       "entities": [],
       "event_date": "2026-10-26",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1011,9 +1002,7 @@
       },
       "deduplication": {
         "status": "uncertain",
-        "previous_candidate_ids": [
-          "2026-10-26-ambient-scribe-systemwide-adoption"
-        ],
+        "previous_candidate_ids": ["2026-10-26-ambient-scribe-systemwide-adoption"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
@@ -1047,11 +1036,7 @@
       "decision": "watch",
       "title": "Ophthalmic AI alert follow-up recovers denominators, not a full confounding assessment",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "safety",
-        "medical-devices"
-      ],
+      "topics": ["implementation", "safety", "medical-devices"],
       "entities": [],
       "event_date": "2026-10-20",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1108,9 +1093,7 @@
       },
       "deduplication": {
         "status": "uncertain",
-        "previous_candidate_ids": [
-          "2026-10-21-ophthalmic-ai-timeout-alert-study"
-        ],
+        "previous_candidate_ids": ["2026-10-21-ophthalmic-ai-timeout-alert-study"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
@@ -1144,10 +1127,7 @@
       "decision": "watch",
       "title": "FDA GenAI-device docket status cannot be refreshed",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "governance"
-      ],
+      "topics": ["regulation", "governance"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "No independently established event date.",
@@ -1230,11 +1210,7 @@
       "decision": "watch",
       "title": "BAT-AKI journal report requires preprint comparison and supplement inspection",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation",
-        "fairness"
-      ],
+      "topics": ["clinical-prediction", "evaluation", "fairness"],
       "entities": [],
       "event_date": "2026-10-26",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1338,11 +1314,7 @@
       "decision": "watch",
       "title": "Sepsis-readiness letter raises questions requiring original-study and response appraisal",
       "desk": "safety-policy",
-      "topics": [
-        "evaluation",
-        "safety",
-        "clinical-prediction"
-      ],
+      "topics": ["evaluation", "safety", "clinical-prediction"],
       "entities": [],
       "event_date": "2026-10-27",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1435,10 +1407,7 @@
       "decision": "rejected",
       "title": "UT Dell Medicine launch is not evidence of an operating AI-native hospital",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "health-operations"
-      ],
+      "topics": ["implementation", "health-operations"],
       "entities": [],
       "event_date": "2026-10-27",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1513,10 +1482,7 @@
       "decision": "rejected",
       "title": "Digital Brain Project report concerns an 8 October launch, not newly verified models",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-models",
-        "research-tools"
-      ],
+      "topics": ["biomedical-models", "research-tools"],
       "entities": [],
       "event_date": "2026-10-08",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1591,10 +1557,7 @@
       "decision": "rejected",
       "title": "SCAILED Luxembourg kickoff is older context, not a deployed data-access system",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-data",
-        "interoperability"
-      ],
+      "topics": ["biomedical-data", "interoperability"],
       "entities": [],
       "event_date": "2026-10-21",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1669,9 +1632,7 @@
       "decision": "rejected",
       "title": "Smart-hospital ranking lead supplies no verified workflow or clinical change",
       "desk": "health-systems",
-      "topics": [
-        "implementation"
-      ],
+      "topics": ["implementation"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "No independently established event date.",
@@ -1743,8 +1704,8 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Research-first checkpoint:0selected,7watch,4rejected. Essential evidence/novelty appraisal unfinished; no articles, issue or artwork invented. Final ledger-only follows preflight.",
+    "mode": "ledger-only",
+    "reason": "Zero selected: seven evidence/novelty appraisals remain unfinished and four leads fail current-news or verified-AI-change gates. This is a partial-research ledger-only handoff, not an assertion that the news window was quiet. No issue, article, image or translation.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
@@ -1763,6 +1724,48 @@
         "tested_revision": "94238a7a259086559e769ec9a38278d09571230a",
         "execution": "Pinned baseline before today's ledger.",
         "evidence": "Generated schema exact-match and existing16ledgers/10stories passed; not today's batch validation."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-28.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "17ledgers (16daily+1controlled trial),10existing stories passed; no new article/issue."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-28.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "All publication mappings and existing WebP decoding passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "Lint/format, scripts/tests TypeScript, schema exact match, content/editorial/illustration,146unit tests, Astro0errors/0warnings and31page build/11indexed pages passed; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "35tests scheduled, all blocked at browser launch because Chromium headless-shell1248 executable is missing. No browser assertions ran; not35 demonstrated application failures. Exact-head hosted browser CI remains required."
+      },
+      {
+        "command": "npx playwright install chromium",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "Bounded Playwright downloader retries returned truncated/invalid ZIPs (End of central directory record signature not found). No system Chromium executable found. Browser recovery exhausted without changing repository configuration."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "No whitespace errors in tracked diff; newly added ledger separately formatted/validated."
       }
     ]
   },
@@ -1776,16 +1779,19 @@
         "phase-1-discovery-partial",
         "phase-2-deduplication-and-decisions",
         "phase-3-ownership-acquired",
-        "phase-4-full-research-first"
+        "phase-4-full-research-first",
+        "phase-5-no-selected-publication-files",
+        "phase-6-structural-and-verify-passed-local-browser-blocked",
+        "phase-7-draft-creation-pending"
       ],
-      "outcome": "in-progress; full research ledger persisted before publication work"
+      "outcome": "Ledger-only final mode; research partial. Preflight passed except local browser unavailable after failed download; draft creation and exact-head CI pending. Recover from research checkpoint3306af9c8a5a27184ab645f5d28f0a2a331cd914."
     }
   ],
   "active_run": {
     "owner_token": "healthtech-2026-10-28T081834Z",
     "acquired_at": "2026-10-28T08:34:53Z",
-    "heartbeat_at": "2026-10-28T08:34:53Z",
-    "expires_at": "2026-10-28T10:34:53.000Z"
+    "heartbeat_at": "2026-10-28T08:38:04Z",
+    "expires_at": "2026-10-28T10:38:04.000Z"
   },
   "human_overrides": [],
   "artwork": {
