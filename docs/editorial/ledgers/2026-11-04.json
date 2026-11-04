@@ -997,10 +997,7 @@
       "decision": "watch",
       "title": "ISM6331 numerical results recovered; protocol and response appraisal remain incomplete",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "clinical-trials"
-      ],
+      "topics": ["drug-discovery", "clinical-trials"],
       "entities": [],
       "event_date": "2026-10-25",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1096,10 +1093,7 @@
       "decision": "watch",
       "title": "INTerpath-001 detailed sponsor release recovered; AI-role and registry appraisal unfinished",
       "desk": "pharma",
-      "topics": [
-        "clinical-trials",
-        "drug-discovery"
-      ],
+      "topics": ["clinical-trials", "drug-discovery"],
       "entities": [],
       "event_date": "2026-10-22",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1207,10 +1201,7 @@
       "decision": "watch",
       "title": "Ambient-scribe adoption paper remains abstract-level evidence",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "implementation"
-      ],
+      "topics": ["health-operations", "implementation"],
       "entities": [],
       "event_date": "2026-10-26",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1291,11 +1282,7 @@
       "decision": "watch",
       "title": "Ophthalmic AI alert follow-up recovers denominators, not a full confounding assessment",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "safety",
-        "medical-devices"
-      ],
+      "topics": ["implementation", "safety", "medical-devices"],
       "entities": [],
       "event_date": "2026-10-20",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1389,10 +1376,7 @@
       "decision": "watch",
       "title": "FDA GenAI-device docket status cannot be refreshed",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "governance"
-      ],
+      "topics": ["regulation", "governance"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "No independently established event date.",
@@ -1476,11 +1460,7 @@
       "decision": "watch",
       "title": "BAT-AKI journal report requires preprint comparison and supplement inspection",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation",
-        "fairness"
-      ],
+      "topics": ["clinical-prediction", "evaluation", "fairness"],
       "entities": [],
       "event_date": "2026-10-26",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1550,9 +1530,7 @@
       },
       "deduplication": {
         "status": "new",
-        "previous_candidate_ids": [
-          "2026-10-28-bat-aki-journal-novelty-appraisal"
-        ],
+        "previous_candidate_ids": ["2026-10-28-bat-aki-journal-novelty-appraisal"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical stories and eight issue manifests identity-matched at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; relevant unmerged daily PR #72 (28 October) ledger inspected. No current date branch/PR/default ledger found. Prior watch records are not publications.",
@@ -1586,11 +1564,7 @@
       "decision": "watch",
       "title": "Sepsis-readiness letter raises questions requiring original-study and response appraisal",
       "desk": "safety-policy",
-      "topics": [
-        "evaluation",
-        "safety",
-        "clinical-prediction"
-      ],
+      "topics": ["evaluation", "safety", "clinical-prediction"],
       "entities": [],
       "event_date": "2026-10-27",
       "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
@@ -1647,9 +1621,7 @@
       },
       "deduplication": {
         "status": "new",
-        "previous_candidate_ids": [
-          "2026-10-28-sepsis-readiness-methodological-letter"
-        ],
+        "previous_candidate_ids": ["2026-10-28-sepsis-readiness-methodological-letter"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical stories and eight issue manifests identity-matched at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; relevant unmerged daily PR #72 (28 October) ledger inspected. No current date branch/PR/default ledger found. Prior watch records are not publications.",
@@ -1682,10 +1654,7 @@
       "decision": "watch",
       "title": "AMA liability brief assigns responsibilities; policy novelty comparison unfinished",
       "desk": "safety-policy",
-      "topics": [
-        "governance",
-        "safety"
-      ],
+      "topics": ["governance", "safety"],
       "entities": [],
       "event_date": "2026-10-29",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -1779,10 +1748,7 @@
       "decision": "watch",
       "title": "Cardiac-biomarker model-selection critique needs primary text and original-study reconciliation",
       "desk": "biomedical-foundations",
-      "topics": [
-        "evaluation",
-        "reproducibility"
-      ],
+      "topics": ["evaluation", "reproducibility"],
       "entities": [],
       "event_date": "2026-11-02",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -1859,10 +1825,7 @@
       "decision": "watch",
       "title": "External-validation blueprint is not itself a new validation experiment",
       "desk": "clinical-ai",
-      "topics": [
-        "evaluation",
-        "reproducibility"
-      ],
+      "topics": ["evaluation", "reproducibility"],
       "entities": [],
       "event_date": "2026-10-30",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -1939,11 +1902,7 @@
       "decision": "watch",
       "title": "EVLF-FM needs full split, artifact and explanation-faithfulness appraisal",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-models",
-        "medical-imaging",
-        "evaluation"
-      ],
+      "topics": ["biomedical-models", "medical-imaging", "evaluation"],
       "entities": [],
       "event_date": "2026-10-29",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2020,11 +1979,7 @@
       "decision": "watch",
       "title": "RetiME mortality-trajectory model remains abstract-level evidence",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "medical-imaging",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "medical-imaging", "evaluation"],
       "entities": [],
       "event_date": "2026-11-02",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2103,10 +2058,7 @@
       "decision": "rejected",
       "title": "Discharge-summary publicity does not make an October2 paper new",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "evaluation"
-      ],
+      "topics": ["health-operations", "evaluation"],
       "entities": [],
       "event_date": "2026-10-02",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2194,10 +2146,7 @@
       "decision": "rejected",
       "title": "AI-auscultation November issue follows October15 publication",
       "desk": "clinical-ai",
-      "topics": [
-        "diagnostics",
-        "evaluation"
-      ],
+      "topics": ["diagnostics", "evaluation"],
       "entities": [],
       "event_date": "2026-10-15",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2272,10 +2221,7 @@
       "decision": "rejected",
       "title": "Cefalytics November issue does not replace July publication date",
       "desk": "clinical-ai",
-      "topics": [
-        "diagnostics",
-        "evaluation"
-      ],
+      "topics": ["diagnostics", "evaluation"],
       "entities": [],
       "event_date": "2026-07-30",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2350,10 +2296,7 @@
       "decision": "rejected",
       "title": "Hinge earnings growth is not a verified new AI clinical result",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "digital-health"
-      ],
+      "topics": ["health-operations", "digital-health"],
       "entities": [],
       "event_date": "2026-11-03",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2428,10 +2371,7 @@
       "decision": "rejected",
       "title": "Smart-hospital ranking is recognition, not a new AI validation study",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "evaluation"
-      ],
+      "topics": ["implementation", "evaluation"],
       "entities": [],
       "event_date": "2026-10-30",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2506,11 +2446,7 @@
       "decision": "rejected",
       "title": "SAMURAI.CT registration is not newly reported clinical results",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-trials",
-        "diagnostics",
-        "medical-imaging"
-      ],
+      "topics": ["clinical-trials", "diagnostics", "medical-imaging"],
       "entities": [],
       "event_date": "2026-10-23",
       "event_date_reason": "Original source publication/announcement date, not discovery or indexing date.",
@@ -2582,8 +2518,8 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Partial-research recovery checkpoint: zero selected,12 watch and6 exclusions. No candidate has a completed eligible appraisal; this is not evidence of a quiet news window. No story, issue or artwork manufactured.",
+    "mode": "ledger-only",
+    "reason": "Zero selected:12 unresolved evidence/novelty appraisals and6 freshness/significance exclusions. Partial-research ledger-only handoff, not a quiet-day claim. No articles, daily issue, imagery or translations; all-selected accounting is empty.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
@@ -2602,6 +2538,48 @@
         "tested_revision": "Uncommitted initial prospective ledger based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2",
         "execution": "Local Node24.22.1; no remote publication writes made.",
         "evidence": "Hinge exclusion lacked a primary source-role mapping; corrected to original specialist reporting as evidence of the reported earnings event only, never as clinical validation. A fresh full check follows."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-04.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "17ledgers (16daily and1controlled trial),10existing stories passed. No new articles or issue."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-04.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "17ledgers/10existing stories; asset decoding and publication mappings passed. No new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "Exit0: lint, format, script/test types, schema exact match, content/editorial/illustration checks,146unit tests, Astro0errors/0warnings,31page build and11indexed pages passed."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "No browser assertions ran: configured webServer process exited early. DEBUG=pw:webserver retry reproduced after successful build; runtime preview launcher announced a daemonized server then exited before Playwright readiness. This is a local harness failure, not35 demonstrated application-test failures. Required exact-head hosted browser CI is still needed."
+      },
+      {
+        "command": "DEBUG=pw:webserver npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "Bounded diagnostic retry reproduced webServer exit after Astro preview announced pid220 at08:59:44Z. No repository config change or assertion pass claimed."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only finalization based on initial research commit 3f4a73614d0bfe96ac13f7cadfe8bf7b5cceb3e8; pre-audit ledger SHA-256 d0ad847bd9f71de3ab4fb9adeac96aaf9d94cf8f71943e094371030773931cdb",
+        "execution": "Local Node24.22.1 in a detached worktree at the canonical initial checkpoint; only today's ledger changed. Later audit metadata is revalidated for the handoff.",
+        "evidence": "No whitespace errors; only docs/editorial/ledgers/2026-11-04.json changed."
       }
     ]
   },
@@ -2615,7 +2593,9 @@
         "phase-1-bounded-discovery-partial",
         "phase-2-deduplication-and-decisions",
         "phase-3-ownership-acquired",
-        "phase-4-full-research-first"
+        "phase-4-full-research-first",
+        "phase-5-no-selected-publication-files",
+        "phase-6-structural-and-verify-passed-local-browser-harness-failed"
       ],
       "outcome": "in-progress"
     }
