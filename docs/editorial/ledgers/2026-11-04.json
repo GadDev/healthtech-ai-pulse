@@ -2587,7 +2587,7 @@
     {
       "run_id": "healthtech-2026-11-04T084241Z",
       "started_at": "2026-11-04T08:42:41Z",
-      "completed_at": null,
+      "completed_at": "2026-11-04T09:02:17Z",
       "phases": [
         "phase-0-contracts-and-identity",
         "phase-1-bounded-discovery-partial",
@@ -2595,17 +2595,15 @@
         "phase-3-ownership-acquired",
         "phase-4-full-research-first",
         "phase-5-no-selected-publication-files",
-        "phase-6-structural-and-verify-passed-local-browser-harness-failed"
+        "phase-6-structural-and-verify-passed-local-browser-harness-failed",
+        "phase-7-canonical-draft-pr-74-created",
+        "ownership-released",
+        "phase-8-exact-release-head-ci-awaiting-observation"
       ],
-      "outcome": "in-progress"
+      "outcome": "checkpoint-complete: canonical ledger-only draft PR74 created; ownership released. Research remains partial; exact final-release-head CI observations belong in the PR handoff. Reuse this branch/PR."
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-11-04T084241Z",
-    "acquired_at": "2026-11-04T08:55:36Z",
-    "heartbeat_at": "2026-11-04T08:55:36Z",
-    "expires_at": "2026-11-04T10:55:36.000Z"
-  },
+  "active_run": null,
   "human_overrides": [],
   "artwork": {
     "version": "healthtech-artwork-1",
