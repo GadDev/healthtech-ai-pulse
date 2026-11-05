@@ -1596,11 +1596,7 @@
       "decision": "watch",
       "title": "KITE-CRM trial report needs primary manuscript and protocol",
       "desk": "clinical-ai",
-      "topics": [
-        "medical-imaging",
-        "evaluation",
-        "patient-outcomes"
-      ],
+      "topics": ["medical-imaging", "evaluation", "patient-outcomes"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Underlying event/publication date not verified; later discovery/news dateline is not substituted.",
@@ -1690,10 +1686,7 @@
       "decision": "watch",
       "title": "Waystar claim-resubmission launch needs primary release and actual deployment scope",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "implementation"
-      ],
+      "topics": ["health-operations", "implementation"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Underlying event/publication date not verified; later discovery/news dateline is not substituted.",
@@ -1770,10 +1763,7 @@
       "decision": "watch",
       "title": "WHO AI roadmap and Luxembourg office require implementation-document appraisal",
       "desk": "safety-policy",
-      "topics": [
-        "governance",
-        "implementation"
-      ],
+      "topics": ["governance", "implementation"],
       "entities": [],
       "event_date": "2026-10-29",
       "event_date_reason": "RC76 closed29October; WHO reports adoption at that session. Source release30October; exact adoption time not inferred.",
@@ -1864,10 +1854,7 @@
       "decision": "watch",
       "title": "FDA fibrotic-lung software codification needs comparison with2024 classification",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "medical-imaging"
-      ],
+      "topics": ["regulation", "medical-imaging"],
       "entities": [],
       "event_date": "2026-10-30",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -1944,10 +1931,7 @@
       "decision": "watch",
       "title": "FDA skin-lesion software codification needs intended-use and historical-control comparison",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "medical-devices"
-      ],
+      "topics": ["regulation", "medical-devices"],
       "entities": [],
       "event_date": "2026-10-30",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -2024,10 +2008,7 @@
       "decision": "watch",
       "title": "Pediatric-allergy AI narrative review needs full applicability and novelty assessment",
       "desk": "clinical-ai",
-      "topics": [
-        "evaluation",
-        "decision-support"
-      ],
+      "topics": ["evaluation", "decision-support"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -2106,10 +2087,7 @@
       "decision": "rejected",
       "title": "EHDS explainer video is not a new implementation requirement",
       "desk": "safety-policy",
-      "topics": [
-        "governance",
-        "interoperability"
-      ],
+      "topics": ["governance", "interoperability"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -2184,10 +2162,7 @@
       "decision": "rejected",
       "title": "Bariatric anemia prediction has September29 electronic publication",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "evaluation"],
       "entities": [],
       "event_date": "2026-09-29",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -2262,10 +2237,7 @@
       "decision": "rejected",
       "title": "Ventricular aneurysm prediction has July28 electronic publication",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "evaluation"],
       "entities": [],
       "event_date": "2026-07-28",
       "event_date_reason": "Original source date only; event/decision distinctions are explained in notes. No exact time inferred.",
@@ -2337,13 +2309,63 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
+    "mode": "ledger-only",
     "reason": "Partial-research checkpoint: six new unresolved watch developments and three meaningful exclusions; zero selected. No articles, issue, imagery or translations manufactured.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "Exit0;297packages installed."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-05.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "17ledgers (16daily+1trial),10existing stories passed; no new stories."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-05.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "Existing artwork decoding and empty new publication mappings passed."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "146unit tests; lint/format/types/schema/content/editorial/illustration checks; Astro0errors/0warnings;31page build and11indexed pages; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "35test entries failed; no successful browser validation established. Full error output exceeded retained display. Expected Chromium headless-shell1248 executable path is absent (read-only existence check exit1); later filtered diagnostic attempts fail at webServer startup before browser assertions. Do not treat these as35 proven application defects."
+      },
+      {
+        "command": "npx playwright test --grep '^/$' --reporter=line",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "Diagnostic attempt stopped at configured webServer exiting early; not a browser pass and no eligible assertions established."
+      },
+      {
+        "command": "npx playwright test --grep 'open category navigation fits without moving content at 320px' --reporter=line",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial research checkpoint 2355efe7be027a576c3ec90fcc347345417e855e; pre-audit ledger blob2b43bf952b15ed93dce0288572fc297b4e51bcd3",
+        "execution": "Local Node24.22.1. Only today's dated ledger changed; final audit metadata is revalidated and exact hosted CI is reported separately.",
+        "evidence": "Single-test diagnostic retry also stopped at configured webServer exiting early. No code/CI/config modifications or assertion pass claimed."
+      }
+    ]
   },
   "attempts": [
     {
@@ -2355,7 +2377,9 @@
         "bounded-discovery-partial",
         "deduplication-and-decisions",
         "ownership-acquired",
-        "research-first-checkpoint"
+        "research-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-complete-browser-blocked"
       ],
       "outcome": "in-progress"
     }
