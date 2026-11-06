@@ -1728,11 +1728,7 @@
       "decision": "watch",
       "title": "Delirium model's within-system deployment is useful but below selection gate",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "implementation",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "implementation", "evaluation"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -1776,9 +1772,7 @@
       },
       "deduplication": {
         "status": "uncertain",
-        "previous_candidate_ids": [
-          "2026-11-04-smart-hospital-ranking-not-validation"
-        ],
+        "previous_candidate_ids": ["2026-11-04-smart-hospital-ranking-not-validation"],
         "previous_story_ids": [],
         "material_delta": null,
         "archive_coverage": "15 main daily ledgers/63 candidate rows,10 canonical stories and eight issues inspected at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; current open daily PR72/74/75 ledgers inspected. Prior watch/rejected records are not publications. No6November default ledger/canonical PR/branch.",
@@ -1825,10 +1819,7 @@
       "decision": "watch",
       "title": "Cervical cytology AI classification order needs historical-control comparison",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "medical-devices"
-      ],
+      "topics": ["regulation", "medical-devices"],
       "entities": [],
       "event_date": "2026-11-05",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -1905,10 +1896,7 @@
       "decision": "watch",
       "title": "MCI prognosis software classification needs intended-use and novelty appraisal",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "medical-devices"
-      ],
+      "topics": ["regulation", "medical-devices"],
       "entities": [],
       "event_date": "2026-11-05",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -1985,11 +1973,7 @@
       "decision": "watch",
       "title": "Claude-assisted vault research needs preprint and artifact appraisal",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-models",
-        "research-tools",
-        "preclinical-evidence"
-      ],
+      "topics": ["biomedical-models", "research-tools", "preclinical-evidence"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -2081,10 +2065,7 @@
       "decision": "rejected",
       "title": "AI-INFOCARE November issue is not a new trial publication",
       "desk": "clinical-ai",
-      "topics": [
-        "evaluation",
-        "care-delivery"
-      ],
+      "topics": ["evaluation", "care-delivery"],
       "entities": [],
       "event_date": "2026-10-15",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -2159,10 +2140,7 @@
       "decision": "rejected",
       "title": "OpenBind's May release does not establish new November availability",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-data",
-        "drug-discovery"
-      ],
+      "topics": ["biomedical-data", "drug-discovery"],
       "entities": [],
       "event_date": "2026-05-13",
       "event_date_reason": "Source action/publication date at day precision; original classification or study dates distinguished in notes.",
@@ -2234,13 +2212,56 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
+    "mode": "ledger-only",
     "reason": "Zero selected: one bounded development scores67.5 below75; three watch appraisals unresolved; two freshness exclusions. Partial-research checkpoint, not quiet-day output. No story/issue/imagery/translation.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "Exit0;297packages installed."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-06.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "17ledgers/10existing stories; empty new publication mappings valid."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-06.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "Existing artwork decoding and mappings passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "Exit0: lint/format/types/schema/content/editorial/illustration;146unit tests; Astro0errors/0warnings;31page build and11indexed pages."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "Configured webServer process exited early. No browser assertion pass established. This runtime startup failure is not35 proven application defects; exact-head hosted browser CI remains required."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree at 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2; initial checkpoint 6a9c2595e4ca0330e7b2a7066322b1a27c139a65; pre-audit ledger blob08f8d9d9703ff0076e4d98b8323a3cf2ecfd8155",
+        "execution": "Local Node24.22.1; only today's ledger changed. Final audit metadata revalidated; hosted exact-head CI reported separately.",
+        "evidence": "No whitespace errors; no tracked code/policy/CI/config changes."
+      }
+    ]
   },
   "attempts": [
     {
@@ -2252,7 +2273,9 @@
         "bounded-discovery-partial",
         "deduplication-and-decisions",
         "ownership-acquired",
-        "research-first-checkpoint"
+        "research-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-complete-browser-startup-failed"
       ],
       "outcome": "in-progress"
     }
