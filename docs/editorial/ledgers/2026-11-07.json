@@ -1688,10 +1688,7 @@
       "decision": "watch",
       "title": "AURA randomized evaluation needs primary-report appraisal",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "clinical-trials"
-      ],
+      "topics": ["clinical-prediction", "clinical-trials"],
       "entities": [],
       "event_date": "2026-11-06",
       "event_date_reason": "Source dateline for bounded announcement/publication, not underlying clinical-study dates.",
@@ -1768,10 +1765,7 @@
       "decision": "watch",
       "title": "Mayo clinical decision support announcement needs access and version checks",
       "desk": "health-systems",
-      "topics": [
-        "decision-support",
-        "implementation"
-      ],
+      "topics": ["decision-support", "implementation"],
       "entities": [],
       "event_date": "2026-11-03",
       "event_date_reason": "Source dateline for bounded announcement/publication, not underlying clinical-study dates.",
@@ -1848,10 +1842,7 @@
       "decision": "watch",
       "title": "FDA opens discussion on autonomous and remotely operated medical robotics",
       "desk": "safety-policy",
-      "topics": [
-        "regulation",
-        "safety"
-      ],
+      "topics": ["regulation", "safety"],
       "entities": [],
       "event_date": "2026-11-06",
       "event_date_reason": "Source dateline for bounded announcement/publication, not underlying clinical-study dates.",
@@ -1942,10 +1933,7 @@
       "decision": "watch",
       "title": "UCB–Cradle collaboration awaits concrete development evidence",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery",
-        "preclinical-evidence"
-      ],
+      "topics": ["drug-discovery", "preclinical-evidence"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Source dateline for bounded announcement/publication, not underlying clinical-study dates.",
@@ -2022,10 +2010,7 @@
       "decision": "watch",
       "title": "AlphaFold RNA and protein–RNA reliability preprint needs methods inspection",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-models",
-        "evaluation"
-      ],
+      "topics": ["biomedical-models", "evaluation"],
       "entities": [],
       "event_date": "2026-11-04",
       "event_date_reason": "Source dateline for bounded announcement/publication, not underlying clinical-study dates.",
@@ -2104,9 +2089,7 @@
       "decision": "rejected",
       "title": "Equiti–Lexi reporting does not establish a new November acquisition",
       "desk": "health-systems",
-      "topics": [
-        "health-operations"
-      ],
+      "topics": ["health-operations"],
       "entities": [],
       "event_date": "2026-10-28",
       "event_date_reason": "Article explicitly says acquisition announced28October.",
@@ -2178,13 +2161,42 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
+    "mode": "ledger-only",
     "reason": "No selected stories: one bounded discussion release scores72.5 below75; four essential appraisals unfinished. Research partial, not quiet day.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2",
+        "execution": "Local Node24.22.1;297 packages installed.",
+        "evidence": "Exited0; lockfile unchanged."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-07.json && npm run illustration:check -- docs/editorial/ledgers/2026-11-07.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob214eda66063dfa8fdddf01ba21825d8c7d20f69a based on4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2",
+        "execution": "Local Node24.22.1",
+        "evidence": "17 ledgers/10 existing stories; mappings and WebP decoding passed."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob214eda66063dfa8fdddf01ba21825d8c7d20f69a",
+        "execution": "Local Node24.22.1",
+        "evidence": "Lint/format, strict types, schema match, content/editorial/illustration,146 unit tests, Astro0errors/0warnings,31page build,11indexedpages passed."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger blob214eda66063dfa8fdddf01ba21825d8c7d20f69a",
+        "execution": "Local Node24.22.1; configured Playwright webServer.",
+        "evidence": "Process from config.webServer exited early. No assertions ran or passed; no configuration changed."
+      }
+    ]
   },
   "attempts": [
     {
@@ -2196,7 +2208,9 @@
         "bounded-discovery-partial",
         "deduplication-and-decisions",
         "ownership-acquired",
-        "research-first-checkpoint"
+        "research-first-checkpoint",
+        "no-selected-publication-files",
+        "preflight"
       ],
       "outcome": "in-progress"
     }
