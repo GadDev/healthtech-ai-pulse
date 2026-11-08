@@ -1790,10 +1790,7 @@
       "decision": "watch",
       "title": "BioLiP3 paper needs release-novelty appraisal",
       "desk": "biomedical-foundations",
-      "topics": [
-        "biomedical-data",
-        "evaluation"
-      ],
+      "topics": ["biomedical-data", "evaluation"],
       "entities": [],
       "event_date": "2026-11-06",
       "event_date_reason": "Date of inspected publication/announcement; underlying deployment/release distinguished in reason.",
@@ -1909,10 +1906,7 @@
       "decision": "watch",
       "title": "athenaPatient MCP access announcement needs operating checks",
       "desk": "health-systems",
-      "topics": [
-        "interoperability",
-        "privacy"
-      ],
+      "topics": ["interoperability", "privacy"],
       "entities": [],
       "event_date": "2026-11-02",
       "event_date_reason": "Date of inspected publication/announcement; underlying deployment/release distinguished in reason.",
@@ -1991,10 +1985,7 @@
       "decision": "rejected",
       "title": "Northwestern–OpenEvidence deployment is older than this window",
       "desk": "health-systems",
-      "topics": [
-        "decision-support",
-        "implementation"
-      ],
+      "topics": ["decision-support", "implementation"],
       "entities": [],
       "event_date": "2026-10-08",
       "event_date_reason": "Announcement says access began8October; page dateline12October.",
@@ -2066,13 +2057,42 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
+    "mode": "ledger-only",
     "reason": "No selected stories: essential novelty, access and evidence appraisal unfinished. Two watch records have null scores, not invented below-gate rankings; one freshness exclusion. No issue or assets.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2",
+        "execution": "Local Node24.22.1;297 packages installed.",
+        "evidence": "Exited0, lockfile unchanged."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-08.json && npm run illustration:check -- docs/editorial/ledgers/2026-11-08.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob ad284e5a6e43d12b2ab947e280d33dd17f1c6e2c based on 4d093a8f6a143e83916d5cba1ce0c86ed9cac9d2",
+        "execution": "Local Node24.22.1",
+        "evidence": "17 ledgers/10 existing stories; mappings and decoding passed."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob ad284e5a6e43d12b2ab947e280d33dd17f1c6e2c",
+        "execution": "Local Node24.22.1",
+        "evidence": "Lint/format, strict types, exact schema match, content/editorial/illustration, unit tests, Astro check,31page build and11indexedpages passed."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger blob ad284e5a6e43d12b2ab947e280d33dd17f1c6e2c",
+        "execution": "Local configured Playwright webServer",
+        "evidence": "Process from config.webServer exited early. No assertions ran/passed; configuration unchanged."
+      }
+    ]
   },
   "attempts": [
     {
