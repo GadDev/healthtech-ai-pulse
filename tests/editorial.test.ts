@@ -10,6 +10,20 @@ import { weightedScore } from '../src/lib/editorial-schema.ts';
 import { storySchema } from '../src/lib/editorial-schema.ts';
 import type { SyntheticLedger } from './helpers/fixtures.ts';
 
+test('new public stories cannot evade mandatory imagery with mode none', () => {
+  const { story } = fixture();
+  story.editorialDate = '2026-10-22';
+  assert.throws(
+    () =>
+      validateIllustration(
+        '/synthetic-not-used',
+        { id: story.candidateId, data: storySchema.parse(story) },
+        Buffer.from('Synthetic fixture only'),
+      ),
+    /mandatory illustration missing/,
+  );
+});
+
 test('bounded availability can pass without a patient-benefit claim', () =>
   assert.equal(validateLedger(fixture().ledger, vocabulary).candidates.length, 1));
 test('pilot capacity allows selected overflow only with explicit withholding', () => {

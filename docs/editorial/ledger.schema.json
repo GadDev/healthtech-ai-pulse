@@ -19,6 +19,294 @@
       "type": "string",
       "const": "Europe/Luxembourg"
     },
+    "artwork": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "healthtech-artwork-1"
+        },
+        "runtime": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "capabilities": {
+          "type": "object",
+          "properties": {
+            "generation": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "available",
+                    "unavailable",
+                    "unverified"
+                  ]
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "inspection": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "available",
+                    "unavailable",
+                    "unverified"
+                  ]
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "conversion": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "available",
+                    "unavailable",
+                    "unverified"
+                  ]
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "upload": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "available",
+                    "unavailable",
+                    "unverified"
+                  ]
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "generation",
+            "inspection",
+            "conversion",
+            "upload"
+          ],
+          "additionalProperties": false
+        },
+        "stories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "story_id": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "generated",
+                  "reviewed",
+                  "uploaded",
+                  "blocked"
+                ]
+              },
+              "brief_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "generation_key": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "candidates": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "output_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prompt_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    }
+                  },
+                  "required": [
+                    "output_id",
+                    "prompt_sha256"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "review_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "asset": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "width": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "height": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "git_blob_sha": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{40}$"
+                  },
+                  "read_back_revision": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{40}$"
+                  }
+                },
+                "required": [
+                  "path",
+                  "sha256",
+                  "width",
+                  "height"
+                ],
+                "additionalProperties": false
+              },
+              "blocker": {
+                "type": "object",
+                "properties": {
+                  "stage": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "generated",
+                      "reviewed",
+                      "uploaded"
+                    ]
+                  },
+                  "error": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "next_action": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "stage",
+                  "error",
+                  "next_action"
+                ],
+                "additionalProperties": false
+              },
+              "history": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stage": {
+                      "type": "string",
+                      "enum": [
+                        "pending",
+                        "generated",
+                        "reviewed",
+                        "uploaded",
+                        "blocked"
+                      ]
+                    },
+                    "at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "stage",
+                    "at",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "story_id",
+              "stage",
+              "candidates",
+              "history"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "version",
+        "runtime",
+        "checked_at",
+        "capabilities",
+        "stories"
+      ],
+      "additionalProperties": false
+    },
     "contract_ref": {
       "type": "string",
       "pattern": "^[a-f0-9]{40}$"

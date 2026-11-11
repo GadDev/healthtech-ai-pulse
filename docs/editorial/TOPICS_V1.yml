@@ -1,5 +1,7 @@
 # Controlled HealthTech vocabulary; contract version healthtech-1.0.
 version: healthtech-1.0
+# Desk keys below MUST match `deskKeys` in `src/lib/editorial-schema.ts` (authoritative source for validation).
+# Update both locations together; no automated sync check exists.
 desks:
   clinical-ai: Clinical AI
   health-systems: Health systems and digital health

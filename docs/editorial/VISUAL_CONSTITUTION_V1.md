@@ -1,47 +1,61 @@
 # HealthTech visual constitution
 
-Contract: `healthtech-1.0`. Apply these visual authoring rules to generated HealthTech artwork. [Editorial policy](../EDITORIAL.md) controls evidence and medical claim boundaries. This document does not establish clinical validity or override that policy; [the illustration system](ILLUSTRATION_SYSTEM_V1.md) defines production, identity, review records and validation.
+**Direction: Scientific Editorial Abstraction.** Authoring revision: `scientific-1` (23 October 2026). The stored generation identity remains `healthtech-1.0`. [Editorial policy](../EDITORIAL.md) controls evidence and medical claims; this constitution controls art direction; [the illustration system](ILLUSTRATION_SYSTEM_V1.md) controls production and recovery. Use the actual HealthTech renderer and CSS for placement, never a source publication's mockup.
 
-## Compose from verified context
+## One scientific idea, from verified context
 
-Build the brief from the story ID, two or three supported context sentences, one editorial point, intended placement and crop. State the question or tension the image should communicate: incomplete evidence, participant input, deployment friction or another supported angle. Naming the topic alone is insufficient. Use the actual HealthTech article renderer and stylesheet for composition: `src/pages/stories/[...id].astro` and `src/styles/publication.css`.
+Every newly prepared public article from 22 October 2026 needs accepted story-specific artwork. Missing or failed artwork withholds that story; a ledger-only edition needs none. Keep historical reviews as evidence of their original process, not approvals under this direction.
 
-Before generating a new image, write three short, materially different photographic concepts. Vary the relationship or action, not just the props or colour. Select one with a story-specific rationale and reject the other two with a brief reason. This is concept exploration in text; it does not require three generated candidates. Reuse with unchanged inputs needs no new concept exercise, but still requires the editorial review below.
+Start from two or three supported context sentences and one editorial question. Identify which visible elements are source-supported structures, which are deliberate simplifications, and which are metaphor. State what the image must not imply. The image must illuminate the article's scientific question or medical process, rather than merely announce “healthcare + AI”.
 
-Use Quiet Laboratory's photorealistic editorial direction. Choose among contextual photography, an anonymous human gesture, conceptual still life or a tactile close-up according to the story. Give the scene one legible relationship, action or visual metaphor. A laptop, phone, headset, blank form or laboratory is not a sufficient idea by itself. Reject interchangeable office stock compositions and decorative props without editorial purpose.
+Prefer recognisable medical and biological forms: simplified cell membranes and nuclei, tissue-like layers, anatomically informed contours, specimen sections, microscopy-inspired textures or a medically relevant observation/process. Select them because the story supports them. A decorative cell, DNA helix or organ added to unrelated reporting fails specificity. Regulatory and documentation stories may use a medical process or boundary; do not force cellular imagery into them.
 
-The publication palette is white `#FFFFFF`, ink `#424242`, teals `#51796E` and `#344F51`, pale sage `#E8EFEC`, mist `#D1E0E2`, with rose `#D4A298` and caramel `#BC8A5F` as sparing accents. It anchors the website; photographs may use natural scene colours and need not contain teal objects or white desks. Keep small website text in ink or dark teal. Avoid cream washes, neon, glowing interfaces and synthetic gradient backdrops.
+Create commissioned science illustration with deliberate composition, simple organic forms, tactile texture, subtle depth, intentional negative space and one memorable focal relationship. Fine lines can support larger forms, but must not carry the whole composition. Avoid generic geometric posters, architectural metaphors without a scientific connection, diagram-only flowcharts, glossy medical stock rendering and molecular wallpaper. Abstraction should simplify the science, not erase its identity.
 
-Choose lighting, camera distance, viewpoint, texture and contrast to support the editorial point. Directional light, purposeful shadows, asymmetry and close framing are allowed. Soft light and negative space are options, not mandatory treatments. Specify the focal point and what must survive each actual placement; do not require every object to sit inside an arbitrary central percentage. Test the real crops before acceptance.
+## Quiet Laboratory palette and Edition Front
 
-Allow fictional, non-identifiable human presence, such as hands or an anonymous contextual gesture, when it adds meaning. Do not present it as an actual participant, investigator or observed clinical encounter. Avoid invented medical-looking accessories that could be mistaken for study hardware. A conceptual construction must not encode invented study counts, measurements or mechanisms.
+| Role                        | Colour                                     |
+| --------------------------- | ------------------------------------------ |
+| Primary field               | White `#FFFFFF`                            |
+| Structure and strong detail | Ink `#424242`, teals `#51796E` / `#344F51` |
+| Layers, quiet depth         | Pale sage `#E8EFEC`, mist `#D1E0E2`        |
+| Limited focal accents       | Rose `#D4A298`, caramel `#BC8A5F`          |
 
-A generated photograph is an editorial illustration of context. It must not resemble documentary evidence of the reported study, identifiable investigators, a named institution, real patients or clinical results. Avoid readable records, identifying screens and brand marks. Caption it as illustrative at every placement where that distinction might otherwise be lost. Alt text describes visible content without claiming that the depicted scene occurred. If no truthful photographic idea survives the crop and implication review, use `illustration.mode: none`.
+Keep white dominant, dark structure legible and accents sparing. Avoid cream washes, Daily AI Pulse's warm-paper/terracotta treatment, excessive gradients, neon or synthetic glow. Essential meaning must also be conveyed by shape, position and text outside the image, not colour alone. Preserve Edition Front typography, hierarchy and layout.
 
-Reject unsupported medical implications before judging aesthetics. In particular:
+Generate standalone, wordless artwork. Astro supplies headlines, metadata, labels, captions and disclosure. Do not bake a publication layout into the pixels.
 
-- Do not invent anatomy, scans, molecular mechanisms, study results, patient outcomes or clinical endorsements.
-- Do not use generated charts or numbers as factual evidence. Data graphics require source data and a reproducible method under editorial policy.
-- Do not generate words, labels, logos, headlines, UI, screenshots, watermarks, borders or frames. The website supplies its own text.
-- Avoid generic robots, glowing brains, neon and stock AI imagery. A photographic setting must not imply it depicts the actual study, participants, institution or a clinical outcome absent from reporting. Use an explicitly illustrative conceptual photograph or withhold imagery when a literal scene would mislead.
+## Scientific and medical hard gate
 
-Compare with up to five most recent approved HealthTech images, plus other candidates in the same edition, when available. Check repeated setting, prop group, angle and lighting. Reject an adjacent repeat of the same composition; explain any purposeful recurring treatment. Record compared story IDs and honestly disclose unavailable comparisons. Do not import source artwork, approvals or a supposed target reference archive.
+Reject a violation before aesthetic review:
 
-## Review order and authority
+- Unsupported anatomy, diagnostic features, molecular interactions, gene-regulatory edges or mechanisms presented as factual. Simplified biological forms are allowed when clearly illustrative; details that carry factual meaning need primary-source verification.
+- Generated medical scans, histology presented as a real specimen, documentary-looking experiments, identifiable patients/researchers/institutions, invented study hardware, clinical success or harm, treatment recommendations or regulatory endorsement.
+- Invented data, charts, numbers, measured proportions, density, zone ratios or performance encoded through size, arrows, colours or symbols. Do not imply “healthy versus diseased” or “before versus cured” through palette.
+- Words, letters, numbers, labels, logos, interfaces, screenshots, page furniture, watermarks, borders or frames.
+- Glowing brains, humanoid robots, decorative floating molecules, stock AI icons, glossy 3D objects or sensational illness imagery.
 
-Reject unsupported medical implications and prohibited content before considering aesthetics. Then inspect the actual crop, contrast and reduced-size legibility. At each intended size, check whether the image or its juxtaposition with the headline implies a treatment outcome, measured benefit or actual study scene; verify that the illustrative caption remains legible on desktop and mobile. Review the crop in the real article and listing placements. Attractive artwork cannot compensate for a misleading clinical implication. Do not treat a high model confidence score as visual or scientific validation.
+An editorial metaphor is not an explanatory scientific diagram. Factual diagrams use verified source data, reproducible code and scientific review; use correctly credited source material only after rights and the current generated-only content contract have been addressed. Never label sourced evidence as generated. This change does not expand the content schema to a new media mode.
 
-After the medical and technical checks, apply a separate editorial acceptance gate. Record pass/fail with a short observed reason for each question:
+For the B-cell pilot, a stylised cellular field and separate inferred traces can evoke inference from cellular snapshots. They must not reproduce an actual microscopy image, imply an established pathway, encode rescue magnitudes or suggest human therapeutic benefit.
 
-1. **Specificity:** Would this image fit several unrelated healthcare stories equally well? If yes, fail. Explain its connection to this article's central question; it need not communicate every detail without the headline.
-2. **Meaning:** Does the image add an action, relationship or metaphor beyond naming healthcare or technology? Decorative equipment alone fails.
-3. **Clarity:** Is that focal idea still legible at a 160-pixel thumbnail and in the intended responsive crops? A lost relationship fails even when individual props remain visible.
-4. **Variety:** Does it avoid repeating the recent images' composition? Identify actual comparisons or record that none are available; absence alone is not a failure.
+## Concepts, candidates and acceptance
 
-Withhold a candidate that fails any gate, even if it is attractive and passes automated validation. Revise the concept or composition before another generation; record the failure and actual candidate count. Do not fix generic imagery by adding arbitrary colour or props. Start with one generated candidate from the chosen concept; no multi-image competition or numerical aesthetic score is required.
+For routine production, write three materially different concepts, choose one with reasons and start with one generated candidate. The issue #52 direction-setting pilot generates three genuinely different compositions for **one** article. Palette swaps do not count. Record actual outputs and counts; text concepts are not image candidates. Permit at most one revised batch per invocation; checkpoint unresolved failure instead of looping.
 
-Use the real HealthTech renderer; source-publication layouts and artwork are not target production evidence. Put concept selection, comparisons and editorial gate results in the publication PR body, keyed to story ID and the accepted asset SHA-256 from its strict review record. Report not-run checks explicitly; missing review evidence is not acceptance. Keep the existing review JSON schema unchanged. Validators enforce identity and integrity, not these editorial judgments.
+Inspect actual pixels beside headline, description, lead and disclosure. Reject unsupported medical inference first. Then record an observed pass/fail reason for:
 
-Include material visual constraints in the exact final brief. Changes to this guide require reassessing that brief and the recorded review before reuse; updating a timestamp alone is not a new review. Record unresolved failures and withhold declared imagery until repaired.
+1. **Specificity:** the medical/biological anchor and focal relationship fit this article's actual question; a palette match alone fails.
+2. **Meaning:** distinguish scientific structure, simplification and metaphor; avoid an invented mechanism or an interchangeable science motif.
+3. **Clarity and craft:** clean forms and texture, no accidental symbols or artifacts; focal relationship survives a 160-pixel thumbnail, desktop 16:9 article crop and 3:2 listing/mobile crops using real placements.
+4. **Variety:** compare up to five recent approved HealthTech assets and current candidates. Record actual IDs or unavailable comparisons. Do not call Daily artwork an approved HealthTech reference.
 
-Adapted from `GadDev/daily-ai-pulse/docs/editorial/VISUAL_CONSTITUTION_V1.md` at `6269d2b7dbc01046cfcdaf7f204b8b6b14de9e64`. The target retains its healthcare restrictions, optional imagery and `healthtech-1.0` identity rather than adopting the source's separate version hierarchy.
+Review actual page contexts, alt text and visible generated-illustration disclosure on desktop and mobile. Alt describes visible content; captions distinguish representation from study evidence. Attractive artwork and green CI cannot override a failed medical or editorial gate. Record model self-review as model review, not independent biological validation.
+
+## References and authority
+
+Authority: editorial policy → this constitution → actual target renderer/CSS → illustration system → final story/brief → approved target references. Daily AI Pulse informs production discipline, not target colour, incompatible schemas, thresholds or approvals.
+
+The one-article pilot becomes a proposed HealthTech scientific reference only after maintainer acceptance. Until then, assess against this written constitution and actual layouts; do not invent reference-fit scores. Routine numerical aesthetic thresholds are not calibrated and are not required.
+
+Bind exact constitution, illustration skill, renderer, CSS and any approved image reference bytes through the final brief's references. Material changes invalidate reuse. Never silently refresh an old approval's hashes to hide a changed input.

@@ -1,3 +1,8 @@
+// RSS 2.0 feed endpoint — generates edition-date-based feed for published stories.
+// - Uses edition date (not first-publication timestamp) per DAILY_ISSUE.md contract.
+// - Omits optional <pubDate>; description includes "Edition date: YYYY-MM-DD."
+// - Only includes non-draft stories from src/content/stories/.
+// - Requires SITE_URL for absolute links; local dev omits canonical URLs.
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
 const escape = (s: string) =>

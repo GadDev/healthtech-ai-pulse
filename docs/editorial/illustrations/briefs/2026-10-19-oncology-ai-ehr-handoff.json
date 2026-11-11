@@ -1,0 +1,46 @@
+{
+  "story_id": "2026-10-19-oncology-ai-ehr-handoff",
+  "verified_context": "An oncology consultation-preparation report describes two cases where unknown allergy information was changed into a negative statement by downstream processing and EHR integration. The cases do not establish a system-wide error rate or a patient outcome.",
+  "visual_idea": "Uncertainty lost at the record handoff: two tactile blank clinical-record leaves meet at a seam; an open cutout on the first becomes a solid patch on the receiving leaf.",
+  "placement": "article-hero and responsive listing",
+  "crop": "wide",
+  "constraints": "Routine production after maintainer approval of the DynaVelo pilot. One initial generated candidate from three written concepts. Selected concept: Uncertainty lost at the record handoff: two tactile blank clinical-record leaves meet at a seam; an open cutout on the first becomes a solid patch on the receiving leaf. Chosen because it makes this article's specific medical/research tension legible without asserting a mechanism or outcome. Alternatives: An allergy molecule or drug capsule: rejected because the story concerns information handling, not a biological allergy mechanism. A realistic EHR screen: rejected because it would require invented clinical text and interface details. Exact generation prompt: Create ONE standalone high-resolution 3:2 landscape scientific editorial illustration for a HealthTech AI Pulse article hero and responsive listing, 1536 by 1024 composition. It must survive central 16:9 article and 3:2 mobile cover crops and a 160px thumbnail. Scientific Editorial Abstraction: commissioned, restrained, recognisable medical or research subject matter, subtle dimensional matte-paper relief, dry-brush/etched surface detail and one focal relationship. Match the approved DynaVelo family in white space, tactile texture and calm contrast, but do not copy its cellular subject or arrangement. Palette: dominant white #FFFFFF, ink #424242, teals #51796E and #344F51, pale sage #E8EFEC and mist #D1E0E2; rose #D4A298 and caramel #BC8A5F only as sparing accents. Essential meaning must come from shapes and separation, not colour alone. No cream wash, glossy 3D or excessive gradients. No words, letters, numbers, labels, logos, UI, screenshots, page furniture, watermark, border or frame. No generated medical scans, documentary histology, actual patients, identifiable people or institutions, invented apparatus, unsupported anatomy or diagnostic features, invented molecular interactions, factual mechanism, data chart, measured proportions or outcome claims. No neon, glowing brain, robot, decorative floating molecules or generic AI icons. Do not depict clinical success, harm, treatment advice or regulatory endorsement. Not a bare schematic, flowchart, icon composition, generic geometric poster, stock artwork or website mockup.  Verified article context: An oncology consultation-preparation report describes two cases where unknown allergy information was changed into a negative statement by downstream processing and EHR integration. The cases do not establish a system-wide error rate or a patient outcome. Visual idea: Uncertainty lost at the record handoff: two tactile blank clinical-record leaves meet at a seam; an open cutout on the first becomes a solid patch on the receiving leaf. Composition and scientific boundaries: A quiet macro editorial still life rendered in matte cut-paper and subtle etched texture. Two broad translucent clinical-record leaves overlap diagonally above white, their surfaces entirely blank. A soft irregular open aperture in the upper sage leaf aligns with an opaque dark-teal patch on the receiving mist leaf, with one tiny rose misalignment at the seam. Make the empty-versus-filled relationship large and legible. These are physical paper leaves, not forms, screens or UI. No checkmark, minus sign, stamp, patient name, diagnosis, drug, allergy molecule, tumour or measured error count.",
+  "references": [
+    {
+      "path": "docs/editorial/VISUAL_CONSTITUTION_V1.md",
+      "sha256": "ebc2fec12f0d0f75aa81b9ea1907f1805bd6c712061487d234c80d7c01a950bc"
+    },
+    {
+      "path": "docs/editorial/ILLUSTRATION_SYSTEM_V1.md",
+      "sha256": "c931665ddfb181c7de5abc5f67912be08761317f45533b279c8a61ce53367531"
+    },
+    {
+      "path": ".agents/skills/healthtech-ai-pulse-illustration/SKILL.md",
+      "sha256": "fc335a5428133837b140c0dc824fe1ad42ec14f80a002dbf27bd03725f037dd8"
+    },
+    {
+      "path": "src/pages/stories/[...id].astro",
+      "sha256": "2c088b58c041762930eb35c4c3fa66578123c0e10ad36b0c79b8a60e3c369ca5"
+    },
+    {
+      "path": "src/components/StoryList.astro",
+      "sha256": "2b23835997f9887f42d46b6ae98d4718ded2e8e8347ecf4b61aac51b8e3bfbed"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "35b280e2359b32c8514707b8884f0f37ec0142b480ba46dc247d4798e44fc7e6"
+    },
+    {
+      "path": "src/components/IllustrationCaption.astro",
+      "sha256": "e691bd4b466b4fb52dab1281ca9dfe5f4e6fb1e757611c46e6cab3ce4993bc44"
+    },
+    {
+      "path": "src/styles/publication.css",
+      "sha256": "3a4d3423f332f045ab2e66987338d7c2fc7b2ab70f350a0300d5bff47c61f8af"
+    },
+    {
+      "path": "public/images/stories/2026-10-23-dynavelo-b-cell-rescue-predictions.webp",
+      "sha256": "bff8b4f0593f1e81ddbdede6ab26a26a816bd69baee7a0ca95d122003ded30d5"
+    }
+  ]
+}

@@ -1,29 +1,18 @@
 import { existsSync, readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { z } from 'astro/zod';
-import { storySchema, reviewSchema } from '../src/lib/editorial-schema.ts';
+import {
+  storySchema,
+  reviewSchema,
+  mandatoryImageEditorialDate,
+} from '../src/lib/editorial-schema.ts';
 import { markdown } from './lib/content.ts';
+import { validateIllustration } from './lib/editorial.ts';
+import { readIllustrationBrief } from './lib/illustration-brief.ts';
 import {
   buildGenerationIdentity,
   resolveRepositoryPath,
   sha256,
 } from './lib/illustration-generation-identity.ts';
-
-const text = z.string().trim().min(1);
-const briefSchema = z
-  .object({
-    story_id: text,
-    verified_context: text,
-    visual_idea: text,
-    placement: text,
-    crop: z.enum(['wide', 'square', 'landscape']),
-    constraints: text.optional(),
-    references: z
-      .array(z.object({ path: text, sha256: z.string().regex(/^[a-f0-9]{64}$/) }).strict())
-      .optional(),
-  })
-  .strict();
 
 interface GenerationOptions {
   storyId?: string;
@@ -44,17 +33,15 @@ export function resolveIllustrationGeneration(root: string, options: GenerationO
   const story = storySchema.parse(markdown(source.toString('utf8')).data);
   if (story.candidateId !== id) throw new Error('Story ID does not match its candidate.');
   if (story.draft) throw new Error('Finalize the English story before illustration decisions.');
-  if (story.illustration.mode === 'none')
-    return { decision: 'NONE', reason: 'optional-illustration-none', story_id: id };
-  if (!options.briefPath) throw new Error('--brief is required for generated imagery.');
-  const briefBytes = readFileSync(resolve(root, options.briefPath));
-  const brief = briefSchema.parse(JSON.parse(briefBytes.toString('utf8')));
-  if (brief.story_id !== id) throw new Error('Brief belongs to another story.');
-  for (const reference of brief.references || []) {
-    const bytes = readFileSync(resolveRepositoryPath(root, reference.path));
-    if (sha256(bytes) !== reference.sha256)
-      throw new Error(`Reference changed; refresh the brief and review: ${reference.path}`);
+  if (story.illustration.mode === 'none') {
+    if (story.editorialDate >= mandatoryImageEditorialDate)
+      throw new Error(
+        `${id}: illustration required for public articles from ${mandatoryImageEditorialDate}`,
+      );
+    return { decision: 'NONE', reason: 'legacy-image-backfill-pending', story_id: id };
   }
+  if (!options.briefPath) throw new Error('--brief is required for generated imagery.');
+  const { bytes: briefBytes, brief } = readIllustrationBrief(root, options.briefPath, id!);
   const identity = buildGenerationIdentity({
     story_id: id,
     story_source_sha256: sha256(source),
@@ -80,6 +67,7 @@ export function resolveIllustrationGeneration(root: string, options: GenerationO
     throw new Error('Existing asset is not a WebP container.');
   if (sha256(asset) !== review.asset_sha256)
     return { ...base, decision: 'GENERATE', reason: 'asset-bytes-changed' };
+  validateIllustration(root, { id: id!, data: story }, source);
   return {
     ...base,
     decision: 'REUSE',

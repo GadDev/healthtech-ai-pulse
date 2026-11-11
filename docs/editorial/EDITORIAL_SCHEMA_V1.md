@@ -50,7 +50,7 @@ Canonical stories use the shared strict story schema and reference their candida
 
 [Daily issues](../DAILY_ISSUE.md) contain only the surviving story IDs, in declared order, with optional featured and MUST KNOW references. No issue exists for an all-withheld or zero-selected day. [PR preparation](PR_PREPARATION_V1.md) owns the artifact handoff and exact-revision check report.
 
-Generated imagery uses the strict `healthtech-1.0` review and [illustration system](ILLUSTRATION_SYSTEM_V1.md); `mode: none` is valid. English is required. Optional reviewed French packages remain outside public collections until a runtime locale schema and publication integration exist.
+Generated imagery uses the strict `healthtech-1.0` review and [illustration system](ILLUSTRATION_SYSTEM_V1.md); `mode: none` remains in the parsing schema for historical stories only; publication validation rejects it for editions from 2026-10-22. Each new public story needs a reviewed generated image or must be withheld. English is required. Optional reviewed French packages remain outside public collections until a runtime locale schema and publication integration exist.
 
 ## Generation and checks
 

@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
@@ -8,7 +9,11 @@ import {
   storySchema,
   reviewSchema,
   weightedScore,
+  mandatoryImageEditorialDate,
 } from '../../src/lib/editorial-schema.ts';
+import { readIllustrationBrief } from './illustration-brief.ts';
+import { validateArtwork } from './artwork.ts';
+import { historicalIllustrationReviews } from './historical-illustration-reviews.ts';
 import { documents, markdown, checkContent } from './content.ts';
 import { buildGenerationIdentity, sha256 } from './illustration-generation-identity.ts';
 
@@ -16,6 +21,7 @@ type Ledger = z.infer<typeof ledgerSchema>;
 type Story = { id: string; data: z.infer<typeof storySchema> };
 
 export const digest = sha256;
+
 export function inside(root: string, path: string) {
   const resolved = resolve(root, path);
   if (relative(root, resolved).startsWith('..') || relative(root, resolved) === '')
@@ -25,6 +31,7 @@ export function inside(root: string, path: string) {
 const verified = (status: string) => ['verified', 'verified-with-claim-scope'].includes(status);
 export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>): Ledger {
   const ledger = ledgerSchema.parse(input);
+  validateArtwork(ledger);
   const seen = new Set();
   for (const [bucket, decision] of [
     ['candidates', 'selected'],
@@ -177,10 +184,17 @@ export function validateLedger(input: unknown, vocabulary: ReadonlySet<string>):
   return ledger;
 }
 export function validateIllustration(root: string, story: Story, bytes: Buffer) {
-  if (story.data.illustration.mode === 'none') return;
+  if (story.data.illustration.mode === 'none') {
+    if (story.data.editorialDate >= mandatoryImageEditorialDate)
+      throw new Error(
+        `${story.id}: mandatory illustration missing for editorial date ${story.data.editorialDate}`,
+      );
+    return; // Pre-cutover images still need a real backfill and review.
+  }
   const i = story.data.illustration;
   const asset = inside(root, `public${i.image}`);
-  const review = reviewSchema.parse(JSON.parse(readFileSync(inside(root, i.reviewPath), 'utf8')));
+  const reviewBytes = readFileSync(inside(root, i.reviewPath));
+  const review = reviewSchema.parse(JSON.parse(reviewBytes.toString('utf8')));
   const image = readFileSync(asset);
   if (image.subarray(0, 4).toString() !== 'RIFF' || image.subarray(8, 12).toString() !== 'WEBP')
     throw new Error(`${story.id}: not WebP bytes`);
@@ -190,8 +204,25 @@ export function validateIllustration(root: string, story: Story, bytes: Buffer) 
     review.story_source_sha256 !== digest(bytes)
   )
     throw new Error(`${story.id}: stale illustration identity/integrity`);
-  if (review.policy_sha256 !== digest(readFileSync(`${root}/docs/EDITORIAL.md`)))
+  const currentPolicySha256 = digest(readFileSync(`${root}/docs/EDITORIAL.md`));
+  const unchangedHistoricalReview =
+    historicalIllustrationReviews.get(story.id) === digest(reviewBytes);
+  if (review.policy_sha256 !== currentPolicySha256 && !unchangedHistoricalReview)
     throw new Error(`${story.id}: illustration policy changed`);
+  if (!review.brief_path && !unchangedHistoricalReview)
+    throw new Error(`${story.id}: new illustration review requires a persisted brief`);
+  if (review.brief_path) {
+    const { bytes: briefBytes, brief } = readIllustrationBrief(
+      root,
+      review.brief_path,
+      story.id,
+      digest(reviewBytes),
+    );
+    if (digest(briefBytes) !== review.brief_sha256 || brief.crop !== review.crop)
+      throw new Error(`${story.id}: illustration brief changed`);
+    if (image.length < 20 || image.readUInt32LE(4) + 8 !== image.length)
+      throw new Error(`${story.id}: incomplete WebP container`);
+  }
   const key = buildGenerationIdentity(review).generation_key;
   if (key !== review.generation_key) throw new Error(`${story.id}: invalid generation key`);
 }
@@ -281,6 +312,29 @@ export function checkEditorial(
       throw new Error(`${story.id}: primary source omitted`);
     const bytes = readFileSync(`${root}/src/content/stories/${story.id}.md`);
     validateIllustration(root, { ...story, data }, bytes);
+    if (ledger.artwork && data.illustration.mode === 'generated') {
+      const progress = ledger.artwork.stories.find((s) => s.story_id === story.id);
+      const review = reviewSchema.parse(
+        JSON.parse(readFileSync(inside(root, data.illustration.reviewPath), 'utf8')),
+      );
+      const image = readFileSync(inside(root, `public${data.illustration.image}`));
+      const blob = createHash('sha1').update(`blob ${image.length}\0`).update(image).digest('hex');
+      if (
+        !progress ||
+        progress.stage !== 'uploaded' ||
+        progress.asset?.path !== data.illustration.image ||
+        progress.asset.sha256 !== digest(image) ||
+        progress.asset.git_blob_sha !== blob ||
+        progress.generation_key !== review.generation_key ||
+        progress.brief_path !== review.brief_path ||
+        !review.brief_path ||
+        progress.review_path !== data.illustration.reviewPath ||
+        progress.candidates.length !== review.candidate_count ||
+        progress.asset.width !== data.illustration.width ||
+        progress.asset.height !== data.illustration.height
+      )
+        throw new Error(`${story.id}: artwork checkpoint and committed asset/review disagree`);
+    }
   }
   for (const ledger of ledgers) {
     for (const id of ledger.publication.story_ids)

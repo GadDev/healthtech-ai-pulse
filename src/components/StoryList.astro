@@ -1,4 +1,5 @@
 ---
+import IllustrationCaption from './IllustrationCaption.astro';
 import type { CollectionEntry } from 'astro:content';
 import { desks } from '../lib/categories';
 interface Props {
@@ -15,6 +16,18 @@ const { stories, showImage = false } = Astro.props;
       { 'story-row--visual': showImage && story.data.illustration.mode === 'generated' },
     ]}
   >
+    {showImage && story.data.illustration.mode === 'generated' && (
+      <figure class="editorial-image story-row__image">
+        <img
+          src={story.data.illustration.image}
+          alt={story.data.illustration.alt}
+          width="1536"
+          height="1024"
+          loading="lazy"
+        />
+        <IllustrationCaption compact />
+      </figure>
+    )}
     <div>
       <p class="story-kicker">
         <a href={`/desks/${story.data.category}/`}>{desks[story.data.category].title}</a>
@@ -37,19 +50,5 @@ const { stories, showImage = false } = Astro.props;
         Read the analysis <span aria-hidden="true">→</span>
       </a>
     </div>
-    {showImage && story.data.illustration.mode === 'generated' && (
-      <figure class="editorial-image story-row__image">
-        <img
-          src={story.data.illustration.image}
-          alt={story.data.illustration.alt}
-          width="1536"
-          height="1024"
-          loading="lazy"
-        />
-        <figcaption>
-          Illustrative image · not the reported study site or its participants
-        </figcaption>
-      </figure>
-    )}
   </article>
 ))}

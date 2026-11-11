@@ -1,5 +1,5 @@
 ---
-title: Oncology AI pilot exposes a missing-data trap at the EHR handoff
+title: 'Oncology AI summary changed unknown allergies to "no known allergies" in two cases'
 description: A Dutch consultation-preparation study reports perceived workload gains alongside an integration error that turned unknown allergy information into a negative statement.
 date: 2026-10-19
 draft: false
@@ -51,7 +51,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-19-oncology-ai-ehr-handoff.webp
-  alt: An illustrative clinical workspace with a blank paper form, keyboard and a person pointing to an empty field.
+  width: 1536
+  height: 1024
+  alt: Two blank translucent record leaves overlap, with an open aperture above a solid patch at their seam.
+  caption: An open aperture becoming a solid patch represents uncertainty lost during a record handoff; it is not an actual medical record, allergy finding or measured error rate.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-19-oncology-ai-ehr-handoff.json
 ---
 

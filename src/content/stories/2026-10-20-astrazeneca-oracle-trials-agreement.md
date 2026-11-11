@@ -45,7 +45,10 @@ sources:
 illustration:
   mode: generated
   image: /images/stories/2026-10-20-astrazeneca-oracle-trials-agreement.webp
-  alt: A clinician adjusts a blood-pressure cuff on an anonymous person's arm beside a closed, unmarked research folder.
+  width: 1536
+  height: 1024
+  alt: A simplified branching vessel-like form sits beside separate blank protocol leaves and an unjoined ribbon.
+  caption: The arterial motif and unassembled protocol leaves evoke proposed hypertension research; they do not depict a deployed programme, completed trial or demonstrated patient benefit.
   reviewPath: docs/editorial/illustrations/reviews/2026-10-20-astrazeneca-oracle-trials-agreement.json
 ---
 

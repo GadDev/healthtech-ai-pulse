@@ -1,0 +1,19 @@
+{
+  "story_id": "2026-10-12-clinical-ai-language-evidence",
+  "story_source_sha256": "ddd180d683a141e221759bad29cc27e5b4a66c563ebe45e10e7ecf8e2af872bf",
+  "brief_sha256": "b50886b029a2930e8c9b4edfad9aa5c12dc6bd2cdc2c9829dde35d1d4a0a307d",
+  "policy_sha256": "9057c3830bb9ed78b04137966f009bf33855d16fc909411dc86a303b3b6332c8",
+  "version": "healthtech-1.0",
+  "candidate_count": 1,
+  "generator": "image_gen.imagegen",
+  "model_snapshot": null,
+  "generation_key": "a8bb6c37fab8ffbbcf2d6962441965877ebfb840cbd8b3cf8d118e14cccf4c48",
+  "brief_path": "docs/editorial/illustrations/briefs/2026-10-12-clinical-ai-language-evidence.json",
+  "asset_sha256": "c6c22ba301811a7e40ae26211aff4161e79ce54416d29351beffe46559209305",
+  "crop": "wide",
+  "reviewed_by": "Codex (model visual, article-context and responsive-crop review; not independent human or clinical validation)",
+  "reviewed_at": "2026-10-23T20:58:04.245Z",
+  "review_type": "model",
+  "unsupported_medical_implication": false,
+  "crop_passed": true
+}
