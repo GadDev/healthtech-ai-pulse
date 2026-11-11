@@ -2706,23 +2706,23 @@
     {
       "run_id": "healthtech-2026-11-11T084435Z",
       "started_at": "2026-11-11T08:44:35Z",
-      "completed_at": null,
+      "completed_at": "2026-11-11T08:59:21Z",
       "phases": [
         "contracts-and-identity",
         "bounded-discovery-partial",
         "deduplication-and-decisions",
         "ownership-acquired",
-        "research-first-checkpoint"
+        "research-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-browser-startup-failed",
+        "canonical-draft-pr-80-created",
+        "ownership-released",
+        "exact-final-head-ci-awaiting-observation"
       ],
-      "outcome": "in-progress: this initial ledger-first commit atomically acquires canonical branch ownership from expected parent 88895ebde4be2b948b71643868155d70d87be41f. No publication files or final check claims."
+      "outcome": "checkpoint-complete: ledger-only draft PR80 created; ownership released. Research remains partial; exact final-head CI evidence belongs in PR handoff after observation. Resume the same branch/PR."
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-11-11T084435Z",
-    "acquired_at": "2026-11-11T08:54:41Z",
-    "heartbeat_at": "2026-11-11T08:54:41Z",
-    "expires_at": "2026-11-11T10:54:41Z"
-  },
+  "active_run": null,
   "human_overrides": [],
   "artwork": {
     "version": "healthtech-artwork-1",
