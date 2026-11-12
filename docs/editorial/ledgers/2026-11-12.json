@@ -1969,11 +1969,7 @@
       "decision": "watch",
       "title": "SEARCH-ED operational account needs trial/version reconciliation",
       "desk": "health-systems",
-      "topics": [
-        "implementation",
-        "evaluation",
-        "medical-imaging"
-      ],
+      "topics": ["implementation", "evaluation", "medical-imaging"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact event/start date not established.",
@@ -2076,10 +2072,7 @@
       "decision": "watch",
       "title": "MENISA survival-prediction paper needs full appraisal",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "evaluation"],
       "entities": [],
       "event_date": "2026-11-03",
       "event_date_reason": "Source-described original event/publication date, not discovery date.",
@@ -2171,10 +2164,7 @@
       "decision": "rejected",
       "title": "Fresh headline points to a6November2025 commentary",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-prediction",
-        "evaluation"
-      ],
+      "topics": ["clinical-prediction", "evaluation"],
       "entities": [],
       "event_date": "2025-11-06",
       "event_date_reason": "Source-described original event/publication date, not discovery date.",
@@ -2249,10 +2239,7 @@
       "decision": "rejected",
       "title": "CareSource proposal call is not a verified AI deployment",
       "desk": "health-systems",
-      "topics": [
-        "care-delivery",
-        "implementation"
-      ],
+      "topics": ["care-delivery", "implementation"],
       "entities": [],
       "event_date": "2026-11-10",
       "event_date_reason": "Source-described original event/publication date, not discovery date.",
@@ -2327,10 +2314,7 @@
       "decision": "rejected",
       "title": "TEDDY forum contribution describes a proposal, not validated infrastructure",
       "desk": "pharma",
-      "topics": [
-        "clinical-trials",
-        "biomedical-data"
-      ],
+      "topics": ["clinical-trials", "biomedical-data"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact event/start date not established.",
@@ -2415,13 +2399,56 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
+    "mode": "ledger-only",
     "reason": "Zero selected: two essential appraisals unfinished; three leads fail freshness or verified-change gates. Partial research, not a quiet-day finding. No story/issue/assets.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1, pinned lockfile",
+        "evidence": "294 packages installed; exit0."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-12.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob d7c2007c00f884d3662964d49df76ad816213e3d based on 3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "19ledgers/10stories passed."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-12.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob d7c2007c00f884d3662964d49df76ad816213e3d based on 3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Existing WebP decoding and publication mappings passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob d7c2007c00f884d3662964d49df76ad816213e3d based on 3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Lint/format,script/test TypeScript,schema exact match,content/editorial/illustration,146unit tests,Astro0errors/0warnings,31page build/11indexed pages passed; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger blob d7c2007c00f884d3662964d49df76ad816213e3d based on 3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Process from config.webServer exited early; no browser assertions ran or passed. No configuration changed; hosted exact-head browser CI required."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob d7c2007c00f884d3662964d49df76ad816213e3d based on 3fd782fabb7a82cf47b848cfc99955c048e2d667",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "No tracked whitespace error; new ledger separately formatted and validated."
+      }
+    ]
   },
   "attempts": [
     {
