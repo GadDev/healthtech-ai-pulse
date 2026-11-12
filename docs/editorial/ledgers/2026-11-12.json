@@ -2454,23 +2454,23 @@
     {
       "run_id": "healthtech-2026-11-12T083820Z",
       "started_at": "2026-11-12T08:38:20.716Z",
-      "completed_at": null,
+      "completed_at": "2026-11-12T08:47:55.889Z",
       "phases": [
         "contracts-and-identity",
         "bounded-discovery-partial",
         "deduplication-and-decisions",
         "ownership-acquired",
-        "ledger-first-checkpoint"
+        "ledger-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-browser-startup-failed",
+        "canonical-draft-pr-81-created",
+        "ownership-released",
+        "exact-final-head-ci-awaiting-observation"
       ],
-      "outcome": "in-progress; canonical create-only branch acquisition from expected parent 3fd782fabb7a82cf47b848cfc99955c048e2d667"
+      "outcome": "checkpoint-complete: ledger-only draft PR81 created; ownership released. Research remains partial. Exact-final-head CI belongs in PR handoff. Resume the same branch/PR."
     }
   ],
-  "active_run": {
-    "owner_token": "healthtech-2026-11-12T083820Z",
-    "acquired_at": "2026-11-12T08:44:42.406Z",
-    "heartbeat_at": "2026-11-12T08:44:42.406Z",
-    "expires_at": "2026-11-12T10:44:42.406Z"
-  },
+  "active_run": null,
   "human_overrides": [],
   "artwork": {
     "version": "healthtech-artwork-1",
