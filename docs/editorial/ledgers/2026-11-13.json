@@ -2020,11 +2020,7 @@
       "decision": "watch",
       "title": "ALLIANCE null-benefit lead needs original abstract and registry reconciliation",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-trials",
-        "patient-outcomes",
-        "evaluation"
-      ],
+      "topics": ["clinical-trials", "patient-outcomes", "evaluation"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Secondary trial summary dates presentation24October2026; official programme inaccessible, so exact primary event date remains unverified.",
@@ -2127,11 +2123,7 @@
       "decision": "watch",
       "title": "FMECA clinical-summary safety taxonomy needs full pilot appraisal",
       "desk": "safety-policy",
-      "topics": [
-        "safety",
-        "evaluation",
-        "research-tools"
-      ],
+      "topics": ["safety", "evaluation", "research-tools"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact underlying event date not verified.",
@@ -2221,10 +2213,7 @@
       "decision": "watch",
       "title": "FOCUS-AFM schedule update is not a trial result",
       "desk": "clinical-ai",
-      "topics": [
-        "clinical-trials",
-        "decision-support"
-      ],
+      "topics": ["clinical-trials", "decision-support"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact underlying event date not verified.",
@@ -2314,11 +2303,7 @@
       "decision": "watch",
       "title": "Weill Cornell notice documents unauthorized research AI use, not proven data misuse",
       "desk": "safety-policy",
-      "topics": [
-        "privacy",
-        "governance",
-        "safety"
-      ],
+      "topics": ["privacy", "governance", "safety"],
       "entities": [],
       "event_date": "2026-11-05",
       "event_date_reason": "Notice-posting event verified; underlying processing10–20June and institutional discovery6September are distinct.",
@@ -2424,10 +2409,7 @@
       "decision": "rejected",
       "title": "Luxembourg interview previews data-sharing discussion, not verified AI rollout",
       "desk": "health-systems",
-      "topics": [
-        "interoperability",
-        "digital-health"
-      ],
+      "topics": ["interoperability", "digital-health"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact underlying event date not verified.",
@@ -2502,10 +2484,7 @@
       "decision": "rejected",
       "title": "Zus financing is not evidence of workflow benefit",
       "desk": "health-systems",
-      "topics": [
-        "health-operations",
-        "interoperability"
-      ],
+      "topics": ["health-operations", "interoperability"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact underlying event date not verified.",
@@ -2580,9 +2559,7 @@
       "decision": "rejected",
       "title": "Rakovina advisory expansion is a corporate appointment, not biological validation",
       "desk": "pharma",
-      "topics": [
-        "drug-discovery"
-      ],
+      "topics": ["drug-discovery"],
       "entities": [],
       "event_date": null,
       "event_date_reason": "Exact underlying event date not verified.",
@@ -2654,13 +2631,56 @@
     }
   ],
   "publication": {
-    "mode": "in-progress",
-    "reason": "Research ledger checkpoint before publication work;0selected,4watch,3rejected. Current evidence does not clear75gate; partial research, not a quiet-day finding.",
+    "mode": "ledger-only",
+    "reason": "Zero selected: four watch records need additional evidence or fall below75; three leads lack a qualifying verified development. Partial research, not a quiet-day finding. No story/issue/assets.",
     "story_ids": [],
     "withheld_selected": [],
     "must_know_story_id": null,
     "issue_path": null,
-    "checks": []
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "294 packages installed; exit0."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-13.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "20ledgers/10stories passed."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-13.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Existing WebP decoding and publication mappings passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Lint/format,script/test TypeScript,schema exact match,content/editorial/illustration,146unit tests,Astro0errors/0warnings,31pages/11indexed passed; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Process from config.webServer exited early; no browser assertions ran or passed. No configuration changed; hosted exact-final-head browser CI required."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "No tracked whitespace error; new ledger separately formatted and validated."
+      }
+    ]
   },
   "attempts": [
     {
@@ -2671,9 +2691,13 @@
         "contracts-and-identity",
         "bounded-discovery-partial",
         "deduplication-and-decisions",
-        "ownership-acquisition-pending"
+        "ownership-acquisition-pending",
+        "ownership-acquired",
+        "ledger-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-browser-startup-failed"
       ],
-      "outcome": "in-progress; full ledger prepared; no publication files or PR yet."
+      "outcome": "in-progress; local verify passed; browser webServer startup failed; canonical draft and exact-head CI next."
     }
   ],
   "active_run": {
