@@ -1,0 +1,2732 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-11-13",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-11-06T08:30:13.858Z",
+    "window_end": "2026-11-13T08:30:13.858Z",
+    "last_completed_cutoff": "2026-10-25T08:30:42Z",
+    "query_log": [
+      {
+        "query": "Pinned bootstrap/contracts and recursive dependency verification",
+        "source": "GadDev/healthtech-ai-pulse@86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "main resolved; four bootstrap documents, target repository skills, schemas, validators, orchestration, package/lock, CI and recursive dependencies inspected;71 files/923999 bytes matched pinned git blobs. No AGENTS.md tracked. npm ci294 packages exit0. No core dependency absent or inconsistent."
+      },
+      {
+        "query": "Plan before discovery",
+        "source": "docs/editorial/DISCOVERY_V1.md at contract_ref",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Five lanes;30min discovery planning budget and up to20min/shortlist verification, not minimum elapsed times. First response/page only; clinical/health-system/pharma/biomedical/safety and negative-evidence/French Luxembourg rotation attempted. No quota,75gate/cap2 unchanged."
+      },
+      {
+        "query": "Archive deduplication",
+        "source": "18 main daily ledgers/78rows;10stories/8issues; current openPR72/74/75/76/77",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Identity/source and story/issue mappings inspected at pinned main; current open heads77=10797f89deef8932352bdae1c49442bafab2d47e,76=9da422f11a4b84b5a069fe11f121429bd0d636a7,75=cdc48708a7dfded8ce4c6fb8ee0b739021de2a6c,74=c1bd78e16d5589d4d206f1a0b9c3a39dc32eabc4,72=d9043e36a92803917c04dcdd6b6f54d16103a864. Seven current candidate identities have no match found. Publication-time certification not performed for unselected records."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"healthcare AI hospital deployment clinical trial November 12 13 2026\",\"recency\":7}",
+        "source": "healthcare AI hospital deployment clinical trial November 12 13 2026",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"AI drug discovery biomedical protein model dataset release November 12 2026\",\"recency\":7}",
+        "source": "AI drug discovery biomedical protein model dataset release November 12 2026",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"medical artificial intelligence failed validation harms recall retraction November 2026\",\"recency\":7}",
+        "source": "medical artificial intelligence failed validation harms recall retraction November 2026",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"intelligence artificielle santé hôpital France Luxembourg novembre 2026 déploiement\",\"recency\":7}",
+        "source": "intelligence artificielle santé hôpital France Luxembourg novembre 2026 déploiement",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/help/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/help/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://europepmc.org/RestfulWebService\"}",
+        "source": "https://europepmc.org/RestfulWebService",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/npjdigitalmed/research-articles\"}",
+        "source": "https://www.nature.com/npjdigitalmed/research-articles",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fiercehealthcare.com/ai-and-machine-learning\"}",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.medtechdive.com/\"}",
+        "source": "https://www.medtechdive.com/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates\"}",
+        "source": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://health.ec.europa.eu/ehealth-digital-health-and-care_en\"}",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bioengineer.org/medical-artificial-intelligence-procurement-in-china-concentrates-heavily-in-tertiary-hospitals/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s44386-026-00075-0",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.miragenews.com/ohio-state-microsoft-launch-five-year-1776443/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://fortune.com/2026/09/08/google-deepmind-ai-predictions-9-billion-mutation-human-genome/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.reuters.com/business/healthcare-pharmaceuticals/pharma-sector-doubles-down-ai-amid-hopes-slashing-costs-timelines-2026-10-22/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41598-026-47765-3",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://nvidianews.nvidia.com/news/nvidia-expands-open-model-families-to-power-the-next-wave-of-agentic-physical-and-healthcare-ai",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://hcahealthcaretoday.com/2026/07/21/hca-healthcares-strategic-approach-to-scaling-artificial-intelligence/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-02517-5",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://emerj.com/artificial-intelligence-at-abbvie-two-use-cases/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.aha.org/aha-center-health-innovation-market-scan/2026-05-12-4-health-systems-transforming-care-ai",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercebiotech.com/biotech/fierce-biotech-fundraising-tracker-26",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.pewresearch.org/short-reads/2026/03/12/key-findings-about-how-americans-view-artificial-intelligence/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.teddynetwork.net/2026/11/11/teddy-network-to-present-federated-ai-to-support-paediatric-clinical-trials-at-the-hma-ema-ai-and-data-forum-2026/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.newtonstree.ai/post/operationalising-trustworthy-ai-how-nhs-greater-glasgow-clyde-is-randomising-an-entire-emergency-department-one-week-at-a-time-to-test-ai",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://clinicaltrials.gg/study/NCT07314853",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.newtonstree.ai/news",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://esante.gouv.fr/actualites/publication-de-letat-des-lieux-de-lintelligence-artificielle-ia-en-sante-en-france",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.hospitalia.fr/Intelligence-artificielle-en-sante-Galeon-reunit-les-acteurs-hospitaliers-a-Marseille-le-18-novembre_a5301.html",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.has-sante.fr/jcms/p_4011099/fr/universite-d-automne-de-la-has-20-novembre-2026",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42998835/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/help/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://europepmc.org/RestfulWebService",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/npjdigitalmed/research-articles",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.medtechdive.com/",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
+        "accessed_at": "2026-11-13T08:31:28.175Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain\"}",
+        "source": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/\"}",
+        "source": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/\"}",
+        "source": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "find: {\"ref_id\":\"turn219view0\",\"pattern\":\"Entry Date [edat]\"}",
+        "source": "turn219view0",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/help/",
+        "accessed_at": "2026-11-13T08:31:47.097Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(diagnostics%20OR%20imaging%20OR%20validation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(diagnostics%20OR%20imaging%20OR%20validation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(EHR%20OR%20workflow%20OR%20implementation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(EHR%20OR%20workflow%20OR%20implementation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(drug%20discovery%20OR%20preclinical%20OR%20clinical%20trial)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(drug%20discovery%20OR%20preclinical%20OR%20clinical%20trial)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(protein%20OR%20biomedical%20data%20OR%20foundation%20model)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(protein%20OR%20biomedical%20data%20OR%20foundation%20model)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(safety%20OR%20regulation%20OR%20bias%20OR%20recall)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(safety%20OR%20regulation%20OR%20bias%20OR%20recall)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"ALLIANCE\\\" \\\"ChatGPT\\\" chemotherapy toxicity ESMO 2026 trial abstract\"}",
+        "source": "\"ALLIANCE\" \"ChatGPT\" chemotherapy toxicity ESMO 2026 trial abstract",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"New Safety Framework\\\" \\\"Clinical Language Models\\\" November 2026 failure\"}",
+        "source": "\"New Safety Framework\" \"Clinical Language Models\" November 2026 failure",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://trialsgram.com/trial/esmo-2026-lba19",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://doi.org/10.1016%2Fj.annonc.2025.09.001",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(diagnostics%20OR%20imaging%20OR%20validation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(EHR%20OR%20workflow%20OR%20implementation)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(drug%20discovery%20OR%20preclinical%20OR%20clinical%20trial)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(protein%20OR%20biomedical%20data%20OR%20foundation%20model)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(artificial%20intelligence%20OR%20machine%20learning%20OR%20language%20model)%20AND%20(safety%20OR%20regulation%20OR%20bias%20OR%20recall)%20AND%20(2026%2F11%2F06%3A2026%2F11%2F13%5Bdp%5D%20OR%202026%2F11%2F06%3A2026%2F11%2F13%5Bedat%5D)&sort=date&size=20&page=1",
+        "accessed_at": "2026-11-13T08:32:20.084Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://doi.org/10.1186/s12911-026-03969-1\"}",
+        "source": "https://doi.org/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://clinicaltrials.gov/study/NCT07198581\"}",
+        "source": "https://clinicaltrials.gov/study/NCT07198581",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://trialsgram.com/trial/esmo-2026-lba19\"}",
+        "source": "https://trialsgram.com/trial/esmo-2026-lba19",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://clinicaltrials.gov/study/NCT07314853\"}",
+        "source": "https://clinicaltrials.gov/study/NCT07314853",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn220view2\",\"lineno\":25}",
+        "source": "turn220view2",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn219view3\",\"lineno\":0}",
+        "source": "turn219view3",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn219view4\",\"lineno\":70}",
+        "source": "turn219view4",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn219view5\",\"lineno\":160}",
+        "source": "turn219view5",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn219view6\",\"lineno\":100}",
+        "source": "turn219view6",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://doi.org/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://clinicaltrials.gov/study/NCT07198581",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://trialsgram.com/trial/esmo-2026-lba19",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://clinicaltrials.gov/study/NCT07314853",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.medtechdive.com/",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
+        "accessed_at": "2026-11-13T08:34:51.487Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "click: {\"ref_id\":\"turn222view2\",\"id\":3}",
+        "source": "turn222view2",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "click: {\"ref_id\":\"turn222view5\",\"id\":4}",
+        "source": "turn222view5",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://link.springer.com/article/10.1186/s12911-026-03969-1\"}",
+        "source": "https://link.springer.com/article/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn222view4\",\"lineno\":42}",
+        "source": "turn222view4",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn219view5\",\"lineno\":40}",
+        "source": "turn219view5",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"10.1186/s12911-026-03969-1\\\"\"}",
+        "source": "\"10.1186/s12911-026-03969-1\"",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"ALLIANCE\\\" \\\"LBA19\\\" \\\"2026\\\" abstract chemotherapy\"}",
+        "source": "\"ALLIANCE\" \"LBA19\" \"2026\" abstract chemotherapy",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://synapsesocial.com/papers/6af55658b1e51a34e65a1bc9",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://trialsgram.com/trial/esmo-2026-lba19",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://link.springer.com/article/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "turn222view2",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/health-tech/zus-health-secures-33m-build-infrastructure-ai-powered-clinical-workflows",
+        "accessed_at": "2026-11-13T08:35:06.646Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-026-03969-1\"}",
+        "source": "https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn223view4\",\"lineno\":0}",
+        "source": "turn223view4",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"ALLIANCE\\\" \\\"NCT07198581\\\" \\\"LBA19\\\" Annals Oncology\"}",
+        "source": "\"ALLIANCE\" \"NCT07198581\" \"LBA19\" Annals Oncology",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"s12911-026-03969-1\\\" site:pubmed.ncbi.nlm.nih.gov\"}",
+        "source": "\"s12911-026-03969-1\" site:pubmed.ncbi.nlm.nih.gov",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"AI\\\" \\\"biological validation\\\" \\\"November 12, 2026\\\" drug discovery\"}",
+        "source": "\"AI\" \"biological validation\" \"November 12, 2026\" drug discovery",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "system1_search_query: {\"q\":\"\\\"artificial intelligence\\\" healthcare correction retraction \\\"November\\\" \\\"2026\\\"\"}",
+        "source": "\"artificial intelligence\" healthcare correction retraction \"November\" \"2026\"",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "First returned engine response; total hits/retrieved/screened unknown. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://apexaiinstitute.org/en/research/articles/esmo-2026-ai-digital-oncology",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://trialsgram.com/trial/esmo-2026-lba19",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://apexaiinstitute.org/zh-CN/research/articles/esmo-2026-ai-digital-oncology",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.esmo.org/about-esmo/discover-esmo-journals/annals-of-oncology/",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.2045849/full",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://ieeexplore.ieee.org/abstract/document/11374676",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-026-03969-1",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/health-tech/zus-health-secures-33m-build-infrastructure-ai-powered-clinical-workflows",
+        "accessed_at": "2026-11-13T08:35:34.925Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications\"}",
+        "source": "https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications",
+        "accessed_at": "2026-11-13T08:35:46.810Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.2045849/full\"}",
+        "source": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.2045849/full",
+        "accessed_at": "2026-11-13T08:35:46.810Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications",
+        "accessed_at": "2026-11-13T08:35:46.810Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.2045849/full",
+        "accessed_at": "2026-11-13T08:35:46.810Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "click: {\"ref_id\":\"turn229view0\",\"id\":23}",
+        "source": "turn229view0",
+        "accessed_at": "2026-11-13T08:35:58.972Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/\"}",
+        "source": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+        "accessed_at": "2026-11-13T08:35:58.972Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+        "accessed_at": "2026-11-13T08:35:58.972Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://weill.cornell.edu/data-security-incident-nov-2026",
+        "accessed_at": "2026-11-13T08:35:58.972Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"turn230view1\",\"lineno\":52}",
+        "source": "turn230view1",
+        "accessed_at": "2026-11-13T08:36:08.575Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "click: {\"ref_id\":\"turn230view0\",\"id\":8}",
+        "source": "turn230view0",
+        "accessed_at": "2026-11-13T08:36:08.575Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://weill.cornell.edu/data-security-incident-nov-2026",
+        "accessed_at": "2026-11-13T08:36:08.575Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "turn230view0",
+        "accessed_at": "2026-11-13T08:36:08.575Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://clinicaltrials.gg/study/NCT07314853\"}",
+        "source": "https://clinicaltrials.gg/study/NCT07314853",
+        "accessed_at": "2026-11-13T08:37:00.220Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html\"}",
+        "source": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+        "accessed_at": "2026-11-13T08:37:00.220Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://clinicaltrials.gg/study/NCT07314853",
+        "accessed_at": "2026-11-13T08:37:00.220Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+        "accessed_at": "2026-11-13T08:37:00.220Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full\"}",
+        "source": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://europepmc.org/article/MED/42869550\"}",
+        "source": "https://europepmc.org/article/MED/42869550",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03291-0\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03291-0",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03275-0\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03275-0",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03341-7\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core\"}",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344390&format=json&resultType=core\"}",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344390&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344422&format=json&resultType=core\"}",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344422&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03417-4\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03417-4",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03381-z\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03381-z",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices\"}",
+        "source": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.eurekalert.org/news-releases/1136910\"}",
+        "source": "https://www.eurekalert.org/news-releases/1136910",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext\"}",
+        "source": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03112-4\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03112-4",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42901704/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.regulations.gov/docket/FDA-2026-N-7874\"}",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://europepmc.org/article/MED/42869550",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03291-0",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03275-0",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344390&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344422&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03417-4",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03381-z",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.eurekalert.org/news-releases/1136910",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03112-4",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-11-13T08:35:20.377Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027\"}",
+        "source": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps\"}",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42879271/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard\"}",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.regulations.gov/document/FDA-2026-N-7874-0001\"}",
+        "source": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42918629/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42918629/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026\"}",
+        "source": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03408-5\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03408-5",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026\"}",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://investors.modernatx.com/scientific-medical-meetings\"}",
+        "source": "https://investors.modernatx.com/scientific-medical-meetings",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.modernatx.com/recapping-the-phase-three-interpath-results\"}",
+        "source": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41746-026-03326-6\"}",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkag1141/9013739?searchresult=1\"}",
+        "source": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkag1141/9013739?searchresult=1",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.athenahealth.com/about/press-releases/patients-connect-health-records\"}",
+        "source": "https://www.athenahealth.com/about/press-releases/patients-connect-health-records",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare\"}",
+        "source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://ouraring.com/blog/oura-to-acquire-counsel-health/\"}",
+        "source": "https://ouraring.com/blog/oura-to-acquire-counsel-health/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42918629/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03408-5",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://investors.modernatx.com/scientific-medical-meetings",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkag1141/9013739?searchresult=1",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.athenahealth.com/about/press-releases/patients-connect-health-records",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://ouraring.com/blog/oura-to-acquire-counsel-health/",
+        "accessed_at": "2026-11-13T08:35:20.020Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1\"}",
+        "source": "https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://arxiv.org/html/2611.08434v1\"}",
+        "source": "https://arxiv.org/html/2611.08434v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://arxiv.org/abs/2611.11958\"}",
+        "source": "https://arxiv.org/abs/2611.11958",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.newtonstree.ai/post/operationalising-trustworthy-ai-how-nhs-greater-glasgow-clyde-is-randomising-an-entire-emergency-department-one-week-at-a-time-to-test-ai\"}",
+        "source": "https://www.newtonstree.ai/post/operationalising-trustworthy-ai-how-nhs-greater-glasgow-clyde-is-randomising-an-entire-emergency-department-one-week-at-a-time-to-test-ai",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://onlinelibrary.wiley.com/doi/10.1002/imm3.70066\"}",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/imm3.70066",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42993025/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42993025/",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-platforms-new-clinical-decision-support-solution-provides-trusted-medical-information-to-enhance-individualized-patient-care/\"}",
+        "source": "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-platforms-new-clinical-decision-support-solution-provides-trusted-medical-information-to-enhance-individualized-patient-care/",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.fda.gov/medical-devices/robotic-medical-devices/evaluating-benefit-risk-robotic-medical-devices-autonomous-or-remote-teleoperation-capabilities\"}",
+        "source": "https://www.fda.gov/medical-devices/robotic-medical-devices/evaluating-benefit-risk-robotic-medical-devices-autonomous-or-remote-teleoperation-capabilities",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.cradle.bio/blog/ucb\"}",
+        "source": "https://www.cradle.bio/blog/ucb",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.biorxiv.org/content/10.64898/2026.11.02.763690v1\"}",
+        "source": "https://www.biorxiv.org/content/10.64898/2026.11.02.763690v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856244\"}",
+        "source": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856244",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.federalregister.gov/d/2026-22593\"}",
+        "source": "https://www.federalregister.gov/d/2026-22593",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.federalregister.gov/d/2026-22590\"}",
+        "source": "https://www.federalregister.gov/d/2026-22590",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.anthropic.com/research/investigating-vault-particles-with-claude\"}",
+        "source": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://doi.org/10.1016/j.eclinm.2026.104279\"}",
+        "source": "https://doi.org/10.1016/j.eclinm.2026.104279",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://investors.waystar.com/news-releases/news-release-details/waystar-reports-third-quarter-2026-results\"}",
+        "source": "https://investors.waystar.com/news-releases/news-release-details/waystar-reports-third-quarter-2026-results",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://arxiv.org/html/2611.08434v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://arxiv.org/abs/2611.11958",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.newtonstree.ai/post/operationalising-trustworthy-ai-how-nhs-greater-glasgow-clyde-is-randomising-an-entire-emergency-department-one-week-at-a-time-to-test-ai",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/imm3.70066",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42993025/",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-platforms-new-clinical-decision-support-solution-provides-trusted-medical-information-to-enhance-individualized-patient-care/",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.fda.gov/medical-devices/robotic-medical-devices/evaluating-benefit-risk-robotic-medical-devices-autonomous-or-remote-teleoperation-capabilities",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.cradle.bio/blog/ucb",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.biorxiv.org/content/10.64898/2026.11.02.763690v1",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856244",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.federalregister.gov/d/2026-22593",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.federalregister.gov/d/2026-22590",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://doi.org/10.1016/j.eclinm.2026.104279",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://investors.waystar.com/news-releases/news-release-details/waystar-reports-third-quarter-2026-results",
+        "accessed_at": "2026-11-13T08:35:21.347Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.who.int/europe/news/item/30-10-2026-member-states-of-the-who-european-region-adopt-new-plans-on-healthy-ageing-and-ai-in-health\"}",
+        "source": "https://www.who.int/europe/news/item/30-10-2026-member-states-of-the-who-european-region-adopt-new-plans-on-healthy-ageing-and-ai-in-health",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.federalregister.gov/d/2026-22180\"}",
+        "source": "https://www.federalregister.gov/d/2026-22180",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.federalregister.gov/d/2026-22179\"}",
+        "source": "https://www.federalregister.gov/d/2026-22179",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42980841/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42980841/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative\"}",
+        "source": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/\"}",
+        "source": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://medinform.jmir.org/2026/1/e90687\"}",
+        "source": "https://medinform.jmir.org/2026/1/e90687",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://medinform.jmir.org/2026/1/e111475\"}",
+        "source": "https://medinform.jmir.org/2026/1/e111475",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.ama-assn.org/system/files/liability-clinical-ai-issue-brief.pdf\"}",
+        "source": "https://www.ama-assn.org/system/files/liability-clinical-ai-issue-brief.pdf",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42969406/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42969406/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://pubmed.ncbi.nlm.nih.gov/42961821/\"}",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42961821/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41591-026-04655-5\"}",
+        "source": "https://www.nature.com/articles/s41591-026-04655-5",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "open: {\"ref_id\":\"https://www.nature.com/articles/s41551-026-01822-4\"}",
+        "source": "https://www.nature.com/articles/s41551-026-01822-4",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Actual access attempt; result recorded below where returned. Retrieval is not methods appraisal; source-specific candidate inspections and failures distinguished."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.who.int/europe/news/item/30-10-2026-member-states-of-the-who-european-region-adopt-new-plans-on-healthy-ageing-and-ai-in-health",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.federalregister.gov/d/2026-22180",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.federalregister.gov/d/2026-22179",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42980841/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://medinform.jmir.org/2026/1/e90687",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://medinform.jmir.org/2026/1/e111475",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.ama-assn.org/system/files/liability-clinical-ai-issue-brief.pdf",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42969406/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42961821/",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Source text/indexed metadata returned. Inspect only stated candidate sections; access does not prove methods/correction review."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41591-026-04655-5",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Returned access/metadata outcome",
+        "source": "https://www.nature.com/articles/s41551-026-01822-4",
+        "accessed_at": "2026-11-13T08:35:19.648Z",
+        "outcome": "Access failed or restricted. No full primary inspection certified."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-12-wales-ai-adoption-focus-groups",
+        "source": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect full sampling/analysis and limitations; identify a concrete new implementation consequence beyond familiar privacy and human-oversight themes.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-13-llm-trial-reporting-review",
+        "source": "https://europepmc.org/article/MED/42869550",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect full methods, limitations, source status and material novelty; establish the professional evaluation consequence before promotion.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-14-infusion-automation-review",
+        "source": "https://www.nature.com/articles/s41746-026-03291-0",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect source-study inclusion and experimental comparisons, and identify a concrete verified deployment or evaluation consequence; keep conceptual proposal separate from tested automation.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-15-rare-phenix-journal-status",
+        "source": "https://www.nature.com/articles/s41746-026-03275-0",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Compare complete February v1 and accepted manuscript, including downstream disease-ranking analysis, and identify a substantive new evaluation consequence. Inspect versioned repository/model cards and licenses; public RareDis-only weights must not be labelled the full UDN-trained model.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-16-clinical-extraction-validation",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Compare full April and accepted versions and inspect expert sampling and judge-reference independence. Establish actual new evidence and preserve VHA-specific applicability; a 919,783-note corpus is not independent validation or patient benefit.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-17-ai-assistant-mental-health-hypothesis",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344141&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect original report and evaluation status, case definitions, denominator, alternative explanations and independent assessment before any causal or incidence claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-18-cardiac-arrest-discordant-calls",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344390&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect full preprint, original parent cohort and overlap, selection of discordant calls, denominators, uncertainty, confounding and funding/COI. Do not claim 58% sensitivity, live dispatch improvement or survival benefit from this selected discordant subset.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-18-maternal-risk-transportability-preprint",
+        "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PPR1344422&format=json&resultType=core",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect full methods and original dataset provenance/labels, exact split and prompting protocol, uncertainty, missingness and applicability; retain preprint status and no clinical-benefit claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-19-rtms-reinforcement-learning",
+        "source": "https://www.nature.com/articles/s41746-026-03417-4",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect manuscript and supplement; establish comparison/exclusion/overlap and off-policy evaluation assumptions. Keep projected benefit distinct from observed outcomes; verify safety and COI.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-19-medisyn-image-generation",
+        "source": "https://www.nature.com/articles/s41746-026-03381-z",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect versioned code/weights, model/data cards and applicable licenses. Inspect full evaluation, leakage and memorisation methods before performance claims.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-19-clinical-extraction-validation",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Compare full April preprint and accepted paper; identify a substantive new evaluation or consequence. Inspect expert sampling and independence of model-judge references.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-19-fda-genai-feedback-deadline",
+        "source": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-20; promotion condition=Inspect live docket for extensions, closure and agency response before claiming a changed status.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-19-ism9528-preclinical-claims",
+        "source": "https://www.eurekalert.org/news-releases/1136910",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect a primary preclinical paper with comparator, doses, denominators and uncertainty, or a verified new regulatory/clinical milestone. Do not carry animal efficacy claims into human-benefit wording.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-20-fahr-face-journal-release",
+        "source": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-27; promotion condition=Compare peer-reviewed full methods/results and preprint (sample changes, endpoints, hazard ratios and external cohort); confirm a consequential new finding beyond journal status. Resolve actual journal publication metadata, subgroup coverage and contradiction checks; require enough evidence for bounded patient-risk reporting.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-20-guard-lgg-journal-update",
+        "source": "https://www.nature.com/articles/s41746-026-03112-4",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-27; promotion condition=Inspect journal full text and supplement lawfully; compare 2025 conference cohort, splits, endpoints and numerical differences. Check ClinicalTrials.gov protocol/results and adverse outcomes; distinguish prospective model test from clinical implementation.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-21-ophthalmic-ai-timeout-alert-study",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-28; promotion condition=Retrieve the full article and verify the time-out intervention, baseline and post-intervention denominators, prespecified outcomes, statistical analysis, adverse events and confounding controls.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-21-fda-genai-device-docket-status",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-28; promotion condition=Confirm a docket closure or extension in an official record and inspect any FDA response, synthesis, guidance or policy action rather than inferring one from a deadline.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-22-fda-genai-docket-follow-up",
+        "source": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/cdrh-proposed-guidances-fiscal-year-2027-fy-2027",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-29; promotion condition=Inspect the official docket closure/status and any agency summary or posted submissions. Inspect issued draft guidance or another formal FDA policy artifact rather than relying on conference comments.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-22-epic-ai-connectors-preview",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/epic-launches-connectors-link-its-ai-tools-third-party-apps",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-29; promotion condition=Inspect a versioned Epic artifact or technical documentation describing permissions, audit logs and rollback behavior. Verify an actual health-system deployment with measured operational outcomes, adoption and harms.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-22-openevidence-clinician-use-study",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42879271/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-29; promotion condition=Inspect full methods and supplement, including account deduplication, sampling weights, query-classifier validation and missingness. Keep adoption/use patterns separate from accuracy, workflow benefit and patient outcomes, and assess independent contradictory evidence.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-23-sentara-regard-case-management",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning/sentara-health-deploys-new-ai-case-management-tool-co-developed-regard",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-30; promotion condition=Inspect a prospective or retrospective implementation evaluation with denominators, measured workflow outcomes, error analysis and harms. Verify governance, escalation, monitoring and rollback controls for the deployed version.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-23-fda-genai-docket-follow-up",
+        "source": "https://www.regulations.gov/document/FDA-2026-N-7874-0001",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-30; promotion condition=Inspect issued FDA draft guidance or another formal agency policy artifact. Record exact status, scope, dates and evidence requirements from the official text rather than stakeholder comments or conference predictions.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-24-ecg-embedding-dementia-signal",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42918629/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-31; promotion condition=Inspect full methods, calibration and subgroup performance. Find prospective independent validation or evidence that the signal changes a defined clinical pathway without excess harm.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-24-insilico-ism6331-esmo-preview",
+        "source": "https://www.insilico.com/news/insilico-medicine-to-present-first-in-human-data-of-ai-discovered-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Inspect the final ESMO abstract or presentation after 25 October for dose, denominators, follow-up, adverse events and response data. Separate the clinical result from sponsor claims about AI contribution.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-25-human-oversight-review",
+        "source": "https://www.nature.com/articles/s41746-026-03408-5",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-01; promotion condition=Inspect source data/supplements and assess whether contemporary comparable evidence supports a materially stronger bounded consequence. New prospective error-interception evidence or substantive correction/update can justify linked reassessment; full-text availability alone is not promotion.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-25-ism6331-results-followup",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Retrieve official abstract997/actual presentation or primary results and registry NCT06566079. Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-25-intismeran-phase-three-followup",
+        "source": "https://investors.modernatx.com/scientific-medical-meetings",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-26; promotion condition=Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record. Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-26-ism6331-results-followup",
+        "source": "https://insilico.com/news/pr08f4fbd585bd20e07517-insilico-medicine-to-present-first-human-data-for-ai-designed-cancer-drug-ism6331-at-esmo-2026",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-27; promotion condition=Retrieve official abstract997/actual presentation or primary results and registry NCT06566079. Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-26-intismeran-phase-three-followup",
+        "source": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-27; promotion condition=Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record. Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-26-ambient-scribe-systemwide-adoption",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-10-27; promotion condition=Retrieve full paper/supplement, extract adoption/visit denominators and missingness, verify setting and disclosures, compare any earlier conference report, then apply the unchanged 75-point gate.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-08-biolip3-journal-novelty",
+        "source": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkag1141/9013739?searchresult=1",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-15; promotion condition=Compare July and current artifacts; inspect supplement, human extraction-error validation, licenses and version-specific novelty before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-08-athenapatient-mcp-access",
+        "source": "https://www.athenahealth.com/about/press-releases/patients-connect-health-records",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-15; promotion condition=Retrieve full primary technical/privacy documentation and supported access/version; verify consent, revocation, data handling and limitations before scoring bounded availability.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-11-gemini-healthcare-preview",
+        "source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-18; promotion condition=Reappraise after documented deployment/access change or inspectable independent workflow evidence; verify contractual/residency boundaries and current connector limitations.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-11-oura-counsel-agreement",
+        "source": "https://ouraring.com/blog/oura-to-acquire-counsel-health/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-18; promotion condition=Verify closing and concrete service/access or governance change versus the existing partnership; inspect actual contractual/consent terms before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-11-ucla-ambient-head-to-head-protocol",
+        "source": "https://www.medrxiv.org/content/10.64898/2026.11.07.26367514v1",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-18; promotion condition=Obtain lawful full protocol/statistical plan and current registry; reconcile study identity, design, endpoints, registration and prior ambient-trial overlap before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-11-diffsequence-q-functional-design",
+        "source": "https://arxiv.org/html/2611.08434v1",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-18; promotion condition=Inspect assay controls, candidate-selection denominator, uncertainty and artifacts/licensing; establish reproducible material advance beyond predicted solubility before promotion.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-11-oridynamics-ensemble-preprint",
+        "source": "https://arxiv.org/abs/2611.11958",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-18; promotion condition=Inspect full methods/supplement, comparator/split contamination, independent validation and versioned code/data/license before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-12-search-ed-operational-delta",
+        "source": "https://www.newtonstree.ai/post/operationalising-trustworthy-ai-how-nhs-greater-glasgow-clyde-is-randomising-an-entire-emergency-department-one-week-at-a-time-to-test-ai",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-19; promotion condition=Inspect current primary registry/protocol and hospital evidence; establish new operating delta versus June, endpoint/design alignment, controls and independence before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-12-menisa-survival-model",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/imm3.70066",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=watch; prior next_review=2026-11-19; promotion condition=Inspect full paper/supplement, external-cohort provenance and independence, uncertainty, missingness and funding/COI; justify late catch-up significance before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-07-aura-autoimmune-randomized-evaluation",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42993025/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-14; promotion condition=Retrieve primary report, supplements and protocol/registry; reconcile randomized versus analyzed populations, exclusions, ascertainment, referral capacity, harms, uncertainty and diagnosis-time endpoint before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-07-mayo-native-cds-availability",
+        "source": "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-platforms-new-clinical-decision-support-solution-provides-trusted-medical-information-to-enhance-individualized-patient-care/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-14; promotion condition=Inspect versioned service/access documentation, supported integrations, licensing, escalation, monitoring and actual rollout; score only bounded availability, not clinical benefit.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-07-fda-robotics-discussion",
+        "source": "https://www.fda.gov/medical-devices/robotic-medical-devices/evaluating-benefit-risk-robotic-medical-devices-autonomous-or-remote-teleoperation-capabilities",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-14; promotion condition=Read full discussion paper and docket; compare existing benefit-risk guidance and verify a concrete new professional evaluation consequence without implying binding requirements or device endorsement.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-07-ucb-cradle-antibody-collaboration",
+        "source": "https://www.cradle.bio/blog/ucb",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-14; promotion condition=Inspect project-level artifact or documented new deployment/version and biological validation with controls, measured endpoints and attributable AI role; separate intended acceleration from observed progress.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-07-alphafold-rna-reliability-preprint",
+        "source": "https://www.biorxiv.org/content/10.64898/2026.11.02.763690v1",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-14; promotion condition=Retrieve preprint and supplementary benchmarks; inspect dataset overlap, reference structures, baselines, uncertainty, failure modes, versioned artifacts and limitations before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-06-delirium-within-system-external-validation",
+        "source": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856244",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-13; promotion condition=Inspect supplement, denominators, uniform reference assessment and independent-system replication; reassess concrete evaluation consequence.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-06-fda-cervical-cytology-codification",
+        "source": "https://www.federalregister.gov/d/2026-22593",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-13; promotion condition=Inspect official PDF, exact product/intended-use restrictions, original classification and actual new operating delta before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-06-fda-mci-prognosis-codification",
+        "source": "https://www.federalregister.gov/d/2026-22590",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-13; promotion condition=Inspect official PDF, exact product/intended-use restrictions, original classification and actual new operating delta before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-06-claude-vault-particle-preprint",
+        "source": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-13; promotion condition=Inspect preprint, structural deposits, controls, prior homolog work, model/human contributions and independent replication; distinguish structure from biological function.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-kite-crm-primary-evidence",
+        "source": "https://doi.org/10.1016/j.eclinm.2026.104279",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Obtain lawful primary manuscript/supplement and protocol/registry; reconcile randomization, post-randomization intervention denominator, prespecified versus post-hoc endpoints, follow-up, delayed diagnosis, harms, uncertainty, funding and COI before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-waystar-claim-resubmission",
+        "source": "https://investors.waystar.com/news-releases/news-release-details/waystar-reports-third-quarter-2026-results",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Inspect primary launch/earnings artifact, actual release date, supported payer/claim types, human escalation, access and rollout; separate availability from prospective annual savings before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-who-europe-ai-roadmap-and-office",
+        "source": "https://www.who.int/europe/news/item/30-10-2026-member-states-of-the-who-european-region-adopt-new-plans-on-healthy-ageing-and-ai-in-health",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Read adopted2026–2033 roadmap/resolution and compare existing WHO guidance; establish concrete professional evaluation consequence, legal/nonbinding status and implementation responsibilities. Verify the future Luxembourg office's timetable/resources separately; hosting announcement is not operation or demonstrated benefit.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-fda-fibrotic-lung-codification",
+        "source": "https://www.federalregister.gov/d/2026-22180",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Inspect official PDF, complete controls/intended use and underlying2024 DeNovo action; distinguish current codification from original authorization and identify consequential new operating requirements before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-fda-skin-lesion-codification",
+        "source": "https://www.federalregister.gov/d/2026-22179",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Inspect official PDF, complete controls/intended use and underlying2024 DeNovo action; distinguish current codification from original authorization and identify consequential new operating requirements before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-05-pediatric-allergy-ai-review",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42980841/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-12; promotion condition=Retrieve full review and check its underlying validation studies, pediatric settings, limits and actual new evaluation consequence before applying the75-point gate.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-ism6331-numerical-results-followup",
+        "source": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect official abstract 997/presentation and current NCT06566079 protocol/results; reconcile phase, eligibility, dose cohorts, response confirmation, missingness, denominators, uncertainty, follow-up and harms. Verify the documented AI contribution and distinguish sponsor-attributed design from a comparative claim about AI; then score the bounded progress claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-interpath-primary-result-ai-role-followup",
+        "source": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect the full primary trial report/presentation, protocol and current NCT05933577 record; reconcile ITT versus sensitivity analyses, absolute rates, denominators, harms and survival maturity. Document the actual neoantigen-selection AI/ML role from primary methods; retain indication, sponsor attribution and noncausal platform boundaries before applying 75.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-ambient-scribe-adoption-methods-followup",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Retrieve full manuscript/supplement; inspect clinician and visit denominators, uptake definitions, selection, missingness and disclosures. Compare earlier Johns Hopkins deployment/conference reports to establish a substantive delta before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-ophthalmic-timeout-alert-followup",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Retrieve lawful full text and inspect before-after confounding controls, intervention timing, encounter/authentication units, harms and prespecification. Compare the preceding 2025 system evaluation and establish the new alert intervention's bounded implementation consequence before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-fda-genai-docket-access-followup",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Retrieve official FDA-2026-N-7874 status and any dated agency action, extension, synthesis or guidance. Distinguish discussion/comment submissions from binding requirements; preserve jurisdiction, exact status and dates.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-bat-aki-journal-novelty-appraisal",
+        "source": "https://medinform.jmir.org/2026/1/e90687",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Compare first and final versions to identify a consequential new result beyond journal status. Inspect supplement, preprocessing/lexicon leakage boundaries, comparator tuning, external-site calibration and subgroup results; then score a bounded retrospective claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-sepsis-readiness-methodological-letter",
+        "source": "https://medinform.jmir.org/2026/1/e111475",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect and reconcile the original June 2026 e82762 analysis, cross-validation/model selection, absolute warning time and missingness against this non-peer-reviewed methodological letter; check subsequent author response or correction.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-ama-clinical-ai-liability-brief",
+        "source": "https://www.ama-assn.org/system/files/liability-clinical-ai-issue-brief.pdf",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Compare this liability brief with the earlier agentic-governance framework and cited H-480.939/H-480.931 policies; identify its genuinely new professional evaluation consequence, not a new law. Score only the bounded advocacy/publication claim; preserve that no legal duties or patient outcomes were newly established.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-cardiac-biomarker-model-selection-critique",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42969406/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect missing primary evidence, methods or substantive novelty; clear contradictions and identity gates, then apply the unchanged75-point rubric.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-external-validation-practical-blueprint",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42961821/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect missing primary evidence, methods or substantive novelty; clear contradictions and identity gates, then apply the unchanged75-point rubric.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-evlf-fm-multimodal-foundation-model",
+        "source": "https://www.nature.com/articles/s41591-026-04655-5",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect missing primary evidence, methods or substantive novelty; clear contradictions and identity gates, then apply the unchanged75-point rubric.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-11-04-retime-retinal-mortality-trajectories",
+        "source": "https://www.nature.com/articles/s41551-026-01822-4",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-11; promotion condition=Inspect missing primary evidence, methods or substantive novelty; clear contradictions and identity gates, then apply the unchanged75-point rubric.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-ism6331-numerical-results-followup",
+        "source": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-29; promotion condition=Inspect official abstract 997/presentation and current NCT06566079 protocol/results; reconcile phase, eligibility, dose cohorts, response confirmation, missingness, denominators, uncertainty, follow-up and harms. Verify the documented AI contribution and distinguish sponsor-attributed design from a comparative claim about AI; then score the bounded progress claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-interpath-primary-result-ai-role-followup",
+        "source": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-29; promotion condition=Inspect the full primary trial report/presentation, protocol and current NCT05933577 record; reconcile ITT versus sensitivity analyses, absolute rates, denominators, harms and survival maturity. Document the actual neoantigen-selection AI/ML role from primary methods; retain indication, sponsor attribution and noncausal platform boundaries before applying 75.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-ambient-scribe-adoption-methods-followup",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-29; promotion condition=Retrieve full manuscript/supplement; inspect clinician and visit denominators, uptake definitions, selection, missingness and disclosures. Compare earlier Johns Hopkins deployment/conference reports to establish a substantive delta before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-ophthalmic-timeout-alert-followup",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-29; promotion condition=Retrieve lawful full text and inspect before-after confounding controls, intervention timing, encounter/authentication units, harms and prespecification. Compare the preceding 2025 system evaluation and establish the new alert intervention's bounded implementation consequence before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-fda-genai-docket-access-followup",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-30; promotion condition=Retrieve official FDA-2026-N-7874 status and any dated agency action, extension, synthesis or guidance. Distinguish discussion/comment submissions from binding requirements; preserve jurisdiction, exact status and dates.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-bat-aki-journal-novelty-appraisal",
+        "source": "https://medinform.jmir.org/2026/1/e90687",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-10-29; promotion condition=Compare first and final versions to identify a consequential new result beyond journal status. Inspect supplement, preprocessing/lexicon leakage boundaries, comparator tuning, external-site calibration and subgroup results; then score a bounded retrospective claim.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Prior watch pointer 2026-10-28-sepsis-readiness-methodological-letter",
+        "source": "https://medinform.jmir.org/2026/1/e111475",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "Prior decision=undefined; prior next_review=2026-11-04; promotion condition=Reconcile the original train/test and cross-validation protocol, model-selection data, timing-error units and missingness treatment with the letter. Inspect an author response/correction if present and establish a concrete supported evaluation consequence before scoring.. Distinct-URL access attempted today; full reassessment incomplete; prior decision preserved."
+      },
+      {
+        "query": "Shortlist observations and contradiction boundary",
+        "source": "Inspected ESMO/ASCO, original conference links, BMC DOI/publisher, WCM notice, trial mirror, Fierce/ITnation and correction page",
+        "accessed_at": "2026-11-13T08:38:49.795Z",
+        "outcome": "ALLIANCE primary blocked; November12coverage is not a new trial event. Safety pilot central primary inaccessible. WCM notice November5 distinguished from November10coverage. Frontiers2045849 index describes funding correction but direct abstract renders generic template; correction scope not certified. No withdrawal/harms inference from query alone."
+      }
+    ],
+    "coverage_gaps": [
+      "Automatic window is capped at seven days. Overlap/catch-up interval 2026-10-24T08:30:42Z through 2026-11-06T08:30:13.858Z is not certified searched; later daily merged/open research cutoffs remain null.",
+      "All five source lanes attempted, first response/page bounds only. Five PubMed date/entry-date sort=date,size20,page1 requests failed; Europe PMC documentation403 and npj listing500 prevent native pagination. Search-engine responses are not complete literature samples.",
+      "73 prior main/open watch pointers map to61 distinct URLs. Access attempts recorded; full due-watch promotion/correction appraisal remains unfinished, not61 completed study reviews. No prior decision silently promoted.",
+      "ALLIANCE official abstract403, registry shell only; no primary trial-results appraisal. FMECA DOI and both publisher hosts inaccessible; full methods, supplement, funding and correction inspection unfinished.",
+      "FOCUS-AFM current registry fields/version not retrieved; mirror update is not primary results. Privacy notice precedes automatic window; no independently measured breach impact or new operating change established.",
+      "Only inspected candidate sections count as screening. Other returned leads, older catch-up, supplements, complete contradiction/retraction checks and downstream pages remain unfinished. completion remains null; this is partial research, not evidence of a news-free day."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-11-13-alliance-chemotherapy-llm",
+      "decision": "watch",
+      "title": "ALLIANCE null-benefit lead needs original abstract and registry reconciliation",
+      "desk": "clinical-ai",
+      "topics": ["clinical-trials", "patient-outcomes", "evaluation"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Secondary trial summary dates presentation24October2026; official programme inaccessible, so exact primary event date remains unverified.",
+      "source_publication_date": "2026-11-12",
+      "source_date_reason": "ESMO indexed dateline; ASCO report earlier4November. Not original trial date.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Specialist reports describe no patient benefit from clinician-requested ChatGPT during chemotherapy.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": true,
+      "primary_source_url": "https://cslide.ctimeetingtech.com/esmo2026/attendee/confcal/session/calendar?q=LBA19",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://cslide.ctimeetingtech.com/esmo2026/attendee/confcal/session/calendar?q=LBA19",
+          "canonical_url": "https://cslide.ctimeetingtech.com/esmo2026/attendee/confcal/session/calendar?q=LBA19",
+          "publisher": "ESMO",
+          "role": "primary",
+          "source_type": "conference-abstract",
+          "publication_date": null,
+          "date_reason": "No precise publication date verified.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Official abstract403; not inspected."
+        },
+        {
+          "id": "asco",
+          "url": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+          "canonical_url": "https://ascoai.org/articles/2026/11/randomized-trial-finds-more-chemotherapy-toxicities-recorded-with-llm-assistance-but-no-patient-benefit/",
+          "publisher": "ASCO AI in Oncology",
+          "role": "supporting",
+          "source_type": "conference-report",
+          "publication_date": "2026-11-04",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Specialist reporting, not independent clinical replication."
+        },
+        {
+          "id": "esmo",
+          "url": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+          "canonical_url": "https://www.esmo.org/insights-by-esmo/all-news/study-shows-ai-assisted-chemotherapy-toxicity-assessment-is-feasible-but-its-clinical-value-remains-uncertain",
+          "publisher": "ESMO",
+          "role": "context",
+          "source_type": "conference-report",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Indexed society report; direct page footer only."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "alliance-chemotherapy-llm",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT07198581",
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Specialist reports describe no patient benefit from clinician-requested ChatGPT during chemotherapy.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect LBA19 and current NCT07198581/protocol, reconcile date/design/denominators/stopping, missing end-treatment data and harms; verify a substantive timely consequence before scoring."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Original trial evidence inaccessible; no completed score. Older conference result surfaced through fresh reporting, not a new trial. Secondary accounts cannot resolve interim stopping, missing follow-up and documentation-versus-detection questions.",
+      "promote_when": [
+        "Inspect LBA19 and current NCT07198581/protocol, reconcile date/design/denominators/stopping, missing end-treatment data and harms; verify a substantive timely consequence before scoring."
+      ],
+      "next_review_at": "2026-11-20",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Original trial evidence inaccessible; no completed score. Older conference result surfaced through fresh reporting, not a new trial. Secondary accounts cannot resolve interim stopping, missing follow-up and documentation-versus-detection questions."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-fmeca-clinical-summaries",
+      "decision": "watch",
+      "title": "FMECA clinical-summary safety taxonomy needs full pilot appraisal",
+      "desk": "safety-policy",
+      "topics": ["safety", "evaluation", "research-tools"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Exact underlying event date not verified.",
+      "source_publication_date": null,
+      "source_date_reason": "No original publication date verified.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Indexed coverage identifies a methodological patient-safety framework for generated clinical summaries.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": false,
+      "primary_source_url": "https://doi.org/10.1186/s12911-026-03969-1",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://doi.org/10.1186/s12911-026-03969-1",
+          "canonical_url": "https://doi.org/10.1186/s12911-026-03969-1",
+          "publisher": "BMC Medical Informatics and Decision Making",
+          "role": "primary",
+          "source_type": "methodological-pilot",
+          "publication_date": null,
+          "date_reason": "No precise publication date verified.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "DOI and both publisher hosts inaccessible."
+        },
+        {
+          "id": "discovery",
+          "url": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+          "canonical_url": "https://bioengineer.org/new-safety-framework-adapts-medical-failure-analysis-to-clinical-language-models/",
+          "publisher": "Bioengineer / Scienmag attribution",
+          "role": "context",
+          "source_type": "research-news",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Indexed summary; direct page unavailable."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fmeca-clinical-summaries",
+        "doi": "10.1186/s12911-026-03969-1",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Indexed coverage identifies a methodological patient-safety framework for generated clinical summaries.",
+        "non_ai_exception": null,
+        "reader_consequence": "Retrieve original paper/supplement and inspect taxonomy, sampling, annotation/reliability, applicability and reuse artifacts; verify date, funding/corrections and material evaluation consequence."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Full methods, appendix, occurrence estimation boundaries, external reliability and funding/COI not inspected. Reported internal refinement is not external validation or proof of safe deployment.",
+      "promote_when": [
+        "Retrieve original paper/supplement and inspect taxonomy, sampling, annotation/reliability, applicability and reuse artifacts; verify date, funding/corrections and material evaluation consequence."
+      ],
+      "next_review_at": "2026-11-20",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Full methods, appendix, occurrence estimation boundaries, external reliability and funding/COI not inspected. Reported internal refinement is not external validation or proof of safe deployment."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-focus-afm-registry-update",
+      "decision": "watch",
+      "title": "FOCUS-AFM schedule update is not a trial result",
+      "desk": "clinical-ai",
+      "topics": ["clinical-trials", "decision-support"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Exact underlying event date not verified.",
+      "source_publication_date": "2026-11-12",
+      "source_date_reason": "Mirror update label, not primary verification.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Mirror flags changed schedule for AI-assisted fluid-management study.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": false,
+      "primary_source_url": "https://clinicaltrials.gov/study/NCT07314853",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://clinicaltrials.gov/study/NCT07314853",
+          "canonical_url": "https://clinicaltrials.gov/study/NCT07314853",
+          "publisher": "ClinicalTrials.gov",
+          "role": "primary",
+          "source_type": "trial-registry",
+          "publication_date": null,
+          "date_reason": "No precise publication date verified.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Record shell only; fields not inspected."
+        },
+        {
+          "id": "mirror",
+          "url": "https://clinicaltrials.gg/study/NCT07314853",
+          "canonical_url": "https://clinicaltrials.gg/study/NCT07314853",
+          "publisher": "ClinicalTrials.gg",
+          "role": "context",
+          "source_type": "registry-mirror",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Third-party registry mirror, not independent clinical validation."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "focus-afm-registry-update",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT07314853",
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Mirror flags changed schedule for AI-assisted fluid-management study.",
+        "non_ai_exception": null,
+        "reader_consequence": "Inspect primary registry/history and protocol, verify actual version/status, dates and material operating delta; await supported results or consequential implementation evidence before promotion."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Primary registry version/status not retrieved. A schedule change and planned trial are not evidence of reduced hypotension or postoperative benefit.",
+      "promote_when": [
+        "Inspect primary registry/history and protocol, verify actual version/status, dates and material operating delta; await supported results or consequential implementation evidence before promotion."
+      ],
+      "next_review_at": "2026-11-20",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Primary registry version/status not retrieved. A schedule change and planned trial are not evidence of reduced hypotension or postoperative benefit."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-wcm-unauthorized-ai-notice",
+      "decision": "watch",
+      "title": "Weill Cornell notice documents unauthorized research AI use, not proven data misuse",
+      "desk": "safety-policy",
+      "topics": ["privacy", "governance", "safety"],
+      "entities": [],
+      "event_date": "2026-11-05",
+      "event_date_reason": "Notice-posting event verified; underlying processing10–20June and institutional discovery6September are distinct.",
+      "source_publication_date": "2026-11-05",
+      "source_date_reason": "Primary notice PostedNovember5; secondary reportNovember10.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Institution disclosed unauthorized AI processing in a radiology research project; says activity suspended and deletion requested.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": true,
+      "primary_source_url": "https://weill.cornell.edu/data-security-incident-nov-2026",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://weill.cornell.edu/data-security-incident-nov-2026",
+          "canonical_url": "https://weill.cornell.edu/data-security-incident-nov-2026",
+          "publisher": "Weill Cornell Medicine",
+          "role": "primary",
+          "source_type": "institutional-incident-notice",
+          "publication_date": "2026-11-05",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Affected institution's own account, not independent investigation."
+        },
+        {
+          "id": "report",
+          "url": "https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications",
+          "canonical_url": "https://www.healthcareitnews.com/news/improper-ai-use-leads-another-data-incident-more-patient-notifications",
+          "publisher": "Healthcare IT News",
+          "role": "supporting",
+          "source_type": "incident-report",
+          "publication_date": "2026-11-10",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Reporting cites same institution notice; not independent impact validation."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "wcm-unauthorized-ai-notice",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Institution disclosed unauthorized AI processing in a radiology research project; says activity suspended and deletion requested.",
+        "non_ai_exception": null,
+        "reader_consequence": "Seek independently verified scope or a material follow-up/change in operational controls; preserve source-attribution and no-proven-misuse boundary. Reassess significance and timeliness against75gate."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Primary notice supports its disclosed response but not independently measured exposure/impact. No evidence of unauthorized viewing is an institutional statement, not proof of no harm. Source posted5November, before current automatic window.",
+      "promote_when": [
+        "Seek independently verified scope or a material follow-up/change in operational controls; preserve source-attribution and no-proven-misuse boundary. Reassess significance and timeliness against75gate."
+      ],
+      "next_review_at": "2026-11-20",
+      "claims": [],
+      "editorial_score": {
+        "significance": 3,
+        "claim_support": 3,
+        "relevance": 3,
+        "material_change": 2,
+        "durability": 3,
+        "weighted_total": 72.5,
+        "rationales": {
+          "significance": "Concrete institutional research-governance incident; publicly described impact remains limited/uncertain.",
+          "claim_support": "Full institutional notice supports its disclosure/response; no independent investigation or measured exposure.",
+          "relevance": "Direct consequence for institutional AI authorization and health-data governance.",
+          "material_change": "Older notice, newly found here; no verified new follow-up beyond its original disclosure.",
+          "durability": "Permission controls and incident-response boundaries remain useful beyond a funding/news cycle."
+        }
+      },
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Primary notice supports its disclosed response but not independently measured exposure/impact. No evidence of unauthorized viewing is an institutional statement, not proof of no harm. Source posted5November, before current automatic window."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-11-13-luxembourg-data-sharing-interview",
+      "decision": "rejected",
+      "title": "Luxembourg interview previews data-sharing discussion, not verified AI rollout",
+      "desk": "health-systems",
+      "topics": ["interoperability", "digital-health"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Exact underlying event date not verified.",
+      "source_publication_date": "2026-11-12",
+      "source_date_reason": "Inspected article dateline.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Interview discusses data-sharing ambitions and AI opportunities before17–18November event.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": false,
+      "primary_source_url": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+          "canonical_url": "https://itnation.lu/news/sante-mieux-partager-les-donnees-pour-mieux-soigner/",
+          "publisher": "ITnation",
+          "role": "primary",
+          "source_type": "event-preview-interview",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Original interview with public official ahead of an event."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "luxembourg-data-sharing-interview",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "General AI opportunities, not a verified new AI development.",
+        "non_ai_exception": null,
+        "reader_consequence": "No sufficiently specific new evaluation or implementation consequence established."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "No named new AI deployment, measured result, adopted operating rule or dated platform release established. Future event and broad digitalization ambitions do not pass direct-consequence gate.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "No named new AI deployment, measured result, adopted operating rule or dated platform release established. Future event and broad digitalization ambitions do not pass direct-consequence gate."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-zus-series-b-funding",
+      "decision": "rejected",
+      "title": "Zus financing is not evidence of workflow benefit",
+      "desk": "health-systems",
+      "topics": ["health-operations", "interoperability"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Exact underlying event date not verified.",
+      "source_publication_date": "2026-11-12",
+      "source_date_reason": "Inspected report dateline.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Funding report describes investment in an AI-oriented patient-data platform.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.fiercehealthcare.com/health-tech/zus-health-secures-33m-build-infrastructure-ai-powered-clinical-workflows",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://www.fiercehealthcare.com/health-tech/zus-health-secures-33m-build-infrastructure-ai-powered-clinical-workflows",
+          "canonical_url": "https://www.fiercehealthcare.com/health-tech/zus-health-secures-33m-build-infrastructure-ai-powered-clinical-workflows",
+          "publisher": "Fierce Healthcare",
+          "role": "primary",
+          "source_type": "funding-report",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Original interviews carry company/investor claims; not independent clinical evidence."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "zus-series-b-funding",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Funding report describes investment in an AI-oriented patient-data platform.",
+        "non_ai_exception": null,
+        "reader_consequence": "Financing and supplier activity counts do not establish a new evaluated deployment, comparative workflow improvement or patient benefit. No qualifying evidence-backed operating delta extracted."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Financing and supplier activity counts do not establish a new evaluated deployment, comparative workflow improvement or patient benefit. No qualifying evidence-backed operating delta extracted.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Financing and supplier activity counts do not establish a new evaluated deployment, comparative workflow improvement or patient benefit. No qualifying evidence-backed operating delta extracted."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-rakovina-advisory-engagement",
+      "decision": "rejected",
+      "title": "Rakovina advisory expansion is a corporate appointment, not biological validation",
+      "desk": "pharma",
+      "topics": ["drug-discovery"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "Exact underlying event date not verified.",
+      "source_publication_date": "2026-11-12",
+      "source_date_reason": "Press-release dateline.",
+      "discovered_at": "2026-11-13T08:38:49.795Z",
+      "what_changed": "Company announces expanded advisory role supporting AI drug-discovery strategy.",
+      "why_now": "Today's bounded search surfaced the lead; source date, event and discovery remain separate.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+      "sources": [
+        {
+          "id": "primary",
+          "url": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+          "canonical_url": "https://www.digitaljournal.com/pr/news/globenewswire/rakovina-therapeutics-expands-strategic-engagement-1557489056.html",
+          "publisher": "Rakovina / GlobeNewswire",
+          "role": "primary",
+          "source_type": "press-release",
+          "publication_date": "2026-11-12",
+          "date_reason": "Observed source dateline/date-only precision; underlying date distinguished.",
+          "inspected_at": "2026-11-13T08:38:49.795Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Sponsor press release, explicitly promotional; not independent validation."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "rakovina-advisory-engagement",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Company announces expanded advisory role supporting AI drug-discovery strategy.",
+        "non_ai_exception": null,
+        "reader_consequence": "Appointment/strategy update provides no new experimental validation or trial outcome. Earlier licensing/program milestones require their own evidence, not inference from this release."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "18main daily ledgers/78rows,10stories/8issues and current openPR72/74/75/76/77 identity mappings inspected. No matching event found; publication-time certification not done.",
+        "publication_status": "not-started"
+      },
+      "reason": "Appointment/strategy update provides no new experimental validation or trial outcome. Earlier licensing/program milestones require their own evidence, not inference from this release.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "Research decision only; no approved article claims.",
+        "reason": "Unselected; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-11-13T08:38:49.795Z",
+          "reason": "Appointment/strategy update provides no new experimental validation or trial outcome. Earlier licensing/program milestones require their own evidence, not inference from this release."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "ledger-only",
+    "reason": "Zero selected: four watch records need additional evidence or fall below75; three leads lack a qualifying verified development. Partial research, not a quiet-day finding. No story/issue/assets.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "294 packages installed; exit0."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-11-13.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "20ledgers/10stories passed."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-11-13.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Existing WebP decoding and publication mappings passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Lint/format,script/test TypeScript,schema exact match,content/editorial/illustration,146unit tests,Astro0errors/0warnings,31pages/11indexed passed; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "Process from config.webServer exited early; no browser assertions ran or passed. No configuration changed; hosted exact-final-head browser CI required."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger blob 09dc6ccf1b78ca44b342abc3b29423e3e3284a39 based on 86a30f3730f52dd1030b9b7c8ffe4b573ef81bb9",
+        "execution": "Local Node24.22.1; actual adopted command",
+        "evidence": "No tracked whitespace error; new ledger separately formatted and validated."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-11-13T083013Z",
+      "started_at": "2026-11-13T08:30:13.858Z",
+      "completed_at": "2026-11-13T08:44:13.982Z",
+      "phases": [
+        "contracts-and-identity",
+        "bounded-discovery-partial",
+        "deduplication-and-decisions",
+        "ownership-acquisition-pending",
+        "ownership-acquired",
+        "ledger-first-checkpoint",
+        "no-selected-publication-files",
+        "local-preflight-browser-startup-failed",
+        "canonical-draft-pr-82-created",
+        "ownership-released",
+        "exact-final-head-ci-awaiting-observation"
+      ],
+      "outcome": "checkpoint-complete: ledger-only draft PR82 created; ownership released. Research remains partial. Exact-final-head CI belongs in PR handoff. Resume same branch/PR."
+    }
+  ],
+  "active_run": null,
+  "human_overrides": [],
+  "artwork": {
+    "version": "healthtech-artwork-1",
+    "runtime": "Current runtime; no selected story needs imagery.",
+    "checked_at": "2026-11-13T08:38:49.795Z",
+    "capabilities": {
+      "generation": {
+        "status": "unverified",
+        "evidence": "Not exercised; ledger-only has no artwork obligation."
+      },
+      "inspection": {
+        "status": "unverified",
+        "evidence": "Not exercised; ledger-only has no artwork obligation."
+      },
+      "conversion": {
+        "status": "unverified",
+        "evidence": "Not exercised; ledger-only has no artwork obligation."
+      },
+      "upload": {
+        "status": "unverified",
+        "evidence": "Not exercised; ledger-only has no artwork obligation."
+      }
+    },
+    "stories": []
+  }
+}
