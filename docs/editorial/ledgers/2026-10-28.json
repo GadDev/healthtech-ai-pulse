@@ -1,0 +1,1818 @@
+{
+  "schema_version": "healthtech-1.0",
+  "decision_engine_version": "healthtech-1.0",
+  "editorial_date": "2026-10-28",
+  "timezone": "Europe/Luxembourg",
+  "contract_ref": "94238a7a259086559e769ec9a38278d09571230a",
+  "kind": "daily",
+  "research": {
+    "window_start": "2026-10-24T08:30:42Z",
+    "window_end": "2026-10-28T08:22:18Z",
+    "last_completed_cutoff": "2026-10-25T08:30:42Z",
+    "query_log": [
+      {
+        "query": "Phase0: resolve default branch, inspect date identity, pinned contracts and archive",
+        "source": "GadDev/healthtech-ai-pulse",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Default main pinned94238a7a259086559e769ec9a38278d09571230a. Required contracts/repository skills/shared+generated schemas/validators/ownership/CI/named tests and relevant imports read. No AGENTS.md found. All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications."
+      },
+      {
+        "query": "Adopted bounded plan: five lanes; 30min discovery planning budget then up to20min per shortlisted verification",
+        "source": "docs/editorial/DISCOVERY_V1.md at contract_ref",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "One returned response per web query; native database first page requested size20. No exhaustive surveillance or minimum elapsed time claimed. All five lanes attempted; full due-watch promotion appraisal/version comparison remains unfinished."
+      },
+      {
+        "query": "Latest completed cutoff and overlapping window",
+        "source": "Merged and relevant unmerged daily ledgers",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Latest completed25October08:30:42Z;26October completion null; no27October ledger/branch/PR. Start24October08:30:42Z after24h overlap; end28October08:22:18Z. Seven-day cap not reached. Calendar-day database edges do not establish precise event times."
+      },
+      {
+        "query": "healthcare artificial intelligence clinical study hospital October 27 28 2026",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "AI drug discovery ESMO ISM6331 results October 2026",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "medical AI failed validation harms recall retraction October 2026",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.pubmed.ncbi.nlm.nih.gov \"2026 Oct 27\" artificial intelligence machine learning clinical workflow",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.europepmc.org \"2026\" \"October\" \"27\" AI biomedical foundation model",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.insilico.com ISM6331 \"40%\" \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"intelligence artificielle\" santé hôpital 27 octobre 2026 Luxembourg France incident",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.ticsante.com \"octobre 2026\" \"27\" intelligence artificielle",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.lih.lu OR site.uni.lu \"October 2026\" artificial intelligence healthcare",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "biomedical foundation model dataset protein AI October 27 2026 release",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"ISM6331\" \"997\" ESMO 2026 abstract results",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.clinicaltrials.gov \"NCT06566079\" \"results\" \"Phase\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.annalsofoncology.org ISM6331 2026 997",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.news.utexas.edu \"UT Dell Medicine\" \"October\" \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.nature.com \"s41746-026-03326-6\" methods supplementary",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.nlm.nih.gov \"ClinicalTrials.gov\" \"api/v2/studies/\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"ISM6331\" retraction correction adverse \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"BAT-AKI\" \"2026\" preprint 90687",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"artificial intelligence\" clinical failed external validation bias \"October 27, 2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"Systemwide adoption patterns\" \"ambient\" \"2026\" \"methods\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"INTerpath-001\" \"AI\" \"algorithm\" \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.medrxiv.org \"2026.10.27\" artificial intelligence validation",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.biorxiv.org \"2026.10.27\" protein model",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"s41746-026-03326-6\" correction retraction methods supplement",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"10.2196/90687\" correction retraction preprint",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"ISM6331\" \"997\" \"Annals\" \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.merck.com \"October\" \"2026\" \"INTerpath-001\" results",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"10.1038/s41746-026-03396-6\" OR \"10.1038/s41746-026-03399-3\" correction retraction",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"10.1038/s41587-026-03348-1\" OR \"10.1126/science.aeh7930\" OR \"10.1016/j.landig.2026.101050\" correction retraction",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "\"10.1038/s44528-026-00042-1\" OR \"10.1038/s41591-026-04680-4\" correction retraction",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "site.fda.gov \"Predetermined Change Control\" \"2026\" \"October\" OR site.tga.gov.au \"digital scribe\" \"October\" \"2026\"",
+        "source": "Web search; exact query above",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Single returned response; engine total hits/per-query retrieval count unknown (not exposed/count-audited), no pagination. Named leads and actual primary-access outcomes documented below; other returned titles not claimed appraised. No target correction/retraction or new official action verified in bounded results; mostly older irrelevant negative-query results. Preprint queries did not yield a fully appraised new preprint. Documentation search recovered official NLM API v2 single-study syntax; not a registry result. Query-output observation logged here after inspection, not an invented exact request-start timestamp."
+      },
+      {
+        "query": "(\"artificial intelligence\" OR \"machine learning\") AND (diagnosis OR imaging OR validation) AND (\"2026/10/24\"[dp] : \"2026/10/28\"[dp])",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22artificial%20intelligence%22%20OR%20%22machine%20learning%22)%20AND%20(diagnosis%20OR%20imaging%20OR%20validation)%20AND%20(%222026%2F10%2F24%22%5Bdp%5D%20%3A%20%222026%2F10%2F28%22%5Bdp%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Research/evaluation: desk/topic query1/5. Requested first page size20,sort=date; access failed before results/hits. Retrieved database records0; hits and unscreened remainder unknown. [dp]/[edat] date documentation inspected; literal sort=date not found in help, so chronology requested, not observed. Search-engine fallbacks are not successful native database screening."
+      },
+      {
+        "query": "(\"language model\" OR \"artificial intelligence\") AND (workflow OR hospital OR documentation) AND (\"2026/10/24\"[dp] : \"2026/10/28\"[dp])",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22language%20model%22%20OR%20%22artificial%20intelligence%22)%20AND%20(workflow%20OR%20hospital%20OR%20documentation)%20AND%20(%222026%2F10%2F24%22%5Bdp%5D%20%3A%20%222026%2F10%2F28%22%5Bdp%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Research/evaluation: desk/topic query2/5. Requested first page size20,sort=date; access failed before results/hits. Retrieved database records0; hits and unscreened remainder unknown. [dp]/[edat] date documentation inspected; literal sort=date not found in help, so chronology requested, not observed. Search-engine fallbacks are not successful native database screening."
+      },
+      {
+        "query": "(\"artificial intelligence\" OR \"machine learning\") AND (drug OR molecule OR trial) AND (\"2026/10/24\"[dp] : \"2026/10/28\"[dp])",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22artificial%20intelligence%22%20OR%20%22machine%20learning%22)%20AND%20(drug%20OR%20molecule%20OR%20trial)%20AND%20(%222026%2F10%2F24%22%5Bdp%5D%20%3A%20%222026%2F10%2F28%22%5Bdp%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Research/evaluation: desk/topic query3/5. Requested first page size20,sort=date; access failed before results/hits. Retrieved database records0; hits and unscreened remainder unknown. [dp]/[edat] date documentation inspected; literal sort=date not found in help, so chronology requested, not observed. Search-engine fallbacks are not successful native database screening."
+      },
+      {
+        "query": "(\"foundation model\" OR \"deep learning\") AND (biomedical OR protein OR dataset) AND (\"2026/10/24\"[edat] : \"2026/10/28\"[edat])",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22foundation%20model%22%20OR%20%22deep%20learning%22)%20AND%20(biomedical%20OR%20protein%20OR%20dataset)%20AND%20(%222026%2F10%2F24%22%5Bedat%5D%20%3A%20%222026%2F10%2F28%22%5Bedat%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Research/evaluation: desk/topic query4/5. Requested first page size20,sort=date; access failed before results/hits. Retrieved database records0; hits and unscreened remainder unknown. [dp]/[edat] date documentation inspected; literal sort=date not found in help, so chronology requested, not observed. Search-engine fallbacks are not successful native database screening."
+      },
+      {
+        "query": "(\"artificial intelligence\" OR \"clinical decision support\") AND (safety OR bias OR harm OR regulation) AND (\"2026/10/24\"[edat] : \"2026/10/28\"[edat])",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22artificial%20intelligence%22%20OR%20%22clinical%20decision%20support%22)%20AND%20(safety%20OR%20bias%20OR%20harm%20OR%20regulation)%20AND%20(%222026%2F10%2F24%22%5Bedat%5D%20%3A%20%222026%2F10%2F28%22%5Bedat%5D)&sort=date&size=20",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Research/evaluation: desk/topic query5/5. Requested first page size20,sort=date; access failed before results/hits. Retrieved database records0; hits and unscreened remainder unknown. [dp]/[edat] date documentation inspected; literal sort=date not found in help, so chronology requested, not observed. Search-engine fallbacks are not successful native database screening."
+      },
+      {
+        "query": "Direct or indexed source observation: https://pubmed.ncbi.nlm.nih.gov/help/",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/help/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Documentation available; [dp] and [edat] meanings/date-range syntax inspected; no literal sort=date match."
+      },
+      {
+        "query": "Direct or indexed source observation: https://europepmc.org/RestfulWebService",
+        "source": "https://europepmc.org/RestfulWebService",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "403; no invented database REST fields/endpoints."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.nature.com/npjdigitalmed/research-articles",
+        "source": "https://www.nature.com/npjdigitalmed/research-articles",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Direct publisher listing attempted twice; IDP redirect failure. Alternative indexed JMIR applications/clinical-informatics listings provided named leads, not complete screening of229/405theme records."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.fiercehealthcare.com/ai-and-machine-learning",
+        "source": "https://www.fiercehealthcare.com/ai-and-machine-learning",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Accessible category page; one outlet. UT Dell October27 specialist lead followed to original institutional release; future2030plans not operating deployment."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.fiercehealthcare.com/health-tech/university-texas-austin-unveils-new-academic-health-system-it-builds-ai-native-hospital",
+        "source": "https://www.fiercehealthcare.com/health-tech/university-texas-austin-unveils-new-academic-health-system-it-builds-ai-native-hospital",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Article inspected, including present organisation/brand action versus intended future AI-native hospital. Original UT release followed."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.medtechdive.com/",
+        "source": "https://www.medtechdive.com/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Second distinct specialist outlet; front-page lead scan accessible. Followed accountability and conference lead. Other titles not fully appraised."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.medtechdive.com/news/developers-not-doctors-held-accountable-generative-ai-medical-devices-fda/833745/",
+        "source": "https://www.medtechdive.com/news/developers-not-doctors-held-accountable-generative-ai-medical-devices-fda/833745/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "October23 provider-comment reporting inspected; not FDA guidance/decision. Conference hot-take link also opened, not treated as validation."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "source": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/cdrh-new-news-and-updates",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Official US scan: October27 B.Braun bloodline alert and draft IDE electronic template; no new AI-specific action established. October20PCCP items already published. No generic device recall promoted without direct-consequence fit."
+      },
+      {
+        "query": "Direct or indexed source observation: https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "European authority scan: latest visible21Octoberwebinar registration/13OctoberEHDSforum; no new authorization or clinical-effectiveness action."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.ticsante.com/",
+        "source": "https://www.ticsante.com/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "French/regional rotation and direct listing inspected. Visible intros only where cookie/registration restriction; no bypass. Funding/conference titles are leads, not AI-outcome evidence."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.tmf-ev.de/index.php/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+        "source": "https://www.tmf-ev.de/index.php/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Normal redirect to /en/news/...;21Octoberpartner announcement inspected.20–21Octoberkickoff and intended work, not deployed data access."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.esmo.org/meeting-calendar/esmo-congress-2026/abstracts",
+        "source": "https://www.esmo.org/meeting-calendar/esmo-congress-2026/abstracts",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Footer only; official997abstract/presentation not recovered. Elapsed schedule is not proof of results."
+      },
+      {
+        "query": "Direct or indexed source observation: https://clinicaltrials.gov/data-api/api",
+        "source": "https://clinicaltrials.gov/data-api/api",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Shell only. Official NLM bulletin subsequently documents public /api/v2/studies/{NCT} endpoint; no access bypass."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.nlm.nih.gov/pubs/techbull/ja25/ja25_clinical_trials_screen-scraping.html",
+        "source": "https://www.nlm.nih.gov/pubs/techbull/ja25/ja25_clinical_trials_screen-scraping.html",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Indexed official documentation inspected: SPA scraping limitation and exact public APIv2 single-study syntax."
+      },
+      {
+        "query": "Direct or indexed source observation: https://clinicaltrials.gov/api/v2/studies/NCT06566079",
+        "source": "https://clinicaltrials.gov/api/v2/studies/NCT06566079",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Documented open API inaccessible through browsing surface; current protocol/results alignment not established."
+      },
+      {
+        "query": "Direct or indexed source observation: https://clinicaltrials.gov/api/v2/studies/NCT05933577",
+        "source": "https://clinicaltrials.gov/api/v2/studies/NCT05933577",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Documented open API inaccessible through browsing surface; current protocol/results alignment not established."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "source": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "24October sponsor recap inspected. Actual result account, not a future-only preview. Specific primary AI-method verification and registry alignment unresolved."
+      },
+      {
+        "query": "Direct or indexed source observation: https://pmc.ncbi.nlm.nih.gov/articles/PMC13684228/",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13684228/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Linked PMC returned reCAPTCHA; not full-text read and no bypass."
+      },
+      {
+        "query": "Direct or indexed source observation: https://pubmed.ncbi.nlm.nih.gov/?cauthor_id=42901704&term=Ishitobi+N",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?cauthor_id=42901704&term=Ishitobi+N",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Incidental author-link request returned reCAPTCHA; not used as study evidence."
+      },
+      {
+        "query": "Direct or indexed source observation: https://medinform.jmir.org/2026/1/e82762",
+        "source": "https://medinform.jmir.org/2026/1/e82762",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Original sepsis article retrieved; dataset/method passages cross-checked against letter. Full comparative protocol/result appraisal and author reply unfinished."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.ticsante.com/story?ID=8497",
+        "source": "https://www.ticsante.com/story?ID=8497",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "27October visible introduction:8October DigitalBrain launch/funding. Full continuation restricted; not inspected."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.nature.com/subjects/care-systems-and-practices",
+        "source": "https://www.nature.com/subjects/care-systems-and-practices",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Indexed publisher listing surfaced26Octoberambient-scribe article; no entire-list screening claimed."
+      },
+      {
+        "query": "Direct or indexed source observation: https://ascoai.org/articles/2026/09/machine-learning-designed-individualized-neoantigen-therapy-improves-recurrence-free-survival-in-resected-melanoma/?md5=e8037dec7dbe51b317adc08dc78b709b&mktId=24894050",
+        "source": "https://ascoai.org/articles/2026/09/machine-learning-designed-individualized-neoantigen-therapy-improves-recurrence-free-survival-in-resected-melanoma/?md5=e8037dec7dbe51b317adc08dc78b709b&mktId=24894050",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Indexed secondary account mentions deterministic ML; primary algorithm/methods not thereby verified."
+      },
+      {
+        "query": "Direct or indexed source observation: https://openbind.uk/",
+        "source": "https://openbind.uk/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Indexed first-party source shows August21model release, not freshOctoberrelease. Model artifact/license/performance not appraised."
+      },
+      {
+        "query": "Direct or indexed source observation: https://clinicaltrials.ucsd.edu/trial/NCT07866001",
+        "source": "https://clinicaltrials.ucsd.edu/trial/NCT07866001",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Indexed institutional trial listing last updateOctober6and planned outcomes, not completed trial results. No registration-as-benefit claim."
+      },
+      {
+        "query": "Direct or indexed source observation: https://pubmed.ncbi.nlm.nih.gov/42929313/",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42929313/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "October27stroke AI review metadata surfaced; synthesis methods not inspected, no original clinical outcome inferred."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.nature.com/articles/s41746-026-03220-1",
+        "source": "https://www.nature.com/articles/s41746-026-03220-1",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Incidental indexed14OctoberEHR-encoder correction is not a correction to one of this archive's stories; not fresh28Octobernews."
+      },
+      {
+        "query": "Direct or indexed source observation: https://www.nature.com/articles/s41587-026-03342-7",
+        "source": "https://www.nature.com/articles/s41587-026-03342-7",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Incidental indexed28SeptemberCAR-T correction unrelated to target DynaVelo story; no target correction inferred."
+      },
+      {
+        "query": "Candidate source access: https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "source": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ism6331-numerical-results-followup. announcement-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. A numerical sponsor report now replaces the earlier ESMO preview. Sponsor describes Chemistry42-assisted design and early Phase 1 observations: 36 enrolled, two responses among five evaluable patients at 130 mg and four among 22 across 30–130 mg; Grade 3 treatment-related events reported in 8.3%. Continue watch, score null: current registry/protocol, response-evaluable selection and confirmation, uncertainty and complete follow-up cannot be reconciled. Small noncomparative sponsor data are not established efficacy, safety or proof that AI improves drug development. Source role/sponsor relationship: Trial sponsor; not independent clinical validation."
+      },
+      {
+        "query": "Candidate source access: https://clinicaltrials.gov/study/NCT06566079",
+        "source": "https://clinicaltrials.gov/study/NCT06566079",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ism6331-numerical-results-followup. unavailable; central content not inspected. Unknown: no current record metadata retrieved. A numerical sponsor report now replaces the earlier ESMO preview. Sponsor describes Chemistry42-assisted design and early Phase 1 observations: 36 enrolled, two responses among five evaluable patients at 130 mg and four among 22 across 30–130 mg; Grade 3 treatment-related events reported in 8.3%. Continue watch, score null: current registry/protocol, response-evaluable selection and confirmation, uncertainty and complete follow-up cannot be reconciled. Small noncomparative sponsor data are not established efficacy, safety or proof that AI improves drug development. Source role/sponsor relationship: Sponsor-submitted registry; page shell and documented API request inaccessible."
+      },
+      {
+        "query": "Candidate source access: https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "source": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-interpath-primary-result-ai-role-followup. announcement-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. Detailed sponsor results are directly retrievable, not just a scheduled presentation. Release describes randomized double-blind Phase 3 work in 1,137 resected-melanoma patients, 24.6-month median follow-up and immature overall survival; no numerical efficacy claim approved for publication. Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy. Source role/sponsor relationship: Joint sponsors, not independent validation."
+      },
+      {
+        "query": "Candidate source access: https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "source": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-interpath-primary-result-ai-role-followup. announcement-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. Detailed sponsor results are directly retrievable, not just a scheduled presentation. Release describes randomized double-blind Phase 3 work in 1,137 resected-melanoma patients, 24.6-month median follow-up and immature overall survival; no numerical efficacy claim approved for publication. Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy. Source role/sponsor relationship: Sponsor's chief development officer."
+      },
+      {
+        "query": "Candidate source access: https://clinicaltrials.gov/study/NCT05933577",
+        "source": "https://clinicaltrials.gov/study/NCT05933577",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-interpath-primary-result-ai-role-followup. unavailable; central content not inspected. No current protocol/result metadata recovered. Detailed sponsor results are directly retrievable, not just a scheduled presentation. Release describes randomized double-blind Phase 3 work in 1,137 resected-melanoma patients, 24.6-month median follow-up and immature overall survival; no numerical efficacy claim approved for publication. Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy. Source role/sponsor relationship: Sponsor-submitted; documented API endpoint inaccessible."
+      },
+      {
+        "query": "Candidate source access: https://www.nature.com/articles/s41746-026-03326-6",
+        "source": "https://www.nature.com/articles/s41746-026-03326-6",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ambient-scribe-adoption-methods-followup. abstract-only; inspected at recorded source time. Publisher-indexed accepted-article abstract and disclosures retrieved; direct article fails identity-provider redirect. Publisher-indexed abstract/disclosures recovered for the retrospective 2,901-clinician adoption study; no full methods or supplement inspected. Score null: visit eligibility, missingness, adoption/uptake definitions in full methods and previous conference/JAMIA overlap remain unappraised. Any-use adoption is not sustained use, workload improvement or patient benefit. Source role/sponsor relationship: Authors' study, not independent implementation replication."
+      },
+      {
+        "query": "Candidate source access: https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ophthalmic-timeout-alert-followup. abstract-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. PubMed abstract now exposes a single-centre before-after comparison of 18,669 and 18,910 encounters, with non-use 98 versus 33; utilisation is the reported endpoint, not proven prevention of wrong-patient events. Score null until full study, secular trends, unit-of-analysis, repeated encounters, safety outcomes and protocol are inspected. UI association is not randomized causal evidence or demonstrated patient benefit. Source role/sponsor relationship: Study authors; one hospital, not independent replication."
+      },
+      {
+        "query": "Candidate source access: https://bmjopenquality.bmj.com/lookup/pmidlookup?pmid=42901704&view=long",
+        "source": "https://bmjopenquality.bmj.com/lookup/pmidlookup?pmid=42901704&view=long",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ophthalmic-timeout-alert-followup. unavailable; central content not inspected. Current publisher metadata not inspected. PubMed abstract now exposes a single-centre before-after comparison of 18,669 and 18,910 encounters, with non-use 98 versus 33; utilisation is the reported endpoint, not proven prevention of wrong-patient events. Score null until full study, secular trends, unit-of-analysis, repeated encounters, safety outcomes and protocol are inspected. UI association is not randomized causal evidence or demonstrated patient benefit. Source role/sponsor relationship: Publisher full text returned 403; linked PMC returned reCAPTCHA."
+      },
+      {
+        "query": "Candidate source access: https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "source": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-fda-genai-docket-access-followup. unavailable; central content not inspected. No current dates/status retrieved; do not inherit an old Open observation as current. No verified new agency action. Official docket access failed; specialist report concerns provider comments, not adopted FDA guidance. Current docket status is unknown. A deadline, stakeholder comments and a conference prediction of future guidance do not establish closure, extension or a new requirement. Null score; no regulatory claim approved. Source role/sponsor relationship: Official docket inaccessible: 403."
+      },
+      {
+        "query": "Candidate source access: https://medinform.jmir.org/2026/1/e90687",
+        "source": "https://medinform.jmir.org/2026/1/e90687",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-bat-aki-journal-novelty-appraisal. full-text; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. Journal publication reports a retrospective biomarker-aware transformer and external-site testing. Main-text methods, cohort table, comparator limitations, calibration/fairness caveats and funding/COI inspected; earlier January preprint and supplement unavailable. Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established. Source role/sponsor relationship: Author-team temporal and external-site evaluation, not independent replication."
+      },
+      {
+        "query": "Candidate source access: https://preprints.jmir.org/preprint/90687",
+        "source": "https://preprints.jmir.org/preprint/90687",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-bat-aki-journal-novelty-appraisal. unavailable; central content not inspected. First publication date stated by journal; earlier bytes not inspected. Journal publication reports a retrospective biomarker-aware transformer and external-site testing. Main-text methods, cohort table, comparator limitations, calibration/fairness caveats and funding/COI inspected; earlier January preprint and supplement unavailable. Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established. Source role/sponsor relationship: Earlier same-work record linked by publisher; retrieval failed."
+      },
+      {
+        "query": "Candidate source access: https://jmir.org/api/download?alt_name=medinform_v14i1e90687_app1.docx&filename=218601c9bc61f5c33311c59de6e8f1c6.docx",
+        "source": "https://jmir.org/api/download?alt_name=medinform_v14i1e90687_app1.docx&filename=218601c9bc61f5c33311c59de6e8f1c6.docx",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-bat-aki-journal-novelty-appraisal. unavailable; central content not inspected. No supplement metadata inspected. Journal publication reports a retrospective biomarker-aware transformer and external-site testing. Main-text methods, cohort table, comparator limitations, calibration/fairness caveats and funding/COI inspected; earlier January preprint and supplement unavailable. Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established. Source role/sponsor relationship: Linked supplement failed retrieval."
+      },
+      {
+        "query": "Candidate source access: https://medinform.jmir.org/2026/1/e111475",
+        "source": "https://medinform.jmir.org/2026/1/e111475",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-sepsis-readiness-methodological-letter. full-text; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. A new letter questions missingness selection, validation/model-selection transparency and normalized timing-error interpretation. Original dataset methods were cross-checked; these are raised concerns, not an established retraction, deployment harm or failed replication. Null score: full original-analysis reconciliation and any author reply remain unfinished. No metric correction or clinical-harm conclusion certified. Source role/sponsor relationship: External methodological commentary, not a new validation experiment."
+      },
+      {
+        "query": "Candidate source access: https://medinform.jmir.org/2026/1/e82762",
+        "source": "https://medinform.jmir.org/2026/1/e82762",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-sepsis-readiness-methodological-letter. full-text; inspected at recorded source time. Original publication date not extracted in this bounded inspection. A new letter questions missingness selection, validation/model-selection transparency and normalized timing-error interpretation. Original dataset methods were cross-checked; these are raised concerns, not an established retraction, deployment harm or failed replication. Null score: full original-analysis reconciliation and any author reply remain unfinished. No metric correction or clinical-harm conclusion certified. Source role/sponsor relationship: Original model authors; dataset section and selected methods inspected, not a completed independent audit."
+      },
+      {
+        "query": "Candidate source access: https://news.utexas.edu/2026/10/27/ut-introduces-ut-dell-medicine-shares-plans-for-advanced-specialty-care-in-central-texas/?query-page=3",
+        "source": "https://news.utexas.edu/2026/10/27/ut-introduces-ut-dell-medicine-shares-plans-for-advanced-specialty-care-in-central-texas/?query-page=3",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-ut-dell-brand-and-future-ai-hospital. announcement-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. UT introduces a unified health-system name; the planned medical centre opens in 2030 according to the institutional release. Reject this edition's AI-deployment framing: inspected current action is a brand/organisation launch and future expansion plan, without verified new operating AI workflow, artifact or outcome. Source role/sponsor relationship: Institution announces its own health-system identity."
+      },
+      {
+        "query": "Candidate source access: https://www.ticsante.com/story?ID=8497",
+        "source": "https://www.ticsante.com/story?ID=8497",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-digital-brain-project-funding-old-event. abstract-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. October 27 report describes Meta-funded research plans announced at an October 8 launch, not a released model or validation result. Reject as current AI-evidence/artifact news: old launch and funding/plans without a verified new operating or research result. Restricted remainder not inferred. Source role/sponsor relationship: Secondary reporting; visible introduction only, continued article access restricted."
+      },
+      {
+        "query": "Candidate source access: https://www.tmf-ev.de/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+        "source": "https://www.tmf-ev.de/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-scaled-kickoff-old-event. announcement-only; inspected at recorded source time. Date displayed by inspected source; no exact publication time inferred. Project partner describes a 20–21 October Luxembourg kickoff and planned federated data/regulatory work. Reject as today's operational change: kickoff is older and inspected source presents intended infrastructure/pathfinder work, not demonstrated data access or a released tool. Keep as regional context without changing event dates. Source role/sponsor relationship: Consortium partner, not independent evidence of deployed infrastructure."
+      },
+      {
+        "query": "Candidate source access: https://www.globenewswire.com/news-release/2026/10/28/3389816/0/en/newsweek-places-kfsh-in-top-4-of-world-s-smart-hospitals-for-digital-maturity-and-ai.html",
+        "source": "https://www.globenewswire.com/news-release/2026/10/28/3389816/0/en/newsweek-places-kfsh-in-top-4-of-world-s-smart-hospitals-for-digital-maturity-and-ai.html",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Candidate 2026-10-28-kfsh-ranking-without-workflow-evidence. unavailable; central content not inspected. URL date and indexed ET dateline differ; no resolved source/event date. Search surfaced a hospital-supplied smart-hospital ranking announcement; direct retrieval failed. Reject unsupported advancement: a ranking headline does not establish a new named AI deployment, validated performance or patient benefit. No details inferred from inaccessible body. Source role/sponsor relationship: Search identifies hospital-supplied ranking announcement; direct content inaccessible."
+      },
+      {
+        "query": "Due-watch source access: https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "source": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1927799/full",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Full page retrieved; selected Methods/recruitment inspected, not full thematic analysis/new-delta appraisal."
+      },
+      {
+        "query": "Due-watch source access: https://europepmc.org/article/MED/42869550",
+        "source": "https://europepmc.org/article/MED/42869550",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Inaccessible; no updated full synthesis inspection."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03291-0",
+        "source": "https://www.nature.com/articles/s41746-026-03291-0",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Review abstract/introduction retrieved; later find IDP failure. Conceptual framework not deployed automation; source-study appraisal unfinished."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03275-0",
+        "source": "https://www.nature.com/articles/s41746-026-03275-0",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "IDP failure; earlier/current version and artifact/license comparison not done."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03341-7",
+        "source": "https://www.nature.com/articles/s41746-026-03341-7",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "IDP failure; preprint and judge-reference comparison not done."
+      },
+      {
+        "query": "Due-watch source access: https://doi.org/10.12688/f1000research.191633.1",
+        "source": "https://doi.org/10.12688/f1000research.191633.1",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "DOI request inaccessible; original report/denominator unappraised."
+      },
+      {
+        "query": "Due-watch source access: https://doi.org/10.21203/rs.3.rs-11153391/v1",
+        "source": "https://doi.org/10.21203/rs.3.rs-11153391/v1",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "DOI request inaccessible; discordant subset/parent-cohort overlap unappraised."
+      },
+      {
+        "query": "Due-watch source access: https://doi.org/10.21203/rs.3.rs-11072651/v1",
+        "source": "https://doi.org/10.21203/rs.3.rs-11072651/v1",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "DOI request inaccessible; data provenance/splits/prompt protocol unappraised."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03417-4",
+        "source": "https://www.nature.com/articles/s41746-026-03417-4",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "IDP failure; off-policy assumptions/comparators/harms unappraised."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03381-z",
+        "source": "https://www.nature.com/articles/s41746-026-03381-z",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "IDP failure; weights/licenses/memorisation checks unappraised."
+      },
+      {
+        "query": "Due-watch source access: https://www.eurekalert.org/news-releases/1136910",
+        "source": "https://www.eurekalert.org/news-releases/1136910",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "403; primary comparative preclinical evidence/new milestone unverified."
+      },
+      {
+        "query": "Due-watch source access: https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+        "source": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500%2826%2900079-8/fulltext",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Access failed; source URL and stored DOI discrepancy not silently resolved. Historical metadata retained as historical."
+      },
+      {
+        "query": "Due-watch source access: https://www.nature.com/articles/s41746-026-03112-4",
+        "source": "https://www.nature.com/articles/s41746-026-03112-4",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Accepted abstract/disclosures retrieved; full manuscript/supplement/registry and2025cohort comparison not completed."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-12-wales-ai-adoption-focus-groups",
+        "source": "docs/editorial/ledgers/2026-10-12.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity wales-ai-adoption-focus-groups; prior due2026-10-26. Conditions: Inspect full sampling/analysis and limitations; identify a concrete new implementation consequence beyond familiar privacy and human-oversight themes. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-13-llm-trial-reporting-review",
+        "source": "docs/editorial/ledgers/2026-10-13.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity llm-trial-reporting-review; prior due2026-10-26. Conditions: Inspect full methods, limitations, source status and material novelty; establish the professional evaluation consequence before promotion. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-14-infusion-automation-review",
+        "source": "docs/editorial/ledgers/2026-10-14.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity infusion-automation-review; prior due2026-10-26. Conditions: Inspect source-study inclusion and experimental comparisons, and identify a concrete verified deployment or evaluation consequence; keep conceptual proposal separate from tested automation. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-15-rare-phenix-journal-status",
+        "source": "docs/editorial/ledgers/2026-10-15.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity rare-phenix-journal-status; prior due2026-10-26. Conditions: Compare complete February v1 and accepted manuscript, including downstream disease-ranking analysis, and identify a substantive new evaluation consequence. Inspect versioned repository/model cards and licenses; public RareDis-only weights must not be labelled the full UDN-trained model. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-16-clinical-extraction-validation",
+        "source": "docs/editorial/ledgers/2026-10-16.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity clinical-extraction-validation; prior due2026-10-26. Conditions: Compare full April and accepted versions and inspect expert sampling and judge-reference independence. Establish actual new evidence and preserve VHA-specific applicability; a 919,783-note corpus is not independent validation or patient benefit. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-17-ai-assistant-mental-health-hypothesis",
+        "source": "docs/editorial/ledgers/2026-10-17.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ai-assistant-mental-health-hypothesis; prior due2026-10-26. Conditions: Inspect original report and evaluation status, case definitions, denominator, alternative explanations and independent assessment before any causal or incidence claim. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-18-cardiac-arrest-discordant-calls",
+        "source": "docs/editorial/ledgers/2026-10-18.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity cardiac-arrest-discordant-calls; prior due2026-10-26. Conditions: Inspect full preprint, original parent cohort and overlap, selection of discordant calls, denominators, uncertainty, confounding and funding/COI. Do not claim 58% sensitivity, live dispatch improvement or survival benefit from this selected discordant subset. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-18-maternal-risk-transportability-preprint",
+        "source": "docs/editorial/ledgers/2026-10-18.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity maternal-risk-transportability-preprint; prior due2026-10-26. Conditions: Inspect full methods and original dataset provenance/labels, exact split and prompting protocol, uncertainty, missingness and applicability; retain preprint status and no clinical-benefit claim. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-19-rtms-reinforcement-learning",
+        "source": "docs/editorial/ledgers/2026-10-19.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity rtms-reinforcement-learning; prior due2026-10-26. Conditions: Inspect manuscript and supplement; establish comparison/exclusion/overlap and off-policy evaluation assumptions. Keep projected benefit distinct from observed outcomes; verify safety and COI. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-19-medisyn-image-generation",
+        "source": "docs/editorial/ledgers/2026-10-19.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity medisyn-image-generation; prior due2026-10-26. Conditions: Inspect versioned code/weights, model/data cards and applicable licenses. Inspect full evaluation, leakage and memorisation methods before performance claims. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-19-clinical-extraction-validation",
+        "source": "docs/editorial/ledgers/2026-10-19.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity clinical-extraction-validation; prior due2026-10-26. Conditions: Compare full April preprint and accepted paper; identify a substantive new evaluation or consequence. Inspect expert sampling and independence of model-judge references. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-19-fda-genai-feedback-deadline",
+        "source": "docs/editorial/ledgers/2026-10-19.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity fda-genai-feedback-deadline; prior due2026-10-20. Conditions: Inspect live docket for extensions, closure and agency response before claiming a changed status. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing. Old reminder superseded by latest30Octoberfollow-up;403 is not proof of current Open/Closed. Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-19-ism9528-preclinical-claims",
+        "source": "docs/editorial/ledgers/2026-10-19.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ism9528-preclinical-claims; prior due2026-10-26. Conditions: Inspect a primary preclinical paper with comparator, doses, denominators and uncertainty, or a verified new regulatory/clinical milestone. Do not carry animal efficacy claims into human-benefit wording. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-20-fahr-face-journal-release",
+        "source": "docs/editorial/ledgers/2026-10-20.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity fahr-face-cancer-survival-existing-preprint; prior due2026-10-27. Conditions: Compare peer-reviewed full methods/results and preprint (sample changes, endpoints, hazard ratios and external cohort); confirm a consequential new finding beyond journal status. Resolve actual journal publication metadata, subgroup coverage and contradiction checks; require enough evidence for bounded patient-risk reporting. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-20-guard-lgg-journal-update",
+        "source": "docs/editorial/ledgers/2026-10-20.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity guard-lgg-glioma-radiotherapy-radiomics; prior due2026-10-27. Conditions: Inspect journal full text and supplement lawfully; compare 2025 conference cohort, splits, endpoints and numerical differences. Check ClinicalTrials.gov protocol/results and adverse outcomes; distinguish prospective model test from clinical implementation. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-21-ophthalmic-ai-timeout-alert-study",
+        "source": "docs/editorial/ledgers/2026-10-21.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity bmj-open-quality-ophthalmic-ai-timeout-alert; prior due2026-10-28. Conditions: Retrieve the full article and verify the time-out intervention, baseline and post-intervention denominators, prespecified outcomes, statistical analysis, adverse events and confounding controls. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-21-fda-genai-device-docket-status",
+        "source": "docs/editorial/ledgers/2026-10-21.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity fda-genai-feedback-deadline; prior due2026-10-28. Conditions: Confirm a docket closure or extension in an official record and inspect any FDA response, synthesis, guidance or policy action rather than inferring one from a deadline. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing. Old reminder superseded by latest30Octoberfollow-up;403 is not proof of current Open/Closed. Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-24-insilico-ism6331-esmo-preview",
+        "source": "docs/editorial/ledgers/2026-10-24.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ism6331-esmo-2026-presentation; prior due2026-10-26. Conditions: Inspect the final ESMO abstract or presentation after 25 October for dose, denominators, follow-up, adverse events and response data. Separate the clinical result from sponsor claims about AI contribution. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-25-ism6331-results-followup",
+        "source": "docs/editorial/ledgers/2026-10-25.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ism6331-esmo-2026-presentation; prior due2026-10-26. Conditions: Retrieve official abstract997/actual presentation or primary results and registry NCT06566079. Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-25-intismeran-phase-three-followup",
+        "source": "docs/editorial/ledgers/2026-10-25.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity interpath-001-esmo-2026; prior due2026-10-26. Conditions: Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record. Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-26-ism6331-results-followup",
+        "source": "docs/editorial/ledgers/2026-10-26.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ism6331-esmo-2026-presentation; prior due2026-10-27. Conditions: Retrieve official abstract997/actual presentation or primary results and registry NCT06566079. Extract dose cohorts, denominators, endpoints, adverse events, uncertainty and follow-up; distinguish early single-arm observations from efficacy before scoring. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-26-intismeran-phase-three-followup",
+        "source": "docs/editorial/ledgers/2026-10-26.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity interpath-001-esmo-2026; prior due2026-10-27. Conditions: Retrieve sponsor presentation/official abstract and reconcile current NCT05933577 record. Verify specific AI/ML contribution from primary methods/artifact; extract design, denominators, endpoints, uncertainty, follow-up, harms and sponsor limitations before scoring. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      },
+      {
+        "query": "Due-watch conditions: 2026-10-26-ambient-scribe-systemwide-adoption",
+        "source": "docs/editorial/ledgers/2026-10-26.json",
+        "accessed_at": "2026-10-28T08:34:53Z",
+        "outcome": "Identity ambient-scribe-systemwide-adoption-2026; prior due2026-10-27. Conditions: Retrieve full paper/supplement, extract adoption/visit denominators and missingness, verify setting and disclosures, compare any earlier conference report, then apply the unchanged 75-point gate. Access/follow-up observations above. No promotion certified; detailed appraisal remains unfinished where methods/version comparison missing.  Historical decision unchanged; repeat watch mentions are not publication."
+      }
+    ],
+    "coverage_gaps": [
+      "All five lanes attempted, but detailed due-watch promotion appraisals and shortlisted evidence/version comparisons remain unfinished. completed_at=null; this final publication ledger must not advance the completed research cutoff.",
+      "Native PubMed five first-page requests failed and Europe PMC docs403 prevented a documented API sweep. Engine fallback is not complete database screening. Hits/per-query retrieval/screened totals and unscreened remainder unknown.",
+      "One returned web response per query, no engine pagination exposed. Only named leads screened/appraised to stated depth. Nature listing IDP failure; JMIR theme listings not fully screened. No comprehensive preprint/registry/CTIS sweep.",
+      "Official trial protocols/results, ESMO997presentation, FDA docket, several full manuscripts/supplements and earlier versions unavailable or not appraised. Null scores mean unfinished appraisal, not low quality or an invented below-gate score.",
+      "23 historical due watch rows include repeated identities and superseded FDA reminders. Access/condition pointers are retained; deeper appraisal remains incomplete. Current FDA follow-up due30October supersedes old deadlines.",
+      "Correction searches are bounded targeted queries, not full original-publisher audits or continuous surveillance. No target notice verified does not prove none exists.",
+      "No27October ledger/branch/PR found. That calendar interval falls within today's attempted overlapping window, not a retroactively certified completed run.",
+      "French/Luxembourg rotation attempted; other catalogue outlets, national authorities and broader local-language coverage remain unsearched. No geographic or desk quota."
+    ],
+    "completed_at": null
+  },
+  "candidates": [],
+  "watchlist": [
+    {
+      "id": "2026-10-28-ism6331-numerical-results-followup",
+      "decision": "watch",
+      "title": "ISM6331 numerical results recovered; protocol and response appraisal remain incomplete",
+      "desk": "pharma",
+      "topics": ["drug-discovery", "clinical-trials"],
+      "entities": [],
+      "event_date": "2026-10-25",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-25",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "A numerical sponsor report now replaces the earlier ESMO preview. Sponsor describes Chemistry42-assisted design and early Phase 1 observations: 36 enrolled, two responses among five evaluable patients at 130 mg and four among 22 across 30–130 mg; Grade 3 treatment-related events reported in 8.3%.",
+      "why_now": "Due-watch follow-up recovered a source not obtained on 26 October. Source dateline is 25 October; syndicated publication 26 October is not a new trial event.",
+      "late_discovery": false,
+      "primary_source_url": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+      "sources": [
+        {
+          "id": "sponsor",
+          "url": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+          "canonical_url": "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+          "publisher": "Insilico Medicine",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-25",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Trial sponsor; not independent clinical validation."
+        },
+        {
+          "id": "registry",
+          "url": "https://clinicaltrials.gov/study/NCT06566079",
+          "canonical_url": "https://clinicaltrials.gov/study/NCT06566079",
+          "publisher": "ClinicalTrials.gov",
+          "role": "primary",
+          "source_type": "trial-registry",
+          "publication_date": null,
+          "date_reason": "Unknown: no current record metadata retrieved.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Sponsor-submitted registry; page shell and documented API request inaccessible."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ism6331-esmo-2026-presentation",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT06566079",
+        "cohort": null,
+        "product_version": "ISM6331",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "A numerical sponsor report now replaces the earlier ESMO preview. Sponsor describes Chemistry42-assisted design and early Phase 1 observations: 36 enrolled, two responses among five evaluable patients at 130 mg and four among 22 across 30–130 mg; Grade 3 treatment-related events reported in 8.3%.",
+        "non_ai_exception": null,
+        "reader_consequence": "Continue watch, score null: current registry/protocol, response-evaluable selection and confirmation, uncertainty and complete follow-up cannot be reconciled. Small noncomparative sponsor data are not established efficacy, safety or proof that AI improves drug development."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [
+          "2026-10-24-insilico-ism6331-esmo-preview",
+          "2026-10-25-ism6331-results-followup",
+          "2026-10-26-ism6331-results-followup"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Continue watch, score null: current registry/protocol, response-evaluable selection and confirmation, uncertainty and complete follow-up cannot be reconciled. Small noncomparative sponsor data are not established efficacy, safety or proof that AI improves drug development.",
+      "promote_when": [
+        "Inspect official abstract 997/presentation and current NCT06566079 protocol/results; reconcile phase, eligibility, dose cohorts, response confirmation, missingness, denominators, uncertainty, follow-up and harms.",
+        "Verify the documented AI contribution and distinguish sponsor-attributed design from a comparative claim about AI; then score the bounded progress claim."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Continue watch, score null: current registry/protocol, response-evaluable selection and confirmation, uncertainty and complete follow-up cannot be reconciled. Small noncomparative sponsor data are not established efficacy, safety or proof that AI improves drug development."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-interpath-primary-result-ai-role-followup",
+      "decision": "watch",
+      "title": "INTerpath-001 detailed sponsor release recovered; AI-role and registry appraisal unfinished",
+      "desk": "pharma",
+      "topics": ["clinical-trials", "drug-discovery"],
+      "entities": [],
+      "event_date": "2026-10-22",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-22",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "Detailed sponsor results are directly retrievable, not just a scheduled presentation. Release describes randomized double-blind Phase 3 work in 1,137 resected-melanoma patients, 24.6-month median follow-up and immature overall survival; no numerical efficacy claim approved for publication.",
+      "why_now": "Reappraisal of due 25/26 October watch records. The newly recovered detailed release is dated 22 October, not today.",
+      "late_discovery": true,
+      "primary_source_url": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+      "sources": [
+        {
+          "id": "merck",
+          "url": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+          "canonical_url": "https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/",
+          "publisher": "Merck and Moderna",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-22",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Joint sponsors, not independent validation."
+        },
+        {
+          "id": "recap",
+          "url": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+          "canonical_url": "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+          "publisher": "Moderna",
+          "role": "primary",
+          "source_type": "company-announcement",
+          "publication_date": "2026-10-24",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Sponsor's chief development officer."
+        },
+        {
+          "id": "registry",
+          "url": "https://clinicaltrials.gov/study/NCT05933577",
+          "canonical_url": "https://clinicaltrials.gov/study/NCT05933577",
+          "publisher": "ClinicalTrials.gov",
+          "role": "primary",
+          "source_type": "trial-registry",
+          "publication_date": null,
+          "date_reason": "No current protocol/result metadata recovered.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Sponsor-submitted; documented API endpoint inaccessible."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "interpath-001-esmo-2026",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": "NCT05933577",
+        "cohort": null,
+        "product_version": "Intismeran autogene / V940",
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Detailed sponsor results are directly retrievable, not just a scheduled presentation. Release describes randomized double-blind Phase 3 work in 1,137 resected-melanoma patients, 24.6-month median follow-up and immature overall survival; no numerical efficacy claim approved for publication.",
+        "non_ai_exception": null,
+        "reader_consequence": "Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [
+          "2026-10-25-intismeran-phase-three-followup",
+          "2026-10-26-intismeran-phase-three-followup"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy.",
+      "promote_when": [
+        "Inspect the full primary trial report/presentation, protocol and current NCT05933577 record; reconcile ITT versus sensitivity analyses, absolute rates, denominators, harms and survival maturity.",
+        "Document the actual neoantigen-selection AI/ML role from primary methods; retain indication, sponsor attribution and noncausal platform boundaries before applying 75."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Score null: registry alignment, actual primary paper/presentation and a specific primary-source AI/ML contribution remain unverified. ASCO's secondary account of a deterministic ML algorithm is a lead, not an inspected platform method. Sponsor release does not isolate AI's contribution to a combination therapy."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-ambient-scribe-adoption-methods-followup",
+      "decision": "watch",
+      "title": "Ambient-scribe adoption paper remains abstract-level evidence",
+      "desk": "health-systems",
+      "topics": ["health-operations", "implementation"],
+      "entities": [],
+      "event_date": "2026-10-26",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-26",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "Publisher-indexed abstract/disclosures recovered for the retrospective 2,901-clinician adoption study; no full methods or supplement inspected.",
+      "why_now": "Due follow-up to 26 October watch; not treated as a new underlying development or patient-benefit result.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.nature.com/articles/s41746-026-03326-6",
+      "sources": [
+        {
+          "id": "publisher",
+          "url": "https://www.nature.com/articles/s41746-026-03326-6",
+          "canonical_url": "https://www.nature.com/articles/s41746-026-03326-6",
+          "publisher": "npj Digital Medicine",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-26",
+          "date_reason": "Publisher-indexed accepted-article abstract and disclosures retrieved; direct article fails identity-provider redirect.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Authors' study, not independent implementation replication."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ambient-scribe-systemwide-adoption-2026",
+        "doi": "10.1038/s41746-026-03326-6",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Publisher-indexed abstract/disclosures recovered for the retrospective 2,901-clinician adoption study; no full methods or supplement inspected.",
+        "non_ai_exception": null,
+        "reader_consequence": "Score null: visit eligibility, missingness, adoption/uptake definitions in full methods and previous conference/JAMIA overlap remain unappraised. Any-use adoption is not sustained use, workload improvement or patient benefit."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": ["2026-10-26-ambient-scribe-systemwide-adoption"],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Score null: visit eligibility, missingness, adoption/uptake definitions in full methods and previous conference/JAMIA overlap remain unappraised. Any-use adoption is not sustained use, workload improvement or patient benefit.",
+      "promote_when": [
+        "Retrieve full manuscript/supplement; inspect clinician and visit denominators, uptake definitions, selection, missingness and disclosures.",
+        "Compare earlier Johns Hopkins deployment/conference reports to establish a substantive delta before scoring."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Score null: visit eligibility, missingness, adoption/uptake definitions in full methods and previous conference/JAMIA overlap remain unappraised. Any-use adoption is not sustained use, workload improvement or patient benefit."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-ophthalmic-timeout-alert-followup",
+      "decision": "watch",
+      "title": "Ophthalmic AI alert follow-up recovers denominators, not a full confounding assessment",
+      "desk": "health-systems",
+      "topics": ["implementation", "safety", "medical-devices"],
+      "entities": [],
+      "event_date": "2026-10-20",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-20",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "PubMed abstract now exposes a single-centre before-after comparison of 18,669 and 18,910 encounters, with non-use 98 versus 33; utilisation is the reported endpoint, not proven prevention of wrong-patient events.",
+      "why_now": "Watch review due today; October 20 publication is an explicitly older follow-up, not fresh news.",
+      "late_discovery": true,
+      "primary_source_url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+      "sources": [
+        {
+          "id": "pubmed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+          "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/42901704/",
+          "publisher": "PubMed / BMJ Open Quality",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-20",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Study authors; one hospital, not independent replication."
+        },
+        {
+          "id": "publisher",
+          "url": "https://bmjopenquality.bmj.com/lookup/pmidlookup?pmid=42901704&view=long",
+          "canonical_url": "https://bmjopenquality.bmj.com/lookup/pmidlookup?pmid=42901704&view=long",
+          "publisher": "BMJ Open Quality",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": null,
+          "date_reason": "Current publisher metadata not inspected.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Publisher full text returned 403; linked PMC returned reCAPTCHA."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "bmj-open-quality-ophthalmic-ai-timeout-alert",
+        "doi": "10.1136/bmjoq-2025-004002",
+        "pmid": "42901704",
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "PubMed abstract now exposes a single-centre before-after comparison of 18,669 and 18,910 encounters, with non-use 98 versus 33; utilisation is the reported endpoint, not proven prevention of wrong-patient events.",
+        "non_ai_exception": null,
+        "reader_consequence": "Score null until full study, secular trends, unit-of-analysis, repeated encounters, safety outcomes and protocol are inspected. UI association is not randomized causal evidence or demonstrated patient benefit."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": ["2026-10-21-ophthalmic-ai-timeout-alert-study"],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Score null until full study, secular trends, unit-of-analysis, repeated encounters, safety outcomes and protocol are inspected. UI association is not randomized causal evidence or demonstrated patient benefit.",
+      "promote_when": [
+        "Retrieve lawful full text and inspect before-after confounding controls, intervention timing, encounter/authentication units, harms and prespecification.",
+        "Compare the preceding 2025 system evaluation and establish the new alert intervention's bounded implementation consequence before scoring."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Score null until full study, secular trends, unit-of-analysis, repeated encounters, safety outcomes and protocol are inspected. UI association is not randomized causal evidence or demonstrated patient benefit."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-fda-genai-docket-access-followup",
+      "decision": "watch",
+      "title": "FDA GenAI-device docket status cannot be refreshed",
+      "desk": "safety-policy",
+      "topics": ["regulation", "governance"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "No independently established event date.",
+      "source_publication_date": null,
+      "source_date_reason": "Unknown: direct source unavailable or competing dates not resolved.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "No verified new agency action. Official docket access failed; specialist report concerns provider comments, not adopted FDA guidance.",
+      "why_now": "Historical review due 28 October checked against later follow-ups, whose next review is 30 October.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+      "sources": [
+        {
+          "id": "docket",
+          "url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+          "canonical_url": "https://www.regulations.gov/docket/FDA-2026-N-7874",
+          "publisher": "Regulations.gov / FDA",
+          "role": "primary",
+          "source_type": "regulatory-record",
+          "publication_date": null,
+          "date_reason": "No current dates/status retrieved; do not inherit an old Open observation as current.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Official docket inaccessible: 403."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "fda-genai-device-docket-2026-n-7874",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": "FDA-2026-N-7874"
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "No verified new agency action. Official docket access failed; specialist report concerns provider comments, not adopted FDA guidance.",
+        "non_ai_exception": null,
+        "reader_consequence": "Current docket status is unknown. A deadline, stakeholder comments and a conference prediction of future guidance do not establish closure, extension or a new requirement. Null score; no regulatory claim approved."
+      },
+      "deduplication": {
+        "status": "uncertain",
+        "previous_candidate_ids": [
+          "2026-10-19-fda-genai-feedback-deadline",
+          "2026-10-21-fda-genai-device-docket-status",
+          "2026-10-22-fda-genai-docket-follow-up",
+          "2026-10-23-fda-genai-docket-follow-up"
+        ],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Current docket status is unknown. A deadline, stakeholder comments and a conference prediction of future guidance do not establish closure, extension or a new requirement. Null score; no regulatory claim approved.",
+      "promote_when": [
+        "Retrieve official FDA-2026-N-7874 status and any dated agency action, extension, synthesis or guidance.",
+        "Distinguish discussion/comment submissions from binding requirements; preserve jurisdiction, exact status and dates."
+      ],
+      "next_review_at": "2026-10-30",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Current docket status is unknown. A deadline, stakeholder comments and a conference prediction of future guidance do not establish closure, extension or a new requirement. Null score; no regulatory claim approved."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-bat-aki-journal-novelty-appraisal",
+      "decision": "watch",
+      "title": "BAT-AKI journal report requires preprint comparison and supplement inspection",
+      "desk": "clinical-ai",
+      "topics": ["clinical-prediction", "evaluation", "fairness"],
+      "entities": [],
+      "event_date": "2026-10-26",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-26",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "Journal publication reports a retrospective biomarker-aware transformer and external-site testing. Main-text methods, cohort table, comparator limitations, calibration/fairness caveats and funding/COI inspected; earlier January preprint and supplement unavailable.",
+      "why_now": "New journal listing in the search window, with earlier public version explicitly preserved.",
+      "late_discovery": false,
+      "primary_source_url": "https://medinform.jmir.org/2026/1/e90687",
+      "sources": [
+        {
+          "id": "journal",
+          "url": "https://medinform.jmir.org/2026/1/e90687",
+          "canonical_url": "https://medinform.jmir.org/2026/1/e90687",
+          "publisher": "JMIR Medical Informatics",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": "2026-10-26",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Author-team temporal and external-site evaluation, not independent replication."
+        },
+        {
+          "id": "preprint",
+          "url": "https://preprints.jmir.org/preprint/90687",
+          "canonical_url": "https://preprints.jmir.org/preprint/90687",
+          "publisher": "JMIR Preprints",
+          "role": "primary",
+          "source_type": "preprint",
+          "publication_date": "2026-01-01",
+          "date_reason": "First publication date stated by journal; earlier bytes not inspected.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Earlier same-work record linked by publisher; retrieval failed."
+        },
+        {
+          "id": "supplement",
+          "url": "https://jmir.org/api/download?alt_name=medinform_v14i1e90687_app1.docx&filename=218601c9bc61f5c33311c59de6e8f1c6.docx",
+          "canonical_url": "https://jmir.org/api/download?alt_name=medinform_v14i1e90687_app1.docx&filename=218601c9bc61f5c33311c59de6e8f1c6.docx",
+          "publisher": "JMIR",
+          "role": "primary",
+          "source_type": "supplement",
+          "publication_date": null,
+          "date_reason": "No supplement metadata inspected.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Linked supplement failed retrieval."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "bat-aki-transformer-90687",
+        "doi": "10.2196/90687",
+        "pmid": null,
+        "preprint": "JMIR Preprints 90687 (first published 2026-01-01)",
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "Journal publication reports a retrospective biomarker-aware transformer and external-site testing. Main-text methods, cohort table, comparator limitations, calibration/fairness caveats and funding/COI inspected; earlier January preprint and supplement unavailable.",
+        "non_ai_exception": null,
+        "reader_consequence": "Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established.",
+      "promote_when": [
+        "Compare first and final versions to identify a consequential new result beyond journal status.",
+        "Inspect supplement, preprocessing/lexicon leakage boundaries, comparator tuning, external-site calibration and subgroup results; then score a bounded retrospective claim."
+      ],
+      "next_review_at": "2026-10-29",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Null score: material novelty versus January preprint and supplement-dependent evaluation remain unresolved. Main text notes calibration within the internal cohort, restricted comparator coverage and subgroup limitations; no prospective clinical utility is established."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-sepsis-readiness-methodological-letter",
+      "decision": "watch",
+      "title": "Sepsis-readiness letter raises questions requiring original-study and response appraisal",
+      "desk": "safety-policy",
+      "topics": ["evaluation", "safety", "clinical-prediction"],
+      "entities": [],
+      "event_date": "2026-10-27",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-27",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "A new letter questions missingness selection, validation/model-selection transparency and normalized timing-error interpretation. Original dataset methods were cross-checked; these are raised concerns, not an established retraction, deployment harm or failed replication.",
+      "why_now": "October 27 letter is a new negative-evidence lead, distinct from the old underlying model paper.",
+      "late_discovery": false,
+      "primary_source_url": "https://medinform.jmir.org/2026/1/e111475",
+      "sources": [
+        {
+          "id": "letter",
+          "url": "https://medinform.jmir.org/2026/1/e111475",
+          "canonical_url": "https://medinform.jmir.org/2026/1/e111475",
+          "publisher": "JMIR Medical Informatics",
+          "role": "primary",
+          "source_type": "letter-to-editor",
+          "publication_date": "2026-10-27",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "External methodological commentary, not a new validation experiment."
+        },
+        {
+          "id": "original",
+          "url": "https://medinform.jmir.org/2026/1/e82762",
+          "canonical_url": "https://medinform.jmir.org/2026/1/e82762",
+          "publisher": "JMIR Medical Informatics",
+          "role": "primary",
+          "source_type": "peer-reviewed-original-research",
+          "publication_date": null,
+          "date_reason": "Original publication date not extracted in this bounded inspection.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "full-text",
+          "relationship_to_sponsor": "Original model authors; dataset section and selected methods inspected, not a completed independent audit."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "jmir-sepsis-readiness-letter-111475",
+        "doi": "10.2196/111475",
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": true,
+        "ai_connection": "A new letter questions missingness selection, validation/model-selection transparency and normalized timing-error interpretation. Original dataset methods were cross-checked; these are raised concerns, not an established retraction, deployment harm or failed replication.",
+        "non_ai_exception": null,
+        "reader_consequence": "Null score: full original-analysis reconciliation and any author reply remain unfinished. No metric correction or clinical-harm conclusion certified."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Null score: full original-analysis reconciliation and any author reply remain unfinished. No metric correction or clinical-harm conclusion certified.",
+      "promote_when": [
+        "Reconcile the original train/test and cross-validation protocol, model-selection data, timing-error units and missingness treatment with the letter.",
+        "Inspect an author response/correction if present and establish a concrete supported evaluation consequence before scoring."
+      ],
+      "next_review_at": "2026-11-04",
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "watch",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Null score: full original-analysis reconciliation and any author reply remain unfinished. No metric correction or clinical-harm conclusion certified."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "2026-10-28-ut-dell-brand-and-future-ai-hospital",
+      "decision": "rejected",
+      "title": "UT Dell Medicine launch is not evidence of an operating AI-native hospital",
+      "desk": "health-systems",
+      "topics": ["implementation", "health-operations"],
+      "entities": [],
+      "event_date": "2026-10-27",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-27",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "UT introduces a unified health-system name; the planned medical centre opens in 2030 according to the institutional release.",
+      "why_now": "Fresh specialist lead followed to institutional announcement.",
+      "late_discovery": false,
+      "primary_source_url": "https://news.utexas.edu/2026/10/27/ut-introduces-ut-dell-medicine-shares-plans-for-advanced-specialty-care-in-central-texas/?query-page=3",
+      "sources": [
+        {
+          "id": "institution",
+          "url": "https://news.utexas.edu/2026/10/27/ut-introduces-ut-dell-medicine-shares-plans-for-advanced-specialty-care-in-central-texas/?query-page=3",
+          "canonical_url": "https://news.utexas.edu/2026/10/27/ut-introduces-ut-dell-medicine-shares-plans-for-advanced-specialty-care-in-central-texas/?query-page=3",
+          "publisher": "UT Austin",
+          "role": "primary",
+          "source_type": "institutional-announcement",
+          "publication_date": "2026-10-27",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Institution announces its own health-system identity."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "ut-dell-medicine-brand-launch-2026-10-27",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "UT introduces a unified health-system name; the planned medical centre opens in 2030 according to the institutional release.",
+        "non_ai_exception": null,
+        "reader_consequence": "Reject this edition's AI-deployment framing: inspected current action is a brand/organisation launch and future expansion plan, without verified new operating AI workflow, artifact or outcome."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject this edition's AI-deployment framing: inspected current action is a brand/organisation launch and future expansion plan, without verified new operating AI workflow, artifact or outcome.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Reject this edition's AI-deployment framing: inspected current action is a brand/organisation launch and future expansion plan, without verified new operating AI workflow, artifact or outcome."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-digital-brain-project-funding-old-event",
+      "decision": "rejected",
+      "title": "Digital Brain Project report concerns an 8 October launch, not newly verified models",
+      "desk": "biomedical-foundations",
+      "topics": ["biomedical-models", "research-tools"],
+      "entities": [],
+      "event_date": "2026-10-08",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-27",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "October 27 report describes Meta-funded research plans announced at an October 8 launch, not a released model or validation result.",
+      "why_now": "French rotation surfaced the report; original-event age checked.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.ticsante.com/story?ID=8497",
+      "sources": [
+        {
+          "id": "reporting",
+          "url": "https://www.ticsante.com/story?ID=8497",
+          "canonical_url": "https://www.ticsante.com/story?ID=8497",
+          "publisher": "TICsanté",
+          "role": "primary",
+          "source_type": "specialist-reporting",
+          "publication_date": "2026-10-27",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "abstract-only",
+          "relationship_to_sponsor": "Secondary reporting; visible introduction only, continued article access restricted."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "meta-digital-brain-project-launch-2026-10-08",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "October 27 report describes Meta-funded research plans announced at an October 8 launch, not a released model or validation result.",
+        "non_ai_exception": null,
+        "reader_consequence": "Reject as current AI-evidence/artifact news: old launch and funding/plans without a verified new operating or research result. Restricted remainder not inferred."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as current AI-evidence/artifact news: old launch and funding/plans without a verified new operating or research result. Restricted remainder not inferred.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Reject as current AI-evidence/artifact news: old launch and funding/plans without a verified new operating or research result. Restricted remainder not inferred."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-scaled-kickoff-old-event",
+      "decision": "rejected",
+      "title": "SCAILED Luxembourg kickoff is older context, not a deployed data-access system",
+      "desk": "biomedical-foundations",
+      "topics": ["biomedical-data", "interoperability"],
+      "entities": [],
+      "event_date": "2026-10-21",
+      "event_date_reason": "Date of the stated source action, not proof of independently observed clinical results.",
+      "source_publication_date": "2026-10-21",
+      "source_date_reason": "Source dateline inspected; date-only precision.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "Project partner describes a 20–21 October Luxembourg kickoff and planned federated data/regulatory work.",
+      "why_now": "Regional search lead outside the 24 October window.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.tmf-ev.de/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+      "sources": [
+        {
+          "id": "partner",
+          "url": "https://www.tmf-ev.de/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+          "canonical_url": "https://www.tmf-ev.de/en/news/making-health-data-available-for-ai-driven-innovation-in-biotechnology",
+          "publisher": "TMF e.V.",
+          "role": "primary",
+          "source_type": "project-partner-announcement",
+          "publication_date": "2026-10-21",
+          "date_reason": "Date displayed by inspected source; no exact publication time inferred.",
+          "inspected_at": "2026-10-28T08:27:22Z",
+          "access_level": "announcement-only",
+          "relationship_to_sponsor": "Consortium partner, not independent evidence of deployed infrastructure."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "scailed-luxembourg-kickoff-2026-10-21",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "Project partner describes a 20–21 October Luxembourg kickoff and planned federated data/regulatory work.",
+        "non_ai_exception": null,
+        "reader_consequence": "Reject as today's operational change: kickoff is older and inspected source presents intended infrastructure/pathfinder work, not demonstrated data access or a released tool. Keep as regional context without changing event dates."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject as today's operational change: kickoff is older and inspected source presents intended infrastructure/pathfinder work, not demonstrated data access or a released tool. Keep as regional context without changing event dates.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Reject as today's operational change: kickoff is older and inspected source presents intended infrastructure/pathfinder work, not demonstrated data access or a released tool. Keep as regional context without changing event dates."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-kfsh-ranking-without-workflow-evidence",
+      "decision": "rejected",
+      "title": "Smart-hospital ranking lead supplies no verified workflow or clinical change",
+      "desk": "health-systems",
+      "topics": ["implementation"],
+      "entities": [],
+      "event_date": null,
+      "event_date_reason": "No independently established event date.",
+      "source_publication_date": null,
+      "source_date_reason": "Unknown: direct source unavailable or competing dates not resolved.",
+      "discovered_at": "2026-10-28T08:27:22Z",
+      "what_changed": "Search surfaced a hospital-supplied smart-hospital ranking announcement; direct retrieval failed.",
+      "why_now": "Fresh search lead screened for actionable AI consequence.",
+      "late_discovery": false,
+      "primary_source_url": "https://www.globenewswire.com/news-release/2026/10/28/3389816/0/en/newsweek-places-kfsh-in-top-4-of-world-s-smart-hospitals-for-digital-maturity-and-ai.html",
+      "sources": [
+        {
+          "id": "announcement",
+          "url": "https://www.globenewswire.com/news-release/2026/10/28/3389816/0/en/newsweek-places-kfsh-in-top-4-of-world-s-smart-hospitals-for-digital-maturity-and-ai.html",
+          "canonical_url": "https://www.globenewswire.com/news-release/2026/10/28/3389816/0/en/newsweek-places-kfsh-in-top-4-of-world-s-smart-hospitals-for-digital-maturity-and-ai.html",
+          "publisher": "GlobeNewswire / KFSH",
+          "role": "primary",
+          "source_type": "hospital-press-release",
+          "publication_date": null,
+          "date_reason": "URL date and indexed ET dateline differ; no resolved source/event date.",
+          "inspected_at": null,
+          "access_level": "unavailable",
+          "relationship_to_sponsor": "Search identifies hospital-supplied ranking announcement; direct content inaccessible."
+        }
+      ],
+      "underlying_identity": {
+        "event_key": "kfsh-smart-hospital-ranking-2026",
+        "doi": null,
+        "pmid": null,
+        "preprint": null,
+        "trial": null,
+        "cohort": null,
+        "product_version": null,
+        "regulatory_record": null
+      },
+      "scope_fit": {
+        "in_scope": false,
+        "ai_connection": "Search surfaced a hospital-supplied smart-hospital ranking announcement; direct retrieval failed.",
+        "non_ai_exception": null,
+        "reader_consequence": "Reject unsupported advancement: a ranking headline does not establish a new named AI deployment, validated performance or patient benefit. No details inferred from inaccessible body."
+      },
+      "deduplication": {
+        "status": "new",
+        "previous_candidate_ids": [],
+        "previous_story_ids": [],
+        "material_delta": null,
+        "archive_coverage": "All 15 merged daily ledgers (12–26 October), 10 canonical story source/claim mappings and eight issue manifests inspected at 94238a7a259086559e769ec9a38278d09571230a. All-state canonical PR search returned 15 historical PRs; seven open PRs are non-daily. No 27 October branch/PR/ledger or 28 October branch/PR/default ledger found. Previous watch records are not publications.",
+        "publication_status": "not-started"
+      },
+      "reason": "Reject unsupported advancement: a ranking headline does not establish a new named AI deployment, validated performance or patient benefit. No details inferred from inaccessible body.",
+      "promote_when": [],
+      "next_review_at": null,
+      "claims": [],
+      "editorial_score": null,
+      "publication_verification": {
+        "status": "not-started",
+        "checked_at": null,
+        "checked_by": null,
+        "supported_scope": "No article or publication claim approved.",
+        "reason": "Research-only watch/rejection record; publication verification not started."
+      },
+      "decision_history": [
+        {
+          "decision": "rejected",
+          "at": "2026-10-28T08:27:22Z",
+          "reason": "Reject unsupported advancement: a ranking headline does not establish a new named AI deployment, validated performance or patient benefit. No details inferred from inaccessible body."
+        }
+      ]
+    }
+  ],
+  "publication": {
+    "mode": "ledger-only",
+    "reason": "Zero selected: seven evidence/novelty appraisals remain unfinished and four leads fail current-news or verified-AI-change gates. This is a partial-research ledger-only handoff, not an assertion that the news window was quiet. No issue, article, image or translation.",
+    "story_ids": [],
+    "withheld_selected": [],
+    "must_know_story_id": null,
+    "issue_path": null,
+    "checks": [
+      {
+        "command": "npm ci",
+        "status": "passed",
+        "tested_revision": "94238a7a259086559e769ec9a38278d09571230a",
+        "execution": "Local Node24 runtime, pinned package-lock installation.",
+        "evidence": "297 packages installed; exit0."
+      },
+      {
+        "command": "npm run schema:check && npm run editorial:check",
+        "status": "passed",
+        "tested_revision": "94238a7a259086559e769ec9a38278d09571230a",
+        "execution": "Pinned baseline before today's ledger.",
+        "evidence": "Generated schema exact-match and existing16ledgers/10stories passed; not today's batch validation."
+      },
+      {
+        "command": "npm run editorial:check -- docs/editorial/ledgers/2026-10-28.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "17ledgers (16daily+1controlled trial),10existing stories passed; no new article/issue."
+      },
+      {
+        "command": "npm run illustration:check -- docs/editorial/ledgers/2026-10-28.json",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "All publication mappings and existing WebP decoding passed; no new imagery."
+      },
+      {
+        "command": "npm run verify",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "Lint/format, scripts/tests TypeScript, schema exact match, content/editorial/illustration,146unit tests, Astro0errors/0warnings and31page build/11indexed pages passed; exit0."
+      },
+      {
+        "command": "npm run test:e2e",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "35tests scheduled, all blocked at browser launch because Chromium headless-shell1248 executable is missing. No browser assertions ran; not35 demonstrated application failures. Exact-head hosted browser CI remains required."
+      },
+      {
+        "command": "npx playwright install chromium",
+        "status": "failed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "Bounded Playwright downloader retries returned truncated/invalid ZIPs (End of central directory record signature not found). No system Chromium executable found. Browser recovery exhausted without changing repository configuration."
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed",
+        "tested_revision": "Prospective ledger-only worktree based on 94238a7a259086559e769ec9a38278d09571230a; initial research checkpoint 3306af9c8a5a27184ab645f5d28f0a2a331cd914",
+        "execution": "Local Node24.22.1; actual command output. No code/policy/CI changes.",
+        "evidence": "No whitespace errors in tracked diff; newly added ledger separately formatted/validated."
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "run_id": "healthtech-2026-10-28T081834Z",
+      "started_at": "2026-10-28T08:18:34Z",
+      "completed_at": "2026-10-28T08:40:48Z",
+      "phases": [
+        "phase-0-contracts-and-identity",
+        "phase-1-discovery-partial",
+        "phase-2-deduplication-and-decisions",
+        "phase-3-ownership-acquired",
+        "phase-4-full-research-first",
+        "phase-5-no-selected-publication-files",
+        "phase-6-structural-and-verify-passed-local-browser-blocked",
+        "phase-7-canonical-draft-pr-72-created",
+        "ownership-released",
+        "phase-8-exact-release-head-ci-pending"
+      ],
+      "outcome": "checkpoint-complete: canonical ledger-only draft PR72 created; ownership released; research remains partial. Exact final-release-head CI evidence belongs in PR handoff after observation. Resume this same branch/PR, not a replacement."
+    }
+  ],
+  "active_run": null,
+  "human_overrides": [],
+  "artwork": {
+    "version": "healthtech-artwork-1",
+    "runtime": "Executing runtime; no selected story needs artwork.",
+    "checked_at": "2026-10-28T08:34:53Z",
+    "capabilities": {
+      "generation": {
+        "status": "unverified",
+        "evidence": "No selected story; artwork preflight not performed or claimed. Ledger-only requires none."
+      },
+      "inspection": {
+        "status": "unverified",
+        "evidence": "No selected story; artwork preflight not performed or claimed. Ledger-only requires none."
+      },
+      "conversion": {
+        "status": "unverified",
+        "evidence": "No selected story; artwork preflight not performed or claimed. Ledger-only requires none."
+      },
+      "upload": {
+        "status": "unverified",
+        "evidence": "No selected story; artwork preflight not performed or claimed. Ledger-only requires none."
+      }
+    },
+    "stories": []
+  }
+}
